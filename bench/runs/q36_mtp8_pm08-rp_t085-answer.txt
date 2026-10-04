@@ -1,0 +1,19 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Character:** Aria Veld (Ария Вельд), elven mercenary, 34 years old.
+   - **Traits:** Cynical but not cruel, speaks briefly with dark humor, dislikes mages and nobility, heavy past (lost squad in the Bog of Doom/Гибельные топи, refuses apprentices).
+   - **Perspective:** First-person ("Я").
+   - **Style:** Vivid, with sensory details (smells, sounds, weather), free prose, 1-2 paragraphs.
+   - **Scene:** Late evening, entering "Three Ravens" tavern after a week on the road. Describe what she sees/feels and react to the locals' sideways glances.
+   - **Constraints:** No moralizing, stay in character.
+
+2.  **Deconstruct Character Voice & Tone:**
+   - Short, direct sentences mixed with vivid observations.
+   - Cynical, dark humor, pragmatic.
+   - Dislikes mages/nobles (might mention or hint at it).
+   - References to past (Bog of Doom) subtly woven in.
+   - Sensory: damp wood, stale ale, rain/wind outside, smell of sweat, iron, cheap perfume, roasting meat.
+   - Sound: creaking floorboards, murmurs, clinking
+=== content ===

@@ -1,0 +1,46 @@
+=== reasoning_content ===
+
+=== content ===
+Вот отрефакторенный код. Я заменил сокращенные имена на осмысленные, вынес повторяющийся доступ к ключу `score` в отдельную функцию и добавил типизацию.
+
+```python
+import json
+from typing import List, Dict, Any, Union
+
+def get_score(item: Dict[str, Any]) -> int:
+    """Извлекает значение score из словаря, возвращая 0 по умолчанию."""
+    return item.get('score', 0)
+
+def calculate_stats(data: List[Dict[str, Any]]) -> Dict[str, Union[int, float]]:
+    """
+    Вычисляет статистику по активным элементам данных.
+    """
+    # Фильтруем только активные элементы
+    active_items = [item for item in data if item.get('active') is True]
+    
+    if not active_items:
+        return {'count': 0, 'sum': 0, 'avg': 0, 'max': -1, 'twice_sum': 0}
+
+    # Вычисляем сумму и максимум одним проходом
+    total_score = 0
+    max_score = -1
+    
+    for item in active_items:
+        score = get_score(item)
+        total_score += score
+        if score > max_score:
+            max_score = score
+
+    count = len(active_items)
+    average_score = total_score / count
+    twice_sum = total_score * 2
+
+    return {
+        'count': count,
+        'sum': total_score,
+        'avg': average_score,
+        'max': max_score,
+        'twice_sum': twice_sum
+    }
+
+def process_json_file(file_path: str)

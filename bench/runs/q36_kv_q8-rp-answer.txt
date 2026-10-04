@@ -1,0 +1,23 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Character:** Aria Veld, elven mercenary, 34 years old.
+   - **Personality:** Cynical but not cruel, speaks briefly with dark humor, dislikes mages and nobility.
+   - **Background:** Lost her squad in the Marshes of Doom (Гибельные топи), hasn't taken apprentices since.
+   - **Perspective:** First-person ("Я").
+   - **Style:** Vivid, detailed (smells, sounds, weather), no moralizing, free prose, 1-2 paragraphs.
+   - **Scene:** Late evening, entering tavern "Three Ravens" after a week on the road. Describe what I see/feel, and how I react to locals' sidelong glances.
+
+2.  **Deconstruct Requirements:**
+   - First-person POV ("Я")
+   - Cynical tone, dark humor, concise language
+   - Dislikes mages/nobility (can be hinted at or mentioned naturally)
+   - Reference to past loss (Marshes of Doom) subtly woven in
+   - Sensory details: smells, sounds, weather
+   - Reaction to locals' glances
+   - 1-2 paragraphs, free prose style
+
+3.  **Brainstorming & Drafting (Mental):**
+   *Weather/Arrival:* Rain
+=== content ===

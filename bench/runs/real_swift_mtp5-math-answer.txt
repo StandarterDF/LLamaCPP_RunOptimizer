@@ -1,0 +1,22 @@
+=== reasoning_content ===
+We need answer in Russian. User asks: car traveled first half of route at 60 km/h, second half at 40 km/h. Find average speed over whole route. Solve step by step and explain why answer not 50 km/h.
+
+We need produce final. Need be careful: average speed = total distance / total time. Let total distance = 2d? Or half distance = S/2. Time1 = (S/2)/60 = S/120. Time2 = (S/2)/40 = S/80. Total time = S(1/120+1/80)=S(2/240+3/240)=5S/240=S/48. Average = S/(S/48)=48 km/h.
+
+Explain not arithmetic mean because time spent at speeds differs: at 40 km/h takes longer for same distance, so weighted by time, not equal weights. Harmonic mean of speeds for equal distances: 2/(1/60+1/40)=48.
+
+Need maybe mention if "первую половину пути" means distance half, not time half. If it were time half, average would be 50. But here distance half.
+
+Need final in Russian, step-by-step. Could include formula. Ensure no hidden chain-of-thought. Final concise but detailed.
+
+=== content ===
+Пусть весь путь равен \(S\) км.
+
+Тогда первая половина пути — это \(S/2\) км, и вторая половина — тоже \(S/2\) км.
+
+### 1. Время на первой половине пути
+
+Скорость: \(60\) км/ч.
+
+\[
+t_1 = \frac{S/2}{60} = \frac{S

@@ -1,0 +1,37 @@
+{
+  "_комментарий": "Gemma-4-26B-A4B: MTP (с/без -ctxcp/-cms) и DFlash+ngram на реалистичном коде.",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/Gemma-4-26B-A4B-StyleTune-V2.IQ4_XS.gguf",
+  "common": ["--fit", "on", "-fa", "on", "--load-mode", "none", "-t", "14", "-tb", "14", "-b", "2048", "-ub", "512",
+             "-np", "1", "-c", "65536", "-ctk", "q4_0", "-ctv", "q4_0",
+             "--chat-template-file", "${LLAMA_DIR}/gemma4.jinja", "--reasoning", "off"],
+  "requests": [
+    { "tag": "rp", "n_predict": 300, "temperature": 1.0, "top_p": 0.95, "top_k": 40, "min_p": 0.05, "repeat_penalty": 1.05,
+      "messages": [
+        { "role": "system", "content": "Ты — Ария Вельд, эльфийская наёмница. Пиши от первого лица, живо." },
+        { "role": "user", "content": "Опиши, как ты заходишь в таверну после недели в дороге. Абзац." }
+      ] },
+    { "tag": "refactor", "n_predict": 400, "temperature": 0.2, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "messages": [
+        { "role": "system", "content": "Ты — опытный разработчик. Сохраняй поведение кода." },
+        { "role": "user", "content": "Отрефактори этот код: переименуй переменные, вынеси повторяющуюся логику в функцию, добавь аннотации типов. Верни полный итоговый код.\n\n```python\nimport json, os\ndef f(d):\n    r = []\n    for i in d:\n        if i.get('active') == True:\n            r.append(i)\n    s = 0\n    for i in r:\n        s = s + i.get('score', 0)\n    m = -1\n    for i in r:\n        if i.get('score', 0) > m:\n            m = i.get('score', 0)\n    t = 0\n    for i in r:\n        t = t + i.get('score', 0) * 2\n    if len(r) > 0:\n        a = s / len(r)\n    else:\n        a = 0\n    return {'n': len(r), 'sum': s, 'avg': a, 'max': m, 'twice': t}\ndef g(p):\n    with open(p) as h:\n        x = json.load(h)\n    return f(x)\n```" }
+      ] },
+    { "tag": "code", "n_predict": 320, "temperature": 0.3, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "messages": [
+        { "role": "user", "content": "Write a Python function that merges overlapping intervals and returns the merged list, then explain the algorithm and its time complexity in two sentences. Include a short usage example." }
+      ] }
+  ],
+  "tests": [
+    { "name": "g26_mtp5_ctxcp",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf",
+               "-ctxcp", "16", "-cms", "512"] },
+    { "name": "g26_mtp5_noctxcp",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf"] },
+    { "name": "g26_dflash6_ngram",
+      "args": ["--spec-type", "draft-dflash,ngram-mod", "--spec-draft-n-max", "6", "--spec-draft-ngl", "all",
+               "--spec-ngram-mod-n-match", "24", "--spec-ngram-mod-n-min", "48", "--spec-ngram-mod-n-max", "64",
+               "-md", "${PROJECT_DIR}/downloads/speculators/gemma-4-26B-A4B-dflash-Q6_K.gguf"] }
+  ]
+}

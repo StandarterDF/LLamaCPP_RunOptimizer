@@ -1,0 +1,35 @@
+0.00.002.743 I srv  llama_server: initializing ...
+0.00.102.786 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.102.902 I srv  init_listene: The UI is disabled
+0.00.102.905 I srv  init_listene: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.102.997 W srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.105.829 I srv    load_model: loading model '<MODELS_DIR>/unsloth/Qwen3.6-35B-A3B-MTP-GGUF/Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf'
+0.03.686.118 I cmn          init: llama threadpool init, n_threads = 8
+0.03.686.134 W cmn  common_init_: KV cache shifting is not supported for this context, disabling KV cache shifting
+0.03.738.547 I common_speculative_init_result: creating MTP draft context against the target model '<MODELS_DIR>/unsloth/Qwen3.6-35B-A3B-MTP-GGUF/Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf'
+0.03.743.393 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 8192, kv_unified = 'false'
+0.03.846.850 W srv          init: chat template supports preserving reasoning, it is enabled by default (may use more tokens, disable via --no-reasoning-preserve)
+0.03.846.870 I srv  llama_server: model loaded
+0.03.846.873 I srv  llama_server: listening on http://127.0.0.1:9942
+0.06.475.673 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+0.06.475.738 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.06.475.751 E srv    send_error: task id = 0, error: request (11052 tokens) exceeds the available context size (8192 tokens), try increasing it
+0.06.475.755 I slot      release: id  0 | task 0 | stop processing: n_tokens = 0, truncated = 0
+0.06.475.768 W srv          stop: cancel task, id_task = 0
+0.06.518.383 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 6473007
+0.06.518.450 I slot launch_slot_: id  0 | task 3 | processing task, is_child = 0
+0.09.956.868 I slot print_timing: id  0 | task 3 | prompt processing, n_tokens =   5952, progress = 0.92, t =   3.20 s / 1860.54 tokens per second
+0.10.261.747 I slot print_timing: id  0 | task 3 | prompt processing, n_tokens =   6464, progress = 1.00, t =   3.47 s / 1863.42 tokens per second
+0.13.325.578 I slot print_timing: id  0 | task 3 | n_gen =    208, tg =  68.66 t/s, tg_3s =  68.99 t/s
+0.16.328.519 I slot print_timing: id  0 | task 3 | n_gen =    422, tg =  69.96 t/s, tg_3s =  71.26 t/s
+0.19.337.377 I slot print_timing: id  0 | task 3 | n_gen =    647, tg =  71.56 t/s, tg_3s =  74.78 t/s
+0.22.343.512 I slot print_timing: id  0 | task 3 | n_gen =    867, tg =  71.97 t/s, tg_3s =  73.18 t/s
+0.25.370.704 I slot print_timing: id  0 | task 3 | n_gen =   1109, tg =  73.57 t/s, tg_3s =  79.94 t/s
+0.28.388.499 I slot print_timing: id  0 | task 3 | n_gen =   1322, tg =  73.07 t/s, tg_3s =  70.58 t/s
+0.31.389.329 I slot print_timing: id  0 | task 3 | n_gen =   1612, tg =  76.43 t/s, tg_3s =  96.64 t/s
+0.32.204.210 I slot print_timing: id  0 | task 3 | prompt eval time =    3792.09 ms /  6468 tokens (    0.59 ms per token,  1705.65 tokens per second)
+0.32.204.216 I slot print_timing: id  0 | task 3 |        eval time =   21893.63 ms /  1719 tokens (   12.74 ms per token,    78.47 tokens per second)
+0.32.204.217 I slot print_timing: id  0 | task 3 |       total time =   25685.73 ms /  8187 tokens
+0.32.204.218 I slot print_timing: id  0 | task 3 |    graphs reused =        183
+0.32.204.223 I slot print_timing: id  0 | task 3 | draft acceptance = 0.66758 (  972 accepted /  1456 generated), mean len =  2.62
+0.32.204.380 I slot      release: id  0 | task 3 | stop processing: n_tokens = 8191, truncated = 1

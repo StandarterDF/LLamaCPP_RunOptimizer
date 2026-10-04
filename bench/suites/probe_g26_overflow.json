@@ -1,0 +1,29 @@
+{
+  "_комментарий": "Gemma-4-26B-A4B, c=8192: поддерживает ли --context-shift (SWA-архитектура) и что делает при переполнении.",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/Gemma-4-26B-A4B-StyleTune-V2.IQ4_XS.gguf",
+  "common": ["--fit", "on", "-fa", "on", "--load-mode", "none", "-t", "14", "-tb", "14", "-b", "2048", "-ub", "512",
+             "-np", "1", "-c", "8192", "-ctk", "q4_0", "-ctv", "q4_0",
+             "--chat-template-file", "${LLAMA_DIR}/gemma4.jinja", "--reasoning", "off"],
+  "requests": [
+    { "tag": "over", "filler": 12000, "n_predict": 100, "temperature": 0.8, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "messages": [
+        { "role": "system", "content": "Ты — рассказчик. Продолжай связно." },
+        { "role": "user", "content": "Продолжи рассказ одним абзацем." }
+      ] },
+    { "tag": "gen", "filler": 7000, "n_predict": 3000, "temperature": 0.8, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "messages": [
+        { "role": "system", "content": "Ты — рассказчик. Продолжай связно." },
+        { "role": "user", "content": "Напиши очень длинный связный текст и не останавливайся." }
+      ] }
+  ],
+  "tests": [
+    { "name": "g26_ov_noshift",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf"] },
+    { "name": "g26_ov_shift_keep512",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf",
+               "--context-shift", "--keep", "512"] }
+  ]
+}

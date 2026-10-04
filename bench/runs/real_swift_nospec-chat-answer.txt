@@ -1,0 +1,13 @@
+=== reasoning_content ===
+We need answer in Russian. User asks explain simple difference TCP and UDP with one example each, no more than 5 sentences. Need be concise. Count sentences? Need <=5. Let's craft 4 sentences maybe.
+1) TCP — надёжный протокол: данные доставляются по порядку, с проверками и повторными запросами.
+2) UDP — быстрый протокол: отправляет пакеты без гарантии доставки и порядка.
+3) Для TCP подходит веб-страница, где важно получить все данные корректно.
+4) Для UDP подходит видеозвонок, где важна скорость, а потеря одного кадра допустима.
+That's 4 sentences. Good. Ensure simple. Maybe "TCP" and "UDP". Final only answer.
+
+=== content ===
+TCP — надёжный протокол: данные доставляются по порядку, с проверками и повторными запросами.
+UDP — быстрый протокол: пакеты уходят без гарантии доставки и порядка.
+Для TCP подходит веб-страница, где важно получить все данные корректно.
+Для UDP подходит видеозвонок, где важна скорость, а потеря одного кадра допустима.

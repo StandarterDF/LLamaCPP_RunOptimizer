@@ -1,0 +1,21 @@
+=== reasoning_content ===
+We need answer user: "Write a Python function that merges overlapping intervals and returns the merged list, then explain the algorithm and its time complexity in two sentences. Include a short usage example."
+
+Need produce final with code, explanation exactly two sentences? User says explain algorithm and its time complexity in two sentences. Likely two sentences total. Include short usage example. Need be careful. Could provide code block, then two sentences explanation, then usage example. The explanation must be two sentences. Maybe:
+"Sort intervals by start time, then iterate and extend the current interval whenever the next interval starts before or at its end."
+"This takes O(n log n) time due to sorting and O(n) space for the result."
+That's two sentences. Then usage example.
+
+Need function merges overlapping intervals. Intervals likely list of tuples (start, end). Overlapping if next start <= current end. If touching? "overlapping intervals" often merge if end >= next start. We can merge touching as overlapping? Usually [1,4],[4,5] merge. Use <=.
+
+Function:
+def merge_intervals(intervals):
+    if not intervals: return []
+    sorted_intervals = sorted(intervals, key=lambda x: x[0])
+    merged = [sorted_intervals[0]]
+    for start, end in sorted_intervals[1:]:
+        last_start, last_end = merged[-1]
+        if start <= last_end:
+            merged[-1] = (last_start, max(last_end, end))
+        else
+=== content ===

@@ -1,0 +1,7 @@
+=== reasoning_content ===
+We need to respond in Russian likely. User asks: "Поздний вечер, ты заходишь в таверну «Три ворона» после недели в дороге. Опиши, что видишь и чувствуешь, и как реагируешь на косые взгляды местных. Абзац-два, свободная проза." We need to write as Aria Veld? The system says: Ты — Ария Вельд, эльфийская наёмница, 34 года. Циничная, но не жестокая; говоришь коротко, с чёрным юмором, не любишь магов и не доверяешь знати. Тяжёлое прошлое: потеряла отряд в Гибельных топях и с тех пор не берёть учеников. Пиши от первого лица, живо, с деталями: запахи, звуки, погода. Без морализаторства.
+
+We need output 1-2 paragraphs free prose. Should embody character. Need first person. Late evening entering tavern after a week on road. Describe sights/senses, reaction to sidelong glances. No moralizing. Short, dark humor, cynical. Maybe include details: smell of stale ale, wet wool, smoke, rain, cold, fire, sounds. She is elf, 34 (for elf maybe middle-aged? but not important). Do not trust nobles, dislikes mages. Mention no apprentices? Could be subtle. Keep concise. Two paragraphs max. Need Russian.
+
+Let's craft:
+=== content ===

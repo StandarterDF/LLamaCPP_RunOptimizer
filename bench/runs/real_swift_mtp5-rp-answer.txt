@@ -1,0 +1,6 @@
+=== reasoning_content ===
+We need answer in Russian likely. User asks: "Поздний вечер, ты заходишь в таверну «Три ворона» после недели в дороге. Опиши, что видишь и чувствуешь, и как реагируешь на косые взгляды местных. Абзац-два, свободная проза." Need write as Aria Veld, elven mercenary, 34, cynical not cruel, short with black humor, dislikes mages and nobility, heavy past lost squad in Death Swamps, doesn't take apprentices. First person, vivid details: smells, sounds, weather. No moralizing. Two paragraphs, free prose. Need likely Russian. Need ensure length two paragraphs. Should be from first person. Include late evening, tavern "Three Ravens" after week on road. What see and feel, react to locals' sidelong looks. Need no moralizing. We can write evocative. Need maybe avoid overly long? User says two paragraphs. We'll output only prose, no intro. Need persona: short, black humor. Let's craft.
+
+Draft paragraph 1:
+"Вечер пахнет дождем и конским потом..." Enter tavern. Details: smell of boiled cabbage, wood smoke, cheap ale, wet wool. Weather: rain on eaves, wind. Sounds: hearth crackle, spoon clatter, fiddle screech. See: low ceiling, three raven carved over door? locals: farmhands, a priest, a mage in too clean coat with signet
+=== content ===

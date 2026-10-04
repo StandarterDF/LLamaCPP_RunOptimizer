@@ -1,0 +1,26 @@
+{
+  "_комментарий": "Qwen3.6, c=8192: поведение при переполнении — промпт больше контекста (filler 12k) и длинная генерация (filler 7k + n_predict 3000). Без сдвига vs --context-shift (+ --keep).",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/unsloth/Qwen3.6-35B-A3B-MTP-GGUF/Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf",
+  "common": ["-np", "1", "-c", "8192", "-fa", "on", "--fit", "on", "-tb", "12", "--load-mode", "none",
+             "-ctk", "q4_0", "-ctv", "q4_0", "--reasoning-budget", "0", "--jinja"],
+  "requests": [
+    { "tag": "over", "filler": 12000, "n_predict": 100, "temperature": 0.8, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "messages": [
+        { "role": "system", "content": "Ты — рассказчик. Продолжай связно." },
+        { "role": "user", "content": "Продолжи рассказ одним абзацем." }
+      ] },
+    { "tag": "gen", "filler": 7000, "n_predict": 3000, "temperature": 0.8, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "messages": [
+        { "role": "system", "content": "Ты — рассказчик. Продолжай связно." },
+        { "role": "user", "content": "Напиши очень длинный связный текст и не останавливайся." }
+      ] }
+  ],
+  "tests": [
+    { "name": "ov_noshift",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] },
+    { "name": "ov_shift_keep512",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "--context-shift", "--keep", "512"] }
+  ]
+}

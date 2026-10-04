@@ -1,0 +1,31 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Understand User Request:**
+   - **Task:** Write a Python function that merges overlapping intervals.
+   - **Output Requirements:**
+     - Return the merged list.
+     - Explain the algorithm and its time complexity in exactly two sentences.
+     - Include a short usage example.
+   - **Constraints:** The explanation must be exactly two sentences.
+
+2.  **Algorithm Design (Merging Intervals):**
+   - Standard approach: Sort intervals by start time, then iterate through them, merging overlapping ones.
+   - Steps:
+     1. Handle edge case: empty list.
+     2. Sort intervals by start time.
+     3. Initialize a result list with the first interval.
+     4. Iterate through the rest:
+        - If current interval overlaps with the last in result (current.start <= last.end), merge by updating last.end = max(last.end, current.end).
+        - Else, append current interval to result.
+     5. Return result.
+   - Time Complexity: O(n log n) due to sorting, where n is the number of intervals. The merge pass is O(n).
+   - Space Complexity: O(n) for the result list (or O(1) extra if we modify in place, but typically we return a new list).
+
+3.  **Draft Python Code:**
+   ```python
+   def merge_intervals(intervals):
+       if not intervals:
+           return []
+       intervals.sort
+=== content ===

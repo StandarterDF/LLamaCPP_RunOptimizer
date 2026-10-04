@@ -1,0 +1,33 @@
+0.00.012.515 I srv  llama_server: initializing ...
+0.00.112.111 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.112.227 I srv  init_listene: The UI is disabled
+0.00.112.230 I srv  init_listene: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.112.313 W srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.114.271 I srv    load_model: loading model '<MODELS_DIR>/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/Gemma-4-26B-A4B-StyleTune-V2.IQ4_XS.gguf'
+0.01.434.146 E llama_init_from_model: failed to initialize the context: Gemma4Assistant requires ctx_other to be set (this warning is normal during memory fitting)
+0.01.501.332 W operator(): failed to measure the memory of the extra model, fitting without it: failed to create llama_context from model
+0.07.162.516 W load: control-looking token:      1 '<eos>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.07.162.761 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.07.163.146 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.07.199.149 W load: '</s>' is a normal token here, removing it from EOG list
+0.09.880.284 I cmn          init: llama threadpool init, n_threads = 14
+0.09.938.832 I common_speculative_init_result: loading draft model '<MODELS_DIR>/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf'
+0.10.481.011 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.10.481.343 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.10.519.314 W load: '</s>' is a normal token here, removing it from EOG list
+0.10.643.151 W llama_kv_cache: layer   3: sharing with layer 29. k = 0000000E55000000, v = 0000000E57400000
+0.10.643.445 W llama_kv_cache: layer   0: sharing with layer 28. k = 0000000E5E900000, v = 0000000E5EAB0000
+0.10.643.448 W llama_kv_cache: layer   1: sharing with layer 28. k = 0000000E5E900000, v = 0000000E5EAB0000
+0.10.643.449 W llama_kv_cache: layer   2: sharing with layer 28. k = 0000000E5E900000, v = 0000000E5EAB0000
+0.10.679.854 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 65536, kv_unified = 'false'
+0.10.824.672 I srv  llama_server: model loaded
+0.10.824.680 I srv  llama_server: listening on http://127.0.0.1:9943
+0.13.510.265 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+0.13.510.316 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.16.993.769 I slot print_timing: id  0 | task 0 | n_gen =    168, tg =  55.53 t/s, tg_3s =  55.86 t/s
+0.19.843.353 I slot print_timing: id  0 | task 0 | prompt eval time =     475.97 ms /   185 tokens (    2.57 ms per token,   388.68 tokens per second)
+0.19.843.359 I slot print_timing: id  0 | task 0 |        eval time =    5856.98 ms /   320 tokens (   18.36 ms per token,    54.46 tokens per second)
+0.19.843.361 I slot print_timing: id  0 | task 0 |       total time =    6332.94 ms /   505 tokens
+0.19.843.362 I slot print_timing: id  0 | task 0 |    graphs reused =         58
+0.19.843.368 I slot print_timing: id  0 | task 0 | draft acceptance = 0.43704 (  118 accepted /   270 generated), mean len =  1.96
+0.19.843.447 I slot      release: id  0 | task 0 | stop processing: n_tokens = 504, truncated = 0

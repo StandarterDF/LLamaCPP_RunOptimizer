@@ -1,0 +1,15 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Role:** Editor
+   - **Task:** Shorten the text to 4-5 sentences
+   - **Constraints:** Preserve key facts, names, and dates
+   - **Input Text:** A paragraph about the history of the bicycle, covering:
+     - 1817: Karl von Drais (German baron) patented the "walking machine" (two-wheeled, no pedals, foot-propelled)
+     - 1860s: Pierre Lallement (France) added pedals to the front wheel, causing a cycling boom
+     - 1880s: Penny-farthings (large front wheel, fast but dangerous)
+     - 1885: John Kemp Starley introduced the "Rover" (chain drive, equal wheels, diamond frame) - basis for modern bikes
+     - 1888: John Boyd Dunlop invented the pneumatic tire (inflatable tube), improving comfort/speed
+
+=== content ===

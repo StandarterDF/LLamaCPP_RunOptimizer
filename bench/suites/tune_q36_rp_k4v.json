@@ -1,0 +1,30 @@
+{
+  "_комментарий": "Qwen3.6: гибрид MTP + ngram-map-k4v на RP (проверка совета из RP-сообщества; мы мерили только ngram-mod).",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/unsloth/Qwen3.6-35B-A3B-MTP-GGUF/Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf",
+  "common": ["-np", "1", "-c", "131072", "-fa", "on", "--fit", "on", "-tb", "12", "--load-mode", "none",
+             "-ctk", "q4_0", "-ctv", "q4_0", "--reasoning-budget", "2048", "--jinja"],
+  "requests": [
+    { "tag": "rp", "n_predict": 350, "temperature": 1.0, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "messages": [
+        { "role": "system", "content": "Ты — Ария Вельд, эльфийская наёмница, 34 года. Циничная, но не жестокая; говоришь коротко, с чёрным юмором, не любишь магов и не доверяешь знати. Пиши от первого лица, живо, с деталями. Без морализаторства." },
+        { "role": "user", "content": "Опиши таверну «Три ворона» и её завсегдатаев, а затем — разговор с трактирщиком. Абзаца три." }
+      ] },
+    { "tag": "rp_rep", "n_predict": 350, "temperature": 1.0, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "messages": [
+        { "role": "system", "content": "Ты — Ария Вельд, эльфийская наёмница. Пиши от первого лица." },
+        { "role": "user", "content": "Ария, ты и твой спутник идёте через лес. Напиши сцену, где вы перекликаетесь короткими репликами и зовёте друг друга по именам. Абзаца три." }
+      ] }
+  ],
+  "tests": [
+    { "name": "q36_mtp5",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] },
+    { "name": "q36_mtp_k4v",
+      "args": ["--spec-type", "draft-mtp,ngram-map-k4v", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "--spec-ngram-map-k4v-size-n", "8", "--spec-ngram-map-k4v-size-m", "8", "--spec-ngram-map-k4v-min-hits", "2"] },
+    { "name": "q36_k4v_only",
+      "args": ["--spec-type", "ngram-map-k4v",
+               "--spec-ngram-map-k4v-size-n", "8", "--spec-ngram-map-k4v-size-m", "8", "--spec-ngram-map-k4v-min-hits", "2",
+               "--spec-draft-n-max", "64"] }
+  ]
+}

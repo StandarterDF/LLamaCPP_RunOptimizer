@@ -4,16 +4,13 @@ rem --- локальные пути (config.local.bat / config.example.bat) ---
 for %%I in ("%~dp0..\..") do set "PROJECT_DIR=%%~fI"
 call "%PROJECT_DIR%\config.local.bat" 2>nul
 call "%PROJECT_DIR%\config.example.bat" 2>nul
-rem ------------------------------------------------------------------
 rem ============================================================================
-rem  Qwen3.6-35B-A3B MTP (UD-Q2_K_XL, MoE) — лучший конфиг на сборке b11382.
-rem  Замеры: простой ~148 t/s, повтор-код ~146, regex-код ~101 (VRAM ~14.4 GB).
-rem  Контекст 131072 быстрее 163840 и оставляет запас VRAM.
-rem  Vision: строка mmproj вынесена на CPU (--no-mmproj-offload), скорость не страдает;
-rem  для чистого текста строки mmproj можно удалить.
+rem  Qwen3.6-35B-A3B (Q2_K_XL) — b11382: MTP nm5 pmin0.5, c=131072, vision на CPU
 rem ============================================================================
-
-"%LLAMA_SERVER%" ^
+set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
+set "MODEL=%MODELS_DIR%\unsloth\Qwen3.6-35B-A3B-MTP-GGUF\Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf"
+set "MMPROJ=%MODELS_DIR%\unsloth\Qwen3.6-35B-A3B-MTP-GGUF\mmproj-F16.gguf"
+"%SERVER%" ^
   -m "%MODEL%" ^
   --host 0.0.0.0 --port 9931 --alias "Qwen3.6-35B-A3B" ^
   -np 1 -c 131072 ^

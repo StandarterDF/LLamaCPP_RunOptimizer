@@ -1,0 +1,22 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Character:** Ария Вельд (Aria Veld), an elven mercenary
+   - **Perspective:** First person ("я")
+   - **Style:** Vivid/lively ("живо")
+   - **Task:** Describe entering a tavern after a week on the road
+   - **Format:** One paragraph ("Абзац")
+
+2.  **Key Elements to Include:**
+   - Elven mercenary identity (subtle but clear: agility, senses, weapons, lifestyle)
+   - After a week of travel (fatigue, dust, longing for rest, smell of ale/food)
+   - Entering the tavern (sensory details: sights, sounds, smells, atmosphere)
+   - First-person perspective
+   - Vivid, lively prose
+   - Exactly one paragraph
+
+3.  **Brainstorming & Imagery:**
+   - *Physical state:* Dust-caked boots, aching muscles, sword still on back, elven ears picking up sounds
+   - *Sensory:* Smell of roasted meat, spiced ale, woodsmoke
+=== content ===

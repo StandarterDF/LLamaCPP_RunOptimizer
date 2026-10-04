@@ -1,0 +1,6 @@
+=== reasoning_content ===
+We need to answer in Russian. User asks: "Ты — редактор. Сократи текст до 4–5 предложений, сохранив ключевые факты, имена и даты." Then text. Need produce 4-5 sentences condensed. Need preserve key facts, names, dates. Let's craft 4-5 sentences. Need likely include 1817 Karl von Drais, 1860s Pierre Lalman pedals, 1885 John Kemp Starley Rover chain drive equal wheels diamond frame, 1888 John Boyd Dunlop pneumatic tire, Wright brothers bicycle workshop influenced airplane. Need 4-5 sentences. Let's make 5 sentences concise.
+
+Sentence 1: История велосипеда началась в 1817 году, когда немецкий барон Карл фон Дрез запатентовал двухколёсную «машину для ходьбы» без педалей.
+Sentence 2: В 1860-х годах во Франции Пьер Лалман добавил пе
+=== content ===

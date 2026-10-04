@@ -1,0 +1,44 @@
+{
+  "_комментарий": "Gemma-4-26B-A4B: многотирн — работает ли переиспользование точного префикса и влияют ли SWA-чекпоинты (-ctxcp).",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/Gemma-4-26B-A4B-StyleTune-V2.IQ4_XS.gguf",
+  "common": ["--fit", "on", "-fa", "on", "--load-mode", "none", "-t", "14", "-tb", "14", "-b", "2048", "-ub", "512",
+             "-np", "1", "-c", "65536", "-ctk", "q4_0", "-ctv", "q4_0",
+             "--chat-template-file", "${LLAMA_DIR}/gemma4.jinja", "--reasoning", "off"],
+  "requests": [
+    { "tag": "turn1", "filler": 8000, "n_predict": 120, "temperature": 0.9, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "cache_prompt": false,
+      "messages": [
+        { "role": "system", "content": "Ниже — справочный материал. Отвечай живо, от первого лица." },
+        { "role": "user", "content": "Опиши, как ты заходишь в таверну после недели в дороге. Один абзац." }
+      ] },
+    { "tag": "turn2", "n_predict": 120, "temperature": 0.9, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "cache_prompt": true,
+      "messages": [
+        { "role": "system", "content": "Ниже — справочный материал. Отвечай живо, от первого лица." },
+        { "role": "user", "content": "Опиши, как ты заходишь в таверну после недели в дороге. Один абзац." },
+        { "role": "assistant", "content": "Я толкнула дверь плечом, и в лицо ударил тёплый запах жареного мяса и дыма. У стойки замолчали." },
+        { "role": "user", "content": "Что ты заказываешь и с кем садишься? Один абзац." }
+      ] },
+    { "tag": "turn3", "n_predict": 120, "temperature": 0.9, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "cache_prompt": true,
+      "messages": [
+        { "role": "system", "content": "Ниже — справочный материал. Отвечай живо, от первого лица." },
+        { "role": "user", "content": "Опиши, как ты заходишь в таверну после недели в дороге. Один абзац." },
+        { "role": "assistant", "content": "Я толкнула дверь плечом, и в лицо ударил тёплый запах жареного мяса и дыма. У стойки замолчали." },
+        { "role": "user", "content": "Что ты заказываешь и с кем садишься? Один абзац." },
+        { "role": "assistant", "content": "Взяла эль и миску похлёбки. Села спиной к стене, лицом к двери." },
+        { "role": "user", "content": "Старик заговаривает с тобой. О чём он спрашивает? Один абзац." }
+      ] }
+  ],
+  "tests": [
+    { "name": "g26_mt_ctxcp16",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf",
+               "-ctxcp", "16", "-cms", "512"] },
+    { "name": "g26_mt_ctxcp0",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf",
+               "-ctxcp", "0"] }
+  ]
+}

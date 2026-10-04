@@ -1,0 +1,56 @@
+0.00.002.827 I srv  llama_server: initializing ...
+0.00.107.022 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.107.147 I srv  init_listene: The UI is disabled
+0.00.107.151 I srv  init_listene: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.107.236 W srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.110.153 I srv    load_model: loading model '<MODELS_DIR>/mradermacher/Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF/Gemma-4-Dark-Thoughts-V2-31B.i1-IQ3_XXS.gguf'
+0.01.436.159 E llama_init_from_model: failed to initialize the context: Gemma4Assistant requires ctx_other to be set (this warning is normal during memory fitting)
+0.01.504.454 W operator(): failed to measure the memory of the extra model, fitting without it: failed to create llama_context from model
+0.01.990.264 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.990.583 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.02.024.887 W load: '</s>' is a normal token here, removing it from EOG list
+0.12.598.430 I cmn          init: llama threadpool init, n_threads = 12
+0.12.930.860 I common_speculative_init_result: loading draft model '<MODELS_DIR>/mradermacher/Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF/gemma-4-31B-it-assistant.Q4_K_M.gguf'
+0.13.416.094 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.13.416.461 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.13.453.955 W load: '</s>' is a normal token here, removing it from EOG list
+0.13.871.670 W llama_kv_cache: layer   3: sharing with layer 59. k = 0000000E14A80000, v = 0000000E182C0000
+0.13.872.018 W llama_kv_cache: layer   0: sharing with layer 58. k = 0000000E306C0000, v = 0000000E30A20000
+0.13.872.022 W llama_kv_cache: layer   1: sharing with layer 58. k = 0000000E306C0000, v = 0000000E30A20000
+0.13.872.023 W llama_kv_cache: layer   2: sharing with layer 58. k = 0000000E306C0000, v = 0000000E30A20000
+0.14.082.897 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 51200, kv_unified = 'false'
+0.14.279.746 I srv  llama_server: model loaded
+0.14.279.752 I srv  llama_server: listening on http://127.0.0.1:9941
+0.16.648.536 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+0.16.648.584 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.21.935.894 I slot print_timing: id  0 | task 0 | n_gen =    100, tg =  23.72 t/s, tg_3s =  23.96 t/s
+0.24.942.574 I slot print_timing: id  0 | task 0 | n_gen =    162, tg =  22.42 t/s, tg_3s =  20.62 t/s
+0.27.991.468 I slot print_timing: id  0 | task 0 | n_gen =    235, tg =  22.87 t/s, tg_3s =  23.94 t/s
+0.30.847.375 I slot print_timing: id  0 | task 0 | prompt eval time =    1113.12 ms /   185 tokens (    6.02 ms per token,   166.20 tokens per second)
+0.30.847.381 I slot print_timing: id  0 | task 0 |        eval time =   13085.64 ms /   300 tokens (   43.76 ms per token,    22.85 tokens per second)
+0.30.847.382 I slot print_timing: id  0 | task 0 |       total time =   14198.76 ms /   485 tokens
+0.30.847.383 I slot print_timing: id  0 | task 0 |    graphs reused =         62
+0.30.847.391 I slot print_timing: id  0 | task 0 | draft acceptance = 0.72222 (  117 accepted /   162 generated), mean len =  2.29
+0.30.847.459 I slot      release: id  0 | task 0 | stop processing: n_tokens = 484, truncated = 0
+0.30.914.060 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 1.000 (> 0.100 thold), f_keep = 0.382
+0.30.969.486 I slot launch_slot_: id  0 | task 186 | processing task, is_child = 0
+0.36.180.978 I slot print_timing: id  0 | task 186 | n_gen =    100, tg =  20.58 t/s, tg_3s =  20.79 t/s
+0.39.236.294 I slot print_timing: id  0 | task 186 | n_gen =    161, tg =  20.34 t/s, tg_3s =  19.97 t/s
+0.42.266.889 I slot print_timing: id  0 | task 186 | n_gen =    229, tg =  20.92 t/s, tg_3s =  22.44 t/s
+0.45.257.639 I slot print_timing: id  0 | task 186 | prompt eval time =     400.87 ms /   185 tokens (    2.17 ms per token,   461.50 tokens per second)
+0.45.257.644 I slot print_timing: id  0 | task 186 |        eval time =   13887.23 ms /   300 tokens (   46.45 ms per token,    21.53 tokens per second)
+0.45.257.645 I slot print_timing: id  0 | task 186 |       total time =   14288.10 ms /   485 tokens
+0.45.257.647 I slot print_timing: id  0 | task 186 |    graphs reused =        139
+0.45.257.653 I slot print_timing: id  0 | task 186 | draft acceptance = 0.66234 (  102 accepted /   154 generated), mean len =  2.13
+0.45.257.709 I slot      release: id  0 | task 186 | stop processing: n_tokens = 484, truncated = 0
+0.45.310.500 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 1.000 (> 0.100 thold), f_keep = 0.382
+0.45.362.255 I slot launch_slot_: id  0 | task 387 | processing task, is_child = 0
+0.50.193.981 I slot print_timing: id  0 | task 387 | n_gen =    100, tg =  22.39 t/s, tg_3s =  22.62 t/s
+0.53.238.032 I slot print_timing: id  0 | task 387 | n_gen =    166, tg =  22.10 t/s, tg_3s =  21.68 t/s
+0.56.248.147 I slot print_timing: id  0 | task 387 | n_gen =    239, tg =  22.72 t/s, tg_3s =  24.25 t/s
+0.58.768.088 I slot print_timing: id  0 | task 387 | prompt eval time =     410.89 ms /   185 tokens (    2.22 ms per token,   450.24 tokens per second)
+0.58.768.095 I slot print_timing: id  0 | task 387 |        eval time =   12994.92 ms /   300 tokens (   43.46 ms per token,    23.01 tokens per second)
+0.58.768.095 I slot print_timing: id  0 | task 387 |       total time =   13405.81 ms /   485 tokens
+0.58.768.096 I slot print_timing: id  0 | task 387 |    graphs reused =        178
+0.58.768.103 I slot print_timing: id  0 | task 387 | draft acceptance = 0.63684 (  121 accepted /   190 generated), mean len =  2.19
+0.58.768.149 I slot      release: id  0 | task 387 | stop processing: n_tokens = 484, truncated = 0

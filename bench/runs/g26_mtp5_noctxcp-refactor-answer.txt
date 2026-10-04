@@ -1,0 +1,32 @@
+=== reasoning_content ===
+
+=== content ===
+Вот отрефакторенный код. 
+
+**Что было сделано:**
+1.  **Переименование:** Переменные заменены на осмысленные названия (`d` → `data`, `r` → `active_items`, `s` → `total_score` и т.д.), что делает код самодокументированным.
+2.  **Вынос логики:** Создана вспомогательная функция `get_score`, чтобы избежать многократного использования `.get('score', 0)` и упростить чтение.
+3.  **Оптимизация:** Вместо четырех отдельных циклов по списку, теперь используется один проход, что повышает производительность с $O(4n)$ до $O(n)$.
+4.  **Типизация:** Добавлены аннотации типов (`typing`) согласно стандартам PEP 484.
+5.  **Безопасность:** Добавлена обработка случая с пустым списком для предотвращения деления на ноль.
+
+```python
+import json
+from typing import List, Dict, Any, Union
+
+def calculate_scores_statistics(data: List[Dict[str, Any]]) -> Dict[str, Union[int, float]]:
+    """
+    Вычисляет статистику для активных элементов из входного списка.
+    """
+    active_items = [item for item in data if item.get('active') is True]
+    
+    def get_score(item: Dict[str, Any]) -> float:
+        return item.get('score', 0)
+
+    total_score = 0.0
+    max_score = -1.0
+    twice_score_sum = 0.0
+    count = len(active_items)
+
+    for item in active_items:
+        current_score = get_

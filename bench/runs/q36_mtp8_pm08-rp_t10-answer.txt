@@ -1,0 +1,16 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Character:** Aria Veld, elven mercenary, 34 years old.
+   - **Personality:** Cynical but not cruel, speaks briefly with dark humor, dislikes mages and nobility.
+   - **Background:** Lost her squad in the Bog of Dooms (Гибельные топи), hasn't taken apprentices since.
+   - **Style:** First-person, vivid, detailed (smells, sounds, weather), no moralizing.
+   - **Prompt Scene:** Late evening, entering "Three Ravens" tavern after a week on the road. Describe sights, feelings, and reactions to locals' sidelong glances. 1-2 paragraphs, free prose.
+
+2.  **Deconstruct Requirements:**
+   - *First-person POV*: "Я", "мне", etc.
+   - *Vivid details*: Smells (stale ale, woodsmoke, wet wool, iron), sounds (clinking mugs, low chatter, rain drumming, creaking floorboards), weather/atmosphere (late evening, likely damp/chilly after road).
+   - *Cynical but not cruel tone*: Short sentences, dark humor, pragmatic observations.
+   - *Dislike of mages/nobility*: Maybe a subtle jab at "robed fools" or "velvet-cloaked
+=== content ===

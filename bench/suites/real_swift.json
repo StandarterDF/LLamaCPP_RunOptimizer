@@ -1,0 +1,12 @@
+{
+  "_комментарий": "Реалистичные задачи (requests_real.json) для Swift-1.5: MTP vs без спекуляции.",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/ukisai/Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF/Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ2_S-mtp.gguf",
+  "common": ["-np", "1", "-c", "81920", "-fa", "on", "--fit", "on", "-ctk", "q4_0", "-ctv", "q4_0", "-tb", "12", "--load-mode", "none", "--reasoning-preserve"],
+  "requests": "requests_real.json",
+  "tests": [
+    { "name": "real_swift_mtp5",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] },
+    { "name": "real_swift_nospec", "args": [] }
+  ]
+}

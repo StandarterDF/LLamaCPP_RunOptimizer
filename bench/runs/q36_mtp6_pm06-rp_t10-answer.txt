@@ -1,0 +1,15 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Character:** Aria Veld (Ария Вельд), elven mercenary, 34 years old.
+   - **Traits:** Cynical but not cruel, speaks briefly with dark humor, dislikes mages and nobility, heavy past (lost squad in the Marsh of Perdition/Гибельные топи, won't take apprentices).
+   - **Perspective:** First-person ("я").
+   - **Style:** Vivid, detailed (smells, sounds, weather), no moralizing.
+   - **Prompt/Scene:** Late evening, entering tavern "Three Crows" after a week on the road. Describe what I see/feel, and how I react to the locals' sidelong glances. 1-2 paragraphs, free prose.
+
+2.  **Key Elements to Incorporate:**
+   - *Setting:* Late evening, "Three Crows" tavern.
+   - *Physical/Sensory Details:* Smells (ale, sweat, wood smoke, rain/dampness from road), sounds (clinking tankards, murmurs, fire crackling), weather/atmosphere (damp chill outside, warm but stuffy inside).
+   - *Character Reaction:* Cynical, brief, dark humor, dismissive of nobles/mages if present, guarded due to past, reacts to sidelong
+=== content ===

@@ -1,0 +1,33 @@
+{
+  "_комментарий": "Qwen3.6: TG и PP на глубине контекста (0/8k/32k/64k ток.) — как ведёт себя MTP в длинной сессии.",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/unsloth/Qwen3.6-35B-A3B-MTP-GGUF/Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf",
+  "common": ["-np", "1", "-c", "131072", "-fa", "on", "--fit", "on", "-tb", "12", "--load-mode", "none",
+             "-ctk", "q4_0", "-ctv", "q4_0", "--reasoning-budget", "8192", "--jinja"],
+  "requests": [
+    { "tag": "d0", "n_predict": 200, "temperature": 1.0, "top_p": 0.95, "top_k": 40, "min_p": 0.05, "repeat_penalty": 1.05,
+      "messages": [
+        { "role": "system", "content": "Ты — Ария Вельд, эльфийская наёмница. Пиши от первого лица, живо." },
+        { "role": "user", "content": "Опиши, как ты заходишь в таверну после недели в дороге. Абзац." }
+      ] },
+    { "tag": "d8k", "filler": 8000, "n_predict": 200, "temperature": 1.0, "top_p": 0.95, "top_k": 40, "min_p": 0.05, "repeat_penalty": 1.05,
+      "messages": [
+        { "role": "system", "content": "Ниже — справочный материал. Он может быть не связан с вопросом." },
+        { "role": "user", "content": "Опиши, как ты заходишь в таверну после недели в дороге. Абзац." }
+      ] },
+    { "tag": "d32k", "filler": 32000, "n_predict": 200, "temperature": 1.0, "top_p": 0.95, "top_k": 40, "min_p": 0.05, "repeat_penalty": 1.05,
+      "messages": [
+        { "role": "system", "content": "Ниже — справочный материал. Он может быть не связан с вопросом." },
+        { "role": "user", "content": "Опиши, как ты заходишь в таверну после недели в дороге. Абзац." }
+      ] },
+    { "tag": "d64k", "filler": 64000, "n_predict": 200, "temperature": 1.0, "top_p": 0.95, "top_k": 40, "min_p": 0.05, "repeat_penalty": 1.05,
+      "messages": [
+        { "role": "system", "content": "Ниже — справочный материал. Он может быть не связан с вопросом." },
+        { "role": "user", "content": "Опиши, как ты заходишь в таверну после недели в дороге. Абзац." }
+      ] }
+  ],
+  "tests": [
+    { "name": "q36_depth_mtp5",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] }
+  ]
+}

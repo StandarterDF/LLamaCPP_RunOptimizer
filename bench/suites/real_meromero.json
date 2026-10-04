@@ -1,0 +1,13 @@
+{
+  "_комментарий": "Реалистичные задачи (requests_real.json) для G4-MeroMero-v2-31B-heretic: MTP vs без спекуляции. Конфиг соответствует launch\\b11382-cu124\\gemma4-31b-meromero-v2-heretic-*.bat.",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/mradermacher/G4-MeroMero-v2-31B-heretic-i1-GGUF/G4-MeroMero-v2-31B-heretic.i1-IQ3_XXS.gguf",
+  "common": ["-np", "1", "-c", "51200", "-fa", "on", "--fit", "on", "-t", "12", "-tb", "12", "-ctk", "q4_0", "-ctv", "q4_0", "--load-mode", "none", "-ctxcp", "16", "-cms", "512", "--jinja", "--reasoning", "off"],
+  "requests": "requests_real.json",
+  "tests": [
+    { "name": "real_meromero_mtp",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.75",
+               "-md", "${MODELS_DIR}/mradermacher/Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF/gemma-4-31B-it-assistant.Q4_K_M.gguf"] },
+    { "name": "real_meromero_nospec", "args": [] }
+  ]
+}

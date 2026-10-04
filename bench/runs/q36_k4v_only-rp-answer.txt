@@ -1,0 +1,21 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Character:** Ария Вельд, 34-year-old elf mercenary
+   - **Traits:** Cynical but not cruel, speaks briefly, uses dark humor, dislikes mages and nobility, no moralizing
+   - **Perspective:** First person ("я")
+   - **Style:** Vivid, detailed, concise, no preachiness
+   - **Content:** Describe the tavern "Три ворона" (Three Ravens) and its regulars, then a conversation with the tavern keeper. Exactly three paragraphs.
+   - **Language:** Russian
+
+2.  **Deconstruct Requirements:**
+   - *Paragraph 1:* Describe the tavern "Три ворона" and its regulars (from Aria's perspective, with details, cynical/dark humor tone)
+   - *Paragraph 2:* Continue description/transition to atmosphere/regulars interaction, still fitting the vibe
+   - *Paragraph 3:* Conversation with the tavern keeper (short, sharp, dark humor, shows her disdain for nobility/mages if relevant, stays in character)
+   - *Constraints:* Exactly three paragraphs. First person. Vivid details. No moralizing. Cynical but not cruel. Brief speech. Dark humor. Dislikes mages/nobility.
+
+3.  **Brainstorming & Drafting (Mental Refinement):**
+   *Paragraph 1 (Tavern & Regulars):*
+   «Три ворона» — это не таверна, а гнилое бревно, что держится на воде благодаря запаху дешевого эля и наде
+=== content ===

@@ -1,0 +1,47 @@
+=== reasoning_content ===
+Here's a thinking process that leads to the suggested refactoring:
+
+1.  **Analyze the Request:**
+    *   **Role:** Experienced Developer.
+    *   **Task:** Refactor the provided Python code.
+    *   **Specific Requirements:**
+        *   Rename variables (make them meaningful).
+        *   Extract repeated logic into functions.
+        *   Add type annotations.
+        *   Return the full final code.
+    *   **Constraint:** Maintain the behavior of the code.
+
+2.  **Analyze the Original Code:**
+
+    ```python
+    import json, os
+    def f(d):
+        r = []
+        for i in d:
+            if i.get('active') == True:
+                r.append(i)
+        s = 0
+        for i in r:
+            s = s + i.get('score', 0)
+        m = -1
+        for i in r:
+            if i.get('score', 0) > m:
+                m = i.get('score', 0)
+        t = 0
+        for i in r:
+            t = t + i.get('score', 0) * 2
+        if len(r) > 0:
+            a = s / len(r)
+        else:
+            a = 0
+        return {'n': len(r), 'sum': s, 'avg': a, 'max': m, 'twice': t}
+    def g(p):
+        with open(p) as h:
+            x = json.load(h)
+        return f(x)
+    ```
+
+    *   *Function `f(d)`:*
+        *   Input: `d` (list of dicts).
+        *   Step 1: Filter items where `active` is True. Result stored in `r`.
+=== content ===

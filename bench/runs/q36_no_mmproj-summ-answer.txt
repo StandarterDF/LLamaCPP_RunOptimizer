@@ -1,0 +1,12 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Input Text:** A short paragraph about the history of the bicycle, covering key milestones (1817 Drais, 1860s Lallement, 1880s penny-farthings, 1885 Starley's Rover, 1888 Dunlop's pneumatic tire), social impact (cheap transport for workers, mobility for women), and a connection to the Wright brothers' aviation work.
+   - **Task:** Shorten the text to 4-5 sentences.
+   - **Language:** Russian.
+
+2.  **Identify Key Information:**
+   - Origin: 1817, Karl von Drais invented the first pedal-less walking machine.
+   - Evolution: 1860s pedals added (Lallement), 1880s large wheels (penny-farthings).
+=== content ===

@@ -1,0 +1,12 @@
+{
+  "_комментарий": "Qwen3.6 на СТАРОЙ сборке b10472: базовая точка для A/B с b11382 (реалистичный датасет).",
+  "server": "${LLAMA_SERVER}",
+  "model": "${MODELS_DIR}/unsloth/Qwen3.6-35B-A3B-MTP-GGUF/Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf",
+  "common": ["-np", "1", "-c", "131072", "-fa", "on", "--fit", "on", "-tb", "12", "--load-mode", "none",
+             "-ctk", "q4_0", "-ctv", "q4_0", "--reasoning-budget", "8192", "--jinja"],
+  "requests": "requests_real.json",
+  "tests": [
+    { "name": "qwen_old_mtp5",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] }
+  ]
+}

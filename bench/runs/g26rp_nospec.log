@@ -1,0 +1,22 @@
+0.00.012.334 I srv  llama_server: initializing ...
+0.00.116.525 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.116.635 I srv  init_listene: The UI is disabled
+0.00.116.638 I srv  init_listene: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.116.718 W srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.118.744 I srv    load_model: loading model '<MODELS_DIR>/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/Gemma-4-26B-A4B-StyleTune-V2.IQ4_XS.gguf'
+0.06.616.545 W load: control-looking token:      1 '<eos>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.06.616.772 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.06.617.128 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.06.653.274 W load: '</s>' is a normal token here, removing it from EOG list
+0.19.622.289 I cmn          init: llama threadpool init, n_threads = 14
+0.20.057.879 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 65536, kv_unified = 'false'
+0.20.069.655 I srv  llama_server: model loaded
+0.20.069.662 I srv  llama_server: listening on http://127.0.0.1:9941
+0.22.727.337 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+0.22.727.396 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.26.577.802 I slot print_timing: id  0 | task 0 | n_gen =    184, tg =  60.69 t/s, tg_3s =  61.02 t/s
+0.28.704.473 I slot print_timing: id  0 | task 0 | prompt eval time =     834.94 ms /   185 tokens (    4.51 ms per token,   221.57 tokens per second)
+0.28.704.480 I slot print_timing: id  0 | task 0 |        eval time =    5142.10 ms /   320 tokens (   16.12 ms per token,    62.04 tokens per second)
+0.28.704.481 I slot print_timing: id  0 | task 0 |       total time =    5977.04 ms /   505 tokens
+0.28.704.482 I slot print_timing: id  0 | task 0 |    graphs reused =        318
+0.28.704.527 I slot      release: id  0 | task 0 | stop processing: n_tokens = 504, truncated = 0

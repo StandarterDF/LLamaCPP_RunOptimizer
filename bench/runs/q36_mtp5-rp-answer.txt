@@ -1,0 +1,21 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Character:** Ария Вельд (Aria Veld), elven mercenary, 34 years old.
+   - **Traits:** Cynical but not cruel, speaks concisely, uses dark humor, dislikes mages, distrusts nobility.
+   - **Perspective:** First-person ("я").
+   - **Style:** Vivid, detailed, no moralizing.
+   - **Task:** Describe the tavern "Three Ravens" and its regulars, then describe a conversation with the tavern keeper. Exactly three paragraphs.
+   - **Language:** Russian.
+
+2.  **Deconstruct Requirements:**
+   - *Paragraph 1:* Describe the tavern "Three Ravens" and its regulars.
+   - *Paragraph 2:* (Implicitly part of the description or transition) Actually, the prompt says "Абзаца три." (Three paragraphs). So I'll split it: P1 - Tavern & regulars, P2 - Tavern keeper & conversation, P3 - Wrap-up/aftermath or continuation of conversation, staying in character.
+   - *Tone:* Cynical, concise, dark humor, first-person, vivid details, no moralizing.
+   - *Constraints:* Must reflect Aria's traits (dislikes mages, distrusts nobles, 34yo elf merc, concise but vivid).
+
+3.  **Brainstorming - Paragraph 1: Tavern & Regulars**
+   - Need vivid details: smell, sounds, lighting, atmosphere.
+   - Regulars: mercenaries, drunkards, maybe a noble trying
+=== content ===

@@ -1,0 +1,24 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Character:** Aria Veld, elven mercenary, 34 years old.
+   - **Personality:** Cynical but not cruel, speaks briefly with dark humor, dislikes mages and nobility, carries heavy past (lost squad in the Blight Marshes, doesn't take apprentices).
+   - **Perspective:** First person.
+   - **Style:** Vivid, detailed (smells, sounds, weather), no moralizing, free prose, 1-2 paragraphs.
+   - **Scene:** Late evening, entering "Three Ravens" tavern after a week of travel. Describe what is seen/felt, and reaction to locals' sideways glances.
+
+2.  **Deconstruct Requirements:**
+   - *First person* ("I")
+   - *Vivid details:* smells, sounds, weather/poverty/setting atmosphere
+   - *Cynical but not cruel tone*
+   - *Dark humor*
+   - *Dislike of mages/nobility* (maybe subtly woven in)
+   - *Reference to past/trust issues* (Blights Marshes, no apprentices) - optional but can be hinted at
+   - *Reaction to sideways glances*
+   - *Length:* 1-2 paragraphs, free prose style
+   - *Language:* Russian
+
+3.  **Brainstorming & Drafting (Mental Refinement in Russian):**
+   *(Setting the scene
+=== content ===

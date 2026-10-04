@@ -94,8 +94,41 @@ SEED_TEXT = (
 
 
 def make_prompt(target_tokens: int) -> str:
-    """Набирает промпт нужной длины (для англ. текста ~1.3 токена на слово)."""
+    """Легаси: повторяющийся англ. текст для стресс-теста. Для честных замеров НЕ использовать —
+    он даёт ~100 % принятия спекуляции и завышает TG. Реалистичные промпты — в requests_real.json."""
     words = SEED_TEXT.split()
+    need_words = max(8, int(target_tokens / 1.3))
+    out = []
+    while len(out) < need_words:
+        out.extend(words)
+    return " ".join(out[:need_words])
+
+
+FILLER_PARAS = (
+    "The history of cartography stretches back thousands of years, from Babylonian clay tablets "
+    "to satellite imagery. Early maps were as much about power and belief as about geography, "
+    "often placing the ruler's city at the centre of the world. "
+    "Coffee spread from the Ethiopian highlands to Yemen and then to the Ottoman Empire, where "
+    "the first coffeehouses became places of conversation, music and gossip. "
+    "Coral reefs occupy less than one percent of the ocean floor yet support roughly a quarter of "
+    "all marine species; warming water causes them to expel their symbiotic algae and bleach. "
+    "The Voyager probes, launched in 1977, are now beyond the heliosphere, carrying a golden record "
+    "with greetings in dozens of languages and images of human life. "
+    "Modern cryptography rests on problems believed to be hard, such as factoring large integers "
+    "or computing discrete logarithms, and the arrival of quantum computers threatens both. "
+    "The bicycle gave workers cheap transport and gave women mobility independent of men, and its "
+    "workshops trained the craftsmen who later built the first aircraft. "
+    "Sleep is not a single uniform state; the brain cycles through light, deep and REM stages, "
+    "and each stage appears to serve different functions for memory and repair. "
+    "Volcanic ash preserves a record of past eruptions in layers of sediment, letting geologists "
+    "date ancient events and estimate how often a region is likely to erupt again. "
+)
+
+
+def make_filler(target_tokens: int) -> str:
+    """Длинный плейсхолдер-контекст для замера PP/TG на глубине. Текст разнообразный, но цикличный —
+    годится только для измерения скорости на глубине, не для оценки качества."""
+    words = FILLER_PARAS.split()
     need_words = max(8, int(target_tokens / 1.3))
     out = []
     while len(out) < need_words:
@@ -236,6 +269,8 @@ def run_test(name, port, server_exe, args, reqs, timeout_load=600, timeout_req=9
             for rq0 in reqs:
                 rq = dict(rq0)
                 tag = rq.pop("tag")
+                filler = rq.pop("filler", None)
+                filler_text = make_filler(filler) if filler else ""
                 is_chat = "messages" in rq
                 body = {
                     "temperature": rq.pop("temperature", 1.0),
@@ -245,15 +280,31 @@ def run_test(name, port, server_exe, args, reqs, timeout_load=600, timeout_req=9
                     "presence_penalty": rq.pop("presence_penalty", 0.0),
                     "repeat_penalty": rq.pop("repeat_penalty", 1.0),
                     "seed": rq.pop("seed", 42),
-                    "cache_prompt": False,
+                    "cache_prompt": rq.pop("cache_prompt", False),
                     "stream": False,
                 }
                 if is_chat:
-                    body["messages"] = rq.pop("messages")
+                    msgs = [dict(m) for m in rq.pop("messages")]
+                    if filler_text:
+                        for m in msgs:
+                            if m.get("role") == "user":
+                                m["content"] = (
+                                    filler_text + "\n\n" + (m.get("content") or "")
+                                )
+                                break
+                    body["messages"] = msgs
                     body["max_tokens"] = rq.pop("n_predict")
                     url = f"http://127.0.0.1:{port}/v1/chat/completions"
                 else:
-                    body["prompt"] = make_prompt(rq.pop("target"))
+                    if "prompt" in rq:
+                        base_prompt = rq.pop("prompt")
+                    else:
+                        base_prompt = make_prompt(rq.pop("target"))
+                    body["prompt"] = (
+                        (filler_text + "\n\n" + base_prompt)
+                        if filler_text
+                        else base_prompt
+                    )
                     body["n_predict"] = rq.pop("n_predict")
                     url = f"http://127.0.0.1:{port}/completion"
                 body.update(rq)
@@ -344,13 +395,10 @@ def main():
     server_exe = suite["server"]
     model = suite["model"]
     common = suite.get("common", [])
-    reqs = suite.get(
-        "requests",
-        [
-            {"tag": "short", "target": 1500, "n_predict": 256},
-            {"tag": "long", "target": 12000, "n_predict": 64},
-        ],
-    )
+    reqs = suite.get("requests", "requests_real.json")
+    if isinstance(reqs, str):
+        with open(os.path.join(ROOT, reqs), encoding="utf-8") as f:
+            reqs = json.load(f)
 
     results_path = os.path.join(RUNS, "results.jsonl")
     tests = suite["tests"]

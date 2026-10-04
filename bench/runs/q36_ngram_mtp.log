@@ -1,0 +1,38 @@
+0.00.002.784 I srv  llama_server: initializing ...
+0.00.104.283 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.104.406 I srv  init_listene: The UI is disabled
+0.00.104.410 I srv  init_listene: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.104.497 W srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.107.440 I srv    load_model: loading model '<MODELS_DIR>/unsloth/Qwen3.6-35B-A3B-MTP-GGUF/Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf'
+0.03.690.270 I cmn          init: llama threadpool init, n_threads = 8
+0.03.747.812 I common_speculative_init_result: creating MTP draft context against the target model '<MODELS_DIR>/unsloth/Qwen3.6-35B-A3B-MTP-GGUF/Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf'
+0.03.767.831 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 131072, kv_unified = 'false'
+0.03.911.566 W srv          init: chat template supports preserving reasoning, it is enabled by default (may use more tokens, disable via --no-reasoning-preserve)
+0.03.911.584 I srv  llama_server: model loaded
+0.03.911.587 I srv  llama_server: listening on http://127.0.0.1:9944
+0.06.584.736 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+0.06.584.802 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.09.924.958 I slot print_timing: id  0 | task 0 | n_gen =    257, tg =  84.90 t/s, tg_3s =  85.23 t/s
+0.10.358.703 I slot print_timing: id  0 | task 0 | prompt eval time =     324.84 ms /   185 tokens (    1.76 ms per token,   569.51 tokens per second)
+0.10.358.708 I slot print_timing: id  0 | task 0 |        eval time =    3448.89 ms /   300 tokens (   11.53 ms per token,    86.69 tokens per second)
+0.10.358.710 I slot print_timing: id  0 | task 0 |       total time =    3773.73 ms /   485 tokens
+0.10.358.710 I slot print_timing: id  0 | task 0 |    graphs reused =         19
+0.10.358.735 I slot print_timing: id  0 | task 0 | draft acceptance = 0.67606 (  192 accepted /   284 generated), mean len =  3.21
+0.10.358.781 I slot      release: id  0 | task 0 | stop processing: n_tokens = 484, truncated = 0
+0.10.404.118 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 10355993
+0.10.436.725 I slot launch_slot_: id  0 | task 111 | processing task, is_child = 0
+0.13.732.665 I slot print_timing: id  0 | task 111 | n_gen =    388, tg = 128.52 t/s, tg_3s = 128.85 t/s
+0.13.870.906 I slot print_timing: id  0 | task 111 | prompt eval time =     284.58 ms /   312 tokens (    0.91 ms per token,  1096.35 tokens per second)
+0.13.870.911 I slot print_timing: id  0 | task 111 |        eval time =    3149.58 ms /   400 tokens (    7.89 ms per token,   126.68 tokens per second)
+0.13.870.912 I slot print_timing: id  0 | task 111 |       total time =    3434.16 ms /   712 tokens
+0.13.870.913 I slot print_timing: id  0 | task 111 |    graphs reused =         69
+0.13.870.938 I slot print_timing: id  0 | task 111 | draft acceptance = 0.74279 (  309 accepted /   416 generated), mean len =  4.77
+0.13.870.989 I slot      release: id  0 | task 111 | stop processing: n_tokens = 711, truncated = 0
+0.13.905.447 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 13868201
+0.13.938.459 I slot launch_slot_: id  0 | task 205 | processing task, is_child = 0
+0.16.101.563 I slot print_timing: id  0 | task 205 | prompt eval time =     321.68 ms /   408 tokens (    0.79 ms per token,  1268.33 tokens per second)
+0.16.101.568 I slot print_timing: id  0 | task 205 |        eval time =    1841.25 ms /   200 tokens (    9.25 ms per token,   108.08 tokens per second)
+0.16.101.569 I slot print_timing: id  0 | task 205 |       total time =    2162.93 ms /   608 tokens
+0.16.101.570 I slot print_timing: id  0 | task 205 |    graphs reused =         82
+0.16.101.597 I slot print_timing: id  0 | task 205 | draft acceptance = 0.60251 (  144 accepted /   239 generated), mean len =  3.88
+0.16.101.658 I slot      release: id  0 | task 205 | stop processing: n_tokens = 607, truncated = 0

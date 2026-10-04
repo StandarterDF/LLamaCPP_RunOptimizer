@@ -1,0 +1,13 @@
+{
+  "_комментарий": "Реалистичные задачи (requests_real.json) для Gemma-4-31B: MTP vs без спекуляции.",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/mradermacher/Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF/Gemma-4-Dark-Thoughts-V2-31B.i1-IQ3_XXS.gguf",
+  "common": ["-np", "1", "-c", "51200", "-fa", "on", "--fit", "on", "-t", "12", "-tb", "12", "-ctk", "q4_0", "-ctv", "q4_0", "--load-mode", "none", "--jinja", "--reasoning", "off"],
+  "requests": "requests_real.json",
+  "tests": [
+    { "name": "real_g31_mtp5",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.75",
+               "-md", "${MODELS_DIR}/mradermacher/Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF/gemma-4-31B-it-assistant.Q4_K_M.gguf"] },
+    { "name": "real_g31_nospec", "args": [] }
+  ]
+}

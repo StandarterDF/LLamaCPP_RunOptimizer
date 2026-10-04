@@ -1,0 +1,20 @@
+=== reasoning_content ===
+We need answer user: Write Python function merges overlapping intervals and returns merged list, explain algorithm and time complexity in two sentences. Include short usage example.
+Need produce final. Need likely code. Need ensure two sentences exactly? "explain the algorithm and its time complexity in two sentences." Means explanation should be two sentences total. Could be: "The function sorts intervals by start time and then scans them, extending the current interval whenever the next interval starts before or at its end." "This yields O(n log n) time due to sorting and O(n) space for the merged list." That's two sentences. Need include code and usage example. The explanation can be two sentences. Need maybe no extra sentences? User asks include short usage example. We can provide code block, then explanation exactly two sentences, then usage example? If we add headings maybe not sentences? To be safe, final can have code, then two-sentence explanation, then usage example. But if headings count? Better structure:
+```python
+def merge_intervals(intervals):
+    if not intervals:
+        return []
+    intervals = sorted(intervals, key=lambda x: x[0])
+    merged = [list(intervals[0])]
+    for start, end in intervals[1:]:
+        if start <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], end)
+        else:
+            merged.append([start, end])
+    return merged
+```
+Usage:
+```python
+print(merge_intervals
+=== content ===

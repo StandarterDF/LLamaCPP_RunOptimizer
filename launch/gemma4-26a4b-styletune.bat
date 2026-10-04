@@ -4,20 +4,17 @@ rem --- локальные пути (config.local.bat / config.example.bat) ---
 for %%I in ("%~dp0..") do set "PROJECT_DIR=%%~fI"
 call "%PROJECT_DIR%\config.local.bat" 2>nul
 call "%PROJECT_DIR%\config.example.bat" 2>nul
-rem ------------------------------------------------------------------
 rem ============================================================================
-rem  Gemma-4-26B-A4B StyleTune V2 (IQ4_XS, MoE) — лучший конфиг по итогам замеров
-rem  (MODELS_TUNING.md, серия b):
-rem    реальный чат ~95.6 t/s (+7% к исходному), без спекуляции ~62.7 (x1.5);
-rem    VRAM ~15.6 GB, PP ~2400 t/s.
-rem  MoE-эксперты НЕ выгружать на CPU (-ncmoe даёт -32...-43%).
-rem  Для длинного контекста: заменить -c 65536 на 131072 (будет ~86 t/s).
+rem  Gemma-4-26B-A4B StyleTune (IQ4_XS, MoE) — MTP nm5 pmin0.5, c=65536
 rem ============================================================================
-
-"%LLAMA_SERVER%" ^
+set "SERVER=%LLAMA_SERVER%"
+set "MODEL=%MODELS_DIR%\mradermacher\Gemma-4-26B-A4B-StyleTune-V2-GGUF\Gemma-4-26B-A4B-StyleTune-V2.IQ4_XS.gguf"
+set "DRAFT=%MODELS_DIR%\mradermacher\Gemma-4-26B-A4B-StyleTune-V2-GGUF\gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf"
+set "TEMPLATE=%LLAMA_DIR%\gemma4.jinja"
+"%SERVER%" ^
   -m "%MODEL%" ^
   --host 0.0.0.0 --port 9931 --alias "Gemma-4-26B-A4B" ^
-  --fit on -fa on --no-mmap -t 14 -tb 14 -b 2048 -ub 512 ^
+  --fit on -fa on --load-mode none -t 14 -tb 14 -b 2048 -ub 512 ^
   -np 1 -c 65536 ^
   -ctk q4_0 -ctv q4_0 ^
   --chat-template-file "%TEMPLATE%" ^

@@ -1,0 +1,17 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Character:** Aria Veld (Ария Вельд), elven mercenary, 34 years old.
+   - **Traits:** Cynical but not cruel, speaks briefly with dark humor, dislikes mages and nobility, heavy past (lost squad in the Boglands/Gibb Marshes, won't take apprentices).
+   - **Perspective:** First-person ("я").
+   - **Style:** Vivid, detailed (smells, sounds, weather), no moralizing, free prose.
+   - **Scene:** Late evening, entering "Three Ravens" tavern after a week-long journey. Describe sights, sensations, and reaction to locals' sideways glances.
+   - **Format:** 1-2 paragraphs.
+
+2.  **Deconstruct Requirements:**
+   - *Age/Species:* 34, elf - implies sharper senses, perhaps lingering physical/mental weariness from long travel, elven traits subtly noted (ears, agelessness vs. fatigue).
+   - *Cynical/dark humor:* Internal monologue or dialogue should reflect this without being overly verbose.
+   - *Dislikes mages/nobility:* Might slip into a comment if relevant, but not forced.
+   - *Past trauma:* "Гибельные топи" (Gibb Marshes/Boglands) - loss of squad, won't take apprentices. Could be hinted at through internal reflection or reaction to the tavern
+=== content ===

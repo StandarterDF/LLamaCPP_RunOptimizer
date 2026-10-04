@@ -1,0 +1,24 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Topic:** TCP vs UDP
+   - **Requirement 1:** Explain in simple words
+   - **Requirement 2:** Provide one example for each where it's appropriate
+   - **Requirement 3:** Maximum 5 sentences
+   - **Language:** Russian
+
+2.  **Deconstruct Requirements:**
+   - Simple explanation of TCP and UDP difference
+   - One example for TCP
+   - One example for UDP
+   - Keep it under 5 sentences total
+   - Language: Russian
+
+3.  **Draft - Mental (Russian):**
+   TCP — это надёжный протокол, который гарантирует доставку данных и их порядок, но работает медленнее. UDP — быстрый, но ненадёжный протокол, который отправляет данные без проверок и потерь не компенсирует. Для TCP подходит загрузка веб-страниц или отправка файлов, где важна точность. UDP идеален для видеочатов или онлайн-игр, где важны скорость и плавность, а небольшие потери допустимы.
+
+4.  **Check Constraints:**
+   - Simple words? Yes.
+   - Difference explained? Yes (
+=== content ===

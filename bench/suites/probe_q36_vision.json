@@ -1,0 +1,31 @@
+{
+  "_комментарий": "Qwen3.6: цена vision (mmproj на CPU/GPU vs без проектора) и мультислот -np 2.",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/unsloth/Qwen3.6-35B-A3B-MTP-GGUF/Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf",
+  "common": ["-c", "131072", "-fa", "on", "--fit", "on", "-tb", "12", "--load-mode", "none",
+             "-ctk", "q4_0", "-ctv", "q4_0", "--reasoning-budget", "2048", "--jinja"],
+  "requests": [
+    { "tag": "rp", "n_predict": 250, "temperature": 1.0, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "messages": [
+        { "role": "system", "content": "Ты — Ария Вельд, эльфийская наёмница. Пиши от первого лица, живо." },
+        { "role": "user", "content": "Опиши, как ты заходишь в таверну после недели в дороге. Абзац." }
+      ] },
+    { "tag": "summ", "n_predict": 200, "temperature": 0.3, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "messages": [
+        { "role": "system", "content": "Сократи текст до 4–5 предложений." },
+        { "role": "user", "content": "Сократи: История велосипеда начинается в 1817 году, когда барон Карл фон Дрез запатентовал «машину для ходьбы» без педалей. Во Франции 1860-х Пьер Лалман приделал педали к переднему колесу. К 1880-м появились большие «пенни-фартинги». В 1885 году Джон Кемп Старли представил «Rover» с цепным приводом и ромбовидной рамой. В 1888 году Джон Бойд Данлоп предложил пневматическую шину. Велосипед дал рабочим дешёвый транспорт, а женщинам — мобильность. Братья Райт были владельцами велосипедной мастерской, и их опыт повлиял на первый самолёт." }
+      ] }
+  ],
+  "tests": [
+    { "name": "q36_no_mmproj",
+      "args": ["-np", "1", "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] },
+    { "name": "q36_mmproj_cpu",
+      "args": ["-np", "1", "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "--mmproj", "${MODELS_DIR}/unsloth/Qwen3.6-35B-A3B-MTP-GGUF/mmproj-F16.gguf", "--no-mmproj-offload", "--image-min-tokens", "1024"] },
+    { "name": "q36_mmproj_gpu",
+      "args": ["-np", "1", "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "--mmproj", "${MODELS_DIR}/unsloth/Qwen3.6-35B-A3B-MTP-GGUF/mmproj-F16.gguf", "--image-min-tokens", "1024"] },
+    { "name": "q36_np2",
+      "args": ["-np", "2", "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] }
+  ]
+}

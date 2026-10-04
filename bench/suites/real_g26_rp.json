@@ -1,0 +1,28 @@
+{
+  "_комментарий": "Тюнинг RP для Gemma-4-26B-A4B (no-think): без спекуляции vs короткий драфт nmax2/3/5.",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/Gemma-4-26B-A4B-StyleTune-V2.IQ4_XS.gguf",
+  "common": ["--fit", "on", "-fa", "on", "--load-mode", "none", "-t", "14", "-tb", "14", "-b", "2048", "-ub", "512",
+             "-np", "1", "-c", "65536", "-ctk", "q4_0", "-ctv", "q4_0",
+             "--chat-template-file", "${LLAMA_DIR}/gemma4.jinja", "--reasoning", "off"],
+  "requests": [
+    { "tag": "rp", "n_predict": 320,
+      "temperature": 1.0, "top_p": 0.95, "top_k": 40, "min_p": 0.05, "repeat_penalty": 1.05,
+      "messages": [
+        { "role": "system", "content": "Ты — Ария Вельд, эльфийская наёмница, 34 года. Циничная, но не жестокая; говоришь коротко, с чёрным юмором, не любишь магов и не доверяешь знати. Тяжёлое прошлое: потеряла отряд в Гибельных топях и с тех пор не берёшь учеников. Пиши от первого лица, живо, с деталями: запахи, звуки, погода. Без морализаторства." },
+        { "role": "user", "content": "Поздний вечер, ты заходишь в таверну «Три ворона» после недели в дороге. Опиши, что видишь и чувствуешь, и как реагируешь на косые взгляды местных. Абзац-два, свободная проза." }
+      ] }
+  ],
+  "tests": [
+    { "name": "g26rp_nospec", "args": [] },
+    { "name": "g26rp_mtp2",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "2", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf"] },
+    { "name": "g26rp_mtp3",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf"] },
+    { "name": "g26rp_mtp5",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf"] }
+  ]
+}

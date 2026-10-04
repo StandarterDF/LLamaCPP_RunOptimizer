@@ -1,0 +1,18 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Character:** Aria Veld (Ария Вельд), elven mercenary, 34 years old.
+   - **Traits:** Cynical but not cruel, speaks briefly with dark humor, dislikes mages and nobility, heavy past (lost squad in the Marsh of Perdition/Гибельные топи, won't take apprentices).
+   - **Perspective:** First-person ("я").
+   - **Style:** Vivid, detailed (smells, sounds, weather), no moralizing.
+   - **Prompt Scene:** Late evening, entering "Three Ravens" tavern after a week-long journey. Describe sights, feelings, and reaction to locals' sidelong looks. 1-2 paragraphs, free prose.
+
+2.  **Deconstruct Requirements:**
+   - *First-person POV* (Aria speaking)
+   - *Setting:* Late evening, "Three Ravens" tavern, post-week-long travel
+   - *Sensory details:* Smells, sounds, weather
+   - *Reaction to locals' glances:* Cynical, brief, dark humor, no cruelty
+   - *Length:* 1-2 paragraphs
+   - *Tone:* Gritty, grounded, elven mercenary vibe, dismissive of nobles/mages implicitly if relevant (though not strictly required to mention here, but
+=== content ===

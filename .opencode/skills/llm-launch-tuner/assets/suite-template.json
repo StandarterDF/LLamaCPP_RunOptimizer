@@ -1,15 +1,24 @@
 {
-  "_комментарий": "Быстрый шаблон для scripts/bench.py. Личные пути задавайте через env.local.json (образец: env.example.json), а здесь используйте плейсхолдеры ${LLAMA_SERVER}, ${LLAMA_DIR}, ${MODELS_DIR}, ${PROJECT_DIR}. Серия = 10-15 минут на модель.",
+  "_комментарий": "Быстрый шаблон для scripts/bench.py. Личные пути задавайте через env.local.json (образец: env.example.json), а здесь используйте плейсхолдеры ${LLAMA_SERVER}, ${LLAMA_DIR}, ${MODELS_DIR}, ${PROJECT_DIR}. Промпты — реалистичные (RP/чат/код/математика); повторяющийся 'target' НЕ использовать как основной замер.",
   "server": "${LLAMA_SERVER}",
   "model": "${MODELS_DIR}/REPLACE-ME.gguf",
   "common": ["-np", "1", "-fa", "on", "--fit", "on", "-ctk", "q4_0", "-ctv", "q4_0", "--load-mode", "none"],
   "requests": [
-    { "tag": "short", "target": 1000, "n_predict": 128 },
-    { "tag": "long", "target": 8000, "n_predict": 32 },
-    { "tag": "chat_alg", "n_predict": 256,
-      "messages": [{ "role": "user", "content": "Implement a Python function that merges overlapping intervals, then explain the algorithm and its complexity in a few sentences. Keep it concise." }] },
-    { "tag": "chat_math", "n_predict": 384,
-      "messages": [{ "role": "user", "content": "Solve step by step: If x + 1/x = 3, find x^3 + 1/x^3. Give the final answer clearly." }] }
+    { "tag": "rp", "n_predict": 320,
+      "temperature": 1.0, "top_p": 0.95, "top_k": 40, "min_p": 0.05, "repeat_penalty": 1.05,
+      "messages": [
+        { "role": "system", "content": "Ты — Ария Вельд, эльфийская наёмница, 34 года. Циничная, но не жестокая; говоришь коротко, с чёрным юмором. Тяжёлое прошлое. Пиши от первого лица, живо, с деталями: запахи, звуки, погода. Без морализаторства." },
+        { "role": "user", "content": "Поздний вечер, ты заходишь в таверну «Три ворона» после недели в дороге. Опиши, что видишь и чувствуешь. Абзац-два, свободная проза." }
+      ] },
+    { "tag": "chat", "n_predict": 256,
+      "temperature": 0.7, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "messages": [ { "role": "user", "content": "Объясни простыми словами разницу между TCP и UDP и приведи по одному примеру, где каждый уместен. Не больше пяти предложений." } ] },
+    { "tag": "code", "n_predict": 320,
+      "temperature": 0.3, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "messages": [ { "role": "user", "content": "Write a Python function that merges overlapping intervals and returns the merged list, then explain the algorithm and its time complexity in two sentences. Include a short usage example." } ] },
+    { "tag": "math", "n_predict": 384,
+      "temperature": 0.2, "top_p": 0.95, "top_k": 40, "min_p": 0.0,
+      "messages": [ { "role": "user", "content": "Машина проехала первую половину пути со скоростью 60 км/ч, а вторую половину — со скоростью 40 км/ч. Найдите среднюю скорость на всём пути. Решите по шагам и объясните, почему ответ не равен 50 км/ч." } ] }
   ],
   "tests": [
     { "name": "01_baseline",

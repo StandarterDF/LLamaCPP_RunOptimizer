@@ -1,0 +1,31 @@
+{
+  "_комментарий": "Qwen3.6: проверка прочих флагов сервера — backend sampling, poll, p-split, swa-full.",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/unsloth/Qwen3.6-35B-A3B-MTP-GGUF/Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf",
+  "common": ["-np", "1", "-c", "131072", "-fa", "on", "--fit", "on", "-tb", "12", "--load-mode", "none",
+             "-ctk", "q4_0", "-ctv", "q4_0", "--reasoning-budget", "8192", "--jinja"],
+  "requests": [
+    { "tag": "rp", "n_predict": 300, "temperature": 1.0, "top_p": 0.95, "top_k": 40, "min_p": 0.05, "repeat_penalty": 1.05,
+      "messages": [
+        { "role": "system", "content": "Ты — Ария Вельд, эльфийская наёмница, 34 года. Циничная, но не жестокая; говоришь коротко, с чёрным юмором, не любишь магов и не доверяешь знати. Тяжёлое прошлое: потеряла отряд в Гибельных топях и с тех пор не берёшь учеников. Пиши от первого лица, живо, с деталями: запахи, звуки, погода. Без морализаторства." },
+        { "role": "user", "content": "Поздний вечер, ты заходишь в таверну «Три ворона» после недели в дороге. Опиши, что видишь и чувствуешь, и как реагируешь на косые взгляды местных. Абзац-два, свободная проза." }
+      ] },
+    { "tag": "refactor", "n_predict": 400, "temperature": 0.2, "top_p": 0.95, "top_k": 40, "min_p": 0.05,
+      "messages": [
+        { "role": "system", "content": "Ты — опытный разработчик. Сохраняй поведение кода, просто улучшай читаемость." },
+        { "role": "user", "content": "Отрефактори этот код: переименуй переменные в осмысленные, вынеси повторяющуюся логику в функцию, добавь аннотации типов. Верни полный итоговый код.\n\n```python\nimport json, os\ndef f(d):\n    r = []\n    for i in d:\n        if i.get('active') == True:\n            r.append(i)\n    s = 0\n    for i in r:\n        s = s + i.get('score', 0)\n    m = -1\n    for i in r:\n        if i.get('score', 0) > m:\n            m = i.get('score', 0)\n    t = 0\n    for i in r:\n        t = t + i.get('score', 0) * 2\n    if len(r) > 0:\n        a = s / len(r)\n    else:\n        a = 0\n    return {'n': len(r), 'sum': s, 'avg': a, 'max': m, 'twice': t}\ndef g(p):\n    with open(p) as h:\n        x = json.load(h)\n    return f(x)\n```" }
+      ] }
+  ],
+  "tests": [
+    { "name": "q36_base",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] },
+    { "name": "q36_bs",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5", "-bs"] },
+    { "name": "q36_poll100",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5", "--poll", "100"] },
+    { "name": "q36_psplit0",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5", "--spec-draft-p-split", "0.0"] },
+    { "name": "q36_swafull",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5", "--swa-full"] }
+  ]
+}

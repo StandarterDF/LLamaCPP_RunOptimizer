@@ -1,0 +1,19 @@
+=== reasoning_content ===
+Here's a thinking process that leads to the suggested solution:
+
+1.  **Analyze the Request:**
+    *   **Problem:** A car travels the first half of the distance at 60 km/h and the second half at 40 km/h. Find the average speed for the entire journey.
+    *   **Requirements:** Solve step-by-step, explain why the answer isn't 50 km/h (the arithmetic mean).
+    *   **Language:** Russian.
+
+2.  **Initial Intuition & Common Trap:**
+    *   Many people instinctively think the average speed is $(60 + 40) / 2 = 50$ km/h.
+    *   *Why is this wrong?* Average speed is defined as Total Distance / Total Time. The time spent at 40 km/h is longer than the time spent at 60 km/h because the distance is the same but the speed is lower. Therefore, the average speed must be closer to 40 than to 60.
+
+3.  **Step-by-Step Solution Plan:**
+    *   **Step 1: Define variables.** Let the total distance be $S$ (or $2S$ to make halves easier). Let the speeds be $v_1 = 60$ and $v_2 = 40$.
+    *   **Step 2: Calculate time for each part.** Time = Distance / Speed.
+    *   **Step 3: Calculate total time.** $t_{total} = t_1 + t_2$.
+    *   **Step 4: Calculate average speed.** $v_{avg} = S_{total} / t_{total}$.
+    *   **Step 5: Explain the misconception.** Address the "50 km/h" trap explicitly.
+=== content ===

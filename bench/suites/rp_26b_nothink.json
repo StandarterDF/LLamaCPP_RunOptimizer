@@ -1,0 +1,42 @@
+{
+  "_комментарий": "A/B для Gemma-4-26B-A4B (b11382, --reasoning off): RP-текст со спекуляцией vs без. Плюс код как контроль.",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/Gemma-4-26B-A4B-StyleTune-V2.IQ4_XS.gguf",
+  "common": [
+    "--alias", "Gemma-4-26B-A4B-test",
+    "--fit", "on", "-fa", "on", "--load-mode", "none",
+    "-t", "14", "-tb", "14", "-b", "2048", "-ub", "512",
+    "-np", "1", "-c", "65536",
+    "-ctk", "q4_0", "-ctv", "q4_0",
+    "--chat-template-file", "${LLAMA_DIR}/gemma4.jinja",
+    "--reasoning", "off",
+    "--temp", "0.6", "--min-p", "0.1"
+  ],
+  "requests": [
+    {
+      "tag": "rp", "n_predict": 300,
+      "temperature": 1.0, "top_p": 0.95, "top_k": 40, "min_p": 0.05, "repeat_penalty": 1.05,
+      "messages": [
+        {"role": "system", "content": "Ты — Ария, эльфийская наёмница с тяжёлым прошлым. Отвечай от первого лица, образно, живо."},
+        {"role": "user", "content": "Опиши, как ты входишь в шумную таверну после долгой дороги. Два абзаца, свободная проза."}
+      ]
+    },
+    {
+      "tag": "code", "n_predict": 256,
+      "temperature": 0.6, "min_p": 0.1,
+      "messages": [
+        {"role": "user", "content": "Напиши функцию на Python, которая объединяет пересекающиеся интервалы, и объясни сложность в двух предложениях."}
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "name": "b26_nothink_spec",
+      "args": [
+        "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+        "-md", "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf"
+      ]
+    },
+    { "name": "b26_nothink_nospec", "args": [] }
+  ]
+}
