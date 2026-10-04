@@ -1,0 +1,4 @@
+# cmd.exe некорректно парсит .bat с LF-переводами строк (ошибки вида 'CT_DIR' is not
+# recognized, "The syntax of the command is incorrect"). Принудительно храним CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
