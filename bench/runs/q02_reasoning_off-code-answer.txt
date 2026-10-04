@@ -1,0 +1,36 @@
+=== reasoning_content ===
+
+=== content ===
+```python
+import re
+
+def extract_top_level_domains(text: str) -> list[str]:
+    """
+    Extract all top-level domains from a given text string.
+
+    Args:
+        text: The input string to search for domains.
+
+    Returns:
+        A list of unique top-level domain strings found in the text.
+    """
+    pattern = r'\b(?:[a-zA-Z0-9](?:[-a-zA-Z0-9]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2,})\b'
+    matches = re.findall(pattern, text)
+    # Deduplicate while preserving order
+    seen = set()
+    result = []
+    for domain in matches:
+        domain = domain.lower()
+        if domain not in seen:
+            seen.add(domain)
+            result.append(domain)
+    return result
+
+
+# Example usage
+if __name__ == "__main__":
+    sample_text = "Visit example.com, techblog.org, or my-site.io for more info."
+    domains = extract_top_level_domains(sample_text)
+    print("Found domains:", domains)
+    # Output: Found domains: ['example.com', 'techblog.org', 'my-site.io']
+```

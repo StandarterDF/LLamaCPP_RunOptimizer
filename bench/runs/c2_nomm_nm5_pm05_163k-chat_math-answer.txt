@@ -1,0 +1,31 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Understand the User Request:**
+   - Given: $x + \frac{1}{x} = 3$
+   - Find: $x^3 + \frac{1}{x^3}$
+   - Requirements: Solve step by step, give final answer clearly.
+
+2.  **Identify the Mathematical Relationship:**
+   - I need to relate $x + \frac{1}{x}$ to $x^3 + \frac{1}{x^3}$.
+   - Recall the algebraic identity: $(a + b)^3 = a^3 + b^3 + 3ab(a + b)$
+   - Let $a = x$ and $b = \frac{1}{x}$. Then $ab = x \cdot \frac{1}{x} = 1$.
+   - So, $\left(x + \frac{1}{x}\right)^3 = x^3 + \frac{1}{x^3} + 3 \cdot 1 \cdot \left(x + \frac{1}{x}\right)$
+
+3.  **Set Up the Equation:**
+   - Let $S = x + \frac{1}{x} = 3$
+   - Let $T = x^3 + \frac{1}{x^3}$
+   - From the identity: $S^3 = T + 3S$
+   - So, $T = S^3 - 3S$
+
+4.  **Substitute the Given Value:**
+   - $S = 3$
+   - $T = 3^3 - 3 \cdot 3$
+   - $T = 27 - 9$
+   - $T = 18$
+
+5.  **Verify/Double Check:**
+   - Alternative method: Multiply by $x^3$ or use polynomial long division? Not necessary.
+   - Let's check with a quadratic: $x + 1/x = 3 \Rightarrow x^2 - 3x + 1 = 0$. Roots are $x = \frac{3 \pm \sqrt{5}}{2}$.
+   - Let $x = \frac{3 + \sqrt{5}}{2}$. Then $1/x = \frac{2}{3+\sqrt{5}} = \frac{
+=== content ===

@@ -1,0 +1,30 @@
+=== reasoning_content ===
+
+=== content ===
+To find the value of $x^3 + \frac{1}{x^3}$ given that $x + \frac{1}{x} = 3$, we can use the algebraic identity for the cube of a binomial.
+
+**Step 1: Start with the given equation**
+$$x + \frac{1}{x} = 3$$
+
+**Step 2: Cube both sides of the equation**
+$$(x + \frac{1}{x})^3 = 3^3$$
+
+**Step 3: Expand the left side using the identity $(a+b)^3 = a^3 + b^3 + 3ab(a+b)$**
+Let $a = x$ and $b = \frac{1}{x}$:
+$$x^3 + \left(\frac{1}{x}\right)^3 + 3(x)\left(\frac{1}{x}\right)\left(x + \frac{1}{x}\right) = 27$$
+
+**Step 4: Simplify the terms**
+Since $x \cdot \frac{1}{x} = 1$, the equation becomes:
+$$x^3 + \frac{1}{x^3} + 3(1)\left(x + \frac{1}{x}\right) = 27$$
+
+**Step 5: Substitute the known value of $(x + \frac{1}{x})$**
+We know from the original problem that $x + \frac{1}{x} = 3$. Substitute this into the equation:
+$$x^3 + \frac{1}{x^3} + 3(3) = 27$$
+$$x^3 + \frac{1}{x^3} + 9 = 27$$
+
+**Step 6: Solve for $x^3 + \frac{1}{x^3}$**
+$$x^3 + \frac{1}{x^3} = 27 - 9$$
+$$x^3 + \frac{1}{x^3} = 18$$
+
+**Final Answer:**
+The value of $x^3 + \frac{1}{x^3}$ is **18**.

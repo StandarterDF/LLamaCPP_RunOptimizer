@@ -1,0 +1,27 @@
+=== reasoning_content ===
+*   Add type hints to all functions.
+    *   Add short docstrings to all functions.
+    *   Rename variable `'data'` to `'records'` throughout.
+    *   Keep logic identical.
+    *   Output *only* the code.
+
+    *   `load_data(path)`: Returns a list of dictionaries. Type: `str` -> `list[dict[str, str]]`.
+    s   `clean_data(data)`: Takes a list of dicts, strips 'name' values, filters out rows without names. Type: `list[dict[str, str]]` -> `list[dict[str, str]]`.
+    *   `aggregate(data)`: Takes a list of dicts, counts 'category' frequencies. Type: `list[dict[str, str]]` -> `dict[str, int]`.
+
+    *   `load_data(path)`: returns `records`.
+    *   `clean_data(records)`: returns `out` (already exists).
+    *   `aggregate(records)`: returns `result`.
+
+    ```python
+    import csv
+    from typing import List, Dict
+
+    def load_data(path: str) -> List[Dict[str, str]]:
+        """Load records from a CSV file."""
+        records = []
+        with open(path, newline='') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                
+=== content ===

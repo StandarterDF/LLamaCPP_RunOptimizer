@@ -1,0 +1,37 @@
+=== reasoning_content ===
+
+=== content ===
+### Implementation
+
+```python
+def merge_intervals(intervals):
+    if not intervals:
+        return []
+
+    # Sort intervals by start time
+    intervals.sort(key=lambda x: x[0])
+    
+    merged = [intervals[0]]
+    
+    for current_start, current_end in intervals[1:]:
+        prev_start, prev_end = merged[-1]
+        
+        # If current interval overlaps with the previous, merge them
+        if current_start <= prev_end:
+            merged[-1][1] = max(prev_end, current_end)
+        else:
+            # No overlap, add it as a new interval
+            merged.append([current_start, current_end])
+            
+    return merged
+```
+
+### Explanation
+**Algorithm:** 
+1. Sort the intervals by their starting values to ensure we process them in linear order.
+2. Initialize a list with the first interval.
+3. Iterate through the remaining intervals: if the current interval starts before or at the end of the previous one, merge them by updating the end boundary to the maximum of both. Otherwise, treat it as a new disjoint interval.
+
+**Complexity:**
+*   **Time Complexity:** $O(n \log n)$ due to the sorting step. The subsequent linear scan takes $O(n)$.
+*   **Space Complexity:** $O(n)$ to store the sorted intervals or the final merged list.

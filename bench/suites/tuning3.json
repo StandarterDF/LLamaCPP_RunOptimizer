@@ -1,0 +1,52 @@
+{
+  "server": "${LLAMA_SERVER}",
+  "model": "${MODELS_DIR}\\ukisai\\Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF\\Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ2_S-mtp.gguf",
+  "common": ["-np", "1", "-c", "81920", "-fa", "on", "--fit", "on", "-ctk", "q4_0", "-ctv", "q4_0", "-tb", "12", "--no-mmap"],
+  "requests": [
+    { "tag": "chat_alg", "n_predict": 320,
+      "messages": [
+        { "role": "user", "content": "Implement a Python function that merges overlapping intervals, then explain the algorithm and its complexity in a few sentences. Keep it concise." }
+      ]
+    },
+    { "tag": "chat_math", "n_predict": 512,
+      "messages": [
+        { "role": "user", "content": "Solve step by step: If x + 1/x = 3, find x^3 + 1/x^3. Give the final answer clearly." }
+      ]
+    },
+    { "tag": "chat_code", "n_predict": 320,
+      "messages": [
+        { "role": "user", "content": "Write a Python function that extracts all top-level domains (like example.com) from a text using regex. Include a short usage example." }
+      ]
+    }
+  ],
+  "tests": [
+    { "name": "40_nm4_pm07",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "4", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "41_nm4_pm05",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "4", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] },
+    { "name": "42_nm5_pm05",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] },
+    { "name": "43_nm4_pm06",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "4", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.6"] },
+    { "name": "44_nm4_pm05_t03",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "4", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"],
+      "requests": [
+        { "tag": "chat_alg", "n_predict": 320, "temperature": 0.3,
+          "messages": [{ "role": "user", "content": "Implement a Python function that merges overlapping intervals, then explain the algorithm and its complexity in a few sentences. Keep it concise." }] },
+        { "tag": "chat_math", "n_predict": 512, "temperature": 0.3,
+          "messages": [{ "role": "user", "content": "Solve step by step: If x + 1/x = 3, find x^3 + 1/x^3. Give the final answer clearly." }] },
+        { "tag": "chat_code", "n_predict": 320, "temperature": 0.3,
+          "messages": [{ "role": "user", "content": "Write a Python function that extracts all top-level domains (like example.com) from a text using regex. Include a short usage example." }] }
+      ] },
+    { "name": "45_nm4_pm05_greedy",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "4", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"],
+      "requests": [
+        { "tag": "chat_alg", "n_predict": 320, "temperature": 0.0,
+          "messages": [{ "role": "user", "content": "Implement a Python function that merges overlapping intervals, then explain the algorithm and its complexity in a few sentences. Keep it concise." }] },
+        { "tag": "chat_math", "n_predict": 512, "temperature": 0.0,
+          "messages": [{ "role": "user", "content": "Solve step by step: If x + 1/x = 3, find x^3 + 1/x^3. Give the final answer clearly." }] },
+        { "tag": "chat_code", "n_predict": 320, "temperature": 0.0,
+          "messages": [{ "role": "user", "content": "Write a Python function that extracts all top-level domains (like example.com) from a text using regex. Include a short usage example." }] }
+      ] }
+  ]
+}

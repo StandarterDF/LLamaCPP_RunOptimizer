@@ -1,0 +1,31 @@
+=== reasoning_content ===
+*   Add type hints to all functions.
+    *   Add short docstrings to all functions.
+    *   Rename variable `'data'` to `'records'` throughout.
+    *   Keep logic identical.
+    *   Output *only* the code.
+
+    *   `load_data(path)`: Returns a list of dictionaries from a CSV.
+    s*   `clean_data(data)`: Filters and strips strings from a list of dictionaries.
+    *   `aggregate(data)`: Counts occurrences based on a key.
+
+    *   `load_data`:
+        *   Input: `path: str`
+        *   Output: `list[dict[str, str]]`
+        *   Rename internal `data` -> `records`.
+        *   Docstring: 'Load records from a CSV file.'
+
+    *   `clean_data`:
+        *   Input: `records: list[dict[str, str]]`
+        *   Output: `list[dict[str, str]]`
+        *   Rename argument `data` -> `records`.
+        *   Docstring: 'Clean records by stripping spaces from names.'
+
+    *   `aggregate`:
+        *   Input: `records: list[dict[str, str]]`
+        *   Output: `dict[str, int]`
+        *   Rename argument `data` -> `records`.
+        *   Docstring: 'Aggregate records by category count.'
+
+    *
+=== content ===

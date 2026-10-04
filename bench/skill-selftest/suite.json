@@ -1,0 +1,11 @@
+{
+  "server": "${LLAMA_SERVER}",
+  "model": "${MODELS_DIR}\\ukisai\\Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF\\Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ2_S-mtp.gguf",
+  "common": ["-np", "1", "-fa", "on", "--fit", "on", "-ctk", "q4_0", "-ctv", "q4_0", "--no-mmap"],
+  "requests": [
+    { "tag": "short", "target": 300, "n_predict": 32 }
+  ],
+  "tests": [
+    { "name": "selftest_01", "args": ["-c", "4096", "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] }
+  ]
+}

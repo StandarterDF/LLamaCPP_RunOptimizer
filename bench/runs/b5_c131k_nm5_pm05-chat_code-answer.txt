@@ -1,0 +1,16 @@
+=== reasoning_content ===
+Extract top-level domains (TLDs) and domain names (e.g., `example.com`) from a text.
+Regular Expressions (`re` module) in Python.
+A function with a short usage example.
+
+    *   A domain name generally looks like: `one.two.three.com`.
+    *   The user specifically asked for things like "example.com". This implies the full domain name ending in a TLD.
+    *   *Constraint 1:* TLDs are usually at least 2 characters long (e.g., `.com`, `.uk`, `.org`).
+    *   *Constraint 2:* Domain names consist of letters, numbers, hyphens, and dots.
+    *   *Constraint 3:* We shouldn't pick up email addresses like `user@example.com` as just the domain unless specified, but usually, a domain extraction regex captures the part after the `@` as well if it matches. The prompt asks for TLDs like `example.com`.
+    *   *Constraint 4:* We should avoid capturing trailing punctuation like periods at the end of a sentence (e.g., in "Visit example.com.").
+
+    *   *Initial idea:* `[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}`
+    *   *Refinement 1:* This might capture too much if it's part of an email. The user wants domain names.
+    *   *Refinement 2
+=== content ===

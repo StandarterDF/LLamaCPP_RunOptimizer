@@ -1,0 +1,28 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Understand the User's Request:**
+   - Given: $x + \frac{1}{x} = 3$
+   - Find: $x^3 + \frac{1}{x^3}$
+   - Requirement: Solve step by step, give final answer clearly.
+
+2.  **Identify Key Algebraic Identities:**
+   - I know the expansion of $(a + b)^3 = a^3 + b^3 + 3ab(a + b)$.
+   - Let $a = x$ and $b = \frac{1}{x}$. Then $ab = x \cdot \frac{1}{x} = 1$.
+   - So, $(x + \frac{1}{x})^3 = x^3 + \frac{1}{x^3} + 3(1)(x + \frac{1}{x})$.
+   - This gives a direct relationship: $x^3 + \frac{1}{x^3} = (x + \frac{1}{x})^3 - 3(x + \frac{1}{x})$.
+
+3.  **Apply the Given Value:**
+   - Given $x + \frac{1}{x} = 3$.
+   - Substitute into the formula:
+     $x^3 + \frac{1}{x^3} = (3)^3 - 3(3)$
+     $= 27 - 9$
+     $= 18$.
+
+4.  **Verify/Double Check:**
+   - Alternative approach: Multiply $x + 1/x$ by something or use $(x+1/x)^2$ first? Not needed, but let's verify.
+   - $(x + 1/x)^2 = x^2 + 2 + 1/x^2 = 9 \Rightarrow x^2 + 1/x^2 = 7$.
+   - $x^3 + 1/x^3 = (x + 1/x)(x^2 - 1 + 1/x^2) = 3 \cdot (7 - 1) = 3 \cdot 6 = 18$. Matches.
+   - The identity $(x+y)^3 = x^3+y^3+3xy(x+y)$ is solid.
+   - Calculation: $3
+=== content ===

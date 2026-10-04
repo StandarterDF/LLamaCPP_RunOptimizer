@@ -1,0 +1,16 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Input Code:** A Python script with functions `load_data`, `clean_data`, `aggregate`, `save_result`, and `main`.
+   - **Requirements:**
+     - Add type hints to every function.
+     - Add short docstrings to every function.
+     - Rename variable `data` to `records` everywhere it's used (as a variable name, not necessarily in function names unless specified, but the prompt says "rename variable 'data' to 'records'". I'll interpret this as renaming the local variable `data` in `load_data`, `clean_data`, `main`, and `aggregate`. I should be careful about function parameters too. The prompt says "rename variable 'data' to 'records'", so I'll rename the parameter in `clean_data` and `aggregate`, and the local variable in `main` and `load_data`).
+     - Keep the logic identical.
+     - Output only the code.
+
+2.  **Identify Variables to Rename:**
+   - `load_data(path)`: `data` -> `records`
+   - `clean_data(data)`: parameter `data` -> `records` (or keep parameter name as `data` but prompt says rename variable 'data' to 'records'. I'll change the parameter name to `records` for consistency, or just rename the local variable in `clean_data` and `aggregate` if they use `data`. Actually, `clean_data(data)` uses
+=== content ===

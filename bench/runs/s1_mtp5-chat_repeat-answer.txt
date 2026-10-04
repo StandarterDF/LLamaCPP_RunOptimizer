@@ -1,0 +1,40 @@
+=== reasoning_content ===
+The user wants me to refactor a Python script.
+I need to apply the following changes:
+1.  Add type hints to functions and variables.
+2.  Add short docstrings to every function.
+3.  Rename variable `data` to `records` everywhere it appears (in functions and the main block).
+4.  Keep the logic identical.
+5.  Output only the code.
+
+Let's go through the code function by function.
+
+**Imports:**
+`import csv`
+`import json`
+(No changes needed here, though type hints for standard libraries are usually not required unless specific types are imported, but `csv.DictReader` returns `Dict[str, str]`, `json.dump` takes `Any`, etc. I'll stick to reasonable type hints).
+
+**Function: `load_data`**
+Original:
+```python
+def load_data(path):
+    data = []
+    with open(path, newline='') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            data.append(row)
+    return data
+```
+Refactoring:
+- Rename `data` to `records`.
+- Add type hints: `path` is `str`, returns `list[dict[str, str]]` (or `list[dict]`).
+- Add docstring.
+
+**Function: `clean_data`**
+Original:
+```python
+def clean_data(data):
+    out = []
+    for item in data:
+        if item.get('
+=== content ===

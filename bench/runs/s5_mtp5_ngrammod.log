@@ -1,0 +1,41 @@
+0.00.102.832 W DEPRECATED: --mmap and --no-mmap are deprecated. use --load-mode mmap instead
+0.00.102.976 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.192.494 I srv          init: The UI is disabled
+0.00.192.498 I srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.192.596 W srv  llama_server: -----------------
+0.00.192.598 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.192.598 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.192.599 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.192.599 W srv  llama_server: -----------------
+0.00.195.093 I srv    load_model: loading model '<MODELS_DIR>\unsloth\Qwen3.6-35B-A3B-MTP-GGUF\Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf'
+0.03.622.348 I cmn          init: llama threadpool init, n_threads = 8
+0.03.676.022 I common_speculative_init_result: creating MTP draft context against the target model '<MODELS_DIR>\unsloth\Qwen3.6-35B-A3B-MTP-GGUF\Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf'
+0.03.736.530 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 131072, kv_unified = 'false'
+0.03.867.860 I srv          init: chat template supports preserving reasoning, consider enabling it via --reasoning-preserve
+0.03.867.880 I srv  llama_server: model loaded
+0.03.867.883 I srv  llama_server: listening on http://127.0.0.1:9945
+0.06.543.087 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+0.06.543.115 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.08.490.840 I slot print_timing: id  0 | task 0 | prompt eval time =     602.97 ms /   845 tokens (    0.71 ms per token,  1401.40 tokens per second)
+0.08.490.849 I slot print_timing: id  0 | task 0 |        eval time =    1344.49 ms /   128 tokens (   10.59 ms per token,    94.46 tokens per second)
+0.08.490.850 I slot print_timing: id  0 | task 0 |       total time =    1947.46 ms /   973 tokens
+0.08.490.851 I slot print_timing: id  0 | task 0 |    graphs reused =         14
+0.08.490.883 I slot print_timing: id  0 | task 0 | draft acceptance = 0.59589 (   87 accepted /   146 generated), mean len =  4.11
+0.08.490.961 I slot      release: id  0 | task 0 | stop processing: n_tokens = 972, truncated = 0
+0.08.524.403 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 8391212
+0.08.556.222 I slot launch_slot_: id  0 | task 44 | processing task, is_child = 0
+0.11.815.745 I slot print_timing: id  0 | task 44 | n_gen =    296, tg =  98.09 t/s, tg_3s =  98.41 t/s
+0.12.059.100 I slot print_timing: id  0 | task 44 | prompt eval time =     251.79 ms /   310 tokens (    0.81 ms per token,  1231.18 tokens per second)
+0.12.059.106 I slot print_timing: id  0 | task 44 |        eval time =    3250.91 ms /   320 tokens (   10.19 ms per token,    98.13 tokens per second)
+0.12.059.108 I slot print_timing: id  0 | task 44 |       total time =    3502.70 ms /   630 tokens
+0.12.059.108 I slot print_timing: id  0 | task 44 |    graphs reused =         44
+0.12.059.133 I slot print_timing: id  0 | task 44 | draft acceptance = 0.68000 (  221 accepted /   325 generated), mean len =  3.48
+0.12.059.205 I slot      release: id  0 | task 44 | stop processing: n_tokens = 629, truncated = 0
+0.12.107.614 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 11959455
+0.12.132.014 I slot launch_slot_: id  0 | task 145 | processing task, is_child = 0
+0.14.910.797 I slot print_timing: id  0 | task 145 | prompt eval time =      94.53 ms /    37 tokens (    2.55 ms per token,   391.42 tokens per second)
+0.14.910.803 I slot print_timing: id  0 | task 145 |        eval time =    2684.24 ms /   256 tokens (   10.53 ms per token,    95.00 tokens per second)
+0.14.910.804 I slot print_timing: id  0 | task 145 |       total time =    2778.76 ms /   293 tokens
+0.14.910.805 I slot print_timing: id  0 | task 145 |    graphs reused =         67
+0.14.910.831 I slot print_timing: id  0 | task 145 | draft acceptance = 0.68548 (  170 accepted /   248 generated), mean len =  3.62
+0.14.910.891 I slot      release: id  0 | task 145 | stop processing: n_tokens = 292, truncated = 0

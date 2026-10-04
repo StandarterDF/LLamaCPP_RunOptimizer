@@ -1,0 +1,25 @@
+{
+  "server": "${LLAMA_SERVER}",
+  "model": "${MODELS_DIR}\\ukisai\\Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF\\Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ2_S-mtp.gguf",
+  "common": ["-np", "1", "-c", "81920", "-fa", "on", "--fit", "on", "-ctk", "q4_0", "-ctv", "q4_0", "-tb", "12", "--no-mmap",
+             "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"],
+  "requests": [
+    { "tag": "math", "n_predict": 1200,
+      "messages": [
+        { "role": "user", "content": "Solve step by step: If x + 1/x = 3, find x^3 + 1/x^3. Give the final answer clearly." }
+      ]
+    },
+    { "tag": "code", "n_predict": 800,
+      "messages": [
+        { "role": "user", "content": "Write a Python function that extracts all top-level domains (like example.com) from a text using regex. Include a short usage example." }
+      ]
+    }
+  ],
+  "tests": [
+    { "name": "q01_default", "args": [] },
+    { "name": "q02_reasoning_off", "args": ["--reasoning", "off"] },
+    { "name": "q03_effort_low", "args": ["--reasoning-effort", "low"] },
+    { "name": "q04_effort_medium", "args": ["--reasoning-effort", "medium"] },
+    { "name": "q05_effort_xhigh", "args": ["--reasoning-effort", "xhigh"] }
+  ]
+}

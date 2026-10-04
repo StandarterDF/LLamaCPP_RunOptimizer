@@ -1,0 +1,65 @@
+{
+  "server": "${LLAMA_SERVER}",
+  "model": "${MODELS_DIR}\\ukisai\\Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF\\Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ2_S-mtp.gguf",
+  "common": ["-np", "1", "--fit", "on", "-tb", "12"],
+  "requests": [
+    { "tag": "short", "target": 1500, "n_predict": 256 },
+    { "tag": "long", "target": 12000, "n_predict": 64 },
+    { "tag": "chat", "n_predict": 256,
+      "messages": [
+        { "role": "user", "content": "Implement a Python function that merges overlapping intervals, then explain the algorithm and its complexity in a few sentences. Keep it concise." }
+      ]
+    }
+  ],
+  "tests": [
+    { "name": "21_kv_q8_0",
+      "args": ["-c", "81920", "-fa", "on", "-ctk", "q8_0", "-ctv", "q8_0", "--no-mmap",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "22_kv_f16_ctx40k",
+      "args": ["-c", "40960", "-fa", "on", "--no-mmap",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "23_fa_off",
+      "args": ["-c", "81920", "-fa", "off", "-ctk", "q4_0", "-ctv", "q4_0", "--no-mmap",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "24_load_mmap",
+      "args": ["-c", "81920", "-fa", "on", "-ctk", "q4_0", "-ctv", "q4_0", "--load-mode", "mmap",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "25_threads_8",
+      "args": ["-c", "81920", "-fa", "on", "-ctk", "q4_0", "-ctv", "q4_0", "--no-mmap", "-t", "8", "-tb", "8",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "26_ctx160k",
+      "args": ["-c", "163840", "-fa", "on", "-ctk", "q4_0", "-ctv", "q4_0", "--no-mmap",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "27_nmin0",
+      "args": ["-c", "81920", "-fa", "on", "-ctk", "q4_0", "-ctv", "q4_0", "--no-mmap",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "0", "--spec-draft-p-min", "0.7"] },
+    { "name": "28_pmin00",
+      "args": ["-c", "81920", "-fa", "on", "-ctk", "q4_0", "-ctv", "q4_0", "--no-mmap",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.0"] },
+    { "name": "29_pmin08",
+      "args": ["-c", "81920", "-fa", "on", "-ctk", "q4_0", "-ctv", "q4_0", "--no-mmap",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.8"] },
+    { "name": "30_draft_p_split20",
+      "args": ["-c", "81920", "-fa", "on", "-ctk", "q4_0", "-ctv", "q4_0", "--no-mmap",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7",
+               "--spec-draft-p-split", "0.2"] },
+    { "name": "31_chat_temp03",
+      "args": ["-c", "81920", "-fa", "on", "-ctk", "q4_0", "-ctv", "q4_0", "--no-mmap",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"],
+      "requests": [
+        { "tag": "chat", "n_predict": 256, "temperature": 0.3,
+          "messages": [
+            { "role": "user", "content": "Implement a Python function that merges overlapping intervals, then explain the algorithm and its complexity in a few sentences. Keep it concise." }
+          ]
+        }
+      ] },
+    { "name": "32_no_backend_sampling",
+      "args": ["-c", "81920", "-fa", "on", "-ctk", "q4_0", "-ctv", "q4_0", "--no-mmap",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7",
+               "--no-spec-draft-backend-sampling"] },
+    { "name": "33_mtp_plus_ngram",
+      "args": ["-c", "81920", "-fa", "on", "-ctk", "q4_0", "-ctv", "q4_0", "--no-mmap",
+               "--spec-type", "draft-mtp,ngram-simple",
+               "--spec-draft-n-max", "4", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] }
+  ]
+}

@@ -1,0 +1,15 @@
+=== reasoning_content ===
+Extract top-level domains (TLDs) / domain names.
+A text string.
+Regular Expressions (`re` module).
+The function name and logic, plus a short usage example.
+
+    *   *What constitutes a domain name?* Letters, digits, hyphens, and dots.
+    *   *What is a TLD?* Usually something like `.com`, `.org`, `.net`, `.co.uk`, etc.
+    *   *Wait, the user said "top-level domains (like example.com)".* Technically, `.com` is the TLD, and `example.com` is a domain name. I should aim to extract the full domain name that ends in a TLD.
+    *   *Regex pattern approach:*
+        *   A domain usually looks like: `[a-zA-Z0-9-]+` followed by a dot.
+        *   Repeat this pattern one or more times.
+        *   End with a valid-looking TLD (two or more letters).
+    *   *Refined Pattern:* `(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a
+=== content ===

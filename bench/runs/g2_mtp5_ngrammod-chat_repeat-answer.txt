@@ -1,0 +1,23 @@
+=== reasoning_content ===
+*   Task: Refactor Python code.
+    *   Requirements:
+        1.  Add type hints to every function.
+        2.  Add short docstrings to every function.
+        3.  Rename variable `data` to `records` throughout.
+        4.  Keep logic identical.
+        5.  Output *only* the code.
+
+    *   `load_data(path)`: Returns list of dicts from CSV.
+    *   `clean_data(data)`: Filters dicts based on 'name' presence, strips whitespace, skips empty names.
+    *   `aggregate(data)`: Counts occurrences of 'category' key.
+    *   `save_result(result, path)`: Saves dict to JSON.
+    *   `main()`: Orchestrates flow.
+
+    *   `load_data`: `path` is `str`. Returns `list[dict[str, str]]` (since it's reading from CSV).
+    *   `clean_data`: `records` is `list[dict[str, str]]`. Returns `list[dict[str, str]]`.
+    *   `aggregate`: `records` is `list[dict[str, str]]`. Returns `dict[str, int]`.
+    *   `save_result`: `result` is `dict[str, int]`, `path` is `str`. Returns `None`.
+    *   `main`: Returns `None`.
+
+    
+=== content ===

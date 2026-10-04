@@ -1,0 +1,47 @@
+=== reasoning_content ===
+We need answer user: solve step by step: If x + 1/x = 3, find x^3 + 1/x^3. Need final answer clearly.
+
+We need derive. Let a = x + 1/x = 3. Need x^3 + 1/x^3. Use identity: (x + 1/x)^3 = x^3 + 1/x^3 + 3(x + 1/x). Because (a+b)^3 = a^3+b^3+3ab(a+b), with a=x, b=1/x, ab=1. So 27 = x^3+1/x^3 + 9 => x^3+1/x^3=18.
+
+Check: x satisfies x^2 -3x+1=0, roots (3±√5)/2. Compute cube sum? yes 18.
+
+Need step by step. Final answer clearly.
+
+=== content ===
+We are given:
+
+\[
+x + \frac{1}{x} = 3
+\]
+
+We want to find:
+
+\[
+x^3 + \frac{1}{x^3}
+\]
+
+Use the identity:
+
+\[
+\left(x + \frac{1}{x}\right)^3 = x^3 + \frac{1}{x^3} + 3\left(x + \frac{1}{x}\right)
+\]
+
+Substitute \(x + \frac{1}{x} = 3\):
+
+\[
+3^3 = x^3 + \frac{1}{x^3} + 3(3)
+\]
+
+\[
+27 = x^3 + \frac{1}{x^3} + 9
+\]
+
+Subtract 9 from both sides:
+
+\[
+x^3 + \frac{1}{x^3} = 18
+\]
+
+\[
+\boxed{18}
+\]

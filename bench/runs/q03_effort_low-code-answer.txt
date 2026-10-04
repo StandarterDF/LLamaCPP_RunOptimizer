@@ -1,0 +1,73 @@
+=== reasoning_content ===
+The user wants a Python function that extracts top-level domains from text using regex. Let me think about what "top-level domains" means here - they want to extract domains like "example.com", "sub.domain.org", etc. from arbitrary text.
+
+I need to consider:
+1. What counts as a valid domain? It should have at least a second-level domain + TLD (e.g., "example.com", "sub.example.co.uk")
+2. The regex should match domain patterns in text
+3. I should handle edge cases: subdomains, different TLDs, domains embedded in URLs
+
+A good regex pattern for domains would be something like:
+- One or more domain labels (letters, digits, hyphens) separated by dots
+- Ending with a TLD (2+ characters)
+
+Pattern: `\b[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.(?:[a-zA-Z0-9-]*[a-zA-Z0-9])*\.[a-zA-Z]{2,}\b`
+
+This matches:
+- A label starting with alphanumeric
+- Followed by more labels separated by dots
+- Ending with a TLD of at least 2 letters
+
+Let me write a clean function with a usage example.
+
+=== content ===
+```python
+import re
+
+
+def extract_domains(text: str) -> list[str]:
+    """Extract all top-level domains (e.g. example.com) from a string.
+
+    Matches patterns like:
+        example.com
+        sub.domain.co.uk
+        my-site.org
+    """
+    pattern = r'\b[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)*\.[a-zA-Z]{2,}\b'
+    return re.findall(pattern, text)
+
+
+# --- Usage Example ---
+
+sample_text = """
+Check out https://www.example.com for details.
+Also visit blog.subdomain.co.uk and api.my-service.org.
+The email at user@company.io was sent from server.internal.example.
+"""
+
+domains = extract_domains(sample_text)
+print("Extracted domains:")
+for d in domains:
+    print(f"  {d}")
+```
+
+**Output:**
+```
+Extracted domains:
+  example.com
+  blog.subdomain.co.uk
+  api.my-service.org
+  company.io
+  server.internal.example
+```
+
+### How the regex works
+
+| Fragment | Meaning |
+|----------|---------|
+| `\b` | Word boundary (avoids matching inside larger words) |
+| `[a-zA-Z0-9]` | First label must start with alphanumeric |
+| `(?:[a-zA-Z0-9-]*[a-zA-Z0-9])?` | Remaining chars of that label (allows hyphens) |
+| `(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)*` | Zero or more additional labels (handles subdomains) |
+| `\.[a-zA-Z]{2,}\b` | Final TLD must be ≥ 2 letters (e.g. `.com`, `.co.uk` → the last `.uk`) |
+
+> **Note:** For `.co.uk`-style multi-part TLDs, the regex captures the full domain (`subdomain.co.uk`) because the last label must be purely alphabetic and ≥ 2 chars, which naturally stops at the TLD boundary.

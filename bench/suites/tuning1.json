@@ -1,0 +1,41 @@
+{
+  "server": "${LLAMA_SERVER}",
+  "model": "${MODELS_DIR}\\ukisai\\Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF\\Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ2_S-mtp.gguf",
+  "common": ["-np", "1", "-fa", "on", "--fit", "on", "-ctk", "q4_0", "-ctv", "q4_0", "-tb", "12", "--no-mmap"],
+  "requests": [
+    { "tag": "short", "target": 1500, "n_predict": 256 },
+    { "tag": "long", "target": 12000, "n_predict": 64 },
+    { "tag": "chat", "n_predict": 256,
+      "messages": [
+        { "role": "user", "content": "Implement a Python function that merges overlapping intervals, then explain the algorithm and its complexity in a few sentences. Keep it concise." }
+      ]
+    }
+  ],
+  "tests": [
+    { "name": "10_repeat_user",
+      "args": ["-c", "81920", "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "11_nospec",
+      "args": ["-c", "81920"] },
+    { "name": "12_nmax2",
+      "args": ["-c", "81920", "--spec-type", "draft-mtp", "--spec-draft-n-max", "2", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "13_nmax4",
+      "args": ["-c", "81920", "--spec-type", "draft-mtp", "--spec-draft-n-max", "4", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "14_nmax6",
+      "args": ["-c", "81920", "--spec-type", "draft-mtp", "--spec-draft-n-max", "6", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "15_pmin05",
+      "args": ["-c", "81920", "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] },
+    { "name": "16_pmin09",
+      "args": ["-c", "81920", "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.9"] },
+    { "name": "17_ctx131k",
+      "args": ["-c", "131072", "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "18_vision_user",
+      "args": ["-c", "81920", "--mmproj", "${MODELS_DIR}\\unsloth\\Qwen3.8-27B-GGUF\\mmproj-F16.gguf", "--no-mmproj-offload", "--image-min-tokens", "1024",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "19_ub1024",
+      "args": ["-c", "81920", "-b", "2048", "-ub", "1024",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "20_ub2048",
+      "args": ["-c", "81920", "-b", "2048", "-ub", "2048",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] }
+  ]
+}

@@ -1,0 +1,32 @@
+=== reasoning_content ===
+The user wants me to refactor a Python script.
+I need to apply the following changes:
+1.  Add type hints to functions and variables.
+2.  Add short docstrings to every function.
+3.  Rename the variable `data` to `records` wherever it appears (or at least the main variable representing the list of records).
+4.  Keep the logic identical.
+5.  Output *only* the code.
+
+Let's look at the code provided.
+
+Functions:
+- `load_data(path)`
+- `clean_data(data)`
+- `aggregate(data)`
+- `save_result(result, path)`
+- `main()`
+
+Imports:
+- `csv`, `json`
+
+Analysis of types:
+- `load_data`: Input `path` is `str`, Output is `list` of `dict` (specifically `list[dict[str, str]]`).
+- `clean_data`: Input `data` (renamed to `records`) is `list[dict]`, Output is `list[dict]`.
+- `aggregate`: Input `data` (renamed to `records`) is `list[dict]`, Output is `dict` (keys `str`, values `int`).
+- `save_result`: Input `result` is `dict`, `path` is `str`. No return.
+- `main`: No arguments, no return.
+
+Renaming 'data':
+- In `load_data`: `data` variable -> `records`.
+- In `clean
+=== content ===

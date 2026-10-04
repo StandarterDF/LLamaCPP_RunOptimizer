@@ -1,0 +1,20 @@
+=== reasoning_content ===
+Extract top-level domains (TLDs) and domain names (e.g., `example.com`) from a text.
+Regular Expressions (regex).
+Python function with a short usage example.
+
+    *   A domain name typically consists of:
+        *   Alphanumeric characters and hyphens: `[a-zA-Z0-9-]+`.
+        *   Dots separating parts: `.`.
+        *   At least one dot is required to distinguish a domain from a word.
+        *   A TLD is the last part (e.g., `.com`, `.org`, `.net`).
+    *   *Refined Regex approach:*
+        *   `\b`: Word boundary to prevent picking up partial words.
+        *   `[a-zA-Z0-9-]+`: One or more allowed characters.
+        *   `\.`: A dot.
+        *   `[a-zA-Z]{2,}`: At least two alphabetical characters for the TLD.
+        *   Repeat pattern: The domain can have subdomains (e.g., `www.example.com`). The request asks for "top-level domains like example.com", which usually implies the main domain name, not just the TLD itself, but the pattern should be robust enough to capture the full domain structure.
+
+    *   *First draft regex:* `[a-zA-Z0-9-]+\.[a-z]{2,}`
+        *   *Problem:* Doesn'
+=== content ===

@@ -1,0 +1,41 @@
+{
+  "server": "${LLAMA_SERVER}",
+  "model": "${MODELS_DIR}\\mradermacher\\Gemma-4-26B-A4B-StyleTune-V2-GGUF\\Gemma-4-26B-A4B-StyleTune-V2.IQ4_XS.gguf",
+  "common": ["--fit", "on", "-fa", "on", "-tb", "14", "-t", "14", "--no-mmap", "-b", "2048", "-ub", "512",
+             "-np", "1", "-ctk", "q4_0", "-ctv", "q4_0", "--chat-template-file", "gemma4.jinja",
+             "--temp", "0.6", "--min-p", "0.1"],
+  "requests": [
+    { "tag": "short", "target": 1500, "n_predict": 256 },
+    { "tag": "long", "target": 12000, "n_predict": 64 },
+    { "tag": "chat_alg", "n_predict": 320,
+      "messages": [{ "role": "user", "content": "Implement a Python function that merges overlapping intervals, then explain the algorithm and its complexity in a few sentences. Keep it concise." }] },
+    { "tag": "chat_math", "n_predict": 512,
+      "messages": [{ "role": "user", "content": "Solve step by step: If x + 1/x = 3, find x^3 + 1/x^3. Give the final answer clearly." }] },
+    { "tag": "chat_code", "n_predict": 320,
+      "messages": [{ "role": "user", "content": "Write a Python function that extracts all top-level domains (like example.com) from a text using regex. Include a short usage example." }] }
+  ],
+  "tests": [
+    { "name": "b0_user_65536",
+      "args": ["-c", "65536", "-ctxcp", "16", "-cms", "512", "--reasoning-budget", "1024",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "2", "--spec-draft-p-min", "0.7",
+               "-md", "${MODELS_DIR}\\mradermacher\\Gemma-4-26B-A4B-StyleTune-V2-GGUF\\gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf"] },
+    { "name": "b1_nospec_65536",
+      "args": ["-c", "65536", "-ctxcp", "16", "-cms", "512", "--reasoning-budget", "1024"] },
+    { "name": "b2_nm5_pm05_65536",
+      "args": ["-c", "65536", "-ctxcp", "16", "-cms", "512", "--reasoning-budget", "1024",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}\\mradermacher\\Gemma-4-26B-A4B-StyleTune-V2-GGUF\\gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf"] },
+    { "name": "b3_ncmoe8_nm5_pm05",
+      "args": ["-c", "65536", "-ctxcp", "16", "-cms", "512", "--reasoning-budget", "1024", "-ncmoe", "8",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}\\mradermacher\\Gemma-4-26B-A4B-StyleTune-V2-GGUF\\gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf"] },
+    { "name": "b4_ncmoe16_nm5_pm05",
+      "args": ["-c", "65536", "-ctxcp", "16", "-cms", "512", "--reasoning-budget", "1024", "-ncmoe", "16",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}\\mradermacher\\Gemma-4-26B-A4B-StyleTune-V2-GGUF\\gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf"] },
+    { "name": "b5_c131k_nm5_pm05",
+      "args": ["-c", "131072", "-ctxcp", "16", "-cms", "512", "--reasoning-budget", "1024",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}\\mradermacher\\Gemma-4-26B-A4B-StyleTune-V2-GGUF\\gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf"] }
+  ]
+}

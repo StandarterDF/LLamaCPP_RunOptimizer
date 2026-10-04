@@ -1,0 +1,25 @@
+=== reasoning_content ===
+We need answer user: implement Python function merges overlapping intervals, explain algorithm complexity concise. Need final with code and brief explanation. Ensure correct. Intervals likely list of [start,end]. Merge overlapping: sort by start, iterate, if current start <= current_end extend else add. Complexity O(n log n) due sorting, O(n) space. Need concise. Could include nested? Provide function. Maybe handle empty. Let's craft.
+
+=== content ===
+```python
+def merge_intervals(intervals):
+    if not intervals:
+        return []
+
+    intervals.sort(key=lambda x: x[0])
+    merged = [intervals[0]]
+
+    for start, end in intervals[1:]:
+        last_start, last_end = merged[-1]
+        if start <= last_end:
+            merged[-1] = [last_start, max(last_end, end)]
+        else:
+            merged.append([start, end])
+
+    return merged
+```
+
+**Algorithm:** Sort intervals by start time, then scan left to right. If the next interval overlaps the current merged interval, extend the merged interval; otherwise, start a new one.
+
+**Complexity:** `O(n log n)` time due to sorting, and `O(n)` space for the merged result.

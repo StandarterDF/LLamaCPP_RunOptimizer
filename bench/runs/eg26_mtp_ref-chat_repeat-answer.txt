@@ -1,0 +1,22 @@
+=== reasoning_content ===
+*   Target: Refactor existing Python code.
+    *   Requirement 1: Add type hints to all functions.
+    *   Requirement 2: Add short docstrings to all functions.
+    *   Requirement 3: Rename variable `data` to `records`.
+    *   Requirement 4: Keep logic identical.
+    *   Requirement 5: Output *only* the code.
+
+    *   `load_data(path)`: Reads a CSV and returns a list of dictionaries.
+        *   New name: `load_data(path: str) -> list[dict[str, str]]`
+        *   Variable change: `data` -> `records`
+    *   `clean_data(data)`: Filters out dicts missing 'name' and strips 'name'.
+        *   New name: `clean_data(records: list[dict[str, str]]) -> list[dict[str, str]]`
+        *   Variable change: `data` -> `records`
+    *   `aggregate(data)`: Counts occurrences of 'category'.
+        *   New name: `aggregate(records: list[dict[str, str]]) -> dict[str, int]`
+        *   Variable change: `data` -> `records`
+
+    *   `load_data`: Returns a list of dictionaries representing rows from a CSV file.
+    *   `clean_data`: Trims whitespace from names and removes records without a name.
+    *
+=== content ===

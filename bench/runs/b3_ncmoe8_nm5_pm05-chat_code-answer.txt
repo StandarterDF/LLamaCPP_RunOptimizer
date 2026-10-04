@@ -1,0 +1,14 @@
+=== reasoning_content ===
+Extract top-level domains (TLDs) - actually, based on the example 'example.com', the user means *domain names*. A TLD is technically just the `.com` part, but common parlance often confuses them. I should target domain names as per the example provided.
+Python.
+Regex.
+A function and a short usage example.
+
+    *   What does a domain look like? Something like `google.com`, `sub.example.co.uk`, `my-site.net`.
+    *   *Basic pattern:* Letters, numbers, hyphens separated by dots.
+    *   *Constraints:* Cannot start with a hyphen, cannot end with a dot.
+    *   *The TLD part:* Needs to be at least 2 characters.
+    *   *Regex approach:* A common pattern is `[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}`. However, simple patterns might pick up emails (e.g., something@example.com) or random dots.
+    *   Let's refine: We want something that looks like a domain: words separated by dots where the last part has at least 2 letters.
+    *   *Better pattern:* `(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}`. This is more precise but might
+=== content ===

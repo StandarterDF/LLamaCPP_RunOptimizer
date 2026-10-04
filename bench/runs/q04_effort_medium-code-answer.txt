@@ -1,0 +1,74 @@
+=== reasoning_content ===
+The user wants a Python function that extracts top-level domains from text using regex. Let me think about what "top-level domains" means here - they likely mean domain names like "example.com", "foo.org", etc. (not just TLDs like .com, but full domain names).
+
+Let me write a clean function that:
+1. Uses regex to find domain-like patterns in text
+2. Handles common TLDs
+3. Includes a usage example
+
+I'll use a regex pattern that matches domain names. A reasonable pattern would be something like:
+- `[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}` - this matches domains with a TLD of at least 2 characters
+
+Let me refine this. A good pattern for extracting domains:
+- `(?<![.\w])([a-z0-9]+(?:\.[a-z0-9]+)*\.[a-z]{2,})(?![\w])`
+
+Actually, let me keep it simpler and more practical:
+- `r'\b[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)*\.[a-zA-Z]{2,}\b'`
+
+That's getting complex. Let me go with a cleaner approach:
+
+`r'\b[a-z0-9]+(?:\.[a-z0-9]+)+\.[a-z]{2,}\b'`
+
+This matches one or more subdomain parts followed by a TLD of 2+ letters. This would catch things like `example.com`, `www.foo.org`, `sub.domain.co.uk`.
+
+Let me write a clean, well-documented function with a usage example.
+
+=== content ===
+```python
+import re
+
+
+def extract_domains(text: str) -> list[str]:
+    """
+    Extract all top-level domains (e.g., example.com, foo.org) from a string.
+
+    Matches one or more dot-separated labels ending with a 2+ character TLD.
+    """
+    pattern = r'\b[a-z0-9]+(?:\.[a-z0-9]+)+\.[a-z]{2,}\b'
+    return re.findall(pattern, text, re.IGNORECASE)
+
+
+# --- Usage example ---
+
+if __name__ == "__main__":
+    sample = (
+        "Visit https://www.example.com or check out "
+        "blog.foo.org for updates. You can also reach "
+        "mail.sub.domain.co.uk if you need support."
+    )
+
+    domains = extract_domains(sample)
+    for d in domains:
+        print(d)
+```
+
+**Output:**
+```
+www.example.com
+blog.foo.org
+mail.sub.domain.co.uk
+```
+
+### How it works
+
+| Part of the regex | Meaning |
+|---|---|
+| `\b` | Word boundary – avoids matching inside a longer token |
+| `[a-z0-9]+` | First label (e.g. `www`, `blog`) |
+| `(?:\.[a-z0-9]+)+` | One or more additional labels separated by dots |
+| `\.[a-z]{2,}` | Final TLD of at least 2 letters (`.com`, `.org`, `.uk`, …) |
+| `\b` | Trailing word boundary |
+
+`re.IGNORECASE` makes the match case-insensitive, and `re.findall` returns every non-overlapping match as a list of strings.
+
+> **Note:** This is a pragmatic pattern, not a full RFC 1035 validator. It intentionally skips single-character TLDs and handles the

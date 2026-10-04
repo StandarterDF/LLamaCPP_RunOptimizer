@@ -1,0 +1,12 @@
+=== reasoning_content ===
+We need answer user: implement Python function merges overlapping intervals, explain algorithm complexity concise. Need final with code and brief explanation. Need likely function takes list of intervals [start,end], returns merged. Sort by start, iterate, if next start <= current end merge max. Complexity O(n log n). Could mention assume list of tuples. Need concise. Ensure correct. Maybe handle empty. Could use start<=end? Overlapping includes touching? Usually if a2 <= b1 merge. If non-overlapping only strict? "overlapping intervals" maybe intervals that overlap or touch? We can define merge if next_start <= current_end. If want strict overlap, use <. But typical merge intervals uses <= to merge adjacent? Leetcode merges if s <= e. We'll state merges overlapping (and touching if using <=). Could mention if you want strict overlap use <. But keep concise. Final code:
+def merge_intervals(intervals):
+    if not intervals: return []
+    intervals.sort()
+    merged=[intervals[0]]
+    for start,end in intervals[1:]:
+        last_start,last_end=merged[-1]
+        if start <= last_end:
+            merged[-1]=(last_start,max(last_end,end))
+       
+=== content ===

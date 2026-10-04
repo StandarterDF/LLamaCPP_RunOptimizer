@@ -1,0 +1,21 @@
+=== reasoning_content ===
+*   Add type hints to all functions.
+    *   Add short docstrings to all functions.
+    *   Rename variable 'data' to 'records' throughout.
+    *   Keep logic identical.
+    *   Output *only* the code.
+
+    *   `load_data(path)`: Takes a file path, reads a CSV, returns a list of dicts.
+        *   Type hint: `path: str` -> `list[dict[str, str]]` (or more generic, but dicts from CSV are strings). Let's go with `list[dict[str, str]]`.
+        *   Rename `data` to `records`.
+    *   `clean_data(data)`: Takes a list of dicts, strips 'name', filters out missing 'name'.
+        *   Type hint: `records: list[dict[str, str]]` -> `list[dict[str, str]]`.
+        *   Rename `data` to `records`.
+    *   `aggregate(data)`: Takes a list of dicts, counts categories.
+        *   Type hint: `records: list[dict[str, str]]` -> `dict[str, int]`.
+        *   Rename `data` to `records`.
+
+    *   `load_data`: "Loads data from a CSV file."
+    *   `clean_data`: "Cleans the records by stripping whitespace from names."
+    *   `aggregate
+=== content ===

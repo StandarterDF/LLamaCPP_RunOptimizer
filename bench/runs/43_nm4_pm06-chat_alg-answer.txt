@@ -1,0 +1,27 @@
+=== reasoning_content ===
+We need answer user: implement Python function merges overlapping intervals, explain algorithm complexity concise. Need produce final with code and explanation. Need likely function takes list of intervals [start,end], returns merged. Consider inclusive endpoints? Overlapping if next start <= current end. If touch endpoints merge? Usually merging overlapping intervals: if second start <= current end merge. If not, add. Need handle unsorted sort by start. Complexity O(n log n) due sorting, O(n) merge, space O(n). Could include code.
+
+Need be concise. final maybe:
+```
+def merge_intervals(intervals):
+    if not intervals: return []
+    intervals.sort(key=lambda x: x[0])
+    merged=[intervals[0]]
+    for start,end in intervals[1:]:
+        last_start,last_end=merged[-1]
+        if start <= last_end:
+            merged[-1][1]=max(last_end,end)
+        else:
+            merged.append([start,end])
+    return merged
+```
+Explain: sort by start, scan, merge if next start <= last end, else new. Time O(n log n), extra O(n) (or O(1) if in-place? Python sort in place). Need mention modifies input? Could copy: sorted(intervals, key=...). To avoid mutating: sorted. Use list of tuples. If input empty return []. Use tuples.
+
+Need final concise.
+
+=== content ===
+```python
+def merge_intervals(intervals):
+    if not intervals:
+        return []
+

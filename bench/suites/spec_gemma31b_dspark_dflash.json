@@ -1,0 +1,25 @@
+{
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}\\mradermacher\\Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF\\Gemma-4-Dark-Thoughts-V2-31B.i1-IQ3_XXS.gguf",
+  "common": ["-tb", "12", "-t", "12", "--load-mode", "none", "-fa", "on", "--fit", "on", "-np", "1",
+             "-ctk", "q4_0", "-ctv", "q4_0", "--jinja",
+             "--chat-template-kwargs", "{\"enable_thinking\":false}", "--temp", "0.6", "--min-p", "0.1"],
+  "requests": [
+    { "tag": "short", "target": 1000, "n_predict": 128 },
+    { "tag": "chat_repeat", "n_predict": 320,
+      "messages": [{ "role": "user", "content": "Refactor this Python code: add type hints and short docstrings to every function, rename variable 'data' to 'records'. Keep the logic identical. Output only the code.\n\n```python\nimport csv\nimport json\n\ndef load_data(path):\n    data = []\n    with open(path, newline='') as f:\n        reader = csv.DictReader(f)\n        for row in reader:\n            data.append(row)\n    return data\n\ndef clean_data(data):\n    out = []\n    for item in data:\n        if item.get('name') is None:\n            continue\n        item['name'] = item['name'].strip()\n        out.append(item)\n    return out\n\ndef aggregate(data):\n    result = {}\n    for item in data:\n        key = item.get('category', 'other')\n        result[key] = result.get(key, 0) + 1\n    return result\n```" }] },
+    { "tag": "chat_code", "n_predict": 256,
+      "messages": [{ "role": "user", "content": "Write a Python function that extracts all top-level domains (like example.com) from a text using regex. Include a short usage example." }] }
+  ],
+  "tests": [
+    { "name": "d31_dspark_q4km",
+      "args": ["-c", "32768", "--spec-type", "draft-dspark", "--spec-draft-n-max", "5", "--spec-draft-ngl", "all",
+               "-md", "${PROJECT_DIR}\\downloads\\speculators\\gemma-4-31B-dspark-Q4_K_M.gguf"] },
+    { "name": "d31_dflash_q6k",
+      "args": ["-c", "32768", "--spec-type", "draft-dflash", "--spec-draft-n-max", "15", "--spec-draft-ngl", "all",
+               "-md", "${PROJECT_DIR}\\downloads\\speculators\\gemma-4-31B-dflash-Q6_K.gguf"] },
+    { "name": "d31_dflash_q6k_ngram6",
+      "args": ["-c", "32768", "--spec-type", "draft-dflash,ngram-mod", "--spec-draft-n-max", "6", "--spec-draft-ngl", "all",
+               "-md", "${PROJECT_DIR}\\downloads\\speculators\\gemma-4-31B-dflash-Q6_K.gguf"] }
+  ]
+}

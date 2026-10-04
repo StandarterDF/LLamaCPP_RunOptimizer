@@ -1,0 +1,35 @@
+=== reasoning_content ===
+
+=== content ===
+```python
+import csv
+import json
+from typing import List, Dict
+
+def load_data(path: str) -> List[Dict[str, str]]:
+    """Load CSV records from the specified path."""
+    records = []
+    with open(path, newline='') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            records.append(row)
+    return records
+
+def clean_data(records: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    """Remove records without names and strip whitespace from names."""
+    out = []
+    for item in records:
+        if item.get('name') is None:
+            continue
+        item['name'] = item['name'].strip()
+        out.append(item)
+    return out
+
+def aggregate(records: List[Dict[str, str]]) -> Dict[str, int]:
+    """Count the occurrences of each category."""
+    result = {}
+    for item in records:
+        key = item.get('category', 'other')
+        result[key] = result.get(key, 0) + 1
+    return result
+```

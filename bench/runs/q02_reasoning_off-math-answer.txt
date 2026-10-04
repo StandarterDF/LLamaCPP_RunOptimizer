@@ -1,0 +1,52 @@
+=== reasoning_content ===
+
+=== content ===
+To find the value of $x^3 + \frac{1}{x^3}$ given that $x + \frac{1}{x} = 3$, we can use algebraic identities to derive the answer step by step.
+
+**Step 1: Square the given equation**
+
+We start with the given equation:
+$$ x + \frac{1}{x} = 3 $$
+
+Square both sides of the equation:
+$$ \left(x + \frac{1}{x}\right)^2 = 3^2 $$
+
+Expand the left side using the identity $(a+b)^2 = a^2 + 2ab + b^2$:
+$$ x^2 + 2(x)\left(\frac{1}{x}\right) + \left(\frac{1}{x}\right)^2 = 9 $$
+
+Simplify the middle term $2(x)\left(\frac{1}{x}\right) = 2$:
+$$ x^2 + \frac{1}{x^2} + 2 = 9 $$
+
+Subtract 2 from both sides to isolate $x^2 + \frac{1}{x^2}$:
+$$ x^2 + \frac{1}{x^2} = 9 - 2 $$
+$$ x^2 + \frac{1}{x^2} = 7 $$
+
+**Step 2: Cube the original given equation**
+
+We need to find $x^3 + \frac{1}{x^3}$. We can use the identity for the sum of cubes:
+$$ a^3 + b^3 = (a+b)(a^2 - ab + b^2) $$
+
+Let $a = x$ and $b = \frac{1}{x}$. Then:
+$$ x^3 + \frac{1}{x^3} = \left(x + \frac{1}{x}\right) \left(x^2 - x\left(\frac{1}{x}\right) + \left(\frac{1}{x}\right)^2\right) $$
+
+Simplify the expression inside the second parenthesis:
+$$ x^2 - 1 + \frac{1}{x^2} = x^2 + \frac{1}{x^2} - 1 $$
+
+So, the equation becomes:
+$$ x^3 + \frac{1}{x^3} = \left(x + \frac{1}{x}\right) \left(x^2 + \frac{1}{x^2} - 1\right) $$
+
+**Step 3: Substitute known values**
+
+From Step 1, we know that $x^2 + \frac{1}{x^2} = 7$.
+From the original problem statement, we know that $x + \frac{1}{x} = 3$.
+
+Substitute these values into the equation from Step 2:
+$$ x^3 + \frac{1}{x^3} = (3) \cdot (7 - 1) $$
+$$ x^3 + \frac{1}{x^3} = 3 \cdot 6 $$
+$$ x^3 + \frac{1}{x^3} = 18 $$
+
+**Conclusion**
+
+The value of $x^3 + \frac{1}{x^3}$ is 18.
+
+Final Answer: 18

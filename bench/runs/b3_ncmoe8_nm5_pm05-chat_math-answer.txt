@@ -1,0 +1,25 @@
+=== reasoning_content ===
+The objective is to find the value of $x^3 + \frac{1}{x^3}$ given that $x + \frac{1}{x} = 3$.
+
+    *   The given equation is $x + \frac{1}{x} = 3$. This is a sum of a variable and its reciprocal.
+    *   The expression to find is $x^3 + \frac{1}{x^3}$. This is a sum of cubes of a variable and its reciprocal.
+
+    *   *Option 1: Use the identity for $(a + b)^3$.*
+        $(a + b)^3 = a^3 + b^3 + 3ab(a + b)$
+        Here, let $a = x$ and $b = \frac{1}{x}$.
+        Then, $(x + \frac{1}{x})^3 = x^3 + (\frac{1}{x})^3 + 3(x)(\frac{1}{x})(x + \frac{1}{x})$
+        This looks perfect.
+
+    *   *Option 2: Use the sum of cubes factorization.*
+        $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$
+        Here, $x^3 + \frac{1}{x^3} = (x + \frac{1}{x})(x^2 - x(\frac{1}{x}) + \frac{1}{x^2})$
+        $x^3 + \frac{1}{x^3} = (x + \frac{1}{x})(x^2 - 1 + \frac{1}{x^2})$
+        This requires finding $x^2 + \frac{1}{x^2}$ first, which is doable but takes an extra step.
+
+    *   **Step 1: State the given value.**
+        $x + \frac{1}{x} = 3$
+
+    *   **Step 2: Use the identity.**
+        $(x + \frac{1}{x})^3 = x^3 + \frac{1}{x^3} + 3(x)(\frac{1}{x})(x + \frac{1}{x})$
+        Simplify the term $3(x)(\frac{1}{x})(x + \frac{1}{x})$:
+=== content ===

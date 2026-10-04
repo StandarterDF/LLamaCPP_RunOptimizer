@@ -1,0 +1,23 @@
+=== reasoning_content ===
+
+=== content ===
+To extract domain names from a text, we can use the Python `re` module. The most effective approach for extracting "top-level domains" (or more accurately, full domain names) is to look for patterns that start with alphanumeric characters and end with a common TLD suffix (like .com, .net, .org).
+
+Here is the complete implementation:
+
+```python
+import re
+
+def extract_domains(text):
+    """
+    Extracts all domain names from a given text.
+    The regex matches sequences of characters that look like domains,
+    ensuring they start with alphanumeric characters and end with a valid TLD.
+    """
+    # Regex explanation:
+    # ([a-zA-Z0-9\-\.]+): Matches letters, numbers, hyphens, and dots (subdomains)
+    # \.([a-zA-Z]{2,}) : Matches the final dot and a TLD of at least 2 characters
+    domain_regex = r'([a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,})'
+    
+    # findall returns a list of all matches found in the text
+    return re

@@ -1,0 +1,46 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Analyze User Request:**
+   - **Refactor the Python code:** Add type hints to every function.
+   - **Add short docstrings** to every function.
+   - **Rename variable 'data' to 'records'** throughout the code.
+   - **Keep logic identical.**
+   - **Output only the code.**
+
+2.  **Identify Functions & Current Code:**
+   ```python
+   import csv
+   import json
+
+   def load_data(path):
+       data = []
+       with open(path, newline='') as f:
+           reader = csv.DictReader(f)
+           for row in reader:
+               data.append(row)
+       return data
+
+   def clean_data(data):
+       out = []
+       for item in data:
+           if item.get('name') is None:
+               continue
+           item['name'] = item['name'].strip()
+           out.append(item)
+       return out
+
+   def aggregate(data):
+       result = {}
+       for item in data:
+           key = item.get('category', 'other')
+           result[key] = result.get(key, 0) + 1
+       return result
+   ```
+
+3.  **Apply Changes Step-by-Step:**
+
+   *Function 1: `load_data`*
+   - Parameters: `path` (string) -> `str`
+   - Returns: list of dicts -> `list[dict[str, str]]` (
+=== content ===

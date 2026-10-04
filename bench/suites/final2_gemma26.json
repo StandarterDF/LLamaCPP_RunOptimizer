@@ -1,0 +1,19 @@
+{
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}\\mradermacher\\Gemma-4-26B-A4B-StyleTune-V2-GGUF\\Gemma-4-26B-A4B-StyleTune-V2.IQ4_XS.gguf",
+  "common": ["--fit", "on", "-fa", "on", "-tb", "14", "-t", "14", "--load-mode", "none", "-b", "2048", "-ub", "512",
+             "-np", "1", "-ctk", "q4_0", "-ctv", "q4_0", "--chat-template-file", "${LLAMA_DIR}\\gemma4.jinja",
+             "--temp", "0.6", "--min-p", "0.1", "-ctxcp", "16", "-cms", "512", "--reasoning-budget", "1024"],
+  "requests": [
+    { "tag": "short", "target": 1500, "n_predict": 256 },
+    { "tag": "chat_repeat", "n_predict": 320,
+      "messages": [{ "role": "user", "content": "Refactor this Python code: add type hints and short docstrings to every function, rename variable 'data' to 'records'. Keep the logic identical. Output only the code.\n\n```python\nimport csv\nimport json\n\ndef load_data(path):\n    data = []\n    with open(path, newline='') as f:\n        reader = csv.DictReader(f)\n        for row in reader:\n            data.append(row)\n    return data\n\ndef clean_data(data):\n    out = []\n    for item in data:\n        if item.get('name') is None:\n            continue\n        item['name'] = item['name'].strip()\n        out.append(item)\n    return out\n\ndef aggregate(data):\n    result = {}\n    for item in data:\n        key = item.get('category', 'other')\n        result[key] = result.get(key, 0) + 1\n    return result\n```" }] },
+    { "tag": "chat_code", "n_predict": 256,
+      "messages": [{ "role": "user", "content": "Write a Python function that extracts all top-level domains (like example.com) from a text using regex. Include a short usage example." }] }
+  ],
+  "tests": [
+    { "name": "g26_newbuild_c65536",
+      "args": ["-c", "65536", "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}\\mradermacher\\Gemma-4-26B-A4B-StyleTune-V2-GGUF\\gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf"] }
+  ]
+}

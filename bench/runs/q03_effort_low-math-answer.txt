@@ -1,0 +1,64 @@
+=== reasoning_content ===
+We need to find x³ + 1/x³ given that x + 1/x = 3.
+
+Let me work through this step by step.
+
+Let me denote a = x + 1/x = 3.
+
+I need to find x³ + 1/x³.
+
+First, I'll cube both sides of x + 1/x = 3.
+
+(x + 1/x)³ = 27
+
+Now expand (x + 1/x)³:
+(x + 1/x)³ = x³ + 3x²(1/x) + 3x(1/x²) + 1/x³
+= x³ + 3x + 3/x + 1/x³
+= (x³ + 1/x³) + 3(x + 1/x)
+
+So:
+(x + 1/x)³ = (x³ + 1/x³) + 3(x + 1/x)
+
+Therefore:
+27 = (x³ + 1/x³) + 3(3)
+27 = (x³ + 1/x³) + 9
+x³ + 1/x³ = 27 - 9 = 18
+
+The answer is 18.
+
+=== content ===
+# Finding x³ + 1/x³ given x + 1/x = 3
+
+## Step 1: Set up the relationship
+
+Let me cube both sides of the given equation:
+
+$$(x + \tfrac{1}{x})^3 = 3^3 = 27$$
+
+## Step 2: Expand the left side
+
+$$(x + \tfrac{1}{x})^3 = x^3 + 3x^2\cdot\tfrac{1}{x} + 3x\cdot\tfrac{1}{x^2} + \tfrac{1}{x^3}$$
+
+Simplifying:
+
+$$= x^3 + 3x + \frac{3}{x} + \frac{1}{x^3}$$
+
+Group the terms:
+
+$$= \left(x^3 + \frac{1}{x^3}\right) + 3\left(x + \frac{1}{x}\right)$$
+
+## Step 3: Substitute the known value
+
+Since $x + \frac{1}{x} = 3$:
+
+$$27 = \left(x^3 + \frac{1}{x^3}\right) + 3(3)$$
+
+$$27 = \left(x^3 + \frac{1}{x^3}\right) + 9$$
+
+## Step 4: Solve
+
+$$x^3 + \frac{1}{x^3} = 27 - 9 = 18$$
+
+## Final Answer
+
+$$\boxed{18}$$

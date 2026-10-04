@@ -1,0 +1,41 @@
+=== reasoning_content ===
+
+=== content ===
+```python
+import csv
+import json
+from typing import List, Dict, Any
+
+def load_data(path: str) -> List[Dict[str, Any]]:
+    """Loads data from a CSV file into a list of dictionaries."""
+    records = []
+    with open(path, newline='') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            records.append(row)
+    return records
+
+def clean_data(records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Removes records with missing or empty names."""
+    out = []
+    for item in records:
+        if item.get('name') is None:
+            continue
+        item['name'] = item['name'].strip()
+        if len(item['name']) == 0:
+            continue
+        out.append(item)
+    return out
+
+def aggregate(records: List[Dict[str, Any]]) -> Dict[str, int]:
+    """Counts records by category."""
+    result = {}
+    for item in records:
+        key = item.get('category', 'other')
+        result.setdefault(key, 0)
+        result[key] += 1
+    return result
+
+def save_result(result: Dict[str, int], path: str) -> None:
+    """Saves the aggregation result to a JSON file."""
+    with open(

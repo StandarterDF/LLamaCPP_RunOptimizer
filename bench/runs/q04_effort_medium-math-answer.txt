@@ -1,0 +1,75 @@
+=== reasoning_content ===
+We need to solve step by step: If x + 1/x = 3, find x^3 + 1/x^3.
+
+Let me work through this carefully.
+
+Given: x + 1/x = 3
+
+I need to find: x^3 + 1/x^3
+
+Step 1: Square both sides of x + 1/x = 3
+
+(x + 1/x)² = 9
+
+x² + 2·(x)(1/x) + 1/x² = 9
+
+x² + 2 + 1/x² = 9
+
+x² + 1/x² = 7
+
+Step 2: Now I need x^3 + 1/x^3. I can use the identity:
+
+(x + 1/x)³ = x³ + 3(x)(1/x)(x + 1/x) + 1/x³
+
+Wait, let me be more careful:
+
+(a + b)³ = a³ + 3a²b + 3ab² + b³
+
+So (x + 1/x)³ = x³ + 3x²·(1/x) + 3x·(1/x)² + 1/x³
+
+= x³ + 3x + 3/x + 1/x³
+
+= (x³ + 1/x³) + 3(x + 1/x)
+
+So: (x + 1/x)³ = (x³ + 1/x³) + 3(x + 1/x)
+
+Therefore: x³ + 1/x³ = (x + 1/x)³ - 3(x + 1/x)
+
+= 3³ - 3(3)
+
+= 27 - 9
+
+= 18
+
+The answer is 18.
+
+=== content ===
+# Finding x³ + 1/x³ given x + 1/x = 3
+
+## Step 1: Square both sides
+
+$$(x + \tfrac{1}{x})^2 = 3^2$$
+
+$$x^2 + 2\cdot x \cdot \tfrac{1}{x} + \tfrac{1}{x^2} = 9$$
+
+$$x^2 + 2 + \tfrac{1}{x^2} = 9$$
+
+$$x^2 + \tfrac{1}{x^2} = 7$$
+
+## Step 2: Use the cube identity
+
+Expand $(x + \frac{1}{x})^3$ using the binomial formula:
+
+$$\left(x + \tfrac{1}{x}\right)^3 = x^3 + 3x^2\!\cdot\!\tfrac{1}{x} + 3x\!\cdot\!\tfrac{1}{x^2} + \tfrac{1}{x^3}$$
+
+$$= x^3 + \tfrac{1}{x^3} + 3\!\left(x + \tfrac{1}{x}\right)$$
+
+Rearranging:
+
+$$x^3 + \tfrac{1}{x^3} = \left(x + \tfrac{1}{x}\right)^3 - 3\!\left(x + \tfrac{1}{x}\right)$$
+
+## Step 3: Substitute
+
+$$x^3 + \tfrac{1}{x^3} = 3^3 - 3(3) = 27 - 9$$
+
+$$\boxed{x^3 + \dfrac{1}{x^3} = 18}$$

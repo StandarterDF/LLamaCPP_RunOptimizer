@@ -1,0 +1,34 @@
+=== reasoning_content ===
+We need answer user: "Write a Python function that extracts all top-level domains (like example.com) from a text using regex. Include a short usage example."
+
+Need produce final answer likely code. Need think about what "top-level domains" means? They likely mean domains like example.com? Top-level domain often TLD .com, .org, etc. "like example.com" implies full domain? They say extracts all top-level domains (like example.com) from text using regex. Ambiguous: extract domains? Could be domains including second-level and TLD. Need write Python function. Use regex. Need be careful. Could define pattern for domain names: r'\b(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,}\b' case-insensitive. This extracts domain-like strings e.g. example.com, sub.example.co.uk? "top-level domains (like example.com)" maybe want domains ending with TLD. We can extract all domain names (hostnames) with TLD. Simpler: r'\b[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b' but can match too much with punctuation. Better robust.
+
+Need include usage example. Could provide function:
+import re
+def extract_domains(text: str) -> list[str]:
+    pattern = re.compile(r'\b(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,}\b', re.IGNORECASE)
+    return pattern.findall(text)
+
+Example:
+text = "Visit www.example.com and sub.example.co.uk for info at contact@example.org."
+print(extract_domains(text))
+# ['www.example.com', 'sub.example.co.uk', 'example.org']
+
+But if want only top-level domains? "top-level domains (like example.com)" maybe they mean domains (not just TLD). We can phrase: extracts domain names with TLD. If they literally want top-level domains (TLDs) like .com? "like example.com" suggests full domain. Need maybe clarify in answer: This extracts domain names (e.g., example.com); if you only want TLDs (com, org), change pattern.
+
+Need ensure regex doesn't match email local part? contact@example.org: pattern with word boundary? For contact@example.org, there is @, then example.org. \b before e? @ is non-word char, so boundary yes. It will match example.org. Good.
+
+Potential issue: www.example.com: pattern starts at www, okay. Subdomain example: sub.example.co.uk: pattern can match sub.example.co.uk because label sequence. Good.
+
+Potential issue: URLs with port/path: http://example.com/page. Pattern \b... will match example.com not http? http has no TLD? http:// has // non word, pattern starts example.com. Good.
+
+Potential issue: IP with domain? 192.168.1.1 no.
+
+Potential issue: .com as TLD: pattern [a-z]{2,} at end; if text "The top-level domain is .com" won't match because no label before? It might match? .com: start at c? pattern requires label dot TLD, no. If want TLD only, pattern r'\b[a-zA-Z]{2,}\b'? Not.
+
+Maybe user says "top-level domains (like example.com)" meaning domains. We'll provide.
+
+Need maybe use re.findall. Keep short. Could include dedupe? They didn't ask. Could return unique preserving order:
+seen = set(); out = [] ...
+But "all" maybe duplicates. Simpler return findall
+=== content ===

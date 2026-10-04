@@ -1,0 +1,29 @@
+=== reasoning_content ===
+
+=== content ===
+To extract domain names from a text, we can use a regular expression that looks for sequences of alphanumeric characters and dashes, followed by a period and a top-level domain (TLD) of 2 or more characters.
+
+Here is the complete solution:
+
+```python
+import re
+
+def extract_domains(text):
+    """
+    Extracts top-level domains (e.g., example.com) from a string.
+    """
+    # Regular expression explanation:
+    # [a-zA-Z0-9-]+ : Matches alphanumeric characters and dashes (domain name)
+    # \.            : Matches a literal dot
+    # [a-zA-Z]{2,}  : Matches the TLD (e.g., com, org, net) which must be at least 2 letters long
+    domain_pattern = r'[a-zA-Z0-9-]+?\. [a-zA-Z]{2,}' 
+    
+    # Refined pattern to handle typical domain structures:
+    # \b[a-zA-Z0-9-]+ matches the domain name
+    # \. matches the dot
+    # [a-zA-Z]{2,}\b matches the TLD
+    pattern = r'\b[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}\b'
+    
+    return re.findall(pattern, text)
+
+# ---

@@ -1,0 +1,18 @@
+=== reasoning_content ===
+Extract top-level domains (TLDs) / domain names.
+Text string.
+Regex.
+Python.
+Function with a usage example.
+
+    *   What defines a domain name in a regex context?
+    *   It usually looks like: letters, numbers, hyphens, dots.
+    *   Structure: `subdomain.domain.tld` or just `domain.tld`.
+    *   *Constraints to avoid false positives:*
+        *   Avoid punctuation at the end of sentences (e.g., in "Visit example.com.", the dot shouldn't be part of the domain).
+        *   Avoid email addresses if possible, or focus on the domain part? The prompt asks for domains like "example.com".
+        *   A standard TLD is 2-63 characters long, mostly letters. But modern TLDs vary.
+    *   *Simplified approach:* Look for strings of word characters, dots, and hyphens that follow the pattern of a domain name.
+    *   *Better approach:* A pattern that matches alpha-numeric strings separated by dots, ending with a valid-looking TLD pattern.
+    *   *Regex Pattern Idea:* `[a
+=== content ===

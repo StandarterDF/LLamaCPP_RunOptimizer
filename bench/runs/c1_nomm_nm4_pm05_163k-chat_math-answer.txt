@@ -1,0 +1,31 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Understand the User Request:**
+   - Given: $x + \frac{1}{x} = 3$
+   - Find: $x^3 + \frac{1}{x^3}$
+   - Requirements: Solve step by step, give final answer clearly.
+
+2.  **Identify the Mathematical Relationship:**
+   - I need to relate $x + \frac{1}{x}$ to $x^3 + \frac{1}{x^3}$.
+   - Recall the algebraic identity: $(a + b)^3 = a^3 + b^3 + 3ab(a + b)$
+   - Let $a = x$ and $b = \frac{1}{x}$. Then $ab = x \cdot \frac{1}{x} = 1$.
+   - So, $\left(x + \frac{1}{x}\right)^3 = x^3 + \frac{1}{x^3} + 3 \cdot 1 \cdot \left(x + \frac{1}{x}\right)$
+
+3.  **Set Up the Equation:**
+   - Let $S = x + \frac{1}{x} = 3$
+   - Then $S^3 = x^3 + \frac{1}{x^3} + 3S$
+   - We want to find $x^3 + \frac{1}{x^3} = S^3 - 3S$
+
+4.  **Substitute and Calculate:**
+   - $S = 3$
+   - $S^3 = 3^3 = 27$
+   - $3S = 3 \times 3 = 9$
+   - $x^3 + \frac{1}{x^3} = 27 - 9 = 18$
+
+5.  **Verify/Double Check:**
+   - Alternative approach: Direct expansion of $(x + 1/x)^3$
+   - $(x + 1/x)^3 = x^3 + 3x^2(1/x) + 3x(1/x)^2 + (1/x)^3$
+   - $= x^3 + 3x + 3(1/x) + 1/x^3$
+   - $= x^3 +
+=== content ===

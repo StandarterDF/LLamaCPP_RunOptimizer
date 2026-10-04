@@ -1,0 +1,18 @@
+0.00.103.514 W DEPRECATED: --mmap and --no-mmap are deprecated. use --load-mode mmap instead
+0.00.103.625 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.195.485 I srv          init: The UI is disabled
+0.00.195.490 I srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.195.577 W srv  llama_server: -----------------
+0.00.195.578 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.195.579 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.195.579 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.195.579 W srv  llama_server: -----------------
+0.00.198.168 I srv    load_model: loading model '<MODELS_DIR>\ukisai\Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF\Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ2_S-mtp.gguf'
+0.00.985.855 E llama_init_from_model: quantized V cache requires flash_attn to be enabled
+0.01.054.339 E common_fit_params: encountered an error while trying to fit params to free device memory: failed to create llama_context from model
+0.03.039.172 E llama_init_from_model: quantized V cache requires flash_attn to be enabled
+0.03.039.178 E cmn  common_init_: failed to create context with model '<MODELS_DIR>\ukisai\Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF\Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ2_S-mtp.gguf'
+0.03.039.181 E cmn  common_init_: failed to create context with model '<MODELS_DIR>\ukisai\Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF\Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ2_S-mtp.gguf'
+0.03.039.183 E srv    load_model: failed to create_context with model '<MODELS_DIR>\ukisai\Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF\Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ2_S-mtp.gguf'
+0.03.052.276 I srv    operator(): operator(): cleaning up before exit...
+0.03.064.489 E srv  llama_server: exiting due to model loading error

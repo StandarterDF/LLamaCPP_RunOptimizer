@@ -1,0 +1,29 @@
+=== reasoning_content ===
+*   Goal: Implement a Python function to merge overlapping intervals.
+    *   Requirement 1: Provide code.
+    *   Requirement 2: Explain algorithm and complexity.
+    *   Requirement 3: Keep it concise.
+
+    *   Input: A list of lists/tuples representing intervals: e.g., `[[1, 3], [2, 6], [8, 10], [15, 18]]`.
+    *   Output: Merged intervals: e.g., `[[1, 6], [8, 10], [15, 18]]`.
+    *   Algorithm steps:
+        1.  Sort intervals by start time.
+        2.  Initialize an empty list `merged`.
+        3.  Iterate through the sorted intervals.
+        4.  If `merged` is empty or the current interval's start > last interval's end in `merged`, append it.
+        5.  Otherwise, update the last interval's end to be the max of both ends (they overlap).
+
+    ```python
+    def merge_intervals(intervals):
+        if not intervals:
+            return []
+
+        # Sort by start time
+        intervals.sort(key=lambda x: x[0])
+
+        merged = [intervals[0]]
+
+        for current in intervals[1:]:
+            prev_start, prev_end = merged[-1]
+            curr_start, curr_end = current
+=== content ===

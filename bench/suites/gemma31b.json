@@ -1,0 +1,33 @@
+{
+  "server": "${LLAMA_SERVER}",
+  "model": "${MODELS_DIR}\\mradermacher\\Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF\\Gemma-4-Dark-Thoughts-V2-31B.i1-IQ3_XXS.gguf",
+  "common": ["-tb", "12", "-t", "12", "--no-mmap", "-fa", "on", "--fit", "on", "-np", "1",
+             "-ctk", "q4_0", "-ctv", "q4_0", "--jinja",
+             "--chat-template-kwargs", "{\"enable_thinking\":false}", "--temp", "0.6", "--min-p", "0.1"],
+  "requests": [
+    { "tag": "short", "target": 1500, "n_predict": 256 },
+    { "tag": "long", "target": 12000, "n_predict": 64 },
+    { "tag": "chat_alg", "n_predict": 320,
+      "messages": [{ "role": "user", "content": "Implement a Python function that merges overlapping intervals, then explain the algorithm and its complexity in a few sentences. Keep it concise." }] },
+    { "tag": "chat_math", "n_predict": 512,
+      "messages": [{ "role": "user", "content": "Solve step by step: If x + 1/x = 3, find x^3 + 1/x^3. Give the final answer clearly." }] },
+    { "tag": "chat_code", "n_predict": 320,
+      "messages": [{ "role": "user", "content": "Write a Python function that extracts all top-level domains (like example.com) from a text using regex. Include a short usage example." }] }
+  ],
+  "tests": [
+    { "name": "a0_user_51200",
+      "args": ["-c", "51200", "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-p-min", "0.75",
+               "-md", "${MODELS_DIR}\\mradermacher\\Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF\\gemma-4-31B-it-assistant.Q4_K_M.gguf"] },
+    { "name": "a1_nospec_51200",
+      "args": ["-c", "51200"] },
+    { "name": "a2_nm3_pm075",
+      "args": ["-c", "51200", "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.75",
+               "-md", "${MODELS_DIR}\\mradermacher\\Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF\\gemma-4-31B-it-assistant.Q4_K_M.gguf"] },
+    { "name": "a3_nm5_pm05",
+      "args": ["-c", "51200", "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}\\mradermacher\\Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF\\gemma-4-31B-it-assistant.Q4_K_M.gguf"] },
+    { "name": "a4_nm5_pm05_c80k",
+      "args": ["-c", "81920", "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "-md", "${MODELS_DIR}\\mradermacher\\Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF\\gemma-4-31B-it-assistant.Q4_K_M.gguf"] }
+  ]
+}

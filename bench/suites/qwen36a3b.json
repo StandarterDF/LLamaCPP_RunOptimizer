@@ -1,0 +1,35 @@
+{
+  "server": "${LLAMA_SERVER}",
+  "model": "${MODELS_DIR}\\unsloth\\Qwen3.6-35B-A3B-MTP-GGUF\\Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf",
+  "common": ["-tb", "12", "--no-mmap", "-fa", "on", "--fit", "on", "-np", "1",
+             "-ctk", "q4_0", "-ctv", "q4_0", "--jinja", "--temp", "0.6"],
+  "requests": [
+    { "tag": "short", "target": 1500, "n_predict": 256 },
+    { "tag": "long", "target": 12000, "n_predict": 64 },
+    { "tag": "chat_alg", "n_predict": 320,
+      "messages": [{ "role": "user", "content": "Implement a Python function that merges overlapping intervals, then explain the algorithm and its complexity in a few sentences. Keep it concise." }] },
+    { "tag": "chat_math", "n_predict": 512,
+      "messages": [{ "role": "user", "content": "Solve step by step: If x + 1/x = 3, find x^3 + 1/x^3. Give the final answer clearly." }] },
+    { "tag": "chat_code", "n_predict": 320,
+      "messages": [{ "role": "user", "content": "Write a Python function that extracts all top-level domains (like example.com) from a text using regex. Include a short usage example." }] }
+  ],
+  "tests": [
+    { "name": "c0_user_163k_mmproj",
+      "args": ["-c", "163840", "--mmproj", "${MODELS_DIR}\\unsloth\\Qwen3.6-35B-A3B-MTP-GGUF\\mmproj-F16.gguf",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "2", "--image-min-tokens", "1024", "--reasoning-budget", "8192"] },
+    { "name": "c1_nomm_nm4_pm05_163k",
+      "args": ["-c", "163840", "--spec-type", "draft-mtp", "--spec-draft-n-max", "4", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "--reasoning-budget", "8192"] },
+    { "name": "c2_nomm_nm5_pm05_163k",
+      "args": ["-c", "163840", "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "--reasoning-budget", "8192"] },
+    { "name": "c3_mmproj_cpu_nm4_pm05",
+      "args": ["-c", "163840", "--mmproj", "${MODELS_DIR}\\unsloth\\Qwen3.6-35B-A3B-MTP-GGUF\\mmproj-F16.gguf",
+               "--no-mmproj-offload", "--image-min-tokens", "1024",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "4", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "--reasoning-budget", "8192"] },
+    { "name": "c4_nomm_nm5_pm05_131k",
+      "args": ["-c", "131072", "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5",
+               "--reasoning-budget", "8192"] }
+  ]
+}

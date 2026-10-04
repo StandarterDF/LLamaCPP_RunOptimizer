@@ -1,0 +1,74 @@
+0.00.107.799 W DEPRECATED: --mmap and --no-mmap are deprecated. use --load-mode mmap instead
+0.00.132.268 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.226.157 I srv          init: The UI is disabled
+0.00.226.162 I srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.226.254 W srv  llama_server: -----------------
+0.00.226.257 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.226.258 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.226.259 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.226.259 W srv  llama_server: -----------------
+0.00.228.153 I srv    load_model: loading model '<MODELS_DIR>\mradermacher\Gemma-4-26B-A4B-StyleTune-V2-GGUF\Gemma-4-26B-A4B-StyleTune-V2.IQ4_XS.gguf'
+0.00.837.865 E llama_init_from_model: failed to initialize the context: Gemma4Assistant requires ctx_other to be set (this warning is normal during memory fitting)
+0.00.910.338 W srv    load_model: [spec] failed to measure draft model memory: failed to create llama_context from model
+0.07.604.159 W load: control-looking token:      1 '<eos>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.07.604.405 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.07.604.791 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.07.649.635 W load: special_eog_ids contains '<|tool_response>', removing '</s>' token from EOG list
+0.11.857.110 I cmn          init: llama threadpool init, n_threads = 14
+0.11.933.756 I common_speculative_init_result: loading draft model '<MODELS_DIR>\mradermacher\Gemma-4-26B-A4B-StyleTune-V2-GGUF\gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf'
+0.12.486.436 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.12.486.792 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.12.529.594 W load: special_eog_ids contains '<|tool_response>', removing '</s>' token from EOG list
+0.12.660.950 W llama_kv_cache: layer   3: sharing with layer 29. k = 0000000E3E200000, v = 0000000E42A00000
+0.12.661.295 W llama_kv_cache: layer   0: sharing with layer 28. k = 0000000E4C300000, v = 0000000E4C4B0000
+0.12.661.298 W llama_kv_cache: layer   1: sharing with layer 28. k = 0000000E4C300000, v = 0000000E4C4B0000
+0.12.661.300 W llama_kv_cache: layer   2: sharing with layer 28. k = 0000000E4C300000, v = 0000000E4C4B0000
+0.59.063.774 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 131072, kv_unified = 'false'
+0.59.124.651 I srv  llama_server: model loaded
+0.59.124.657 I srv  llama_server: listening on http://127.0.0.1:9946
+1.02.051.345 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+1.02.051.370 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+1.05.597.164 I slot print_timing: id  0 | task 0 | prompt eval time =     968.59 ms /  1267 tokens (    0.76 ms per token,  1308.09 tokens per second)
+1.05.597.171 I slot print_timing: id  0 | task 0 |        eval time =    2577.18 ms /   256 tokens (   10.11 ms per token,    98.95 tokens per second)
+1.05.597.172 I slot print_timing: id  0 | task 0 |       total time =    3545.77 ms /  1523 tokens
+1.05.597.172 I slot print_timing: id  0 | task 0 |    graphs reused =         49
+1.05.597.178 I slot print_timing: id  0 | task 0 | draft acceptance = 0.74812 (  199 accepted /   266 generated), mean len =  4.69
+1.05.597.256 I slot      release: id  0 | task 0 | stop processing: n_tokens = 1522, truncated = 0
+1.05.683.360 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.126 (> 0.100 thold), f_keep = 0.839
+1.05.683.635 I slot launch_slot_: id  0 | task 60 | processing task, is_child = 0
+1.09.286.028 I slot print_timing: id  0 | task 60 | prompt processing, n_tokens =   8192, progress = 0.81, t =   3.60 s / 2277.23 tokens per second
+1.09.976.189 I slot print_timing: id  0 | task 60 | prompt processing, n_tokens =   9626, progress = 0.95, t =   4.29 s / 2244.47 tokens per second
+1.10.235.397 I slot print_timing: id  0 | task 60 | prompt processing, n_tokens =  10138, progress = 1.00, t =   4.55 s / 2229.05 tokens per second
+1.10.864.492 I slot print_timing: id  0 | task 60 | prompt eval time =    4604.32 ms / 10142 tokens (    0.45 ms per token,  2202.72 tokens per second)
+1.10.864.499 I slot print_timing: id  0 | task 60 |        eval time =     576.37 ms /    64 tokens (    9.15 ms per token,   109.30 tokens per second)
+1.10.864.501 I slot print_timing: id  0 | task 60 |       total time =    5180.69 ms / 10206 tokens
+1.10.864.501 I slot print_timing: id  0 | task 60 |    graphs reused =         58
+1.10.864.510 I slot print_timing: id  0 | task 60 | draft acceptance = 1.00000 (   52 accepted /    52 generated), mean len =  5.73
+1.10.864.965 I slot      release: id  0 | task 60 | stop processing: n_tokens = 10205, truncated = 0
+1.10.907.387 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 70760464
+1.10.957.313 I slot launch_slot_: id  0 | task 79 | processing task, is_child = 0
+1.14.153.661 I slot print_timing: id  0 | task 79 | n_gen =    227, tg =  74.46 t/s, tg_3s =  74.79 t/s
+1.15.117.887 I slot print_timing: id  0 | task 79 | prompt eval time =     160.99 ms /    44 tokens (    3.66 ms per token,   273.30 tokens per second)
+1.15.117.897 I slot print_timing: id  0 | task 79 |        eval time =    3999.55 ms /   320 tokens (   12.54 ms per token,    79.76 tokens per second)
+1.15.117.898 I slot print_timing: id  0 | task 79 |       total time =    4160.55 ms /   364 tokens
+1.15.117.899 I slot print_timing: id  0 | task 79 |    graphs reused =        127
+1.15.117.913 I slot print_timing: id  0 | task 79 | draft acceptance = 0.55340 (  228 accepted /   412 generated), mean len =  3.65
+1.15.117.974 I slot      release: id  0 | task 79 | stop processing: n_tokens = 363, truncated = 0
+1.15.168.364 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.208 (> 0.100 thold), f_keep = 0.030
+1.15.178.205 I slot launch_slot_: id  0 | task 174 | processing task, is_child = 0
+1.18.359.693 I slot print_timing: id  0 | task 174 | n_gen =    320, tg = 105.36 t/s, tg_3s = 105.69 t/s
+1.20.013.205 I slot print_timing: id  0 | task 174 | prompt eval time =     153.62 ms /    53 tokens (    2.90 ms per token,   345.00 tokens per second)
+1.20.013.212 I slot print_timing: id  0 | task 174 |        eval time =    4681.36 ms /   512 tokens (    9.16 ms per token,   109.16 tokens per second)
+1.20.013.214 I slot print_timing: id  0 | task 174 |       total time =    4834.98 ms /   565 tokens
+1.20.013.215 I slot print_timing: id  0 | task 174 |    graphs reused =        228
+1.20.013.224 I slot print_timing: id  0 | task 174 | draft acceptance = 0.77735 (  405 accepted /   521 generated), mean len =  4.86
+1.20.013.278 I slot      release: id  0 | task 174 | stop processing: n_tokens = 564, truncated = 0
+1.20.053.959 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.229 (> 0.100 thold), f_keep = 0.020
+1.20.065.776 I slot launch_slot_: id  0 | task 284 | processing task, is_child = 0
+1.23.229.417 I slot print_timing: id  0 | task 284 | n_gen =    211, tg =  69.75 t/s, tg_3s =  70.08 t/s
+1.24.734.101 I slot print_timing: id  0 | task 284 | prompt eval time =     152.73 ms /    48 tokens (    3.18 ms per token,   314.27 tokens per second)
+1.24.734.109 I slot print_timing: id  0 | task 284 |        eval time =    4515.43 ms /   320 tokens (   14.15 ms per token,    70.65 tokens per second)
+1.24.734.111 I slot print_timing: id  0 | task 284 |       total time =    4668.16 ms /   368 tokens
+1.24.734.112 I slot print_timing: id  0 | task 284 |    graphs reused =        282
+1.24.734.121 I slot print_timing: id  0 | task 284 | draft acceptance = 0.50348 (  217 accepted /   431 generated), mean len =  3.21
+1.24.734.180 I slot      release: id  0 | task 284 | stop processing: n_tokens = 367, truncated = 0

@@ -1,0 +1,56 @@
+0.00.002.788 W Setting 'enable_thinking' via --chat-template-kwargs is deprecated. Use --reasoning on / --reasoning off instead.
+0.00.113.803 I srv  llama_server: initializing ...
+0.00.113.810 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.113.919 I srv  init_listene: The UI is disabled
+0.00.113.922 I srv  init_listene: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.114.007 W srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.116.602 I srv    load_model: loading model '<MODELS_DIR>\mradermacher\Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF\Gemma-4-Dark-Thoughts-V2-31B.i1-IQ3_XXS.gguf'
+0.04.822.557 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.04.822.964 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.04.864.898 W load: '</s>' is a normal token here, removing it from EOG list
+0.16.390.006 I cmn          init: llama threadpool init, n_threads = 12
+0.16.885.004 I common_speculative_init_result: loading draft model '<PROJECT_DIR>\downloads\speculators\gemma-4-31B-dspark-Q4_K_M.gguf'
+0.17.612.627 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.17.612.985 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.17.654.639 W load: '</s>' is a normal token here, removing it from EOG list
+1.14.199.674 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 32768, kv_unified = 'false'
+1.14.218.106 I common_speculative_impl_draft_dflash: adding speculative implementation 'draft-dspark'
+1.14.218.112 I common_speculative_impl_draft_dflash: - n_max=5, n_min=0, p_min=0.00
+1.14.218.113 I common_speculative_impl_draft_dflash: - block_size=8, mask_token_id=4, n_extract=5, sample_from_anchor=false
+1.14.388.280 I srv  llama_server: model loaded
+1.14.388.286 I srv  llama_server: listening on http://127.0.0.1:9941
+1.17.297.940 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+1.17.297.969 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+1.27.020.385 I slot print_timing: id  0 | task 0 | n_gen =    104, tg =  14.22 t/s, tg_3s =  14.36 t/s
+1.28.557.014 I slot print_timing: id  0 | task 0 | prompt eval time =    2479.36 ms /   846 tokens (    2.93 ms per token,   341.22 tokens per second)
+1.28.557.021 I slot print_timing: id  0 | task 0 |        eval time =    8779.58 ms /   128 tokens (   69.13 ms per token,    14.47 tokens per second)
+1.28.557.023 I slot print_timing: id  0 | task 0 |       total time =   11258.94 ms /   974 tokens
+1.28.557.024 I slot print_timing: id  0 | task 0 |    graphs reused =         23
+1.28.557.032 I slot print_timing: id  0 | task 0 | draft acceptance = 0.90435 (  104 accepted /   115 generated), mean len =  5.52
+1.28.557.113 I slot      release: id  0 | task 0 | stop processing: n_tokens = 973, truncated = 0
+1.28.608.974 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 88445674
+1.28.772.972 I slot launch_slot_: id  0 | task 27 | processing task, is_child = 0
+1.37.790.428 I slot print_timing: id  0 | task 27 | n_gen =    105, tg =  12.70 t/s, tg_3s =  12.83 t/s
+1.41.010.562 I slot print_timing: id  0 | task 27 | n_gen =    147, tg =  12.80 t/s, tg_3s =  13.04 t/s
+1.44.330.700 I slot print_timing: id  0 | task 27 | n_gen =    193, tg =  13.04 t/s, tg_3s =  13.85 t/s
+1.47.648.589 I slot print_timing: id  0 | task 27 | n_gen =    233, tg =  12.86 t/s, tg_3s =  12.06 t/s
+1.49.831.454 I slot print_timing: id  0 | task 27 | prompt eval time =     831.45 ms /   229 tokens (    3.63 ms per token,   275.42 tokens per second)
+1.49.831.461 I slot print_timing: id  0 | task 27 |        eval time =   20226.93 ms /   264 tokens (   76.91 ms per token,    13.00 tokens per second)
+1.49.831.463 I slot print_timing: id  0 | task 27 |       total time =   21058.38 ms /   493 tokens
+1.49.831.464 I slot print_timing: id  0 | task 27 |    graphs reused =         77
+1.49.831.472 I slot print_timing: id  0 | task 27 | draft acceptance = 0.73929 (  207 accepted /   280 generated), mean len =  4.70
+1.49.831.539 I slot      release: id  0 | task 27 | stop processing: n_tokens = 492, truncated = 0
+1.49.896.642 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 109720097
+1.49.983.418 I slot launch_slot_: id  0 | task 87 | processing task, is_child = 0
+2.00.397.979 I slot print_timing: id  0 | task 87 | n_gen =    100, tg =  10.08 t/s, tg_3s =  10.18 t/s
+2.03.573.481 I slot print_timing: id  0 | task 87 | n_gen =    131, tg =  10.00 t/s, tg_3s =   9.76 t/s
+2.06.752.623 I slot print_timing: id  0 | task 87 | n_gen =    163, tg =  10.02 t/s, tg_3s =  10.07 t/s
+2.09.947.311 I slot print_timing: id  0 | task 87 | n_gen =    191, tg =   9.81 t/s, tg_3s =   8.76 t/s
+2.13.130.650 I slot print_timing: id  0 | task 87 | n_gen =    222, tg =   9.80 t/s, tg_3s =   9.74 t/s
+2.16.307.578 I slot print_timing: id  0 | task 87 | n_gen =    249, tg =   9.64 t/s, tg_3s =   8.50 t/s
+2.16.766.439 I slot print_timing: id  0 | task 87 | prompt eval time =     594.91 ms /    42 tokens (   14.16 ms per token,    70.60 tokens per second)
+2.16.766.446 I slot print_timing: id  0 | task 87 |        eval time =   26188.09 ms /   256 tokens (  102.70 ms per token,     9.74 tokens per second)
+2.16.766.448 I slot print_timing: id  0 | task 87 |       total time =   26783.00 ms /   298 tokens
+2.16.766.449 I slot print_timing: id  0 | task 87 |    graphs reused =        149
+2.16.766.457 I slot print_timing: id  0 | task 87 | draft acceptance = 0.48649 (  180 accepted /   370 generated), mean len =  3.43
+2.16.766.508 I slot      release: id  0 | task 87 | stop processing: n_tokens = 297, truncated = 0

@@ -1,0 +1,40 @@
+=== reasoning_content ===
+We need solve step by step: If x + 1/x = 3, find x^3 + 1/x^3. Need final answer clearly. Straightforward. Let's reason.
+
+Let a = x + 1/x = 3. Square: x^2 + 2 + 1/x^2 = 9 => x^2 + 1/x^2 = 7.
+Then (x + 1/x)(x^2 - 1 + 1/x^2?) Wait identity: x^3 + 1/x^3 = (x + 1/x)^3 - 3(x + 1/x)(x - 1/x?) Let's recall:
+a^3 = x^3 + 3x(1/x)? Let's compute: (x+1/x)^3 = x^3 + 3x^2(1/x)+3x(1/x)^2+1/x^3 = x^3 + 3x + 3/x + 1/x^3 = x^3+1/x^3+3(x+1/x).
+Thus x^3+1/x^3 = a^3 -3a = 27 -9=18.
+Alternatively use x^2+1/x^2=7: (x+1/x)(x^2+1/x^2)= x^3+1/x^3+ x +1/x = x^3+1/x^3+3 => x^3+1/x^3 = 7*3-3=18.
+Need step-by-step.
+
+Final answer: 18.
+
+=== content ===
+We are given:
+
+\[
+x + \frac{1}{x} = 3
+\]
+
+We want to find:
+
+\[
+x^3 + \frac{1}{x^3}
+\]
+
+Use the identity:
+
+\[
+\left(x + \frac{1}{x}\right)^3
+= x^3 + \frac{1}{x^3} + 3\left(x + \frac{1}{x}\right)
+\]
+
+So,
+
+\[
+x^3 + \frac{1}{x^3}
+= \left(x + \frac{1}{x}\right)^3 - 3\left(x + \frac{1}{x}\right)
+\]
+
+Substitute \(x

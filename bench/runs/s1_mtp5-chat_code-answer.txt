@@ -1,0 +1,9 @@
+=== reasoning_content ===
+Here's a thinking process:
+
+1.  **Understand User Goal**: The user wants a Python function that extracts all top-level domains (TLDs) from a text using regular expressions. They also want a short usage example.
+
+2.  **Clarify "Top-Level Domains"**: The example given is "example.com". Technically, "example.com" is a *second-level domain* (SLD) plus a TLD. A true TLD would be just "com". However, in common parlance, people often mean "domain names" or "URLs/domains" when they say "top-level domains". I should clarify this in the response or handle it appropriately. I'll extract full domain names (like `example.com`, `sub.domain.org`) since that's likely what they want, but I'll also note the distinction. Actually, I'll stick to extracting domain patterns (e.g., `[a-z0-9]+(\.[a-z]{2,})+`) but I'll make sure to handle the common case of extracting something like `example.com`. I'll clarify in the docstring that it extracts domain names (SLD + TLD) as commonly intended.
+
+3.  **Regex Design**:
+=== content ===

@@ -1,0 +1,26 @@
+{
+  "_комментарий": "Быстрый шаблон для scripts/bench.py. Личные пути задавайте через env.local.json (образец: env.example.json), а здесь используйте плейсхолдеры ${LLAMA_SERVER}, ${LLAMA_DIR}, ${MODELS_DIR}, ${PROJECT_DIR}. Серия = 10-15 минут на модель.",
+  "server": "${LLAMA_SERVER}",
+  "model": "${MODELS_DIR}/REPLACE-ME.gguf",
+  "common": ["-np", "1", "-fa", "on", "--fit", "on", "-ctk", "q4_0", "-ctv", "q4_0", "--load-mode", "none"],
+  "requests": [
+    { "tag": "short", "target": 1000, "n_predict": 128 },
+    { "tag": "long", "target": 8000, "n_predict": 32 },
+    { "tag": "chat_alg", "n_predict": 256,
+      "messages": [{ "role": "user", "content": "Implement a Python function that merges overlapping intervals, then explain the algorithm and its complexity in a few sentences. Keep it concise." }] },
+    { "tag": "chat_math", "n_predict": 384,
+      "messages": [{ "role": "user", "content": "Solve step by step: If x + 1/x = 3, find x^3 + 1/x^3. Give the final answer clearly." }] }
+  ],
+  "tests": [
+    { "name": "01_baseline",
+      "args": ["-c", "65536"] },
+    { "name": "02_spec_nmax3_pmin07",
+      "args": ["-c", "65536", "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] },
+    { "name": "03_spec_nmax5_pmin05",
+      "args": ["-c", "65536", "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] },
+    { "name": "04_spec_ngram",
+      "args": ["-c", "65536", "--spec-type", "draft-mtp,ngram-simple", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] },
+    { "name": "05_long_ctx",
+      "args": ["-c", "131072", "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.7"] }
+  ]
+}

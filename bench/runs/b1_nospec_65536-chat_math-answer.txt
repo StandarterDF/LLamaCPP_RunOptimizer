@@ -1,0 +1,25 @@
+=== reasoning_content ===
+The objective is to find the value of $x^3 + \frac{1}{x^3}$ given that $x + \frac{1}{x} = 3$.
+
+    *   The identity for the cube of a binomial is: $(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3 = a^3 + b^3 + 3ab(a + b)$.
+    *   This can be rearranged to isolate $a^3 + b^3$: $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$.
+
+    *   Let $a = x$ and $b = \frac{1}{x}$.
+    *   The expression becomes $x^3 + \frac{1}{x^3}$.
+    *   The right side of the rearranged identity is $(x + \frac{1}{x})^3 - 3(x)(\frac{1}{x})(x + \frac{1}{x})$.
+
+    *   The term $3(x)(\frac{1}{x})$ simplifies because $x \cdot \frac{1}{x} = 1$.
+    *   So, the formula simplifies to: $x^3 + \frac{1}{x^3} = (x + \frac{1}{x})^3 - 3(x + \frac{1}{x})$.
+
+    *   We are given $x + \frac{1}{x} = 3$.
+    *   Substitute this into the simplified formula:
+        $x^3 + \frac{1}{x^3} = (3)^3 - 3(3)$
+
+    *   $3^3 = 3 \times 3 \times 3 = 27$.
+    *   $3(3) = 9$.
+    *   $x^3 + \frac{1}{x^3} = 27 - 9$.
+    *   $27 - 9 = 18$.
+
+    *   Start with $x + \frac{1}{x} = 3$.
+    *   Square both sides: $(x + \frac{1}{x})^2 = 3^2 \Rightarrow x^2 + 2 + \frac{1}{x^2} = 9 \
+=== content ===

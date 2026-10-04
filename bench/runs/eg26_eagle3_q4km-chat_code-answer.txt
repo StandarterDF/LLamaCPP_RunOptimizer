@@ -1,0 +1,17 @@
+=== reasoning_content ===
+Extract top-level domains (TLDs) / domain names.
+A text string.
+Python function using regex.
+A short usage example.
+
+    *   What defines a domain name in this context? Usually, it's a string containing letters, digits, hyphens, dots, ending with a common TLD pattern.
+    *   *Simple pattern:* `[\w.-]+\.[a-z]{2,}`.
+    *   *Refining the pattern:*
+        *   Start with alphanumeric characters.
+        *   Can contain dots and hyphens.
+        *   End with a dot followed by letters (the TLD).
+        *   Need to handle cases like `www.google.com` vs just `google.com`. The prompt specifically asks for domains like `example.com`.
+    *   *Potential Pitfalls:* Matching email addresses partially, matching words that end with dot-letter sequences, trailing dots in sentences.
+    *   *Regex draft 1:* `[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}`
+    *   *Refining further:* To prevent capturing parts of an email incorrectly or picking up punctuation, we should
+=== content ===

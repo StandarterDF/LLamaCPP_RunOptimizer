@@ -1,0 +1,25 @@
+{
+  "server": "${LLAMA_SERVER}",
+  "model": "${MODELS_DIR}\\ukisai\\Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF\\Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ2_S-mtp.gguf",
+  "common": [],
+  "requests": [
+    { "tag": "short", "target": 1500, "n_predict": 256 },
+    { "tag": "long", "target": 12000, "n_predict": 64 }
+  ],
+  "tests": [
+    {
+      "name": "01_user_current",
+      "args": ["-c", "81920", "-np", "1", "-fa", "on", "--fit", "on",
+               "-ctk", "q4_0", "-ctv", "q4_0",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1",
+               "--spec-draft-p-min", "0.7", "-tb", "12", "--no-mmap"]
+    },
+    {
+      "name": "02_linux_example",
+      "args": ["-c", "81920", "--parallel", "1", "-fa", "on", "--fit", "off",
+               "-ctk", "q4_0", "-ctv", "q4_0",
+               "--spec-type", "draft-mtp", "--spec-draft-n-max", "3", "--spec-draft-n-min", "1",
+               "-b", "2048", "-ub", "2048"]
+    }
+  ]
+}

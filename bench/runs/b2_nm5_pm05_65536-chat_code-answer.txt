@@ -1,0 +1,17 @@
+=== reasoning_content ===
+Extract top-level domains (TLDs) and domain names (e.g., `example.com`) from a text.
+Regular Expressions (regex).
+Python.
+A function and a short usage example.
+
+    *   *What constitutes a domain name?* Usually something like `subdomain.example.com` or just `example.com`.
+    *   *Refined goal:* The user said "top-level domains (like example.com)". Technically, `.com` is the TLD, but people often use this phrasing to mean the full domain string. I should target strings that look like domain names.
+    *   *Regex approach:*
+        *   Needs to allow letters, numbers, hyphens.
+        *   Needs to have dots separating them.
+        *   Should end with a valid TLD pattern.
+        *   Avoid matching things like email addresses improperly or random sentence structure.
+    *   *The pattern:* `[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}` is a basic starting point.
+    *   *Improving the pattern:* Let's try to match one or more word segments, separated by dots, ending with at least a two-letter TLD.
+    *   *Regex draft:* `\b(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z
+=== content ===

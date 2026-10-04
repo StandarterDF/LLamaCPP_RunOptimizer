@@ -1,0 +1,41 @@
+=== reasoning_content ===
+We need solve simple algebra. Need final answer clear. Let's reason step by step.
+
+Given x + 1/x = 3. Find x^3 + 1/x^3.
+
+Use identity: (x + 1/x)^3 = x^3 + 1/x^3 + 3(x + 1/x). Because (a+b)^3 = a^3+b^3+3ab(a+b), ab=1. So x^3+1/x^3 = (x+1/x)^3 - 3(x+1/x) = 27 - 9 = 18.
+
+Alternatively square: x^2+1/x^2 =9-2=7, multiply by x+1/x: (x^2+1/x^2)(x+1/x)= x^3+1/x^3 + x + 1/x => x^3+1/x^3=7*3 -3 =18.
+
+Final: 18. Need step by step. Ensure no missing domain: x nonzero. Fine.
+
+=== content ===
+We are given
+
+\[
+x+\frac1x=3
+\]
+
+Use the identity:
+
+\[
+\left(x+\frac1x\right)^3=x^3+\frac1{x^3}+3\left(x+\frac1x\right)
+\]
+
+Substitute \(x+\frac1x=3\):
+
+\[
+3^3=x^3+\frac1{x^3}+3(3)
+\]
+
+\[
+27=x^3+\frac1{x^3}+9
+\]
+
+\[
+x^3+\frac1{x^3}=27-9=18
+\]
+
+\[
+\boxed{18}
+\]

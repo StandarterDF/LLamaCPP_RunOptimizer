@@ -1,0 +1,15 @@
+=== reasoning_content ===
+Extract top-level domains (TLDs) / domain names.
+A text string.
+Regular Expressions (`re` module).
+The function name and logic, plus a short usage example.
+
+    *   *What constitutes a domain?* It's not just the TLD itself (like `.com`), but usually the full domain name (like `example.com`). I'll interpret "top-level domains" in the prompt's context as the full domain name (e.g., `google.com`, not just `.com`), as that's what users typically mean when asking for examples like `example.com`.
+    *   *What are the rules?*
+        *   Alpha-numeric characters and hyphens.
+        *   Cannot start or end with a hyphen.
+        *   Must have at least one dot separating labels.
+        *   Must end with a TLD portion that contains only letters.
+    *   *Initial simple pattern:* `[a-zA-Z0-9.-]+\.[a-z]{2,}`. This picks up domains but might grab punctuation at the end of sentences.
+    *   *More robust pattern:* Looking for word boundaries and specific character sets
+=== content ===
