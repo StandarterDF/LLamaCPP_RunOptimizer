@@ -80,11 +80,18 @@
 | `top-k` (40 и официальный 64) на русском | ❌ хуже: `top-k 40` — 71 % (серия 2); официальный Gemma-4 `top-k 64` — 75 % и единственный конфиг с реальными чужими алфавитами (серия 3) | `sampling-quality.md` §3, §3.2 |
 | `min-p` 0.1 / инструкция «по-русски» на русском | ⏸/❌ `min-p 0.1` — 83 % (серия 2), но поверх `temp 0.4` ничего не меняет (96 %, серия 3); инструкция «по-русски» устойчивого эффекта не даёт (83 % против 96 %) | `sampling-quality.md` §3, §3.2 |
 | DRY 0.8 (как на карточке) | ✅ не вредит (базовая линия); отдельный вклад в чистоту не выделен | `sampling-quality.md` §2 |
+| `temp 0.7` + полный DRY (`base 1.75`, `allowed 2`, `penalty_last_n 256`) | ✅ 100 % чистых на DTV2 и StyleTune-26B — безопасная точка выше карточки (на DTV2 чище карточного temp 1.0: 100 против 96 %) | `sampling-quality.md` §5.5 |
+| Рост `temperature` 0.4 → 0.85 (на «здоровой» модели) | ❌/⏸ лексическое разнообразие (TTR150) почти не растёт: 0.829→0.849 (DTV2), 0.844→0.850 (26B); при 0.85 уже артефакты (26B — 92 %) | `sampling-quality.md` §5.5 |
+| StyleTune-31B `i1-IQ3_XXS` на русском | ❌ непригоден: массовые англ. инъекции в русские слова (17–0 % чистых); без явного `gemma4.jinja` — цикл `That That`. Те же `i1-IQ3_XXS` у DTV2/Split-Untied работают | `sampling-quality.md` §5.4 |
 | `foreign_mass` (`n_probs`) как опережающий признак | ❌/⏸ вышел плоским нулём — не сработал, требует отладки | `sampling-quality.md` §3.2, §5 |
-| Выбор модели для русского RP | ✅ **Dark Thoughts V2** (96–100 % чистых) и **StyleTune-V2** (96–100 %) держат русский; **Split-Untied** сыпется (75 % даже при том же IQ3_XXS) | `sampling-quality.md` §5.2 |
+| Выбор модели для русского RP | ✅ **Dark Thoughts V2** (96–100 %), **StyleTune-V2 26B** (96–100 %), **WaifuGemma4 26B** (96 %), **Artemis-31B-v1.2** (92–96 %) держат русский; **Split-Untied** сыпется (75 % при том же IQ3_XXS). Самая быстрая — WaifuGemma4 (~85 t/s) | `sampling-quality.md` §5.2 |
+| Низкая T на «здоровых» моделях (зависит от модели!) | ⚠️ Dark Thoughts/StyleTune — не портит; **WaifuGemma4** — портит (temp 0.4 и 0.7+DRY → 79 %, чисто только на карточке temp 1.0 = 96 %) | `sampling-quality.md` §5.2 |
+| **Языковая верность ≠ «Чисто %»**: русский PPL | ✅ порядок величин на 31B dense: DTV2 `IQ3_XXS` **66** → тот же DTV2 `IQ2_S` **337** (вклад кванта ×5); Artemis `IQ3_XXS` **983** (англ. тюн ×15). Высокий «Чисто %» ещё не значит хорошее владение русским | `why-ru-models.md` §3 |
+| `llama-perplexity` на Gemma-4-**26B-A4B** | ❌ инструмент врёт (25–80 тыс. при связном русском): вероятно, не создаётся `ctx_other` для MoE. PPL 26B-линии на этой сборке не снять | `why-ru-models.md` §3 |
 | GBNF-грамматика «только кириллица/цифры/пунктуация» | ✅ детерминированный фикс: 100 % без потери скорости; цена — нет латиницы/эмодзи/кода | `sampling-quality.md` §5.3 |
 | `logit_bias` −100 на англ. служебные токены | ❌ не помогает (79 %, токенизация обходит бан) | `sampling-quality.md` §5.3 |
-| XTC / dynatemp / mirostat / rep. penalty | ⏸ не измеряли | `context-infinite-chat.md` §6 |
+| XTC 0.5/0.1 при `temp 0.7` | ❌ эффекта нет: TTR и чистота без изменений | `sampling-quality.md` §5.5 |
+| dynatemp / mirostat / rep. penalty | ⏸ не измеряли | `context-infinite-chat.md` §6 |
 
 ## 6. Сборки и версии
 
@@ -112,8 +119,10 @@
 - KV `q4_1`/`q5_1` (community-приём под 73k на 16 ГБ).
 - Memory Books / MessageSummarize / KoboldCpp / форк M-RoPE shift — вживую.
 - gpt-oss-20b + EAGLE-3-спекулятор как альтернативная RP-модель.
-- XTC/dynatemp/mirostat — реальный эффект на наших моделях не измеряли (DRY и min-p — см. §5,
-  `docs\sampling-quality.md`).
+- XTC/dynatemp/mirostat — XTC проверен (эффекта нет, §5 `docs\sampling-quality.md`); dynatemp/mirostat вживую не измеряли.
+- Многотирновое обеднение: TTR/повторы по всей длинной сессии (20+ ходов), а не по одному ответу.
+- Мягкий `logit_bias` (−1.5…−2.5) по англ. якорям «с пробелом» против GBNF (полный −100 не сработал).
+- Другой repack/квант StyleTune-31B и Artemis-31B-v1.2 (bartowski IQ3_XXS) на русском.
 - `--fit-target`, `--no-host`, `-kvu/--kv-unified`, `--lookup-cache-static/dynamic`.
 - Новые PR: #27210 (adaptive MTP), #27173 (draft chain), #28702 (FFN-фьюжн PP), #29807 (SSM-копии), #27248 (CUDA KV q4_1/…).
 
@@ -121,5 +130,5 @@
 
 - `docs\swift-1.5-27b.md`, `docs\gemma-4-31b.md`, `docs\gemma-4-26b-a4b.md`, `docs\qwen36-35b-a3b.md`
 - `docs\gemma-4-31b-rp-merges.md` (Split-Untied-31B, G4-MeroMero-v2-31B-heretic)
-- Кросс-модельные: `docs\speculation-research.md`, `docs\context-infinite-chat.md`
+- Кросс-модельные: `docs\speculation-research.md`, `docs\context-infinite-chat.md`, `docs\why-ru-models.md`
 - Сырые данные: `bench\runs\results.jsonl`, наборы — `bench\suites\` (`real_*`, `probe_*`, `tune_*`, `audit_*`)

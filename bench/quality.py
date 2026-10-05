@@ -315,6 +315,11 @@ def analyze(text):
             stats["latin_words"] += 1
             if core.lower() in EN_STOP:
                 stats["latin_stop"] += 1
+    # Англ. вставки ловим по КАЖДОМУ буквенному токену текста — так находятся и склейки
+    # вида «That-cold-rain» / «this-mess», которые старый детектор пропускал.
+    stats["latin_stop"] = sum(
+        1 for w in re.findall(r"[A-Za-z]+", text) if w.lower() in EN_STOP
+    )
     letters = stats["cyr"] + stats["lat"] + stats["foreign"]
     stats["letters"] = letters
     stats["foreign_per_1k"] = (
@@ -340,6 +345,16 @@ def analyze(text):
     words = text.split()
     stats["words"] = len(words)
     stats["rep8_max"], stats["rep8_dup"] = max_dup_ngram(words, 8)
+    # Лексическое разнообразие (Type-Token Ratio). Слова — только кириллические
+    # (латиница у нас обычно артефакт), нижний регистр. Сырой TTR занижается на
+    # длинных текстах, поэтому главный для сравнения — ttr_win на первых 150 словах.
+    cyr_words = [w.lower() for w in re.findall(r"[а-яё]+", text)]
+    wc = len(cyr_words)
+    stats["ttr_words"] = wc
+    stats["ttr"] = round(len(set(cyr_words)) / wc, 4) if wc else 0.0
+    _win = cyr_words[:150]
+    stats["ttr_win"] = round(len(set(_win)) / len(_win), 4) if _win else 0.0
+    stats["guiraud"] = round(len(set(cyr_words)) / (wc**0.5), 2) if wc else 0.0
     stats["foreign_scripts"] = (
         ",".join(sorted(foreign_by_script)) if foreign_by_script else ""
     )
@@ -482,6 +497,18 @@ def main():
         help="папка результатов (по умолчанию quality/runs/<run>)",
     )
     ap.add_argument("--keep-server-log", action="store_true")
+    ap.add_argument(
+        "--stop-bad",
+        type=float,
+        default=0.5,
+        help="ранний останов конфига, если доля чистых ниже порога (default 0.5)",
+    )
+    ap.add_argument(
+        "--min-samples",
+        type=int,
+        default=6,
+        help="минимум генераций до проверки раннего останова (default 6)",
+    )
     args = ap.parse_args()
 
     suite = expand_obj(json.load(open(args.suite, encoding="utf-8")))
@@ -592,7 +619,11 @@ def main():
                 lb_bias = cfg.get("logit_bias_bias", -100.0)
                 req_sampling["logit_bias"] = {str(i): lb_bias for i in lb_ids}
             print(f"\n[{ci}/{len(configs)}] {cname}  {cfg.get('title', '')}")
+            cfg_metrics = []
+            stop_early = False
             for pi, p in enumerate(prompts):
+                if stop_early:
+                    break
                 prompt = fmt_prompt(cfg, p, pi)
                 for seed in seeds:
                     tag = p.get("tag", "p")
@@ -658,6 +689,8 @@ def main():
                             "error": f"{type(e).__name__}: {e}",
                         }
                     metrics.append(rec)
+                    if "error" not in rec:
+                        cfg_metrics.append(rec)
                     with open(metrics_path, "a", encoding="utf-8") as f:
                         f.write(json.dumps(rec, ensure_ascii=False) + "\n")
                     fname = f"{cname}__{tag}__s{seed}.txt"
@@ -673,9 +706,21 @@ def main():
                         f"  cjk/1k {rec.get('cjk_per_1k', 0):>6}  junk {rec.get('junk_per_1k', 0):>6}"
                         f"  stop {rec.get('latin_stop', 0)} mix {rec.get('mixed_words', 0)}"
                         f" ukr {rec.get('ukr_letters', 0)}  rep8 {rec.get('rep8_dup', 0):>5}"
+                        f"  TTR {rec.get('ttr_win', 0):.3f}"
                         f"  f-mass {rec.get('foreign_mass_mean', -1):>6}"
                         f"  {rec.get('chars', 0)}ch"
                     )
+                    if len(cfg_metrics) >= args.min_samples:
+                        _cl = sum(1 for m in cfg_metrics if m.get("clean")) / len(
+                            cfg_metrics
+                        )
+                        if _cl < args.stop_bad:
+                            print(
+                                f"  ==> {cname}: EARLY STOP — чисто {_cl:.0%} после "
+                                f"{len(cfg_metrics)} генераций (порог {args.stop_bad:.0%})"
+                            )
+                            stop_early = True
+                            break
             rs = [m for m in metrics if m.get("config") == cname and "error" not in m]
             if rs:
                 clean = 100.0 * sum(1 for m in rs if m.get("clean")) / len(rs)
@@ -697,8 +742,8 @@ def main():
 
     # ---- сводка ----
     lines = [
-        "| Конфиг | Чисто | Чужой/1k | CJK/1k | EN-стоп | Смеш | UKR | Junk/1k | F-масса % | rep8 | Cyr % | TG t/s |",
-        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+        "| Конфиг | Чисто | Чужой/1k | CJK/1k | EN-стоп | Смеш | UKR | Junk/1k | F-масса % | rep8 | TTR150 | Giraud | Cyr % | TG t/s |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for cfg in configs:
         rs = [m for m in metrics if m.get("config") == cfg["name"] and "error" not in m]
@@ -706,7 +751,7 @@ def main():
             continue
         clean = 100.0 * sum(1 for m in rs if m.get("clean")) / len(rs)
         lines.append(
-            "| {n} | {c:.0f}% | {f:.2f} | {j:.2f} | {s:.2f} | {x:.2f} | {u:.2f} | {k:.2f} | {fm:.2f} | {r:.3f} | {y:.1f} | {t:.1f} |".format(
+            "| {n} | {c:.0f}% | {f:.2f} | {j:.2f} | {s:.2f} | {x:.2f} | {u:.2f} | {k:.2f} | {fm:.2f} | {r:.3f} | {tw:.3f} | {gr:.1f} | {y:.1f} | {t:.1f} |".format(
                 n=cfg["name"],
                 c=clean,
                 f=avg([m.get("foreign_per_1k") for m in rs]),
@@ -717,6 +762,8 @@ def main():
                 k=avg([m.get("junk_per_1k") for m in rs]),
                 fm=avg([m.get("foreign_mass_mean") for m in rs]),
                 r=avg([m.get("rep8_dup") for m in rs]),
+                tw=avg([m.get("ttr_win") for m in rs]),
+                gr=avg([m.get("guiraud") for m in rs]),
                 y=100 * avg([m.get("cyr_share") for m in rs]),
                 t=avg([m.get("tg_t_s") for m in rs]),
             )

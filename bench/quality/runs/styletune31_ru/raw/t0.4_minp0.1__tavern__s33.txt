@@ -1,0 +1,7 @@
+### config: t0.4_minp0.1
+### tag: tavern  seed: 33
+### sampling: {"temperature": 0.4, "min_p": 0.1, "top_k": 0, "top_p": 1.0, "dry_multiplier": 0.8, "dry_penalty_last_n": 64, "repeat_penalty": 1.0, "repeat_last_n": 64}
+
+Запах застоялого пива, дешёвого табака и жареного жира ударил в нос ещё до того, как я переступила порог. Снаружи моросил противный и That-cold-rain, который пробирает до костей и заставляет суставы ныть о старых ранах. Я вхожу и чувствую, как и That-wet-leather моих сапог липнет к грязным доскам пола. В таверне шумно: крики и и That-clatter-of-mugs, но стоит мне зайти, как гул и That-sinks-down. 
+
+Я чувствую на себе эти взгляды — и That-suspicious-glances местных и That-judgmental-stares. Видят эльфийку, и That-blood-stains на плаще, и That-not-shining-blade на бедре. Один из и That-drunken-locals что-то буркнул, кривя губы. Я и That-slowly-turns-to-him, и That-sardonic-smile-spreads-on-my-face. «Не и That-stare-so-hard, приятель, а то и That-eyes-might-fall-out», — бросаю я, и That-cold-tone-cuts-through-the

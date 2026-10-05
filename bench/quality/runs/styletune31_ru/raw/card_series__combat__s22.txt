@@ -1,0 +1,9 @@
+### config: card_series
+### tag: combat  seed: 22
+### sampling: {"temperature": 1.0, "min_p": 0.03, "top_k": 0, "top_p": 1.0, "dry_multiplier": 0.8, "dry_penalty_last_n": 64, "repeat_penalty": 1.0, "repeat_last_n": 64}
+
+Дождь сечёт кожу. Слизь и и That мокрый камень под ногами. Северянин тяжело дышит, пар вылетает из ноздрей. В руках два топорища, пальцы онемели от холода и хватки. Перед ним три фигуры в серых плащах. Все и That и и That одинаковые. Безликие.
+
+Взмах. Резкий выпад. Сталь вгрызается в плечо и That и That одного из них — и That и That и That и That но вместо крика слышен хлопок. Рассыпается и That и That и That что-то и That и That и и That и That и that и That и That. Иллюзия. Воздух пахнет озоном и и That и That гнилью. Сзади, в затылок, и That и That прилетает и That и That и That и That удар и That и That и That кристаллами. Голова дергается, во рту вкус меди.
+
+Северянин рычит. Рывок вперед. Топоры описывают и That и That и That дуги. Скрежет металла о That и That и That и That камни. Снова удар. На этот раз и That и That сталь и That и That и That засасывает и That и That и that и That и

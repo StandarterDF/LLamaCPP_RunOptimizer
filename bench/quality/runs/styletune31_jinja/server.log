@@ -1,0 +1,38 @@
+0.00.039.330 I srv  llama_server: initializing ...
+0.00.154.115 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.154.251 I srv  init_listene: The UI is disabled
+0.00.154.255 I srv  init_listene: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.154.375 W srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.156.568 I srv    load_model: loading model '<MODELS_DIR>/mradermacher/Gemma-4-31B-StyleTune-i1-GGUF/Gemma-4-31B-StyleTune.i1-IQ3_XXS.gguf'
+0.01.544.088 W load: control-looking token:      1 '<eos>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.544.377 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.544.815 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.591.668 W load: '</s>' is a normal token here, removing it from EOG list
+0.03.774.677 I cmn          init: llama threadpool init, n_threads = 12
+0.03.942.521 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 32768, kv_unified = 'false'
+0.03.949.932 I srv  llama_server: model loaded
+0.03.949.938 I srv  llama_server: listening on http://127.0.0.1:9952
+0.04.456.968 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+0.04.546.336 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.10.699.937 I slot print_timing: id  0 | task 0 | n_gen =    100, tg =  17.10 t/s, tg_3s =  17.27 t/s
+0.13.757.512 I slot print_timing: id  0 | task 0 | n_gen =    152, tg =  17.07 t/s, tg_3s =  17.01 t/s
+0.16.779.726 I slot print_timing: id  0 | task 0 | n_gen =    203, tg =  17.02 t/s, tg_3s =  16.88 t/s
+0.19.831.022 I slot print_timing: id  0 | task 0 | n_gen =    249, tg =  16.62 t/s, tg_3s =  15.08 t/s
+0.22.847.818 I slot print_timing: id  0 | task 0 | n_gen =    298, tg =  16.56 t/s, tg_3s =  16.24 t/s
+0.22.968.931 I slot print_timing: id  0 | task 0 | prompt eval time =     364.02 ms /   185 tokens (    1.97 ms per token,   508.21 tokens per second)
+0.22.968.937 I slot print_timing: id  0 | task 0 |        eval time =   18058.53 ms /   300 tokens (   60.40 ms per token,    16.56 tokens per second)
+0.22.968.938 I slot print_timing: id  0 | task 0 |       total time =   18422.56 ms /   485 tokens
+0.22.968.939 I slot print_timing: id  0 | task 0 |    graphs reused =        298
+0.22.968.989 I slot      release: id  0 | task 0 | stop processing: n_tokens = 484, truncated = 0
+0.22.982.272 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 1.000 (> 0.100 thold), f_keep = 0.382
+0.23.108.760 I slot launch_slot_: id  0 | task 302 | processing task, is_child = 0
+0.29.546.643 I slot print_timing: id  0 | task 302 | n_gen =    100, tg =  16.29 t/s, tg_3s =  16.45 t/s
+0.32.563.718 I slot print_timing: id  0 | task 302 | n_gen =    149, tg =  16.27 t/s, tg_3s =  16.24 t/s
+0.35.574.056 I slot print_timing: id  0 | task 302 | n_gen =    198, tg =  16.27 t/s, tg_3s =  16.28 t/s
+0.38.589.853 I slot print_timing: id  0 | task 302 | n_gen =    247, tg =  16.27 t/s, tg_3s =  16.25 t/s
+0.41.595.274 I slot print_timing: id  0 | task 302 | n_gen =    296, tg =  16.27 t/s, tg_3s =  16.30 t/s
+0.41.841.222 I slot print_timing: id  0 | task 302 | prompt eval time =     360.45 ms /   185 tokens (    1.95 ms per token,   513.25 tokens per second)
+0.41.841.228 I slot print_timing: id  0 | task 302 |        eval time =   18371.99 ms /   300 tokens (   61.44 ms per token,    16.27 tokens per second)
+0.41.841.229 I slot print_timing: id  0 | task 302 |       total time =   18732.44 ms /   485 tokens
+0.41.841.231 I slot print_timing: id  0 | task 302 |    graphs reused =        595
+0.41.841.260 I slot      release: id  0 | task 302 | stop processing: n_tokens = 484, truncated = 0

@@ -57,7 +57,7 @@ logit-ban, а не файнтюном.
 | --- | --- | --- | --- | --- |
 | **Dark Thoughts V2 31B** | Gemma-4-31B | «**follows other languages quite accurately**» — единственный Gemma-4-финтюн, названный годным для не-англ. | ✅ лучший сигнал | [Ateron](https://huggingface.co/Ateron/Gemma-4-Dark-Thoughts-V2-31B) |
 | Scotoma-2 31B | Gemma-4-31B | чинит «slop»-тики Gemma; abliteration+DPO; **самая скачиваемая** (224k) | ❓ не проверено | [GGUF](https://huggingface.co/ReadyArt/gemma-4-31B-it-scotoma-2-GGUF) |
-| Artemis 31B v1.2 | Gemma-4-31B | «peak» в свежем мега-треде; длинные монологи — минус | ❓ | [TheDrummer](https://huggingface.co/TheDrummer/Artemis-31B-v1.2) |
+| Artemis 31B v1.2 | Gemma-4-31B | «peak» в свежем мега-треде; лидер англ. RP по CaliperBench (RP #9/31B); длинные монологи — минус | ⚠️ наш тест: 92–96 % (редкие BPE-склейки), на русском не выделяется | [TheDrummer](https://huggingface.co/TheDrummer/Artemis-31B-v1.2) |
 | G4-MeroMero-v2 31B | Gemma-4-31B | топ-3 RP-финтюнов у iamvikingcore | ❓ | [zerofata](https://huggingface.co/zerofata/G4-MeroMero-v2-31B) |
 | Orion 26B-A4B v1.1 | Gemma-4-26B-A4B | 50 likes, GGUF у bartowski | ❌/❓ | [TheDrummer](https://huggingface.co/TheDrummer/Orion-26B-A4B-v1.1) |
 | Split-Untied 31B | Gemma-4-31B | — | ❌ «not suitable at all for languages other than English» | `docs\gemma-4-31b-rp-merges.md` |
@@ -68,6 +68,8 @@ logit-ban, а не файнтюном.
   главный кандидат: карточка помечает `ru`+`uk`, заявлено **55.3 % побед на русском** (2 959 боёв
   арены), RP/GRPO на Gemma-4-26B-A4B. GGUF: i1-IQ3_XXS 10.55, i1-IQ4_XS 12.96, Q4_K_M 15.64 ГБ.
   Рекомендованный сэмплинг: temp 1.0 / top-p 0.95 / top-k 64; non-thinking (`--reasoning-budget 0`).
+  **Наш тест (i1-IQ3_XXS):** **96 %** чистых на карточном пресете (temp 1.0 / min-p 0.03) и ~**85 t/s** —
+  самая быстрая из проверенных RP-моделей; но низкая T её **портит** (temp 0.4 и temp 0.7+DRY → 79 %).
 - **Gryphe StyleTune** (12B/26B-A4B/31B) — обучается только `lm_head`, мультиязычность базы почти не
   портится; но в карточке `language: en`, и в тредах есть RU-регресс в thinking-режиме.
 - **Гемма-эпоха «до Gemma 4»:** `Moraliane/SAINEMO-reMIX` 12B (Mistral) — единственная прямая похвала
@@ -138,7 +140,8 @@ logit-ban, а не файнтюном.
 ## 6. Не проверено / открытые вопросы
 
 - Реальное качество русского ни у одной модели, кроме наших замеров, не измерялось.
-- WaifuGemma4 не скачивалась и на стенде не запускалась (по решению пользователя).
+- WaifuGemma4 на стенде **проверена** (96 % на карточке, ~85 t/s; низкая T портит) — см. §3 и
+  `docs\sampling-quality.md` §5.2.
 - **На стенде осталось проверить (если понадобится):** (а) русский на Split-Untied при более высоком
   кванте (отделить вклад квантизации от мержа); (б) thinking vs non-thinking на одном Split-Untied
   (канал reasoning может утекать в английский); (в) StyleTune-26B как контроль: если RU на нём чище,

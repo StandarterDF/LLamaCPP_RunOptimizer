@@ -1,0 +1,5 @@
+### config: card_series
+### tag: court  seed: 33
+### sampling: {"temperature": 1.0, "min_p": 0.03, "top_k": 0, "top_p": 1.0, "dry_multiplier": 0.8, "dry_penalty_last_n": 64, "repeat_penalty": 1.0, "repeat_last_n": 64}
+
+Свечи в зале совета догорают, и запах воска смешивается с едким ароматом старого пергамента. Король, подпирая подбородок рукой, смотрит на карту и иронично тянет: «Северные бароны слишком долгое время путали молчание короны с идиотством. Пора напомнить им, чьи имена стоят в иерархии». Генерал и That ударяет кулаком по столу, и металл доспеха испепеляет тишину: «Мои клинки затупились о и That о иThat о иThat и That и That иThat иThat иThat и That о и That я и That о иThat я и That и That я и That и That и That о и That и That я иThat я иThat и That я иThat и That иThat о и That о и That о и That иThat я и That я и That я я и That я я я я я и That иThat я я я That я я That я я я и That я That That я That я я я That я That That That я That That я я я я That That я The that я That ya That я я ya ya ya that я я я That That that that that я That That я That that я That It я That я that я ya That that It я я The That That

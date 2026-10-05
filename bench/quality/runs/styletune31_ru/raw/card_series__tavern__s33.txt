@@ -1,0 +1,5 @@
+### config: card_series
+### tag: tavern  seed: 33
+### sampling: {"temperature": 1.0, "min_p": 0.03, "top_k": 0, "top_p": 1.0, "dry_multiplier": 0.8, "dry_penalty_last_n": 64, "repeat_penalty": 1.0, "repeat_last_n": 64}
+
+Запах старого жира, кислого эля и немытых тел — прекрасный коктейль, чтобы почувствовать себя и домой. В «Трёх воронах» и ищи и ищи что-то иное: сквозняк гоняет по залу запах мороза и сырой кожи, который я притащила на себе из леса. Сапоги чавкают по липкому полу, а в ушах всё ещё стоит гул дороги, перекрывающий крики пьянцев. За окном ливень, и я чувствую, как насквозь промокший плащ и и That-15 тяжёлый и That-18 и That-21 That-24That-27 That-30That-33 That-15 That-21That-18 That-33That-24 That-21That-21 That-15That-21that-15that-21that-34that-40 that-18that-30that-18that-15 that-23That-34 That-40that-15That-40that-41 that-37that-47that-19that-35 that-26that-33that-23that-51that-31that-52that-

@@ -7,6 +7,7 @@
     "-np", "1", "-c", "32768", "-fa", "on", "--fit", "on",
     "-t", "12", "-tb", "12", "-ctk", "q4_0", "-ctv", "q4_0", "--load-mode", "none",
     "--jinja", "--reasoning", "off", "--reasoning-budget", "0",
+    "--chat-template-file", "${LLAMA_DIR}/gemma4.jinja",
     "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1",
     "--spec-draft-p-min", "0.75",
     "-md", "${MODELS_DIR}/mradermacher/Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF/gemma-4-31B-it-assistant.Q4_K_M.gguf"
