@@ -1,0 +1,17 @@
+﻿=== base_card__combat__s11.txt
+   That  [mix/stop]
+   That  [mix/stop]
+=== base_card__combat__s44.txt
+   That-╤В╨╛╨┐╨╛╤А╨╕╤Й╨╡  [mix/stop]
+=== base_card__continuation__s22.txt
+   remaining-╨╝  [mix/stop]
+=== base_card__continuation__s33.txt
+   That  [mix/stop]
+=== base_card__court__s44.txt
+   approving-╨╛  [mix/stop]
+=== base_card__horror__s33.txt
+   an╤В╨╕╤З╨╜╨╛  [mix/stop]
+=== base_card__romance__s22.txt
+   The  [mix/stop]
+=== base_card__tavern__s33.txt
+   That  [mix/stop]

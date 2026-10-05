@@ -26,7 +26,7 @@
 | **Gemma-4-26B-A4B** StyleTune (MoE 4B акт., IQ4_XS) | **63**¹ | 70 | 100 | 107 | RP — `...styletune-nothink-nospec-b11382.bat`; чат/код — `...styletune-b11382.bat` |
 | Swift-1.5-Qwen3.8-27B (dense, IQ2_S-mtp) | 28 | 37 | 36 | 37 | `launch\b11382-cu124\swift-best-b11382.bat` |
 | Gemma-4-31B Dark-Thoughts (dense, IQ3_XXS) | 23 | 31 | 48 | 47 | `launch\b11382-cu124\gemma4-31b-dark-thoughts-b11382.bat` |
-| **Split-Untied-31B** (dense RP-мерж, IQ3_XXS) | **23** | 34 | 47 | 46 | NoThink — `...gemma4-31b-split-untied-nothink-b11382.bat`; think — `...-think...` |
+| **Split-Untied-31B** (dense RP-мерж, IQ3_XXS) | **23** | 34 | 47 | 46 | NoThink — `...-nothink...`; RU — `...-nothink-ru...`; think — `...-think...` |
 | **G4-MeroMero-v2-31B-heretic** (dense RP-мерж, IQ3_XXS) | **21** | 26 | 45 | 47 | NoThink — `...gemma4-31b-meromero-v2-heretic-nothink-b11382.bat`; think — `...-think...` |
 
 ¹ У Gemma-26B на RP спекуляция **не окупается** (креатив плохо предсказуем): без MTP 63 t/s,
@@ -35,6 +35,24 @@
 Код-профили `*-dflash-code.bat` (DFlash+ngram) полезны для правок/копирования больших файлов;
 на этом наборе они не перепроверялись — см. `docs\speculation-research.md`.
 Конфиги старой сборки (10472) удалены — используются только сборка b11382 (`launch\b11382-cu124\`).
+
+## Рекомендованные модели по задачам
+
+Только модели, которые реально запускались и измерялись в этом репозитории (логи — `docs\`).
+Конфиги — в `launch\b11382-cu124\`. Нетестированные кандидаты — в `docs\rp-model-candidates.md`
+(это не рекомендация, а задел).
+
+**Что здесь измерено:** скорость (t/s) и языковые артефакты. **Качество RP/прозы харнесс не
+оценивает** — RP-предпочтения согласовывать с пользователем (см. `AGENTS.md`).
+
+| Задача | Модель | Что измерено | Конфиг |
+| --- | --- | --- | --- |
+| **RP / креатив (качество)** | Gemma-4-26B-A4B StyleTune; Gemma-4-31B Dark-Thoughts V2 | **оценка пользователя** (харнесс качество не меряет); скорость 63 / 23 / 23 t/s | `gemma4-26a4b-styletune-nothink-nospec-b11382.bat`, `gemma4-31b-dark-thoughts-b11382.bat` |
+| **Код / агенты / рефакторинг** | Qwen3.6-35B-A3B + DFlash+ngram | +18 % рефакторинг, +44 % новый код к MTP | `qwen36-35b-a3b-dflash-code.bat` |
+| **Чат** | Qwen3.6-35B-A3B | 93 t/s | `qwen36-35b-a3b-mtp-b11382.bat` |
+| **Математика** | Qwen3.6-35B-A3B | 121 t/s | там же |
+| **Длинные документы / суммаризация** | Qwen3.6-35B-A3B (131k); Gemma-4-26B-A4B | PP ~800–1700 t/s | `qwen36-35b-a3b-mtp-b11382.bat`, `gemma4-26a4b-styletune-b11382.bat` |
+| **Dense — скорость на RP** | Gemma-4-31B Dark-Thoughts V2; Swift-1.5-27B | 23 / 23 / 28 t/s | `gemma4-31b-dark-thoughts-b11382.bat`, `...-split-untied-*`, `swift-best-b11382.bat` |
 
 ## Какая у вас видеокарта?
 
@@ -68,17 +86,37 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 - Инструменты/функции: шаблоны моделей их поддерживают; у Gemma-4 в конфиге включён `gemma4.jinja`.
 
 ### RP, креатив, свободные диалоги
-- Самый быстрый RP на 16 ГБ — **Qwen3.6-35B-A3B с MTP: 82 t/s** (её MTP-голова угадывает и прозу).
-  Затем Gemma-4-26B-A4B **без спекуляции**: 63 t/s.
+- **Качество RP — по оценке пользователя** (харнесс его не измеряет): лучшими для RP считаются
+  Gemma-4-26B-A4B StyleTune, Gemma-4-31B Dark-Thoughts V2 и Split-Untied-31B. Qwen3.6 и Swift-1.5
+  в RP не рекомендуются. Скорости — в таблице выше (Qwen3.6 быстрее всех по t/s, но это не про качество).
+- **Русский текст (наш тест):** Dark Thoughts V2 — 96–100 % чистых, StyleTune-26B — 96–100 % и втрое
+  быстрее (69 t/s); Split-Untied слабее (75 %) — лечится `temp 0.4` (96 %) или грамматикой (100 %).
 - Dense-модели на RP заметно медленнее: Swift-1.5 ~28, Gemma-4-31B ~23 t/s. MTP и тут полезен
   (+30…40 % к «без спекуляции»), но это потолок dense-модели на 16 ГБ.
 - **Частный случай:** у Gemma-4-26B-A4B на RP спекуляция *вредит* (без MTP 63 t/s, с MTP ~50).
   Берите `launch\b11382-cu124\gemma4-26a4b-styletune-nothink-nospec-b11382.bat`
   (`--reasoning off`, без MTP).
 - Сэмплинг — по карточке модели (Swift: temp 1.0; Gemma-4 26B/31B в наших конфигах: temp 0.6, min-p 0.1).
+- **Русский текст:** карточка Split-Untied (temp 1.0, min-p 0.03) даёт ~25 % ответов с англ. вставками
+  и BPE-склейками. Для русского RP берите `...gemma4-31b-split-untied-nothink-ru-b11382.bat`
+  (`temp 0.4`, `min-p 0.1`, `top-k` выключен) — см. раздел «Русский текст» ниже.
 - Для долгих RP-сессий важнее контекст и `cache_prompt`, чем спекуляция: держите запас VRAM 1.5–2 ГБ.
 - Скорость падает с глубиной: у Qwen3.6 RP ~103 t/s на 8k, ~86 на 32k, ~73 на 64k (принятие держится ~72–80 %).
 - Спекуляция не меняет качество ответов (проверяет каждый токен целевой моделью) — влияет только скорость/память.
+
+### Русский текст: артефакты сэмплинга
+- Gemma-4-мержи «протекают» на русском: залётные англ. слова (`That`, `The`) и BPE-склейки
+  (`anтично`, `remaining-м`). Причина — бедный на кириллицу токенизатор (5.1 %) плюс высокая температура.
+- Рабочая практика: **`temp 0.4–0.5`**, **`min-p 0.1`**, **`top-k` выключен**. Карточка (temp 1.0) →
+  ~25 % брака, `temp 0.4` → ~96 % чистых. `top-k` (в т.ч. официальный 64) и высокий `top-p` вредят.
+- Готовый конфиг — `launch\b11382-cu124\gemma4-31b-split-untied-nothink-ru-b11382.bat`.
+  Полные таблицы, оговорки и внешние подтверждения — `docs\sampling-quality.md`.
+- **Выбор модели важнее сэмплинга** (наш тест, тот же русский набор): **Dark Thoughts V2** — 96–100 %
+  чистых, **StyleTune-26B** — 96–100 %; Split-Untied — 75 % (лечится `temp 0.4` или грамматикой).
+- **Детерминированный фикс:** GBNF-грамматика «только кириллица/цифры/пунктуация» даёт 100 % без
+  артефактов и без потери скорости (цена — нет латиницы/эмодзи/кода). `logit_bias` по служебным
+  токенам не помогает. Подробности — `docs\sampling-quality.md` §5.2–5.3; кандидаты и факторы —
+  `docs\rp-model-candidates.md`.
 
 ### Длинные документы, суммаризация, RAG
 - MoE-модели (Qwen3.6, Gemma-26B) — быстрая обработка длинных промптов (~800–1700 t/s), контекст 131k.
@@ -111,6 +149,8 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 
 ## Чего избегать (проверено)
 
+- `top-k` (в т.ч. официальный пресет Gemma-4 `temp 1.0 / top-k 64`) и высокая температура на русском:
+  растут англ. вставки и BPE-склейки (~25 % брака против ~4 % при `temp 0.4`, см. `docs\sampling-quality.md`).
 - EAGLE-3 и DSpark на 16 ГБ — в 1.4–3 раза медленнее MTP (при более высоком «принятии»).
 - «Играть температурой» ради скорости: температура повышает **принятие**, но не TG (0.6–1.0 → ±3 %).
 - `--spec-draft-n-max 8 --spec-draft-p-min 0.8` (приём из GitHub #25198) — только под копирование кода
@@ -133,12 +173,37 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 | Практическая инструкция по Swift-1.5 | `docs\swift-1.5-27b-launch.md` |
 | Логи по Gemma-4 31B / 26B-A4B / Qwen3.6 | `docs\gemma-4-31b.md`, `docs\gemma-4-26b-a4b.md`, `docs\qwen36-35b-a3b.md` |
 | Логи по RP-мержам Gemma-4-31B (Split-Untied, MeroMero v2 heretic) | `docs\gemma-4-31b-rp-merges.md` |
+| Сэмплинг и качество русского текста (RP Gemma-4: температура, top-k, min-p) | `docs\sampling-quality.md` |
+| Внешний ресёрч: RP-модели Gemma 4 и русский (сообщество, HF, факторы) | `docs\rp-model-candidates.md` |
+| CaliperBench: RP-рейтинг моделей Gemma 4 (срез 2026-10) | `docs\caliperbench-2026-10.md` |
 | Методы спекуляции, внешние спекуляторы, сравнение сборок | `docs\speculation-research.md` |
 | **Реестр проверенного (не повторять)** | `docs\researched.md` |
 | Длинные сессии, «бесконечный» контекст, SillyTavern | `docs\context-infinite-chat.md` |
 | Готовые конфиги | `launch\` (старая сборка) и `launch\b11382-cu124\` (актуальные) |
 | Харнесс, наборы тестов, сырые результаты | `bench\` (`bench.py`, `suites\`, `runs\results.jsonl`) |
 | Скил для подбора конфига новой модели | `.opencode\skills\llm-launch-tuner\` |
+
+## Источники информации
+
+**Внешние** (сообщество, бенчмарки, карточки):
+
+- **CaliperBench** — RP/creative-рейтинг моделей, срез 2026-10-01 (590 моделей; язык не измеряется):
+  <https://caliperbench.com/> · методика <https://caliperbench.com/methodology.html>
+- **r/SillyTavernAI** — недельные мега-треды «Best Models/API» (9 недель, 09.08–04.10.2026);
+  обзор — `docs\rp-model-candidates.md` §1.1.
+- **r/LocalLLaMA** — обсуждения моделей и фитюнов (Artemis, MeroMero, базы Gemma 4).
+- **Hugging Face** — карточки и API моделей (метод, языки, кванты, скачивания), напр.
+  <https://huggingface.co/Ateron/Gemma-4-Dark-Thoughts-V2-31B>.
+- **Model card Gemma 4 (Google)** — официальный сэмплинг и шаблон:
+  <https://ai.google.dev/gemma/docs/core/model_card_4>
+- **llama.cpp (GitHub issues)** — баги Gemma 4 со `<unused*>`: #21321, #26088.
+- **Русский замер Gemma 4 26B-A4B vs Qwen3.8-27B** (Den4ikAI, 2026-09): на T=1.0 брак, на T=0.3 чисто.
+- Русские лидерборды: **MERA** (`ai-forever/MERA`), **ruMMLU-pro** (`t-tech/ruMMLU-pro`).
+  **EuroEval** (<https://euroeval.com/leaderboards/>) — 30+ европейских языков, но **русского в нём нет**
+  (ближайший славянский прокси — украинский/белорусский); см. `docs\euroeval-2026-10.md`.
+
+**Внутренние** (этот репозиторий): логи — `docs\`; сырые замеры — `bench\runs\results.jsonl`;
+дамп CaliperBench — `downloads\caliperbench-2026-10-01.json`.
 
 ## Воспроизведение замеров
 

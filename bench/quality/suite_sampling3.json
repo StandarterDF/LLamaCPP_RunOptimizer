@@ -1,0 +1,51 @@
+{
+  "_комментарий": "Серия 3: низкая температура (внешний русский замер дал чистый текст на T=0.3), официальный пресет Gemma 4 (top-k 64 / top-p 0.95), комбо с min-p и инструкцией. Включён n_probs для опережающего признака foreign_mass.",
+  "name": "split_untied_sampling3",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/mradermacher/Split-Untied-31B-i1-GGUF/Split-Untied-31B.i1-IQ3_XXS.gguf",
+  "base_args": [
+    "-np", "1", "-c", "32768", "-fa", "on", "--fit", "on",
+    "-t", "12", "-tb", "12", "-ctk", "q4_0", "-ctv", "q4_0", "--load-mode", "none",
+    "--jinja", "--reasoning", "off", "--reasoning-budget", "0",
+    "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1",
+    "--spec-draft-p-min", "0.75",
+    "-md", "${MODELS_DIR}/mradermacher/Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF/gemma-4-31B-it-assistant.Q4_K_M.gguf"
+  ],
+  "prompts": "quality/prompts_ru_rp.json",
+  "n_predict": 280,
+  "n_probs": 10,
+  "seeds": [11, 22, 33],
+  "configs": [
+    {
+      "name": "temp_0.5",
+      "title": "Только температура 0.5",
+      "sampling": { "temperature": 0.5, "min_p": 0.03, "top_k": 0, "top_p": 1.0, "dry_multiplier": 0.8, "dry_penalty_last_n": 64, "repeat_penalty": 1.0, "repeat_last_n": 64 }
+    },
+    {
+      "name": "temp_0.4",
+      "title": "Только температура 0.4",
+      "sampling": { "temperature": 0.4, "min_p": 0.03, "top_k": 0, "top_p": 1.0, "dry_multiplier": 0.8, "dry_penalty_last_n": 64, "repeat_penalty": 1.0, "repeat_last_n": 64 }
+    },
+    {
+      "name": "temp_0.3",
+      "title": "Только температура 0.3",
+      "sampling": { "temperature": 0.3, "min_p": 0.03, "top_k": 0, "top_p": 1.0, "dry_multiplier": 0.8, "dry_penalty_last_n": 64, "repeat_penalty": 1.0, "repeat_last_n": 64 }
+    },
+    {
+      "name": "official_base",
+      "title": "Официальный Gemma 4: temp1.0 top-k64 top-p0.95",
+      "sampling": { "temperature": 1.0, "min_p": 0.0, "top_k": 64, "top_p": 0.95, "dry_multiplier": 0.0, "repeat_penalty": 1.0, "repeat_last_n": 64 }
+    },
+    {
+      "name": "t0.4_minp0.1",
+      "title": "temp0.4 + min-p0.1",
+      "sampling": { "temperature": 0.4, "min_p": 0.1, "top_k": 0, "top_p": 1.0, "dry_multiplier": 0.8, "dry_penalty_last_n": 64, "repeat_penalty": 1.0, "repeat_last_n": 64 }
+    },
+    {
+      "name": "t0.4_minp0.1_ru",
+      "title": "temp0.4 + min-p0.1 + инструкция «по-русски»",
+      "append_system": "Отвечай строго на русском языке; ни одного слова или буквы из другого алфавита.",
+      "sampling": { "temperature": 0.4, "min_p": 0.1, "top_k": 0, "top_p": 1.0, "dry_multiplier": 0.8, "dry_penalty_last_n": 64, "repeat_penalty": 1.0, "repeat_last_n": 64 }
+    }
+  ]
+}

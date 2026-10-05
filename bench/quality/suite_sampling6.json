@@ -1,0 +1,38 @@
+{
+  "_комментарий": "Тест №5: детерминированные фиксы против чужих токенов на Split-Untied-31B. Базовый (проблемный) семплинг карточки + (а) GBNF-грамматика только кириллица, (б) logit_bias-чёрный список англ. служебных токенов. Non-thinking.",
+  "name": "split_fixes5",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/mradermacher/Split-Untied-31B-i1-GGUF/Split-Untied-31B.i1-IQ3_XXS.gguf",
+  "base_args": [
+    "-np", "1", "-c", "32768", "-fa", "on", "--fit", "on",
+    "-t", "12", "-tb", "12", "-ctk", "q4_0", "-ctv", "q4_0", "--load-mode", "none",
+    "--jinja", "--reasoning", "off", "--reasoning-budget", "0",
+    "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1",
+    "--spec-draft-p-min", "0.75",
+    "-md", "${MODELS_DIR}/mradermacher/Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF/gemma-4-31B-it-assistant.Q4_K_M.gguf"
+  ],
+  "prompts": "quality/prompts_ru_rp.json",
+  "n_predict": 280,
+  "seeds": [11, 22, 33],
+  "configs": [
+    {
+      "name": "card_ref",
+      "title": "Базовый проблемный семплинг карточки (референс, без фикса)",
+      "sampling": { "temperature": 1.0, "min_p": 0.03, "top_k": 0, "top_p": 1.0, "dry_multiplier": 0.8, "dry_penalty_last_n": 64, "repeat_penalty": 1.0, "repeat_last_n": 64 }
+    },
+    {
+      "name": "grammar_ru",
+      "title": "Карточка + GBNF-грамматика «только кириллица/цифры/пунктуация»",
+      "grammar": "root ::= (item | \"\\n\")+\nitem ::= [а-яА-ЯёЁ0-9 .,!?;:…—–«»()*_]",
+      "sampling": { "temperature": 1.0, "min_p": 0.03, "top_k": 0, "top_p": 1.0, "dry_multiplier": 0.8, "dry_penalty_last_n": 64, "repeat_penalty": 1.0, "repeat_last_n": 64 }
+    },
+    {
+      "name": "logitbias_stop",
+      "title": "Карточка + logit_bias −100 на англ. служебные токены",
+      "logit_bias_file": "quality/blacklist_split_untied.json",
+      "logit_bias_ids_key": "english_stopword_ids",
+      "logit_bias_bias": -100.0,
+      "sampling": { "temperature": 1.0, "min_p": 0.03, "top_k": 0, "top_p": 1.0, "dry_multiplier": 0.8, "dry_penalty_last_n": 64, "repeat_penalty": 1.0, "repeat_last_n": 64 }
+    }
+  ]
+}
