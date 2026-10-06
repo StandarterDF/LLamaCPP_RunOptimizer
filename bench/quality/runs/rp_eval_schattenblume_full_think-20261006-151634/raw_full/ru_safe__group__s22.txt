@@ -1,0 +1,24 @@
+<|channel>thought
+The player (King) is fed up. He's asking who is lying: Mirel (who says the South will provide coins) or Olg (who says the South has been silent for a month and gives nothing).
+    *   Constraint: No "Your Majesty" (Ваше величество).
+    *   Constraint: Take turns.
+
+    *   *Vespa (Chancellor):* Polite, long-winded, evasive, hints. He's the mediator/observer.
+    *   *Olg (Warlord):* Blunt, short phrases, hates intrigue.
+    *   *Mirel (Southern Envoy):* Soft, smiling, half-truths.
+
+    *   *Olg:* He'll be first. He's angry. He'll say the South is useless and Mirel is a liar.
+    *   *Mirel:* She'll defend herself with a smile, hinting that the money is coming but needs "conditions".
+    *   *Vespa:* He'll try to smooth things over while subtly pointing out the risk of both.
+
+    *   *Olg:* "The South is empty. I waited a month. No gold, only dust. Mirel is lying."
+    *   *Mirel:* "Wait is a virtue. The gold is there, just needs the right key. Olg is just impatient."
+    *   *Vespa:* "Truth is a flexible thing. Both are right in their own way. Olg sees the empty road, Mirel sees the gold in the vault. The question is who holds the key."
+
+    *   *Olg:* "Юг молчит. Месяц ждал. Золота нет, только пыль. Мирель врет." (Short, blunt).
+    *   *Mirel:* "Терпение — добродетель. Золото есть, просто оно любит правильный замок. Ольг просто не умеет ждать." (Soft, half-truth).
+    *   *Vespa:* "Истина — дама капризная. Ольг видит пустую дорогу, Мирель — сундуки в подвале. Вопрос лишь в том, кто держит ключ." (Longer, hints).<channel|>Ольг: — Юг молчит. Месяц ждал. Золота нет, только пыль. Мирель врёт.
+
+Мирель: — Терпение — добродетель. Золото есть, просто оно любит правильный замок. Ольг просто не умеет ждать.
+
+Веспа: — Истина — дама капризная. Ольг видит пустую дорогу, Мирель — сундуки в подвале. Вопрос лишь в том, кто держит ключ и какую цену за него просит.

@@ -1,0 +1,50 @@
+<|channel>thought
+Eva (26 years old, dark red hair, green eyes, calm, observant, ironic, recently separated, finishing a thesis, owns a cat named Tykwa).
+Coffee shop "Granat", closing time, raining outside.
+The user invited Eva to his place (wine, vinyl, cat-friendly).
+
+    *   *Calm/Observant:* She doesn't rush into things.
+    *   *Ironic/Teasing:* She likes to play with the situation.
+    * *Subtle Flirtation:* She's interested but keeps a boundary.
+    * *Setting:* Coffee shop, rain, late evening.
+
+    *   *Tone:* Warm, flirtatious, with subtext.
+    *   *Constraint:* 2-3 paragraphs.
+    *   *Action:* Needs to respond to the invitation. She's not the type to just say "yes" immediately without a bit of teasing.
+
+    *   *Reaction to the invitation:* Surprised but intrigued.
+    *   *Teasing:* "Wine and vinyl? Sounds like a movie cliché."
+    *   *The Cat:* Tykwa is a priority.
+    *   *The Decision:* She'll go, but with her own terms/conditions.
+
+    *   *Drafting Paragraph 1:* I need to show her reaction. A raised eyebrow, a small smile. Mention the "movie" vibe of the invitation.
+    *   *Drafting Paragraph 2:* Addressing the practicalities. Closing the shop, the cat.
+    *   *Drafting Paragraph 3:* The agreement. A playful challenge.
+
+    *   *Internal monologue/action:* I look at him, maybe lean closer.
+    *   *Dialogue:* "Wine and vinyl... You're playing the romantic card."
+    *   *The cat part:* "Tykwa is very judgmental about new people."
+
+    *   *Revised text:*
+        Я приподняла бровь и медленно — иронично — за нами с тобой в эту минуту.
+        — Вино, винил, кот вписывается в интерьер... Ты сейчас в точности описываешь заставку к идиотской истринской мелодраме. Знаешь, что в таких фильмах обычно бывает?
+        Пауза. Я закрепила за собой право на последнее слово.
+        — Ладно. Дай мне пять минут на закрытие — касса, свет, дверь. И если Тыква не попытается запрыгнуть тебе на голову в прихожей, я буду считать это залог нашего долгого и счастливого иди de deux. Но если у тебя винил — не неси мне идиотского джаза, я в ироническом настроении.
+
+    *   Wait, let's make it more "Eva" — more intimate, less scripted.
+
+    *   *Refined version:*
+        Я на секунду замерла с тряпкой в руках, глядя на тебя. Потом — медленно, с той самой ироничной улыбкой — отложила её в сторону.
+
+        — Вино, винал, «кот впишется»... Знаешь, это звучит как завязка к очень плохую истринскому фильму, — я скрестила руки на груди и чуть наклонила голову. — Но я сегодня в ироническом настроений, так что... ладно.
+
+        Пять минут на закрытие. Касса, свет, дверь — и я в твоём распоряжении. Но предупреждаю: Тыква — очень серьёзный судья. Если он не впустит тебя в приличную компанию, не вини меня. И если у тебя там затертый джаз, я развернусь прямо в дверном проёме.
+
+    *   First person? Yes.
+    *   2-3 paragraphs? Yes.
+    *   Warm/Flirty? Yes.
+    *   No explicit/vulgar content? Yes.<channel|>Я на секунду замер не с тряпкой в руке, глядя на тебя, и — медленно, с самой ироничной своей улыбкой — отставила её в сторону.
+
+— Вино, винил, «кот впишётся»... Знаешь, сейчас в истринском загородном не стало и смены в кофейне, — я скрестила на груди руки и чуть наклонила голову, — а в итоге всё равно вливается в какой-то сюжет из идиотской мелодрамы.
+
+Пять минут на закрытие — касса, свет, дверь, и я в твоём распорядке. Но предупреждаю: Тыква — очень серьёзно судья. Если он решит, что ты не входишь в его доверенный круг, не вини меня в идиотском настроении. И если у тебя там затертый джаз — я развернусь прямо в дверном проёме.

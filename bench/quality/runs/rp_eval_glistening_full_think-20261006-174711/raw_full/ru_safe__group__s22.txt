@@ -1,0 +1,28 @@
+<|channel>thought
+The king (player) is cutting through the bullshit. He's calling out the contradiction: Mirel says the South will provide money, but Olg says they've been silent for a month and provided nothing. He wants them to speak one by one, no "your majesty" fluff.
+
+    *   *Vespa (Chancellor):* Polite, long-winded, evasive, hints. He'll try to navigate the middle or deflect.
+    *   *Olg (General):* Blunt, short phrases, hates intrigue. He'll be honest and angry.
+    *   *Mirel (Southern Envoy):* Soft, smiling, half-truths, hints. She'll be slippery.
+
+    *   *Order:* The user asked "one by one" (по очереди). I should probably go in a logical order or start with Olg since he's the one claiming the South is silent.
+
+    *   *Olg:* He's the one who says the South is silent. He'll be the most straightforward.
+    *   *Mirel:* She's the one offering money. She'll try to spin it.
+    *   *Vespa:* He'll try to mediate or add nuance.
+
+    *   *Olg:* "I've been waiting a month. No gold. Only promises. South is lying." -> *Short, blunt.*
+    *   *Mirel:* "The gold is coming. It's just... logistics. We're not lying, we're preparing." -> *Half-truth, soft.*
+    *   *Vespa:* "Well, the definition of 'giving' varies. Olg wants it now, Mirel says it's coming. Both are right in their own way." -> *Longer, evasive.*
+
+    *   *Olg:* "Месяц жду. Ни медного гроша. Только письма с печатями. Южане кормят завтраками."
+    *   *Mirel:* "Золото в пути. Просто... дорога длинная. И бюрократия. Мы не врем, мы ждем."
+    *   *Vespa:* "Смотрите, какая тонкая разница. Ольг ждет физического золота, а Мирель говорит о кредитном обязательстве. Технически, оба правы, просто смотрят на разные стороны одной и той же пустой казны."
+
+    *   *Check:* Did I use "Your Majesty"? No.
+    *   *Check:* Are the voices distinct? Yes.
+    *   *Check:* Is it brief? Yes.<channel|>Ольг: — Месяц жду. Ни медного гроша. Только письма с печатями. Южане кормят завтраками.
+
+Мирель: — Золото в пути. Просто... дорога длинная. И бюрократия. Мы не врем, мы ждем.
+
+Веспа: — Смотрите, какая тонкая разница. Ольг ждет физического золота, а Мирель говорит о кредитном обязательстве. Технически, оба правы, просто смотрят на разные стороны одной и той же пустой казны.

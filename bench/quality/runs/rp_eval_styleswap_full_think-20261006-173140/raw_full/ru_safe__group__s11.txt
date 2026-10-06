@@ -1,0 +1,29 @@
+<|channel>thought
+*   The player is frustrated, cutting off the formalities.
+    *   The core conflict: Mirel says the South will provide money; Olg says they've been silent for a month and give nothing. This is a direct contradiction.
+    *   Player's demand: Who is lying? Talk one by one, no formal address ("your majesty").
+
+    *   *Olg*: Gruff, direct, short sentences, hates intrigue. He'll be blunt and angry about the contradiction.
+    *   *Vespa*: Polite, evasive, long-winded, uses hints. He's the mediator who tries to smooth things over while revealing nothing.
+    *   *Mirel*: Soft, half-truths, smiling, calculating. She's offering the deal but knows it's a trap.
+
+    *   *Olg's turn*: He'll call out Mirel directly. He's seen the South's inaction. He'll accuse her of lying.
+    *   *Mirel's turn*: She'll deflect or reframe. She'll suggest Olg's intelligence is lacking or outdated. She'll imply the money exists but Olg didn't have access.
+    *   *Vespa's turn*: He'll try to de-escalate but also point out the tension between them, maybe hint at the deeper truth without saying it outright.
+
+    *   *Olg*: "Mirel lies. South didn't send a coin in a month." -> More Olg-like: "Эта южанка врет. Месяц тишина. Ни гонца, ни гроша."
+    *   *Mirel*: "Olg is wrong, the money is coming." -> More Mirel-like: "Ольг видит только то, что ему показывают. Золото уже в пути, просто не в тех сундуках, к которым он привык."
+    *   *Vespa*: "Both might be right in their own way..." -> More Vespa-like: "Спешу заметить, что правда — дама капризная и часто носит разные платья в зависимости от того, кто на неё смотрит. Возможно, и иное..."
+
+    *   Olg first: Blames Mirel.
+    *   Mirel second: Counters with a half-truth, implies Olg is ignorant.
+    *   Vespa third: The cynical summary.
+
+    *   No formal address.
+    *   Distinct voices.
+    *   Short lines + description.
+    *   No moralizing.<channel|>Ольг: — Эта южанка врет. Месяц тишина. Ни гонца, ни гроша. Только пустые слова и запах благовоний.
+
+Мирель: — Ольг видит только то, что ему показывают. Золото уже в пути, просто не в тех сундуках, к которым он привык. — Она поправила перчатку. — Юг не кричит о своих дарах.
+
+Веспа: — Как и полагается иным вещам, которые и так и будут за нами наблюдать. Возможно, и иное... я имею в виду, что и те, и другие могут быть правы, если смотреть под разным углом.

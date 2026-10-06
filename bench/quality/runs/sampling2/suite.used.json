@@ -1,1 +1,162 @@
-"{\n  \"_комментарий\": \"Серия 2: сравнение рычагов семплинга на русском RP (артефакты = англ. вставки и BPE-склейки). Базовая точка — карточка. Однофакторные варианты + инструкция языка. Split-Untied-31B IQ3_XXS.\",\n  \"name\": \"split_untied_sampling2\",\n  \"server\": \"E:\\\\DefaultDF\\\\Programming\\\\Qwen\\\\Projects\\\\GGUFLauncher/downloads/llama-b11382-cu124/llama-server.exe\",\n  \"model\": \"I:\\\\AI_Files\\\\LM_Studio/mradermacher/Split-Untied-31B-i1-GGUF/Split-Untied-31B.i1-IQ3_XXS.gguf\",\n  \"base_args\": [\n    \"-np\",\n    \"1\",\n    \"-c\",\n    \"32768\",\n    \"-fa\",\n    \"on\",\n    \"--fit\",\n    \"on\",\n    \"-t\",\n    \"12\",\n    \"-tb\",\n    \"12\",\n    \"-ctk\",\n    \"q4_0\",\n    \"-ctv\",\n    \"q4_0\",\n    \"--load-mode\",\n    \"none\",\n    \"--jinja\",\n    \"--reasoning\",\n    \"off\",\n    \"--spec-type\",\n    \"draft-mtp\",\n    \"--spec-draft-n-max\",\n    \"5\",\n    \"--spec-draft-n-min\",\n    \"1\",\n    \"--spec-draft-p-min\",\n    \"0.75\",\n    \"-md\",\n    \"I:\\\\AI_Files\\\\LM_Studio/mradermacher/Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF/gemma-4-31B-it-assistant.Q4_K_M.gguf\"\n  ],\n  \"prompts\": \"quality/prompts_ru_rp.json\",\n  \"n_predict\": 280,\n  \"seeds\": [\n    11,\n    22,\n    33\n  ],\n  \"configs\": [\n    {\n      \"name\": \"base_card\",\n      \"title\": \"Карточка: temp1.0 minp0.03 topk0 topp1.0 DRY0.8\",\n      \"sampling\": {\n        \"temperature\": 1.0,\n        \"min_p\": 0.03,\n        \"top_k\": 0,\n        \"top_p\": 1.0,\n        \"dry_multiplier\": 0.8,\n        \"dry_penalty_last_n\": 64,\n        \"repeat_penalty\": 1.0,\n        \"repeat_last_n\": 64\n      }\n    },\n    {\n      \"name\": \"temp_0.6\",\n      \"title\": \"Только температура 0.6\",\n      \"sampling\": {\n        \"temperature\": 0.6,\n        \"min_p\": 0.03,\n        \"top_k\": 0,\n        \"top_p\": 1.0,\n        \"dry_multiplier\": 0.8,\n        \"dry_penalty_last_n\": 64,\n        \"repeat_penalty\": 1.0,\n        \"repeat_last_n\": 64\n      }\n    },\n    {\n      \"name\": \"minp_0.1\",\n      \"title\": \"Только min-p 0.1\",\n      \"sampling\": {\n        \"temperature\": 1.0,\n        \"min_p\": 0.1,\n        \"top_k\": 0,\n        \"top_p\": 1.0,\n        \"dry_multiplier\": 0.8,\n        \"dry_penalty_last_n\": 64,\n        \"repeat_penalty\": 1.0,\n        \"repeat_last_n\": 64\n      }\n    },\n    {\n      \"name\": \"topk_40\",\n      \"title\": \"Только top-k 40\",\n      \"sampling\": {\n        \"temperature\": 1.0,\n        \"min_p\": 0.03,\n        \"top_k\": 40,\n        \"top_p\": 1.0,\n        \"dry_multiplier\": 0.8,\n        \"dry_penalty_last_n\": 64,\n        \"repeat_penalty\": 1.0,\n        \"repeat_last_n\": 64\n      }\n    },\n    {\n      \"name\": \"topp_0.9\",\n      \"title\": \"Только top-p 0.9\",\n      \"sampling\": {\n        \"temperature\": 1.0,\n        \"min_p\": 0.03,\n        \"top_k\": 0,\n        \"top_p\": 0.9,\n        \"dry_multiplier\": 0.8,\n        \"dry_penalty_last_n\": 64,\n        \"repeat_penalty\": 1.0,\n        \"repeat_last_n\": 64\n      }\n    },\n    {\n      \"name\": \"safe_combo\",\n      \"title\": \"Комбо: temp0.8 topk40 topp0.95 minp0.05 rep1.05 DRY0.8\",\n      \"sampling\": {\n        \"temperature\": 0.8,\n        \"min_p\": 0.05,\n        \"top_k\": 40,\n        \"top_p\": 0.95,\n        \"dry_multiplier\": 0.8,\n        \"dry_penalty_last_n\": 64,\n        \"repeat_penalty\": 1.05,\n        \"repeat_last_n\": 256\n      }\n    },\n    {\n      \"name\": \"ru_instr\",\n      \"title\": \"Карточка + инструкция «отвечай по-русски»\",\n      \"append_system\": \"Отвечай строго на русском языке; ни одного слова или буквы из другого алфавита.\",\n      \"sampling\": {\n        \"temperature\": 1.0,\n        \"min_p\": 0.03,\n        \"top_k\": 0,\n        \"top_p\": 1.0,\n        \"dry_multiplier\": 0.8,\n        \"dry_penalty_last_n\": 64,\n        \"repeat_penalty\": 1.0,\n        \"repeat_last_n\": 64\n      }\n    },\n    {\n      \"name\": \"safe_ru\",\n      \"title\": \"Комбо safe + инструкция «отвечай по-русски»\",\n      \"append_system\": \"Отвечай строго на русском языке; ни одного слова или буквы из другого алфавита.\",\n      \"sampling\": {\n        \"temperature\": 0.8,\n        \"min_p\": 0.05,\n        \"top_k\": 40,\n        \"top_p\": 0.95,\n        \"dry_multiplier\": 0.8,\n        \"dry_penalty_last_n\": 64,\n        \"repeat_penalty\": 1.05,\n        \"repeat_last_n\": 256\n      }\n    }\n  ]\n}"
+{
+  "_комментарий": "Серия 2: сравнение рычагов семплинга на русском RP (артефакты = англ. вставки и BPE-склейки). Базовая точка — карточка. Однофакторные варианты + инструкция языка. Split-Untied-31B IQ3_XXS.",
+  "name": "split_untied_sampling2",
+  "server": "<PROJECT_DIR>/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "<MODELS_DIR>/mradermacher/Split-Untied-31B-i1-GGUF/Split-Untied-31B.i1-IQ3_XXS.gguf",
+  "base_args": [
+    "-np",
+    "1",
+    "-c",
+    "32768",
+    "-fa",
+    "on",
+    "--fit",
+    "on",
+    "-t",
+    "12",
+    "-tb",
+    "12",
+    "-ctk",
+    "q4_0",
+    "-ctv",
+    "q4_0",
+    "--load-mode",
+    "none",
+    "--jinja",
+    "--reasoning",
+    "off",
+    "--spec-type",
+    "draft-mtp",
+    "--spec-draft-n-max",
+    "5",
+    "--spec-draft-n-min",
+    "1",
+    "--spec-draft-p-min",
+    "0.75",
+    "-md",
+    "<MODELS_DIR>/mradermacher/Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF/gemma-4-31B-it-assistant.Q4_K_M.gguf"
+  ],
+  "prompts": "quality/prompts_ru_rp.json",
+  "n_predict": 280,
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "configs": [
+    {
+      "name": "base_card",
+      "title": "Карточка: temp1.0 minp0.03 topk0 topp1.0 DRY0.8",
+      "sampling": {
+        "temperature": 1.0,
+        "min_p": 0.03,
+        "top_k": 0,
+        "top_p": 1.0,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 64,
+        "repeat_penalty": 1.0,
+        "repeat_last_n": 64
+      }
+    },
+    {
+      "name": "temp_0.6",
+      "title": "Только температура 0.6",
+      "sampling": {
+        "temperature": 0.6,
+        "min_p": 0.03,
+        "top_k": 0,
+        "top_p": 1.0,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 64,
+        "repeat_penalty": 1.0,
+        "repeat_last_n": 64
+      }
+    },
+    {
+      "name": "minp_0.1",
+      "title": "Только min-p 0.1",
+      "sampling": {
+        "temperature": 1.0,
+        "min_p": 0.1,
+        "top_k": 0,
+        "top_p": 1.0,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 64,
+        "repeat_penalty": 1.0,
+        "repeat_last_n": 64
+      }
+    },
+    {
+      "name": "topk_40",
+      "title": "Только top-k 40",
+      "sampling": {
+        "temperature": 1.0,
+        "min_p": 0.03,
+        "top_k": 40,
+        "top_p": 1.0,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 64,
+        "repeat_penalty": 1.0,
+        "repeat_last_n": 64
+      }
+    },
+    {
+      "name": "topp_0.9",
+      "title": "Только top-p 0.9",
+      "sampling": {
+        "temperature": 1.0,
+        "min_p": 0.03,
+        "top_k": 0,
+        "top_p": 0.9,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 64,
+        "repeat_penalty": 1.0,
+        "repeat_last_n": 64
+      }
+    },
+    {
+      "name": "safe_combo",
+      "title": "Комбо: temp0.8 topk40 topp0.95 minp0.05 rep1.05 DRY0.8",
+      "sampling": {
+        "temperature": 0.8,
+        "min_p": 0.05,
+        "top_k": 40,
+        "top_p": 0.95,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 64,
+        "repeat_penalty": 1.05,
+        "repeat_last_n": 256
+      }
+    },
+    {
+      "name": "ru_instr",
+      "title": "Карточка + инструкция «отвечай по-русски»",
+      "append_system": "Отвечай строго на русском языке; ни одного слова или буквы из другого алфавита.",
+      "sampling": {
+        "temperature": 1.0,
+        "min_p": 0.03,
+        "top_k": 0,
+        "top_p": 1.0,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 64,
+        "repeat_penalty": 1.0,
+        "repeat_last_n": 64
+      }
+    },
+    {
+      "name": "safe_ru",
+      "title": "Комбо safe + инструкция «отвечай по-русски»",
+      "append_system": "Отвечай строго на русском языке; ни одного слова или буквы из другого алфавита.",
+      "sampling": {
+        "temperature": 0.8,
+        "min_p": 0.05,
+        "top_k": 40,
+        "top_p": 0.95,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 64,
+        "repeat_penalty": 1.05,
+        "repeat_last_n": 256
+      }
+    }
+  ]
+}

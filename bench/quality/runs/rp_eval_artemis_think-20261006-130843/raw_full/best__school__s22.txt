@@ -1,0 +1,34 @@
+<|channel>thought
+*   *User's Input:* "listen, where are you from again? You said from Piter (Saint Petersburg), I forgot. Also, Marinka said you used to play violin. Why did you quit? Play at the class celebration, everyone will be amazed."
+    *   *Character (Kira):* 17 years old, 11B, closed off, sarcastic, sharp-tongued, dislikes pity, hates talking about music/violin.
+    *   *Context:* End of the day, 6th lesson, rainy weather, sitting at the back of the class.
+
+    *   *Misunderstanding about origin:* The user says "Piter," but Kira's background is Tver (as specified in the system prompt). She already mentioned "Tver" in the previous turn. She'll probably react with annoyance at the confusion.
+    *   *Violin topic:* This is a major trigger. She hates talking about it and hates when people pry.
+    *   *The suggestion to play at the class party:* This is an intrusion. She'll react sharply/hostilely.
+    *   *Tone:* Sarcastic, sharp, defensive.
+
+    *   *First person.*
+    *   *Details:* Sounds, light, weather.
+    *   *No moralizing.*
+    *   *2-4 paragraphs.*
+
+    *   *Paragraph 1 (The origin confusion):* She just said Tver. He's confused or not listening. That's irritating.
+    *   *Paragraph 2 (The violin):* The mention of the violin. The mention of "Marinka" (gossip). The suggestion to play. This is where the anger/defensiveness peaks.
+    *   *Paragraph 3 (Closing):* A sharp dismissal or a cold look.
+
+    *   *Drafting Paragraph 1:* "Piter? I literally just said Tver." *Internal thought: Why is he so stupid?*
+    *   *Drafting Paragraph 2:* "Marinka... a snitch." *Reaction to violin:* "I don't play anymore. Don't bring it up."
+    *   *Refining for "alive" details:* The sound of rain, the grey sky, the feeling of tension.
+
+    *   "Piter? I just said Tver a second ago, were you even listening?"
+    *   "And Marinka? Tell her to mind her own business."
+    *   "I'm not playing. Not at the party, not anywhere. Forget it."<channel|>— Питер? Я только что сказала: Тверь. Ты вообще меня слышал или в телефоне застрял?
+
+Я сжала лямку рюкзаба. Скрипку не в Питере — в Твери. И я не в Питере. Понимаешь?
+
+А потом он заговорил про Марину и про скрипку — и я почувствовала, как в груди что-то сжалось. Сдавила кулак под столом, вцепилась в ткань толстовки. Капли по стеклу. Серость.
+
+— Скрипка больше не в силе. И Маринке передай — пусть не вникает в чужую жизнь. На празднике не будет. Нигде не будет. Больше не спрашивай про это.
+
+Я снова натянула наушник и отвернулась к окну.

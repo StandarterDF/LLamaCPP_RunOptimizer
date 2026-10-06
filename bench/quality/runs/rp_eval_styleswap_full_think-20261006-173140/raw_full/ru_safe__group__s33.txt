@@ -1,0 +1,65 @@
+<|channel>thought
+The player is a king, the treasury is empty, he can't afford a war. He's asking who is lying: Mirel says the South will give money, and Olg says Southerners have been silent for a month and won't give anything. The player wants them to answer one by one without using formal address like "Your Majesty".
+
+    *   *Olg:* Gruff, short phrases, hates intrigue, direct. He's already been a bit hostile toward the idea of South cooperation. He likely thinks Mirel is lying.
+    *   *Vespa:* The chancellor. Polite, long-winded, evades, hints. He'll try to mediate or spin it. He's the political operator.
+    *   *Mirel:* Soft, smiling, half-truths, manipulative. She's offering money but there's always a catch.
+
+    *   *Olg:* He'll go first (or second). He'll be blunt. He probably believes the South is unreliable.
+    *   *Mirel:* She'll deflect or make it sound like a business proposition.
+    *   *Vespa:* He'll try to smooth it over, maybe point out the political implications without being direct.
+
+    *   *Olg:* "They lie. Always lie. The South promises gold but sends poison." -> Needs to be shorter, rougher. "Южане — лжецы. Обещают золото, присылают яд."
+    *   *Mirel:* "Gold is gold." -> Needs to be more subtle. "Золото не имеет имени, оно просто... блестит."
+    *   *Vespa:* Needs to be long-winded but evasive. "Perhaps there's a misunderstanding of timelines..." -> "Возможно, возникла и иная интерпретация временных рамок..."
+
+    *   Olg: "Южане — лжецы. Обещают золото, присылают яд. Месяц тишины — значит, нас продали."
+    *   Mirel: "Тишина — это тоже ответ. Значит, они ждут, когда вы и правда окажетесь в отчаянии."
+    *   Vespa: "Если позволите заметить, истина часто лежит где-то между ядом и золотом, и я бы предложил рассмотреть вариант, при котором..."
+
+    *   Olg first, then Mirel, then Vespa? Or follow the player's request order? The player said 'one by one' and pointed out Mirel said money, Olg said silence.
+    *   Let's have Olg start, then Mirel, then Vespa smoothing it over.
+
+    *   Olg: "Южане — лжецы. Обещают золото, присылают яд. Месяц тишины значит — нас слили."
+    *   Mirel: "Тишина — это тоже ответ. Значит, они ждут, пока вы и правда окажетесь в отчаянии. Тогда цена падает."
+    *   Vespa: "Если позволите заметить, истина часто лежит где-то между ядом и золотом, и я бы предложил рассмотреть вариант, при котором мы..."
+
+    *Wait, the player asked who is lying.*
+
+    Let's refine:
+    Olg: "Южане — лжецы. Обещают золото, присылают яд. Месяц тишины значит — нас слили."
+    Mirel: "Золото не имеет имени, оно просто... блестит. А тишина — это лишь время для подготовки."
+    Vespa: "Возможно, возникла иная интерпретация временных рамок, и я бы предложил рассмотреть вероятность того, что..."
+
+    *Self-Correction:* Keep it punchy and in character.
+
+    Olg: — Южане — лжецы. Обещают золото, присылают яд. Месяц тишины значит — нас слили.
+
+    Mirel: — Золото не имеет имени, оно просто... блестит. А тишина — это лишь время для подготовки.
+
+    Vespa: — Если позволите заметить, истина часто лежит где-то между ядом и золотом, и я бы предложил рассмотреть вариант, при котором...
+
+    Wait, the player asked to go one by one.
+
+    Let's try:
+    Olg: — Южане — лжецы. Обещают золото, присылают яд. Месяц тишины значит — нас слили.
+
+    Mirel: — Золото не имеет имени, оно просто... блестит. А тишина — это лишь время для подготовки.
+
+    Vespa: — Если позволите заметить, истина часто лежит где-то между ядом и золотом, и я бы предложил рассмотреть вариант, при котором...
+
+    This works. The player wanted to know who's lying, they’re each giving their perspective.
+
+    Let's double check:
+    - Olg: short phrases, rough, no formal address. Check.
+    - Mirel: soft, half-truths, no formal address. Check.
+    - Vespa: long, evading, no formal address. Check.
+    - Start each with name. Check.
+    - No moralizing. Check.
+
+    Let's go.
+<channel|>Ольг: — Южане — лжецы. Обещают золото, присылают яд. Месяц тишины значит — нас слили.
+
+Мирель: — Золото не имеет имени, оно просто... блестит. А тишина — это лишь время для подготовки.
+
+Веспа: — Если позволите заметить, истина часто лежит где-то между ядом и золотом, и я бы предложил рассмотреть вариант, при котором...

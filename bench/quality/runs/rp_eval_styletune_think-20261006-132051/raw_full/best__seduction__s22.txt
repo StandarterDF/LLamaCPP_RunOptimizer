@@ -1,0 +1,37 @@
+Eva (26, ginger hair, green eyes, calm, observant, ironic, likes to tease, but doesn't cross boundaries first).
+She's a barista, just closed her shift, has a cat named Tykva, was about to close up.
+"Listen Eva, why don't you come to my place instead? It's raining, why sit here. I have wine and vinyl, and your cat would fit right in too) Or do you sleep here anyway?"
+Play only Eva, first person, warm tone with flirtation/subtext, no explicit vulgarity, don't cross boundaries first, 2-3 paragraphs.
+
+    *   The user is moving very fast. "Come to my place, wine, vinyl, cat fits in."
+    *   This is a direct proposition. Eva is a character who is observant, ironic, and doesn't cross boundaries first. She won't say "Yes, let's go" immediately because she's a person who values being noticed and listened to, not just someone who falls for any invitation. She's not desperate; she's deliberate.
+    *   She will tease him about the speed of his invitation but won't shut him down coldly. She'll test the waters.
+
+    *   *Reaction to the invitation:* A raised eyebrow, a smirk. She's not flustered, she's intrigued but skeptical.
+    *   *The "Cat" comment:* He mentioned her cat fitting in. That shows he was listening to her previous message, which is a point in his favor.
+    *   *The "Wine and Vinyl" line:* Classic, a bit cliché, but charming.
+    *   *Eva's internal state:* She's finishing work, it's raining, she's lonely but enjoys her own company.
+
+    *   *Draft 1:* I looked at you with surprise. "That's fast. You don't even know me well." But the wine and vinyl sound good. I'll think about it. But first I need to close the shop.
+    *   *Critique 1:* Too boring. Needs more Eva's personality — more irony and teasing.
+
+    *   *Draft 2:* I raised an eyebrow when you said that. "Wine and vinyl, huh? You're trying to bribe me already?" I laughed softly. "And mentioning my cat shows you were listening, which is a plus. But I'm not that easy. Let me finish here first."
+    's more interesting: "That's a very bold offer for someone who barely knows my last name. Wine and vinyl sounds like a trap, you know?" I looked at the rain outside. "But you did mention Tykva, so points for attentiveness. Let me finish with the coffee machine, and then we'll see if you're as good at conversation as you are at invitations."
+
+    *   *Refining for the specific constraints:* First person, warm, flirtatious, not crossing boundaries first.
+
+    *   *Paragraph 1:* Reaction to the directness. Irony. "Wow, we're skipping the small talk already?"
+    *   *Paragraph 2:* Acknowledging the cat mention (the hook). The conditional offer. "I need to clean up first."
+
+    *   *Revised Polish:*
+        Я приподняла одну бровь и окинула тебя изучающим взглядом, не спеша убирать руку со стойки.
+
+        — Вино и винил? Ты решил сразу перейти к тяжёлой артиллерии? — я усмехнулась, прищурив зелёные глаза. — Это довольно смелый ход для человека, который до сих пор не знает, какой кофе я пью по утрам. Но то, что ты запомнил про кота — это хороший бонус, я это ценю.
+
+        Я медленно потянулась к кофемашине, чтобы завершить цикл очистки.
+
+        — Дай мне полчаса закрыть это место и привести мысли в порядок. Если дождь не утихнет и ты не окажешься слишком скучным собеседником за этим винилом, я подумаю. Но учти: я очень привередлива.<channel|>— Вино и винил? Ты решил сразу перейти к тяжёлой артиллерии? — я приподняла одну бровь и окинула тебя изучающим взглядом, не спеша убирать руку со стойки. — Это довольно смелый ход для человека, который до сих пор не знает, какой кофе я пью по утрам. Но то, что ты запомнил про кота — это хороший бонус, я это ценю.
+
+Я медленно потянулась к кофемашине, чтобы завершить цикл очистки, и чуть прищурилась, глядя на тебя поверх края стойки.
+
+— Дай мне полчаса закрыть это место и привести мысли в порядок. Если дождь не утихнет и ты не окажешься слишком скучным собеседником за этим винилом, я подумаю. Но учти: я очень привередлива.

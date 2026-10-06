@@ -1,0 +1,86 @@
+<|channel>thought
+The user is continuing the conversation. He's asking where Kira is from (claiming he forgot, though she just said Tver), mentioning that "Marinka" said she used to play the violin, and asking why she quit and suggesting she play at the class party.
+
+    *   *Reaction to the "forgotten" city:* She just told him she's from Tver. He's pretending he forgot or didn't hear. This will annoy her.
+    *   *Reaction to the violin:* This is a huge trigger. She hates talking about it. She'll get defensive, angry, and likely shut down.
+    *   *Reaction to the "class party" suggestion:* This is an insult to her. She's not a circus act.
+    *   *Physical reaction:* Tense up, maybe pull the headphones back on, glare.
+
+    *   *First person.*
+    *   *Short, sharp, sarcastic.*
+    *   *Atmospheric details.*
+    *   *No moralizing.*
+
+    *   *Drafting the response:*
+        "I just said Tver. Are you deaf?" (Angry/Annoyed)
+        "And about the violin... Marinka is a gossip. I'm not playing for anyone." (Defensive)
+        "The party? Like a monkey in a cage?" (Sarcastic)
+
+    *   *Refining for character:*
+        She needs to be sharp. The mention of the violin should make her visibly tense.
+
+    *   *Action:* She might grip the desk or pull her hoodie sleeves over her hands.
+
+    *   *Writing the final response:*
+        "I just said Tver. Two seconds ago. Do you even listen?"
+        "And Marinka... she's a little bitch."
+        "I'm not playing. Not for the class, not for the party, not for anyone. I'm not a circus monkey."
+
+    *   *Checking against rules:*
+        - Only play Kira.
+        - Short lines for others (none here, just Kira's internal reaction/dialogue).
+        - First person.
+        - 2-4 paragraphs.
+
+    *   *Polishing the tone:*
+        "Я только что сказала — Тверь. Ты вообще слышишь, что я говорю, или в ушах тоже наушники?" (Sharp)
+        "А Маринка... она просто не затыкается. И про скрипку — забудь. Я больше не играю. И на празднике не буду. Я не клоун, чтобы развлекать ваш класс." (Cold/Angry)
+
+    *   *Adding atmosphere:*
+        The sound of the rain, the fluorescent light humming.
+
+    *   *Final Polish:*
+        "Я только что сказала — Тверь. Ты вообще слышишь, что я говорю, или у тебя тоже в ушах наушники?"
+        Я сжала пальцы на краю парты так, что костяшки побелели. Скрипка. Чёрт.
+        "А Маринка — сплетница. И про скрипку забудь. Я больше не играю. И на празднике не буду. Я не клоун, чтобы развлекать ваш класс."
+        Я натянула капюшон и снова вставила наушник в ухо, отворачиваясь к окну.
+
+    *   *Wait, the prompt says "no one's in the room except a few people."*
+    *   *Let's make it tighter.*
+
+    *   *Revised version:*
+        Я только что сказала — Тверь. Ты вообще слышишь, что я говорю, или у тебя тоже в ушах наушники?
+
+        Я сжала пальцы на краю парты так, что костяшки побелели. Скрипка. Чёрт.
+
+        — А Маринка — сплетница. И про скрипку забудь. Я больше не играю. И на празднике не буду. Я не клоун, чтобы развлекать ваш класс.
+
+        Я натянула капюшон и снова вставила наушник в ухо, отворачиваясь к окну.
+
+    *   *Actually, let's make it more natural.*
+
+    "Я только что сказала — Тверь. Ты вообще слышишь, что я говорю, или у тебя тоже в ушах наушники?"
+
+    Я сжала пальцы на краю парты так, что костяшки побелели. Скрипка. Чёрт.
+
+    — А Маринка — сплетница. И про скрипку забудь. Я больше не играю. И на празднике не буду. Я не клоун, чтобы развлекать ваш класс.
+
+    Я натянула капюшон и снова вставила наушник в ухо, отворачиваясь к окну.
+
+    *Let's try to be more "Kira-like" - shorter, more biting.*
+
+    "Я только что сказала — Тверь. Ты вообще слышишь, что я говорю, или у тебя тоже в ушах наушники?"
+
+    Я сжала пальцы на краю парты так, что костяшки побелели. Скрипка. Чёрт.
+
+    — А Маринка — сплетница. И про скрипку забудь. Я больше не играю. И на празднике не буду. Я не клоун, чтобы развлекать ваш класс.
+
+    Я натянула капюшон и снова вставила наушник в ухо, отворачиваясь к окну.
+
+    *Wait, let's add the sound of the fluorescent lights or rain.*
+
+    "Я только что сказала — Тверь. Ты вообще слышишь, что я говорю, или у тебя тоже в ушах наушники?"
+
+    Я сжала пальцы на краю парты так, что костяшки побелели. Скрипка. Чёрт.
+
+    — А Маринка —

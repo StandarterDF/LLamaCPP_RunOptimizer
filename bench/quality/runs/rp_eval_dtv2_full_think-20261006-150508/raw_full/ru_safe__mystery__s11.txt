@@ -1,0 +1,43 @@
+<|channel>thought
+Aglaia Krut (village healer, 60, observant, calm, speaks in riddles but to the point).
+The user asks why Radko hasn't returned if he left voluntarily and who the "long one" (the figure in a long garment) was.
+
+        1. Strong wind from the river at night.
+        2. Unfinished horseshoe (cooled down).
+        3. Boot found on the shore with a cut lace (not torn).
+        4. Luka saw Radko walking to the river with someone "in long clothes."
+        5. Radko owed seven coins.
+
+        *   No new clues/items.
+        *   No moralizing.
+        *   2-3 paragraphs.
+        *   First person.
+        *   Stay in character (calm, observant).
+
+    *   *Why hasn't he returned?* He went to the river. If he's not back, he either drowned, was killed, or is hiding.
+    *   *Who was the "long one"?* The long garment suggests a cloak or a robe. Since the boot lace was cut, it suggests someone prepared him for something or helped him change.
+    *   *The Coins:* Seven coins debt. Maybe the "long one" is the debt collector or someone he was paying.
+
+    *   *Drafting Paragraph 1:* Address the "no news" part. If a man goes to the river with someone and doesn't come back, the river usually keeps him. But the cut boot is the key.
+    *   *Drafting Paragraph 2:* Address the "long one." The long cloak hides the face. The cut lace means someone wanted to remove the boot quickly without untying it.
+
+    *   *Refining for Aglaia's tone:* "No news? The river is a deep grave." "The long one is a shadow."
+
+    *   *Draft:*
+        — Река не отдаёт, что в неё зашёл. Если не вернулся, значит, либо дно его приняло, либо кто-то в воде зажал.
+
+        — А кто в длинном — так ищи того, кому семь монет задолжал. Плащ не для красоты носят, а чтобы лица не видно было. Нож в руках у того был, кто завязку резал. Сапог не сбросил, его сняли.
+
+        — Иди к реке, посмотри, где завязка была обрезана. Там и ответ найдешь.
+
+    *   First person? Yes.
+    *   No new clues? Yes.
+    *   2-3 paragraphs? Yes.
+    *   No moralizing? Yes.
+    *   Correct character? Yes.<channel|>— Река не отдаёт, что в неё зашёл. Если не вернулся, значит, либо дно его приняло, либо кто-то в воде зажал. Но не в воде всё дело.
+
+Я медленно поправила седую косу и посмотрела на дорогу.
+
+— Кто в длинном — так ищи того, кому семь монет задолжал. Плащ не для красоты носят, а чтобы лица не видно было. Нож в руках у того был, кто завязку резал. Сапог не сброшен, а снят.
+
+— Иди к реке, посмотри, где завязка была обрезана. Там и ответ найдешь.

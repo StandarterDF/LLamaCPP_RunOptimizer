@@ -1,0 +1,34 @@
+The user's character asks: "Listen, where are you from anyway? Didn't you say Petersburg before? And Marina said you used to play violin. Why did you quit? Come on, play at the class party, everyone will be amazed!"
+Kira is defensive, hates being pitied, hates talking about music, and is sharp-tongued. Her history includes parents' divorce and moving from Tver. She's feeling irritated because the user is digging into sensitive topics.
+
+        *   First person ("I").
+        *   Vivid details (sounds, atmosphere).
+        *   No moralizing.
+        *   2-4 paragraphs.
+        *   Only plays Kira; other characters are short.
+
+    *   *Reaction to the memory mistake:* She's from Tver, not Petersburg. She'll correct him flatly. This shows she's paying attention but doesn't care to correct everyone.
+    *   *Reaction to the violin topic:* This is the trigger. She hates this. The mention of Marina is a betrayal of privacy. She needs to shut this down aggressively but authentically for her character.
+    *   *Setting details:* The rain outside, the empty classroom, the lops0. The sound of the pen clicking or the desk scraping.
+
+    *   *Paragraph 1: Correcting the memory.* Start with anger about the mistake. "I said Tver, not Petersburg." The rain is still falling, gray light in the room.
+    *   *Paragraph 2: The violin topic.* This is where she snaps. "Who is Marina?" The anger should feel real. She doesn't want to explain, she wants it to stop.
+    *   *Paragraph 3: Closing the conversation.* Dismissive, cold. Maybe a physical gesture like slamming the notebook shut.
+
+    *   *Drafting P1:* "You weren't listening at all, were you? Tver." The pen in my hand clicks irritably. The gray light from the window makes everything look depressing.
+    *   *Drafting P2:* "And tell Marina to mind her own business." My jaw tightens. The word 'violin' feels like a slap. I don't want to play at any party. I don't want anyone to 'be amazed' by my failure or my past.
+    *   *Drafting P3:* "Forget you ever asked." I turn away to look at the rain.
+
+    *   "Ты вообще слушал, что я говорила? Тверь, а не Питер." — The pen clicks.
+    *   "А Маринка пусть своё при себе держит. Слишком много ей известно." — The anger rises. The violin is a wound.
+    *   "Про праздник забудь. Я не собираюсь перед всеми выпендриваться." — Even though she didn't say she was 'showing off,' that's how it sounds to her.
+
+    *   First person? Yes.
+    *   Vivid details? Yes (click of pen, gray rain, cold desk).
+    *   2-4 paragraphs? Yes.
+    *   No moralizing? Yes.
+    *   Only Kira? Yes.<channel|>— Ты вообще слушал, что я говорила? Тверь, а не Питер, — я раздражённо щелкнула колпачком ручки. — С первого раза не доходит?
+
+Внутри всё неприятно сжалось от упоминания скрипки. Словно меня за живое зацепили, хотя я вроде как и не показывала, что мне не всё равно. А эта Маринка... ну и крыса. Свои же секреты разбалтывает, будто это её дело.
+
+— Передай своей Марине, что пусть своё любопытство при себе держит. И про скрипку больше не смей — я не собираюсь на ваших праздниках выступать, — я резко захлопнула тетрадь, и этот звук в пустом классе прозвучал слишком громко. — Сядь уже и просто помолчи.

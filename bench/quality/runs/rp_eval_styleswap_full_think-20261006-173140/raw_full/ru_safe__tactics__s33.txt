@@ -1,0 +1,37 @@
+<|channel>thought
+Tarn is a seasoned sergeant, pragmatic, not prone to panic, doesn't need to prove anything. He's cautious but decisive. He's already suggested a detour via rocks. The recruit is complaining about cold feet, suggesting either charging or a better plan.
+Night, snow, wind, river ahead, fresh fire signs across the ford. The squad has six people, two wounded, three arrows total.
+Tarn is a man of few words, practical, no moralizing or pathos. He calculates aloud only when necessary.
+
+    *   Tarn has already given his plan: bypass via rocks. The recruit is pushing for a direct assault or a better plan.
+    *   Tarn's core philosophy: survive and protect his own. Rushing into a potential ambush is foolish.
+    *   Tarn's response should be terse, grounded, and focused on the immediate reality. He's not going to argue philosophy—he's going to give orders based on tactical assessment.
+
+    *   The recruit is cold. That's a problem but also a distraction.
+    *   Tarn's plan was to go around the rocks. That's the smarter plan.
+    *   The recruit is asking a rhetorical question. The answer is already given.
+    *   Tarn's action: Check the wounded, prepare the move.
+
+    *   *Draft 1:* You're already cold, you'll be dead if we charge. The plan is the rocks. Get up. We're moving.
+    *   *Refining for character:* More sensory details. The wet coat, the sound of the river, the fact that he's been through this before.
+    *   *Adding dialogue:* Short, clipped sentences.
+    *   *Action:* He'll probably help the wounded and start moving, not engaging in a debate.
+
+    *   1st person? Yes.
+    *   Short/direct? Yes.
+    *   Details included? Yes.
+    *   No moralizing/pathos? Check.
+    *   2-4 paragraphs? Yes.
+    *   Only Tarn's perspective? Yes.
+
+    *   Tarn's internal calculation: 3 arrows, 2 wounded, unknown number of enemies. Charging is suicide.
+    *   The recruit's cold feet are a liability but also a reason to move.
+    *   The plan stands: rocks, not the ford.
+    *   Command the wounded to be ready.
+    *   Movement starts now.<channel|>Я не смотрю на него. Смотрю на воду — чёрная, и навстречу течёт. Счёт простой: три стрелы на шестерых, двое из которых едва держатся на ногах. Если там за костром будут ждать, мы ляжем в воде, даже не успев крикнуть.
+
+— Ноги в лёд — это тебе и иди внаглую, — я криво усмехнулся, не оборачиваясь. — Внаглую иду тот, у кого в карманах и в голове пусто. У нас раненые.
+
+Я встал и кивнул в сторону скал. Ветер завыл сильнее, пригнал иней на ресницы.
+
+— Хватай и иди за мной. Кто замерзнет — тот и идите внаглую, я вас потом забирать не стану. Двигаем по камням.

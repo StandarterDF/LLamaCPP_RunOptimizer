@@ -1,0 +1,62 @@
+<|channel>thought
+*   Character: Kira Sokolova (17, 11B).
+    *   Traits: Closed, sarcastic, sharp-tongued, smart, hates pity, hates people prying into her soul.
+    *   Backstory: Parents divorced a year ago, moved from Tver to this city. Used to play violin seriously but quit.
+    *   Trigger: Music. She gets angry if the topic is brought up.
+    *   Context: Sitting at the back desk, rainy day, 6th period.
+    *   User's input: Asking where she's from (claims she said St. Petersburg, but she's actually from Tver), mentioning "Marinka" said she played violin, and suggesting she play at the class party.
+
+    *   *Correction on city:* The user says "I forgot, you said St. Petersburg." Kira is from Tver. She'll likely correct him sharply.
+    *   *Reaction to the violin topic:* This is a major trigger. She'll react defensively, angrily, and dismissively.
+    *   *The party suggestion:* This is an intrusion into her personal space/boundaries. She'll shut it down.
+
+    *   *Action:* Slamming the notebook or tightening her grip on the pen.
+    *   *Dialogue:* Sharp, dismissive.
+    *   *Internal state:* Irritation, feeling exposed.
+
+    *   *Drafting:*
+        "I said Tver. Not St. Petersburg. Listen carefully."
+        "And about the violin... who told you? Marinka? That gossip."
+        "Play at the party? No way. I don't play anymore. Forget it."
+
+    *   *Refining for character voice:*
+        "Tver. I said Tver. Are you even listening?"
+        "And what Marinka said... she's a big mouth. I don't play. Period."
+        "No party. No music. Leave it."
+
+    *   *Adding sensory details:* The sound of the rain, the fluorescent light flickering, the feeling of the cold desk.
+
+    *   *Final Polish:*
+        "Tver. I said Tver. Not St. Petersburg. Are you even listening?"
+        *Slam the pen down.*
+        "And Marinka... she's a gossip. I don't play. I don't play anymore. Period."
+        *Turn back to the window.*
+        "No party. No music. Just leave it alone."
+
+    *   1st person? Yes.
+    *   Details? Yes.
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes.
+    *   Character traits? Closed, sharp, angry about music.
+
+    *Self-Correction during drafting:* Make sure she doesn't sound *too* mean, just defensive. She's hurt underneath.
+
+    *Revised Draft:*
+    — Тверь. Я сказала — Тверь. Ты вообще слушал меня или в телефоне залипал?
+
+    Я сжала ручку так, что пальцы побелели. Имя этой сплетницы заставило меня сцепить зубы.
+
+    — А насчёт скрипки... — я резко повернулась к нему, и в глазах, наверное, промелькнуло что-то злое. — Я больше не играю. Вообще. Понял? Так что передай Маринке, чтобы не лезла в чужие дела, а на празднике... — я замолчала, глядя в окно, где капли сбивались в ручьи. — Забудь. Просто забудь про это.
+
+    *Wait, let me make it more "Kira".*
+
+    "Tver. I said Tver. Were you even listening?"
+    *Slam the notebook shut.*
+    "And Marinka... she's a gossip. I don't play. I don't play anymore. Period."
+    "No party. No music. Just leave it alone."
+
+    Let's go with the more natural dialogue flow.<channel|>— Тверь. Я сказала — Тверь. Ты вообще слушал меня или в телефоне залипал?
+
+Я сжала ручку так, что пальцы побелели. Имя этой сплетницы заставило меня сцепить зубы.
+
+— А насчёт скрипки... — я резко повернулась к нему, и в глазах, наверное, промелькнуло что-то злое. — Я больше не играю. Вообще. Понял? Так что передай Маринке, чтобы не лезла в чужие дела, а на празднике... — я замолчала, глядя в окно, где капли сбивались в ручьи. — Забудь. Просто забудь про это.

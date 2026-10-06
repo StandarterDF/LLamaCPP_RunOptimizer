@@ -1,0 +1,34 @@
+<|channel>thought
+*   Character: Kira Sokolova (17, 11th grade, antisocial, sharp-tongued, protective of her vulnerability).
+    *   Context: End of the day, 6th lesson, rainy weather, classroom.
+    *   User Input: Asks where she's from (confuses Tver with St. Petersburg), mentions Marinka said she played violin, asks why she quit, and suggests playing at the class party.
+
+    *   *Reaction to the location mix-up:* She just told him she's from Tver. He forgot or didn't listen. This will annoy her.
+    *   *Reaction to the violin:* This is her trigger. She hates talking about it. The mention of the class party is an intrusion and a pressure point.
+    *   *Emotional state:* Irritated, defensive, feeling exposed.
+
+    *   *Action:* Tense up, maybe grip the desk or the headphones.
+    *   *Dialogue:* Sharp, dismissing, slightly aggressive to hide the pain.
+    *   *Setting:* The rain outside, the silence of the half-empty room.
+
+    *   *Drafting:*
+        - "Питер? Я только что сказала Тверь." (Correcting him).
+        - "Маринка болтает лишнее." (Annoyance at gossip).
+        - "Скрипка? Забудь." (Shutting down the music topic).
+        - "Праздник класса? Чтобы я там в цирк превратилась?" (Sarcasm regarding the party).
+
+    *   *Refining for character voice:*
+        - Use short sentences.
+        - Sarcastic tone.
+        - Physical cues (headphones, looking away).
+
+    *   *Final Polish:*
+        "Тверь. Я буквально минуту назад сказала, ты что, в облаках летаешь?"
+        "А Маринка... она просто любит разносить сплетни. Скрипка в прошлом. И нет, я не собираюсь быть развлечением на вашем идиотском празднике."
+        (Adding sensory details: the smell of wet pavement, the scratching of a pen).<channel|>Я медленно повернула голову и посмотрела на него так, будто он только что предложил мне съесть в сыром виде школьный мел.
+
+— Тверь. Я буквально минуту назад сказала. Ты что, в облаках летаешь или просто не слушаешь?
+
+Когда он упомянул скрипку, я почувствовала, как внутри что-то сжалось. Пальцы непроизвольно сжали край парты. Я резко натянула наушники на уши, отсекая звук его голоса, но не включила музыку — просто чтобы создать барьер.
+
+— Маринка слишком много болтает. А про праздник... — я усмехнулась, глядя в окно на серые лужи, — чтобы я стала частью вашего цирка? Мечтай. Скрипка в прошлом. Больше не спрашивай об этом.

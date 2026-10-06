@@ -1,0 +1,47 @@
+<|channel>thought
+*   User is asking: Why hasn't Radko returned if he left voluntarily? Who was the "long one" (the person in the long garment)?
+    *   Context: Early morning, Aglaia is on her porch.
+
+    *   60-year-old village healer (znakharka).
+    *   Thin, grey braids, stained hands.
+    *   Quiet, observant, speaks in riddles/indirectly but stays on point.
+    *   Dislikes fuss and stupidity.
+    *   First-person perspective.
+
+    *   Strong wind from the river at night.
+    *   Unfinished horseshoe (cooled).
+    *   Boot found on the shore, lace cut with a knife (not torn).
+    *   Neighbor Luka saw Radko walking to the river with "someone in long [clothes/something long]".
+    *   Radko owed 7 coins.
+
+    *   *Why hasn't he returned?* Aglaia doesn't have a direct answer but can speculate based on the clues.
+    *   *Who was the "long one"?* Luka saw "someone in long" (длинном). This implies a cloak, a dress, or some long garment.
+
+    *   *Tone:* Calm, a bit cryptic, slightly dismissive of the user's impatience.
+    *   *Reasoning:* If the boot lace was cut, it was a deliberate action. If he went with someone in a long cloak, it was a meeting. The wind from the river suggests a specific atmosphere.
+    *   *Constraint Check:* Do not invent new clues. Use only the 5 points provided.
+
+    *   *Drafting:*
+        "Sigh. You're asking the wind. If he left with someone in a long cloak, he didn't go to fish. The cut lace means he prepared to leave the boot behind. Seven coins... maybe he paid them with something else. Or maybe the 'long one' didn't let him go back."
+
+    *   *Refining for character:*
+        "Hmph. You're asking the wind. If a man cuts his own boot lace, he's not coming back in those shoes. And if Luka saw a 'long one'—that's a cloak, a shroud, or a dress. Not a fish.
+        Seven coins is a small debt for a man to vanish for. Unless the debt wasn't just coins.
+        The wind was strong that night. It carries things away. Or brings them close."
+
+    *   *Final Polish (Russian):*
+        — Спрашиваешь ветер, — я медленно поправила косу. — Если человек сам завязку ножом режет, значит, сапог ему больше не нужен. А если Лука видел «длинное», так это плащ или саван, а не чешуя.
+
+        — Семь монет — долг малый для того, чтобы в реку уходить. Значит, либо долг был не только в монетах, либо кто-то в длинном предложил сделку поинтереснее.
+
+        — Ищи того, кто в Гнильцах носит длинное и не боится речного ветра. А Радко... он либо в воде, либо уже не в сапогах.
+
+    *   First person? Yes.
+    *   Calm, observant? Yes.
+    *   No new clues? Yes (only interpreting existing ones).
+    *   2-3 paragraphs? Yes.
+    *   No moralizing? Yes.<channel|>— Спрашиваешь ветер, — я медленно поправила косу. — Если человек сам завязку ножом режет, значит, сапог ему больше не нужен. А если Лука видел «длинное», так это плащ или саван, а не чешуя.
+
+— Семь монет — долг малый для того, чтобы в реку уходить. Значит, либо долг был не только в монетах, либо кто-то в длинном предложил сделку поинтереснее.
+
+— Ищи того, кто в Гнильцах носит длинное и не боится речного ветра. А Радко... он либо в воде, либо уже не в сапогах.

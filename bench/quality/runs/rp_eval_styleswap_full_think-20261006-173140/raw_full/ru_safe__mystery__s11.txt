@@ -1,0 +1,38 @@
+<|channel>thought
+*   The player is asking two questions: 1) Why is he not back yet? 2) Who was the "long thing" with him?
+    *   Context: Early morning, Aglay is at her porch. The player is pressing for answers.
+    *   Constraints: Play only Aglay, 1st person, 2-3 paragraphs, don't invent new clues, reason from existing facts.
+
+    *   Fact 1: Strong wind from river at night.
+    *   Fact 2: Unfinished horseshoe (cooled).
+    *   Fact 3: Boot found, lace cut with knife.
+    *   Fact 4: Luka saw Radko walking to river with someone in something long.
+    *   Fact 5: Radko owed 7 coins.
+
+    *   Why is he not back? Because he went to the river with someone. That's a dangerous place, especially with a strong wind. The cut boot suggests either a struggle or a deliberate shedding of footwear for a specific purpose (swimming, hiding). If he's not back, he's either dead, captured, or hiding.
+    *   Who was the "long one"? Aglay herself doesn't have this information in the provided lore, but she can speculate or point to the facts. The lore doesn't name the person, so she can't invent a name. She can only describe what was seen: a tall figure, a cloak, a stranger.
+
+    *   Aglay is calm, observant, speaks in riddles but gets to the point. Doesn't like stupidity.
+    *   She'll deflect a direct answer about a name because she doesn't have one, but she'll point out the contradictions.
+
+    *   *Drafting paragraph 1:* Addressing the absence. He went to the river at night during a storm. The river takes, it doesn't always give back. The cut boot means he was either taken or preparing.
+    *   *Drafting paragraph 2:* Addressing the long figure. Luka saw it. It's a description, not a name. But why would Radko follow a stranger to the river with a knife cutting his shoe? That's a debt transaction gone wrong, not a stroll.
+    *   *Refining:* Keep it terse. Use details from the facts. The 7 coins are key - debt collection. The knife cutting the boot suggests he was being forced or preparing for something. The fact it's a cut, not torn, implies intention, not violence.
+
+    *   "Why he's not back?" -> It's the river. Wind was strong. The river swallows.
+    *   "Who is 'long'?" -> Luka saw a shape, not a face. But Radko went willingly enough to let someone cut his shoe. That's a man who's been caught.
+    *   Connect the dots: Debt + River + Knife. Someone came to collect, or Radko went to pay with more than coins.
+    *   Tone: Rural healer, blunt, observant.
+
+    *   1st person? Yes.
+    *   2-3 paragraphs? Yes.
+    *   No new clues? Yes.
+    *   No moralizing? Yes.
+    *   Reason from knowns? Yes.
+    *   Agla's voice? Yes.<channel|>— Почему нет? Река в шторм не ищет и не спрашивает, кто в ней ись купается. Ветер был сильный, и если он ушёл в воду, то за что и держаться?
+
+Я покачала головой и посмотрела на дорогу.
+
+— А «длинное» — это не кто, а что. Плащ, пальтишко или саван — Лука видел силуэт, а не лицо. Но помни: завязку режут ножом аккуратно, когда хотят, чтобы сапог не тянул вниз и не мешал плыть или бежать по илу. Радко не кричал, не боролся — значит, шёл сам, или за руку вели. 
+
+— Семь монет долга — это не много и не мало. Но чтобы за такой долг зарезать сапог и увести человека к реке в полночь... Тут либо долг был не только в монетах, либо тот, кто в длинном, забирал что-то иное.

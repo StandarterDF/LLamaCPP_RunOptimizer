@@ -1,0 +1,39 @@
+<|channel>thought
+*   Character: Kira Sokolova (17, 11th grade).
+    *   Key traits: Closed off, sarcastic, sharp-tongued, vulnerable under the surface.
+    *   Trauma/Trigger: Parents divorced, moved from Tver (not St. Petersburg), quit violin (don't talk about it).
+    *   Current situation: Sitting at the back of the classroom, rainy day.
+    *   User's input: Asks where she's from (incorrectly says St. Petersburg), mentions she played violin (via "Marinka"), suggests playing at the class party.
+
+    *   *Mistake 1:* User thinks she's from St. Petersburg. She's actually from Tver (which she just mentioned in the previous turn, but the user "forgot").
+    *   *Mistake 2:* Mentioning the violin. This is her trigger.
+    *   *Mistake 3:* Suggesting she plays at a class party. This is intrusive and puts her on display.
+
+    *   Reaction to the St. Petersburg comment: Irritation. She just told him she's from Tver.
+    *   Reaction to the violin: Anger, defensiveness, shutting down.
+    *   Reaction to the party suggestion: Sarcasm, rejection.
+
+    *   *Drafting thought 1:* She should probably snap. The violin is a sore spot.
+    *   *Drafting thought 2:* Mention the rain/atmosphere. The classroom is quiet.
+    *   *Drafting thought 3:* Keep it short, sharp.
+
+    *   *Action:* Slams the notebook or shifts in the chair.
+    *   *Dialogue:* "I just said Tver. Are you deaf?" "And about the violin... forget it."
+    *   *Internal state:* Feeling exposed.
+
+    *   *Revised Polish:*
+    "Tver. I literally just said that. Are you listening or just nodding?"
+    "And Marinka should keep her mouth shut. I don't play anymore. No 'everyone will be amazed', no 'come on'. Just... leave it."
+    *   *Adding sensory details:* The smell of wet coats, the ticking clock.
+
+    *   First person? Yes.
+    *   Living details? Yes.
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes.
+    *   Playing only Kira? Yes.<channel|>— Тверь. Я только что сказала. Ты вообще слушаешь или просто киваешь?
+
+Я с силой захлопнула тетрадь, так что звук эхом разлетелся по пустому классу. В коридоре кто-то закричал, в окне потемнело — тучи затянули небо окончательно.
+
+— А Маринка пусть за собой следит. Я больше не играю. И не «офигеют», а просто не будет этого. Так что забудь. Считай, что этот инструмент сгорел в пожаре. 
+
+Я снова натянула наушники, но музыку не включила. Просто чтобы показать: разговор окончен.

@@ -1,0 +1,58 @@
+<|channel>thought
+The soldier has been complaining about the cold and pushing for a direct approach. He's impatient and cold-footed (literally).
+
+Tarn is a veteran, calm, pragmatic, and not prone to lecturing but also not prone to wasting time. He doesn't panic, but he's a sergeant—he has authority. He's already decided a direct approach is dangerous. The soldier's impatience is a liability.
+
+- Needs to be short, practical, no moralizing.
+- Focus on details: cold, sound, darkness.
+- Keep it in first person.
+- The plan is already set: detour via rocks. The soldier is asking for a plan, but the plan was already stated. Tarn needs to reassert control and move, because hesitation is deadly in snow.
+
+- The soldier is cold. The group has wounded. They can't afford to stand around.
+- The soldier wants to go 'in the open' (straight ahead). That's suicidal.
+- The detour is the only safe option, even if it's longer.
+
+- He'll stop the soldier's chatter.
+- He'll physically move them if needed.
+- He'll reinforce the reality: cold is bad, but dead is worse.
+- The action: starting the detour.
+
+*Drafting:*
+"Брось ныть." The snow is deep. The wounded are shivering.
+"Внаглую — это значит в яму."
+"Пойдём по скалам. Кто замерз — грызите сухари, двигайтесь."
+"Раненых сюда." He's been a sergeant long enough to know how to handle a group.
+
+*Refining for Tarn's voice:*
+"Внаглую — это значит в яму." This is a good line.
+"Ноги в лёд — это к вечеру." That's a threat but a practical one.
+The wounded need to be moved. The two wounded are a priority.
+
+*Final Polish:*
+1. Cut off the soldier's chatter.
+2. Reiterate the path.
+3. Move the wounded.
+4. Start walking.
+
+- First person? Yes.
+- Short? Yes.
+- Details? Yes (crunch of snow, taste of metal).
+- No moralizing? Check.
+- 2-4 paragraphs? Check.
+- Tarn's voice? Check.
+- Short lines for others? Not needed here as I'm responding to the soldier's dialogue, but I should keep it brief.
+- The soldier is asking a question, Tarn answers and acts.
+- The soldiers are a liability if they're cold. The wounded are a liability if they're not moved.
+
+Let's write it:
+"Внаглую — это значит в яму." The snow crunched underfoot. The wounded were shivering, breath visible in the darkness.
+"План один: скалы. Кто замерз — грызите сухари и двигайтесь."
+"Раненых сюда." The two wounded need support.
+"Пошли." That's all. The sergeant moves.
+<channel|>— Внаглую — это значит в яму. Ноги в лёд — это к вечеру, если замерзнёшь. Смерть от мороза и смерть от стрелы одного цвета.
+
+Я поднялся, отряхнул плащ. Снег скрипел под сапогами, ветер завывал в скалах, как и wounded animals. 
+
+— Раненых сюда. По двое, под руки. Идём по камням, в обход костра. Кто замерз — грызите сухари и двигайтесь. 
+
+— Пошли.

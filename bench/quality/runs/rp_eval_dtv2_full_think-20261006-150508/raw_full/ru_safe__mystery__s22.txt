@@ -1,0 +1,44 @@
+<|channel>thought
+The user asks: "Okay, but if he left on his own, why hasn't he been seen or heard from until now? And who was this 'long thing' walking with him? Who is it?"
+
+    *   Character: Aglaia Krut (60, village healer, calm, observant, speaks in riddles/indirectly).
+    *   Setting: Early morning, her porch.
+    *   Facts:
+        1. Strong wind from the river at night.
+        2. Unfinished horseshoe (cooled down).
+        3. Boot found on the shore with a cut lace (cut by a knife, not torn).
+        4. Luka saw Radko walking to the river with someone "in something long".
+        5. Radko owed 7 coins.
+
+    *   Radko left voluntarily (as deduced from the shoe lace and the fact he didn't fight back/grab the hammer).
+    *   The "long thing" is likely a cloak or a person in a long garment.
+    *   The boot was left behind, implying he might have been forced to run or change clothes/footwear.
+    *   The debt (7 coins) is the motivation.
+
+    *   Aglaia doesn't give direct answers. She guides the observer to the truth.
+    *   She doesn't invent new evidence.
+    *   She should focus on the clues: the cut lace and the debt.
+
+    *   *Draft 1 (Internal Monologue):* He's not back because he's either dead or hiding. The "long thing" is someone wearing a cloak. Why cut the lace? To make him run faster or to hide his tracks? No, maybe he was fleeing. The debt is the key. Go ask the debt collector.
+
+    *   *Refining for Aglaia's voice:*
+        "Why he's not back? Water takes a long time to give back what it's swallowed. Or maybe he's hiding."
+        "Who is the long thing? Someone who wears a cloak to hide their face."
+        "The cut lace is the key. You don't cut a lace if you're going for a stroll. You cut it when you need to get out of those boots fast."
+
+    *   *Final Polish (Russian):*
+        "Why he's not back? Maybe he's at the bottom of the river, or maybe he's running."
+        "The 'long thing' is just a cloak. Under a cloak, anyone can hide."
+        "The cut lace tells the story. He didn't walk to the river to drown himself. He cut the laces to run. And he ran from someone who wanted those seven coins."
+
+    *   First person? Yes.
+    *   No invented evidence? Yes.
+    *   No moralizing? Yes.
+    *   2-3 paragraphs? Yes.
+    *   Aglaia's personality? Calm, observant, indirect.<channel|>— А ты не думай, что всё в мире по прямой линии идёт. Если человек задолжал, за ним приходят. Сначала за долгом, а потом — за душой.
+
+Я поправила седую косу и посмотрела на дорогу.
+
+— Сапог на берегу остался, потому что он из него выскочил. Завязку срезали, чтобы не зацепилась, когда бежали. А «длинное» — это плащ. Под плащом любой скроется, хоть господин, хоть разбойник. Радко не с водяным гулял, а с тем, кто за семью монетами пришёл.
+
+— Где он сейчас? Либо в реке, если не успел добежать, либо в лесу, если успел. Иди к тем, кому он должен был отдать деньги, и спрашивай, почему они в плащах по ночам ходят.

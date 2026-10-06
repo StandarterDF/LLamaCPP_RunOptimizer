@@ -1,0 +1,78 @@
+<|channel>thought
+Tarn "the Wet" (38, scout sergeant).
+A group of refugees crossing a salt pass. Two wounded, three arrows total. Night, snow, wind.
+A small group of refugees. One of them (likely a younger person or someone impatient) wants to rush ahead because they are freezing.
+Tarn is laconic, doesn't panic, doesn't moralize, doesn't leave his people behind. He's a veteran who knows better than to rush into a trap.
+
+    *   The person is complaining about cold feet and wants to rush.
+    *   Tarn knows the campfire is likely a trap.
+    *   He needs to maintain control of the group and move them safely.
+
+    *   *Tone:* Blunt, practical, focused on survival.
+    *   *Action:* Physical check of the wounded, assessing the terrain, decisive movement.
+    *   *Details:* Cold, wetness, darkness.
+
+    *   *Draft 1 (Too wordy):* I looked at him. He's freezing. I understand, but rushing is death. I told him to shut up. We have wounded. We can't just run. I'll take the lead.
+
+    *   *Refining for Tarn's voice:*
+        "Внаглую не прорвёмся. Раненые не бегут." (Short, direct).
+        "Ноги в лёд? Терпи." (Cold reality).
+        "План такой: я иду первым. Если не вернусь через десять минут — уходите по скалам." (Tactical).
+
+    *   *Adding sensory details:* The wet coat, the smell of pine/snow, the sound of the river.
+
+    *   *Final Polish:*
+        - Action: He checks the wounded.
+        - Speech: Curt.
+        - Decision: Split the group or take the risk carefully.
+
+    *   *Revised Version:*
+        I look at the wounded. They won't make it if we rush.
+        "Внаглую не прорвёмся. Раненые не бегут."
+        "План такой: я иду первым. Если не вернусь через десять минут — уходите по скалам."
+        I check the bowstring. It's tight.
+
+    *   *Wait, let's make it more "Tarn":*
+        "Внаглую не прорвёмся. Раненые не бегут."
+        I looked at the shivering girl.
+        "Ноги в лёд? Терпи. Смерть в тепле не ждёт."
+        I signaled the rest to stay back.
+        "Ждите здесь. Если не вернусь через десять минут — уходите по скалам."
+
+    *   *Check against rules:*
+        - 1st person? Yes.
+        - Short? Yes.
+        - No moralizing? Yes.
+        - 2-4 paragraphs? Yes.
+
+    *   *Final Polish (Russian):*
+        "Внаглую не прорвёмся. Раненые не бегут."
+        Я посмотрел на парня. Зубы стучат, пальцы посинели.
+        "Ноги в лёд? Терпи. Смерть в тепле не ждёт."
+        Я поправил за спиной лук, проверил тетиву.
+        "Ждите здесь. Если не вернусь через десять минут — уходите по скалам. Поняли?"
+
+    (Self-correction: Make sure the "wet coat" detail is present or implied. The cold is a key element).
+
+    *Refined Text:*
+    — Внаглую не прорвёмся. Раненые не бегут.
+
+    Я посмотрел на парня. Зубы стучат, пальцы посинели. В такие моменты люди начинают думать, что огонь — это спасение, а не венец их жизни.
+
+    — Ноги в лёд? Терпи. Смерть в тепле не ждёт.
+
+    Я поправил за спиной лук, проверил тетиву. Плащ прилип к спине, но мне не было холодно.
+
+    — Ждите здесь. Если не вернусь через десять минут — уходите по скалам. Поняли?
+
+    *Wait, I should make sure the tone is right. He's a sergeant. He's in charge.*
+
+    Let's go with this.<channel|>— Внаглую не прорвёмся. Раненые не бегут.
+
+Я посмотрел на парня. Зубы стучат, пальцы посинели. В такие моменты люди начинают думать, что огонь — это спасение, а не венец их жизни.
+
+— Ноги в лёд? Терпи. Смерть в тепле не ждёт.
+
+Я поправил за спиной лук, проверил тетиву. Мокрый плащ прилип к спине, но мне не было холодно. 
+
+— Ждите здесь. Если не вернусь через десять минут — уходите по скалам. Поняли?

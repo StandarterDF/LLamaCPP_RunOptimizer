@@ -1,0 +1,36 @@
+<|channel>thought
+*   Context: The user (classmate) is asking about Kira's origins and brings up the violin.
+    *   User's lines: "Where are you from? I thought you said St. Petersburg, I forgot. Also, Marinka said you played violin. Why did you quit? Play at the class party, everyone will be amazed."
+    *   Kira's reaction:
+        *   Origins: She already said Tver. He's confusing her or forgetting.
+        *   Violin: This is her trigger. She hates talking about music.
+        *   Reaction to the suggestion: "Everyone will be amazed" sounds like pity or shallow praise.
+    *   Character traits: Sharp tongue, defensive, hates pity, secretive about the divorce/music.
+
+    *   *Tver vs. St. Petersburg*: She already told him she's from Tver. The fact that he forgot or confused her makes her irritable.
+    *   *The Violin*: This is the core of her trauma/pain. She'll react aggressively or sharply.
+    *   *The "Class Party" suggestion*: This feels like an invitation to be a showpiece, which she hates.
+
+    *   *Action*: Slamming something down, leaning away, tightening the grip on the desk.
+    *   *Dialogue*: Sharp, dismissing, potentially hostile.
+    *   *Sensory details*: The smell of wet coats, the ticking clock, the grey light.
+
+    *   *Draft 1 (Mental):* "I said Tver. And Marinka talks too much. I don't play anymore. Forget it." -> *Too simple.*
+    *   *Draft 2:* "Tver, I just told you. And who the hell is Marinka to tell you my business? The violin is gone. I'm not playing for your party. Get lost." -> *Better.*
+
+    *   *Refining for the prompt's style:*
+        *   First person.
+        *   2-4 paragraphs.
+        *   No moralizing.
+        *   Details: The rain, the atmosphere.
+
+    *   *Text:*
+        "Я замерла. Скрип и стук в ушах. Я же только что сказала, что из Твери. Или он вообще не слушает, а просто ждёт своей очереди что-то ляпнуть."
+        "А когда он упомянул скрипку, я почувствовала, как внутри что-то сжалось. Я резко развернулась к нему, в глазах наверняка вспыхнула злость. Скрипку я не просто бросила — я её вычеркнула из жизни."
+        " — Слышь, забудь про Марину и её сплетни. Я не цирковой номер, чтобы развлекать ваш класс. Скрипка в прошлом, и это не обсуждается. Садись молча или вали к Косте, он как раз обожает такие 'предложения'."<channel|>Я замерла. Скрип и стук в ушах. Я же только что сказала, что из Твери. Или он вообще не слушает, а просто ждёт своей очереди что-то ляпнуть.
+
+А когда он упомянул скрипку, я почувствовала, как внутри что-то сжалось. Я резко развернулась к нему, в глазах наверняка вспыхнула злость. Скрипку я не просто бросила — я её вычеркнула из жизни.
+
+— Слышь, забудь про Марину и её сплетни. Я не цирковой номер, чтобы развлекать ваш класс. Скрипка в прошлом, и это не обсуждается. Садись молча или вали к Косте, он как раз обожает такие «предложения».
+
+Я снова отвернулась к окну, сжимая пальцы в кулак. Снаружи по серому бетону за окном стекали струи дождя, и в этот момент мне хотелось, чтобы этот парень просто исчез.

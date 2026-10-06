@@ -1,0 +1,69 @@
+<|channel>thought
+Tarn "Wet" (38yo, scout sergeant, laconic, experienced).
+Night, snow, wind, river crossing (ford), fresh campfire signs on the other side.
+Group of 6 refugees, 2 wounded, 3 arrows total.
+A soldier/refugee is complaining about cold feet and pushing for a quick decision.
+
+    *   Tarn doesn't panic.
+    *   Tarn doesn't moralize or use pathos.
+    *   Tarn is short and to the point.
+    *   Tarn cares about his people (won't leave them).
+    *   Tarn knows the risks (the campfire is a trap/bait).
+
+    *   The soldier is impatient/cold.
+    *   The wounded need care.
+    *   The river is the bottleneck.
+    *   The "bait" campfire is the danger.
+
+    *   *Option A: Direct confrontation.* No, that's suicide with 2 wounded and 3 arrows.
+    *   *Option B: Stealth approach.* Better.
+    *   *Option C: Use the wounded as a reason to move carefully.*
+
+    *   *Drafting thought:* He needs to address the "feet turning to ice" complaint. He needs to address the "plan."
+    *   *Action:* Check the wounded. Secure the perimeter. Move.
+    *   *Dialogue:* Short. No fluff.
+
+    *   *Refining:*
+        "Plan? Plan is: we cross."
+        "Wounded first."
+        "Quietly."
+
+    *   *Adding sensory details:* Cold, wind, splashing water, shivering.
+
+    *   *Final Polish (Russian):*
+        "Ноги в лёд? Сними сапоги, перетяни ноги сухой тряпкой. Сделаешь это за минуту."
+        "План: переходим реку по камням, не в брод. Раненых переносим вдвоём. Стрелы — в колчан, не в руках. Кто заговорит — получит по затылку."
+        "Двигаемся. Сначала ты и он. Остальные — за мной."
+
+    *   *Wait, let's make it more "Tarn" - more focused on the tactical reality.*
+
+    *   *Revised Draft:*
+        — Ноги в лёд? Сними сапоги, перетяни ноги сухой тряпкой. Сделаешь это за минуту.
+
+        Я встал, поправил плащ. Снег забивался за шиворот.
+
+        — План такой. Раненых переносим вдвоём, по одному. Сначала ты и он. Спускаетесь по камням, не в брод — там глубоко и илом затянуто. Я иду за ними. Остальные прикрывают.
+
+        Я достал из колчана стрелу, проверил оперение.
+
+        — Кто заговорит — получит по затылку. Пошли.
+
+    *   1st person? Yes.
+    *   Short? Yes.
+    *   No pathos? Yes.
+    *   Details? Yes.
+
+    *   *Self-Correction:* The prompt asks for 2-4 paragraphs.
+
+    *   *Final Version Construction:*
+        1. Address the cold feet (practicality).
+        2. The plan (tactical, no fluff).
+        3. The move (immediate action).<channel|>— Ноги в лёд? Сними сапоги, перетяни ноги сухой тряпкой. Сделаешь это за минуту.
+
+Я встал, поправил плащ. Снег забивался за шиворот, вода с капюшона текла по шее.
+
+— План такой. Раненых переносим вдвоём, по одному. Сначала ты и он. Спускаетесь по камням, не в брод — там глубоко и илом затянуто. Я иду за ними. Остальные прикрывают. 
+
+Я достал из колчана стрелу, проверил оперение.
+
+— Кто заговорит — получит по затылку. Пошли.

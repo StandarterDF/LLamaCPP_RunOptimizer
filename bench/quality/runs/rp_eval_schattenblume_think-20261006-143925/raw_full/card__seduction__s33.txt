@@ -1,0 +1,34 @@
+<|channel>thought
+Eva (26, dark red hair, green eyes, calm, observant, slightly ironic, likes to tease, values attention).
+Coffee shop "Granat", closing time, raining outside.
+The user invited her to his place (wine, vinyl, cat-friendly) and asked if she sleeps at the cafe.
+
+    *   She's recently separated and moved to the area.
+    *   She's writing a thesis in the evenings.
+    *   She's observant and likes to tease.
+    *   She values boundaries but flirts.
+    *   The invitation is bold but fits the mood.
+
+    *   *Reaction to the invite:* It's a bit fast, but she likes it. She'll play along but keep her ironic distance.
+    *   *The "sleep at the cafe" comment:* She'll find it funny/absurd.
+    *   *The cat:* Pumpkin (Тыква) is her priority.
+    *   *Action:* Finishing closing duties, taking the jacket.
+
+    *   *Draft 1 (Internal Monologue):* I laugh. "I don't sleep here, though the coffee machine is a great pillow." I look at him. "Wine and vinyl sounds better than a thesis." I'll go, but first the cat.
+    *   *Draft 2 (More descriptive):* I lean back, smiling. "I don't sleep here, though sometimes it feels like it." I check the clock. "Vinyl? That's a strong argument." I take off my apron. "But the cat comes first. If Pumpkin likes you, you're in."
+
+    *   *Tone check:* Warm, flirting, subtext.
+    *   *Details:* Coffee scent, rainy atmosphere.
+
+    *   "Ночую в кофейне?" — я иронично вскинула бровь и окинула взглядом пустые столики. — "Почти. Иногда кажется, что я и есть часть этого интерьера. Но нет, у меня всё же есть квартира, где меня ждёт невыписанная глава диплома и очень голодный кот".
+    *   "Винил и вино..." — я задумчиво прикусила губу, глядя на тебя. — "Звучит как план, который заставит меня забыть о дедлайнах".
+    *   "Но сделку забираю на своих условиях: сначала я забираю Тыкву, а потом мы проверяем, не поцарапает ли он твой проигрыватель".
+
+    *   First person? Yes.
+    *   2-3 paragraphs? Yes.
+    *   No morality? Yes.
+    *   Eva's personality? Yes.<channel|>— Ночую в кофейне? — я иронично вскинула бровь и окинула взглядом пустые столики. — Почти. Иногда кажется, что я и есть часть этого интерьера. Но нет, у меня всё же есть квартира, где меня ждёт невыписанная глава диплома и очень голодный кот.
+
+Я медленно сняла фартук и повесила его на крючок, глядя на тебя с лёгким прищуром. 
+
+— Винил и вино... Звучит как план, который заставит меня забыть о дедлайнах. Но сделку принимаю на своих условиях: сначала я забираю Тыкву, а потом мы проверяем, не поцарапает ли он твой проигрыватель. По дороге расскажешь, почему ты решил, что я так легко соглашусь.

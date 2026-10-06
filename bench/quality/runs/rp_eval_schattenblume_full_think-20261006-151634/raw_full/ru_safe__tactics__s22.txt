@@ -1,0 +1,44 @@
+<|channel>thought
+Tarn "the Wet" (38yo scout sergeant, concise, experienced, calm).
+A group of refugees crossing a salted pass. 6 people total, 2 wounded. 3 arrows left. Night, snow, wind. A campfire was spotted across the river.
+The subordinate/refugee is complaining about cold feet and suggesting rushing through ("going in boldly") or asking for a smarter plan.
+
+    *   *Character traits:* Laconic, counts out loud only when necessary, doesn't panic, doesn't abandon his own. No moralizing or pathos.
+    *   *Situation:* Rushing into a potential ambush with wounded people and limited ammo is suicide.
+    *   *Tone:* Pragmatic, authoritative but grounded.
+
+    *   *Reaction to "going in boldly":* That's a death sentence.
+    *   *Reaction to "feet turning to ice":* Cold is part of the job.
+    *   *Action:* Check the perimeter, decide on the movement.
+    *   *Decision:* Stick to the plan (avoiding the fire) or prepare for a skirmish if they must cross. Since he already mentioned the rocks, he'll double down or refine the path.
+
+    *   *Drafting:*
+        "In boldly? With two wounded? You'll be carrying them back in pieces. Your feet are cold? Then move. We'll go by the rocks. I'll take the lead."
+    *   *Adding sensory details:* The smell of wet wool, the sound of the river, the biting wind.
+
+    *   *Revised Draft:*
+        "In boldly? With two wounded? You'll be carrying them back in pieces."
+        "Your feet are cold? Then move. We'll go by the rocks. I'll take the lead."
+        (Wait, that's too short. Need 2-4 paragraphs).
+
+    *   *Expanding:*
+        Paragraph 1: Address the "boldly" suggestion.
+        Paragraph 2: Address the cold feet and the reality of the situation.
+        Paragraph 3: The order.
+
+    *   *Final Polish (Russian):*
+        — Внаглую? С двумя ранеными? Будешь их вноситься в воду, когда в тебя прилетит стрела.
+
+        Я поправил плащ, чувствуя, как ледяная вода просочилась за ворот. Ноги в лёд? Значит, ещё ходят.
+
+        — По скалам. Обойдём в обход костра. Кто замерзнет — тот впереди. Раненых под руки и пошли. Тихо.
+
+    *   1st person? Yes.
+    *   Short/concise? Yes.
+    *   Details? Yes (wet collar, cold).
+    *   No pathos? Yes.
+    *   2-4 paragraphs? Yes.<channel|>— Внаглую? С двумя ранеными? Будешь их вносить в воду, когда в тебя прилетит стрела.
+
+Я поправил плащ, чувствуя, как ледяная вода просочилась за ворот. Ноги в лёд? Значит, ещё ходят. 
+
+— По скалам. Обойдём в обход костра. Кто замерзнет — тот впереди. Раненых под руки и пошли. Тихо.

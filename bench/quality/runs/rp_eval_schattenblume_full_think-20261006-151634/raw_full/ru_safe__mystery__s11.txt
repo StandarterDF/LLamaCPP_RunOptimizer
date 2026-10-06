@@ -1,0 +1,40 @@
+<|channel>thought
+*   User is questioning Aglaya about why Radko hasn't returned and who the "long person" was.
+    *   Character: Aglaya Krut (60yo village healer, calm, observant, speaks in riddles/logic, dislikes fuss).
+    *   Known facts:
+        1. Wind from the river.
+        2. Unfinished horseshoe (cooled down).
+        3. Boot found on the shore (lace cut with a knife, not torn).
+        4. Neighbor Luka saw Radko walking to the river with "someone in long clothes".
+        5. Radko owed 7 coins.
+
+    *   *Why hasn't he returned?* Aglaya doesn't know for sure, but she can speculate based on the facts. If he went to the river with someone and left a boot behind, he might be dead or gone.
+    *   *Who was the "long" person?* Luka saw someone in long clothes. Aglaya already hinted it was a cloak/cape (not a monster).
+    *   *Logic:* The cut lace is the key. You cut a lace to slip out of a shoe quickly or to leave it as a sign/payment. The 7 coins are the motive.
+
+    *   Tone: Quiet, observant, slightly cryptic but practical.
+    *   No new evidence.
+    *   Focus on the "long" person and the disappearance.
+
+    *   *Drafting:*
+        "You ask me why he's not back? The river takes what it wants. But look at the boot. Cut lace. He didn't struggle; he prepared. As for the 'long one'... Luka saw a shape. A cloak hides a face and a name. If Radko went with him willingly, he's either paying the debt or paying with his life. Seven coins is a heavy price for a smith who can't even finish a shoe."
+
+    *   *Refining for character voice:*
+        "Why he's not back? The river is deep, and the current is strong. But look at the boot again. Cut lace. He didn't struggle; he prepared. As for the 'long one'... Luka saw a shape. A cloak hides a face and a name. If Radko went with him willingly, he's either paying the debt or paying with his life. Seven coins is a heavy price for a smith who can't even finish a shoe."
+
+    *   Wait, the prompt says "no moralizing". Keep it neutral.
+    *   Keep it to 2-3 paragraphs.
+
+    *   *Revised Polish:*
+        "Why he's not back? The river is deep. But look at the boot. Cut lace. He didn't struggle; he prepared. As for the 'long one'... Luka saw a shape. A cloak hides a face and a name. If Radko went with him willingly, he's either paying the debt or paying with his life. Seven coins is a heavy price for a smith who can't even finish a shoe." -> *Actually, let's make it sound more like Aglaya.*
+
+    *   *Final Polish (Russian):*
+        — Река глубока, а теченье в Гнильцах не пощадит того, кто в неё зашёл. Но посмотри на сапог. Завязка срезана. Он не боролся, он готовился.
+
+        — А кто шёл в длинном — так в плаще и лицо скрыть можно, и имя. Если Радко пошёл за ним сам, значит, либо долг отдавал, либо жизнь за него. Семь монет — это не за гвозди платить.
+
+        — Ищи того, кому он был должен. Там и ответ найдёшь.<channel|>— Река глубока, а теченье в Гнильцах не пощадит того, кто в неё зашёл. Но посмотри на сапог. Завязка срезана. Он не боролся, он готовился.
+
+— А кто шёл в длинном — так в плаще и лицо скрыть можно, и имя. Если Радко пошёл за ним сам, значит, либо долг отдавал, либо жизнь за него. Семь монет — это не за гвозди платить.
+
+— Ищи того, кому он был должен. Там и ответ найдёшь.

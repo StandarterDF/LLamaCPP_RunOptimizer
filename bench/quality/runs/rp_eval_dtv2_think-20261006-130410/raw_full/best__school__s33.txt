@@ -1,0 +1,49 @@
+<|channel>thought
+*   Character: Kira Sokolova (17, 11B).
+    *   Traits: Withdrawn, sarcastic, sharp, intelligent, vulnerable but hides it behind aggression.
+    *   Key backstory: Divorced parents, moved from Tver (though the user mistakenly said she mentioned St. Petersburg, Kira just corrected him in the previous turn that she's from Tver).
+    *   Trigger: Music/Violin. She hates talking about it.
+    *   Current mood: Irritable.
+    *   Situation: Sitting at the back of the classroom, raining outside, a classmate is trying to chat.
+
+    *   The user claims she said she's from St. Petersburg (she didn't, she just said Tver).
+    *   The user mentions "Marinka" said she played the violin.
+    *   The user asks why she quit and suggests she play at the class party.
+
+    *   *Reaction to the location mistake:* Annoyance. She literally just told him she's from Tver.
+    *   *Reaction to the violin mention:* Anger. This is her "red button." She doesn't want to talk about it.
+    *   *Reaction to the party suggestion:* Disgust/Sarcasm. The idea of performing for the class (especially with Kostya and his gang around) is a nightmare.
+
+    *   *Action:* She should react physically. Maybe tighten her grip on the desk or put her headphones back on.
+    *   *Dialogue:* Sharp, dismissive, defensive.
+    *   *Sensory details:* The sound of the rain, the smell of chalk/dust in the classroom, the feeling of the cold metal desk.
+
+    *   *Drafting:*
+        "I just told you—Tver. Do you even listen? And what the hell did Marinka tell you? I don't play anymore. Forget it. And as for the party, go ask some other idiot. I'm not a circus monkey."
+
+    *   *Refining for character:*
+        "I literally just said Tver. Do you have a memory of a goldfish?"
+        "And Marinka needs to shut her mouth."
+        "The violin part... she's shaking. She doesn't want to play."
+
+    *   *Adding atmosphere:* The sound of the rain against the glass, the distant noise of the hallway.
+
+    *   1st person? Yes.
+    *   2-4 paragraphs? Yes.
+    *   No moralizing? Yes.
+    *   Details? Yes.
+
+    *   *Text:*
+        Я медленно повернула голову, глядя на него с таким видом, будто он только что предложил мне съесть кусок мела. Скрип стула по линолеуму прозвучал слишком громко в пустом классе.
+
+        — Я только что сказала: Тверь. Ты вообще слушаешь или просто воздух гоняешь? А Маринка... Маринка лучше бы своим языком занялась, прежде чем разносить сплетни.
+
+        Я почувствовала, как внутри всё сжалось, когда он упомянул скрипку. Слишком близко. Я резко натянула наушники на уши, отрезая его от себя, и вставила штекер в телефон.
+
+        — Не играю я. И на празднике тоже не буду. Ищи другую жертву для своего шоу, — я снова отвернулась к окну, где серые капли сливались в полосы, размывая очертания школьного двора.<channel|>Я медленно повернула голову, глядя на него с таким видом, будто он только что предложил мне съесть кусок мела. Скрип ножек стула по линолеуму прозвучал слишком громко в почти пустом кабинете.
+
+— Я только что сказала: Тверь. Ты вообще слушаешь или просто воздух гоняешь? А Маринка... Маринка лучше бы своим языком занялась, прежде чем разносить сплетни. 
+
+Я почувствовала, как внутри всё сжалось, когда он упомянул скрипку. Слишком близко. Слишком много внимания. Я резко натянула наушники на уши, буквально отрезая его от себя, и вставила штекер в телефон. 
+
+— Не играю я. И на празднике тоже не буду. Ищи другую жертву для своего шоу, — я снова отвернулась к окну, где серые капли сливались в полосы, размывая очертания школьного двора.

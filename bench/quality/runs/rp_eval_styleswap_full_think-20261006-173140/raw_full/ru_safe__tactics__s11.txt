@@ -1,0 +1,54 @@
+<|channel>thought
+Sergeant Tarn, the Wet, 38yo recon sergeant, pragmatic, laconic, experienced. This is a tense moment: snow, night, refugees, wounded, limited ammo, potential ambush.
+Sarcastic, impatient, cold feet. Wants to rush.
+Wants to know if there's a plan or if they should charge through.
+
+    *   Tarn is not a reckless type. He's a recon sergeant - he thinks, observes, and acts cautiously.
+    *   "Going in boldly" is not his style when wounded people are involved and ammunition is scarce.
+    *   The younger soldier is complaining about cold feet - a distraction but also a sign of morale.
+    *   Tarn's plan is already decided: flank via rocks. The young soldier is trying to talk him out of it because it's colder/slower.
+
+    *   First person.
+    *   Short, practical, sensory details.
+    *   No moralizing or pathos.
+    *   2-4 paragraphs.
+    *   Tarn's voice: clipped, focused on the mission, no-nonsense.
+
+    *   *Action:* He's already been thinking about the detour. He's scanning the water, the far bank.
+    *   *Response:* Dismiss the recklessness, reinforce the plan, maybe give a practical tip for the cold feet.
+    *   *Detail:* The sound of rushing water, the weight of the wet cloak, the kindling of firelight.
+
+    *   Tarn is already moving. He's not debating; he's executing.
+    *   "Going in boldly" means a fight, and with wounded, it's a massacre.
+    *   Tarn's solution: The flank. The rocks. The long way. The safe way.
+    *   The cold feet comment — Tarn has been in worse. So he'll acknowledge it but push forward.
+
+    *   "Бросаться — это для тех, кому нечего терять. У нас раненые." (Rush is for those with nothing to lose. We have wounded.)
+    *   "План один: скалы." (One plan: rocks.)
+    *   "Ноги в тепле будут, когда дойдём." (Feet will be warm when we arrive.)
+    *   Actually, he'd just move them.
+
+    *   Tarn's voice: "Внаглую — это когда тебя не ждут." (Boldly is when they don't expect you.)
+    *   The reality: They are been spotted or could be.
+    *   The action: Start moving, checking the wounded.
+
+    1. Address the recklessness directly.
+    2. Reiterate the detour via rocks.
+    3. Command movement, checking the wounded first.
+    4. Sensory detail: The cold, the water.
+
+    *Self-Correction:* Don't over-explain. Keep it terse.
+
+    *Draft:*
+    — Внаглую — это когда тебя не ждут. А нас ждут. Если я увидел костёр, значит и они нас увидели, когда мы ещё в лесу были.
+
+    Я встал, отряхнул снег с колен и посмотрел на раненых. У одного закипала лихорадка — зубы стучат громче ветра.
+
+    — План один: скалы. Долго, морозит, но дойдём. Кто за кричит, тот и ищет дорогу назад. Пошли, пока луна не вышла и не подсветила нас идиотам у костра.
+
+    *Refining:* The tone is right. Short, sensory, no pathos. The sergeant is moving the group.
+<channel|>— Внаглую — это когда тебя не ждут. А нас ждут. Если я увидел костёр, значит и они нас заметили ещё в лесу.
+
+Я встал и посмотрел на раненых. У одного закипала лихорадка — зубы стучат громче ветра. Сапоги у всех и так промокли, морозить будут одинаково и на дороге, и на скалах.
+
+— План один: скалы. Долго, морозит, но дойдём. Кто закричит — тот и ищет дорогу назад. Пошли, пока луна не вышла и не подсветила нас идиотам у костра.

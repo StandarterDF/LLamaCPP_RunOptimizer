@@ -1,0 +1,53 @@
+<|channel>thought
+*   Current State: Kira is sitting at the back desk, it's the end of the day, raining outside.
+    *   Input: The user asks where she's from (mentions St. Petersburg, contradicting her previous mention of Tver), mentions "Marinka" told him she played the violin, and asks why she quit and suggests playing at a class party.
+    *   Key triggers for Kira:
+        1.  Misremembering her hometown (Tver vs. St. Petersburg).
+        2.  Mention of the violin (traumatic/emotional topic).
+        3.  Suggestion to play in public (nightmare scenario for her).
+
+    *   *Reaction to the location error:* She already said Tver. The fact that he thinks it's St. Petersburg annoys her.
+    *   *Reaction to the violin:* This is the core wound. She hates talking about it. The suggestion to play at a "class party" is offensive and naive.
+    *   *Body language:* Tensing up, maybe gripping the desk, avoiding eye contact, sharp tone.
+
+    *   First person.
+    *   Vivid details (sounds, environment).
+    *   No moralizing.
+    *   Short and sharp.
+
+    *   *Drafting the response:*
+        "St. Petersburg? I said Tver. Listen carefully."
+        "And where did Marinka get that info? Who's talking behind my back?"
+        "The violin... I quit. I'm not playing. Especially not for this class. Get lost."
+
+    *   *Adding detail:* The sound of the rain, the scratch of the pen, the tension.
+
+    *   *Refining:*
+        "С чего ты решил, что я из Питера? Я сказала: Тверь. Запомни уже." (Sharp)
+        "А Маринка... откуда она знает? Сплетничать любит, да?" (Suspicious)
+        "Скрипка? Бросила. И не собираюсь возвращаться. Тем более для этого сброда." (Bitter)
+        "На празднике класса? Ты серьёзно? Чтобы Костя и его придурки в меня смеялись? Иди в жопу." (Angry)
+
+    *   *Final Polish (incorporating the prompt's requirements):*
+        I'll describe her reaction: clenching the desk, the feeling of the headphones, the noise of the corridor.
+
+    *   *Text:*
+        Я почувствовала, как внутри всё закипало. Сначала он путает города, а потом влетает в самую болевую точку. Пальцы непроизвольно сжали край парты так, что костяшки побелели.
+
+        — Я сказала Тверь. Т-в-е-р-ь. Слышишь? И откуда Маринка вообще в курсе? Опять сплетни по школе разносит?
+
+        Я резко развернулась к нему, в глазах была злость.
+
+        — А насчет скрипки... я больше не играю. И не собираюсь. Тем более для этого сброда, чтобы Костя и его компания потом неделю ржали. Иди в жопу с такими предложениями.
+
+    *   Roleplay as Kira? Yes.
+    *   1st person? Yes.
+    *   Details (sounds, weather)? Added.
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes.<channel|>Я почувствовала, как внутри всё закипает. Сначала он путает города, а потом влетает в самую болевую точку. Пальцы непроизвольно сжали край парты так, что костяшки побелели. 
+
+— Я сказала: Тверь. Т-в-е-р-ь. Запомни уже, или у тебя память как у рыбки? И откуда Маринка вообще в курсе? Опять сплетни по школе разносит?
+
+Я резко развернулась к нему, в глазах была злость. 
+
+— А насчет скрипки... я больше не играю. И не собираюсь. Тем более для этого сброда, чтобы Костя и его компания потом неделю ржали. Иди в жопу с такими предложениями.

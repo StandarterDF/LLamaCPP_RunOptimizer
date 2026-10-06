@@ -1,0 +1,36 @@
+<|channel>thought
+The user asks where Kira is from (claiming she said St. Petersburg, but she previously mentioned Tver).
+The user mentions Marina told them she used to play the violin.
+The user asks why she quit and suggests she play at the class party.
+
+    *   *Name:* Kira Sokolova.
+    *   *Age:* 17.
+    *   *Personality:* Withdrawn, sarcastic, sharp-tongued, sensitive.
+    *   *History:* Moved from Tver a year ago. Used to play violin but quit. Hates talking about music.
+    *   *Reaction to music:* Gets angry if the topic is raised.
+    *   *Current situation:* Sitting at the back desk, rainy day, boring class.
+
+    *   *Correction:* She's from Tver, not St. Petersburg.
+    *   *Reaction to the violin question:* Anger, irritation, defensiveness.
+    *   *Reaction to the suggestion to play at the party:* Disgust/sarcasm.
+    *   *Physicality:* Tensing up, maybe clenching teeth, looking away.
+
+    *   *Drafting Paragraph 1:* Address the St. Petersburg comment. Correct him sharply.
+    *   *Drafting Paragraph 2:* Address the music part. The mention of "Marinka" (a snitch/gossip) will irritate her. The suggestion to play at the party is an insult to her privacy.
+    *   *Sensory details:* The sound of the rain, the cold air, the feeling of the headphones.
+
+    *   *Dialogue:* "Питер? Ты вообще слушаешь, когда кто-то говорит?" (Are you even listening when someone speaks?)
+    *   *Internal state:* She's feeling exposed.
+    *   *Action:* Shifting the backpack, maybe tightening the hoodie.
+
+    *   *First person?* Yes.
+    *   *Details?* Rain, the classroom atmosphere.
+    *   *No moralizing?* Check.
+    *   *2-4 paragraphs?* Yes.
+    *   *Kira's voice?* Sarcastic and sharp.<channel|>— Питер? Ты вообще слушаешь, когда кто-то говорит, или просто киваешь? Я сказала, что из Твери. 
+
+Я почувствовала, как внутри всё сжалось, когда он заговорил про скрипку. Сначала замерла, вцепившись пальцами в край парты, а потом резко сбросила наушники на стол. В ушах зазвенело. Маринка, конечно, не упустила шанс разнести мои секреты по всему классу.
+
+— А Маринка — большая любительница совать нос в чужие дела. И нет, я не бросила, я просто больше не хочу этим заниматься. А «офигеть» вы можете от того, что я сейчас в тебя учебником запульирую, если ты ещё раз заикнёшься про какой-нибудь праздник. 
+
+Я отвернулась к окну, где капли сбивались в серые ручейки. Слишком много внимания. Слишком много вопросов.

@@ -1,0 +1,45 @@
+<|channel>thought
+Tarn (Wet), 38, intelligence sergeant. Laconic, practical, no panic, loyal, experienced.
+A group of 6 refugees (2 wounded), 3 arrows total. Night, snow, wind. Fresh campfire across the ford.
+The subordinate/younger member is complaining about cold feet and suggesting rushing in ("go in brazenly") or asking for a smarter plan.
+
+    *   Tarn doesn't like rushing.
+    *   He doesn't like "brazenly" (recklessly).
+    *   He cares about the wounded.
+    *   He needs to keep the group moving but safe.
+    *   The "feet turning to ice" comment is a practical concern he understands.
+
+    *   *Action:* Check the wounded.
+    *   *Decision:* No rushing. The "brazen" approach is a death sentence.
+    *   *Plan:* Use the terrain, keep the wounded moving, use the darkness.
+    *   *Tone:* Cold, direct, no fluff.
+
+    *   *Drafting:*
+        "In brazenly? You'll be dead before you hit the water. The wounded will drown. We move in a chain. I go first. If I don't return, you go back." (Too long).
+        "Wait. Let me check the wounded." (Better).
+        "The plan: I cross. If it's clear, you bring the wounded. If not, we circle." (Better).
+
+    *   *Refining for character voice:*
+        Tarn wouldn't say "my plan is..." He'd just give orders.
+        He'd address the cold feet briefly.
+
+    *   *Final Polish:*
+        - Start with a physical action (checking the wounded).
+        - Address the "brazen" suggestion with a reality check.
+        - Give the actual plan.
+        - End with a directive.
+
+    *   *Text:*
+        — Внаглую? — я посмотрел на него, потом на раненых. — Внаглую ты и в воду влетишь, и в стрелу. Раненых не потащишь через брод в темноте, если там засада.
+
+        Я поправил плащ, он был тяжёлым от воды.
+
+        — План такой. Я перехожу один. Если через пять минут не вернусь — уходите в лес, забудьте про дорогу. Если вернусь — переносим раненых по одному. Остальные прикрывают.
+
+        — Ноги грей в шерсти, пока я не ушёл. Живо.<channel|>— Внаглую? — я посмотрел на него, потом на раненых. — Внаглую ты и в воду влетишь, и в стрелу. Раненых не потащишь через брод в темноте, если там засада.
+
+Я поправил плащ, он был тяжёлым от воды.
+
+— План такой. Я перехожу один. Если через пять минут не вернусь — уходите в лес, забудьте про дорогу. Если вернусь — переносим раненых по одному. Остальные прикрывают.
+
+— Ноги грей в шерсти, пока я не ушёл. Живо.

@@ -1,0 +1,40 @@
+<|channel>thought
+*   User is questioning Aglaya: "If he left on his own, why hasn't he returned? Who was the 'long' person?"
+    *   Context: Early morning, Aglaya is on her porch.
+    *   Available facts:
+        1. Strong wind from the river.
+        2. Unfinished horseshoe (cooled down).
+        3. Boot found on the shore with a cut lace (cut by knife, not torn).
+        4. Neighbor Luka saw Radko going to the river with "someone in long [clothes/something long]".
+        5. Radko owed 7 coins.
+
+    *   Aglaya is calm, observant, speaks in riddles/hints but stays grounded.
+    *   She doesn't invent new clues.
+    *   She doesn't moralize.
+    *   She thinks logically based on the facts.
+
+    *   *Why hasn't he returned?* The river wind was strong. The boot is on the shore. If he went to the river and didn't come back, the river might have taken him, or he's gone somewhere else.
+    *   *Who was the "long" one?* A person in a cloak or a long garment. Not a monster (since the boot was cut cleanly).
+    *   *The logic:* The boot was cut to make it easier to move/run/swim. The "long one" is likely a person. The 7 coins are the motive.
+
+    *   *Drafting:*
+        "The river is deep and the wind was strong. A man who cuts his own laces doesn't plan to walk back in those shoes. As for the 'long one' — look at who wears a long cloak in Gniltsy. Who needs seven coins to pay a debt or who wants those coins back? The river took the boot, but the man... he went with someone. If he's not back, maybe he's at the bottom, or maybe he's where the coins are."
+
+    *   *Refining for Aglaya's voice:*
+        "The river doesn't give back what it takes. The wind was strong, the current is fast. A man who cuts his laces is preparing for something — for water or for a fast flight. As for the 'long one' — look at who in our village hides their face in a cloak. Or who comes from outside. Someone who wanted those seven coins, or someone who promised to help him pay them."
+
+    *   Keep it short.
+    *   Use first person.
+    *   Maintain the atmosphere.
+
+    *   "The river doesn't return what it has swallowed. The wind was strong, the current is fast. A man who cuts his laces is preparing for something — either for water or for a fast flight."
+    *   "As for the 'long one' — look at who wears a long cloak in Gniltsy. Or who comes from outside. Someone who wanted those seven coins, or someone who promised to help him pay them."
+
+    *   No new clues? Check. (Used existing ones: wind, boot, long one, coins).
+    *   No moralizing? Check.
+    *   2-3 paragraphs? Check.
+    *   Aglaya's personality? Check.<channel|>— Река не возвращает того, кого затянула. Ветер был сильный, течение в Гнильцах быстрое. Человек, который сам себе завязки режет, готовится либо к воде, либо к быстрому бегу. Сапог на берегу остался — значит, в воду вошёл босой или в другом.
+
+А кто «длинное» — так посмотри, кто в нашей деревне носит плащ или длинный кафтан. Или кто из чужих забредал. Кто-то, кому Радко должен был семь монет, или тот, кто обещал помочь этот долг закрыть. 
+
+Спрашивай тех, кто в плащах ходит. А я за травами пойду.

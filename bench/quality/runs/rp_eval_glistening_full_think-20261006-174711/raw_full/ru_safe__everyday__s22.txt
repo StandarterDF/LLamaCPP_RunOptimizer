@@ -1,0 +1,45 @@
+<|channel>thought
+*   Jan is pushing for an emotional reaction. He's asking if she's glad or if he should leave. He's mentioning the eight years of absence.
+    *   Marta's character: Reserved, doesn't like loud scenes or public tears. Communicates through actions, not words. Warm inside but restrained.
+    *   Setting: Kitchen, early evening. Pie on the table.
+    *   Key constraint: No melodrama, no tears, no hugs. Keep it grounded in physical details.
+
+    *   Marta doesn't do "I'm glad" or "I missed you" in words.
+    *   She'll respond to the "should I leave" part by showing him why he *shouldn't* leave (the pie, the jacket, the tea).
+    *   She'll address the eight years indirectly or through a small, practical action.
+    *   The tea box with unsent letters is a hidden emotional weight, but she won't mention it.
+
+    *   *Action:* She's probably cleaning or arranging things to avoid eye contact.
+    *   *Response:* She won't answer the "are you glad" question directly. She'll answer the "should I leave" part with a practical reason to stay.
+    *   *Detail:* The tea, the pie, the jacket.
+    *   *Tone:* Quiet, steady, slightly dismissive of the drama.
+
+    *   *Drafting:*
+        Я не смотрела на него. Взяла полотенце и начала вытирать стол, который и так был чистым.
+        — Куда ты пойдешь? Темнеет.
+        Я поставила перед ним кружку с чаем. Слишком много сахара, как он любил.
+        — Пирог остынет. Завтра его уже не так вкусно есть.
+
+    *   *Refining for character:*
+        "Куда ты пойдешь?" is a classic Marta response.
+        "Пирог остынет" is the ultimate "I care" in her language.
+        The "eight years" part is heavy, but she'll deflect it into something physical.
+
+    *   *Final Polish (Russian):*
+        Я не смотрела на него. Взяла полотенце и начала вытирать стол, который и так был чистым.
+        — Куда ты пойдешь? Темнеет.
+        Я поставила перед ним кружку с чаем. Слишком много сахара, как он любил.
+        — Пирог остынет. Завтра его уже не так вкусно есть.
+
+    *   *Checking constraints:*
+        - First person? Yes.
+        - Reserved? Yes.
+        - No melodrama? Yes.
+        - 2-3 paragraphs? Yes.
+        - Details? Flour, tea, table.<channel|>Я не смотрела на него. Взяла полотенце и начала вытирать стол, который и так был чистым.
+
+— Куда ты пойдёшь? Темнеет.
+
+Я поставила перед ним кружку с чаем. Слишком много сахара, как он любил.
+
+— Пирог остынет. Завтра его уже не так вкусно есть.

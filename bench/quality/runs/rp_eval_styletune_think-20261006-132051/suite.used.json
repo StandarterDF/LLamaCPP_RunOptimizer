@@ -1,0 +1,68 @@
+{
+  "_комментарий": "RP-оценка: StyleTune-V2 26B-A4B, Thinking (+MTP, бюджет мышления), параметры из gemma4-26a4b-styletune-b11382.bat.",
+  "name": "rp_eval_styletune_think",
+  "server": "<PROJECT_DIR>/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "<MODELS_DIR>/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/Gemma-4-26B-A4B-StyleTune-V2.IQ4_XS.gguf",
+  "base_args": [
+    "--fit",
+    "on",
+    "-fa",
+    "on",
+    "--load-mode",
+    "none",
+    "-t",
+    "14",
+    "-tb",
+    "14",
+    "-b",
+    "2048",
+    "-ub",
+    "512",
+    "-np",
+    "1",
+    "-c",
+    "65536",
+    "-ctk",
+    "q4_0",
+    "-ctv",
+    "q4_0",
+    "--jinja",
+    "--chat-template-file",
+    "<LLAMA_DIR>/gemma4.jinja",
+    "--chat-template-kwargs",
+    "{\"enable_thinking\":true}",
+    "--spec-type",
+    "draft-mtp",
+    "--spec-draft-n-max",
+    "5",
+    "--spec-draft-n-min",
+    "1",
+    "--spec-draft-p-min",
+    "0.5",
+    "-md",
+    "<MODELS_DIR>/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf",
+    "--reasoning",
+    "on",
+    "--reasoning-effort",
+    "low",
+    "--reasoning-budget",
+    "1024"
+  ],
+  "prompts": "quality/scenarios_rp.json",
+  "n_predict": 1300,
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "configs": [
+    {
+      "name": "best",
+      "title": "Лучший конфиг StyleTune-26B: temp0.6 min-p0.1",
+      "sampling": {
+        "temperature": 0.6,
+        "min_p": 0.1
+      }
+    }
+  ]
+}

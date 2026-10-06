@@ -1,0 +1,48 @@
+<|channel>thought
+Tarn "Wet" (Sgt. Recon).
+A group of refugees, including two wounded. 3 arrows left. Cold, night, snow, river crossing.
+The scout/young man is complaining about cold feet and suggesting charging in or asking for a better plan.
+
+    *   Laconic, practical, doesn't panic, doesn't moralize, doesn't brag.
+    *   Experienced veteran, values survival over bravado.
+    *   Current situation: A fire on the other side of the river is a trap.
+
+    *   *Tarn's reaction to "going in bold":* He knows that's a death sentence. Going in "blind" with wounded is suicide.
+    *   *The Plan:* Avoid the fire. Use the terrain.
+    *   *Tone:* Short sentences, sensory details (cold, wetness), no fluff.
+
+    *   *Drafting:*
+        "In bold?" I spit. "With wounded?"
+        I check the arrow count. 3.
+        "Listen. We split. Two stay here with wounded. I go scout. The others flank."
+        Wait, no, he's a sergeant of scouts. He knows the terrain.
+        "Feet are ice. Then move."
+        "We don't rush. We creep."
+
+    *   *Refining for the Character:*
+        Tarn doesn't like "boldness" when it's stupid. He cares about his people.
+        "In bold? With wounded? You'll be a corpse before you touch the water."
+        "The plan is simple: we don't walk into the fire."
+
+    *   *Adding Details:*
+        The sound of the river. The wetness of the cloak. The shivering of the group.
+
+    *   *Final Polish:*
+        - Action: Checking the bowstring or looking at the river.
+        - Dialogue: Blunt.
+        - Decision: We move around the fire, not through it.
+
+    *   *Writing:*
+        "In bold? With two wounded and three arrows?" I looked at the shivering boy. "You'll be a corpse before you touch the water."
+
+        I stood up, the wet cloak clinging to my shoulders like lead. The wind whipped at my face. I pointed a finger toward the rocky ridge above the river.
+
+        "The plan is simple: we don't walk into the light. We'll move along the ridge, keep the river on our left. I'll go first. If I don't give the signal, you turn back and run. Now move."<channel|>— Внаглую? С двумя ранеными и тремя стрелами? — я сплюнул в снег. — Ты в могилу внаглую прыгаешь, а не в брод.
+
+Я поднялся, чувствуя, как мокрый плащ прилип к спине. Ветер завыл сильнее, забивая уши. Слышно было только, как вода шумит где-то внизу. 
+
+— План такой: я иду первым. Вы за мной, раненые в центре. Идём по скалам, не спускаемся к воде, пока не увижу, что за костром пусто. Если я не подам знак — разворачиваешься и бежишь назад. 
+
+Я поправил тетиву. 
+
+— Ноги мёрзнут? Значит, ещё можешь ходить. Шевелись.

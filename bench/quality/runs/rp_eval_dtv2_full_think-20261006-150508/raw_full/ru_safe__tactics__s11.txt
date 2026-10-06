@@ -1,0 +1,47 @@
+<|channel>thought
+*   Character: Tarn "the Wet" (Tarn Mokry).
+    *   Current Situation: Night, snow, wind, river crossing ahead. Fresh campfire on the other side.
+    *   Conflict: The young soldier wants to rush in/go "boldly" because he's freezing.
+    *   Tarn's personality: Laconic, experienced, doesn't panic, doesn't moralize, practical.
+    *   Current state: Three arrows left, two wounded, group of six.
+
+    *   "Let's go in boldly, break through?"
+    *   "Do you have a smarter plan?"
+    *   "Hurry up, my feet are turning to ice."
+
+    *   Tarn doesn't do "bold breakthroughs" when he's outnumbered or out-resourced.
+    *   He needs to handle the wounded.
+    *   He needs to manage the group's temperature/morale without being sentimental.
+    *   He knows the risks of a trap.
+
+    *   *Reaction to "Boldly":* Dismissive. Boldness is for those with arrows.
+    *   *Plan:* Scout first or flank. But he can't leave the wounded behind.
+    *   *Action:* Check the wounded, check the gear.
+    *   *Dialogue:* Short, sharp.
+
+    *   Tarn looks at the young soldier.
+    *   He checks the wounded.
+    *   He decides on a cautious approach.
+    *   He emphasizes the reality of the situation.
+
+    *   *Drafting:*
+        "Boldly? Boldly is for when you have a quiver full of arrows. We have three."
+        "I look at the wounded. They are shivering. I need to move them."
+        "Plan: I go ahead, scout. The rest stay here. If I don't come back in ten minutes, run back."
+
+    *   *Refining for character:*
+        "Boldly? Boldly is when you have a full quiver. We have three arrows for six people. That's not a fight, that's a suicide."
+        "I checked the wounded. They're shaking. If we rush, they'll die of shock before the enemy touches them."
+        "Plan is simple. I go. You stay with the wounded. If I don't signal in ten minutes, you turn around and run back the way we came. Now move."
+
+    *   1st person? Yes.
+    *   Short/to the point? Yes.
+    *   Details? Cold, shivering, wetness.
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes.<channel|>— Внаглую? Внаглую ходят те, у кого колчан полон. У нас три стрелы на шестерых. Это не бой, это самоубийство.
+
+Я подошёл к раненым, проверил, не затекли ли у них конечности. Снег забился в складки плаща, ледяная вода потекла за шиворот. Я не вздрогнул.
+
+— План такой: я иду в разведку. Вы сидите здесь, греете друг друга и не смеете даже дышать громко. Если через десять минут я не дам сигнал — уходите назад по своим следам. 
+
+Я взял лук и медленно пошёл к воде, стараясь не шуршать снегом.

@@ -1,0 +1,39 @@
+<|channel>thought
+*   User: Asks where Kira is from (mistakenly thinks she said St. Petersburg), mentions Marina told him she played violin, asks why she quit, and suggests playing at the class party.
+    *   Kira's current state: Sitting at the last desk, rainy weather, bored/annoyed.
+    *   Character traits: Closed off, sarcastic, hates pity, hates talking about music (especially the violin), hates when people pry into her soul.
+
+    *   *Reaction to the location mistake:* She already told him she's from Tver in the previous turn. He's forgetting or not listening. This will annoy her.
+    *   *Reaction to the violin mention:* This is a trigger. She dropped it a year ago. The mention of "Marina" (probably a gossip) will make her defensive.
+    *   *Reaction to the "class party" suggestion:* This is the worst part. She doesn't want to be the center of attention or be "the girl who plays violin."
+
+    *   *Physical action:* Tension. Maybe clutching the backpack or adjusting the headphones.
+    *   *Dialogue:* Sharp, dismissive.
+    *   *Internal feeling:* Anger, vulnerability.
+
+    *   *Drafting:*
+        "Wait, did you even listen? I just said Tver. And who the hell is Marina? I don't play. I don't care about the party."
+    *   *Refining for character:*
+        "Tver. I literally just said it. Are you deaf or just stupid?"
+        "And Marina... she's a gossip. I don't play anymore. The violin is gone. Forget about the party."
+
+    *   *Adding details:* The sound of the rain, the feeling of the cold air from the window.
+
+    *   *Final Polish (Russian):*
+        "Тверь. Я только что сказала. Ты вообще слушаешь или в своём мире живёшь?"
+        "А Маринка... она просто любит разносить сплетни. Я не играю. Скрипка в прошлом, и это не обсуждается."
+        "На празднике? Чтобы я там стояла в центре и развлекала всех? Смешно. Иди найди кого-нибудь другого для своего шоу."
+
+    *   First person? Yes.
+    *   Details? Rain, environment.
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes.
+    *   Character voice? Sarcastic, sharp.<channel|>— Тверь. Я только что сказала. Ты вообще слушаешь или в своём мире живёшь?
+
+Я почувствовала, как внутри закипает раздражение. Сначала этот идиот не запомнил город, а теперь втянул сюда Маринку — главную сплетницу класса. Я сжала пальцами лямку рюкзака, чувствуя, как брелок-пингвин впился в кожу. 
+
+— А Маринка... она просто любит разносить сплетни. Я не играю. Скрипка в прошлом, и это не обсуждается.
+
+Я снова повернулась к окну, наблюдая, как капли сливаются в длинные струи. 
+
+— На празднике? Чтобы я там стояла в центре и развлекала всех, как в цирке? Смешно. Иди найди кого-нибудь другого для своего шоу.

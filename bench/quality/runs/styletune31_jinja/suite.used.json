@@ -1,1 +1,68 @@
-"{\n  \"_комментарий\": \"Смоук: проверка, не в шаблоне ли дело (StyleTune-31B). Явный gemma4.jinja.\",\n  \"name\": \"styletune31_jinja\",\n  \"server\": \"E:\\\\DefaultDF\\\\Programming\\\\Qwen\\\\Projects\\\\GGUFLauncher/downloads/llama-b11382-cu124/llama-server.exe\",\n  \"model\": \"I:\\\\AI_Files\\\\LM_Studio/mradermacher/Gemma-4-31B-StyleTune-i1-GGUF/Gemma-4-31B-StyleTune.i1-IQ3_XXS.gguf\",\n  \"base_args\": [\n    \"-np\",\n    \"1\",\n    \"-c\",\n    \"32768\",\n    \"-fa\",\n    \"on\",\n    \"--fit\",\n    \"on\",\n    \"-t\",\n    \"12\",\n    \"-tb\",\n    \"12\",\n    \"-ctk\",\n    \"q4_0\",\n    \"-ctv\",\n    \"q4_0\",\n    \"--load-mode\",\n    \"none\",\n    \"--jinja\",\n    \"--reasoning\",\n    \"off\",\n    \"--reasoning-budget\",\n    \"0\",\n    \"--chat-template-file\",\n    \"E:\\\\DefaultDF\\\\Programming\\\\GitTest\\\\llama.cpp/gemma4.jinja\"\n  ],\n  \"prompts\": \"quality/prompts_ru_rp.json\",\n  \"n_predict\": 280,\n  \"seeds\": [\n    11\n  ],\n  \"configs\": [\n    {\n      \"name\": \"card\",\n      \"title\": \"card + jinja\",\n      \"sampling\": {\n        \"temperature\": 1.0,\n        \"min_p\": 0.03,\n        \"top_k\": 0,\n        \"top_p\": 1.0,\n        \"dry_multiplier\": 0.8,\n        \"dry_penalty_last_n\": 64,\n        \"repeat_penalty\": 1.0,\n        \"repeat_last_n\": 64\n      }\n    },\n    {\n      \"name\": \"t0.4\",\n      \"title\": \"temp0.4 + jinja\",\n      \"sampling\": {\n        \"temperature\": 0.4,\n        \"min_p\": 0.1,\n        \"top_k\": 0,\n        \"top_p\": 1.0,\n        \"dry_multiplier\": 0.8,\n        \"dry_penalty_last_n\": 64,\n        \"repeat_penalty\": 1.0,\n        \"repeat_last_n\": 64\n      }\n    }\n  ]\n}"
+{
+  "_комментарий": "Смоук: проверка, не в шаблоне ли дело (StyleTune-31B). Явный gemma4.jinja.",
+  "name": "styletune31_jinja",
+  "server": "<PROJECT_DIR>/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "<MODELS_DIR>/mradermacher/Gemma-4-31B-StyleTune-i1-GGUF/Gemma-4-31B-StyleTune.i1-IQ3_XXS.gguf",
+  "base_args": [
+    "-np",
+    "1",
+    "-c",
+    "32768",
+    "-fa",
+    "on",
+    "--fit",
+    "on",
+    "-t",
+    "12",
+    "-tb",
+    "12",
+    "-ctk",
+    "q4_0",
+    "-ctv",
+    "q4_0",
+    "--load-mode",
+    "none",
+    "--jinja",
+    "--reasoning",
+    "off",
+    "--reasoning-budget",
+    "0",
+    "--chat-template-file",
+    "<LLAMA_DIR>/gemma4.jinja"
+  ],
+  "prompts": "quality/prompts_ru_rp.json",
+  "n_predict": 280,
+  "seeds": [
+    11
+  ],
+  "configs": [
+    {
+      "name": "card",
+      "title": "card + jinja",
+      "sampling": {
+        "temperature": 1.0,
+        "min_p": 0.03,
+        "top_k": 0,
+        "top_p": 1.0,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 64,
+        "repeat_penalty": 1.0,
+        "repeat_last_n": 64
+      }
+    },
+    {
+      "name": "t0.4",
+      "title": "temp0.4 + jinja",
+      "sampling": {
+        "temperature": 0.4,
+        "min_p": 0.1,
+        "top_k": 0,
+        "top_p": 1.0,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 64,
+        "repeat_penalty": 1.0,
+        "repeat_last_n": 64
+      }
+    }
+  ]
+}

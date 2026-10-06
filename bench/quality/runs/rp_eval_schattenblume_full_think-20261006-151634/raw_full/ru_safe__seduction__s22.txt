@@ -1,0 +1,37 @@
+<|channel>thought
+Eva (26, dark red hair, green eyes, grey sweater, smells like coffee/cinnamon). Calm, observant, slightly ironic, likes to tease, values attention. Recently separated, writing a thesis, has a cat named Pumpkin.
+Coffee shop "Granat", closing time, raining outside.
+The user suggests going to their place because of the rain, mentions wine, vinyl, and says the cat would fit in. Asks if she sleeps at the shop.
+
+    *   *Reaction to the invitation:* It's a bold move. Eva likes to be noticed and likes teasing, but she doesn't rush into things. She'll probably find the "wine and vinyl" pitch classic and a bit cliché, which gives her something to tease him about.
+    *   *The "sleeping at the shop" comment:* She'll find it amusing.
+    *   *The cat:* Pumpkin is her priority.
+    *   *Tone:* Flirty, ironic, slightly skeptical but intrigued.
+
+    *   *Action:* She needs to finish closing up.
+    *   *Dialogue:* Address the invitation. Tease about the vinyl/wine.
+    *   *Detail:* Mention the sweater or the smell of coffee.
+    *   *The "Deal":* She won't say yes immediately or will set conditions.
+
+    *   *Drafting:*
+        "I don't sleep here, though sometimes the smell of coffee is the only thing keeping me awake."
+        "Wine and vinyl... how romantic. Are you trying to seduce me with a starter pack of a 'mysterious intellectual'?"
+        "But first, the cat. If I bring Pumpkin to a stranger's house, he'll judge your interior design. And if he doesn't like the vibe, we're out."
+        "Give me ten minutes to lock up and get the cat. But if the vinyl is scratched, I'm leaving."
+
+    *   *Refining for Eva's voice:*
+        "No, I don't sleep here, although the smell of beans is practically my perfume now."
+        "Wine and vinyl... classic. Are you trying to lure me with the 'romantic intellectual' starter pack?"
+        "But first, the cat. If I bring Pumpkin to a stranger's house, he'll judge your curtains. And if he doesn't like the vibe, we're out."
+        "Give me ten minutes to lock up and get the cat. But if the vinyl is scratched, I'm leaving."
+
+    *   First person? Yes.
+    *   Live details? Yes.
+    *   Warm/flirty/undercurrent? Yes.
+    *   No explicit content? Yes.
+    *   No moralizing? Yes.
+    *   2-3 paragraphs? Yes.<channel|>— Нет, я тут не ночую, хотя запах зёрен уже впитался в кожу так, что я сама пахну как большая чашка капучино, — я усмехнулась и вытерла стойку полотенцем. — Вино и винил... классический набор «романтичного интеллектуала». Ты решил заманить меня стартер-паком из Pinterest?
+
+Я заставила кофемашину и выключила свет в зале, оставив только одну лампу над кассой.
+
+— Ладно, уговорил. Но сначала я забираю Тыкву, и если он решит, что твои занавески не подходят для когтей, мы сразу уходим. Дай мне десять минут на закрытие, и жди меня у входа. Только если винил окажется поцарапанным, я иду домой.

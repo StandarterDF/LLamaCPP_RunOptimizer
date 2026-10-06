@@ -1,0 +1,60 @@
+<|channel>thought
+Tarn (Wet), 38yo reconnaissance sergeant. Laconic, practical, no panic, loyal, experienced.
+A group of refugees (6 people, 2 wounded) crossing a river at night in the snow. Fresh campfire tracks on the other side.
+The subordinate is complaining about cold feet and suggesting a frontal assault ("go in boldly/brashly") or asking for a smarter plan.
+
+    *   Tarn doesn't like rashness. "Going in bold" is a death sentence with wounded and only 3 arrows.
+    *   He needs to maintain authority but stay concise.
+    *   The environment: cold, snow, darkness.
+
+    *   *Action:* Check the gear, check the wounded.
+    *   *Dialogue:* Address the "bold" idea. Explain why it's stupid. Give the order.
+    *   *Sensory details:* The wind, the sound of the river, the shivering of the group.
+
+    *   *Drafting:*
+        "In bold? You want to feed the wounded to the crows? Three arrows. We'll be dead before we hit the water.
+        Plan is this: I go first. You keep the wounded. When I signal, we cross. If I don't signal, we turn back."
+        *Wait, Tarn is a scout. He'd scout first.*
+
+    *   *Refining for character:*
+        "In bold" is for fools.
+        "Plan" is scouting.
+        "Cold feet" is a reality, but survival comes first.
+
+    *   *Revised draft:*
+        "In bold? Three arrows for six people. Wounded. You'll be a frozen corpse before you hit the bank.
+        Plan is this: I go first. Quietly. If I don't return in ten minutes, you take the wounded and head back to the pass.
+        Move the wounded closer to the edge. Now."
+
+    *   *Applying the "Tarn" style:*
+        - First person.
+        - Short sentences.
+        - No fluff.
+        - Details: Cold, sound.
+
+    *   *Final Polish:*
+        "In bold? Three arrows for six people. Two of whom can't run. You'll be a frozen corpse before you hit the bank."
+        "Plan is this: I go first. Quietly. If I don't return in ten minutes, you take the wounded and head back to the pass."
+        "Move the wounded closer to the edge. Now."
+
+    *   *Wait, let's make it more atmospheric.*
+    "In bold? Three arrows for six people. Two of whom can't run. You'll be a frozen corpse before you hit the bank."
+    "Plan is this: I go first. Quietly. If I don't return in ten minutes, you take the wounded and head back to the pass."
+    "Move the wounded closer to the edge. Now."
+
+    *   *Let's check the prompt rules:* "2-4 paragraphs", "short and to the point".
+
+    *   *Actual response:*
+        — Внаглую? Три стрелы на шестерых. Двое из которых не ходят. Ты ляжешь в ледяную воду раньше, чем увидишь, кто там у костра.
+
+        Я поправил плащ. Вода в реке шумела, перекрывая дыхание.
+
+        — План такой: я иду первым. Тихо. Если через десять минут не вернусь — забирай раненых и уходи назад к перевалу.
+
+        — Подвинь раненых к кромке воды. Живо.<channel|>— Внаглую? Три стрелы на шестерых. Двое из которых не ходят. Ты ляжешь в ледяную воду раньше, чем увидишь, кто там у костра.
+
+Я поправил плащ. Вода в реке шумела, перекрывая дыхание.
+
+— План такой: я иду первым. Тихо. Если через десять минут не вернусь — забирай раненых и уходи назад к перевалу.
+
+— Подвинь раненых к кромке воды. Живо.

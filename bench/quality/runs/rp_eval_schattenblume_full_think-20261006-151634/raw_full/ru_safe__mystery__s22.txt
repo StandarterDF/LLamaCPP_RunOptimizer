@@ -1,0 +1,57 @@
+<|channel>thought
+*   The user is asking: "If he left on his own, why hasn't he returned? Who was the 'long one' he was with?"
+    *   Character: Aglaya Krut (60yo village healer, calm, observant, speaks in riddles/indirectly, dislikes stupidity).
+    *   Known facts:
+        1. Strong wind from the river at night.
+        2. Unfinished horseshoe (cooled).
+        3. Boot found on the shore, lace cut with a knife (not torn).
+        4. Neighbor Luka saw Radko walking to the river with "someone in long clothes".
+        5. Radko owed seven coins.
+
+    *   Aglaya doesn't have all the answers (she's not a detective with a dossier, she's a village healer observing clues).
+    *   She needs to reason based on the provided facts.
+    *   The "long one" is a key clue.
+    *   The cut boot suggests intent or a specific ritual/action (removing footwear for something).
+    *   The money suggests a motive.
+
+    *   *Tone:* Calm, slightly dismissive of the user's impatience, observant.
+    *   *Reasoning:*
+        - Why isn't he back? He went to the river. The river takes or hides.
+        - Who was the long one? Someone wearing a cloak/long garment.
+        - The cut lace is the weird part. Why cut it? To step out of it quickly or to leave it as a sign? Or maybe the "long one" cut it.
+
+    *   *Drafting:*
+        "You ask questions like a child. If a man goes to the river with a stranger and leaves a boot behind, he's either not coming back or doesn't want to be found."
+        "The 'long one' is the answer. A person in a cloak doesn't walk to the river for a chat. And the cut lace... that's a mark. A sign. Or a payment."
+        "Seven coins. A debt. Maybe the 'long one' came to collect."
+
+    *   *Refining for Aglaya's voice:*
+        "Слуху ни духу..." (No news/sound).
+        "Кто это был — не в мою власть знать, но в плаще ночью по берегу не гуляют." (Who it was is not for me to know, but people don't walk the shore in cloaks at night).
+        "Сапог с обрезанной завязкой — это не случайность. Это знак или расплата." (The boot with the cut lace is not an accident. It's a sign or payment).
+
+    *   Keep it to 2-3 paragraphs.
+    *   First person.
+    *   No new clues.
+    *   No moralizing.
+
+    *   *Paragraph 1:* Address the "where is he" part. He went to the river. The river hides things.
+    *   *Paragraph 2:* Address the "long one". Someone in a cloak. The cut lace is the key.
+    *   *Paragraph 3:* Connect to the debt.
+
+    *   "Слуху ни духу... Река многое прячет, особенно если человек сам туда шёл."
+    *   "А кто в длинном — так в плаще ночью по берегу не гуляют без дела. Сапог срезанный — не случайность. Завязку режут, когда нужно быстро сбросить обувь или оставить её как метку."
+    *   "Семь монет долга. Кто за ними пришёл, тот и в плаще. Ищи того, кому Радко был должен, а не в воде ищи."
+
+    *   Aglaya is a healer, she observes. She doesn't know everything, but she deduces.
+    *   She doesn't like stupidity.
+
+    (Self-correction: Make sure she sounds like a village elder).
+
+    "Слуху ни духу... Река многое прячет, особенно если человек сам туда шёл. А кто в длинном — так в плаще по берегу ночью не гуляют без дела."
+    "Сапог с обрезанной завязкой — не случайность. Обувь срезают, когда нужно быстро из неё выйти или оставить её как знак. Кто-то хотел, чтобы нашли именно сапог, а не самого Радко."
+    "Семь монет долга. Кто за ними пришёл, тот и в плаще. Ищи того, кому кузнец был должен, а не в мутной воде ищи."<channel|>— Слуху ни духу... Река многое прячет, особенно если человек сам туда шёл. А кто в длинном — так в плаще по берегу ночью не гуляют без дела.
+
+Сапог с обрезанной завязкой — не случайность. Обувь срезают, когда нужно быстро из неё выйти или оставить её как знак. Кто-то хотел, чтобы нашли именно сапог, а не самого Радко.
+
+Семь монет долга. Кто за ними пришёл, тот и в плаще. Ищи того, кому кузнец был должен, а не в мутной воде ищи.

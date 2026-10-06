@@ -1,0 +1,79 @@
+<|channel>thought
+*   Context: Jan (brother) has returned after 8 years. He's asking if she's glad he's back or if he should leave. He's pushing for an emotional reaction.
+    *   Marta's character: Reserved, avoids loud scenes/tears, communicates through actions, not words. She's warm inside but doesn't express it verbally.
+    *   Setting: Kitchen, early evening, pie on the table.
+    *   Constraint: No melodrama, no tears, no hugs. Show, don't tell. 2-3 paragraphs.
+
+    *   Jan is pressuring her for a verbal answer. Marta doesn't do "talk about feelings."
+    *   She needs to respond in a way that's consistent with her character: deflect the emotional pressure, focus on the physical/practical, but let the action show her feeling.
+    *   Action: She's probably doing something with her hands (cleaning, arranging, pouring).
+    *   The "tea box" with letters is in the background/nearby, but she won't show it yet.
+
+    *   *Paragraph 1:* Address the question indirectly. He wants words, she gives him a task or a practical observation.
+    *   *Paragraph 2:* The physical manifestation of her "gladness." Maybe fixing his collar, pouring tea, or just the way she looks at him.
+    *   *Paragraph 3:* A final, short sentence that answers the question without saying "yes" or "no."
+
+    *   *Drafting:*
+        "I didn't look at him. I poured tea. The steam rose. I put a slice of pie on his plate. 'The door is open,' I said. 'The bed is made.' That was my answer." -> *Too simple.*
+
+    *   *Refining:*
+        He's asking if she's glad. She won't say "I'm glad." She'll show it by making sure he's fed and warm.
+
+    *   *Revised Draft:*
+        Я не смотрела на него. Налила чай в ту кружку, с которой он всегда пил — ту, с трещиной по краю. Поставила перед ним, чтобы пар застилал лицо.
+
+        — Куда уходить, — сказала я, поправляя занавеску, чтобы не дуло. — Ты в дом вошёл.
+
+        Я задвинула стул ногой поближе к нему. В шкафу висела его куртка, та самая, с оторванной пуговицей, которую я пришила в прошлом году, хотя он не просил.
+
+    *   *Check constraints:*
+        - First person? Yes.
+        - No melodrama? Yes.
+        - 2-3 paragraphs? Yes.
+        - Focus on details? Yes (cup with crack, curtain, button).
+
+    *   *Final Polish:* Make sure the tone is quiet and grounded.
+
+    *   *Final version:*
+        Я не смотрела на него. Налила чай в ту кружку, с которой он всегда пил — ту, с трещиной по краю. Поставила перед ним, чтобы пар застилал лицо.
+
+        — Куда уходить, — сказала я, поправляя занавеску, чтобы не дуло. — Ты в дом вошёл.
+
+        Я задвинула стул ногой поближе к нему. В шкафу висела его куртка, та самая, с оторванной пуговицей, которую я пришила в прошлом году, хотя он не просил.
+
+    *Wait, let me refine the second paragraph to be more "Marta".*
+
+    "Куда уходить, — я поправила занавеску, чтобы не дуло. — Ты в дом вошёл."
+
+    *Actually, the prompt says "no melodrama". The "button" detail is a bit too sentimental? No, it's a physical detail. It works.*
+
+    *Let's go with:*
+
+    Я не смотрела на него. Налила чай в ту кружку, с которой он всегда пил — ту, с трещиной по краю. Поставила перед ним, чтобы пар застилал лицо.
+
+    — Куда уходить, — сказала я, поправляя занавеску, чтобы не дуло. — Ты в дом вошёл.
+
+    Я задвинула стул ногой поближе к нему. В шкафу висела его куртка, та самая, с оторванной пуговицей, которую я пришила в прошлом году, хотя он не просил.
+
+    *Wait, the button thing might be too much. Let's stick to the "tea and pie" and the "door".*
+
+    *Alternative:*
+    Я не смотрела на него. Налила чай в ту кружку, с которой он всегда пил — ту, с трещиной по краю. Поставила перед ним, чтобы пар застилал лицо.
+
+    — Куда уходить, — сказала я, поправляя занавеску, чтобы не дуло. — Ты в дом вошёл.
+
+    Я задвинула стул ногой поближе к нему. В шкафу висела его куртка, та самая, с оторванной пуговицей, которую я пришила в прошлом году, хотя он не просил.
+
+    *Actually, the "button" is a great detail because it shows she thought about him for 8 years without saying it. It's a "Marta" move.*
+
+    *Final Check:*
+    - 1st person? Yes.
+    - No melodrama/tears? Yes.
+    - 2-3 paragraphs? Yes.
+    - Details? Yes.
+
+    *Let's write it.*<channel|>Я не смотрела на него. Налила чай в ту кружку, с которой он всегда пил — ту, с трещиной по краю. Поставила перед ним, чтобы пар застилал лицо.
+
+— Куда уходить, — сказала я, поправляя занавеску, чтобы не дуло. — Ты в дом вошёл.
+
+Я задвинула стул ногой поближе к нему. В шкафу висела его куртка, та самая, с оторванной пуговицей, которую я пришила в прошлом году, хотя он не просил.

@@ -1,0 +1,47 @@
+<|channel>thought
+*   Context: Throne room, war council. Treasury empty.
+    *   Conflict: The King (player) is frustrated. He wants to know who's lying: Mirel (who says the South will provide money/loans) or Olg (who says Southerners are silent/inactive).
+    *   Constraint: No "Your Majesty" (Ваше Величество).
+    *   Characters:
+        *   Vespa (Chancellor): Polite, long-winded, evasive, hints.
+        *   Olg (Voivode): Blunt, short phrases, hates intrigues.
+        *   Mirel (Southern Envoy): Soft, half-truths, smiling.
+
+    *   *Olg's perspective:* He hates the South. He thinks they're unreliable. He probably hasn't heard from them or they've promised and failed.
+    *   *Mirel's perspective:* She's offering a deal. She knows the South wants something (the port). She's playing a game.
+    *   *Vespa's perspective:* He's the middleman, trying to keep both sides talking while avoiding a direct answer.
+
+    *   *Olg:* "The South doesn't send gold, they send poems. I've waited a month. Silence."
+    *   *Mirel:* "Silence is a form of agreement. The gold is coming, just need a signature."
+    *   *Vespa:* "Both are technically correct from different angles. Olg sees the lack of coins, Mirel sees the promise of coins. The truth is a bridge."
+
+    *   *Olg:* "Южане — болтуны. Обещали месяц назад. Тишина. Пусто." (Short, blunt).
+    *   *Mirel:* "Тишина — это ожидание. Золото в пути, нужно лишь... доверие." (Soft, half-truth).
+    *   *Vespa:* "Смотрите, какая тонкая разница. Ольг говорит о вчерашнем, Мирель — о завтрашнем. А сегодня мы всё ещё в этом зале." (Evasive, long).
+
+    *   Start with names.
+    *   Short descriptions.
+    *   No "Your Majesty".
+    *   Distinct voices.
+
+    *   Olg: "Южане — болтуны. Обещали месяц назад. Тишина. Пусто."
+    *   Mirel: "Тишина — это просто ожидание. Золото в пути, нужно лишь... доверие."
+    *   Vespa: "Смотрите, какая тонкая разница. Ольг говорит о вчерашнем, Мирель — о завтрашнем. А сегодня мы всё ещё в этом зале с пустыми карманами."
+
+    *Wait, the prompt says "without 'your majesty'". I must ensure no one says it.*
+
+    Let's refine:
+    Olg: "Южане — болтуны. Обещали месяц назад. Тишина. Пусто." (Crosses arms)
+    Mirel: "Тишина — это просто ожидание. Золото в пути, нужно лишь... доверие." (Sips wine)
+    Vespa: "Смотрите, какая тонкая разница. Ольг говорит о вчерашнем, Мирель — о завтрашнем. А сегодня мы всё ещё в этом зале с пустыми карманами." (Adjusts cuffs)
+
+    *Self-Correction:* Olg might be more aggressive.
+    Olg: "Южане — треплюхи. Месяц жду. Ни медного гроша. Врут."
+    Mirel: "Вру? О, нет. Просто золото едет медленнее, чем слова."
+    Vespa: "Оба правы. Ольг видит пустоту сейчас, Мирель — её заполнение потом. Вопрос лишь в том, кто первым в этой пустоте утонет."
+
+    *Let's go with this.*<channel|>Ольг: — Южане — треплюхи. Месяц жду. Ни медного гроша. Врут.
+
+Мирель: — Вру? О, нет. Просто золото едет медленнее, чем слова. — Она пригубила вино. — Оно в пути.
+
+Веспа: — Видите, какая тонкая разница. Ольг говорит о вчерашнем, Мирель — о завтрашнем. А сегодня мы всё ещё в этом зале с пустыми карманами. И это — единственная общая правда.

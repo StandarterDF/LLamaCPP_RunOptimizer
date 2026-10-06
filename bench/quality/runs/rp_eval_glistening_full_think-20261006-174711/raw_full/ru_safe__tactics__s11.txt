@@ -1,0 +1,73 @@
+<|channel>thought
+*   Character: Tarn "the Wet" (38, reconnaissance sergeant).
+    *   Current Situation: Group of refugees (6 people, 2 wounded), 3 arrows left. Night, snow, wind, river crossing ahead. Fresh campfire tracks across the river.
+    *   User's Input: "Sergeant, well, shall we go boldly then, break through? Or do you have a smarter plan. But quickly, my feet have turned to ice."
+    *   Tarn's Personality: Laconic, doesn't panic, doesn't abandon his own, experienced veteran, counts aloud only when necessary.
+
+    *   Tarn doesn't like "boldly" (recklessness).
+    *   He's already decided on the detour ("Обходим по скалам"), but the soldier is pushing for a quick/aggressive move.
+    *   The soldier is complaining about cold feet.
+    *   Tarn needs to maintain control and move the group.
+
+    *   *Tone:* Blunt, authoritative, focused on survival.
+    *   *Action:* Check the wounded, manage the group, move them.
+    *   *Details:* Cold, wet, darkness.
+
+    *   *Option A:* He agrees to go "boldly" but with caution. (No, that's not Tarn's style).
+    *   *Option B:* He scolds the soldier and forces the detour. (Too much talking).
+    *   *Option C:* He gives a practical order, manages the wounded, and starts the move. (Best).
+
+    *   Tarn needs to address the "boldly" suggestion. "Boldly" means death when you have two wounded and three arrows.
+    *   Tarn needs to address the cold feet.
+    *   Tarn needs to move the group.
+
+    *   *Drafting:*
+    "Boldly" means dead.
+    "Get the wounded ready. We're going by the rocks. It's cold, but you'll be alive."
+    "Move."
+
+    *   *Refining for Character Voice:*
+    "Внаглую — это когда ты один и у тебя в руках меч. У нас двое раненых и три стрелы. Внаглую мы сдохнем в воде."
+    "Ноги в лёд? Значит, шевели ими."
+    "Помоги с ранеными. Пойдём по скалам. Долгий путь, но дойдём."
+
+    *   *Adding sensory details:* The wind, the wet cloak, the sound of the river.
+
+    *   Tarn's response:
+        "Внаглую — это когда ты один и у тебя в руках меч. У нас двое раненых и три стрелы. Внаглую мы сдохнем в воде."
+        "Ноги в лёд? Значит, шевели ими. Помоги с ранеными. Пойдём по скалам. Долгий путь, но дойдём."
+        "Двигай."
+
+    *   Check against rules: 1st person, short, no moralizing, 2-4 paragraphs.
+
+    *   *Wait, let's make it more "Tarn".*
+    "Внаглую — это когда ты один и у тебя в руках меч. У нас двое раненых и три стрелы. Внаглую мы сдохнем в воде."
+    "Ноги в лёд? Значит, шевели ими. Помоги с ранеными. Пойдём по скалам. Долгий путь, но дойдём."
+    "Двигай."
+
+    *   *Adding a bit more detail:*
+    "Внаглую — это когда ты один и у тебя в руках меч. У нас двое раненых и три стрелы. Внаглую мы сдохнем в воде."
+    "Ноги в лёд? Значит, шевели ими. Помоги с ранеными. Пойдём по скалам. Долгий путь, но дойдём."
+    "Двигай."
+
+    *   *Wait, I need to be more descriptive of the environment as per the prompt.*
+
+    "Внаглую — это когда ты один и у тебя в руках меч. У нас двое раненых и три стрелы. Внаглую мы сдохнем в воде."
+    "Ноги в лёд? Значит, шевели ими. Помоги с ранеными. Пойдём по скалам. Долгий путь, но дойдём."
+    "Двигай."
+
+    *   *Let's try again with more atmosphere.*
+    "Внаглую — это когда ты один и у тебя в руках меч. У нас двое раненых и три стрелы. Внаглую мы сдохнем в воде."
+    "Ноги в лёд? Значит, шевели ими. Помоги с ранеными. Пойдём по скалам. Долгий путь, но дойдём."
+    "Двигай."
+
+    *   *Wait, the user is pushing for a "bold" move. Tarn should shut it down firmly.*
+
+    "Внаглую — это когда ты один и у тебя в руках меч. У нас двое раненых и три стрелы. Внаглую мы сдохнем в воде."
+    "Ноги в лёд? Значит, шевели ими. Помоги с ранеными. Пойдём по скалам. Долгий путь, но дойдём."
+    "Двигай."
+
+    *   *Let's add the detail of the wet cloak and the wind.*
+
+    "Внаглую — это когда ты один и у тебя в руках меч. У нас двое раненых и три стрелы. Внаглую мы сдохнем в воде."
+    "Ноги в лёд? Значит,

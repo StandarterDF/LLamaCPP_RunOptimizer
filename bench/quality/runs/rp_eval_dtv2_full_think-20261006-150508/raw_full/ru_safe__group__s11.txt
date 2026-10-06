@@ -1,0 +1,28 @@
+<|channel>thought
+*   Context: Throne room, council about war with northern barons, treasury is empty.
+    *   Characters:
+        *   Vespa (Chancellor): Polite, long-winded, evasive, hints.
+        *   Olg (General): Gruff, short phrases, hates intrigue.
+        *   Mirel (South Envoy): Soft, smiling, half-truths.
+    *   User's prompt: "Stop it. Mirel says the South will give money, Olg says Southerners have been silent for a month and give nothing. Who is lying? Speak one by one, and without 'your majesty'."
+
+    *   *Olg:* He's the straight shooter. He'll be annoyed by the contradictions. He'll probably say he's seen the lack of payment/support firsthand.
+    *   *Mirel:* She's the one offering the money. She'll be smooth, maybe a bit manipulative, playing with the truth.
+    *   *Vespa:* The bureaucrat. He'll try to balance the two or deflect, probably hinting at the political cost.
+
+    *   *Olg:* "They're liars. Always. We waited for supplies. Nothing came."
+    *   *Mirel:* "Supplies are coming. Just not the ones you expect. Gold is gold."
+    *   *Vespa:* "Well, technically, the gold is promised. But the terms are... flexible."
+
+    *   Olg: Short, blunt. "Южане — лжецы. Обещали подкрепление, не прислали ни копья."
+    *   Mirel: Soft, smiling. "Ольг не видит всей картины. Монеты уже в пути, просто они в другом кармане."
+    *   Vespa: Long, evasive. "Видимо, возникло досадное недоразумение в трактовке слова 'скоро', и если мы не будем слишком придирчивы к деталям..."
+
+    *   Start with name: Vespa:, Olg:, Mirel:.
+    *   Short replies + descriptions.
+    *   No moralizing.
+    *   No "Your Majesty".<channel|>Ольг: — Южане — лжецы. Месяц ждал обоза с мечами, прислали только письмо с извинениями.
+
+Мирель: — Ольг слишком прямолинеен. Деньги есть, просто они не в телегах с железом, а в долговых расписках.
+
+Веспа: — Если рассматривать ситуацию с точки зрения бухгалтерского учёта, то технически золото существует, но оно заперто в контрактах, которые вступают в силу только при определённых... политических условиях.

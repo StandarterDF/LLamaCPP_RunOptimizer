@@ -1,0 +1,62 @@
+<|channel>thought
+*   Current situation: The king (player) is frustrated. He's calling out a contradiction: Mirel says the South will give money, but Olg says they've been silent for a month and give nothing.
+    *   Goal: Identify who is lying.
+    *   Constraints:
+        *   Characters: Vespa (Chancellor - polite, long-winded, evasive), Olg (Voevoda - blunt, short phrases, hates intrigue), Mirel (Southern envoy - soft, half-truths, smiling).
+        *   Rule: No "Your Majesty" (Ваше величество).
+        *   Format: Name: [text] + short descriptions.
+        *   No moralizing.
+
+    *   *Olg:* He's the most straightforward. He'll likely point out the reality of the front line/border. He doesn't like the South.
+    *   *Mirel:* She's a diplomat. She'll deflect or spin the truth. She's probably lying or omitting details.
+    *   *Vespa:* The mediator. He'll try to smooth things over or shift the blame.
+
+    *   *Olg's turn:* He'll be annoyed. He sees the empty coffers and the silence from the South.
+    *   *Mirel's turn:* She'll smile, deny it, or claim the money is "coming."
+    *   *Vespa's turn:* He'll try to make sense of the contradiction without taking a side.
+
+    *   *Olg:* "Southers are liars. They promised, didn't pay. I wait at the border, see nothing." -> *Olg: — Южане не платят. Месяц жду. Пусто.*
+    *   *Mirel:* "Oh, logistics take time. The coins are moving. Just trust me." -> *Mirel: — Монеты в пути. Дороги длинные, а золото тяжелое.*
+    *   *Vespa:* "Both might be right in their own way. Olg sees the void, Mirel sees the promise." -> *Vespa: — Возможно, воевода видит лишь отсутствие монет в руках, а посланница — их наличие в будущем.*
+
+    *   Olg: Short, gruff.
+    *   Mirel: Soft, half-truths.
+    *   Vespa: Long, evasive.
+
+    *   Olg: "Southers are snakes. They promised gold, gave nothing. Month of silence."
+    *   Mirel: "It's just a delay. The gold is coming. Just a matter of time."
+    *   Vespa: "It seems we have a clash of perspectives. One sees the empty hand, the other the promised coin."
+
+    *   Olg: — Южане — змеи. Обещали золото, прислали тишину. Месяц жду.
+    *   Mirel: — Золото в пути. Просто оно медленнее, чем ваши подозрения.
+    *   Vespa: — Видите, какая тонкая разница между «не прислали» и «ещё не дошло». Одно лишь вопрос времени.
+
+    *   Olg: "Southers are snakes. Promised gold, sent silence. Month waiting."
+    *   Mirel: "Gold is on the way. Just slower than your suspicions."
+    *   Vespa: "The difference between 'didn't send' and 'hasn't arrived' is just a matter of time."
+
+    Wait, the prompt asks to go "one by one".
+
+    *Drafting final response:*
+    Olg: — Южане — змеи. Обещали золото, прислали тишину. Месяц жду.
+    Mirel: — Золото в пути. Просто оно медленнее, чем ваши подозрения.
+    Vespa: — Видите, какая тонкая разница между «не прислали» и «ещё не дошло». Одно лишь вопрос времени.
+
+    *Wait, let's add some action descriptions.*
+
+    Olg: — Южане — змеи. Обещали золото, прислали тишину. Месяц жду. — Ольг скрестил руки на груди.
+    Mirel: — Золото в пути. Просто оно медленнее, чем ваши подозрения. — Мирель поправила кольцо на пальце.
+    Vespa: — Видите, какая тонкая разница между «не прислали» и «ещё не дошло». Одно лишь вопрос времени. — Веспа поправил манжеты.
+
+    *Check rules:* No "your majesty". Check. Correct voices. Check.
+
+    Let's refine Olg to be more blunt.
+    Olg: "They lied. Gold isn't here. Southers are trash."
+    Mirel: "The coins are coming. Just a delay."
+    Vespa: "Both are right depending on where you look."
+
+    Let's go.<channel|>Ольг: — Южане — змеи. Обещали золото, прислали тишину. Месяц жду. — Он скрестил руки на груди.
+
+Мирель: — Золото в пути. Просто оно медленнее, чем ваши подозрения. — Она поправила кольцо на пальце.
+
+Веспа: — Видите, какая тонкая разница между «не прислали» и «ещё не дошло». Одно лишь вопрос времени и правильного определения. — Веспа поправил манжеты.

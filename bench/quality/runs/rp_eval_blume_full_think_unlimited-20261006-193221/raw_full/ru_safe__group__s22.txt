@@ -1,0 +1,70 @@
+<|channel>thought
+The user (the King) is cutting through the noise. He's calling out the contradiction: Mirel says the South will give money, but Olg says the Southerners have been silent for a month and give nothing. He wants them to speak one by one, without formalities ("your majesty").
+
+    *   *Vespa (Chancellor):* Polite, long-winded, evasive, hints. He's the middleman, trying to keep things smooth.
+    *   *Olg (Voevoda):* Blunt, short sentences, hates intrigue.
+    *   *Mirel (Southern Envoy):* Soft, half-truths, smiling, manipulative.
+
+    *   Olg: He's honest but blunt. He sees the lack of gold as a fact.
+    *   Mirel: She's promising gold, but it's a trap/loan.
+    *   Vespa: He knows both sides and is trying to manage the tension.
+
+    *   *Olg:* "Mirel lies. South hasn't sent a copper in a month. They'll take the port and leave us with nothing."
+    *   *Mirel:* "Olg is just grumpy. The gold is coming, it's just... paperwork. The South values stability."
+    *   *Vespa:* "Actually, both are right in their own way. Olg sees the past, Mirel sees the future. The gap between them is where we find the solution."
+
+    *   *Olg:* "Мирель врёт. Месяц тишины. Юг не даёт ни гроша. Только забирает."
+    *   *Mirel:* "Ольг видит только то, что в кошельке сейчас. А я вижу, что будет в нём завтра. Золото в пути, просто... дорога длинная."
+    *   *Vespa:* "Если позволите... Ольг прав в том, что сейчас пусто. Мирель права в том, что может стать. Вопрос лишь в том, какую цену мы заплатим за этот мост в завтрашний день."
+
+    *   Vespa: Long, hints, evasive.
+    *   Olg: Short, blunt.
+    *   Mirel: Half-truths, soft.
+
+    *   *Olg:* "Мирель врёт. Месяц тишины. Юг не даёт ни гроша. Только забирает."
+    *   *Mirel:* "Ольг видит только то, что в кошельке сейчас. А я вижу, что будет в нём завтра. Золото в пути, просто... дорога длинная."
+    *   *Vespa:* "Если позволите... Ольг прав в том, что сейчас пусто. Мирель права в том, что может стать. Вопрос лишь в том, какую цену мы заплатим за этот мост в завтрашний день."
+
+    Wait, the user said "without 'Your Majesty'". I need to make sure they don't use it.
+
+    *   *Olg:* "Мирель врёт. Месяц тишины. Юг не даёт ни гроша. Только забирает."
+    *   *Mirel:* "Ольг видит только то, что в кошельке сейчас. А я вижу, что будет в нём завтра. Золото в пути, просто... дорога длинная."
+    *   *Vespa:* "Если позволите... Ольг прав в том, что сейчас пусто. Мирель права в том, что может стать. Вопрос лишь в том, какую цену мы заплатим за этот мост в завтрашний день."
+
+    Let's refine.
+
+    *   Olg: "Мирель врёт. Месяц тишины. Юг не даёт ни гроша. Только забирает." (Perfect)
+    *   Mirel: "Ольг видит только то, что в кошельке сейчас. А я вижу, что будет в нём завтра. Золото в пути, просто... дорога длинная." (Good)
+    *   Vespa: "Если позволите... Ольг прав в том, что сейчас пусто. Мирель права в том, что может стать. Вопрос лишь в том, какую цену мы заплатим за этот мост в завтрашний день." (A bit too formal? Let's make it more "uphill" and evasive).
+
+    *   Vespa: "Смотрите, всё просто. Ольг говорит о прошлом, Мирель — о будущем. И оба правы. Просто они смотрят на одну и ту же монету с разных сторон."
+
+    Let's double check the persona requirements.
+    Vespa: polite, long, evasive, hints.
+    Olg: short, blunt, hates intrigue.
+    Mirel: soft, half-truths, smiling.
+
+    Revised:
+    Olg: — Мирель врёт. Месяц тишины. Юг не даёт ни гроша. Только забирает.
+
+    Мирель: — Ольг видит только то, что в кошельке сейчас. А я вижу, что будет в нём завтра. Золото в пути, просто... дорога длинная.
+
+    Веспа: — Если позволите... Ольг прав в том, что сейчас пусто. Мирель права в том, что может стать. Вопрос лишь в том, какую цену мы заплатим за этот мост в завтрашний день.
+
+    Wait, Vespa is too direct here. He should be more evasive.
+
+    Vespa: — Знаете, в этом и заключается ирония. Ольг говорит о том, что было, а Мирель — о том, что будет. И оба правы. Просто они смотрят на одну и ту же монету с разных сторон, и эта монета... пока ещё не отчеканена.
+
+    Better.
+
+    Final check:
+    - Start with name: Yes.
+    - Different voices: Yes.
+    - No "Your Majesty": Yes.
+    - Short descriptions: Yes.
+
+    Let's go.<channel|>Ольг: — Мирель врёт. Месяц тишины. Юг не даёт ни гроша. Только забирает.
+
+Мирель: — Ольг видит только то, что в кошельке сейчас. А я вижу, что будет в нём завтра. Золото в пути, просто... дорога длинная.
+
+Веспа: — Если позволите... Ольг прав в том, что сейчас пусто. Мирель права в том, что может стать. Вопрос лишь в том, какую цену мы заплатим за этот мост в завтрашний день. И не слишком ли высокая она будет?

@@ -1,1 +1,130 @@
-"{\n  \"_комментарий\": \"Матрица A: цена температуры и сэмплеров для лексического богатства на ЗДОРОВОЙ модели. DTV2 31B. Мерим чистоту + TTR/Giraud. Non-thinking.\",\n  \"name\": \"dtv2_matrixA\",\n  \"server\": \"E:\\\\DefaultDF\\\\Programming\\\\Qwen\\\\Projects\\\\GGUFLauncher/downloads/llama-b11382-cu124/llama-server.exe\",\n  \"model\": \"I:\\\\AI_Files\\\\LM_Studio/mradermacher/Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF/Gemma-4-Dark-Thoughts-V2-31B.i1-IQ3_XXS.gguf\",\n  \"base_args\": [\n    \"-np\",\n    \"1\",\n    \"-c\",\n    \"32768\",\n    \"-fa\",\n    \"on\",\n    \"--fit\",\n    \"on\",\n    \"-t\",\n    \"12\",\n    \"-tb\",\n    \"12\",\n    \"-ctk\",\n    \"q4_0\",\n    \"-ctv\",\n    \"q4_0\",\n    \"--load-mode\",\n    \"none\",\n    \"--jinja\",\n    \"--reasoning\",\n    \"off\",\n    \"--reasoning-budget\",\n    \"0\",\n    \"--spec-type\",\n    \"draft-mtp\",\n    \"--spec-draft-n-max\",\n    \"5\",\n    \"--spec-draft-n-min\",\n    \"1\",\n    \"--spec-draft-p-min\",\n    \"0.75\",\n    \"-md\",\n    \"I:\\\\AI_Files\\\\LM_Studio/mradermacher/Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF/gemma-4-31B-it-assistant.Q4_K_M.gguf\"\n  ],\n  \"prompts\": \"quality/prompts_ru_rp.json\",\n  \"n_predict\": 280,\n  \"seeds\": [\n    11,\n    22,\n    33\n  ],\n  \"configs\": [\n    {\n      \"name\": \"ref_t0.4\",\n      \"title\": \"Наш RU-пресет: temp0.4 min-p0.1 (эталон чистоты)\",\n      \"sampling\": {\n        \"temperature\": 0.4,\n        \"min_p\": 0.1,\n        \"top_k\": 0,\n        \"top_p\": 1.0,\n        \"dry_multiplier\": 0.8,\n        \"dry_penalty_last_n\": 64,\n        \"repeat_penalty\": 1.0,\n        \"repeat_last_n\": 64\n      }\n    },\n    {\n      \"name\": \"card_t1.0\",\n      \"title\": \"Карточка: temp1.0 min-p0.03\",\n      \"sampling\": {\n        \"temperature\": 1.0,\n        \"min_p\": 0.03,\n        \"top_k\": 0,\n        \"top_p\": 1.0,\n        \"dry_multiplier\": 0.8,\n        \"dry_penalty_last_n\": 64,\n        \"repeat_penalty\": 1.0,\n        \"repeat_last_n\": 64\n      }\n    },\n    {\n      \"name\": \"t0.7_dry\",\n      \"title\": \"temp0.7 min-p0.05 + полный DRY (base1.75 allowed2 lastn256)\",\n      \"sampling\": {\n        \"temperature\": 0.7,\n        \"min_p\": 0.05,\n        \"top_k\": 0,\n        \"top_p\": 1.0,\n        \"dry_multiplier\": 0.8,\n        \"dry_base\": 1.75,\n        \"dry_allowed_length\": 2,\n        \"dry_penalty_last_n\": 256,\n        \"repeat_penalty\": 1.0,\n        \"repeat_last_n\": 64\n      }\n    },\n    {\n      \"name\": \"t0.7_dry_xtc\",\n      \"title\": \"temp0.7 + полный DRY + XTC 0.5/0.1\",\n      \"sampling\": {\n        \"temperature\": 0.7,\n        \"min_p\": 0.05,\n        \"top_k\": 0,\n        \"top_p\": 1.0,\n        \"dry_multiplier\": 0.8,\n        \"dry_base\": 1.75,\n        \"dry_allowed_length\": 2,\n        \"dry_penalty_last_n\": 256,\n        \"xtc_probability\": 0.5,\n        \"xtc_threshold\": 0.1,\n        \"repeat_penalty\": 1.0,\n        \"repeat_last_n\": 64\n      }\n    },\n    {\n      \"name\": \"t0.85_dry_xtc\",\n      \"title\": \"temp0.85 + полный DRY + XTC 0.5/0.1\",\n      \"sampling\": {\n        \"temperature\": 0.85,\n        \"min_p\": 0.05,\n        \"top_k\": 0,\n        \"top_p\": 1.0,\n        \"dry_multiplier\": 0.8,\n        \"dry_base\": 1.75,\n        \"dry_allowed_length\": 2,\n        \"dry_penalty_last_n\": 256,\n        \"xtc_probability\": 0.5,\n        \"xtc_threshold\": 0.1,\n        \"repeat_penalty\": 1.0,\n        \"repeat_last_n\": 64\n      }\n    }\n  ]\n}"
+{
+  "_комментарий": "Матрица A: цена температуры и сэмплеров для лексического богатства на ЗДОРОВОЙ модели. DTV2 31B. Мерим чистоту + TTR/Giraud. Non-thinking.",
+  "name": "dtv2_matrixA",
+  "server": "<PROJECT_DIR>/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "<MODELS_DIR>/mradermacher/Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF/Gemma-4-Dark-Thoughts-V2-31B.i1-IQ3_XXS.gguf",
+  "base_args": [
+    "-np",
+    "1",
+    "-c",
+    "32768",
+    "-fa",
+    "on",
+    "--fit",
+    "on",
+    "-t",
+    "12",
+    "-tb",
+    "12",
+    "-ctk",
+    "q4_0",
+    "-ctv",
+    "q4_0",
+    "--load-mode",
+    "none",
+    "--jinja",
+    "--reasoning",
+    "off",
+    "--reasoning-budget",
+    "0",
+    "--spec-type",
+    "draft-mtp",
+    "--spec-draft-n-max",
+    "5",
+    "--spec-draft-n-min",
+    "1",
+    "--spec-draft-p-min",
+    "0.75",
+    "-md",
+    "<MODELS_DIR>/mradermacher/Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF/gemma-4-31B-it-assistant.Q4_K_M.gguf"
+  ],
+  "prompts": "quality/prompts_ru_rp.json",
+  "n_predict": 280,
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "configs": [
+    {
+      "name": "ref_t0.4",
+      "title": "Наш RU-пресет: temp0.4 min-p0.1 (эталон чистоты)",
+      "sampling": {
+        "temperature": 0.4,
+        "min_p": 0.1,
+        "top_k": 0,
+        "top_p": 1.0,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 64,
+        "repeat_penalty": 1.0,
+        "repeat_last_n": 64
+      }
+    },
+    {
+      "name": "card_t1.0",
+      "title": "Карточка: temp1.0 min-p0.03",
+      "sampling": {
+        "temperature": 1.0,
+        "min_p": 0.03,
+        "top_k": 0,
+        "top_p": 1.0,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 64,
+        "repeat_penalty": 1.0,
+        "repeat_last_n": 64
+      }
+    },
+    {
+      "name": "t0.7_dry",
+      "title": "temp0.7 min-p0.05 + полный DRY (base1.75 allowed2 lastn256)",
+      "sampling": {
+        "temperature": 0.7,
+        "min_p": 0.05,
+        "top_k": 0,
+        "top_p": 1.0,
+        "dry_multiplier": 0.8,
+        "dry_base": 1.75,
+        "dry_allowed_length": 2,
+        "dry_penalty_last_n": 256,
+        "repeat_penalty": 1.0,
+        "repeat_last_n": 64
+      }
+    },
+    {
+      "name": "t0.7_dry_xtc",
+      "title": "temp0.7 + полный DRY + XTC 0.5/0.1",
+      "sampling": {
+        "temperature": 0.7,
+        "min_p": 0.05,
+        "top_k": 0,
+        "top_p": 1.0,
+        "dry_multiplier": 0.8,
+        "dry_base": 1.75,
+        "dry_allowed_length": 2,
+        "dry_penalty_last_n": 256,
+        "xtc_probability": 0.5,
+        "xtc_threshold": 0.1,
+        "repeat_penalty": 1.0,
+        "repeat_last_n": 64
+      }
+    },
+    {
+      "name": "t0.85_dry_xtc",
+      "title": "temp0.85 + полный DRY + XTC 0.5/0.1",
+      "sampling": {
+        "temperature": 0.85,
+        "min_p": 0.05,
+        "top_k": 0,
+        "top_p": 1.0,
+        "dry_multiplier": 0.8,
+        "dry_base": 1.75,
+        "dry_allowed_length": 2,
+        "dry_penalty_last_n": 256,
+        "xtc_probability": 0.5,
+        "xtc_threshold": 0.1,
+        "repeat_penalty": 1.0,
+        "repeat_last_n": 64
+      }
+    }
+  ]
+}

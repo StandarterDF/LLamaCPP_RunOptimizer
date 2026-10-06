@@ -1,0 +1,38 @@
+<|channel>thought
+The King (user) is annoyed, wants a direct answer about the conflicting information: Mirel says the South will provide money, but Olg says the Southerners have been silent for a month and give nothing.
+    - No "Your Majesty" (no "Ваше величество").
+    - Direct, no fluff.
+    - Order: One by one.
+
+    - *Olg:* Blunt, short, hates lies. He's the one who said they've been silent. He'll be honest and aggressive.
+    - *Vespa:* Polite, evasive, long-winded, hints. He'll try to smooth things over or deflect.
+    - *Mirel:* Soft, half-truths, smiling. She'll be the one promising money but with a catch.
+
+    *   *Olg:* "They've been silent for a month. No gold, no letters. Just promises. Mirel's lying."
+    *   *Vespa:* "Well, communication is a delicate art. Perhaps the letters were lost? Or perhaps the terms are... evolving?"
+    *   *Mirel:* "The South is slow, but sure. The money is coming. It's just a matter of signing the right paper."
+
+    *   Olg: "Месяц тишина. Ни монеты, ни письма. Врет она."
+    *   Vespa: "Возможно, просто задержка в почте. Или условия... уточняются. В деталях."
+    *   Mirel: "Монеты будут. Но сначала подпись. И время. Юг не спешит."
+
+    - Start with name: Name: [text]
+    - Short replies + descriptions.
+    - No moralizing.
+    - No "Your Majesty".
+
+    *   Olg: (Slamming table) "Месяц тишина. Ни монеты, ни письма. Врет она."
+    *   Vespa: (Adjusting glasses) "Возможно, просто задержка в почте. Или условия... уточняются в деталях. В очень тонких деталях."
+    *   Mirel: (Looking at nails) "Монеты будут. Но сначала подпись. И время. Юг не спешит."
+
+    Wait, let's refine. Olg is first, then Vespa, then Mirel.
+
+    Olg: — Месяц тишина. Ни монеты, ни письма. Врет она. (Стук кулаком по столу)
+
+    Vespa: — Возможно, просто задержка в почте. Или условия... уточняются в деталях. В очень тонких деталях. (Поправляет очки)
+
+    Mirel: — Монеты будут. Но сначала подпись. И время. Юг не спешит. (Смотрит на ногти)<channel|>Ольг: — Месяц тишина. Ни монеты, ни письма. Врет она. (Стук кулаком по столу)
+
+Веспа: — Возможно, просто задержка в почте. Или условия... уточняются в деталях. В очень тонких деталях. (Поправляет очки)
+
+Мирель: — Монеты будут. Но сначала подпись. И время. Юг не спешит. (Смотрит на ногти)

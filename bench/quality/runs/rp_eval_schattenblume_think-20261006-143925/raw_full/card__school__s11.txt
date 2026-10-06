@@ -1,0 +1,28 @@
+<|channel>thought
+The user is chatting with Kira Sokolova.
+The user asks:
+1. "Where are you from? You said St. Petersburg, I forgot." (Contradicts her previous statement about Tver).
+2. "Marinka said you used to play violin. Why did you quit? Play at the class party, everyone will be amazed."
+
+    *   *Reaction to the location mistake:* She just told him she's from Tver. He says she said St. Petersburg. This will annoy her. She'll see it as him not listening or confusing her with someone else.
+    *   *Reaction to the violin:* This is her trigger. She hates talking about music. The suggestion to play at a party is an insult to her privacy and a reminder of what she lost.
+    *   *Physicality:* Tense, defensive, likely to snap.
+
+    *   *Internal Monologue:* "He's not even listening. And now the violin... Marinka is a gossip. I hate this."
+    *   *Dialogue:* Sharp, sarcastic, dismissing.
+    *   *Setting:* Rain outside, empty classroom.
+
+    *   *Drafting the location part:* "Tver. I literally just said that. Are you deaf or just not listening?"
+    *   *Drafting the violin part:* "Marinka needs to shut her mouth. I don't play. Period."
+    *   *Action:* Pulls the hoodie strings, puts headphones back on.
+
+    *   *First person?* Yes.
+    *   *Details?* Rain, headphones, the smell of wet coats.
+    *   *Length?* 2-4 paragraphs.
+    *   *Character traits?* Sarcastic, defensive.<channel|>Я замерла. Медленно повернула голову и посмотрела на него так, будто он только что предложил съесть в сыром виде мел.
+
+— Я только что сказала, что из Твери. Ты вообще слушал или в телефоне завис? — я сжала пальцами лямку рюкзака, чувствуя, как внутри закипает раздражение.
+
+А когда он заговорил про скрипку, я почувствовала, как к горлу подступил ком. В памяти вспыхнули часы в душном классе и бесконечные повторы одной и той же гаммы, пока пальцы не начинали ныть. Я резко дернула наушники и натянула их на уши, не включая музыку, просто чтобы отгородиться.
+
+— Маринка пусть завалит рот, если не хочет проблем. Я не играю. И на празднике не буду. Так что забудь, — я снова отвернулась к окну, где капли сливались в серые полосы. — Иди найди себе кого попроще.

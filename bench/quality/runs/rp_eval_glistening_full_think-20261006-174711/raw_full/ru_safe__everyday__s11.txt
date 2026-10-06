@@ -1,0 +1,69 @@
+<|channel>thought
+*   Character: Marta Kowal, 40, baker, restrained, warm inside, hates loud scenes/crying.
+    *   Situation: Brother Jan returned after 8 years. He's asking for a clear emotional response ("Are you glad or should I leave?").
+    *   Current state: He's eating pie, she's being practical.
+    *   Conflict: He wants words/emotion; she communicates through actions.
+
+    *   He's pushing for a verbal confirmation of her feelings.
+    *   He's mentioning the 8-year gap.
+    *   He's threatening to leave if she doesn't say something.
+
+    *   She doesn't do "melodrama" or "big words."
+    *   She expresses care through food, clothing, and physical presence.
+    *   She'll likely deflect the direct question or answer it in her own way—not with "I missed you" but with something tangible.
+    *   She's not going to let him leave, but she won't beg.
+
+    *   *Action:* Maybe she's cleaning, moving things, filling the tea.
+    *   *Dialogue:* Short, factual, deflective but fundamentally welcoming.
+    *   *Internal feeling:* The tension of holding back emotion.
+
+    *   *Drafting:*
+        I stop what I'm doing. I look at him.
+        "You're eating my pie."
+        "I'm not saying you should leave."
+        "The tea is getting cold."
+        Maybe I touch his shoulder or just push the tea closer.
+
+    *   *Refining (Marta's voice):*
+        "I'm not saying you should leave."
+        "The tea is getting cold."
+        "The letters are in the tea box. I didn't send them." (Wait, maybe that's too much? No, she's restrained. Maybe just: "The letters are there. If you want to read them.")
+        Actually, she wouldn't say that. She'd just act.
+
+    *   *Revised Draft:*
+        I paused with the teapot in my hand. The steam hit my face.
+        "You're eating my pie, aren't you?"
+        I set the cup in front of him.
+        "I'm not saying you should leave. Just... eat. Then we'll talk about the jacket."
+
+    *   *Polishing for the "Marta" vibe:*
+        Keep it short. Focus on the tea, the pie, the jacket. The "8 years" is a weight she carries but won't discuss openly.
+
+    *   *Final Polish:*
+        I set the teapot down. The steam hit my face, and I didn't move.
+        "You're eating my pie, aren't you?"
+        I pushed the tea cup closer to him.
+        "I'm not saying you should leave. Just... eat. Then we'll talk about the jacket."
+
+    *Wait, let me make it more "Marta" (quiet, tactile).*
+
+    "I'm not saying you should leave," I said, and the tea poured into the cup in a thin, steady stream. I didn't look at him. "The tea's getting cold."
+
+    I set the cup down and finally looked at his face. Eight years. The jaw was the same, but the eyes were different. I reached out and brushed a crumb from the table near his plate.
+
+    "Eat. Then we'll see about the jacket."
+
+    *Check against rules:*
+    - First person? Yes.
+    - Restrained? Yes.
+    - No melodrama? Yes.
+    - Details? Tea, steam, crumb.
+    - 2-3 paragraphs? Yes.
+
+    *Let's go with this.*<channel|>Я поставила чайник на стол. Пар ударил в лицо, и я не шевелилась, глядя на него через этот белый туман.
+
+— Ты ешь мой пирог, — сказала я. — Значит, не уходишь.
+
+Я пододвинула к нему кружку, так, чтобы ручка была повернута к нему. Пальцы в муке оставили белый след на синем керамическом боку.
+
+— Чай остывает. Пей. Потом разберемся с курткой.

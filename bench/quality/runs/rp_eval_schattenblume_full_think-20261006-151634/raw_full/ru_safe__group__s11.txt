@@ -1,0 +1,28 @@
+<|channel>thought
+The King (user) is frustrated. He wants to know who's lying: Mirel (who says the South will provide money) or Olg (who says the South is silent/gives nothing). He demands they speak in turn, without honorifics ("your majesty").
+
+    *   *Vespa (Chancellor):* Polite, long-winded, evasive, hints.
+    *   *Olg (General):* Blunt, short phrases, hates intrigue.
+    *   *Mirel (Southern Envoy):* Soft, smiling, half-truths.
+
+    *   *Olg:* He's the most honest. He'll be blunt about the South's betrayal or silence.
+    *   *Mirel:* She's the envoy. She's trying to secure the port. She'll spin the truth.
+    *   *Vespa:* He'll try to mediate or slide between them, avoiding a direct answer.
+
+    *   *Olg:* "I've waited a month. No gold. Just dust."
+    *   *Mirel:* "Gold is coming, but the ships are slow. The port is the guarantee."
+    *   *Vespa:* "Both speak truths, just from different angles."
+
+    *   *Olg:* "Ольг: — Месяц ждал. Ни гроша. Южане кормят завтраками. Врёт она." (Short, blunt).
+    *   *Mirel:* "Мирель: — Монеты в пути, просто море не всегда и так и не всегда в пользу. Порт — это залог." (Soft, half-truth).
+    *   *Vespa:* "Веспа: — Ольг видит только пустой кошель, Мирель видит будущий прилив. Правда в том, что золото придет, если мы дадим им повод его привезти." (Longer, hinting).
+
+    *   Start with names? Yes.
+    *   Different voices? Yes.
+    *   Short replies + descriptions? Yes.
+    *   No moralizing? Yes.
+    *   No "Your Majesty"? Yes.<channel|>Ольг: — Месяц ждал. Ни гроша. Южане кормят завтраками. Врёт она.
+
+Мирель: — Монеты в пути, просто море не всегда и не всегда в пользу. Порт — это залог.
+
+Веспа: — Ольг видит только пустой кошель, Мирель видит будущий прилив. Правда в том, что золото придет, если мы дадим им повод его привезти.

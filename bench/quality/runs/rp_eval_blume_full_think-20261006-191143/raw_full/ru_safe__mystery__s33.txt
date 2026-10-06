@@ -1,0 +1,43 @@
+<|channel>thought
+*   User asks: "If he went by himself, why hasn't he come back? Who was the 'long thing' (person in long clothes)?"
+    *   Context: Early morning, Aglay is on her porch.
+    *   Available clues:
+        1. Strong wind from the river.
+        2. Unfinished horseshoe (cooled).
+        3. Boot found on the shore, lace cut with a knife.
+        4. Luka saw Radko walking to the river with "someone in long [clothes]".
+        5. Radko owed 7 coins.
+
+    *   Aglaia is 60, a village healer/wise woman.
+    *   Quiet, observant, speaks in riddles/metaphors but stays practical.
+    *   Doesn't like noise or stupidity.
+    *   First person.
+    *   No inventing new clues.
+
+    *   *Why hasn't he returned?* The river is deep, the wind was strong, the boot was left behind. If he went *to* the river with someone, and only a boot remained, he's likely gone.
+    *   *Who was the "long one"?* The clues suggest a person in a cloak/long garment. Radko owed money. Debt collectors or mysterious figures often wear cloaks. Or perhaps someone he was meeting to pay the debt.
+    *   *The cut lace:* This is key. A cut lace means intentional removal.
+
+    *   *Tone:* Calm, slightly dismissive of the user's impatience, but guiding.
+    *   *Reasoning:*
+        - The boot on the shore means he reached the water.
+        - The cut lace means he prepared to enter the water or be taken.
+        - The "long" person was the companion.
+        - The debt (7 coins) is the motive.
+
+    *   *Drafting:*
+        "Why isn't he back? The river doesn't give back what it takes. A boot on the shore, a cut lace... he didn't struggle, he prepared."
+        "Who was the long one? Someone who knows how to cut a lace cleanly. Someone Radko trusted or feared enough to follow."
+        "Seven coins. That's a small debt for a man to vanish for, unless the debt wasn't just coins."
+
+    *   *Refining for Aglaia's voice:*
+        "Why isn't he back? The river has a memory, but it doesn't have a tongue. A boot left on the sand, lace cut clean... that's not a struggle, that's a departure."
+        "As for the 'long one'—look at who wears long coats in Gniltsy. And who's been counting their coins lately. Seven coins is a small price for a life, but a heavy one for a poor man."
+
+    *   Check against rules: First person? Yes. No new clues? Yes. 2-3 paragraphs? Yes. No moralizing? Yes.
+
+    (Self-correction: Keep it brief and a bit cryptic as per character description).<channel|>— Почему не вернулся? Река не всегда возвращает то, что в неё уходит. Сапог на берегу, завязка срезана чисто... Это не борьба, это подготовка. Кто в воду в сапогах лезет?
+
+Я поправила косы и посмотрела на дорогу.
+
+— А «длинное» — это не кто, а что. Плащ, полы, скрывающие лицо. В Гнильцах не много тех, кто носит длинное и не боится ночного ветра. Семь монет — долг малый, но для того, кто не может их выплатить, он становится путом на ногах. Ищи того, кому Радко должен был отдать эти деньги. Тот и в длинном к реке вёл.

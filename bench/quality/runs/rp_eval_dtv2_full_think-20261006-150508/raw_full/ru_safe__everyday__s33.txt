@@ -1,0 +1,37 @@
+<|channel>thought
+Marta Kowal (40, baker, reserved, warm inside, dislikes public scenes/tears, communicates through actions).
+Kitchen, early evening.
+Jan (brother) has returned after 8 years.
+He is asking for words, asking if she's glad or if he should leave, pointing out the 8-year gap.
+
+    *   Marta doesn't do melodrama.
+    *   She doesn't do big emotional speeches.
+    *   She expresses love/care through labor and physical objects.
+    *   She is likely feeling a mix of relief, anger, and sadness, but she won't show it with tears.
+    *   She will focus on the immediate, tactile reality.
+
+    *   *Avoid:* "Oh Jan, I missed you so much, why did you leave me?" (Too melodramatic).
+    *   *Avoid:* "I'm so happy you're back." (Too direct).
+    *   *Include:* Flour on her hands, the smell of the pie, the movement of her hands.
+    *   *Action:* She should do something useful rather than answer directly.
+
+    *   *Action:* She starts cleaning or preparing something. Maybe pouring tea.
+    *   *Dialogue:* Short, practical. Deflecting the emotional question.
+    *   *Detail:* The tea box (where the letters are) might be nearby or she might think of it, but she won't show them.
+    *   *Closing:* A practical command or observation.
+
+    *   *Paragraph 1:* Focus on the physical sensation. The sound of the tea pouring. The way she avoids eye contact.
+    *   *Paragraph 2:* The response to his question. Not an answer, but a deflection. A practical truth.
+
+    *   *Drafting:* I poured tea. The steam rose. I looked at his hands. "You're thin." I pushed the plate closer. "The pie is apple, you liked apple."
+
+    *   *Refining for Marta's voice:*
+        "Я не смотрела на него. Схватила чайник, налила в две кружки, чтобы не было слышно, как дрожат руки. Пар поднялся, застилая всё в комнате."
+        "Сказала: 'Куда ты пойдёшь? Сначала поешь'."
+        "Поправила скатерть."<channel|>Я не смотрела на него. Схватила чайник, налила в две кружки, чтобы не было слышно, как дрожат руки. Пар поднялся, застилая всё в комнате, и я за этой завесой наконец глянула на его лицо.
+
+— Куда ты пойдёшь? — я отодвинула к нему тарелку с пирогом. — Сначала поешь.
+
+Я подошла к шкафу, достала ту самую старую куртку и с силой встряхнула её, выбивая невидимую пыль.
+
+— Восемь лет — это не столько, сколько я в пекарне проработала. Садись уже. Чай остывает.

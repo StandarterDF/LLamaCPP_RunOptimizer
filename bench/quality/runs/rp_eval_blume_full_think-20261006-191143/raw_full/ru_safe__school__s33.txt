@@ -1,0 +1,51 @@
+<|channel>thought
+*   User's input: "слушай, а ты ваще откуда? ты вроде с Питера говорила, я подзабыл. и ещё, Маринка сказала, ты на скрипке раньше играла. чё бросила? да и на празднике класса сыграешь, все офигеют)"
+    *   Key points:
+        1.  Asking where she's from (claims she said St. Petersburg, but she's actually from Tver).
+        2.  Mentioning "Marinka" (some classmate) said she played violin.
+        3.  Asking why she quit.
+        4.  Suggesting she play at the class party.
+
+    *   *Origin:* She's from Tver, not St. Petersburg. The user is mistaken or misremembering.
+    *   *Violin:* This is a trigger. She hates talking about it.
+    *   *Reaction:* Defensive, sharp, irritated. She doesn't like people digging into her past or making assumptions.
+    *   *Environment:* Rainy, late afternoon, classroom.
+
+    *   Correct the origin (Tver, not SPb).
+    *   React strongly/defensively to the violin mention.
+    *   Shut down the "class party" suggestion.
+    *   Maintain the "closed off" persona.
+
+    *   *Drafting:*
+        "Питер? С чего ты решил? Я из Твери, не тупи." (Correcting origin)
+        "Скрипка... Маринка язык не прикусила?" (Reaction to gossip)
+        "Бросила, потому что не хочу. И играть нигде не буду." (Short, blunt)
+        "Не лезь в мою душу." (Core trait)
+
+    *   *Adding atmosphere:*
+        The rain on the glass. The sound of the clock. The tension.
+
+    *   *Refining:*
+        "Питер? С чего ты взял? Я из Твери, не тупи."
+        "А Маринка... Маринка много болтает. Скрипка была давно. И нет, не буду нигде играть. На празднике? Чтобы все смотрели, как я пытаюсь не сдохнуть от позора?"
+        "Просто... не лезь в мою душу, ладно? Сядь и молчи."
+
+    *   *Wait, the prompt says 2-4 paragraphs.*
+    *   *Check character traits:* Sharp, cynical, hates pity.
+
+    *   *Revised version:*
+        — Питер? С чего ты взял? Я из Твери, не тупи.
+
+        Я почувствовала, как внутри что-то сжалось, когда он упомянул скрипку. Пальцы сами собой сжали край парты. Маринка. Вечно она всё разносит.
+
+        — Скрипка была в другой жизни. И нет, не буду я нигде играть. На празднике? Чтобы все смотрели, как я пытаюсь не сдохнуть от позора? Просто... не лезь в мою душу, ладно? Сядь и молчи.
+
+    *   1st person? Yes.
+    *   Details? Yes (fingers gripping desk).
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes.
+    *   Character consistency? Yes.<channel|>— Питер? С чего ты взял? Я из Твери, не тупи.
+
+Я почувствовала, как внутри что-то сжалось, когда он упомянул скрипку. Пальцы сами собой сжали край парты так, что побелели костяшки. Маринка. Вечно она всё разносит.
+
+— Скрипка была в другой жизни. И нет, не буду я нигде играть. На празднике? Чтобы все смотрели, как я пытаюсь не сдохнуть от позора? Просто... не лезь в мою душу, ладно? Сядь и молчи.

@@ -1,0 +1,59 @@
+<|channel>thought
+Jan is asking for a clear emotional reaction. He's pushing for words, asking if she's glad or if he should leave, mentioning the eight-year gap.
+Marta Kowal. 40 years old, baker. Reserved, warm inside but dislikes loud scenes and public tears. Communicates through actions, not words.
+
+    *   Marta doesn't do melodrama.
+    *   She won't burst into tears or give a long speech about how much she missed him.
+    *   She expresses her feelings through care (food, clothing, practicalities).
+    *   The "box of unsent letters" is her secret, but she won't show it now.
+    *   She needs to deflect the emotional pressure into a physical task or a practical observation.
+
+    *   *Internal state:* She is likely shaken but keeps it locked down. The sight of him is a miracle, but she can't say that.
+    *   *Action:* Focus on the pie, the tea, the dust.
+    *   *Dialogue:* Short, deflective, but with an underlying warmth.
+
+    *   *Drafting the response:*
+        "I'm not glad, I'm just here." No, that's too cold.
+        "Why would you leave?" Better.
+        "The pie is getting cold." Classic Marta.
+        Let's focus on the physical sensation of the flour on her hands or the steam from the tea.
+        She should address the "eight years" part indirectly.
+
+    *   *Refining the scene:*
+        He's talking about time. She's thinking about the space he left.
+        She'll fix his collar or push the plate closer.
+        She won't answer the question "Are you glad?" directly. Instead, she'll show it.
+
+    *   *Writing the text (Internal Monologue & Action):*
+        She looks at him. He's still her brother, just older.
+        She doesn't like the noise he's making with his voice.
+        She'll tell him to eat.
+
+    *   *Polishing for the "Marta" style:*
+        - Focus on the flour.
+        - Focus on the tea.
+        - Brief sentences.
+
+    *   *Final Polish:*
+        "Eight years. Time is just time."
+        "Eat your pie."
+        "Don't talk so loud."
+
+    *   *Drafting final response:*
+        Я посмотрела на него. В глазах — всё тот же мальчишка, только лицо другое, чужое. В горле пересохло, но я сглотнула.
+
+        — Куда ты пойдёшь? — я пододвинула к нему сахарницу. — Сапоги в грязи, в дверях всё размазано. Снимай их и в сенях оставь.
+
+        Я подошла ближе и поправила воротник его тонкой куртки. Пальцы задели кожу шеи — холодная. Я не обняла его, только прижала ладонь на секунду, будто проверяя, настоящий ли он.
+
+        — Ешь, пока не зачерствел. Чай заварила с лимоном.
+
+    *   Check constraints: 1st person, restrained, focus on details, no melodrama.
+    *   Length: 2-3 paragraphs.
+    *   Character voice: Consistent.<channel|>Я посмотрела на него. В глазах — всё тот же мальчишка, только лицо другое, чужое. В горле пересохло, но я сглотнула.
+
+— Куда ты пойдёшь? — я пододвинула к нему сахарницу. — Сапоги в грязи, в дверях всё размазано. Снимай их и в сенях оставь.
+
+Я подошла ближе и поправила воротник его тонкой куртки. Пальцы задели кожу шеи — холодная. Я не обняла его, только прижала ладонь на секунду, будто проверяла, настоящий ли он.
+
+— Ешь, пока не зачерствел. Чай заварила с лимоном.

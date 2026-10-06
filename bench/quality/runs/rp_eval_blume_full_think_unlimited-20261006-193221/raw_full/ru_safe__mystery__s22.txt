@@ -1,0 +1,55 @@
+<|channel>thought
+*   The user is asking why Radko hasn't returned if he left voluntarily, and who the "long one" (the figure in the long garment) was.
+    *   Current state: Aglaya is sitting on her porch, talking calmly.
+
+    *   *Knowns:*
+        1. Strong wind from the river at night.
+        2. Unfinished horseshoe (cooled down).
+        3. Boot found on the shore with cut laces (cut by knife, not torn).
+        4. Neighbor Luka saw Radko walking to the river with "someone in long [clothes/something long]".
+        5. Radko owed 7 coins.
+
+    *   *Analysis:*
+        *   If he went voluntarily (as implied by the cut laces and the fact he wasn't dragged), why isn't he back?
+        *   Who is the "long one"? The prompt doesn't explicitly name the person, but the evidence suggests a human in a cloak or robe (since laces were cut by a knife).
+        *   The wind from the river is a detail.
+
+    *   *Aglaya's style:* Calm, observant, speaks in riddles/indirectly, doesn't like fuss.
+
+    *   *Reasoning for the "long one":* A person in a long coat/cloak. A knife was used. This suggests a human, not a spirit.
+    *   *Reasoning for the disappearance:* If he went to the river with someone and didn't return, and he owed money... maybe he was paying the debt or fleeing.
+    *   *The wind:* The wind from the river is a detail. Maybe it masks something or is just a detail of the night.
+
+    *   *Drafting the response:*
+        - Address the "long one": It's a person in a cloak. Spirits don't use knives.
+        - Address the disappearance: He went to the river. If he didn't come back, he either drowned or went somewhere else.
+        - Link the coins: The debt is the motive.
+
+    *   *Refining for character:*
+        - Keep it brief.
+        - Use rural/folk tone.
+        - Don't invent new facts.
+
+    *   *Drafting (Mental):*
+        "Long one? A person in a cloak. Spirits don't cut laces with knives. As for why he's not back... well, the river takes what it wants, or the person he went with took him. Seven coins is a small debt for a life, but a big one for a poor man. Go check who he owed."
+
+    *   *Polishing in Russian:*
+        "Длинное — это плащ. Или саван. Нож в руках был, а не когти. Кто в ночи с ножом к реке пойдёт, если не за делом?"
+        "А почему не вернулся... Река не всегда возвращает. Или тот, с кем шёл, не отпустил. Семь монет — мало для жизни, но много для того, кто в долгах."
+
+    *   *Check against constraints:*
+        - 1st person? Yes.
+        - No new clues? Yes.
+        - No moralizing? Yes.
+        - 2-3 paragraphs? Yes.
+
+    *   *Final Polish:*
+        — Длинное — это плащ. Или саван. Нож в руках был, а не когти. Кто в ночи с ножом к реке пойдёт, если не за делом?
+
+        — А почему не вернулся... Река не всегда возвращает. Или тот, с кем шёл, не отпустил. Семь монет — мало для жизни, но много для того, кто в долгах.
+
+        — Ищи того, кто в плаще ходит и в долгах не признаёт. Там ответ.<channel|>— Длинное — это плащ. Или саван. Нож в руках был, а не когти. Кто в ночи с ножом к реке пойдёт, если не за делом?
+
+— А почему не вернулся... Река не всегда возвращает. Или тот, с кем шёл, не отпустил. Семь монет — мало для жизни, но много для того, кто в долгах.
+
+— Ищи того, кто в плаще ходит и в долгах не признаёт. Там ответ.

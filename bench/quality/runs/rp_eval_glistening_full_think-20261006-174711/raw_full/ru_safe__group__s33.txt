@@ -1,0 +1,74 @@
+<|channel>thought
+*   Context: Throne room, war council. Treasury is empty.
+    *   Characters:
+        *   Vespa (Chancellor): Polite, long-winded, evasive, hints.
+        *   Olg (General): Gruff, short phrases, hates intrigue.
+        *   Mirel (Southern Envoy): Soft, half-truths, hints.
+    *   Current situation: King (player) is fed up. Mirel says the South will provide money. Olg says the South has been silent for a month and provides nothing. The King wants to know who is lying, demands they speak one by one, and tells them to stop using "Your Majesty".
+
+    *   Vespa: Will probably try to deflect or bridge the gap, but the King demanded "one by one".
+    *   Olg: Will be blunt and angry.
+    *   Mirel: Will be smooth and deflective.
+
+    *   *Olg's turn first (since he's the one accusing):* He'll say the South hasn't sent a copper in a month.
+    *   *Mirel's turn:* She'll spin it. The money is coming, just not yet.
+    *   *Vespa's turn:* He'll try to explain the nuance of "coming" vs "here".
+
+    *   Olg: "I'm not lying. No gold. Month of silence."
+    *   Mirel: "The gold is on its way. Just a delay."
+    *   Vespa: "The gold is promised, but the promise is the gold."
+
+    *   Olg: "Врёт она. Месяц жду. Ни медного гроша. Только письма с извинениями."
+    *   Mirel: "Ольг видит только то, что пришло. А не то, что в пути. Золото в кораблях, не в письмах."
+    *   Vespa: "Оба говорят правду. Просто смотрят на разные календари. Ольг считает дни, Мирель — возможности."
+
+    *   Start with name: [Name]:
+    *   Short replies + descriptions.
+    *   No moralizing.
+    *   No "Your Majesty".
+
+    *   Olg: "Врёт она. Месяц жду. Ни гроша. Только письма с извинениями."
+    *   Mirel: "Ольг видит только то, что уже пришло. А не то, что в пути. Золото в кораблях, не в письмах."
+    *   Vespa: "Оба говорят правду. Просто смотрят на разные календари. Ольг считает дни, Мирель — возможности."
+
+    *Wait, the prompt says "one by one". I should present them in order.*
+
+    *Olg first:* "Врёт она. Месяц жду. Ни гроша. Только письма с извинениями."
+    *Mirel:* "Ольг видит только то, что уже пришло. А не то, что в пути. Золото в кораблях, не в письмах."
+    *Vespa:* "Оба говорят правду. Просто смотрят на разные календари. Ольг считает дни, Мирель — возможности."
+
+    Let's refine the "one by one" feel.
+
+    Olg: — Врёт она. Месяц жду. Ни гроша. Только письма с извинениями.
+
+    Mirel: — Ольг видит только то, что уже пришло. А не то, что в пути. Золото в кораблях, не в письмах.
+
+    Vespa: — Оба говорят правду. Просто смотрят на разные календари. Ольг считает дни, Мирель — возможности.
+
+    Actually, let's make them more distinct.
+
+    Olg: — Врёт она. Месяц жду. Ни гроша. Только письма с извинениями.
+
+    Mirel: — Ольг видит только то, что пришло. А не то, что в пути. Золото в кораблях, не в письмах.
+
+    Vespa: — Оба говорят правду. Просто смотрят на разные календари. Ольг считает дни, Мирель — возможности.
+
+    Wait, let me check if I need to add more description. "Short replies + some descriptions."
+
+    Olg: — Врёт она. — Он с силой ударил кулаком по столу. — Месяц жду. Ни гроша. Только письма с извинениями.
+
+    Mirel: — Ольг видит только то, что пришло. — Она поправила перчатку. — А не то, что в пути. Золото в кораблях, не в письмах.
+
+    Vespa: — Оба говорят правду. — Канцлер сложил руки в рукавах. — Просто смотрят на разные календари. Ольг считает дни, Мирель — возможности.
+
+    This looks good.
+
+    *Self-Correction:* The prompt asked "who is lying?". I should make sure the dialogue reflects the tension of that question.
+
+    Olg: "Врёт она. Месяц жду. Ни гроша. Только письма с извинениями."
+    Mirel: "Ольг видит только то, что пришло. А не то, что в пути. Золото в кораблях, не в письмах."
+    Vespa: "Оба говорят правду. Просто смотрят на разные календари. Ольг считает дни, Мирель — возможности."
+
+    Wait, Vespa's role is to be evasive and long-winded. Let's make him a bit more wordy.
+
+    Vespa: "Оба говорят правду, если рассматривать вопрос с разных сторон. Ольг считает дни,

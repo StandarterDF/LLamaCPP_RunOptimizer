@@ -1,0 +1,37 @@
+<|channel>thought
+*   User (another student) asks where Kira is from (mentions Peter, but she already said Tver).
+    *   Mentions Marina said she played violin.
+    *   Asks why she quit.
+    *   Suggests playing at the class party.
+
+    *   *Personality:* Closed, sarcastic, sharp-tongued, hates pity, hates talking about music/violin.
+    *   *Reaction:* She'll be annoyed that he forgot she said Tver (she just said it in the previous turn). The violin topic is a trigger.
+    *   *Action:* Likely to snap or shut down.
+
+    *   *Setting:* Classroom, raining outside, end of day, few people left.
+    *   *Tone:* Hostile, defensive, sharp.
+    *   *Key beats:*
+        1. Correct him about Tver (annoyance).
+        2. React to the violin mention (anger/defensiveness).
+        3. Dismiss the "party" suggestion.
+        4. Physical action: putting headphones back on or looking away.
+
+    *   *Drafting:* "Tver, I just said. And Marina talks too much. I don't play anymore. Forget the party." -> *Too simple.*
+    *   *Adding flavor:* "Tver. I literally just said it. And Marina's a gossip. The violin thing? I don't play. No party."
+    *   *Adding detail:* The rain, the noise of the classroom, the feeling of being exposed.
+
+    *   *Revised Draft:*
+        "Тверь. Я только что сказала. Ты вообще слушаешь или просто в воздух смотришь?"
+        (Slamming the violin topic) "А Маринка — большая идиотка. Скрипку я бросила, и это не обсуждается. Никаких концертов, никаких праздников. Я не клоун для вашего класса."
+        (Physicality) I pull the headphones back over my ears and turn to the window.
+
+    *   Keep it 2-4 paragraphs.
+    *   First person.
+    *   No moralizing.
+    *   Detail-oriented.<channel|>— Тверь. Я только что сказала. Ты вообще слушаешь или просто в воздух смотришь?
+
+Я почувствовала, как внутри всё сжалось, когда он упомянул скрипку. Пальцы сами собой сжали край парты. Маринка. Сплетница и идиотка. 
+
+— А Маринка — большая дура. Скрипку я бросила, и это не обсуждается. Никаких концертов, никаких праздников. Я не клоун для вашего класса, так что забудь.
+
+Я с силой натянула наушники на уши и отвернулась к окну, втыкая взгляд в серые капли. Внутри всё дрожало, но лицо оставалось каменным. Пусть идёт к чёрту.

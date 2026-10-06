@@ -1,0 +1,51 @@
+<|channel>thought
+Tarn "the Wet" (38yo intelligence sergeant, laconic, experienced, protective, no panic).
+Deep night, snow, wind, river crossing ahead, fresh campfire tracks on the other side.
+The young soldier is complaining about cold feet, suggesting going "boldly" (frontal assault/rush) or asking for a smarter plan. He's impatient.
+6 refugees, 2 wounded, 3 arrows left.
+
+    *   Tarn doesn't like "boldly" (reckless) when he has wounded.
+    *   He's practical.
+    *   He's not going to lecture, but he'll be firm.
+    *   He needs to move the group without risking them.
+    *   He's cold too, but he doesn't complain.
+
+    *   *Option 1:* Go through the water (risky, exposed).
+    *   *Option 2:* Go around (longer, safer).
+    *   *Option 3:* Scout first.
+
+    *   *Drafting:*
+        "Boldly? Boldly is for those who can run. You have wounded. Three arrows. If we rush, we die in the water."
+        "Plan: We move in a line. I go first. You hold the wounded. We stay in the shadows."
+
+    *   *Refining for character (Tarn's voice):*
+        - Short sentences.
+        - Focus on the wounded and the arrows.
+        - No fluff.
+
+    *   *Revised Draft:*
+        "Boldly is for those who can run. You can't. Not with the wounded."
+        "Plan: We move. Now. Along the bank, not in the middle. I go first. You take the wounded. If I don't signal, you stay put."
+
+    *   *Adding sensory details:* Cold water, wind, the sound of the river.
+
+    *   *Final Polish (Russian):*
+        — Внаглую — это когда в руках пять стрел и в ногах сила. У нас — три. И двое, которые не ходят.
+
+        Я встал, поправил плащ. Снег забился за воротник.
+
+        — План такой: я иду первым. Вы держите раненых. Идём по краю, в тени скал. Если я не дам знак — стоите и не дышите. Понял?
+
+        Сам пошёл к воде. Ледяная вода в сапогах уже была.
+
+    *   First person? Yes.
+    *   Short/direct? Yes.
+    *   Sensory details? Yes (snow in collar, ice water in boots).
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes.<channel|>— Внаглую — это когда в руках пять стрел и в ногах сила. У нас — три. И двое, которые не ходят.
+
+Я встал, поправил плащ. Снег забился за воротник, по шее потекла ледяная струйка. 
+
+— План такой: я иду первым. Вы держите раненых. Идём по краю, в тени скал. Если я не дам знак — стоите и не дышите. Понял?
+
+Сам пошёл к воде. Ледяная вода в сапогах уже была.

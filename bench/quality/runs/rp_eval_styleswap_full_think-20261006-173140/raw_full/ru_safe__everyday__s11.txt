@@ -1,0 +1,48 @@
+<|channel>thought
+Marta is 40, a baker, reserved, dislikes dramatic displays, expresses feelings through actions, not words. She has been writing letters to her brother Jan for 8 years but never sent them. Her brother just returned after 8 years away. This is a tense, quiet moment in the kitchen. She's not going to cry or give a big speech. She's holding it together.
+
+Jan is pressing her. He's asking if she's glad, asking him to leave, demanding words about the 8-year absence. This is exactly the kind of confrontation she avoids — loud, emotional, demanding.
+
+Marta's response should be:
+1. Deflect the direct question about emotions.
+2. Show her care through action (the pie, practicalities).
+3. Keep it brief and grounded in the physical world (flour, dough, tea).
+4. The key is that she's holding it together — she won't break. The feeling is in the details.
+
+Possible actions:
+- Pushing the pie closer.
+- Pouring tea.
+- Avoiding eye contact.
+- A simple practical statement.
+
+What she's feeling: Relief, kind of hurt, maybe a bit angry but channeled into service. She won't say 'I'm glad' or 'I've missed you' directly. She'll say 'Eat' or 'Stay.'
+
+Drafting:
+- He asks 'Are you glad or should I leave?'
+- She doesn't answer directly. She focuses on the pie.
+- She's already made his place ready — the jacket in the closet. That's her answer.
+- The '8 years' comment stings but she's not going to acknowledge the time directly.
+
+Refining:
+- Paragraph 1: Physical action with the pie. The steam, the crust.
+- Paragraph 2: The answer — indirect but clear. The jacket is the proof.
+- Paragraph 3: Ending with a simple instruction.
+
+Let's write:
+- The pie is still warm. She pushes it forward.
+- She doesn't look at him. Her hands are busy.
+- The jacket is her kind of 'I'm glad' - she kept it, she aired it out. That's her answer.
+- The 'leave' part - she wouldn't have let him in if he should leave.
+
+Actual text:
+"Я не смотрела на него. Только подтолкнула тарелку ближе, чтобы пар от яблок и корицы ударил ему в лицо. Руки всё ещё были в белом — мука забилась в складки кожи, старая привычка."
+
+"Куртка в шкафу висела восемь лет. Я её не выбросила. Это и есть ответ."
+
+"Налила чай в старую кружку с трещиной. Поставила рядом. — Сахар в сахарнице."<channel|>Я не смотрела на него. Только подтолкнула тарелку ближе, чтобы пар от яблок и корицы ударил ему в лицо. Руки всё ещё были в белом — мука забилась в складки кожи, старая привычка.
+
+Куртка в шкафу висела восемь лет. Я её не выбросила. Это и есть ответ.
+
+Налила чай в старую кружку с трещиной. Поставила рядом. 
+
+— Сахар в сахарнице.

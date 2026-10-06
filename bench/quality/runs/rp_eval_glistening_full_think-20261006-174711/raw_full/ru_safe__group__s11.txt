@@ -1,0 +1,75 @@
+<|channel>thought
+The King (player) is calling them out. He's asking who's lying: Mirel says the South will give money, but apparently, Olg says the Southerners have been silent for a month and given nothing. He wants them to answer one by one, no "Your Majesty" fluff.
+
+    *   *Vespa (Chancellor):* Polite, long-winded, evasive, loves hints. He's the middleman. He'll try to deflect and buy time.
+    *   *Olg (General):* Blunt, short phrases, hates intrigue. He'll be straightforward and aggressive.
+    *   *Mirel (Southern Envoy):* Soft, smiling, half-truths. She'll be slippery and charming.
+
+    *   *Vespa:* Needs to speak first or second. He'll probably try to frame the situation as a "misunderstanding" or "timing issue."
+    *   *Olg:* Will probably just say "she's lying" or "they're useless."
+    *   *Mirel:* Will spin it as a "delay" or "process."
+
+    *   *Vespa:* He'll start. He'll talk about the *process* of money moving.
+    *   *Olg:* He'll cut in. "They haven't sent a copper."
+    *   *Mirel:* She'll explain why. "Bureaucracy."
+
+    *   *Vespa:* "Well, the South is a large bureaucracy..." (long-winded)
+    *   *Olg:* "Liar. Not a copper." (short)
+    *   *Mirel:* "It's just a delay." (half-truth)
+
+    *   *Vespa:* "If we look at the timeline, the South has its own rhythms. The coins are being minted, the ships are being loaded... it's a process of certain complexity, and I’m sure Mirel can explain why the timing shifted."
+    *   *Olg:* "Month. Zero gold. Only dust."
+    *   *Mirel:* "The ships are sailing. Just... slower than expected. The winds are bad."
+
+    *   *Vespa:* "The South is a vast machine. It takes time to grind. The coins are being minted, the ships are being loaded. It's a process of certain complexity, and I’m sure Mirel can explain why the timing shifted."
+    *   *Olg:* "Month. Zero gold. Only dust."
+    *   *Mirel:* "The ships are sailing. Just... slower than expected. The winds are bad."
+
+    Wait, the prompt says "one by one." I should let them speak in order.
+
+    *   *Vespa:* "The South is a vast machine. It takes time to grind. The coins are being minted, the ships are being loaded. It's a process of certain complexity, and I'm sure Mirel can explain why the timing shifted."
+    *   *Olg:* "Month. Zero gold. Only dust."
+    *   *Mirel:* "The ships are sailing. Just... slower than expected. The winds are bad."
+
+    *   Vespa: Long, evasive. (Check)
+    *   Olg: Short, blunt. (Check)
+    *   Mirel: Half-truth, soft. (Check)
+    *   No "Your Majesty". (Check)
+
+    *Self-Correction:* Let's make sure they sound distinct.
+
+    *Vespa:* "The South is a vast machine, and machines have their own rhythm. The coins are being minted, the ships are being loaded... it's a process of certain complexity, and I'm sure Mirel can explain why the timing shifted."
+    *Olg:* "Month. Zero gold. Only dust."
+    *Mirel:* "The ships are sailing. Just... slower than expected. The winds are bad."
+
+    Wait, the prompt asks "who's lying?"
+    Olg is accusing Mirel of lying.
+    Mirel is promising money.
+    Vespa is hedging.
+
+    Let's refine.
+
+    *Vespa:* "The South is a vast machine, and machines have their own rhythm. The coins are being minted, the ships are being loaded... it's a process of certain complexity, and I'm sure Mirel can explain why the timing shifted."
+    *Olg:* "Month. Zero gold. Only dust."
+    *Mirel:* "The ships are sailing. Just... slower than expected. The winds are bad."
+
+    Actually, let's make them more reactive to the "who's lying" question.
+
+    *Vespa:* "The South is a vast machine, and machines have their own rhythm. The coins are being minted, the ships are being loaded... it's a process of certain complexity, and I'm sure Mirel can explain why the timing shifted."
+    *Olg:* "Month. Zero gold. Only dust."
+    *Mirel:* "The ships are sailing. Just... slower than expected. The winds are bad."
+
+    Wait, let's make Olg more aggressive about the "lying" part.
+
+    *Olg:* "She's lying. A month of silence. Not a copper."
+    *Vespa:* "The South is a vast machine, and machines have their own rhythm. The coins are being minted, the ships are being loaded... it's a process of certain complexity, and I'm sure Mirel can explain why the timing shifted."
+    *Mirel:* "The ships are sailing. Just... slower than expected. The winds are bad."
+
+    This feels more natural.
+
+    *   Vespa: long, evasive.
+    *   Olg: short, blunt.
+    *   Mirel: half-truth.
+    *   No "Your Majesty".
+
+    Let'

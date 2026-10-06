@@ -1,0 +1,40 @@
+<|channel>thought
+The user is asking why Radko hasn't returned if he went willingly, and who the "long" figure was.
+
+    *   Strong wind from the river at night.
+    *   Unfinished horseshoe, cooled down.
+    *   Shoe found on the shore with a cut lace (cut by a knife, not torn).
+    *   Neighbor Luka saw Radko walking to the river with "someone in long [clothes/something long]".
+    *   Radko owed a debt of seven coins.
+
+    *   Aglaia is calm, observant, speaks in riddles/indirectly but is practical.
+    *   She doesn't invent new evidence.
+    *   She doesn't moralize.
+    *   She's a healer/wise woman.
+
+    *   *Why hasn't he returned?* If he went to the river with someone, he might have been meeting a creditor or someone he owed money to. The cut shoe lace suggests he was preparing to move fast or be stripped of belongings.
+    *   *Who is the "long" figure?* Luka saw "someone in long". This is a description, not a person's identity. Aglaia would point out that "long" describes clothing or appearance, not a supernatural entity.
+    *   *The cut shoe:* A cut lace means someone used a tool. A tool means a person.
+
+    *   *Drafting response:*
+        "If he went himself, he went to settle something. Seven coins is a debt, and debts have collectors. The 'long' one is just a person in a cloak or a long coat. Why hasn't he come back? Maybe the river took him, or maybe he's hiding. But a man who cuts his own shoe lace is a man who doesn't want to be caught or wants to swim. Or someone cut it for him. Either way, the cut is clean. That's a knife's work, not a water spirit's claw."
+
+    *   *Refining to Aglaia's voice:*
+        "Settle the debt, settle the man. Seven coins. Who's the 'long' one? A person in a cloak, a traveler, a creditor. A man who cuts his shoe lace is either running or being taken. If he's not back, the river is deep or the road is long."
+
+    *   *Adding detail:* Mention the wind. The wind from the river might have obscured sounds or footprints.
+
+    *   Keep it 2-3 paragraphs.
+    *   No new evidence.
+    *   First person.
+
+    *Draft:*
+    — Семь монет — это не за хлебом сходить. Долг — это цепь, которая тянет за собой. Кто в длинном? Человек в плаще, в кафтане, в чем угодно. Лука видел только силуэт, а не лицо.
+
+    — А почему не вернулся — так река глубока, а дно не прощает. Или не вернулся, потому что не хочет. Сапог с обрезанной завязкой на берегу оставили — значит, либо сам раздевался, чтобы в воду залезть, либо его раздевали. Но завязку резали ножом, аккуратно. Это не борьба, это подготовка.
+
+    — Ищи того, кому Радко был должен. Семь монет — это не так мало, чтобы просто забыть.<channel|>— Семь монет — это не за хлебом сходить. Долг — это цепь, которая тянет за собой. Кто в длинном? Человек в плаще, в кафтане, в чем угодно. Лука видел только силуэт, а не лицо.
+
+— А почему не вернулся — так река глубока, а дно не прощает. Или не вернулся, потому что не хочет. Сапог с обрезанной завязкой на берегу оставили — значит, либо сам раздевался, чтобы в воду залезть, либо его раздевали. Но завязку резали ножом, аккуратно. Это не борьба, это подготовка.
+
+— Ищи того, кому Радко был должен. Семь монет — это не так мало, чтобы просто забыть.

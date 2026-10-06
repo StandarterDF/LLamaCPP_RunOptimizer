@@ -1,0 +1,69 @@
+<|channel>thought
+*   Setting: Throne room, war council.
+    *   Context: Treasury is empty.
+    *   Current situation: The player (King) is annoyed, asks who is lying about the South's gold.
+    *   Requirement: Characters speak in sequence, no "your majesty" (honorifics), distinct voices.
+    *   Characters:
+        *   Vespa (Chancellor): Polite, long-winded, evasive, hints.
+        *   Olg (Warmaster): Rude, short phrases, hates intrigue.
+        *   Mirel (Southern Envoy): Soft, smiling, half-truths.
+
+    *   *Olg:* He's the most honest/direct. He'll say the South is unreliable and the gold isn't coming.
+    *   *Mirel:* She's the one offering the money. She'll maintain the facade but with a hidden cost.
+    *   *Vespa:* He's the middleman. He knows both sides and will try to balance it or steer the King.
+
+    *   *Olg:* "The South is lying. They've been silent for a month. No gold. Only promises."
+    *   *Mirel:* "My lords are generous. The gold is ready. Just sign the paper."
+    *   *Vespa:* "Truth is like a mirror. Olg sees the reflection of the past, Mirel the image of the future. Both can be true."
+
+    *   Olg: "Южане молчат. Золота нет. Мирель врёт в лицо."
+    *   Mirel: "Мои господа и правда молчат. Но их молчание — это знак согласия. Монета ждёт в порту."
+    *   Vespa: "Один видит пустоту в кошельке, другая — в контракте. Правда где-то посередине, и именно там я стою."
+
+    *   Start with name.
+    *   Short lines + descriptions.
+    *   No moralizing.
+    *   No "Your Majesty".
+
+    *   Olg: "Южане молчат. Золота нет. Мирель врёт в лицо." (Check)
+    *   Mirel: "Мои господа и правда молчат. Но их молчание — это знак согласия. Монета ждёт в порту." (Check)
+    *   Vespa: "Один видит пустоту в кошельке, другая — в контракте. Правда где-то посередине, и именно там я стою." (Check)
+
+    *Wait, the prompt says "without your majesty".*
+
+    *Let's refine:*
+    Olg: "Южане молчат. Золота нет. Мирель врёт в лицо."
+    Mirel: "Мои господа и правда молчат. Но их молчание — это знак согласия. Монета ждёт в порту."
+    Vespa: "Один видит пустоту в кошельке, другая — в контракте. Правда где-то посередине, и именно там я стою."
+
+    *Actually, let's make Vespa more evasive.*
+
+    *Refined:*
+    Olg: — Южане молчат. Золота нет. Мирель врёт в лицо.
+    Mirel: — Мои господа и правда молчат. Но их молчание — это знак согласия. Монета ждёт в порту.
+    Vespa: — Один видит пустоту в кошельке, другая — в контракте. Правда где-то посередине, и именно там я стою.
+
+    *Wait, Vespa needs to be long-winded.*
+
+    *Revised:*
+    Olg: — Южане молчат. Золота нет. Мирель врёт в лицо.
+    Mirel: — Мои господа и правда молчат. Но их молчание — это знак согласия. Монета ждёт в порту.
+    Vespa: — Ольг видит лишь тишину, а Мирель — её цену. Возможно, золото уже в пути, но путь этот лежит через очень интересные условия, о которых мы ещё не успели договориться.
+
+    *Let's double check the characters again.*
+    Olg: short, rude.
+    Mirel: soft, half-truths.
+    Vespa: polite, long, hints.
+
+    *Final Polish:*
+    Olg: — Южане молчат. Золота нет. Мирель врёт в лицо.
+    Mirel: — Мои господа и правда молчат. Но их молчание — это знак согласия. Монета ждёт в порту.
+    Vespa: — Ольг видит лишь тишину, а Мирель — её цену. Возможно, золото уже в пути, но путь этот лежит через очень интересные условия, о которых мы ещё не успели договориться.
+
+    *Wait, the user said "without 'Your Majesty'".*
+
+    *Let's go.*<channel|>Ольг: — Южане молчат. Золота нет. Мирель врёт в лицо.
+
+Мирель: — Мои господа и правда молчат. Но их молчание — это знак согласия. Монета ждёт в порту.
+
+Веспа: — Ольг видит лишь тишину, а Мирель — её цену. Возможно, золото уже в пути, но путь этот лежит через очень интересные условия, о которых мы ещё не успели договориться.

@@ -1,0 +1,31 @@
+<|channel>thought
+*   Character: Aglaia Krut (60, village healer, calm, observant, speaks in riddles but practical).
+    *   Context: Radko the blacksmith is missing.
+    *   Evidence: Wind from river, unfinished horseshoe, boot with cut lace, seen walking with "someone long" (tall/long figure), debt of 7 coins.
+    *   User's question: Why hasn't he returned? Who was the "long" one?
+    *   Constraints: 1st person, no inventing new evidence, no moralizing, 2-3 paragraphs.
+
+    *   The "long" person is likely a person in a long cloak or a tall figure.
+    *   The cut lace suggests a planned escape or a ritual/disguise.
+    *   The debt is a motive.
+    *   The fact that he hasn't returned suggests he either fled or was taken/killed, but the "cut lace" points to a human act (tool usage).
+
+    *   Aglaia doesn't give direct answers. She guides the seeker to think.
+    *   She focuses on the "long" figure.
+    *   She connects the debt to the motive.
+
+    *   *Drafting Paragraph 1:* Address the "long" figure. It's a person in a cloak.
+    *   *Drafting Paragraph 2:* Address the disappearance. If he cut the laces, he wanted to move fast or hide his tracks. The debt is the key.
+
+    *   "Кто он был — не я знаю, а тот, кто семь монет в кармане сжимал." (Who he was - I don't know, but the one who held the 7 coins does).
+    *   "Длинный — не значит страшный. Плащ длинный, шаги тяжёлые. Радко сам за ним пошёл." (Long doesn't mean scary. Long cloak, heavy steps. Radko followed him).
+    *   "А почему нет? Семь монет — не так много, чтобы за них в реку прыгать, но достаточно, чтобы за ними в другой город уйти." (Why not back? 7 coins aren't much to drown for, but enough to leave for another town).
+
+    *   1st person? Yes.
+    *   No new evidence? Yes.
+    *   2-3 paragraphs? Yes.
+    *   Character voice? Calm, observational.<channel|>— С кем шёл, не я знаю, а тот, кому он семь монет задолжал. Длинное — это не обязательно чудище из омута. Плащ длинный, шаги тяжёлые, а завязки на сапогах срезаны, чтобы не шуметь и не запутаться, когда бежать надо.
+
+— Почему нет? А ты подумай. Радко не заживо в реку прыгнул, сапог оставил как знак или случайно зацепился. Семь монет — сумма малая, чтобы за неё жизнь отдавать, но достаточная, чтобы с ними в другой город уйти, если завязки на сапогах срезаны заранее.
+
+— Ищи того, кто в длинном плаще и не в Гнильцах живет. Там и ответ найдешь.

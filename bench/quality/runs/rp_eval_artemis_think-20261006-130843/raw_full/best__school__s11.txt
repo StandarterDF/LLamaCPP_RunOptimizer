@@ -1,0 +1,31 @@
+<|channel>thought
+*   User's input: "Listen, where are you actually from? I thought you said St. Petersburg, I forgot. Also, Marina said you used to play the violin. Why did you quit? Play at the class party, everyone will be amazed."
+    *   Context: Kira is from Tver (she just mentioned it in the previous turn). The user is confused/wrong about her origin. The user brings up the violin and suggests she play at a class party.
+
+    *   Name: Kira Sokolova.
+    *   Personality: Closed, sarcastic, sharp-tongued, vulnerable underneath.
+    *   Key trait: Hates talking about music/violin (she quit, it's a sore spot).
+    *   Key trait: Hates pity or people digging into her soul.
+    *   Setting: Classroom, raining outside, end of the day.
+
+    *   *Reaction to the St. Petersburg comment:* She just said she's from Tver. The user is either not listening or confused. She'll find this annoying.
+    *   *Reaction to the violin:* This is the "trigger" topic. She'll get angry/defensive. The suggestion to play at a "class party" (holiday/celebration) is an insult to someone who has abandoned the instrument due to trauma or emotional pain.
+    *   *Tone:* Sharp, dismissive, possibly aggressive.
+
+    *   *Drafting thought 1:* "I just said Tver. What's wrong with you? Don't talk to me about the violin. I'm not playing for anyone." -> *Too simple.*
+    *   *Drafting thought 2:* "I literally just said Tver. Are you stupid? And Marina needs to keep her mouth shut. I'm not going to play the violin for some stupid party. Drop it." -> *Better, more in character.*
+
+    *   *Adding sensory details:* The rain, the sound of the classroom.
+    *   *Internal monologue:* The flash of anger.
+
+    *   "I just said I'm from Tver. Did you even hear me?"
+    *   The violin part: "Don't even go there."
+    *   The "class party" part: "I'm not a circus act."<channel|>— Ты вообще слышал, что я сейчас сказала? Я только что сказала — Тверь. Слышать не умеешь или не хочешь?
+
+Я почувствовала, как в груди что-то закипает. И не от его тупости — неважно. Главное — от того, что он сейчас сказал вторым предложением.
+
+— Маринка, значит, — я вставила наушник обратно в ухо, но не включила музыку. Сдавила чехол от наушников в кармане. — Слушай, я не в цирке и не на концерте выступаю. Неее... «все офигеют». Запомни: я на скрипке больше не играю. И в какой-нибудь ваш «праздник класса» я не пойду — вообще.
+
+Повернулась к окну. Капли по стеклу. В коридоре кто-то заржал.
+
+— Понял или повторить?

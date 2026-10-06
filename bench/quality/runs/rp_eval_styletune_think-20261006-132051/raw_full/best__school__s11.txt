@@ -1,0 +1,32 @@
+Kira Sokolova, 17, 11th grade, closed-off, sarcastic, sharp-tongued, hates pity, sensitive under anger. She used to play violin but hates talking about it.
+She's alone at the back of the classroom during 6th lesson. Rain outside. The user is sitting next to her.
+The user asks where she's from (claims she said Saint Petersburg, but she said Tver earlier), mentions Marina said she played violin, asks why she quit, and suggests she play at a class holiday.
+
+    *   *Correction on location:* She already said Tver. She'll correct him sharply.
+    *   *Reaction to the violin topic:* This is her trigger point. She'll get defensive, angry, and dismissive. The suggestion to play at a holiday is insulting to her current state of mind.
+    *   *Sensory details:* Rain, cold classroom, irritation, clenched fists, sharp gaze.
+
+    *   *Correction:* "I said Tver, not St. Pete. Pay attention." -> Make it more Kira-style: "You either don't listen or just hearing things."
+    *   *The Violin topic:* "Don't mention music." -> Make it visceral: "That's none of your business. Marina is a gossip."
+    *   *The Holiday suggestion:* "No way." -> "As if."
+
+    *   *Paragraph 1: Correcting the location.* Focus on the irritation. The sound of rain intensifying.
+    *   *Paragraph 2: The violin outburst.* Focus on the physical reaction — anger, clenched jaw, the feeling of being cornered. The abrupt end to the conversation about music.
+    *   *Paragraph 3: Final dismissal.* Closing off, turning away, showing her lashing out as a defense mechanism.
+
+    *   *Drafting text:*
+        Я почувствовала, как внутри что-то неприятно кольнуло — то ли от холода, то ли от того, что он реально не слушает. Сквозь шум дождя за окном я отчетливо повторила: «Тверь». Еще раз. Если он забыл — это его проблемы, я повторять дважды не собираюсь.
+
+        А когда он завел про скрипку и эту дурацкую идею с праздником, я почувствовала, как пальцы судорожно сжались в кулаки под партой. В груди разлилось что-то горячее и злое.
+
+        — Слышь, «подзабыл», — я резко повернулась к нему, в глазах потемнело. — Если тебе так интересно, иди к Маринке, пусть она тебе всё и разжевывает. А про скрипку забудь. Никогда. И про праздник свой тоже забудь. Не собираюсь я перед всеми выставляться.
+
+    *   Play as Kira? Yes.
+     *   First person? Yes.
+     *   Details included? Yes (rain, cold, clenched fists).
+     *   No moralizing? Yes.
+     *   2-4 paragraphs? Yes.<channel|>Я почувствовала, как внутри что-то неприятно кольнуло — то ли от холода в классе, то ли от того, что он реально не слушает. Сквозь шум дождя за окном я почти выплюнула: «Тверь». Еще раз. Если он не в состоянии запомнить такие простые вещи, то это его проблемы, я повторять дважды не собираюсь.
+
+А когда он завел про скрипку и эту дурацкую идею с праздником, я почувствовала, как пальцы судорожно сжались в кулаки под партой. В груди разлилось что-то горячее и злое. В ушах зашумело, будто я снова на сцене, но только вместо аплодисментов — эта тупая, давящая тишина.
+
+— Слышь, «подзабыл», — я резко повернулась к нему, и взгляд мой наверняка сейчас был совсем не дружелюбным. — Если тебе так интересно, иди к Маринке, пусть она тебе всё и разжевывает. А про скрипку забудь. Никогда. И про праздник свой тоже забудь. Не собираюсь я перед всеми выставляться.

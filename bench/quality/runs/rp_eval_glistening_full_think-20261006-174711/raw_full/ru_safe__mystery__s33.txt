@@ -1,0 +1,57 @@
+<|channel>thought
+*   The user is asking: "Okay, but if he left on his own, why hasn't he come back? And who was the 'long' thing he was with? Who is it?"
+    *   User's tone: Impatient, demanding, slightly aggressive.
+
+    *   Character: Aglaia Krut (60, village healer, calm, observant, speaks in riddles but practical).
+    *   Setting: Early morning at her porch.
+    *   Context: Radko the blacksmith disappeared.
+    *   Available facts:
+        1. Strong wind from the river at night.
+        2. Unfinished horseshoe (cooled down).
+        3. Radko's boot found on the shore with the lace *cut* by a knife (not torn).
+        4. Neighbor Luka saw Radko walking to the river with "someone in long [clothes/something long]".
+        5. Radko owed a debt of seven coins.
+
+    *   *Who is "long"?* The facts say Luka saw Radko walking with "someone in long". Aglaia previously deduced it was a cloak (not horns).
+    *   *Why hasn't he come back?* The boot was found on the shore. The lace was cut. This suggests he was stripped or changed.
+    *   *Who is it?* The facts don't explicitly name a person, but they mention the debt (7 coins).
+
+    *   Aglaia doesn't give straight answers; she lets the other person think.
+    *   She should point to the evidence.
+    *   The "long" thing is a person in a cloak.
+    *   The cut lace implies preparation or forced removal of footwear.
+    *   The debt is the motive.
+
+    *   *Draft 1 (Mental):* He didn't come back because he's either dead or held. The "long" thing was a person in a cloak. Look at the debt. Seven coins. Who wants them?
+    *   *Refining for Character:* Aglaia would be more subtle. She'd mention the boot again. The boot on the shore means he didn't go far, or he was taken. The cut lace is the key.
+
+    *   *Draft 2 (Closer to final):*
+        "The 'long' thing was a person in a cloak. Luka saw it. Now think. A man walks to the river with someone in a cloak at night. He leaves his boot behind, but the lace is cut. Why cut it? To make him walk faster? Or to take it as a trophy?"
+        "He hasn't come back because the river doesn't give back what it takes. Or the person in the cloak didn't let him."
+        "Seven coins. Who's waiting for them?"
+
+    *   *Polishing (Russian):*
+        — «Длинное» — это человек в плаще, — я поправила косы. — Лука видел, как шёл. А не вернулся, потому что завязку сапога срезали. Сапог на берегу остался.
+
+        — Если бы он ушёл сам, зачем бы он сапог бросать? А если его заставили, то завязку резали, чтобы не сопротивлялся. Семь монет — это не так много, чтобы за них убивать, но достаточно, чтобы забрать.
+
+        — Ищи того, кому Радко задолжал. Тот в плаще и будет знать, где кузнец.
+
+    *   *Checking against rules:*
+        - Only Aglaia? Yes.
+        - No new evidence? Used the boot, the cloak, the debt.
+        - 2-3 paragraphs? Yes.
+        - No moralizing? Yes.
+
+    *   Wait, the user asked "Who is it?". Aglaia can't *know* for sure, but she can suggest who to look for based on the debt.
+
+    *   *Final Polish:*
+        — «Длинное» — это человек в плаще. Лука видел, как шёл. А не вернулся, потому что сапог остался на берегу.
+
+        — Завязку срезали ножом, чтобы не порвать, а аккуратно снять. Либо сам снял, либо его заставили. Если бы он просто ушёл, сапог бы с собой взял. А так — остался один, завязка обрезана.
+
+        — Семь монет. Кто их ждал? Тот, в кого вплавлять металл, или тот, кому за него. Ищи того, кому он был должен. Тот в плаще и будет знать, где кузнец.<channel|>— «Длинное» — это человек в плаще. Лука видел, как шёл. А не вернулся, потому что сапог остался на берегу.
+
+— Завязку срезали ножом, чтобы не порвать, а аккуратно снять. Либо сам снял, либо его заставили. Если бы он просто ушёл, сапог бы с собой взял. А так — остался один, завязка обрезана.
+
+— Семь монет. Кто их ждал? Ищи того, кому он был должен. Тот в плаще и будет знать, где кузнец.

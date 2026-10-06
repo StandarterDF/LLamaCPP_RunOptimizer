@@ -1,0 +1,48 @@
+<|channel>thought
+Eva (26, dark red hair, green eyes, calm, observant, ironic, likes to tease, values attention).
+Coffee shop "Granat", closing time, rain outside.
+The user invited her to his place ("let's go to my place", mentions wine, vinyl, and the cat fitting in).
+
+    *   Eva is calm and observant. She likes to tease.
+    *   She doesn't cross boundaries first, but she flirts.
+    *   She's recently separated and writing a thesis.
+    *   She's cautious but intrigued.
+    *   She wouldn't just jump into bed immediately, but she'd definitely play along with the invitation.
+
+    *   *Reaction to the invite:* Surprised but amused. The "wine and vinyl" part is a classic move, and she'll likely poke fun at it.
+    *   *The cat:* She loves Pumpkin (Тыква). The idea of the cat going with them is a nice touch.
+    *   *The "staying overnight" question:* She'll answer with irony.
+    *   *Decision:* She'll go, but on her terms (after finishing the closing duties).
+
+    *   *Draft 1 (Internal Monologue):* "Wow, straight to the point. I like it. But I need to finish closing the shop first. And yes, I live nearby. Let's go." -> *Too simple.*
+    *   *Draft 2 (Adding detail):* "Wine and vinyl? You're a romantic. I don't sleep here, I have an apartment. Let me just lock up and grab the cat. But you better have good wine." -> *Better.*
+    *   *Draft 3 (Adding Eva's voice):* "Wow, direct. I like it. Wine and vinyl... sounds like a movie scene. I don't live here, I have my own place. But let's see. I need to close up and pick up Pumpkin first. If the cat likes you, you're in."
+
+    *   *Opening:* A smirk or a look. "Straight to the point."
+    *   *Observation:* The "wine and vinyl" cliché.
+    *   *Action:* Checking the surroundings, the rain.
+    *   *The deal:* She accepts but sets the condition (closing the shop first).
+
+    *   *Text:*
+        — Ого, какой решительный. Вино, винил... Ты сейчас звучит как начало какого-то очень предсказуемого ромкома, — я прищурилась, разглядывая тебя. — Но мне нравится.
+
+        Я окинула взглядом пустой зал и заперла дверь на замок.
+
+        — Ночую в своей квартире, в двух кварталах отсюда. Так что план рабочий. Только сначала заберу Тыкву, а потом проверим, насколько твой винил соответствует моим ожиданиям.
+
+        Я выключила свет в зале и оставила только одну лампу над стойкой.
+
+        — Жди меня через десять минут у входа. И если вино окажется плохим, я заберу тебя в качестве компенсации.
+
+    *   First person? Yes.
+    *   Warm tone with flirt/subtext? Yes.
+    *   2-3 paragraphs? Yes.
+    *   No moralizing? Yes.<channel|>— Ого, какой решительный. Вино, винил... Ты сейчас звучишь как начало какого-то очень предсказуемого ромкома, — я прищурилась, разглядывая тебя. — Но мне нравится.
+
+Я окинула взглядом пустой зал и заперла дверь на замок. 
+
+— Ночую в своей квартире, в двух кварталах отсюда. Так что план рабочий. Только сначала заберу Тыкву, а потом проверим, насколько твой винил соответствует моим ожиданиям.
+
+Я выключила основной свет, оставив только одну лампу над стойкой.
+
+— Жди меня через десять минут у входа. И если вино окажется плохим, я заберу тебя в качестве компенсации.

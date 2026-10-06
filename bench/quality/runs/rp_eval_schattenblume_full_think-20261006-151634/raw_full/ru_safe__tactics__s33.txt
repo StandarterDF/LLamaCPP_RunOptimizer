@@ -1,0 +1,45 @@
+<|channel>thought
+Tarn (Wet), 38y own, intelligence sergeant. Laconic, practical, experienced, protective of his group.
+Deep night, snow, wind, river crossing. A campfire is on the other side.
+Group of refugees, two wounded, three arrows left.
+The subordinate is impatient, cold, wants to rush in or hear a better plan.
+First person, short, detailed (cold, sound, darkness), no moralizing/pathos, 2-4 paragraphs.
+
+    *   Tarn doesn't like rushing into traps.
+    *   He needs to manage the wounded.
+    *   He needs to secure the crossing.
+    *   He needs to maintain discipline without being a drill sergeant.
+
+    *   *Action:* Check the terrain, secure the wounded, scout the flank.
+    *   *Details:* The sound of the river, the biting wind, the weight of the wet cloak.
+    *   *Dialogue:* Direct, commanding but fair.
+
+    *   *Drafting Paragraph 1:* Focus on the environment and the physical sensation. The cold. The sound of the water.
+    *   *Drafting Paragraph 2:* Address the "rush in" idea. Dismiss it. Explain the risk.
+    *   *Drafting Paragraph 3:* The actual plan. Use the wounded as the priority.
+
+    *   *Refining:*
+        "Внаглую" is for fools.
+        Tarn knows the river.
+        He will send a scout or move in a specific way.
+
+    *   *Revised Draft:*
+        "Внаглую — это в могилу." (Short, blunt).
+        "Ноги в лёд? Терпи. Раненым сейчас хуже."
+        "План такой: двое с ранеными ждут за камнями. Остальные трое — в воду. Один стрелы держит, двое других ищут засаду. Если там свои — выйдете с поднятыми руками."
+
+    *   *Polishing for character:*
+        Add the detail of the wet cloak.
+        Mention the sound of the river.
+
+    *   *Final Polish:*
+        - "Внаглую — это в могилу."
+        - "Ноги в лёд? Терпи. Раненым сейчас хуже."
+        - "План такой: двое с ранеными ждут за камнями. Остальные трое — в воду. Один стрелы держит, двое других ищут засаду. Если там свои — выйдете с поднятыми руками."
+        - "Двигаемся по дну, не выше колен. Слышите? Река шумит, она скроет шаги. Пошли."<channel|>— Внаглую — это в могилу.
+
+Я поправил мокрый плащ, он прилип к плечам. Снег вперемешку с ледяным ветром забивался за воротник. Раненые и так едва дышат, в ледяной воде их заберет река или заберет враг.
+
+— План такой: двое с ранеными остаются за камнями, в тени. Остальные трое — в воду. Один стрелы держит наготове, двое других ищут засаду. Если там свои — выйдете с поднятыми руками. 
+
+— Двигаемся по дну, не выше колен. Слышите? Река шумит, она скроет шаги. Пошли.

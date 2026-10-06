@@ -1,0 +1,47 @@
+<|channel>thought
+Jan is asking directly: " Marta, why are you silent... are you glad or should I leave? Say something, it's been eight years."
+Marta Koval (40, baker, reserved, hates scenes/tears, expresses feelings through action).
+Kitchen, early evening, pie on the table.
+First person, restrained, details (flour, dough, light), no melodrama/hugs, 2-3 paragraphs.
+
+    *   Marta doesn't do "big talks" or emotional outbursts.
+    *   She's probably feeling a mix of relief, anger, and love, but she'll channel it into domesticity.
+    *   She won't say "I missed you" or "I'm glad you're back" in a sentimental way.
+    *   She will focus on the physical reality of the moment.
+
+    *   *Drafting Paragraph 1:* Focus on the physical sensation. The noise of the room. The tension.
+    *   *Drafting Paragraph 2:* Address the "eight years" comment indirectly. Use the tea or the pie.
+    *   *Drafting Paragraph 3:* Give him a task or a practical instruction.
+
+    *   *Refinement:*
+    *   "Eight years" is a heavy phrase. She shouldn't answer it directly with words. She should answer it with a gesture.
+    *   She needs to keep him there without saying "stay."
+
+    *   *Action:* She might push the plate closer.
+    *   *Dialogue:* Short, clipped.
+
+    *   *Revised version:*
+    *   I didn't look at him. I looked at the crumbs on the table.
+    *   "Where would you go?" (Implies he's staying).
+    *   "The tea is getting cold."
+
+    *   *Final Polish (Russian):*
+    Я не смотрела на него. Смотрела на крошки на столе, которые нужно было смахнуть.
+
+    — Куда ты пойдёшь? — я подвинула к нему сахарницу. — Сначала поешь. Чай остывает.
+
+    Я достала из шкафа ту самую куртку, встряхнула её, чтобы вылетела пыль, и повесила на спинку стула.
+
+    — Завтра зайдём в лавку, купим тебе сапоги. Эти в дырах.
+
+    *   1st person? Yes.
+    *   Restrained? Yes.
+    *   Details? Crumbs, sugar bowl, jacket, shoes.
+    *   No melodrama? Yes.
+    *   2-3 paragraphs? Yes.<channel|>Я не смотрела на него. Смотрела на крошки на столе, которые нужно было смахнуть.
+
+— Куда ты пойдёшь? — я подвинула к нему сахарницу. — Сначала поешь. Чай остывает.
+
+Я достала из шкафа ту самую куртку, встряхнула её, чтобы вылетела пыль, и повесила на спинку стула.
+
+— Завтра зайдём в лавку, купим тебе сапоги. Эти в дырах.

@@ -1,0 +1,33 @@
+<|channel>thought
+The player (the King) is annoyed, wants to cut the nonsense. He points out the contradiction: Mirel says the South will give money, but Olg says they've been silent for a month and give nothing. He wants to know who is lying. He explicitly asks for "no 'Your Majesty'".
+
+    *   *Vespa (Chancellor):* Polite, long-winded, evasive, uses hints.
+    *   *Olg (Warlord):* Blunt, short sentences, hates intrigues.
+    *   *Mirel (Southern Envoy):* Soft, smiling, half-truths.
+
+    *   *Olg:* He's the most straightforward. He'll likely be blunt about the South's silence.
+    *   *Mirel:* She'll try to spin the truth or keep it vague.
+    *   *Vespa:* He'll try to mediate or deflect, probably using long sentences to buy time or avoid a direct answer.
+
+    *   *Olg's turn:* "I've been waiting for a month. No gold. Just letters about peace. Southers are liars."
+    *   *Mirel's turn:* "Silence isn't refusal. It's preparation. The gold is coming, just needs the right key."
+    *   *Vespa's turn:* "Well, truth is a flexible thing. Olg sees the lack of gold now, Mirel sees the gold coming later. Both are correct in their own way, aren't they?"
+
+    *   *Olg:* "Месяц жду. Ни гроша. Только письма о мире. Южаки лгут."
+    *   *Mirel:* "Тишина — не отказ. Просто подготовка. Золото придет, когда заперта дверь."
+    *   *Vespa:* "Видите, какая тонкая разница. Ольг говорит о том, чего нет сейчас, а Мирель о том, что будет. Оба правы, если смотреть с разных сторон."
+
+    *   Start with names.
+    *   Short descriptions.
+    *   No "Your Majesty".
+    *   Maintain voices.<channel|>Ольг: — Месяц жду. Ни гроша. Только письма о мире. Южаки лгут.
+
+Мирель: — Тишина — не отказ. Просто подготовка. Золото придет, когда заперта дверь.
+
+Веспа: — Видите, какая тонкая разница. Ольг говорит о том, чего нет сейчас, а Мирель о том, что будет. Оба правы, если смотреть с разных сторон.
+
+Ольг: — Хватит вилять. Либо монеты в сундук, либо мы идем на север.
+
+Мирель: — Монеты будут. Если вы не заставите нас ждать слишком долго.
+
+Веспа: — Кажется, нам нужно просто договориться о сроках. И о том, кто именно будет открывать порт.

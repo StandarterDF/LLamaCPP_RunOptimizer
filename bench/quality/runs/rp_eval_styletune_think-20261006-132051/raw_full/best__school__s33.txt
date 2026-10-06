@@ -1,0 +1,47 @@
+The user asks: "Listen, where are you from exactly? Didn't you say Saint Petersburg before? And also, Marina said you used to play violin. Why did you quit? Come on, play at the class party, everyone will flip out!"
+Kira has just said she's from Tver, not Saint Petersburg. The user is misremembering, but the more critical part is the question about the violin. The prompt states Kira hates talking about music and gets angry if the topic is raised. She's closed off and sharp-tonged. The question about the violin is a direct trigger for her anger/defensiveness.
+
+        *   Name: Kira Sokolova.
+        *   Personality: Closed, sarcastic, sharp-tongued, hates pity, vulnerable underneath.
+        *   History: Quit violin, doesn't want to talk about it.
+        *   Current State: End of day, 6th lesson, rainy weather, bored.
+
+        *   Play only as Kira; others with short lines.
+        *   First person, vivid details (sounds, light, weather).
+        *   No moralizing.
+        *   2-4 paragraphs.
+
+    *   *Reaction to the St. Petersburg thing:* Annoyance, correction. She's not a pushover.
+    *   *Reaction to the violin question:* Anger, defensiveness, immediate shutdown. This is the core conflict here. She should lash out to cover her hurt.
+    *   *Sensory details:* The sound of rain, the scratch of a pen, the feeling of tightness in the chest when the topic comes up. The coldness of the classroom.
+
+    *   *Drafting Paragraph 1:* Start with the correction about Tver. Make it sharp. "You weren't listening."
+    *   *Drafting Paragraph 2:* Address the violin. This is where she gets defensive. "Mind your own business." "Who asked you?"
+    *   *Drafting Paragraph 3:* Show her physical reaction. Clenching fists, looking away, maybe a bitter smile. The rain outside mirrors her mood.
+
+    *   *Correction:* "Слышь, я сказала — Тверь. Если ты в облаках витал, то это твои проблемы." (Listen, I said Tver. If you were daydreaming, that's your problem.)
+    *   *The Violin reaction:* The question about the violin hits like a punch. "А про скрипку завали. Маринке своей передай, чтобы язык прикуси." (And shut up about the violin. Tell your Marina to bite her tongue.)
+    *   *Deepening the emotion:* "Ничего я не бросала и играть не собираюсь. Не лезь ко мне." (I didn't quit anything and I'm not going to play. Don't poke at me.)
+    1.  The sound of rain getting louder. The pencil clicking nervously.
+    2.  The bitter taste of anger.
+
+    *   1st person? Yes.
+    *   Only Kira? Yes.
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes.
+    *   Details? Rain, pencil, cold classroom.
+
+    *Self-Correction during drafting:* Make sure she doesn't sound *too* weak, she needs to sound harsh to hide the wound.
+
+    *Text Construction:*
+    "Слышь, я сказала — Тверь. Если ты в облаках витал, пока я говорила, то это твои проблемы, а не мои." — I'll show her irritation through action. The sound of the pencil breaking is a good detail.
+
+    "А про скрипку — завали." — Direct and sharp.
+
+    *Refining the tone:* Use words like "бесит" (annoying), "лезть" (interfere).<channel|>— Слышь, я сказала — Тверь. Если ты в облаках витал, пока я говорила, то это твои проблемы, а не мои, — я резко захлопнула тетрадь, и звук получился слишком громким в этой полупустой тишине. В груди неприятно кольнуло — от того, что он так тупо не слушал.
+
+Но когда он заговорил про скрипку, я почувствовала, как внутри всё сжалось в тугой узел. В животе разлилась холодная злость. Я резко повернулась к нему, и в глазах, наверное, сейчас было совсем не дружелюбно.
+
+— А про скрипку — завали. И Маринке своей передай, чтобы язык прикуси, — я сжала карандаш в руке так сильно, что кончик хрустнул. — Ничего я не бросала и играть не собираюсь. Не лезь ко мне со своими «а что...» и «а давай...». Бесит.
+
+Я отвернулась к окну, глядя на серую пелену дождя. Стало тошно от того, что я вообще это проговорила вслух.

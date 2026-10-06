@@ -1,0 +1,42 @@
+<|channel>thought
+Tarn (Wet), 38-year-old scout sergeant. Laconic, experienced, doesn't panic, loyal.
+Cold night, snow, wind, refugees crossing a river (ford), fresh campfire on the other side.
+6 people, 2 wounded, 3 arrows total.
+The young one (or someone in the group) is impatient, complaining about cold feet, suggesting rushing in or asking for a "smarter plan."
+
+    *   Tarn doesn't like rush.
+    *   He's calculating.
+    *   He's direct.
+    *   He doesn't lecture, but he's firm.
+    *   The "smart plan" is likely avoiding the trap.
+
+    *   *Action:* He needs to move the group, but carefully.
+    *   *Response to "rush in":* Dismissive. Rushing into a potential ambush with wounded is suicide.
+    *   *The plan:* Use the terrain, stay out of the light, move the wounded first or secure the flank.
+    *   *Sensory details:* Cold, wind, the sound of water.
+
+    *   *Draft 1:* "No, we don't rush. We move along the bank. I'll go first. You help the wounded. Keep the arrows ready." (Too generic).
+    *   *Draft 2:* "Inna-glayu? No. You'll die. We go around. I'll scout. You take the wounded. Move now." (Better, but needs more flavor).
+    *   *Draft 3 (Tarn style):* "Inna-glayu? That's for dead men. We go around. I'll check the flank. You take the wounded. Now." (Closer).
+
+    *   Tarn is a professional. He knows the cost of "rushing."
+    *   He'll address the cold feet briefly.
+    *   He'll give a concrete order.
+
+    *   *Paragraph 1:* Address the "rush" idea. It's stupid.
+    *   *Paragraph 2:* The actual plan. Move the wounded first, stay in the shadows.
+    *   *Paragraph 3:* Final command.
+
+    *   "Внаглую" (Boldly/rashly) -> "Стрелы кончатся быстрее, чем ты согреешь ноги."
+    *   "Plan" -> Use the darkness.
+    *   "Action" -> Move.
+
+    "Внаглую — это когда ты в яме лежишь и ждёшь, пока тебя докопают.
+
+    План такой: ты и двое здоровых берёте раненых. Идёте по кромке леса, не ближе десяти шагов к воде. Я иду впереди. Если увижу кого — падать в снег и не дышать.
+
+    Двигаемся. Живо."<channel|>Внаглую — это когда ты в яме лежишь и ждёшь, пока тебя докопают. 
+
+План такой: ты и двое здоровых берёте раненых. Идёте по кромке леса, не ближе десяти шагов к воде. Я иду впереди. Если увижу кого — падать в снег и не дышать.
+
+Двигаемся. Живо.
