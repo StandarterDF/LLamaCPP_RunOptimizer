@@ -23,14 +23,20 @@
 | Модель | RP | Чат | Код | Матем | Конфиг |
 | --- | ---: | ---: | ---: | ---: | --- |
 | **Qwen3.6-35B-A3B** (MoE 3B акт., Q2_K_XL) | **82** | **93** | **111** | **121** | `launch\b11382-cu124\qwen36-35b-a3b-mtp-b11382.bat` |
-| **Gemma-4-26B-A4B** StyleTune (MoE 4B акт., IQ4_XS) | **63**¹ | 70 | 100 | 107 | RP — `...styletune-nothink-nospec-b11382.bat`; чат/код — `...styletune-b11382.bat` |
+| **Gemma-4-26B-A4B Goetia v1.6** (MoE, IQ3_XXS, RP-мерж) | **~73** | — | — | — | `...gemma4-26a4b-goetia-nothink-b11382.bat` (think непригоден) |
+| **Gemma-4-26B-A4B StyleTune** (MoE, IQ4_XS) | **63**¹ | 70 | 100 | 107 | RP — `...styletune-nothink-nospec-b11382.bat`; чат/код — `...styletune-b11382.bat` |
 | Swift-1.5-Qwen3.8-27B (dense, IQ2_S-mtp) | 28 | 37 | 36 | 37 | `launch\b11382-cu124\swift-best-b11382.bat` |
-| Gemma-4-31B Dark-Thoughts (dense, IQ3_XXS) | 23 | 31 | 48 | 47 | `launch\b11382-cu124\gemma4-31b-dark-thoughts-nothink-b11382.bat` |
-| **Split-Untied-31B** (dense RP-мерж, IQ3_XXS) | **23** | 34 | 47 | 46 | NoThink — `...-nothink...`; RU — `...-nothink-ru...`; think — `...-think...` |
-| **G4-MeroMero-v2-31B-heretic** (dense RP-мерж, IQ3_XXS) | **21** | 26 | 45 | 47 | NoThink — `...gemma4-31b-meromero-v2-heretic-nothink-b11382.bat`; think — `...-think...` |
+| **Gemma-4-31B Glistening-Gem v2.1** (dense RP-мерж, IQ3_XXS) | 23 | — | — | — | `...gemma4-31b-glistening-nothink-b11382.bat` (+ `-think`) |
+| Gemma-4-31B Dark-Thoughts V2 (dense, IQ3_XXS) | 23 | 31 | 48 | 47 | `...gemma4-31b-dark-thoughts-nothink-b11382.bat` (+ `-think`) |
+| **Split-Untied-31B** (dense RP-мерж, IQ3_XXS) | **23** | 34 | 47 | 46 | `...-split-untied-nothink...`; RU — `...-nothink-ru...`; think — `...-think...` |
+| **Gemma-4-31B Giftige-Blume-v1** (dense RP-мерж, IQ3_XXS) | 22 | — | — | — | `...gemma4-31b-blume-v1-nothink-b11382.bat` (+ `-think`) |
+| **Gemma-4-31B Schattenblume** (dense RP-мерж, IQ3_XXS) | 22 | — | — | — | `...gemma4-31b-schattenblume-nothink-b11382.bat` (+ `-think`) |
 
 ¹ У Gemma-26B на RP спекуляция **не окупается** (креатив плохо предсказуем): без MTP 63 t/s,
 с MTP ~50. Остальные числа — с MTP.
+«—»: у 31B RP-мержей мерили только RP (чат/код/математику не гоняли). Отбракованы (`.bat` есть,
+но **не рекомендуются**): `gemma4-31b-styleswap-*` (англ. вставки в русский) и `gemma4-31b-artemis-*`
+(речевая каша). Полный список файлов — `launch\b11382-cu124\`.
 
 Код-профили `*-dflash-code.bat` (DFlash+ngram) полезны для правок/копирования больших файлов;
 на этом наборе они не перепроверялись — см. `docs\speculation-research.md`.
@@ -203,7 +209,7 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 | Методы спекуляции, внешние спекуляторы, сравнение сборок | `docs\speculation-research.md` |
 | **Реестр проверенного (не повторять)** | `docs\researched.md` |
 | Длинные сессии, «бесконечный» контекст, SillyTavern | `docs\context-infinite-chat.md` |
-| Готовые конфиги | `launch\` (старая сборка) и `launch\b11382-cu124\` (актуальные) |
+| Готовые конфиги | `launch\b11382-cu124\` (единственная сборка; полный список — в таблице «Готовые конфиги») |
 | Харнесс, наборы тестов, сырые результаты | `bench\` (`bench.py`, `suites\`, `runs\results.jsonl`); RP-качество — `bench\quality.py`, `bench\quality\rp_judge.py`, `judge_score.py` |
 | Скил для подбора конфига новой модели | `.opencode\skills\llm-launch-tuner\` |
 
