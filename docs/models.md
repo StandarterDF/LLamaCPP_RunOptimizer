@@ -117,7 +117,7 @@ Artemis-31B (3.90) — их числа в таблице «Протестиро�
 ## Ссылки
 
 - Детали скорости — логи `docs\` по моделям; реестр проверенного — `docs\researched.md`.
-- RP-качество (LLM-судья + средние баллы) — `docs\rp-quality-eval.md`.
+- RP-качество (LLM-судья + средние баллы) — `docs\rp-quality-eval.md`; сводный рейтинг Think/NoThink — `docs\rp-ranking.md`.
 - Внешний ресёрч, донор-граф, Ateron — `docs\rp-model-candidates.md`.
 - Русский, PPL, артефакты — `docs\sampling-quality.md`, `docs\why-ru-models.md`.
 - Конфиги — `launch\b11382-cu124\`; наборы RP-оценки — `bench\quality\suite_rp_eval_*.json`.
