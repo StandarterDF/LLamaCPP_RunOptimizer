@@ -6,7 +6,7 @@
 Обозначения: ✅ оставляем/используем · ❌ проверено и отвергнуто · ⏸ помечено, но не измерялось на нашем стенде.
 
 Стенд: RTX 4060 Ti 16 ГБ, Ryzen 7 5700X, 32 ГБ, Windows. Сборки: **b11382** (основная,
-`downloads\llama-b11382-cu124`) и **b10472** (старая, `GitTest\llama.cpp`). Все TG — на реалистичном
+`downloads\llama-b11382-cu124`) и **b10472** (старая сборка, путь задаётся в `config.local.bat`). Все TG — на реалистичном
 датасете `bench\requests_real.json`, если не сказано иное.
 
 ---
@@ -125,10 +125,55 @@
 - Другой repack/квант StyleTune-31B и Artemis-31B-v1.2 (bartowski IQ3_XXS) на русском.
 - `--fit-target`, `--no-host`, `-kvu/--kv-unified`, `--lookup-cache-static/dynamic`.
 - Новые PR: #27210 (adaptive MTP), #27173 (draft chain), #28702 (FFN-фьюжн PP), #29807 (SSM-копии), #27248 (CUDA KV q4_1/…).
+- **Мержи Ateron** (Gemma-4): MoonGem-31B, Writers-31B-V2, Novelist-Eclipse-31B, Dark-Thoughts V1 —
+  проверить (bartowski GGUF есть для части). Контроль гипотезы «мерж лечит файнтюн»:
+  `G4-MeroMero-v2-31B-heretic` в одиночку vs DTV2 (тот же донор). См. `docs\rp-model-candidates.md`.
 
 ## 9. Логи моделей (там все серии замеров)
 
+- **Реестр моделей (протестированные + на будущее)** — `docs\models.md`
 - `docs\swift-1.5-27b.md`, `docs\gemma-4-31b.md`, `docs\gemma-4-26b-a4b.md`, `docs\qwen36-35b-a3b.md`
 - `docs\gemma-4-31b-rp-merges.md` (Split-Untied-31B, G4-MeroMero-v2-31B-heretic)
 - Кросс-модельные: `docs\speculation-research.md`, `docs\context-infinite-chat.md`, `docs\why-ru-models.md`
 - Сырые данные: `bench\runs\results.jsonl`, наборы — `bench\suites\` (`real_*`, `probe_*`, `tune_*`, `audit_*`)
+
+## 10. Качество RP (LLM-судья) — 2026-10-06
+
+Методика и результаты — `docs\rp-quality-eval.md`. Сценарии — `bench\quality\scenarios_rp.json`
+(«мнимая история»: карточка + первое сообщение + ходы); 3 модели × think/non-think × 2 сценария ×
+3 сида; судья — `gemma-4-26B-A4B-it-UD-IQ3_XXS` через `bench\quality\rp_judge.py`. Сырое —
+`bench\quality\runs\rp_eval_*`, заключения судьи — `bench\quality\runs\rp_judge_b3\`.
+
+| Что проверяли | Вердикт | Детали |
+| --- | --- | --- |
+| Artemis-31B-v1.2 (оба режима) на RP | ❌ речевая деградация в бессвязность (циклы «идиотская», «иерархия») при «Чисто %» 100 % | `rp-quality-eval.md` §5.1 |
+| DTV2 Think vs NoThink на RP | ✅ Think чище (100 %) и лучше держит факты; NoThink — 83 %, редкая BPE-склейка `неgrом`, быстро сдаётся в соблазне | там же |
+| StyleTune-26B на RP | ⚠️ язык/проза/скорость (66 t/s) хороши, но память/контекст слабее; в think утекает reasoning | там же §5, §7 |
+| **Schattenblume-31B** (Nimbz) на RP | ✅ **4.55** (вровень с DTV2, Think 4.59 / No 4.52); RU 100 %; слабость — быстро сдаётся в соблазне, самоповторы описаний | `rp-quality-eval.md` §5.3 |
+| **Goetia-26B-A4B-v1.6** (Naphula) на RP | ⚠️ **4.23**; быстрый MoE (~73 t/s), но путает сущности и шаблонит | там же §5.3 |
+| Goetia-think в llama.cpp (`/completion`) | ❌ не закрывает `<channel|>` → ответ неотделим от reasoning; оценивали только non-think (см. StyleTune-think) | там же §7 |
+| **Полный набор (6 сценариев)**: DTV2 vs Schattenblume | ✅ ничья подтверждена: **Schattenblume 4.47 · DTV2 4.39** (в think паритет 4.56/4.55); новые сцены просадили инициативу у обеих (3.0–3.4) | `rp-quality-eval.md` §5.4 |
+| **Панель судей**: gemma-4-26B + Qwen3.6-35B (абсолют), space-bunny + deepseek-v4.1-flash (попарно) | ⚠️ вердикт зависит от метода: локальные абсолютные чуть за Schattenblume, оба облачных попарных — за DTV2 (~2:1); разница на грани | `rp-quality-eval.md` §5.5 |
+| **Glistening-Gem-31B-v2.1** (полный набор, 2 судьи) | ✅ **NoThink вровень с лидерами**: Gemma 4.32 (Schattenblume 4.38 / DTV2 4.24), Qwen 3.35 (**выше обоих**); лучшая по памяти. Think сломан: 7/18 пустых ответов | `rp-quality-eval.md` §5.6 |
+| **Giftige-Blume-StyleSwap-31B** (полный набор, 2 судьи) | ❌ русский 3.3 (Gemma) / 2.6 (Qwen) — англ. вставки (прививка головы StyleTune); для RU не берём | `rp-quality-eval.md` §5.6 |
+| Судьи для RP: `gemma-4-26B-A4B` + `Qwen3.6-35B-A3B` MXFP4 | ✅ используем оба (поочерёдно), числа смотреть вместе (26B мягче ~4.4, Qwen строже ~3.3) | `rp-quality-eval.md` §5.6 |
+| **Giftige-Blume-v1 31B** (Blazed-Forge) — замена StyleSwap | ✅ **№1 Caliper Combined/DarkRP**; наш RP NoThink: Gemma 4.33 (выше DTV2 4.24, ≈ Schattenblume 4.38) / Qwen **3.35 (#1)**; лучшая **инициатива (4.0)**; RU чистый (Cyr 99.9 %) | `rp-quality-eval.md` §5.7 |
+| Giftige-Blume-v1: Think **без лимита** (`--reasoning-budget -1`) | ❌ не раскрывает: ответы той же длины, пустых 2/18 (было 4/18); Qwen 3.41 / Gemma 4.36 ≈ NoThink (3.35 / 4.33), повторы хуже (1.44) — бюджет не был узким местом | `rp-quality-eval.md` §5.7 |
+| StyleTune-think: `--chat-template-file` без `enable_thinking` | ❌ модель не закрывает `<channel|>` → англ. план попадает в видимый ответ; харнесс теперь срезает по `<channel|>` | там же §7 |
+| Нативный `/completion` + `--reasoning-budget` | ❌ бюджет не применяется (действует в chat-API) | там же §7 |
+
+## 11. Отбор кандидатов: CaliperBench + HF (2026-10-06)
+
+Разобран свежий CaliperBench (V3+V2) — `downloads\CalibreV3.csv` / `CalibreV2.csv` (парсер
+`bench\parse_caliper.py`); метаданные **176 HF-репо** Gemma-4 12/26/31B — `bench\fetch_hf_meta.py` +
+`bench\caliper_classify.py`; прочитаны mergekit-рецепты ключевых мержей. Полный разбор и шорт-лист —
+`rp-model-candidates.md` §9.
+
+| Что проверяли | Вердикт | Детали |
+| --- | --- | --- |
+| Правило «русский держат только Merge с base» | ⚠️ эвристика ~80 %: держит не тип, а **сохранность головы/эмбеддингов и мелкость дельт** (`embed/lm_head=0` у доноров, `density` 0.15–0.6 + якорь на base, `lm_head`-only финтюн, RU в данных) | `rp-model-candidates.md` §9 |
+| HF-теги `base_model` как фильтр | ❌ ненадёжны: у Ateron (DTV2/MoonGem) base задаётся в YAML и в тегах не значится — **читать рецепт** | там же |
+| Свежий срез (06.10) vs дамп (01.10) | ⚠️ пересчёт v3 от 05.10 (literal errors) сильно сдвинул RP: DTV2 RPv3 67.4 → **77.5**, Artemis ERP 75.9 → **54.9** — старая колонка RP_v3 устарела | `caliperbench-2026-10.md`, `models.md` |
+| Топ ERP среди 31B non-think | ✅ `StyleTune 31B` (68.5, но RU-провал) и **`Giftige-Blume 31B v1` Blazed-Forge (67.7, якорный)** | `models.md` «Кандидаты» |
+| `Giftige-Blume-StyleSwap` | ⚠️ merge без своей base + прививка StyleTune (RU 17–0 %) — тест механизма, не приоритет по RU | `rp-model-candidates.md` §9 |
+| Инструменты парсинга CaliperBench | ✅ `bench\parse_caliper.py`, `bench\fetch_hf_meta.py`, `bench\caliper_classify.py` | — |

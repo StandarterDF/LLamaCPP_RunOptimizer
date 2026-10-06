@@ -25,7 +25,7 @@
 | **Qwen3.6-35B-A3B** (MoE 3B акт., Q2_K_XL) | **82** | **93** | **111** | **121** | `launch\b11382-cu124\qwen36-35b-a3b-mtp-b11382.bat` |
 | **Gemma-4-26B-A4B** StyleTune (MoE 4B акт., IQ4_XS) | **63**¹ | 70 | 100 | 107 | RP — `...styletune-nothink-nospec-b11382.bat`; чат/код — `...styletune-b11382.bat` |
 | Swift-1.5-Qwen3.8-27B (dense, IQ2_S-mtp) | 28 | 37 | 36 | 37 | `launch\b11382-cu124\swift-best-b11382.bat` |
-| Gemma-4-31B Dark-Thoughts (dense, IQ3_XXS) | 23 | 31 | 48 | 47 | `launch\b11382-cu124\gemma4-31b-dark-thoughts-b11382.bat` |
+| Gemma-4-31B Dark-Thoughts (dense, IQ3_XXS) | 23 | 31 | 48 | 47 | `launch\b11382-cu124\gemma4-31b-dark-thoughts-nothink-b11382.bat` |
 | **Split-Untied-31B** (dense RP-мерж, IQ3_XXS) | **23** | 34 | 47 | 46 | NoThink — `...-nothink...`; RU — `...-nothink-ru...`; think — `...-think...` |
 | **G4-MeroMero-v2-31B-heretic** (dense RP-мерж, IQ3_XXS) | **21** | 26 | 45 | 47 | NoThink — `...gemma4-31b-meromero-v2-heretic-nothink-b11382.bat`; think — `...-think...` |
 
@@ -42,18 +42,19 @@
 Конфиги — в `launch\b11382-cu124\`. Нетестированные кандидаты — в `docs\rp-model-candidates.md`
 (это не рекомендация, а задел).
 
-**Что здесь измерено:** скорость (t/s) и языковые артефакты. **Качество RP/прозы харнесс не
-оценивает** — RP-предпочтения согласовывать с пользователем (см. `AGENTS.md`).
+**Что здесь измерено:** скорость (t/s), языковые артефакты и — с 2026-10 — связность RP через
+LLM-судью на «мнимой истории» (`docs\rp-quality-eval.md`). Итоговые RP-предпочтения всё равно
+согласовывать с пользователем (см. `AGENTS.md`).
 
 | Задача | Модель | Что измерено | Конфиг |
 | --- | --- | --- | --- |
-| **RP / креатив (качество)** | Gemma-4-26B-A4B StyleTune; WaifuGemma4-26B-A4B; Gemma-4-31B Dark-Thoughts V2 / Artemis | **оценка пользователя** (харнесс качество не меряет); скорость 63 / 85 / 23 / 21 t/s | `gemma4-26a4b-styletune-nothink-nospec-b11382.bat`, `gemma4-26a4b-waifugemma-nothink-b11382.bat`, `gemma4-31b-dark-thoughts-b11382.bat`, `gemma4-31b-artemis-nothink-b11382.bat` |
-| **Русский язык (наш тест)** | Dark Thoughts V2; StyleTune-26B; WaifuGemma4-26B; Artemis-31B-v1.2 | чистота: 96–100 % / 96–100 % / 96 % / 92–96 %; Split-Untied — 75 % → 96 % с RU-пресетом. Скорость 23 / 63 / 85 / 21 t/s | `gemma4-31b-dark-thoughts-b11382.bat`, `gemma4-26a4b-styletune-nothink-nospec-b11382.bat`, `gemma4-26a4b-waifugemma-nothink-b11382.bat`, `gemma4-31b-artemis-nothink-b11382.bat`, `gemma4-31b-split-untied-nothink-ru-b11382.bat` |
+| **RP / креатив (качество)** | **Giftige-Blume-v1-31B (NoThink)**; Schattenblume-31B; Dark-Thoughts V2-31B; Glistening-Gem-31B-v2.1 | LLM-судья на «мнимой истории» (`docs\rp-quality-eval.md`): Blume **4.33** (Qwen 3.35) — лучшая **инициатива (4.0)**; лидеры 4.3–4.5 | `gemma4-31b-blume-v1-nothink-b11382.bat`, `gemma4-31b-schattenblume-nothink-b11382.bat`, `gemma4-31b-dark-thoughts-nothink-b11382.bat`, `gemma4-31b-glistening-nothink-b11382.bat` |
+| **Русский язык (наш тест)** | Dark Thoughts V2; StyleTune-26B; WaifuGemma4-26B; **Giftige-Blume-v1 / Glistening-Gem-v2.1** | чистота: 96–100 % / 96–100 % / 96 % / **Cyr 99.9 % и 100 %**. StyleTune-31B и Giftige-Blume-StyleSwap — **непригодны** (англ. вставки). Split-Untied 75 % → 96 % с RU-пресетом | `gemma4-31b-dark-thoughts-nothink-b11382.bat`, `gemma4-26a4b-styletune-nothink-nospec-b11382.bat`, `gemma4-26a4b-waifugemma-nothink-b11382.bat`, `gemma4-31b-blume-v1-nothink-b11382.bat`, `gemma4-31b-glistening-nothink-b11382.bat` |
 | **Код / агенты / рефакторинг** | Qwen3.6-35B-A3B + DFlash+ngram | +18 % рефакторинг, +44 % новый код к MTP | `qwen36-35b-a3b-dflash-code.bat` |
 | **Чат** | Qwen3.6-35B-A3B | 93 t/s | `qwen36-35b-a3b-mtp-b11382.bat` |
 | **Математика** | Qwen3.6-35B-A3B | 121 t/s | там же |
 | **Длинные документы / суммаризация** | Qwen3.6-35B-A3B (131k); Gemma-4-26B-A4B | PP ~800–1700 t/s | `qwen36-35b-a3b-mtp-b11382.bat`, `gemma4-26a4b-styletune-b11382.bat` |
-| **Dense — скорость на RP** | Gemma-4-31B Dark-Thoughts V2; Swift-1.5-27B | 23 / 23 / 28 t/s | `gemma4-31b-dark-thoughts-b11382.bat`, `...-split-untied-*`, `swift-best-b11382.bat` |
+| **Dense — скорость на RP** | Gemma-4-31B Dark-Thoughts V2; Swift-1.5-27B | 23 / 23 / 28 t/s | `gemma4-31b-dark-thoughts-nothink-b11382.bat`, `...-split-untied-*`, `swift-best-b11382.bat` |
 
 ## Какая у вас видеокарта?
 
@@ -87,9 +88,17 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 - Инструменты/функции: шаблоны моделей их поддерживают; у Gemma-4 в конфиге включён `gemma4.jinja`.
 
 ### RP, креатив, свободные диалоги
-- **Качество RP — по оценке пользователя** (харнесс его не измеряет): лучшими для RP считаются
-  Gemma-4-26B-A4B StyleTune, Gemma-4-31B Dark-Thoughts V2 и Split-Untied-31B. Qwen3.6 и Swift-1.5
-  в RP не рекомендуются. Скорости — в таблице выше (Qwen3.6 быстрее всех по t/s, но это не про качество).
+- **Качество RP (LLM-судья, «мнимая история»):** методика и все числа — `docs\rp-quality-eval.md`;
+  харнесс `bench\quality.py`, судьи — `gemma-4-26B-A4B` (мягче) и `Qwen3.6-35B-A3B` MXFP4 (строже).
+  Текущие лидеры (NoThink, полный набор 6 сценариев, средний двух судей): **Giftige-Blume-v1 — 4.33 / 3.35**
+  (№1 по Caliper Combined и DarkRP; лучшая **инициатива 4.0**), Schattenblume 4.38/3.28, Glistening-Gem
+  v2.1 4.33/3.35, Dark-Thoughts V2 4.24/3.11. Все держат русский чисто.
+- **Отбраковано по RP:** Artemis-31B-v1.2 (речевая каша при «Чисто 100 %»), Giftige-Blume-**StyleSwap**
+  (русский 3.3/2.6 — прививка головы StyleTune течёт в английский), StyleTune-31B.
+- Think у 31B-мержей капризен: часть ответов пустая (незакрытый `<channel|>`); у Blume безлимит бюджета
+  слегка уменьшает пустые, но качества не добавляет — рабочий режим **NoThink**.
+- Итоговые RP-предпочтения — за пользователем. Qwen3.6 и Swift-1.5 в RP не рекомендуются.
+  Скорости RP-моделей — ~21–31 t/s (в таблице выше; Qwen3.6 быстрее всех, но это не про качество).
 - **Русский текст (наш тест):** Dark Thoughts V2 — 96–100 % чистых, StyleTune-26B — 96–100 % и втрое
   быстрее (69 t/s); Split-Untied слабее (75 %) — лечится `temp 0.4` (96 %) или грамматикой (100 %).
 - Dense-модели на RP заметно медленнее: Swift-1.5 ~28, Gemma-4-31B ~23 t/s. MTP и тут полезен
@@ -170,6 +179,8 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
   а `ngram` в одиночку слабее MTP везде.
 - `-ncmoe` на модели, которая помещается; `-ub 2048`; контекст «на всю память»;
   погоня за процентом принятия вместо итоговой скорости; `-fa off` с квантованным V.
+- **Artemis-31B-v1.2 под RP не брать:** на наших RP-сценах — речевая деградация (циклы «идиотская»,
+  «иерархия») при «Чисто %» 100 %; «гладко, но глупо» (`docs\rp-quality-eval.md`).
 - Старый флаг `--no-mmap` в новых сборках — сервер не стартует (заменён на `--load-mode none`).
 - **Второй `llama-server` при занятой VRAM** (или любой другой процесс, съевший видеопамять): слои уезжают
   на CPU, и генерация падает примерно вдвое (16 ГБ → ~24 t/s вместо ~48). Перед запуском нового конфига
@@ -180,25 +191,28 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 
 | Что | Где |
 | --- | --- |
+| **Реестр моделей: протестированные и на будущее** | `docs\models.md` |
 | Лог по Swift-1.5 (все серии замеров) | `docs\swift-1.5-27b.md` |
 | Практическая инструкция по Swift-1.5 | `docs\swift-1.5-27b-launch.md` |
-| Логи по Gemma-4 31B / 26B-A4B / Qwen3.6 | `docs\gemma-4-31b.md`, `docs\gemma-4-26b-a4b.md`, `docs\qwen36-35b-a3b.md` |
+| Логи исследований по Gemma-4 31B / 26B-A4B / Qwen3.6 | `docs\gemma-4-31b.md`, `docs\gemma-4-26b-a4b.md`, `docs\qwen36-35b-a3b.md` |
+| **Оценка качества RP (LLM-судья, «мнимая история»)** | `docs\rp-quality-eval.md` |
 | Логи по RP-мержам Gemma-4-31B (Split-Untied, MeroMero v2 heretic) | `docs\gemma-4-31b-rp-merges.md` |
 | Сэмплинг и качество русского текста (RP Gemma-4: температура, top-k, min-p) | `docs\sampling-quality.md` |
 | Внешний ресёрч: RP-модели Gemma 4 и русский (сообщество, HF, факторы) | `docs\rp-model-candidates.md` |
-| CaliperBench: RP-рейтинг моделей Gemma 4 (срез 2026-10) | `docs\caliperbench-2026-10.md` |
+| CaliperBench: RP-рейтинг Gemma 4 + **правило отбора «что держит русский» и шорт-лист** | `docs\caliperbench-2026-10.md`, `docs\rp-model-candidates.md` §9 |
 | Методы спекуляции, внешние спекуляторы, сравнение сборок | `docs\speculation-research.md` |
 | **Реестр проверенного (не повторять)** | `docs\researched.md` |
 | Длинные сессии, «бесконечный» контекст, SillyTavern | `docs\context-infinite-chat.md` |
 | Готовые конфиги | `launch\` (старая сборка) и `launch\b11382-cu124\` (актуальные) |
-| Харнесс, наборы тестов, сырые результаты | `bench\` (`bench.py`, `suites\`, `runs\results.jsonl`) |
+| Харнесс, наборы тестов, сырые результаты | `bench\` (`bench.py`, `suites\`, `runs\results.jsonl`); RP-качество — `bench\quality.py`, `bench\quality\rp_judge.py`, `judge_score.py` |
 | Скил для подбора конфига новой модели | `.opencode\skills\llm-launch-tuner\` |
 
 ## Источники информации
 
 **Внешние** (сообщество, бенчмарки, карточки):
 
-- **CaliperBench** — RP/creative-рейтинг моделей, срез 2026-10-01 (590 моделей; язык не измеряется):
+- **CaliperBench** — RP/creative-рейтинг моделей (язык не измеряется; свежий срез **2026-10-06**
+  спарсен в `downloads\CalibreV3.csv`/`CalibreV2.csv`):
   <https://caliperbench.com/> · методика <https://caliperbench.com/methodology.html>
 - **r/SillyTavernAI** — недельные мега-треды «Best Models/API» (9 недель, 09.08–04.10.2026);
   обзор — `docs\rp-model-candidates.md` §1.1.
@@ -214,7 +228,8 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
   (ближайший славянский прокси — украинский/белорусский); см. `docs\euroeval-2026-10.md`.
 
 **Внутренние** (этот репозиторий): логи — `docs\`; сырые замеры — `bench\runs\results.jsonl`;
-дамп CaliperBench — `downloads\caliperbench-2026-10-01.json`.
+дамп CaliperBench — `downloads\caliperbench-2026-10-01.json`; свежий V3/V2 — `downloads\CalibreV3.csv`,
+`downloads\CalibreV2.csv` (парсер `bench\parse_caliper.py`).
 
 ## Воспроизведение замеров
 
