@@ -12,7 +12,10 @@ if not exist "%LOGDIR%" mkdir "%LOGDIR%"
 set "LOG=%LOGDIR%\%~n0_%TS%.log"
 echo Log: %LOG%
 rem ============================================================================
-rem  Gemma-4-31B Dark-Thoughts (IQ3_XXS) — b11382: MTP nm5 pmin0.75, c=51200
+rem  Gemma-4-31B Dark-Thoughts V2 (i1-IQ3_XXS, dense) — RP, NoThink.
+rem  MTP nmax5 pmin0.75, c=51200, KV q4_0. Мышление выключено (--reasoning off).
+rem  Think-вариант: gemma4-31b-dark-thoughts-think-b11382.bat.
+rem  Подробности: docs\gemma-4-31b.md.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\mradermacher\Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF\Gemma-4-Dark-Thoughts-V2-31B.i1-IQ3_XXS.gguf"
@@ -20,13 +23,13 @@ set "DRAFT=%MODELS_DIR%\mradermacher\Gemma-4-Queen-31B-it-uncensored-heretic-i1-
 "%SERVER%" ^
   -m "%MODEL%" ^
   --log-file "%LOG%" ^
-  --host 0.0.0.0 --port 9931 --alias "Gemma-4-31B-Dark" ^
+  --host 0.0.0.0 --port 9931 --alias "Gemma-4-31B-Dark-nothink" ^
   -np 1 -c 51200 ^
   -fa on --fit on --load-mode none ^
   -t 12 -tb 12 ^
   -ctk q4_0 -ctv q4_0 ^
   --spec-type draft-mtp --spec-draft-n-max 5 --spec-draft-n-min 1 --spec-draft-p-min 0.75 ^
   -md "%DRAFT%" ^
-  --jinja --reasoning off ^
+  --jinja --reasoning off --reasoning-budget 0 ^
   --temp 0.6 --min-p 0.1
 pause
