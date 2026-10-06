@@ -4,6 +4,13 @@ rem --- локальные пути (config.local.bat / config.example.bat) ---
 for %%I in ("%~dp0..\..") do set "PROJECT_DIR=%%~fI"
 call "%PROJECT_DIR%\config.local.bat" 2>nul
 call "%PROJECT_DIR%\config.example.bat" 2>nul
+rem --- launch log: dated file under %PROJECT_DIR%\logs\ ---
+for /f %%I in ('powershell -NoProfile -Command "Get-Date -Format yyyy-MM-dd_HHmmss"') do set "TS=%%I"
+if not defined TS set "TS=run%RANDOM%"
+set "LOGDIR=%PROJECT_DIR%\logs"
+if not exist "%LOGDIR%" mkdir "%LOGDIR%"
+set "LOG=%LOGDIR%\%~n0_%TS%.log"
+echo Log: %LOG%
 rem ============================================================================
 rem  WaifuGemma4-26b-a4b-v1 (i1-IQ3_XXS) — RP, NoThink, русский.
 rem  Единственная найденная RU-обученная RP-модель на Gemma 4 (ru/uk).
@@ -17,6 +24,7 @@ set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\hiwaifu-research\WaifuGemma4-26b-a4b-v1-i1-GGUF\WaifuGemma4-26b-a4b-v1.i1-IQ3_XXS.gguf"
 "%SERVER%" ^
   -m "%MODEL%" ^
+  --log-file "%LOG%" ^
   --host 0.0.0.0 --port 9931 --alias "WaifuGemma4-26B-nothink" ^
   --fit on -fa on --load-mode none -t 14 -tb 14 -b 2048 -ub 512 ^
   -np 1 -c 65536 ^

@@ -4,6 +4,13 @@ rem --- локальные пути (config.local.bat / config.example.bat) ---
 for %%I in ("%~dp0..\..") do set "PROJECT_DIR=%%~fI"
 call "%PROJECT_DIR%\config.local.bat" 2>nul
 call "%PROJECT_DIR%\config.example.bat" 2>nul
+rem --- launch log: dated file under %PROJECT_DIR%\logs\ ---
+for /f %%I in ('powershell -NoProfile -Command "Get-Date -Format yyyy-MM-dd_HHmmss"') do set "TS=%%I"
+if not defined TS set "TS=run%RANDOM%"
+set "LOGDIR=%PROJECT_DIR%\logs"
+if not exist "%LOGDIR%" mkdir "%LOGDIR%"
+set "LOG=%LOGDIR%\%~n0_%TS%.log"
+echo Log: %LOG%
 rem ============================================================================
 rem  Split-Untied-31B (IQ3_XXS, gemma4 dense) — вариант С мышлением.
 rem  По карточке: thinking даёт лучший recall, но может ломаться у некоторых
@@ -15,6 +22,7 @@ set "MODEL=%MODELS_DIR%\mradermacher\Split-Untied-31B-i1-GGUF\Split-Untied-31B.i
 set "DRAFT=%MODELS_DIR%\mradermacher\Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF\gemma-4-31B-it-assistant.Q4_K_M.gguf"
 "%SERVER%" ^
   -m "%MODEL%" ^
+  --log-file "%LOG%" ^
   --host 0.0.0.0 --port 9931 --alias "Split-Untied-31B-think" ^
   -np 1 -c 51200 ^
   -fa on --fit on --load-mode none ^

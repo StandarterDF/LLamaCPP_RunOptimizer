@@ -4,6 +4,13 @@ rem --- локальные пути (config.local.bat / config.example.bat) ---
 for %%I in ("%~dp0..\..") do set "PROJECT_DIR=%%~fI"
 call "%PROJECT_DIR%\config.local.bat" 2>nul
 call "%PROJECT_DIR%\config.example.bat" 2>nul
+rem --- launch log: dated file under %PROJECT_DIR%\logs\ ---
+for /f %%I in ('powershell -NoProfile -Command "Get-Date -Format yyyy-MM-dd_HHmmss"') do set "TS=%%I"
+if not defined TS set "TS=run%RANDOM%"
+set "LOGDIR=%PROJECT_DIR%\logs"
+if not exist "%LOGDIR%" mkdir "%LOGDIR%"
+set "LOG=%LOGDIR%\%~n0_%TS%.log"
+echo Log: %LOG%
 rem ============================================================================
 rem  Artemis-31B-v1.2 (bartowski IQ3_XXS, dense gemma4) — RP, NoThink, русский.
 rem  Русский тест (наш набор): 92-96% ответов без англ. вставок/склеек, ~20-22 t/s.
@@ -14,12 +21,13 @@ rem  Спекуляция: общий Gemma-4-31B MTP-assistant (nmax5 pmin0.75)
 rem  Подробности и оговорки: docs\sampling-quality.md.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
-set "MODEL=%MODELS_DIR%\bartowski\TheDrummer_Artemis-31B-v1.2-GGUF\TheDrummer_Artemis-31B-v1.2-IQ3_XXS.gguf"
+set "MODEL=%MODELS_DIR%\mradermacher\Artemis-31B-v1.2-i1-GGUF\Artemis-31B-v1.2.i1-IQ3_XXS.gguf"
 set "DRAFT=%MODELS_DIR%\mradermacher\Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF\gemma-4-31B-it-assistant.Q4_K_M.gguf"
 "%SERVER%" ^
   -m "%MODEL%" ^
+  --log-file "%LOG%" ^
   --host 0.0.0.0 --port 9931 --alias "Artemis-31B-v1.2-nothink" ^
-  -np 1 -c 32768 ^
+  -np 1 -c 51200 ^
   -fa on --fit on --load-mode none ^
   -t 12 -tb 12 ^
   -ctk q4_0 -ctv q4_0 ^
