@@ -27,7 +27,7 @@
 | EAGLE-3 (Q4/Q8) | ❌ 1.4–3× медленнее MTP | §9.1 |
 | DSpark (Q4/Q8) | ❌ медленнее | §9.2 |
 | `draft-mtp-adaptive` (PR #27210) | ⏸ нет ни в одной сборке (open) | `docs\speculation-research.md` §12 |
-| Синтетическая приёмка (`--spec-synth-*`) | ⏸ только бенчмаркинг | `docs\speculative.md` |
+| Синтетическая приёмка (`--spec-synth-*`) | ⏸ только бенчмаркинг | `docs\speculation-research.md` |
 | `-bs` / `--spec-draft-p-split` / `--spec-draft-ngl` | ❌/шум (кроме `-ngld all` в DFlash-профилях) | §10.3 |
 | Спекуляция на глубине контекста | ✅ принятие держится 72–80 %; TG падает с длиной | §11.5 |
 | Общий MTP-assistant Gemma-4-31B на RP-мержах (Split-Untied, MeroMero v2 heretic) | ✅ работает, ×1.25…2.8; *untied* `lm_head` совместим | `gemma-4-31b-rp-merges.md` |

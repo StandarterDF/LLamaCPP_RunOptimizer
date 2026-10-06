@@ -8,7 +8,7 @@ post for r/SillyTavernAI.
 User wish (may be empty): $ARGUMENTS
 
 ## Sources (only our own measurements, do not invent)
-- `README.md`, `docs/researched.md`, `docs/sampling-quality.md` §5.2–5.5;
+- `README.md`, `docs/models.md`, `docs/researched.md`, `docs/rp-quality-eval.md`, `docs/sampling-quality.md` §5.2–5.5;
 - `bench/runs/results.jsonl` (TG/PP/acceptance) and `summary.md` of the newest folder in `bench/quality/runs/`.
 
 ## Output format

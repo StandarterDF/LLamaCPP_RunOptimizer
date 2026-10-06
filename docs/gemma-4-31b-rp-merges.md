@@ -6,6 +6,7 @@
   `lm_head`; карточка помечает модель как vision, mmproj не скачан).
 - `G4-MeroMero-v2-31B-heretic.i1-IQ3_XXS.gguf` (12.2 ГБ) — `mradermacher/G4-MeroMero-v2-31B-heretic-i1-GGUF`,
   база `DogOnKeyboard/G4-MeroMero-v2-31B-heretic` (abliteration `zerofata/G4-MeroMero-v2-31B`).
+  **Модель снята с диска 🗑, конфиги удалены** (лог сохранён как история).
 
 **Драфт (общий для обеих):** `gemma-4-31B-it-assistant.Q4_K_M.gguf` (0.33 ГБ) + `--spec-type draft-mtp`
 (папка `mradermacher\Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF`).
@@ -16,9 +17,9 @@
 
 **Готовые конфиги (b11382):**
 - Split-Untied: `..\launch\b11382-cu124\gemma4-31b-split-untied-nothink-b11382.bat` (NoThink),
-  `..\launch\b11382-cu124\gemma4-31b-split-untied-think-b11382.bat` (с мышлением).
-- MeroMero v2 heretic: `..\launch\b11382-cu124\gemma4-31b-meromero-v2-heretic-nothink-b11382.bat` (NoThink),
-  `..\launch\b11382-cu124\gemma4-31b-meromero-v2-heretic-think-b11382.bat` (с мышлением).
+  `..\launch\b11382-cu124\gemma4-31b-split-untied-think-b11382.bat` (с мышлением),
+  `..\launch\b11382-cu124\gemma4-31b-split-untied-nothink-ru-b11382.bat` (RU-пресет temp0.4).
+- MeroMero v2 heretic: конфиги и файл модели **удалены** (модель снята с диска 🗑) — см. `models.md`.
 
 ## Сэмплинг по карточкам
 

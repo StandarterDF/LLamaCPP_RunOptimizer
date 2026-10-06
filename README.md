@@ -202,7 +202,7 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 | Практическая инструкция по Swift-1.5 | `docs\swift-1.5-27b-launch.md` |
 | Логи исследований по Gemma-4 31B / 26B-A4B / Qwen3.6 | `docs\gemma-4-31b.md`, `docs\gemma-4-26b-a4b.md`, `docs\qwen36-35b-a3b.md` |
 | **Оценка качества RP (LLM-судья, «мнимая история»)** | `docs\rp-quality-eval.md` |
-| Логи по RP-мержам Gemma-4-31B (Split-Untied, MeroMero v2 heretic) | `docs\gemma-4-31b-rp-merges.md` |
+| Логи по RP-мержам Gemma-4-31B (Split-Untied-31B; MeroMero v2 heretic — удалён) | `docs\gemma-4-31b-rp-merges.md` |
 | Сэмплинг и качество русского текста (RP Gemma-4: температура, top-k, min-p) | `docs\sampling-quality.md` |
 | Внешний ресёрч: RP-модели Gemma 4 и русский (сообщество, HF, факторы) | `docs\rp-model-candidates.md` |
 | CaliperBench: RP-рейтинг Gemma 4 + **правило отбора «что держит русский» и шорт-лист** | `docs\caliperbench-2026-10.md`, `docs\rp-model-candidates.md` §9 |

@@ -200,6 +200,10 @@ DRY multiplier 0.8` (то же в `launch\b11382-cu124\gemma4-31b-split-untied-n
 | Artemis-31B-v1.2 (IQ3_XXS, bartowski) | 96 % | 92 % | 21.0 t/s |
 | **WaifuGemma4-26B-A4B (i1-IQ3_XXS)** | **96 %** | 79 % | 85 t/s |
 
+> Новые RP-модели (2026-10-07, харнесс `bench\quality\scenarios_rp_full`, non-think): **Giftige-Blume-v1** —
+> Cyr 99.9 %, англ. вставок 0; **Glistening-Gem-v2.1** — Cyr 100 %, англ. 0; **Giftige-Blume-StyleSwap**
+> течёт в английский (EN-стоп 4.89 — прививка головы StyleTune). См. `docs\rp-quality-eval.md` §5.6–5.7.
+
 **Выводы:**
 - **Модель важнее сэмплинга.** Dark Thoughts V2 и StyleTune держат русский почти без брака даже на
   агрессивном карточном пресете; Split-Untied сыпется (75 %).

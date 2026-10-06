@@ -5,6 +5,10 @@
 `downloads\caliperbench-2026-10-01.json`.
 
 > Реестр проверенного — `docs\researched.md`. Наши собственные русские замеры — `docs\sampling-quality.md`.
+>
+> ⚠️ **Срез устарел.** Это дамп от 2026-10-01; после пересчёта v3 (05.10, literal errors) числа сильно
+> сдвинулись (DTV2 RPv3 67.4 → **77.5**, Artemis ERP 75.9 → **54.9**). Свежий срез 2026-10-06 и правило
+> отбора — `docs\models.md` «Кандидаты», `docs\rp-model-candidates.md` §8–9.
 
 ## Главное ограничение
 
