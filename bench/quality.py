@@ -237,8 +237,15 @@ def piece_is_foreign(piece):
 
 
 def strip_channels(text):
-    """Убирает блоки <|channel>...<channel|> (мышление), оставляет только ответ."""
+    """Убирает блоки <|channel>...<channel|> (мышление), оставляет только ответ.
+
+    Если открывающий маркер <|channel> остался в промпте (шаблон уже открыл канал),
+    вывод начинается сразу с размышлений и закрывается <channel|> — тогда берём всё
+    после него. Так thinking не попадает в «ответ» и не портит метрики.
+    """
     text = re.sub(r"<\|channel>.*?<channel\|>", "", text, flags=re.S)
+    if "<channel|>" in text:
+        text = text.rsplit("<channel|>", 1)[-1]
     text = re.sub(r"<\|channel>.*$", "", text, flags=re.S)
     return text.strip()
 
@@ -537,13 +544,17 @@ def main():
     os.makedirs(raw_dir, exist_ok=True)
     metrics_path = os.path.join(out_dir, "metrics.jsonl")
 
+    def _san(o):
+        if isinstance(o, str):
+            return sanitize(o)
+        if isinstance(o, list):
+            return [_san(x) for x in o]
+        if isinstance(o, dict):
+            return {k: _san(v) for k, v in o.items()}
+        return o
+
     with open(os.path.join(out_dir, "suite.used.json"), "w", encoding="utf-8") as f:
-        json.dump(
-            sanitize(json.dumps(suite, ensure_ascii=False, indent=2)),
-            f,
-            ensure_ascii=False,
-            indent=2,
-        )
+        json.dump(_san(suite), f, ensure_ascii=False, indent=2)
 
     log_path = os.path.join(out_dir, "server.log")
     logf = open(log_path, "w", encoding="utf-8", errors="replace")
@@ -659,6 +670,7 @@ def main():
                             ),
                             "sampling": sampling,
                             "text": text,
+                            "raw_content": raw,
                         }
                         rec.update(analyze(text))
                         # Опережающий сигнал: какую долю вероятности модель отдаёт
@@ -700,6 +712,14 @@ def main():
                             f"### sampling: {json.dumps(sampling, ensure_ascii=False)}\n\n"
                         )
                         f.write(rec.get("text", ""))
+                    # Сырой ответ целиком (с блоком thinking) — нужен для судьи и разбора.
+                    if rec.get("raw_content"):
+                        full_dir = os.path.join(out_dir, "raw_full")
+                        os.makedirs(full_dir, exist_ok=True)
+                        with open(
+                            os.path.join(full_dir, fname), "w", encoding="utf-8"
+                        ) as f:
+                            f.write(rec["raw_content"])
                     mark = "OK " if rec.get("clean") else "!! "
                     print(
                         f"  {mark}{tag:<10} s{seed}  fgn/1k {rec.get('foreign_per_1k', 0):>6}"
