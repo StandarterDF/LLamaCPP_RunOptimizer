@@ -62,6 +62,7 @@ def main():
     else:
         for folder in (
             ROOT / "bench" / "runs",
+            ROOT / "bench" / "quality" / "runs",
             ROOT / "bench" / "skill-selftest" / "runs",
         ):
             if folder.exists():
