@@ -1,7 +1,7 @@
 # Модели: протестированные и кандидаты
 
 Реестр моделей проекта. Числа краткие, подробности — по ссылкам в логах (`docs\`). Стенд:
-RTX 4060 Ti 16 ГБ, сборка **b11382** (CUDA 12.4). Срез: 2026-10-06.
+RTX 4060 Ti 16 ГБ, сборка **b11382** (CUDA 12.4). Срез: 2026-10-07.
 
 Обозначения: ✅ берём · ⚠️ с оговорками · ❌ не берём · 📌 по назначению (замеров нет) · 🗑 файл удалён с диска.
 «Тестировали» = что реально измеряли в этом репозитории (остальное — не проверено).
@@ -22,15 +22,17 @@ RTX 4060 Ti 16 ГБ, сборка **b11382** (CUDA 12.4). Срез: 2026-10-06.
 | **Gemma-4-31B Artemis-31B-v1.2** (TheDrummer) | 3.90 (Think 4.29 · No 3.50) | i1-IQ3_XXS | RP-связность; русский; PPL; скорость | ❌ RP: речевая деградация в кашу при RU 92–96 % | RP 20–26 t/s; PPL RU 983 | `gemma4-31b-artemis-*.bat` | `rp-quality-eval.md`, `why-ru-models.md` |
 | **Gemma-4-31B Giftige-Blume-StyleSwap** (Casual-Autopsy) | 3.76 (Think 3.84 · No 3.64) | i1-IQ3_XXS | RP-связность (полный набор, 2 судьи); русский | ❌ русский 3.3/2.6 — англ. вставки (прививка головы StyleTune); для RU не берём | RP 23.3 t/s; EN-стоп 4.89 | `gemma4-31b-styleswap-{nothink,think}-b11382.bat` | `rp-quality-eval.md` §5.6 |
 | Gemma-4-31B **Split-Untied** (Blazed-Forge) | — | i1-IQ3_XXS | русский; скорость | ⚠️ RU 75 % → 96 % при temp0.4; RP НЕ меряли 🗑 | RP 23 t/s | `gemma4-31b-split-untied-*.bat` | `gemma-4-31b-rp-merges.md` |
-| Gemma-4-31B **G4-MeroMero-v2-31B-heretic** (zerofata) | — | i1-IQ3_XXS | только скорость (RP/чат/код/матем) | ⚠️ RP и русский НЕ тестили 🗑 | RP 21 · код 45 t/s | `gemma4-31b-meromero-v2-heretic-*.bat` | `gemma-4-31b-rp-merges.md` |
+| Gemma-4-31B **G4-MeroMero-v2-31B-heretic** (zerofata) | — | i1-IQ3_XXS | только скорость (RP/чат/код/матем) | ⚠️ RP и русский НЕ тестили; `.bat` удалён 🗑 | RP 21 · код 45 t/s | — | `gemma-4-31b-rp-merges.md` |
 | Gemma-4-26B-A4B **WaifuGemma4** (hiwaifu-research) | — | i1-IQ3_XXS | только русский; скорость | ⚠️ RU 96 % на карточке, низкая T портит; RP НЕ меряли (по опыту — слабое) 🗑 | 85 t/s | `gemma4-26a4b-waifugemma-nothink-b11382.bat` | `sampling-quality.md` |
 | Gemma-4-31B **StyleTune-31B** (Gryphe) | — | i1-IQ3_XXS | русский | ❌ непригоден (17–0 %), битый repack 🗑 | — | — | `sampling-quality.md` §5.4 |
 
 ¹ N ответов: DTV2 10, Schattenblume 20, StyleTune 11, Goetia 11, Artemis 6 (часть пунктов судья пропустила);
 Glistening 19, StyleSwap 21 (полный набор, два судьи).
+**Масштаб чисел:** DTV2, Schattenblume, StyleTune, Goetia, Artemis — **2 сценария** (судья 26B);
+Glistening, StyleSwap, Giftige-Blume-v1 — **полный набор** (средний Gemma; строгий Qwen ниже — см. «Полный набор»).
 У «—» RP-бенчмарк не запускался.
 
-### Полный набор (6 сценариев): разведение ничьей
+### Полный набор (6 сценариев)
 
 DTV2 и Schattenblume шли ноздря в ноздрю на 2 сценариях. Прогнали их на **расширенном наборе**
 (`bench\quality\scenarios_rp_full.json`: +`tactics`, `mystery`, `group`, `everyday`) при **одинаковом
@@ -57,6 +59,24 @@ DTV2 и Schattenblume шли ноздря в ноздрю на 2 сценари�
 Schattenblume, а оба облачных **попарных** (space-bunny и deepseek-v4.1-flash) — за DTV2 (~2:1,
 `docs\rp-quality-eval.md` §5.5). То есть разница **на грани**, но при прямом сравнении чуть впереди
 DTV2; один класс качества.
+
+#### Сводка полного набора: все модели, NoThink, два судьи (2026-10-07)
+
+Единая таблица для всего, что гоняли полным набором (те же сценарии, сэмплинг temp0.6/min-p0.1/top-k0
+и те же судьи; NoThink — рабочий режим). Полный разбор — `rp-quality-eval.md` §5.6–5.7.
+
+| Модель | Gemma (No) | **Qwen (No)** | инициатива (Gemma) | русский (Gemma/Qwen) | Вердикт |
+| --- | ---: | ---: | ---: | ---: | --- |
+| **Giftige-Blume-v1** (Blazed-Forge) | 4.33 | **3.35** | **4.00** | 4.83 / 4.00 | ✅ лучшая **инициатива**; №1 Combined Caliper |
+| Schattenblume (Nimbz) | **4.38** | 3.28 | 3.00 | 5.00 / 4.25 | ✅ лидер по Gemma |
+| Glistening-Gem v2.1 (sophosympatheia) | 4.32 | **3.35** | 3.71 | 4.86 / 4.17 | ✅ вровень с лидерами |
+| Dark-Thoughts V2 (Ateron) | 4.24 | 3.11 | 2.89 | 4.94 / 3.92 | эталон |
+| Giftige-Blume-StyleSwap (Casual-Autopsy) | 3.64 | 2.64 | 3.44 | 3.56 / 2.75 | ❌ англ. вставки (StyleTune-голова) |
+
+**Think:** у 31B-мержей часто пустые ответы (незакрытый `<channel|>`); безлимит бюджета у Blume снижает
+пустые 4/18→2/18, но качества не добавляет. **Рабочий режим — NoThink.**
+Полным набором **не гоняли** (только 2 сценария / судья 26B): StyleTune-26B (No 4.19), Goetia-26B (No 4.23),
+Artemis-31B (3.90) — их числа в таблице «Протестированные» выше.
 
 ## Протестированные: кодинг / универсальные
 
