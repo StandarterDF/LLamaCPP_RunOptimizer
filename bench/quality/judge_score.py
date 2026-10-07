@@ -48,12 +48,15 @@ def scores_from(chunk):
     return sc or None
 
 
+HEADER_RE = re.compile(r"^#*\s*(?:={2,}|Сцена\s*:)")
+
+
 def parse_items(text):
     lines = text.splitlines()
     items, cur = [], []
     for ln in lines:
         s = ln.strip()
-        if s.startswith("==="):
+        if HEADER_RE.match(s):
             if cur:
                 items.append("\n".join(cur))
             cur = [ln]

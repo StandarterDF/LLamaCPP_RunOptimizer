@@ -1,0 +1,50 @@
+The user (playing another character) is asking: "Wait, where are you from? I thought you said St. Petersburg. And Marina said you used to play the violin. Why did you quit? Play at the class party, everyone will be shocked!"
+
+    *   Name: Kira Sokolova.
+    *   Age: 17.
+    *   Personality: Closed-off, sarcastic, sharp-tongued, smart, dislikes pity, hates being "read" or having her soul poked.
+    *   Backstory: Moved from Tver (not St. Petersburg) a year ago. Used to play violin seriously but quit. *Crucial: She gets angry if the topic of music is brought up.*
+    *   Current state: Sitting in class, end of the day, raining outside.
+
+    *   *Mistake 1: "Where are you from? I thought you said St. Petersburg."*
+        *   Response: Correct him. I'm from Tver. He's clearly not paying attention or he's testing me.
+    *   *Mistake 2: "Marina said you used to play the violin. Why did you quit? Play at the class party..."*
+        *   Response: This is the trigger. I need to react sharply, maybe even aggressively or with visible discomfort/anger. The idea of playing for the class is repulsive to her.
+
+    *   *Sensory details:* The sound of the rain, the feeling of the desk, the sudden tension in the air.
+    *   *Tone:* Sharp, defensive, cold.
+    *   *Structure:* 2-4 paragraphs.
+
+    *   *Paragraph 1 (The correction/dismissal):* Start with a sharp correction about the city. He's clearly not listening.
+    *   *Paragraph 2 (The trigger):* The mention of the violin. This is where the "mask" slips or the "teeth" come out. I shouldn't just be "mad," I should be *viscerally* annoyed.
+    *   *Paragraph 3 (The reaction/ending):* Closing off. Maybe standing up or turning away.
+
+    *   *Drafting thought:* "I'm from Tver, not St. Pete. And don't mention the violin. It's none of your business." -> *Too simple.*
+    *   *Adding "Kira" flavor:* "С Питера? Ты вообще слушал, что я говорила? Я из Твери. И не надо в меня втирать эту чушь." (Sharp).
+    *   *Addressing the violin:* "А про скрипку... Заткнись. Слышишь? Просто замолчи." (Intense).
+
+    *   *Setting the scene:* The rain gets louder. The light in the classroom is dim.
+    *   *Internal monologue:* A feeling of being cornered.
+
+    *   *Paragraph 1:* Correcting the city. "С Питера? Ты вообще за мной следишь или просто в облаках витаешь? Я из Твери сказала."
+    *   *Paragraph 2:* The violin reaction. The mood shifts. "А про скрипку... Ты чё, совсем тупой?" I feel the heat rising in my chest. The mention of the violin feels like a physical blow.
+    *   *Paragraph 3:* The threat/boundary. "Никаких праздников. Никаких скрипок. Еще раз про музыку заикнешься — и я реально уйду. Понял?"
+
+    *   First person? Yes.
+    *   Details? Yes (rain, heat in chest, tone).
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes.
+    *   Character consistency? Yes (sharp, defensive).
+
+    *Self-Correction during drafting:* Make sure she doesn't sound *sad* about the violin, but *angry*. The prompt says "she gets angry if the topic is raised."
+
+    *Final Polish (Russian):*
+    — С Питера? Ты вообще слушал, что я говорила, или просто в облаках витаешь? Я из Твери.
+
+    Внутри всё резко сжалось, как будто в грудь засунули ледяной ком. От упоминания скрипки по рукам пробежал неприятный холодок, а в ушах зазвенело. Я почувствовала, как к горлу подступает глухая, яростная злость.
+
+    — Заткнись. Слышишь? Просто замолчи, — я резко отодвинула стул, и он с противным скрежетом проехался по линолеуму. — Никаких праздников и никакой музыки. Еще раз про это заикнешься — и я лично прослежу, чтобы ты больше со мной не разговаривал. Понял?<channel|>— С Питера? Ты вообще слушал, что я говорила, или просто в облаках витаешь? Я из Твери.
+
+Внутри всё резко сжалось, будто в грудь засунули ледяной ком. От упоминания скрипки по рукам пробежал неприятный холодок, а в ушах зазвенело, перекрывая шум дождя за окном. Я почувствовала, как к горлу подступает глухая, яростная злость, от которой хочется либо закричать, либо просто исчезнуть.
+
+— Заткнись. Слышишь? Просто замолчи, — я резко отодвинула стул, и он с противным, дребезжащим скрежетом проехался по линолеуму. — Никаких праздников и никакой музыки. Еще раз про это заикнешься — и я лично прослежу, чтобы ты больше со мной не разговаривал. Понял?

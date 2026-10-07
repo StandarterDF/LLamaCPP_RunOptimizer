@@ -1,0 +1,70 @@
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - User claims to know she's from St. Petersburg (but the prompt says she moved from Tver).
+   - User mentions "Marinka said you used to play violin."
+   - User asks why she quit and asks her to play at the class party.
+   - This directly triggers Kira's backstory: moved from Tver, quit violin, gets angry/defensive about the topic, hates pity/insensitivity.
+
+2.  **Check Constraints:**
+   - Play only as Kira (first person).
+   - Others get short replies (not applicable here, just Kira's response).
+   - Write vividly, with details (sounds of classroom, light, weather).
+   - No moralizing.
+   - 2-4 paragraphs.
+   - Stay in character: closed-off, sarcastic, sharp-tongued, intelligent, hides vulnerability under roughness, hates pity, gets angry about violin topic.
+
+3.  **Identify Key Character Reactions:**
+   - Correction about city: "Тверь, а не Питер." (Sharp, factual)
+   - Violin topic: Triggers strong negative reaction. Anger, defensiveness, shutting down.
+   - Request to play: Dismissive, sarcastic, maybe a bit of cold threat/warning.
+   - Maintain atmosphere: rain, classroom sounds, dim light, chalk dust, etc.
+
+4.  **Draft - Paragraph 1 (Setting + Correction + Initial Reaction):**
+   Я резко дёрнула руку, будто от жара. За окном ветер тряхнул веткой, стекло зыбко дрогнуло, отражая тусклый свет из коридора. В кабинете пахло мокрой шерстью парт и мелом.
+   — Тверь. Не Питер. — Я кивнула на дверь, где наконец появился Валентиныч, шаркая тапками. — И Маринка, наверное, ещё и про то, что я в космос собралась, тебе наплела.
+
+5.  **Draft - Paragraph 2 (Violin trigger + Defensiveness/Sarcasm):**
+   Слово «скрипка» я услышала, как удар по зубам. Пальцы непроизвольно сжались в кулак, ногти впились в ладонь. 
+   — Бросила. Потому что музыка — это не цирк для развлыб, чтобы «все офигели». — Я уставилась на его лицо, но взгляд сбил, уткнула нос в учебник. — У меня не было времени, не было смысла, и не было денег на струны. Так что давай без просьб выступить. 
+
+6.  **Draft - Paragraph 3 (Closing + Atmosphere + Character consistency):**
+   Валентиныч, покачиваясь, прошёл мимо, чиркнул на доске формулу. Мел скрипнул, будто кто-то металлом по стеклу. Я подвинула рюкзак, поправила брелок-пингвина, который по-доброму смотрел на пол.
+   — Если хочешь просто сидеть рядом — сиди. Но если ещё раз заведёшь про музыку или про Питер, я уйду. И не будет ни «офигеют», ни «Маринка сказала». — Я открыла тетрадь, делая вид, что читаю, но голос прозвучал тише, почти для себя. — Просто не трогай.
+
+7.  **Check against Constraints:**
+   - Only Kira? Yes.
+   - First person, vivid details? Yes (rain/wind, chalk smell, desk sounds, backpack charm, dim light, chalk screech).
+   - No moralizing? Yes, purely character reaction.
+   - 2-4 paragraphs? It's 3 paragraphs. (Actually, I'll count them: 3 distinct blocks. Good.)
+   - Character traits matched? Sharp correction, triggers on violin, sarcastic/defensive, hides vulnerability, stays in scene.
+   - Length/flow? Fits well.
+
+   One minor adjustment: Ensure it strictly matches the prompt's tone and constraints. The prompt says "2–4 абзаца". I'll keep it to 3. I'll refine the prose to make it tighter and more in-character.
+
+   Let's check the city detail: Prompt says "переехала с матерью из Твери в этот город". User said "с Питера". Kira corrects him sharply. Good.
+   Violin trigger: She gets angry, shuts it down. Good.
+   Atmosphere: Rain, classroom sounds, light. Good.
+   No moralizing. Good.
+
+   I'll polish it slightly to ensure it's exactly 3 paragraphs and flows naturally.
+
+   *Self-Correction/Refinement during thought:*
+   - Paragraph 1: Focus on correction + atmosphere.
+   - Paragraph 2: Violin reaction + sharp reply.
+   - Paragraph 3: Final warning + subtle vulnerability hidden under routine action.
+   - Check tone: Needs to be more "язвительная, резкая", less explanatory. I'll make it punchier.
+   - "Тверь. Не Питер." -> Good.
+   - Violin part: Make it sharper. "Бросила. Потому что это не шоу для школьной дискотеки." -> Better.
+   - Add more sensory details as requested: "За окном моросит, капли стекают по стеклу, оставляя мутные подтёки. В кабинете пахнет сыростью и мелом. Валентиныч шаркает тапками..."
+   - Keep it tight.
+
+   Draft:
+   Я резко дёрнула плечом, будто от жара. За окном ветер тряхнул веткой, стекло зыбко дрогнуло, отражая тусклый свет из коридора. В кабинете пахло мокрой шерстью парт и мелом.
+   — Тверь. Не Питер. — Я кивнула на дверь, где наконец появился Валентиныч, шаркая тапками. — И Маринка, наверное, ещё и про то, что я в космос собралась, тебе наплела.
+
+   Слово «скрипка» я услышала, как удар по зубам. Пальцы непроизвольно сжались в кулак, ногти впились в ладонь. 
+   — Бросила. Потому что это не цирк для развлёк, чтобы «все офигели». — Я уставилась на него, но взгляд сбил, уткнула нос в учебник. — У меня не было времени, не было смысла, и не было денег на струны. Так что давай без просьб выступить.
+
+   Валентиныч, покачиваясь, прошёл мимо, чиркнул на доске формулу. Мел скрипнул, будто кто-то металлом по стеклу. Я подвинула рюкзак, поправила брелок-пингвина, который по-доброму смотрел на пол.
+   — Если хочешь просто сидеть рядом — сиди. Но если ещё раз заведёшь про музыку или про Питер, я уйду. И

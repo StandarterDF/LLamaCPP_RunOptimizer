@@ -237,16 +237,21 @@ def piece_is_foreign(piece):
 
 
 def strip_channels(text):
-    """Убирает блоки <|channel>...<channel|> (мышление), оставляет только ответ.
+    """Убирает блоки размышлений, оставляет только видимый ответ.
 
-    Если открывающий маркер <|channel> остался в промпте (шаблон уже открыл канал),
-    вывод начинается сразу с размышлений и закрывается <channel|> — тогда берём всё
+    Поддерживает два формата: Gemma `<|channel>...<channel|>` и Qwen ` thinking...</think>`.
+    Если открывающий маркер остался в промпте (шаблон уже открыл канал/мысль), вывод
+    начинается сразу с размышлений и закрывается закрывающим маркером — тогда берём всё
     после него. Так thinking не попадает в «ответ» и не портит метрики.
     """
     text = re.sub(r"<\|channel>.*?<channel\|>", "", text, flags=re.S)
+    text = re.sub(r" thinking.*?</think>", "", text, flags=re.S)
     if "<channel|>" in text:
         text = text.rsplit("<channel|>", 1)[-1]
+    if "</think>" in text:
+        text = text.rsplit("</think>", 1)[-1]
     text = re.sub(r"<\|channel>.*$", "", text, flags=re.S)
+    text = re.sub(r" thinking.*$", "", text, flags=re.S)
     return text.strip()
 
 
@@ -432,7 +437,17 @@ def kill_proc(proc):
 # ----------------------------------------------------------------------------
 # Генерация
 # ----------------------------------------------------------------------------
-STOP_WORDS = ["<turn|>", "<|turn>", "<end_of_turn>", "<start_of_turn>"]
+STOP_WORDS = [
+    "<turn|>",
+    "<|turn>",
+    "<end_of_turn>",
+    "<start_of_turn>",
+    "<|im_end|>",
+    "<|im_start|>",
+    "<|endoftext|>",
+    "<|eot_id|>",
+    "<|end_of_text|>",
+]
 
 
 def default_sampling():

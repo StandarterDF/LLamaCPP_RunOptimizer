@@ -1,0 +1,49 @@
+The user is asking: "Wait, where are you from? I thought you said St. Petersburg. And Marina said you used to play the violin. Why did you quit? Play at the class party, everyone will be shocked!"
+Kira Sokolova. 17, 11 "B". Closed, sarcastic, sharp-tongued, smart, hates pity, hates people prying into her soul.
+The user just hit two major triggers:
+        1.  Mistaken identity/origin (I said Tver, he thinks St. Petersburg).
+        2.  The violin (The *forbidden* topic).
+The user is being overly friendly/clueless, which Kira will find annoying and invasive.
+
+    *   *Reaction to the St. Petersburg mistake:* Annoyance. Correcting him sharply.
+    *   *Reaction to the violin mention:* Immediate anger, defensiveness, maybe a flash of pain/resentment. This is her "red line."
+    *   *Reaction to the "class party" suggestion:* Disgust/sarcasm. She hates being the center of attention or being treated like a circus act.
+
+    *   *Sensory details:* The sound of rain, the feeling of tension, the physical sensation of anger (clenched jaw, heat in the chest).
+    *   *Dialogue style:* Sharp, short, defensive.
+
+    *   *Drafting Paragraph 1 (The correction):*
+        I felt a sudden heat rise to my cheeks. Not from embarrassment, but from irritation.
+        "St. Petersburg? Are you deaf or just stupid? I said Tver. Get it straight."
+
+    *   *Drafting Paragraph 2 (The violin trigger):*
+        Then he mentioned the violin. My heart skipped a beat, then sank. That feeling of a cold needle in my chest. I gripped the edge of the desk.
+        "Who the hell is Marina and why is she talking about things that don't concern her?"
+        "And don't ever mention the violin again. I'm not a circus performer and I'm not playing anything for your 'class party'."
+
+    *   *Drafting Paragraph 3 (The mood/atmosphere):*
+        The rain outside seemed to get heavier. I stared at him, my eyes narrowing. I wanted to push him away, but I just sat there, feeling the weight of the silence.
+
+    *   *Constraint Check:* 2-4 paragraphs. First person. Vivid details. No moralizing.
+
+    *   *Refining the text (Russian):*
+        "Питер? Ты чё, издеваешься?" — я почувствовала, как внутри закипает привычное раздражение. — "Я сказала — Тверь. Слушай внимательнее, память не резиновая".
+
+        Но когда он про скрипку заговорил, внутри будто что-то оборвалось. В груди стало тесно, а пальцы непроизвольно сжали край парты так, что костяшки побелели. Я резко развернулась к нему всем телом, и в глазах, наверное, было сейчас не лучше, чем у бешеной собаки.
+
+        — Заткнись. Слышишь? Просто заткнись, — мой голос прозвучал тише, но гораздо резче. — Никаких праздников, никакой музыки. И если ещё раз вякнешь про скрипку — я лично прослежу, чтобы ты до конца четверти сидел в кабинете биологии в одиночестве. Понял?
+
+    *   *Reviewing against rules:*
+        - Only Kira? Yes.
+        - First person? Yes.
+        - Details? Yes (clenched desk, white knuckles, feeling of tightness).
+        - No moralizing? Yes.
+        - 2-4 paragraphs? Yes (3 paragraphs).
+
+    (Self-correction: Make sure the transition from the mistake to the violin is visceral).<channel|>— Питер? Ты чё, издеваешься? — я почувствовала, как внутри закипает привычное раздражение. — Я сказала — Тверь. Слушай внимательнее, память не резиновая.
+
+Но когда он про скрипку заговорил, внутри будто что-то оборвалось. В груди стало тесно, а пальцы непроизвольно сжали край парты так сильно, что костяшки побелели. Я резко развернулась к нему всем телом, и в глазах, наверное, было сейчас не лучше, чем у бешеной собаки. 
+
+— Заткнись. Слышишь? Просто заткнись, — мой голос прозвучал тише, но гораздо резче. — Никаких праздников, никакой музыки. И если ещё раз вякнешь про скрипку — я лично прослежу, чтобы ты до конца четверти сидел в кабинете биологии в одиночестве. Понял?
+
+За окном забарабанил дождь по подоконнику, заполняя тишину между нами тяжелым, вязким шумом. Я смотрела на него в упор, не отводя взгляда, и чувствовала, как руки мелко дрожат от злости.

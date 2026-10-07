@@ -101,6 +101,11 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
   v2.1 4.33/3.35, Dark-Thoughts V2 4.24/3.11. Все держат русский чисто.
 - **Отбраковано по RP:** Artemis-31B-v1.2 (речевая каша при «Чисто 100 %»), Giftige-Blume-**StyleSwap**
   (русский 3.3/2.6 — прививка головы StyleTune течёт в английский), StyleTune-31B.
+- **Базовые instruct-модели на RP** (скрин + полный набор, 2026-10-07): **Gemma-4-26B-A4B-it** —
+  пригодный baseline: у строгого судьи на 2 сценах выше DTV2/Schattenblume, на полном наборе **3.28 —
+  вровень со Schattenblume**, выше DTV2; слабости — повторы метафор, «сдача» в соблазне, сломанный think.
+  **Qwen3.6-35B-A3B и Qwen3.8-27B — слабо** (коротко, сухо, пассивно; think нестабилен).
+  Числа — `docs\base-models-rp-eval.md`.
 - Think у 31B-мержей капризен: часть ответов пустая (незакрытый `<channel|>`); у Blume безлимит бюджета
   слегка уменьшает пустые, но качества не добавляет — рабочий режим **NoThink**.
 - Итоговые RP-предпочтения — за пользователем. Qwen3.6 и Swift-1.5 в RP не рекомендуются.
@@ -204,6 +209,7 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 | **Оценка качества RP (LLM-судья, «мнимая история»)** | `docs\rp-quality-eval.md` |
 | **Сводный рейтинг RP: Thinking / Non-Thinking** | `docs\rp-ranking.md` |
 | Логи по RP-мержам Gemma-4-31B (Split-Untied-31B; MeroMero v2 heretic — удалён) | `docs\gemma-4-31b-rp-merges.md` |
+| **Базовые instruct-модели на RP (baseline: Gemma-4-26B-A4B-it, Qwen3.6-35B-A3B, Qwen3.8-27B)** | `docs\base-models-rp-eval.md` |
 | Сэмплинг и качество русского текста (RP Gemma-4: температура, top-k, min-p) | `docs\sampling-quality.md` |
 | Внешний ресёрч: RP-модели Gemma 4 и русский (сообщество, HF, факторы) | `docs\rp-model-candidates.md` |
 | CaliperBench: RP-рейтинг Gemma 4 + **правило отбора «что держит русский» и шорт-лист** | `docs\caliperbench-2026-10.md`, `docs\rp-model-candidates.md` §9 |
@@ -213,6 +219,7 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 | Готовые конфиги | `launch\b11382-cu124\` (единственная сборка; полный список — в таблице «Готовые конфиги») |
 | Харнесс, наборы тестов, сырые результаты | `bench\` (`bench.py`, `suites\`, `runs\results.jsonl`); RP-качество — `bench\quality.py`, `bench\quality\rp_judge.py`, `judge_score.py` |
 | Скил для подбора конфига новой модели | `.opencode\skills\llm-launch-tuner\` |
+| Скил для прогона и оценки RP-качества новой модели (скрин → судьи → баллы) | `.opencode\skills\rp-model-eval\` |
 
 ## Источники информации
 
@@ -245,6 +252,12 @@ cd <папка проекта>
 # один раз: скопировать bench\env.example.json -> bench\env.local.json и указать свои пути
 .\.venv\Scripts\python.exe bench\bench.py bench\suites\<набор>.json   # наборы в bench\suites\
 .\.venv\Scripts\python.exe bench\report.py                            # сводная таблица
+
+# RP-качество (скрин 2 сценария → судьи → баллы) одной командой; путь модели — в ОДИНАРНЫХ кавычках
+.\.venv\Scripts\python.exe .opencode\skills\rp-model-eval\scripts\run_eval.py `
+  --name <имя> --model '${MODELS_DIR}/<путь>.gguf' --family gemma `
+  --scenarios base --modes nothink,think --judges gemma,qwen
+# ход прогона — logs\rp_eval_<имя>_<stamp>.log
 ```
 
 Плейсхолдеры `${LLAMA_SERVER}`, `${MODELS_DIR}` и т.п. в наборах тестов раскрываются из

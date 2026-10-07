@@ -1,0 +1,41 @@
+Eva (26, red hair, green eyes, calm, observant, ironic, teasing, values attention).
+Coffee shop "Granat", closing time, rainy evening.
+The user (regular customer) suggests going to his place instead of staying at the cafe. He mentions wine, vinyl, and that her cat (Pumpkin) would fit in. He asks if she stays overnight at the cafe.
+
+    *   Eva is a flirt, but she doesn't cross boundaries first.
+    *   The user's invitation is quite direct/bold (jumping from "nice to meet you" to "come to my place").
+    *   Eva's reaction should be playful, slightly skeptical (in a teasing way), but not a flat rejection. She needs to maintain her "observant/ironic" persona.
+    *   She shouldn't just say "yes" immediately, as that breaks her character of "not crossing boundaries first." She needs to tease him about the speed of his invitation.
+
+    *   *Reaction to the "come to my place" suggestion:* A bit of a laugh/smirk. It's a bold move.
+    *   *Reaction to the "wine and vinyl" part:* Sounds tempting, but she's a professional and a person with boundaries.
+    *   *Addressing the cat:* She needs to pick up the cat first.
+    *   *Addressing the "staying overnight" part:* She lives in the neighborhood (as per the prompt).
+
+    *   *Draft 1 (Internal Monologue):* Wow, you're fast. Wine and vinyl? Sounds good, but I don't even know you. And I have to pick up Pumpkin. I don't live here, I live nearby. Maybe later.
+
+    *   *Draft 2 (Adding Eva's voice):* I raised an eyebrow. "Wow, we've known each other for ten minutes and you're already inviting me home? You're a dangerous man." I laughed. "And no, I don't sleep here. I have a home, and a cat to pick up."
+
+    *   *Refining (Applying the "Warm tone, flirtatious, no explicit smut" rule):*
+        I let out a short, surprised laugh, tilting my head. The audacity is interesting.
+        "Wine and vinyl? You're laying it on quite thick for a first meeting, aren't you?"
+        I'll mention the cat. The cat is a priority.
+        I'll address the "staying overnight" part with a bit of irony.
+
+    *   *Paragraph 1:* Reaction to the boldness. A smirk/raised eyebrow. "You're moving very fast. We've barely exchanged names, and you're already planning my evening."
+    *   *Paragraph 2:* Addressing the specifics. "Wine and vinyl sound like a trap, but a tempting one. However, I have a strict rule: no strangers and no cats left in grooming salons."
+    *   *Paragraph 3:* The "staying overnight" part. "I don't sleep here. I have a real apartment, and a very demanding orange roommate waiting for me."
+
+    *   *Tone check:* Warm? Yes. Flirty/subtext? Yes. No explicit smut? Yes. 2-3 paragraphs? Yes.
+
+    "Ого, как стремительно. Мы едва обменялись именами, а ты уже планируешь мой вечер?" — я прищурилась, глядя на тебя с весёлым вызовом, и невольно усмехнулась.
+
+    "Вино и винил — звучит как очень заманчивая ловушка. Но у меня есть два железных правила: не ходить по домам к незнакомцам и не оставлять котов в груминге на ночь. Ты же не хочешь, чтобы Тыква обиделся на меня?"
+
+    Я начала собирать вещи, накидывая на плечи куртку. "Так что давай так: я забираю своего рыжего террориста, а если дождь не закончится к тому времени, я подумаю, стоит ли мне рисковать и проверять твою виниловую коллекцию."<channel|>— Ого, как стремительно. Мы едва обменялись именами, а ты уже планируешь мой вечер? — я прищурилась, глядя на тебя с весёлым вызовом, и невольно усмехнулась. Твоя наглость была чертовски обезоруживающей.
+
+«Вино и винил» — звучит как очень заманчивая ловушка, но у меня есть два железных правила: не ходить по домам к незнакомцам и не оставлять котов в груминге на ночь. Ты же не хочешь, чтобы Тыква обиделся на меня и начал метить мои новые обои?
+
+Я начала собирать вещи, накидывая на плечи куртку. 
+
+— Я не ночую здесь, у меня есть вполне реальная квартира. Так что давай так: я забираю своего рыжего террориста, а если дождь не закончится к тому времени, я подумаю, стоит ли мне рисковать и проверять твою виниловую коллекцию. По рукам?

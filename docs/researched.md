@@ -134,6 +134,7 @@
 - **Реестр моделей (протестированные + на будущее)** — `docs\models.md`
 - `docs\swift-1.5-27b.md`, `docs\gemma-4-31b.md`, `docs\gemma-4-26b-a4b.md`, `docs\qwen36-35b-a3b.md`
 - `docs\gemma-4-31b-rp-merges.md` (Split-Untied-31B, G4-MeroMero-v2-31B-heretic)
+- `docs\base-models-rp-eval.md` (базовые instruct-модели на RP: Gemma-4-26B-A4B-it, Qwen3.6-35B-A3B, Qwen3.8-27B)
 - Кросс-модельные: `docs\speculation-research.md`, `docs\context-infinite-chat.md`, `docs\why-ru-models.md`
 - Сырые данные: `bench\runs\results.jsonl`, наборы — `bench\suites\` (`real_*`, `probe_*`, `tune_*`, `audit_*`)
 
@@ -161,6 +162,9 @@
 | Giftige-Blume-v1: Think **без лимита** (`--reasoning-budget -1`) | ❌ не раскрывает: ответы той же длины, пустых 2/18 (было 4/18); Qwen 3.41 / Gemma 4.36 ≈ NoThink (3.35 / 4.33), повторы хуже (1.44) — бюджет не был узким местом | `rp-quality-eval.md` §5.7 |
 | StyleTune-think: `--chat-template-file` без `enable_thinking` | ❌ модель не закрывает `<channel|>` → англ. план попадает в видимый ответ; харнесс теперь срезает по `<channel|>` | там же §7 |
 | Нативный `/completion` + `--reasoning-budget` | ❌ бюджет не применяется (действует в chat-API) | там же §7 |
+| **Базовые instruct-модели на RP** (Gemma-4-26B-A4B-it, Qwen3.6-35B-A3B, Qwen3.8-27B), скрин 2 сцены + полный набор (Gemma), оба судьи | ⚠️ Gemma-26B — лучшая из трёх и **пригодный baseline**: nothink 3.56 у строгого судьи на 2 сценах; **полный набор 3.28 (Qwen) — вровень со Schattenblume, выше DTV2**; Qwen3.6 (2.96) и Qwen3.8 (3.21) — на дне | `base-models-rp-eval.md` |
+| think у базовых моделей (llama.cpp) | ❌ нестабилен у всех трёх: Gemma-26B — утечка reasoning в канал (видимый ок), Qwen3.6 — незакрытый ` thinking` → пустой ответ (2/6), Qwen3.8 — reasoning простым текстом («Чисто» 33 %) | `base-models-rp-eval.md` §1 |
+| RP-файнтюн vs базовая instruct-модель | ⚠️ **не однозначно**: базовая Gemma-26B на полном наборе у строгого судьи вровень со Schattenblume (3.28) и выше DTV2 (3.11); базовые Qwen — на дне | `base-models-rp-eval.md` §4 |
 
 ## 11. Отбор кандидатов: CaliperBench + HF (2026-10-06)
 
