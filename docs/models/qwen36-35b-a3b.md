@@ -7,8 +7,8 @@
 > Реестр всего проверенного (не повторять) — `docs\researched.md`.
 
 **Готовые конфиги:**
-- чат (рекомендуется): `..\..\launch\b11382-cu124\qwen36-35b-a3b-mtp-b11382.bat`
-- редактор кода (DFlash+ngram): `..\..\launch\b11382-cu124\qwen36-35b-a3b-dflash-code.bat`
+- чат (рекомендуется): `..\..\launch\b11382-cu124\qwen36-35b-a3b\qwen36-35b-a3b-mtp-b11382.bat`
+- редактор кода (DFlash+ngram): `..\..\launch\b11382-cu124\qwen36-35b-a3b\qwen36-35b-a3b-dflash-code.bat`
 - старая сборка (10472) удалена — актуален только конфиг для b11382 выше
 
 ## Реалистичные задачи (b11382, `bench\requests_real.json`)

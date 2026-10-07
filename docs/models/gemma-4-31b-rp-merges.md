@@ -16,9 +16,9 @@
 `bench\suites\real\real_split_untied.json`, `bench\suites\real\real_meromero.json`.
 
 **Готовые конфиги (b11382):**
-- Split-Untied: `..\..\launch\b11382-cu124\gemma4-31b-split-untied-nothink-b11382.bat` (NoThink),
-  `..\..\launch\b11382-cu124\gemma4-31b-split-untied-think-b11382.bat` (с мышлением),
-  `..\..\launch\b11382-cu124\gemma4-31b-split-untied-nothink-ru-b11382.bat` (RU-пресет temp0.4).
+- Split-Untied: `..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-nothink-b11382.bat` (NoThink),
+  `..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-think-b11382.bat` (с мышлением),
+  `..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-nothink-ru-b11382.bat` (RU-пресет temp0.4).
 - MeroMero v2 heretic: конфиги и файл модели **удалены** (модель снята с диска 🗑) — см. `docs\models.md`.
 
 ## Сэмплинг по карточкам

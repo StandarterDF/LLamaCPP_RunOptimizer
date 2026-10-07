@@ -7,12 +7,12 @@
 > Реестр всего проверенного (не повторять) — `docs\researched.md`.
 
 **Готовые конфиги:**
-- чат (рекомендуется): `..\..\launch\b11382-cu124\gemma4-26a4b-styletune-b11382.bat`
+- чат (рекомендуется): `..\..\launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-styletune-b11382.bat`
 - **RP / креатив** (без мышления и без спекуляции, самая быстрая генерация на высокоэнтропийном тексте):
-  `..\..\launch\b11382-cu124\gemma4-26a4b-styletune-nothink-nospec-b11382.bat`
+  `..\..\launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-styletune-nothink-nospec-b11382.bat`
 - чат **без мышления** (со спекуляцией, `--reasoning off`):
-  `..\..\launch\b11382-cu124\gemma4-26a4b-styletune-nothink-b11382.bat`
-- редактор кода (DFlash+ngram): `..\..\launch\b11382-cu124\gemma4-26a4b-dflash-code.bat`
+  `..\..\launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-styletune-nothink-b11382.bat`
+- редактор кода (DFlash+ngram): `..\..\launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-dflash-code.bat`
 - старая сборка (10472) удалена — актуальны конфиги для b11382 выше
 
 ## Реалистичные задачи (b11382, `--reasoning off`, `bench\requests_real.json`)

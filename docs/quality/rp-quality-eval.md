@@ -235,7 +235,7 @@ Qwen-судья (`rp_judge_qwen_new`) — строже:
 Оговорки: судья-26B не всегда выдаёт балл на каждый ответ (N меньше числа ответов), поэтому «Чисто 100 %»
 у think-прогонов включает пустые ответы — их пропускает судья и не считает харнесс-метрика. Сырое:
 `bench\quality\runs\rp_eval_{styleswap,glistening}_full_*`; заключения — `rp_judge_gemma_new`,
-`rp_judge_qwen_new`; конфиги — `launch\b11382-cu124\gemma4-31b-{glistening,styleswap}-*-b11382.bat`.
+`rp_judge_qwen_new`; конфиги — `launch\b11382-cu124\gemma4-31b\gemma4-31b-{glistening,styleswap}-*-b11382.bat`.
 
 ### 5.7. Giftige-Blume-v1 (Blazed-Forge) — замена StyleSwap (2026-10-06)
 
@@ -257,7 +257,7 @@ DTV2 4.24), Qwen **3.35 — выше обоих** (3.28 / 3.11). Главное 
 (лучшая среди всех проверенных; у эталонов 2.9–3.0), ровно то, что обещал Combined (ERP/DarkRP):
 модель двигает сцену, а не «говорит головой». Русский чистый (Cyr 99.9 %, EN 0). Think слабее
 (4/18 пустых; у Qwen повт 1.92) → рабочий режим **NoThink**.
-Конфиг: `launch\b11382-cu124\gemma4-31b-blume-v1-nothink-b11382.bat`.
+Конфиг: `launch\b11382-cu124\gemma4-31b\gemma4-31b-blume-v1-nothink-b11382.bat`.
 
 **Think без лимита (проверка, `--reasoning-budget -1` + `--reasoning-effort default`, n_predict 8000).**
 Гипотеза «раз модель выше по бенчмарку, безлимитное мышление раскроется» — **не подтвердилась**: ответы

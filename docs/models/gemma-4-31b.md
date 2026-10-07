@@ -9,8 +9,8 @@
 данные — `..\..\bench\runs\results.jsonl`. Обозначения: TG — генерация (t/s), PP — обработка промпта.
 
 **Готовые конфиги (b11382):**
-- no-think (рекомендуется, числа ниже): `..\..\launch\b11382-cu124\gemma4-31b-dark-thoughts-nothink-b11382.bat`
-- thinking: `..\..\launch\b11382-cu124\gemma4-31b-dark-thoughts-think-b11382.bat`
+- no-think (рекомендуется, числа ниже): `..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-dark-thoughts-nothink-b11382.bat`
+- thinking: `..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-dark-thoughts-think-b11382.bat`
 - старая сборка (10472) удалена — актуальны только конфиги для b11382 выше
 
 ## Реалистичные задачи (b11382, `bench\requests_real.json`)

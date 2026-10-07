@@ -46,7 +46,7 @@
 ## 2. Базовая точка — сэмплинг из карточки модели
 
 Карточка Split-Untied: `temp 1.0, min-p 0.03, top-k off, top-p 1.0, repetition penalty off,
-DRY multiplier 0.8` (то же в `launch\b11382-cu124\gemma4-31b-split-untied-nothink-b11382.bat`).
+DRY multiplier 0.8` (то же в `launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-nothink-b11382.bat`).
 
 32 генерации (8 промптов × 4 seed, по 280 токенов), серия `runs\baseline_repro`:
 
@@ -134,7 +134,7 @@ DRY multiplier 0.8` (то же в `launch\b11382-cu124\gemma4-31b-split-untied-n
 
 ### 3.3. Итоговый конфиг
 
-Для русского RP на Split-Untied-31B: `launch\b11382-cu124\gemma4-31b-split-untied-nothink-ru-b11382.bat`
+Для русского RP на Split-Untied-31B: `launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-nothink-ru-b11382.bat`
 (NoThink + MTP; `--temp 0.4 --min-p 0.1 --top-k 0 --top-p 1.0 --dry-multiplier 0.8`). Тот же сэмплинг
 разумно переносить на другие Gemma-4-файнтюны (общий токенизатор, §4), проверяя дымовым прогоном.
 

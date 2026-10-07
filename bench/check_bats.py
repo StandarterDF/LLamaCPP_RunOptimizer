@@ -9,6 +9,7 @@
 Запуск: python bench/check_bats.py
 """
 
+import os
 import pathlib
 import re
 import sys
@@ -58,7 +59,7 @@ def main():
     }
     bad = 0
     for bat in sorted((ROOT / "launch").rglob("*.bat")):
-        rel = ".." if bat.parent.name == "launch" else r"..\.."
+        rel = os.path.relpath(ROOT, bat.parent)
         local = dict(env)
         local["PROJECT_DIR"] = str((bat.parent / rel).resolve())
         local.update(

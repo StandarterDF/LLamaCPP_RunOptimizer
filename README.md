@@ -22,10 +22,10 @@
 
 | Модель | RP | Чат | Код | Матем | Конфиг |
 | --- | ---: | ---: | ---: | ---: | --- |
-| **Qwen3.6-35B-A3B** (MoE 3B акт., Q2_K_XL) | **82** | **93** | **111** | **121** | `launch\b11382-cu124\qwen36-35b-a3b-mtp-b11382.bat` |
+| **Qwen3.6-35B-A3B** (MoE 3B акт., Q2_K_XL) | **82** | **93** | **111** | **121** | `launch\b11382-cu124\qwen36-35b-a3b\qwen36-35b-a3b-mtp-b11382.bat` |
 | **Gemma-4-26B-A4B Goetia v1.6** (MoE, IQ3_XXS, RP-мерж) | **~73** | — | — | — | `...gemma4-26a4b-goetia-nothink-b11382.bat` (think непригоден) |
 | **Gemma-4-26B-A4B StyleTune** (MoE, IQ4_XS) | **63**¹ | 70 | 100 | 107 | RP — `...styletune-nothink-nospec-b11382.bat`; чат/код — `...styletune-b11382.bat` |
-| Swift-1.5-Qwen3.8-27B (dense, IQ2_S-mtp) | 28 | 37 | 36 | 37 | `launch\b11382-cu124\swift-best-b11382.bat` |
+| Swift-1.5-Qwen3.8-27B (dense, IQ2_S-mtp) | 28 | 37 | 36 | 37 | `launch\b11382-cu124\swift\swift-best-b11382.bat` |
 | **Gemma-4-31B Glistening-Gem v2.1** (dense RP-мерж, IQ3_XXS) | 23 | — | — | — | `...gemma4-31b-glistening-nothink-b11382.bat` (+ `-think`) |
 | Gemma-4-31B Dark-Thoughts V2 (dense, IQ3_XXS) | 23 | 31 | 48 | 47 | `...gemma4-31b-dark-thoughts-nothink-b11382.bat` (+ `-think`) |
 | **Split-Untied-31B** (dense RP-мерж, IQ3_XXS) | **23** | 34 | 47 | 46 | `...-split-untied-nothink...`; RU — `...-nothink-ru...`; think — `...-think...` |
@@ -115,7 +115,7 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 - Dense-модели на RP заметно медленнее: Swift-1.5 ~28, Gemma-4-31B ~23 t/s. MTP и тут полезен
   (+30…40 % к «без спекуляции»), но это потолок dense-модели на 16 ГБ.
 - **Частный случай:** у Gemma-4-26B-A4B на RP спекуляция *вредит* (без MTP 63 t/s, с MTP ~50).
-  Берите `launch\b11382-cu124\gemma4-26a4b-styletune-nothink-nospec-b11382.bat`
+  Берите `launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-styletune-nothink-nospec-b11382.bat`
   (`--reasoning off`, без MTP).
 - Сэмплинг — по карточке модели (Swift: temp 1.0; Gemma-4 26B/31B в наших конфигах: temp 0.6, min-p 0.1).
 - **Русский текст:** карточка Split-Untied (temp 1.0, min-p 0.03) даёт ~25 % ответов с англ. вставками
@@ -130,7 +130,7 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
   (`anтично`, `remaining-м`). Причина — бедный на кириллицу токенизатор (5.1 %) плюс высокая температура.
 - **Слабые мержи** (Split-Untied): рабочая практика — **`temp 0.4–0.5`**, **`min-p 0.1`**, **`top-k` выключен**.
   Карточка (temp 1.0) → ~25 % брака, `temp 0.4` → ~96 % чистых. Конфиг —
-  `launch\b11382-cu124\gemma4-31b-split-untied-nothink-ru-b11382.bat`.
+  `launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-nothink-ru-b11382.bat`.
 - **Здоровые модели** (Dark Thoughts V2, StyleTune-26B) низкая T не нужна: **`temp 0.7` + полный DRY**
   (`dry_base 1.75`, `dry_allowed_length 2`, `dry_penalty_last_n 256`) = 100 % чистых; `temp 0.85` уже
   даёт первые артефакты. Лексическое разнообразие (TTR150) от роста T почти не меняется (0.83→0.85) —

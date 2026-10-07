@@ -108,4 +108,4 @@
 - Русский / PPL / артефакты — `docs\quality\sampling-quality.md`, `docs\research\why-ru-models.md`.
 - Сырые прогоны — `bench\quality\runs\rp_eval_*`; заключения судей — `bench\quality\runs\rp_judge_*`;
   агрегатор — `bench\quality\judge_score.py`.
-- Конфиги — `launch\b11382-cu124\*.bat`.
+- Конфиги — `launch\b11382-cu124\<семейство>\*.bat`.
