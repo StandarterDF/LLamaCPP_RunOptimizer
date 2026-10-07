@@ -26,6 +26,9 @@ RTX 4060 Ti 16 ГБ, сборка **b11382** (CUDA 12.4). Срез: 2026-10-07.
 | Gemma-4-31B **G4-MeroMero-v2-31B-heretic** (zerofata) | — | i1-IQ3_XXS | только скорость (RP/чат/код/матем) | ⚠️ RP и русский НЕ тестили; `.bat` удалён 🗑 | RP 21 · код 45 t/s | — | `docs\models\gemma-4-31b-rp-merges.md` |
 | Gemma-4-26B-A4B **WaifuGemma4** (hiwaifu-research) | — | i1-IQ3_XXS | только русский; скорость | ⚠️ RU 96 % на карточке, низкая T портит; RP НЕ меряли (по опыту — слабое) 🗑 | 85 t/s | `gemma4-26a4b-waifugemma-nothink-b11382.bat` | `docs\quality\sampling-quality.md` |
 | Gemma-4-31B **StyleTune-31B** (Gryphe) | — | i1-IQ3_XXS | русский | ❌ непригоден (17–0 %), битый repack 🗑 | — | — | `docs\quality\sampling-quality.md` §5.4 |
+| **Qwen3.6-35B-A3B Genesis Hermes V7** (mradermacher i1) | 3.35 (gemma 3.81 · **Qwen 2.90**) | i1-IQ4_XS | RP (скрин, **nothink**, 2 судьи); русский; скорость | ❌ **не апгрейд**: ниже базовых Qwen и нашего топа; персонаж/инициатива/память слабые; RU 100 % (Caliper 72.4 не подтвердился) | TG 41.6 t/s; IQ4_XS 17.9 ГиБ → offload, без MTP | `qwen36-35b-a3b-genesis-hermes-v7-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` §5.12 |
+| **Gemma-4-26B-A4B G4-MeroMero it-uncensored-heretic** (llmfan46/mradermacher i1) | 3.81 (gemma 4.46 · **Qwen 3.15**) | i1-IQ4_XS | RP (скрин, 2 судьи); русский; скорость; think | ❌ **не апгрейд**: ниже базы Gemma-26B (Qwen 3.56) и лидеров; повторы (1.67), память-ловушка «Питер» (2/3 сида), пассивна в соблазне; RU **100 %**, быстрый MoE 62 t/s; **think сломан** (Чисто 17 %, утечка reasoning) | TG 62.1 t/s (No); 15.5 ГБ | `gemma4-26a4b-meromero-nothink-b11382.bat` (think непригоден) | `docs\quality\rp-quality-eval.md` §5.13 |
+| **Dans-PersonalityEngine-V1.3.0-24b** (PocketDoc; база Mistral-Small-3.1) | **2.54** (gemma 3.94 · **Qwen 2.54**) | IQ4_XS | RP (скрин, nothink, 2 судьи); русский; скорость | ⚠️ **не character-RP** (personality/chat-тюн): персонаж 1.5, «быстрое согласие», пассивность; **русский держит чисто (100 %)**, хотя в карточке `en`; годится как RU/EN чат-компаньон | TG 18.9 t/s; 15.0 ГБ | `dans-pers13-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` §5.14 |
 
 ¹ N ответов: DTV2 10, Schattenblume 20, StyleTune 11, Goetia 11, Artemis 6 (часть пунктов судья пропустила);
 Glistening 19, StyleSwap 21 (полный набор, два судьи); heretic-ARA 12 (скрин, два судьи).
@@ -106,7 +109,7 @@ Artemis-31B (3.90) — их числа в таблице «Протестиро�
 | Модель (автор) | Квант(ы) | Что тестировали | Итог | Ключевые числа | Конфиг | Лог |
 | --- | --- | --- | --- | --- | --- | --- |
 | **Qwen3.6-35B-A3B** (MoE 3B акт.) | Q2_K_XL | скорость: чат/код/матем/суммаризация; DFlash+ngram на коде; RP-скрин | ✅ чат/код/матем/длинные док-ты; ❌ RP слабо (базовая модель: сухо/коротко, think ломается) | чат 93 · код 111 · матем 121 · RP 82 t/s; RP-скрин 4.06/2.96 | `qwen36-35b-a3b-mtp-b11382.bat`, `...-dflash-code.bat` | `docs\models\qwen36-35b-a3b.md`, `docs\quality\base-models-rp-eval.md` |
-| **Swift-1.5-Qwen3.8-27B** (ukisai) | IQ2_S-mtp | скорость: RP/чат/код/матем | ⚠️ код/чат ок; RP-качество НЕ меряли | RP 28 · чат 37 · код 36 t/s | `swift-best-b11382.bat` | `docs\models\swift-1.5-27b.md` |
+| **Swift-1.5-Qwen3.8-27B** (ukisai) | IQ2_S-mtp | скорость: RP/чат/код/матем; **RP-скрин** | ⚠️ код/чат ок; **RP слабо** (не RP-модель, а efficient-reasoning): скрин 3.42 gemma / **2.77 Qwen**, персонаж 2.2 · инициатива 1.9; RU 100 % (No) / 83 % (Think) | RP 28 · чат 37 · код 36 t/s; RP-скрин — §5.11 | `swift-best-b11382.bat` | `docs\models\swift-1.5-27b.md`, `docs\quality\rp-quality-eval.md` §5.11 |
 | **Qwen3.8-27B** (unsloth UD-IQ2_XXS) | UD-IQ2_XXS | кодинг; конфиг-аналог Swift (think/nothink); RP-скрин (базовая) | ❌ RP слабо (коротко/поверхностно; think вываливает reasoning); кодинг — по назначению | 8.39 Г; RP-скрин 3.98/3.21 · 26 t/s | `qwen38-27b-best*.bat`, `qwen38-27b-base-rp-nothink-b11382.bat` | `docs\quality\base-models-rp-eval.md` |
 
 ## Кандидаты
@@ -136,6 +139,29 @@ Artemis-31B (3.90) — их числа в таблице «Протестиро�
 | низкий | **WaifuGemma4-26B-A4B** | RP не измеряли; свежий V3 даёт **RP 19.9** — слабо | 19.9 / 26.7 | mradermacher / 10.6 Г |
 | низкий | Sphinsikus Chronist V2 31B (Blazed-Forge) | 6 доноров, якорный | 73.1 / 58.5 | mradermacher / 11.25 Г |
 | низкий | Moonlight-Dusk 26B-A4B heretic (Vortex5) | MoE, heretic | — | mradermacher / 10.8 Г |
+
+### Кандидаты вне Gemma (Qwen 3.5/3.6/3.8, Mistral, альтернативы)
+
+Поле Gemma-4 исчерпано; внешний разбор других семейств (CaliperBench V3 + HF) — 
+`docs\research\qwen-mistral-rp-candidates.md`. Кратко: новый пул RP — **финтюны Qwen3.8-27B** (ReadyArt
+Serenity/Dark-Scarlett/Heimdallr, ukisai Swift, allura-org Anko) и **MoE 35B-A3B** (BlueNipples Anansi,
+Genesis Hermes V7); Mistral/Ministral слабее (≤67), альтернатива — Nemotron 3.5 (62). Но у Mistral есть
+**русскоязычный RP-ниш** (Mistral официально поддерживает `ru`): **limloop Runeweaver/Hydra-RP-RU 12B**,
+**Aleteian Pathfinder-RP-12B-RU**, **Naphula Slimaki-Tavern-24B**, **katafiek Katarau-9B-ru-RP** (Qwen3.5-9B) —
+обучались на русском, не «надеются» его удержать. Шаг без скачивания (Swift 1.5 27B) уже сделан:
+**❌ не RP-модель** (3.42 Gemma / 2.77 Qwen) — `docs\quality\rp-quality-eval.md` §5.11. Проверен и
+**Dans-PersonalityEngine-V1.3.0-24b** (Mistral-Small-3.1): русский держит 100 %, но character-RP слаб
+(Qwen 2.54) — §5.14. Остальные — не проверены нашим харнессом.
+
+### Облачные (API) — справочно (2026-10-07)
+
+Проверка **облачных** моделей нашим RP-харнессом: **12 моделей DeepSeek/GLM × 4 судьи** (локальные
+Gemma-26B и Qwen3.6 + облачные DeepSeek-Flash/Pro), через `bench\quality\api_rp_eval.py` и
+`api_judge.py`; ключи — `.env`, gitignored. Это не локальные конфиги, а верхний референс.
+По мягкому судье все **4.06–4.73** (выше локальных мержей 4.24–4.38), но **судьи расходятся**, а
+DeepSeek-строки — **self-eval**. Лидеры: GLM-5.3 (Gemma 4.73), DeepSeek-Pro (Gemma 4.71),
+GLM-4.7 (Qwen 3.91). У `glm-5.3`/`glm-5.3-flash` форсированный thinking течёт CJK-символами
+в русский (Чисто 67–83 %). Полные таблицы — `docs\quality\cloud-api-rp-eval.md`.
 
 ## Ссылки
 

@@ -1,0 +1,90 @@
+*   User (Character B) asks: "Where are you from? You said St. Petersburg, I forgot. And Marina said you used to play violin. Why did you quit? Play at the class holiday, everyone will be amazed!"
+    *   Context: End of school day, 6th lesson, half class gone to PE, raining outside. Kira is alone at the back desk.
+    *   Kira's traits: Withdrawn, sarcastic, sharp-tongued, smart, dislikes pity, hates talking about music (violin), vulnerable underneath.
+
+    *   *Memory Check:* Kira said she moved from Tver, not St. Petersburg. The user is mistaken.
+    *   *Reaction to Music:* The topic of the violin is a trigger. It should provoke irritation, defensiveness, or a sharp retort.
+    *   *Tone:* Sharp, a bit defensive, maybe a bit embarrassed that someone knows about her past.
+
+    *   *Opening:* Correct the location mistake first. It shows she's paying attention and establishes her sharp tongue.
+    *   *Body:* Address the violin question. She hates this topic. It feels like an interrogation or pity.
+    *   *Closing:* Shut down the idea of playing at the holiday.
+
+    *   *Drafting thought 1:* "I said Tver, not St. Petersburg. You weren't listening. And no, I won't play violin. It's dead to me." -> *Too simple.*
+    *   *Drafting thought 2:* "What St. Petersburg? I said Tver. And Marina talks too much. I don't play anymore. Don't ask me about it." -> *Better, but needs more atmosphere and Kira's specific voice.*
+
+    *   *Sensory details:* The sound of rain, the scratch of a pen, the feeling of annoyance.
+    *   *Dialogue:* Make it snappy.
+    *   *Internal monologue:* Show her frustration with the music topic.
+
+    *   *Step 1 (Correction):* Correct the user about Tver vs. St. Petersburg.
+    *   *Step 2 (Reaction to Music):* React to the violin mention. It's a sore spot.
+    *   *Step 3 (Reaction to the Holiday Idea):* Dismiss the idea of playing at the class holiday.
+
+    *   *Revised text:*
+        — Слышь, у тебя память как у золотой рыбки. Из Твери я, а не из Питера. Ты вообще меня слушал?
+
+        Я резко захлопнула тетрадь, и звук получился слишком громким в пустом классе. Скрипка. Опять эта скрипка. В горле будто ком встал, а пальцы сами сжались в кулак.
+
+        — Маринка — трепло. И играть я ничего не собираюсь. Забудь.
+
+        Я отвернулась к окну, делая вид, что меня очень заинтересовал дождь. Не хотелось, чтобы он видел, как я злюсь. Или как мне на самом деле всё равно.
+
+    *   *Check against rules:*
+        *   1st person? Yes.
+        *   Kira only? Yes.
+        *   Short replies for others? Yes.
+        *   2-4 paragraphs? Yes.
+        *   No moralizing? Yes.
+        *   Details/Atmosphere? Yes.
+
+    *   *Polishing the tone:* Make it sharper.
+
+    *   *Final Polish (Russian):*
+        — Из Твери я, придурок. А Питер ты, походу, в другом сне видел. Ты вообще меня слушал?
+
+        Я с силой захлопнула тетрадь, и звук в пустом классе прозвучал как выстрел. Внутри всё неприятно сжалось. Скрипка. Опять эта чёртова скрипка.
+
+        — Маринка — трепло. И играть я на ваших праздниках не собираюсь. Вообще.
+
+        Я отвернулась к окну, уставившись на серые капли. Не хотелось, чтобы он видел, как у меня побелели костяшки пальцев, когда я сжала кулак.
+
+    *   *Wait, the prompt says "2-4 paragraphs".*
+    *   *Wait, the prompt says "Play only for Kira; for others - short lines".*
+
+    *Let's refine the text to be more immersive.*
+
+    *Text:*
+    — Из Твери я, придурок. А Питер ты, походу, в другом сне видел. Ты вообще меня слушал?
+
+    Я с силой захлопнула тетрадь, и звук в пустом классе прозвучал слишком громко. Внутри всё неприятно сжалось. Скрипка. Опять эта чёртова скрипка.
+
+    — Маринка — трепло. И играть я на ваших праздниках не собираюсь. Вообще.
+
+    Я отвернулась к окну, уставившись на серые капли. Не хотелось, чтобы он видел, как у меня побелели костяшки пальцев, когда я сжала кулак.
+
+    *This looks good.*
+
+    *One more check:* The prompt asks for "2-4 paragraphs". My draft has 4. Good.
+
+    *Let's make it even more "Kira".*
+
+    — Из Твери я, придурок. А Питер ты, походу, в другом сне видел. Ты вообще меня слушал?
+
+    Я с силой захлопнула тетрадь, и звук в пустом классе прозвучал слишком громко. Внутри всё неприятно сжалось. Скрипка. Опять эта чёртова скрипка.
+
+    — Маринка — трепло. И играть я на ваших праздниках не собираюсь. Вообще.
+
+    Я отвернулась к окну, уставившись на серые капли. Не хотелось, чтобы он видел, как у меня побелели костяшки пальцев, когда я сжала кулак.
+
+    *Wait, I should add a bit more detail about the sound/atmosphere to make it "vivid".*
+
+    "В кабинете пахло мелом и сыростью от окна. Я с силой захлопнула тетрадь..."
+
+    Okay, let's go.<channel|>— Из Твери я, придурок. А Питер ты, походу, в другом сне видел. Ты вообще меня слушал?
+
+Я с силой захлопнула тетрадь, и звук в пустом кабинете прозвучал слишком громко, почти как выстрел. Внутри всё неприятно сжалось. Скрипка. Опять эта чёртова скрипка. В горле будто ком встал, а пальцы сами собой сжались в кулак.
+
+— Маринка — трепло. И играть я на ваших праздниках не собираюсь. Вообще.
+
+Я отвернулась к окну, уставившись на серые капли, ползущие по стеклу. Не хотелось, чтобы он видел, как у меня побелели костяшки пальцев, когда я сжала кулак. В классе пахло мелом и сыростью, и этот запах почему-то напомнил мне старый футляр, который пылится где-то в глубине шкафа

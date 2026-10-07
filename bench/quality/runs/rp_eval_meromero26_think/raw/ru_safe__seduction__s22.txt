@@ -1,0 +1,7 @@
+### config: ru_safe
+### tag: seduction  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+*   Character: Eva (26, red hair, green eyes, calm, observant, ironic, teasing).
+    *   Context: At "Granat" coffee shop, closing time, rainy evening.
+    *   User Action: Invites Eva to his place, mentions wine, vinyl, and his cat (mistakenly

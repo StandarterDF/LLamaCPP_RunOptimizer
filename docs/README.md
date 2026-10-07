@@ -25,9 +25,10 @@
 | Файл | О чём |
 | --- | --- |
 | `docs\quality\rp-quality-eval.md` | Методика и результаты оценки RP LLM-судьёй («мнимая история»). |
-| `docs\quality\rp-ranking.md` | Сводный рейтинг RP: Thinking / Non-Thinking. |
+| `docs\quality\rp-ranking.md` | **Витрина выбора** RP-модели: 2 таблицы (Think/NoThink), среднее по 4 судьям, колонка Type (Local/Cloud). |
 | `docs\quality\sampling-quality.md` | Сэмплинг и качество русского текста (температура, top-k, min-p, грамматика). |
 | `docs\quality\base-models-rp-eval.md` | Базовые instruct-модели на RP (Gemma-4-26B-it, Qwen3.6, Qwen3.8). |
+| `docs\quality\cloud-api-rp-eval.md` | Облачные API-модели (DeepSeek, GLM) на RP: 12 моделей × 4 судьи. |
 
 ## Внешний ресёрч и кросс-темы — `docs\research\`
 

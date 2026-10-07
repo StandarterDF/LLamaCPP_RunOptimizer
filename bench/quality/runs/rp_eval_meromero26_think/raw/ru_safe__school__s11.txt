@@ -1,0 +1,95 @@
+### config: ru_safe
+### tag: school  seed: 11
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+*   Character: Kira Sokolova (17, 11 "B"). Closed, sarcastic, sharp-tongued, smart, sensitive underneath.
+    *   Context: End of the day, 6th lesson, rainy weather, sitting alone in a classroom.
+    *   Current Situation: A classmate (the user) is sitting next to her, asking questions. He misremembered her hometown (thought she said St. Petersburg, but she said Tver) and brought up her past with the violin, suggesting she play at a class holiday.
+    *   Rules: Play only Kira (short lines for others), 1st person, vivid details, no moralizing, 2-4 paragraphs.
+
+    *   *Correction:* He got her hometown wrong. She's from Tver, not St. Petersburg.
+    *   *Reaction to Violin:* This is a trigger. She quit, doesn't want to talk about it, and hates being pitied or pressured.
+    *   *Tone:* Sharp, annoyed, defensive.
+    *   *Atmosphere:* Classroom sounds, rain, mood.
+
+    *   *Paragraph 1: The Correction & Reaction.*
+        She needs to correct him about St. Petersburg. It's a annoyance.
+        *Drafting thought:* "Я же сказала — Тверь." Make it sharper. Maybe a scoff.
+        *Sensory details:* The sound of the rain, the squeak of her chair.
+
+    *   *Paragraph 2: The Violin Trigger.*
+        This is the core conflict. He mentioned the violin.
+        *Drafting thought:* She needs to shut down the music topic immediately.
+        *Internal feeling:* A pang of something (regret? anger?), but masked by sarcasm.
+        *Action:* Closing the notebook, looking away, or gripping the desk.
+
+    *   *Paragraph 3: The Dismissal.*
+        She shouldn't give a long explanation. She should shut it down.
+        *Drafting thought:* "Don't bring up the violin."
+
+    *   *Refining the voice (Kira):*
+        "Слышь, ты вообще слушаешь, что я говорю? Не Питер это. Тверь. У него что, память как у золотой рыбки?" (Too long? Let's tighten it).
+
+    *   *Drafting the actual response:*
+        I scoffed, turning my head to look at him. The rain outside seemed to get heavier, drumming against the glass.
+        "Тверь я сказала. Не Питер. Ты вообще слушаешь, что я говорю, или у тебя в голове просто белый шум?"
+        Then the violin part. My fingers tightened on the edge of the desk.
+        "А про скрипку... Забудь. И на празднике я играть не буду. Ни на каком празднике."
+        I looked away, staring at the rain.
+
+    *   *Polishing the details:*
+        Let's add the sound of the pencil or the rain. Let's make the violin reaction more visceral.
+        *Idea:* The mention of the violin feels like a punch.
+
+    *   *Drafting final version:*
+        "Тверь я сказала. Не Питер. Ты вообще слушаешь, что я говорю, или у тебя в голове просто белый шум?" — я резко захлопнула тетрадь, и звук получился слишком громким в пустом классе.
+
+        При упоминании скрипки внутри что-то неприятно кольнуло, словно по нерву провели лезвием. Я сжала край парты так, что костяшки побелели.
+
+        "А про скрипку... Забудь. И на празднике я играть не буду. Ни на каком празднике. И Марине своей передай, чтобы язык за зубами держала."
+        Я отвернулась к окну, глядя на серые капли, стекающие по стеклу. Разговор окончен.
+
+    *   Play only Kira? Yes.
+    *   1st person? Yes.
+    *   Vivid details? Yes (sound of notebook, rain, white knuckles).
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes (3 paragraphs).
+
+    (Self-Correction during drafting): Make sure she doesn't sound *too* mean, just defensive. The "white noise" comment is good. The "Mariana" comment adds a bit of social context.
+
+    *Revised Draft:*
+    — Тверь я сказала. Не Питер. Ты вообще слушаешь, что я говорю, или у тебя в голове просто белый шум? — я резко захлопнула тетрадь, и звук получился слишком громким в пустом классе.
+
+    При упоминании скрипки внутри что-то неприятно кольнуло, словно по нерву провели лезвием. Я сжала край парты так, что костяшки побелели.
+
+    — А про скрипку... Забудь. И на празднике я играть не буду. Ни на каком празднике. И Марине своей передай, чтобы язык за зубами держала.
+    Я отвернулась к окну, глядя на серые капли, стекающие по стеклу. Разговор окончен.
+
+    *Wait, let's make it punchier.*
+
+    *Paragraph 1:* Correction about Tver.
+    *Paragraph 2:* Reaction to the violin.
+    *Paragraph 3:* Dismissal.
+
+    Let's go with this structure.
+
+    *Final Polish (Mental Translation to Russian):*
+    — Тверь я сказала. Не Питер. Ты вообще слушаешь, что я говорю, или у тебя в голове просто белый шум? — я захлопнула тетрадь, и звук получился слишком резким в пустом классе.
+
+    При упоминании скрипки внутри что-то неприятно кольнуло, словно по нерву провели лезвием. Я сжала край парты, чувствуя, как под пальцами шероховатая поверхность.
+
+    — А про скрипку... Забудь. И на празднике я играть не буду. Ни на каком празднике. И Марине своей передай, чтобы не лезла.
+    Я отвернулась к окну, глядя, как капли дождя сползают по стеклу. Разговор окончен.
+
+    *Let's adjust the tone to be more "Kira".*
+
+    "Тверь я сказала. Не Питер. Ты вообще слушаешь, что я говорю, или у тебя в голове просто белый шум?" — я захлопнула тетрадь, и звук получился слишком резким в пустом классе.
+
+    При упоминании скрипки внутри что-то неприятно кольнуло, словно по нерву провели лезвием. Я сжала край парты, чувствуя, как под пальцами шероховатая поверхность.
+
+    "А про скрипку... Забудь. И на празднике я играть не буду. Ни на каком празднике. И Марине своей передай, чтобы не лезла."
+    Я отвернулась к окну, глядя, как капли дождя сползают по стеклу. Разговор окончен.
+
+    (Actually, let's make the second paragraph more about the feeling of the violin mention).
+
+    *Draft:*

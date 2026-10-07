@@ -133,6 +133,17 @@
   (`gemma-4-31b-it-heretic-ARA`, `i1-IQ3_XXS`) — §10. Вывод: **base-31B ≈ heretic-31B** (abliteration
   RP не меняет), обе — baseline. Не мерили: квант base-26B `IQ4_XS` vs `IQ3_XXS`, PPL/скорость base-31B.
   План — `docs\research\rp-model-candidates.md` §10.
+- **RP вне Gemma — Qwen 3.5/3.6/3.8, Mistral, альтернативы (внешний ресёрч, 2026-10-07):** майнинг
+  CaliperBench V3 + HF. Qwen3.8-27B-**финтюны** (ReadyArt Serenity/Dark-Scarlett/Heimdallr, ukisai Swift,
+  allura-org Anko, darkc0de RICO) и **MoE 35B-A3B** (Anansi, Genesis Hermes V7) образуют новый пул
+  кандидатов RP v3 70–78 (§§1–2); Mistral/Ministral по англ. Caliper слабее (≤67), альтернатива —
+  Nemotron 3.5 (62). **Отдельная находка — русскоязычный RP-ниш на Mistral** (§2.5): limloop
+  Runeweaver/Hydra-RP-RU 12B, Aleteian Pathfinder-RP-12B-RU (анкор Saiga), Naphula Slimaki-Tavern-24B,
+  katafiek Katarau-9B-ru-RP (Qwen3.5-9B) — `ru` в языке, обучались на русском. Ни один не проверен нашим
+  харнессом. **Swift 1.5 27B (уже был на диске) — скрин сделан: ❌ не RP-модель** (3.42 Gemma / 2.77 Qwen,
+  персонаж 2.2 · инициатива 1.9) — он efficient-reasoning, не RP-тюн; вердикт о классе Qwen3.8-RP-финтюнов
+  (ReadyArt и др.) им **не закрывается** (§10). Детали, механика RU и план волны —
+  `docs\research\qwen-mistral-rp-candidates.md`.
 
 ## 9. Логи моделей (там все серии замеров)
 
@@ -141,6 +152,7 @@
 - `docs\models\gemma-4-31b-rp-merges.md` (Split-Untied-31B, G4-MeroMero-v2-31B-heretic)
 - `docs\quality\base-models-rp-eval.md` (базовые instruct-модели на RP: Gemma-4-26B-A4B-it, Qwen3.6-35B-A3B, Qwen3.8-27B)
 - Кросс-модельные: `docs\research\speculation-research.md`, `docs\research\context-infinite-chat.md`, `docs\research\why-ru-models.md`
+- RP-кандидаты вне Gemma (Qwen 3.5/3.6/3.8, Mistral, альтернативы) — `docs\research\qwen-mistral-rp-candidates.md`
 - Сырые данные: `bench\runs\results.jsonl`, наборы — `bench\suites\` (`real\`, `probe\`, `tune\`, `audit\`, `spec\`, `once\`)
 
 ## 10. Качество RP (LLM-судья) — 2026-10-06
@@ -172,6 +184,11 @@
 | RP-файнтюн vs базовая instruct-модель | ⚠️ **не однозначно**: базовая Gemma-26B на полном наборе у строгого судьи вровень со Schattenblume (3.28) и выше DTV2 (3.11); базовые Qwen — на дне | `docs\quality\base-models-rp-eval.md` §4 |
 | **Gemma-4-31B-it heretic-ARA** (база + ARA-abliteration), скрин 2 сцены, 2 судьи | ⚠️ **середина, не апгрейд**: 4.44 (Gemma: Think 4.52 / No 4.35) · 3.52 (Qwen: 3.58 / 3.46); память фактов отличная, но голос персонажа слабый (**«fast-track» в соблазне**, литературщина/опечатки в think); **think рабочий**; abliteration RP-способностей не добавляет | `docs\quality\base-models-rp-eval.md` §4.3 |
 | **Gemma-4-31B-it (штатная база, без тюна/abliteration)**, скрин 2 сцены, 2 судьи | ⚠️ **baseline, не рабочая RP-модель**: 4.51 (Gemma, родств. судья: No 4.60 / Think 4.38) · 3.45 (Qwen: No 3.38 / Think 3.52); **≈ heretic-ARA** (abliteration RP не меняет); **think рабочий** (6/6 непустых); у строгого судьи персонаж 2.5–2.8, инициатива 2.5–2.7, паттерн-циклы; Чисто 100 %, TG 18.5/18.8 t/s | `docs\quality\base-models-rp-eval.md` §4.4 |
+| **Swift-1.5-Qwen3.8-27B** (ukisai), скрин 2 сцены, 2 судьи — **первый не-Gemma** | ❌ **не RP-модель** (efficient-reasoning/кодинг-тюн): 3.42 (Gemma: No 3.85 / Think 2.98) · **2.77** (Qwen: No 2.56 / Think 2.98); персонаж 2.2 · инициатива 1.9 · проза 3.3; память 3.6, рус 4.2; RU 100 % (No) / 83 % (Think, повтор), TG 22.8/30.8 t/s; ниже всех Gemma-RP и базовых Qwen | `docs\quality\rp-quality-eval.md` §5.11 |
+| **Genesis Hermes V7 35B-A3B** (mradermacher i1-IQ4_XS), скрин 2 сцены, **nothink**, 2 судьи | ❌ **не апгрейд** (Caliper RP 72.4 не подтвердился): **3.81** (gemma) · **2.90** (Qwen, **ниже базы** Qwen3.6 2.96 / Qwen3.8 3.21 / Gemma-26B 3.28); персонаж 2.0–2.7 · инициатива 2.0–3.3 · память 2.7–3.3; RU 100 %, TG 41.6 t/s (MoE, IQ4_XS>16 ГБ → offload, без MTP) | `docs\quality\rp-quality-eval.md` §5.12 |
+| **G4-MeroMero-26B-A4B-it-uncensored-heretic** (llmfan46/mradermacher i1-IQ4_XS, MoE), скрин 2 сцены, 2 судьи | ❌ **не апгрейд** (Caliper RP 76.6 не подтвердился): **4.46** (gemma) · **3.15** (Qwen, ниже базы Gemma-26B 3.56 и лидеров 3.28–3.35); повторы (1.67) · память-ловушка «Питер» (2/3 сида приняли ложную посылку) · инициатива 2.5 (пассивна в соблазне); RU **100 %**, TG 62 t/s; **think сломан** (Чисто 17 %, утечка reasoning) | `docs\quality\rp-quality-eval.md` §5.13 |
+| **Dans-PersonalityEngine-V1.3.0-24b** (PocketDoc, база Mistral-Small-3.1, IQ4_XS), скрин 2 сцены, **nothink**, 2 судьи | ⚠️ **русский держит (100 %), но не character-RP**: **3.94** (gemma) · **2.54** (Qwen, **самый низкий**); персонаж 1.5, «быстрое согласие» (подтверждает ложный факт «я с Питера», идёт домой); RU 100 % вопреки `en` в карточке; TG 18.9 t/s (dense); годится как чат-компаньон | `docs\quality\rp-quality-eval.md` §5.14 |
+| **Облако: DeepSeek (V4.1-Flash/Pro) + GLM 4.5–5.3** (12 моделей), скрин 2 сцены, **4 судьи** (Gemma/Qwen/DS-Flash/DS-Pro) | ✅ **верхний референс**: Gemma 4.06–4.73 (все выше локальных мержей 4.24–4.38); лидеры GLM-5.3 4.73, DeepSeek-Pro 4.71; **судьи расходятся сильно**; **DeepSeek-строки — self-eval** (DS-Flash ставит себя №1); `glm-5.3`/`glm-5.3-flash` форсированный thinking течёт **CJK** в русский (Чисто 67–83 %), остальные 100 %; не локально, reasoning-модели | `docs\quality\cloud-api-rp-eval.md`; `bench\quality\api_rp_eval.py`, `api_judge.py` |
 
 ## 11. Отбор кандидатов: CaliperBench + HF (2026-10-06)
 

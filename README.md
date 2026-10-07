@@ -35,8 +35,11 @@
 ¹ У Gemma-26B на RP спекуляция **не окупается** (креатив плохо предсказуем): без MTP 63 t/s,
 с MTP ~50. Остальные числа — с MTP.
 «—»: у 31B RP-мержей мерили только RP (чат/код/математику не гоняли). Отбракованы (`.bat` есть,
-но **не рекомендуются**): `gemma4-31b-styleswap-*` (англ. вставки в русский) и `gemma4-31b-artemis-*`
-(речевая каша). Полный список файлов — `launch\b11382-cu124\`.
+но **не рекомендуются**): `gemma4-31b-styleswap-*` (англ. вставки в русский), `gemma4-31b-artemis-*`
+(речевая каша), `gemma4-26a4b-meromero-*` (NoThink ниже базы Gemma-26B: повторы и слабая память;
+think непригоден — утечка reasoning) и `dans-pers13-*` (**не** character-RP: «быстрое согласие»,
+персонаж слабый; но русский держит чисто — годится как чат-компаньон). Полный список файлов —
+`launch\b11382-cu124\`.
 
 Код-профили `*-dflash-code.bat` (DFlash+ngram) полезны для правок/копирования больших файлов;
 на этом наборе они не перепроверялись — см. `docs\research\speculation-research.md`.
@@ -208,6 +211,7 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 | Логи исследований по Gemma-4 31B / 26B-A4B / Qwen3.6 | `docs\models\gemma-4-31b.md`, `docs\models\gemma-4-26b-a4b.md`, `docs\models\qwen36-35b-a3b.md` |
 | **Оценка качества RP (LLM-судья, «мнимая история»)** | `docs\quality\rp-quality-eval.md` |
 | **Сводный рейтинг RP: Thinking / Non-Thinking** | `docs\quality\rp-ranking.md` |
+| **Облачные API-модели (DeepSeek, GLM) на RP** | `docs\quality\cloud-api-rp-eval.md`; `bench\quality\api_rp_eval.py`, `api_judge.py`, `api_metrics_summary.py` |
 | Логи по RP-мержам Gemma-4-31B (Split-Untied-31B; MeroMero v2 heretic — удалён) | `docs\models\gemma-4-31b-rp-merges.md` |
 | **Базовые instruct-модели на RP (baseline: Gemma-4-26B-A4B-it, Qwen3.6-35B-A3B, Qwen3.8-27B)** | `docs\quality\base-models-rp-eval.md` |
 | Сэмплинг и качество русского текста (RP Gemma-4: температура, top-k, min-p) | `docs\quality\sampling-quality.md` |
@@ -258,6 +262,9 @@ cd <папка проекта>
   --name <имя> --model '${MODELS_DIR}/<путь>.gguf' --family gemma `
   --scenarios base --modes nothink,think --judges gemma,qwen
 # ход прогона — logs\rp_eval_<имя>_<stamp>.log
+
+# облачные модели (DeepSeek) через API — те же сценарии/судьи; ключ в .env (gitignored)
+.\.venv\Scripts\python.exe bench\quality\api_rp_eval.py --models dsflash,dsv4pro
 ```
 
 Плейсхолдеры `${LLAMA_SERVER}`, `${MODELS_DIR}` и т.п. в наборах тестов раскрываются из

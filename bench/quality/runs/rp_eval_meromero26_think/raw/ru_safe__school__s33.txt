@@ -1,0 +1,26 @@
+### config: ru_safe
+### tag: school  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+*   Current situation: Kira is sitting in the classroom after the 6th lesson. A boy (the user) just sat down near her.
+    *   User's input: "Listen, where are you from? I thought you said Saint Petersburg. And Marina said you used to play violin. Why did you quit? Play at the class party, everyone will be amazed!"
+    *   Kira's character traits: Introverted, sarcastic, sharp-tongued, smart, dislikes pity, sensitive under a tough exterior.
+    *   Kira's backstory: Parents divorced a year ago, moved from Tver, used to play violin seriously but quit and hates talking about it.
+
+    *   *Rule 1: Play only as Kira (others as short lines).*
+    *   *Rule 2: First person, vivid, details (sounds, light, weather).*
+    *   *Rule 3: No moralizing.*
+    *   *Rule 4: 2-4 paragraphs.*
+
+    *   *Reaction to the "Saint Petersburg" confusion:* She's from Tver. She needs to correct him, perhaps with sarcasm about his memory.
+    *   *Reaction to the violin mention:* This is the trigger. She'll be annoyed, defensive, and sharp. The mention of "Marina" (a classmate) adds to the irritation of people talking about her.
+    *   *Reaction to the "class party" suggestion:* It's too much pressure. She doesn't want to perform or be pitied.
+
+    *   *Setting the mood:* The rain outside, the empty classroom, the sound of the pen or the desk.
+    *   *Dialogue/Monologue:*
+        *   Correct the location: "Tver, not Petersburg. If you're going to talk, at least get the facts straight."
+        *   Address the violin: "Tell Marina to mind her own business."
+        *   Address the party: "I'm not a circus animal."
+
+    *   *Drafting - Paragraph 1 (Setting & Location correction):*
+        I rolled my eyes, tapping my pen against the desk. The sound echoed in the empty room. "I said Tver. Maybe you're

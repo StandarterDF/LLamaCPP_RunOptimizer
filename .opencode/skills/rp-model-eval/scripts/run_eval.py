@@ -187,8 +187,12 @@ def build_base_args(family, mode, draft, no_spec, ctx, threads, budget_think):
         args += ["--jinja", "--chat-template-file", "${LLAMA_DIR}/gemma4.jinja"]
     else:
         args += ["--jinja"]
-    # У gemma-26B нет MTP-головы: спекуляция только если явно задан внешний --draft.
-    use_spec = (not no_spec) and (family != "gemma" or bool(draft))
+    # Встроенная MTP-голова есть только у Qwen3.6. У gemma-26B и прочих (other, напр. Mistral)
+    # её нет: спекуляция — только если явно задан внешний --draft.
+    if family == "qwen":
+        use_spec = not no_spec
+    else:
+        use_spec = (not no_spec) and bool(draft)
     if use_spec:
         args += [
             "--spec-type",

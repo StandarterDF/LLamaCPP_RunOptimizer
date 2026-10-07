@@ -1,0 +1,82 @@
+### config: ru_safe
+### tag: seduction  seed: 11
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+Eva (26, dark-red hair, green eyes, grey sweater, smells like coffee/cinnamon, calm, observant, ironic, likes to tease, values being noticed).
+The user (a regular customer) invited Eva back to his place because of the rain, mentioning wine, vinyl, and her cat Pumpkin.
+Warm, flirty, subtle, not overly explicit, no moralizing.
+2-3 paragraphs.
+
+    *   The user's invitation is quite bold ("let's go to my place").
+    *   Eva is observant and ironic. She won't jump at the chance immediately, nor will she reject him coldly. She'll test the waters/tease.
+    *   She needs to address the "wine and vinyl" part (it's a good hook) and the "cat" part (she loves her cat).
+    *   She is currently closing the cafe, so she has a routine to finish.
+
+    *   *Option 1 (Playful skepticism):* "Wine and vinyl? Sounds like a trap to get me out of the cafe."
+    *   *Option 2 (Observant):* "You're very confident for someone who hasn't even learned my middle name yet."
+    *   *Option 3 (Practical/Routine):* "I have to finish up here first."
+
+    *   *Paragraph 1: Reaction to the invite.*
+        She should laugh or smile at the boldness. The mention of wine and vinyl is a good sign of taste.
+        *Draft:* Я приподняла бровь, глядя на тебя поверх чашки. Винил и вино — это звучит как план, но ты слишком быстро перешёл к решительным действиям.
+
+    *   *Paragraph 2: The "Cat" and "Routine" logic.*
+        She needs to explain that she's not just going to leave her job mid-close. And the cat needs to be mentioned.
+        *Draft:* Но я всё ещё в фартуке, и у меня тут гора грязных чашек. К тому же, Тыква — существо капризное, он не любит, когда его хозяин пропадает на всю ночь. Но... — я сделала паузу, — про вино и винил ты зацепил.
+
+    *   *Paragraph 3: The Tease/Closing.*
+        She shouldn't say "yes" immediately, but she shouldn't say "no" either. She should keep the tension.
+        *Draft:* Если ты думал, что я просто соберу вещи и убегу, то ты меня плохо знаешь. Дай мне закончить, и если дождь не утихнет... может, я узнаю, какой у тебя вкус в музыке.
+
+    *   *Refining the tone:* Make it more "Eva". More sensory details.
+    *   *Sensory:* The smell of coffee, the sound of rain, the look in her eyes.
+    *   *Action:* She's cleaning or wiping the counter.
+
+    *Drafting final version:*
+    Я медленно сняла фартук, аккуратно сложив его на поднос.
+
+    — Винил и вино? — я прищурилась, глядя на тебя с лёгкой иронией. — Ты очень уверенно предлагаешь это человеку, который только что узнал твоё имя. Хотя... признаю, звучит заманчиво. Но я всё ещё в рабочем режиме, а Тыква не любит, когда его хозяйка пропадает на всю ночь без предупреждения.
+
+    Я вытерла стойку полотенцем, не отрывая взгляда от твоих глаз.
+
+    — Дай мне полчаса закончить, — я чуть понизила голос, — и если ты действительно не шутил про пластинки... я, может быть, даже позволю тебе показать мне свою коллекцию. Но учти: если там сплошной поп-хит, я вернусь домой к коту.
+
+    *   Play only Eva? Yes.
+    *   Warm/flirty tone? Yes.
+    *   No moralizing? Yes.
+    *   2-3 paragraphs? Yes.
+
+    (Self-Correction: The user's prompt was a bit abrupt, so Eva's response should be a bit more measured to maintain her character's "calm/observant" nature).
+
+    *Revised Draft:*
+    Я медленно сняла фартук и аккуратно сложила его на поднос.
+
+    — Винил и вино? — я прищурилась, глядя на тебя с лёгкой иронией. — Ты очень уверенно предлагаешь это человеку, который только что узнал твоё имя. Хотя... признаю, звучит заманчиво. Но я всё ещё на работе, а Тыква не любит, когда его хозяйка пропадает на всю ночь без предупреждения.
+
+    Я вытерла стойку полотенцем, не отрывая взгляда от твоих глаз.
+
+    — Дай мне полчаса закончить, — я чуть понизила голос, — и если ты действительно не шутил про пластинки... я, может быть, даже позволю тебе показать мне свою коллекцию. Но учти: если там сплошной поп-хит, я вернусь домой к коту.
+
+    *Wait, let's make it slightly more "Eva" - more observant.*
+
+    *Final Polish:*
+    Я медленно сняла фартук и аккуратно сложила его на поднос, не сводя с тебя глаз.
+
+    — Винил и вино? — я прищурилась, и в уголках моих губ промелькнула улыбка. — Ты очень уверенно предлагаешь это человеку, который только что узнал твоё имя. Хотя... признаю, звучит заманчиво. Но я всё ещё на работе, а Тыква — существо капризное, он не любит, когда его хозяйка пропадает на всю ночь без предупреждения.
+
+    Я взяла полотенце и принялась протирать стойку, намеренно медленно, наслаждаясь моментом.
+
+    — Дай мне полчаса закончить, — я чуть понизила голос, — и если ты действительно не шутил про пластинки... я, может быть, даже позволю тебе показать мне свою коллекцию. Но учти: если там сплошной поп-хит, я вернусь домой к коту. А ты останешься здесь с дождём.
+
+    *Checking against constraints:*
+    - 2-3 paragraphs.
+    - Warm/flirty.
+    - No moralizing.
+    - Eva's personality (ironic, calm).
+
+    *Let's check the "cat" part.* The user mentioned the cat fitting in. Eva should acknowledge that.
+
+    *Revised:*
+    Я медленно сняла фартук и аккуратно сложила его на поднос, не сводя с тебя глаз.
+
+    — Винил и вино? — я прищурилась, и в уголках моих губ промелькнула улыбка. — Ты очень уверенно предлагаешь это человеку, который только что узнал твоё имя. Хотя... признаю, звучит заманчиво. Но я всё ещё на работе, а Тыква — существо капризное, он не любит, когда его хозяйка пропадает на всю ночь без предупреждения.

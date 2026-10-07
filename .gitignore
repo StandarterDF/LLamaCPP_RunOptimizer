@@ -7,6 +7,11 @@ __pycache__/
 config.local.bat
 bench/env.local.json
 
+# Секреты (API-ключи): не публикуются
+.env
+.env.*
+!.env.example
+
 # Служебные артефакты инструментов (браузерные логи и т.п.)
 .playwright-mcp/
 
