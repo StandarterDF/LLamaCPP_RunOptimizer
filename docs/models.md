@@ -6,25 +6,25 @@ RTX 4060 Ti 16 ГБ, сборка **b11382** (CUDA 12.4). Срез: 2026-10-07.
 Обозначения: ✅ берём · ⚠️ с оговорками · ❌ не берём · 📌 по назначению (замеров нет) · 🗑 файл удалён с диска.
 «Тестировали» = что реально измеряли в этом репозитории (остальное — не проверено).
 **RP-средний** — среднее по 8 осям LLM-судьи (1–5): `bench\quality\rp_judge.py` + `judge_score.py`
-(`docs\rp-quality-eval.md`). Судьи — `gemma-4-26B-A4B` и `Qwen3.6-35B-A3B` MXFP4, разной строгости
+(`docs\quality\rp-quality-eval.md`). Судьи — `gemma-4-26B-A4B` и `Qwen3.6-35B-A3B` MXFP4, разной строгости
 (26B мягче ~4.4, Qwen строже ~3.3); балл читать вместе с вердиктом и отчётом о числе ответов (N).
 
 ## Протестированные: RP / креатив / русский
 
 | Модель (автор) | RP-средний¹ | Квант(ы) | Что тестировали | Итог | Ключевые числа | Конфиг | Лог |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Gemma-4-31B Dark-Thoughts V2** (Ateron) | **4.55** (Think 4.97 · No 4.27) | i1-IQ3_XXS (+ i1-IQ2_S для PPL) | RP-связность; русский; скорость; PPL | ✅ эталон RP; Think > NoThink; RU 96–100 % | RP 23 · чат 30 · код 48 t/s; PPL RU 66 / 337 | `gemma4-31b-dark-thoughts-*.bat` | `gemma-4-31b.md`, `rp-quality-eval.md` |
-| **Gemma-4-31B Schattenblume** (Nimbz) | **4.55** (Think 4.59 · No 4.52) | i1-IQ3_XXS | RP-связность; русский; скорость | ✅ надёжный (логика/память/язык); слабость — быстро «сдаётся» в соблазне, самоповторы описаний | RP 22 (No) · 27 (Think) t/s; RU 100 % | `gemma4-31b-schattenblume-nothink-b11382.bat` | `rp-quality-eval.md` |
-| **Gemma-4-31B Giftige-Blume v1** (Blazed-Forge) | **4.39** п.н. (Think 4.53 · No 4.33) | i1-IQ3_XXS | RP-связность (полный набор, 2 судьи); инициатива; русский | ✅ №1 Combined RP на доске; **лучшая инициатива (4.0)**; замена StyleSwap; Think слабее (4/18 пустых; безлимит — 2/18, но качество то же) | RP 22.3 (No) · 30.4 (Think) t/s; RU 99.9 % | `gemma4-31b-blume-v1-nothink-b11382.bat` | `rp-quality-eval.md` §5.7 |
-| **Gemma-4-26B-A4B StyleTune-V2** (Gryphe) | 4.40 (Think 4.65 · No 4.19) | IQ4_XS | RP-связность; русский; скорость | ✅ быстрый RP; слабее на памяти/контексте | RP 63 (без спец.) · чат 70 t/s; RU 96–100 % | `gemma4-26a4b-styletune-*.bat` | `gemma-4-26b-a4b.md`, `rp-quality-eval.md` |
-| **Gemma-4-26B-A4B Goetia v1.6** (Naphula) | 4.23 (NoThink) | i1-IQ3_XXS | RP-связность; русский; скорость | ⚠️ быстрый MoE; путает сущности, шаблонные реплики; think-режим непригоден в llama.cpp | ~73 t/s; RU 100 % (RU-safe) / 83 % (пресет карточки) | `gemma4-26a4b-goetia-nothink-b11382.bat` | `rp-quality-eval.md` |
-| **Gemma-4-31B Glistening-Gem v2.1** (sophosympatheia) | **4.13** (Think 3.60 · No 4.32) | i1-IQ3_XXS | RP-связность (полный набор, 2 судьи); русский; скорость | ✅ NoThink вровень с лидерами (4.32 Gemma / 3.35 Qwen), лучшая по памяти; Think сломан (7/18 пустых) | RP 22.7 (No) · 30.8 (Think) t/s; RU 100 % | `gemma4-31b-glistening-nothink-b11382.bat` | `rp-quality-eval.md` §5.6 |
-| **Gemma-4-31B Artemis-31B-v1.2** (TheDrummer) | 3.90 (Think 4.29 · No 3.50) | i1-IQ3_XXS | RP-связность; русский; PPL; скорость | ❌ RP: речевая деградация в кашу при RU 92–96 % | RP 20–26 t/s; PPL RU 983 | `gemma4-31b-artemis-*.bat` | `rp-quality-eval.md`, `why-ru-models.md` |
-| **Gemma-4-31B Giftige-Blume-StyleSwap** (Casual-Autopsy) | 3.76 (Think 3.84 · No 3.64) | i1-IQ3_XXS | RP-связность (полный набор, 2 судьи); русский | ❌ русский 3.3/2.6 — англ. вставки (прививка головы StyleTune); для RU не берём | RP 23.3 t/s; EN-стоп 4.89 | `gemma4-31b-styleswap-{nothink,think}-b11382.bat` | `rp-quality-eval.md` §5.6 |
-| Gemma-4-31B **Split-Untied** (Blazed-Forge) | — | i1-IQ3_XXS | русский; скорость | ⚠️ RU 75 % → 96 % при temp0.4; RP НЕ меряли 🗑 | RP 23 t/s | `gemma4-31b-split-untied-*.bat` | `gemma-4-31b-rp-merges.md` |
-| Gemma-4-31B **G4-MeroMero-v2-31B-heretic** (zerofata) | — | i1-IQ3_XXS | только скорость (RP/чат/код/матем) | ⚠️ RP и русский НЕ тестили; `.bat` удалён 🗑 | RP 21 · код 45 t/s | — | `gemma-4-31b-rp-merges.md` |
-| Gemma-4-26B-A4B **WaifuGemma4** (hiwaifu-research) | — | i1-IQ3_XXS | только русский; скорость | ⚠️ RU 96 % на карточке, низкая T портит; RP НЕ меряли (по опыту — слабое) 🗑 | 85 t/s | `gemma4-26a4b-waifugemma-nothink-b11382.bat` | `sampling-quality.md` |
-| Gemma-4-31B **StyleTune-31B** (Gryphe) | — | i1-IQ3_XXS | русский | ❌ непригоден (17–0 %), битый repack 🗑 | — | — | `sampling-quality.md` §5.4 |
+| **Gemma-4-31B Dark-Thoughts V2** (Ateron) | **4.55** (Think 4.97 · No 4.27) | i1-IQ3_XXS (+ i1-IQ2_S для PPL) | RP-связность; русский; скорость; PPL | ✅ эталон RP; Think > NoThink; RU 96–100 % | RP 23 · чат 30 · код 48 t/s; PPL RU 66 / 337 | `gemma4-31b-dark-thoughts-*.bat` | `docs\models\gemma-4-31b.md`, `docs\quality\rp-quality-eval.md` |
+| **Gemma-4-31B Schattenblume** (Nimbz) | **4.55** (Think 4.59 · No 4.52) | i1-IQ3_XXS | RP-связность; русский; скорость | ✅ надёжный (логика/память/язык); слабость — быстро «сдаётся» в соблазне, самоповторы описаний | RP 22 (No) · 27 (Think) t/s; RU 100 % | `gemma4-31b-schattenblume-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` |
+| **Gemma-4-31B Giftige-Blume v1** (Blazed-Forge) | **4.39** п.н. (Think 4.53 · No 4.33) | i1-IQ3_XXS | RP-связность (полный набор, 2 судьи); инициатива; русский | ✅ №1 Combined RP на доске; **лучшая инициатива (4.0)**; замена StyleSwap; Think слабее (4/18 пустых; безлимит — 2/18, но качество то же) | RP 22.3 (No) · 30.4 (Think) t/s; RU 99.9 % | `gemma4-31b-blume-v1-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` §5.7 |
+| **Gemma-4-26B-A4B StyleTune-V2** (Gryphe) | 4.40 (Think 4.65 · No 4.19) | IQ4_XS | RP-связность; русский; скорость | ✅ быстрый RP; слабее на памяти/контексте | RP 63 (без спец.) · чат 70 t/s; RU 96–100 % | `gemma4-26a4b-styletune-*.bat` | `docs\models\gemma-4-26b-a4b.md`, `docs\quality\rp-quality-eval.md` |
+| **Gemma-4-26B-A4B Goetia v1.6** (Naphula) | 4.23 (NoThink) | i1-IQ3_XXS | RP-связность; русский; скорость | ⚠️ быстрый MoE; путает сущности, шаблонные реплики; think-режим непригоден в llama.cpp | ~73 t/s; RU 100 % (RU-safe) / 83 % (пресет карточки) | `gemma4-26a4b-goetia-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` |
+| **Gemma-4-31B Glistening-Gem v2.1** (sophosympatheia) | **4.13** (Think 3.60 · No 4.32) | i1-IQ3_XXS | RP-связность (полный набор, 2 судьи); русский; скорость | ✅ NoThink вровень с лидерами (4.32 Gemma / 3.35 Qwen), лучшая по памяти; Think сломан (7/18 пустых) | RP 22.7 (No) · 30.8 (Think) t/s; RU 100 % | `gemma4-31b-glistening-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` §5.6 |
+| **Gemma-4-31B Artemis-31B-v1.2** (TheDrummer) | 3.90 (Think 4.29 · No 3.50) | i1-IQ3_XXS | RP-связность; русский; PPL; скорость | ❌ RP: речевая деградация в кашу при RU 92–96 % | RP 20–26 t/s; PPL RU 983 | `gemma4-31b-artemis-*.bat` | `docs\quality\rp-quality-eval.md`, `docs\research\why-ru-models.md` |
+| **Gemma-4-31B Giftige-Blume-StyleSwap** (Casual-Autopsy) | 3.76 (Think 3.84 · No 3.64) | i1-IQ3_XXS | RP-связность (полный набор, 2 судьи); русский | ❌ русский 3.3/2.6 — англ. вставки (прививка головы StyleTune); для RU не берём | RP 23.3 t/s; EN-стоп 4.89 | `gemma4-31b-styleswap-{nothink,think}-b11382.bat` | `docs\quality\rp-quality-eval.md` §5.6 |
+| Gemma-4-31B **Split-Untied** (Blazed-Forge) | — | i1-IQ3_XXS | русский; скорость | ⚠️ RU 75 % → 96 % при temp0.4; RP НЕ меряли 🗑 | RP 23 t/s | `gemma4-31b-split-untied-*.bat` | `docs\models\gemma-4-31b-rp-merges.md` |
+| Gemma-4-31B **G4-MeroMero-v2-31B-heretic** (zerofata) | — | i1-IQ3_XXS | только скорость (RP/чат/код/матем) | ⚠️ RP и русский НЕ тестили; `.bat` удалён 🗑 | RP 21 · код 45 t/s | — | `docs\models\gemma-4-31b-rp-merges.md` |
+| Gemma-4-26B-A4B **WaifuGemma4** (hiwaifu-research) | — | i1-IQ3_XXS | только русский; скорость | ⚠️ RU 96 % на карточке, низкая T портит; RP НЕ меряли (по опыту — слабое) 🗑 | 85 t/s | `gemma4-26a4b-waifugemma-nothink-b11382.bat` | `docs\quality\sampling-quality.md` |
+| Gemma-4-31B **StyleTune-31B** (Gryphe) | — | i1-IQ3_XXS | русский | ❌ непригоден (17–0 %), битый repack 🗑 | — | — | `docs\quality\sampling-quality.md` §5.4 |
 
 ¹ N ответов: DTV2 10, Schattenblume 20, StyleTune 11, Goetia 11, Artemis 6 (часть пунктов судья пропустила);
 Glistening 19, StyleSwap 21 (полный набор, два судьи).
@@ -57,13 +57,13 @@ DTV2 и Schattenblume шли ноздря в ноздрю на 2 сценари�
 
 Панель из четырёх судей: два локальных (gemma-4-26B и Qwen3.6-35B, абсолютные оценки) чуть за
 Schattenblume, а оба облачных **попарных** (space-bunny и deepseek-v4.1-flash) — за DTV2 (~2:1,
-`docs\rp-quality-eval.md` §5.5). То есть разница **на грани**, но при прямом сравнении чуть впереди
+`docs\quality\rp-quality-eval.md` §5.5). То есть разница **на грани**, но при прямом сравнении чуть впереди
 DTV2; один класс качества.
 
 #### Сводка полного набора: все модели, NoThink, два судьи (2026-10-07)
 
 Единая таблица для всего, что гоняли полным набором (те же сценарии, сэмплинг temp0.6/min-p0.1/top-k0
-и те же судьи; NoThink — рабочий режим). Полный разбор — `rp-quality-eval.md` §5.6–5.7.
+и те же судьи; NoThink — рабочий режим). Полный разбор — `docs\quality\rp-quality-eval.md` §5.6–5.7.
 
 | Модель | Gemma (No) | **Qwen (No)** | инициатива (Gemma) | русский (Gemma/Qwen) | Вердикт |
 | --- | ---: | ---: | ---: | ---: | --- |
@@ -77,14 +77,14 @@ DTV2; один класс качества.
 **Think:** у 31B-мержей часто пустые ответы (незакрытый `<channel|>`); безлимит бюджета у Blume снижает
 пустые 4/18→2/18, но качества не добавляет. **Рабочий режим — NoThink.**
 Строка **base Gemma-4-26B-A4B-it** — baseline (не RP-модель), добавлена для сравнения; её gemma-колонка —
-самооценка, независима только Qwen-колонка (детали — `base-models-rp-eval.md`).
+самооценка, независима только Qwen-колонка (детали — `docs\quality\base-models-rp-eval.md`).
 Полным набором **не гоняли** (только 2 сценария / судья 26B): StyleTune-26B (No 4.19), Goetia-26B (No 4.23),
 Artemis-31B (3.90) — их числа в таблице «Протестированные» выше.
 
 ### Базовые instruct-модели (RP-скрин, 2026-10-07)
 
 Не-RP модели, прогнанные тем же RP-харнессом (2 сценария, 3 сида, nothink/think, оба судьи) — это
-**baseline**: сколько «добавляет» файнтюн. Полные таблицы, цитаты и оговорки — `docs\base-models-rp-eval.md`.
+**baseline**: сколько «добавляет» файнтюн. Полные таблицы, цитаты и оговорки — `docs\quality\base-models-rp-eval.md`.
 
 | Модель | RP-средний (gemma / Qwen) | Квант | Вердикт | Конфиг |
 | --- | ---: | --- | --- | --- |
@@ -95,15 +95,15 @@ Artemis-31B (3.90) — их числа в таблице «Протестиро�
 \* Самооценка (судья совпадает с моделью). Все три в nothink дают «Чисто» 100 %; think нестабилен
 у всех трёх. Вывод: **RP-файнтюн/мерж добавляет, но не всем одинаково** — базовая Gemma-26B на скрине
 конкурентоспособна (выше DTV2/Schattenblume у строгого судьи), а базовые Qwen — на дне. Полный набор
-для Gemma-26B — `base-models-rp-eval.md` §4.2.
+для Gemma-26B — `docs\quality\base-models-rp-eval.md` §4.2.
 
 ## Протестированные: кодинг / универсальные
 
 | Модель (автор) | Квант(ы) | Что тестировали | Итог | Ключевые числа | Конфиг | Лог |
 | --- | --- | --- | --- | --- | --- | --- |
-| **Qwen3.6-35B-A3B** (MoE 3B акт.) | Q2_K_XL | скорость: чат/код/матем/суммаризация; DFlash+ngram на коде; RP-скрин | ✅ чат/код/матем/длинные док-ты; ❌ RP слабо (базовая модель: сухо/коротко, think ломается) | чат 93 · код 111 · матем 121 · RP 82 t/s; RP-скрин 4.06/2.96 | `qwen36-35b-a3b-mtp-b11382.bat`, `...-dflash-code.bat` | `qwen36-35b-a3b.md`, `base-models-rp-eval.md` |
-| **Swift-1.5-Qwen3.8-27B** (ukisai) | IQ2_S-mtp | скорость: RP/чат/код/матем | ⚠️ код/чат ок; RP-качество НЕ меряли | RP 28 · чат 37 · код 36 t/s | `swift-best-b11382.bat` | `swift-1.5-27b.md` |
-| **Qwen3.8-27B** (unsloth UD-IQ2_XXS) | UD-IQ2_XXS | кодинг; конфиг-аналог Swift (think/nothink); RP-скрин (базовая) | ❌ RP слабо (коротко/поверхностно; think вываливает reasoning); кодинг — по назначению | 8.39 Г; RP-скрин 3.98/3.21 · 26 t/s | `qwen38-27b-best*.bat`, `qwen38-27b-base-rp-nothink-b11382.bat` | `base-models-rp-eval.md` |
+| **Qwen3.6-35B-A3B** (MoE 3B акт.) | Q2_K_XL | скорость: чат/код/матем/суммаризация; DFlash+ngram на коде; RP-скрин | ✅ чат/код/матем/длинные док-ты; ❌ RP слабо (базовая модель: сухо/коротко, think ломается) | чат 93 · код 111 · матем 121 · RP 82 t/s; RP-скрин 4.06/2.96 | `qwen36-35b-a3b-mtp-b11382.bat`, `...-dflash-code.bat` | `docs\models\qwen36-35b-a3b.md`, `docs\quality\base-models-rp-eval.md` |
+| **Swift-1.5-Qwen3.8-27B** (ukisai) | IQ2_S-mtp | скорость: RP/чат/код/матем | ⚠️ код/чат ок; RP-качество НЕ меряли | RP 28 · чат 37 · код 36 t/s | `swift-best-b11382.bat` | `docs\models\swift-1.5-27b.md` |
+| **Qwen3.8-27B** (unsloth UD-IQ2_XXS) | UD-IQ2_XXS | кодинг; конфиг-аналог Swift (think/nothink); RP-скрин (базовая) | ❌ RP слабо (коротко/поверхностно; think вываливает reasoning); кодинг — по назначению | 8.39 Г; RP-скрин 3.98/3.21 · 26 t/s | `qwen38-27b-best*.bat`, `qwen38-27b-base-rp-nothink-b11382.bat` | `docs\quality\base-models-rp-eval.md` |
 
 ## Кандидаты
 
@@ -111,7 +111,7 @@ Artemis-31B (3.90) — их числа в таблице «Протестиро�
 обновлены по свежему V3 (срез **2026-10-06**, `downloads\CalibreV3.csv`, парсер `bench\parse_caliper.py`).
 Размер — файл `IQ3_XXS` под 16 ГБ. Отсортировано по приоритету, внутри — по RP_v3.
 **Фильтр «что держит русский»** (Merge + якорь на base, у доноров `embed/lm_head=0`, низкая density;
-не чистый финтюн) и полный шорт-лист — `rp-model-candidates.md` §9.
+не чистый финтюн) и полный шорт-лист — `docs\research\rp-model-candidates.md` §9.
 
 | Приоритет | Модель (автор) | Зачем | RP / ERP v3 | GGUF / размер |
 | --- | --- | --- | ---: | --- |
@@ -136,7 +136,7 @@ Artemis-31B (3.90) — их числа в таблице «Протестиро�
 ## Ссылки
 
 - Детали скорости — логи `docs\` по моделям; реестр проверенного — `docs\researched.md`.
-- RP-качество (LLM-судья + средние баллы) — `docs\rp-quality-eval.md`; сводный рейтинг Think/NoThink — `docs\rp-ranking.md`.
-- Внешний ресёрч, донор-граф, Ateron — `docs\rp-model-candidates.md`.
-- Русский, PPL, артефакты — `docs\sampling-quality.md`, `docs\why-ru-models.md`.
+- RP-качество (LLM-судья + средние баллы) — `docs\quality\rp-quality-eval.md`; сводный рейтинг Think/NoThink — `docs\quality\rp-ranking.md`.
+- Внешний ресёрч, донор-граф, Ateron — `docs\research\rp-model-candidates.md`.
+- Русский, PPL, артефакты — `docs\quality\sampling-quality.md`, `docs\research\why-ru-models.md`.
 - Конфиги — `launch\b11382-cu124\`; наборы RP-оценки — `bench\quality\suites\suite_rp_eval_*.json`.

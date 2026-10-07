@@ -2,7 +2,7 @@
 
 Сводный рейтинг: какие модели лучше «в роли» по нашему RP-харнессу — отдельно для думающего
 (**Think**) и обычного (**NoThink**) режима. Это витрина по одному числу; разбор, цитаты и сырые
-данные — в `docs\rp-quality-eval.md` и `docs\models.md`.
+данные — в `docs\quality\rp-quality-eval.md` и `docs\models.md`.
 
 - **Общий рейтинг (RP-средний)** — среднее по 8 осям LLM-судьи, шкала 1–5:
   ум · память · персонаж · инструкция · инициатива · русский · проза · повторы.
@@ -20,8 +20,8 @@
    **«только 2 сценария»** (числа завышены — с первым блоком напрямую не сравнивать).
 2. **Qwen-колонку** сравнивать только между собой (другая шкала строгости).
 3. **N** — сколько ответов судья выставила оценку; пустые ответы think-режима не оцениваются,
-   поэтому «Чисто 100 %» у Think может включать пустышки (см. `rp-quality-eval.md` §7).
-4. Итог по модели (все режимы, как в `models.md`): DTV2 4.55 · Schattenblume 4.55 · StyleTune 4.40 ·
+   поэтому «Чисто 100 %» у Think может включать пустышки (см. `docs\quality\rp-quality-eval.md` §7).
+4. Итог по модели (все режимы, как в `docs\models.md`): DTV2 4.55 · Schattenblume 4.55 · StyleTune 4.40 ·
    Giftige-Blume-v1 4.39 · Goetia 4.23 · Glistening 4.13.
 
 ---
@@ -67,7 +67,7 @@
 ### 2.3. Один судья (Qwen3.6), 2 сценария — мержи + базовые instruct-модели (2026-10-07)
 
 Отдельный срез: строгий судья прогнан и по мержам, и по базовым моделям на одном наборе (2 сценария),
-чтобы шкала совпала. **NoThink.** Подробности и оговорки — `docs\base-models-rp-eval.md` §4.
+чтобы шкала совпала. **NoThink.** Подробности и оговорки — `docs\quality\base-models-rp-eval.md` §4.
 
 | № | Модель | RP (Qwen, 2 сц.) | N | Заметка |
 | ---: | --- | ---: | ---: | --- |
@@ -95,17 +95,17 @@
 - **Быстрые варианты** — StyleTune-26B (~63–66 t/s), Goetia-26B-A4B (~73 t/s), Glistening-NoThink (~23 t/s).
 - **Базовые instruct-модели** (Gemma-4-26B-A4B-it, Qwen3.6-35B-A3B, Qwen3.8-27B) — это baseline, не
   RP-модели; в рейтинг не выносим. Базовая Gemma-26B на скрине конкурентоспособна, базовые Qwen слабы
-  (`docs\base-models-rp-eval.md`).
+  (`docs\quality\base-models-rp-eval.md`).
 
 > Это наши измерения, а не вкусовой рейтинг. Итоговый выбор «под себя» (характер, стиль, ERP) —
 > за пользователем; здесь только то, что подтверждено харнессом и судьями.
 
 ## 4. Ссылки
 
-- Методика, цитаты, сырые баллы — `docs\rp-quality-eval.md`; реестр моделей — `docs\models.md`.
-- Базовые instruct-модели на RP (baseline) — `docs\base-models-rp-eval.md`.
-- Внешний ресёрч (CaliperBench, HF, Ateron) — `docs\rp-model-candidates.md`.
-- Русский / PPL / артефакты — `docs\sampling-quality.md`, `docs\why-ru-models.md`.
+- Методика, цитаты, сырые баллы — `docs\quality\rp-quality-eval.md`; реестр моделей — `docs\models.md`.
+- Базовые instruct-модели на RP (baseline) — `docs\quality\base-models-rp-eval.md`.
+- Внешний ресёрч (CaliperBench, HF, Ateron) — `docs\research\rp-model-candidates.md`.
+- Русский / PPL / артефакты — `docs\quality\sampling-quality.md`, `docs\research\why-ru-models.md`.
 - Сырые прогоны — `bench\quality\runs\rp_eval_*`; заключения судей — `bench\quality\runs\rp_judge_*`;
   агрегатор — `bench\quality\judge_score.py`.
 - Конфиги — `launch\b11382-cu124\*.bat`.

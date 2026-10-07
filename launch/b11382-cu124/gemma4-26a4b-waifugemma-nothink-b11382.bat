@@ -18,7 +18,7 @@ rem  MoE 26B-A4B, без MTP: без спекуляции 80-90 t/s (на RP у 
 rem  Русский тест: ЛУЧШИЙ пресет — карточка (temp1.0/min-p0.03) = 96% чистых.
 rem  Низкая T её ПОРТИТ: temp0.4 = 79%, temp0.7+DRY = 79% (BPE-склейки). Не понижать!
 rem  Шаблон встроенный (--jinja) отработал чисто, gemma4.jinja не требуется.
-rem  Подробности: docs\sampling-quality.md.
+rem  Подробности: docs\quality\sampling-quality.md.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\hiwaifu-research\WaifuGemma4-26b-a4b-v1-i1-GGUF\WaifuGemma4-26b-a4b-v1.i1-IQ3_XXS.gguf"

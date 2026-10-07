@@ -17,7 +17,7 @@ rem  Аналог gemma4-31b-dark-thoughts-nothink-b11382.bat, но с мышл�
 rem  --reasoning on включает thinking. --reasoning-effort low передаётся шаблону,
 rem  НО gemma4.jinja reasoning_effort игнорирует: реальный лимит длины мышления —
 rem  --reasoning-budget (по умолчанию -1, без ограничения).
-rem  MTP nmax5 pmin0.75, c=51200, KV q4_0. Подробности: docs\gemma-4-31b.md.
+rem  MTP nmax5 pmin0.75, c=51200, KV q4_0. Подробности: docs\models\gemma-4-31b.md.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\mradermacher\Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF\Gemma-4-Dark-Thoughts-V2-31B.i1-IQ3_XXS.gguf"

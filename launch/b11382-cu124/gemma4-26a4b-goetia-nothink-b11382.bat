@@ -17,7 +17,7 @@ rem  Мерж moe_della: ~28 доноров микровесами + lm_head/emb
 rem  Наш RP-балл (LLM-судья): 4.23; русский 100% (RU-safe) / 83% (пресет карточки).
 rem  Быстрый MoE ~73 t/s. Без спекуляции (совместимость MTP не проверялась).
 rem  Think в llama.cpp /completion НЕпригоден: модель не закрывает канал <channel|>.
-rem  Подробности: docs\models.md, docs\rp-quality-eval.md.
+rem  Подробности: docs\models.md, docs\quality\rp-quality-eval.md.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\mradermacher\Goetia-26B-A4B-v1.6-i1-GGUF\Goetia-26B-A4B-v1.6.i1-IQ3_XXS.gguf"

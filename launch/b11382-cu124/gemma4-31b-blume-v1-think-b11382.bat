@@ -18,7 +18,7 @@ rem  CaliperBench V3: Combined RP 69.3 (№1), RP 74.7 / ERP 67.7 / DarkRP 69.3.
 rem  Think без лимита (--reasoning-budget -1, --reasoning-effort default) — проверено:
 rem  пустых 2/18 (было 4/18 при бюджете 1024), но качество то же (Gemma 4.36 / Qwen 3.41 ≈ NoThink), повторы хуже.
 rem  RP-балл судей (Think, бюджет 1024): Gemma 4.53 (N=8) · Qwen 3.26 (N=13). Рабочий режим — NoThink.
-rem  Подробности: docs\models.md, docs\rp-quality-eval.md.
+rem  Подробности: docs\models.md, docs\quality\rp-quality-eval.md.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\mradermacher\Gemma-4-Giftige-Blume-31B-v1-i1-GGUF\Gemma-4-Giftige-Blume-31B-v1.i1-IQ3_XXS.gguf"

@@ -16,7 +16,7 @@ rem  Gemma-4-26B-A4B-it (base instruct, UD-IQ3_XXS, 10.63 GB) — RP baseline, �
 rem  Сэмплинг RU-safe temp0.6/min-p0.1/top-k0/top-p0.95; c=51200, KV q4_0, без спекуляции (нет MTP).
 rem  RP-скрин (2 сцены, судьи): лучшая из трёх базовых, живая проза и характер, RU 100 %.
 rem  Слабости: повторы метафор, скатывание в агрессию, быстро «сдаётся» в соблазне.
-rem  ВНИМАНИЕ: её высокий балл у gemma-судьи — самооценка; перекрёстно (Qwen-судья) ниже. См. docs\base-models-rp-eval.md.
+rem  ВНИМАНИЕ: её высокий балл у gemma-судьи — самооценка; перекрёстно (Qwen-судья) ниже. См. docs\quality\base-models-rp-eval.md.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\unsloth\gemma-4-26B-A4B-it-GGUF\gemma-4-26B-A4B-it-UD-IQ3_XXS.gguf"

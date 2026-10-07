@@ -2,13 +2,13 @@
 
 **Модель:** `Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf` (11.71 GB, MoE 35B / ~3B активных); MTP-голова внутри GGUF
 **Vision:** `mmproj-F16.gguf` (0.84 GB, подключается, не обязателен)
-**Стенд:** RTX 4060 Ti 16 GB; харнесс — `..\bench\bench.py`, данные — `..\bench\runs\results.jsonl`.
+**Стенд:** RTX 4060 Ti 16 GB; харнесс — `..\..\bench\bench.py`, данные — `..\..\bench\runs\results.jsonl`.
 
 > Реестр всего проверенного (не повторять) — `docs\researched.md`.
 
 **Готовые конфиги:**
-- чат (рекомендуется): `..\launch\b11382-cu124\qwen36-35b-a3b-mtp-b11382.bat`
-- редактор кода (DFlash+ngram): `..\launch\b11382-cu124\qwen36-35b-a3b-dflash-code.bat`
+- чат (рекомендуется): `..\..\launch\b11382-cu124\qwen36-35b-a3b-mtp-b11382.bat`
+- редактор кода (DFlash+ngram): `..\..\launch\b11382-cu124\qwen36-35b-a3b-dflash-code.bat`
 - старая сборка (10472) удалена — актуален только конфиг для b11382 выше
 
 ## Реалистичные задачи (b11382, `bench\requests_real.json`)
@@ -57,7 +57,7 @@
 | DSpark Q4/Q8 | 106/118 | 94/107 | 72/83 | медленнее MTP — не использовать |
 | **DFlash + ngram-mod, nmax6, c=131072** | 135.5 | **185.8** | **131.7** | «редактор кода»: +27…30 % на коде, −8 % на простом промпте |
 
-Подробности — `speculation-research.md`.
+Подробности — `docs\research\speculation-research.md`.
 
 ## Не проверено
 

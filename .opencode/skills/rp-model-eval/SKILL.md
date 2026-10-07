@@ -25,7 +25,7 @@ description: Прогон и оценка RP-качества локальной
 - Нужны баллы по 8 осям (ум, память, персонаж, инструкция, инициатива, русский, проза, повторы).
 
 Не для этого скила: чистая скорость/конфиг запуска (это `LLM Launch Tuner`), русский без RP
-(`docs\sampling-quality.md`), подбор кандидатов на HF (`gemma4-ru-rp-researcher`).
+(`docs\quality\sampling-quality.md`), подбор кандидатов на HF (`gemma4-ru-rp-researcher`).
 
 ## Быстрый старт (одна команда)
 
@@ -92,7 +92,7 @@ Get-Content logs\rp_eval_<name>_<stamp>.log -Wait -Tail 40
 | `--log` | путь к единому логу прогона (по умолчанию `logs\rp_eval_<name>_<stamp>.log`) |
 
 Сэмплинг фиксирован: **RU-safe temp 0.6 / min-p 0.1 / top-k 0 / top-p 0.95** — чтобы баллы были
-сравнимы с уже прогнанными моделями (`docs\models.md`, `docs\rp-quality-eval.md`).
+сравнимы с уже прогнанными моделями (`docs\models.md`, `docs\quality\rp-quality-eval.md`).
 
 ## Судьи и их ограничение
 
@@ -133,7 +133,7 @@ Get-Content logs\rp_eval_<name>_<stamp>.log -Wait -Tail 40
 1. `docs\researched.md` — строка в разделе «Качество RP (LLM-судья)»: что проверяли, вердикт, ссылка.
 2. `docs\models.md` — строка в «Протестированные» или «Кандидаты»; для базовых/не-RP моделей —
    пометка, что RP мерили.
-3. Лог/раздел с числами — `docs\rp-quality-eval.md` (новый подраздел) или отдельный `docs\<модель>.md`.
+3. Лог/раздел с числами — `docs\quality\rp-quality-eval.md` (новый подраздел) или отдельный `docs\<модель>.md`.
 4. Для новой запущенной модели — `.bat` в `launch\b11382-cu124\` (think и nothink, если умеет оба).
 
 См. `references/pipeline.md` — полная методика, устройство харнесса и формат suite.

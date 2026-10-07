@@ -17,7 +17,7 @@ rem  3-фазный merge; финал della_linear на gemma-4-31B-it (вес 0
 rem  CaliperBench V3: Combined RP 69.3 (№1 на всей доске), RP 74.7 / ERP 67.7 / DarkRP 69.3.
 rem  Замена StyleSwap (та же база без прививки StyleTune).
 rem  RP-балл судей (NoThink, полный набор): Gemma 4.33 · Qwen 3.35 — выше DTV2, лучшая инициатива (4.0).
-rem  Подробности: docs\models.md, docs\rp-quality-eval.md.
+rem  Подробности: docs\models.md, docs\quality\rp-quality-eval.md.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\mradermacher\Gemma-4-Giftige-Blume-31B-v1-i1-GGUF\Gemma-4-Giftige-Blume-31B-v1.i1-IQ3_XXS.gguf"

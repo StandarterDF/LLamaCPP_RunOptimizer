@@ -17,7 +17,7 @@ rem  Мерж della_linear: scotoma-2 + Giftige-Blume-v1 + MeroMero-v2 + баз�
 rem  Наш RP-балл (LLM-судья): 4.55 (Think 4.59 / NoThink 4.52); русский 100%.
 rem  MTP nmax5 pmin0.75, c=51200, KV q4_0. Сэмплинг RU-safe: temp0.6 min-p0.1 top-k0.
 rem  Think возможен, но в нашем /completion иногда не закрывает канал (пустой ответ).
-rem  Подробности: docs\models.md, docs\rp-quality-eval.md.
+rem  Подробности: docs\models.md, docs\quality\rp-quality-eval.md.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\mradermacher\Schattenblume-31B-i1-GGUF\Schattenblume-31B.i1-IQ3_XXS.gguf"

@@ -15,7 +15,7 @@ rem ============================================================================
 rem  Gemma-4-26B-A4B Goetia v1.6 (Naphula, i1-IQ3_XXS, MoE) — RP, Thinking.
 rem  Мерж moe_della: ~28 доноров микровесами + lm_head/embed (Orion, Pantheon).
 rem  ВНИМАНИЕ: в llama.cpp /completion режим thinking НЕпригоден — модель не закрывает
-rem  канал <channel|>, и размышления смешиваются с ответом (см. docs\rp-quality-eval.md §7).
+rem  канал <channel|>, и размышления смешиваются с ответом (см. docs\quality\rp-quality-eval.md §7).
 rem  Конфиг оставлен для клиентов, умеющих парсить reasoning (chat-API / SillyTavern).
 rem  Для обычной работы берите gemma4-26a4b-goetia-nothink-b11382.bat (RP-балл 4.23, ~73 t/s).
 rem ============================================================================

@@ -15,7 +15,7 @@ rem ============================================================================
 rem  Gemma-4-31B Dark-Thoughts V2 (i1-IQ3_XXS, dense) — RP, NoThink.
 rem  MTP nmax5 pmin0.75, c=51200, KV q4_0. Мышление выключено (--reasoning off).
 rem  Think-вариант: gemma4-31b-dark-thoughts-think-b11382.bat.
-rem  Подробности: docs\gemma-4-31b.md.
+rem  Подробности: docs\models\gemma-4-31b.md.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\mradermacher\Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF\Gemma-4-Dark-Thoughts-V2-31B.i1-IQ3_XXS.gguf"

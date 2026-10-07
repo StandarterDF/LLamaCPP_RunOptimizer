@@ -18,7 +18,7 @@ rem  --reasoning on включает thinking. --reasoning-effort low перед
 rem  НО текущий gemma4.jinja reasoning_effort игнорирует: реальный лимит длины
 rem  мышления — флаг --reasoning-budget (по умолчанию -1, без ограничения).
 rem  Спекуляция: общий Gemma-4-31B MTP-assistant (nmax5 pmin0.75), c=51200.
-rem  Подробности и оговорки: docs\sampling-quality.md.
+rem  Подробности и оговорки: docs\quality\sampling-quality.md.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\mradermacher\Artemis-31B-v1.2-i1-GGUF\Artemis-31B-v1.2.i1-IQ3_XXS.gguf"

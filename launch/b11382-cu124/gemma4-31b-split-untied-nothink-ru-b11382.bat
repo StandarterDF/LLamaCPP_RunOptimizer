@@ -17,7 +17,7 @@ rem  Анти-артефакты: пониженная температура + 
 rem  Карточка (temp 1.0 / min-p 0.03) даёт ~25 % ответов с англ. вставками и
 rem  BPE-склейками (That, anтично); снижение temp до 0.4 даёт ~96 % чистых.
 rem  top-k (в т.ч. официальный 64) на русском ВРЕДИТ — растут склейки, поэтому
-rem  оставляем --top-k 0. Подробности и оговорки: docs\sampling-quality.md.
+rem  оставляем --top-k 0. Подробности и оговорки: docs\quality\sampling-quality.md.
 rem  Спекуляция: общий Gemma-4-31B MTP-assistant (nmax5 pmin0.75), c=51200, KV q4_0.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"

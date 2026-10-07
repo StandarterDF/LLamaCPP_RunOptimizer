@@ -18,7 +18,7 @@ rem  Карточка (temp1.0) и temp0.7+DRY дают 96%; temp0.4 - 92% (чу
 rem  Контекст 32k: 31B dense IQ3_XXS на 16 ГБ садится почти впритык (~16.0 ГБ
 rem  с MTP-драфтом), поэтому больше 32k не ставим без выгрузки слоёв.
 rem  Спекуляция: общий Gemma-4-31B MTP-assistant (nmax5 pmin0.75).
-rem  Подробности и оговорки: docs\sampling-quality.md.
+rem  Подробности и оговорки: docs\quality\sampling-quality.md.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\mradermacher\Artemis-31B-v1.2-i1-GGUF\Artemis-31B-v1.2.i1-IQ3_XXS.gguf"

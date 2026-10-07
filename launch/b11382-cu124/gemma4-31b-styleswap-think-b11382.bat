@@ -17,7 +17,7 @@ rem  StyleSwap: Giftige-Blume-v1 + StyleTune (tensor swap). Своей base НЕ
 rem  Наш RP-прогон Think: Чисто 78%, Cyr 99.0%, EN-стоп 0.22, TG 24.0 t/s.
 rem  RP-балл (2 судьи): Gemma 3.84 · Qwen 2.69 (русский 3.17/2.50) — для RU не берём.
 rem  Оговорка: think в llama.cpp может не закрывать <channel|> (пустой ответ) — как Goetia/StyleTune.
-rem  Подробности: docs\models.md, docs\rp-quality-eval.md.
+rem  Подробности: docs\models.md, docs\quality\rp-quality-eval.md.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\mradermacher\Giftige-Blume-31B-v1-StyleSwap-i1-GGUF\Giftige-Blume-31B-v1-StyleSwap.i1-IQ3_XXS.gguf"

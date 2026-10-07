@@ -17,7 +17,7 @@ rem  StyleSwap: Giftige-Blume-v1 + StyleTune (tensor swap). Своей base НЕ
 rem  Наш RP-прогон: Чисто 78%, Cyr 97.5%, EN-стоп 4.89 (англ. вставки!), TG 23.3 t/s.
 rem  RP-балл (2 судьи, полный набор): Gemma 3.64 · Qwen 2.64 — худший из проверенных; для RU НЕ берём.
 rem  Риск: англ. вставки, как у StyleTune-31B (RU 17-0%). Проверять русский отдельно.
-rem  Подробности: docs\models.md, docs\rp-quality-eval.md.
+rem  Подробности: docs\models.md, docs\quality\rp-quality-eval.md.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\mradermacher\Giftige-Blume-31B-v1-StyleSwap-i1-GGUF\Giftige-Blume-31B-v1-StyleSwap.i1-IQ3_XXS.gguf"

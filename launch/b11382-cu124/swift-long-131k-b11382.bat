@@ -13,7 +13,7 @@ set "LOG=%LOGDIR%\%~n0_%TS%.log"
 echo Log: %LOG%
 rem ============================================================================
 rem  Swift-1.5 (IQ2_S-mtp) — b11382: длинный контекст 131072, MTP nm3 pmin0.7.
-rem  (перенесено из launch\swift-long-131k.bat со старой сборки 10472)
+rem  (перенесено из старого конфига swift-long-131k.bat со старой сборки 10472)
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\ukisai\Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF\Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ2_S-mtp.gguf"

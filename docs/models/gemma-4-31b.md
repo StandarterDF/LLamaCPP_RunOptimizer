@@ -2,15 +2,15 @@
 
 **Модель:** `Gemma-4-Dark-Thoughts-V2-31B.i1-IQ3_XXS.gguf` (11.25 GB, dense 31B)
 **Драфт:** `gemma-4-31B-it-assistant.Q4_K_M.gguf` (0.33 GB) + `--spec-type draft-mtp`
-**Стенд:** RTX 4060 Ti 16 GB, Ryzen 7 5700X, 32 GB RAM; харнесс — `..\bench\bench.py`.
+**Стенд:** RTX 4060 Ti 16 GB, Ryzen 7 5700X, 32 GB RAM; харнесс — `..\..\bench\bench.py`.
 
 > Реестр всего проверенного (не повторять) — `docs\researched.md`.
 Методика: фиксированные промпты/seed, `cache_prompt: false`, 3 реальные задачи через шаблон модели,
-данные — `..\bench\runs\results.jsonl`. Обозначения: TG — генерация (t/s), PP — обработка промпта.
+данные — `..\..\bench\runs\results.jsonl`. Обозначения: TG — генерация (t/s), PP — обработка промпта.
 
 **Готовые конфиги (b11382):**
-- no-think (рекомендуется, числа ниже): `..\launch\b11382-cu124\gemma4-31b-dark-thoughts-nothink-b11382.bat`
-- thinking: `..\launch\b11382-cu124\gemma4-31b-dark-thoughts-think-b11382.bat`
+- no-think (рекомендуется, числа ниже): `..\..\launch\b11382-cu124\gemma4-31b-dark-thoughts-nothink-b11382.bat`
+- thinking: `..\..\launch\b11382-cu124\gemma4-31b-dark-thoughts-think-b11382.bat`
 - старая сборка (10472) удалена — актуальны только конфиги для b11382 выше
 
 ## Реалистичные задачи (b11382, `bench\requests_real.json`)
@@ -62,7 +62,7 @@
 | DSpark Q4_K_M | 14.5 | 13.0 | 9.7 | не использовать |
 | DFlash Q6_K, nmax15 | 50.8 | **75.8** | 27.3 | только под рефакторинг/копирование (+43 % на повторах, −34 % на новом коде) |
 
-Подробности — `speculation-research.md`. Для DFlash-профиля возьмите команду оттуда; в репозитории
+Подробности — `docs\research\speculation-research.md`. Для DFlash-профиля возьмите команду оттуда; в репозитории
 готового `.bat` для 31B нет из-за смешанного результата.
 
 ## Не проверено

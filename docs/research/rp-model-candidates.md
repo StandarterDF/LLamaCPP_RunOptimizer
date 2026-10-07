@@ -1,7 +1,7 @@
 # RP-модели: внешний ресёрч (сообщество и HF), срез 2026-10-05
 
 Сводка по итогам двух Space Bunny-агентов (Playwright по Reddit; fetch по Hugging Face).
-Наши собственные замеры — в `docs\sampling-quality.md`. Здесь только **внешние** источники;
+Наши собственные замеры — в `docs\quality\sampling-quality.md`. Здесь только **внешние** источники;
 где вывод, а не цитата — помечено.
 
 ## 0. Методика и ограничения
@@ -60,7 +60,7 @@ logit-ban, а не файнтюном.
 | Artemis 31B v1.2 | Gemma-4-31B | «peak» в свежем мега-треде; лидер англ. RP по CaliperBench (RP #9/31B); длинные монологи — минус | ⚠️ наш тест: 92–96 % (редкие BPE-склейки), на русском не выделяется | [TheDrummer](https://huggingface.co/TheDrummer/Artemis-31B-v1.2) |
 | G4-MeroMero-v2 31B | Gemma-4-31B | топ-3 RP-финтюнов у iamvikingcore | ❓ | [zerofata](https://huggingface.co/zerofata/G4-MeroMero-v2-31B) |
 | Orion 26B-A4B v1.1 | Gemma-4-26B-A4B | 50 likes, GGUF у bartowski | ❌/❓ | [TheDrummer](https://huggingface.co/TheDrummer/Orion-26B-A4B-v1.1) |
-| Split-Untied 31B | Gemma-4-31B | — | ❌ «not suitable at all for languages other than English» | `docs\gemma-4-31b-rp-merges.md` |
+| Split-Untied 31B | Gemma-4-31B | — | ❌ «not suitable at all for languages other than English» | `docs\models\gemma-4-31b-rp-merges.md` |
 
 ## 3. Русский язык — что реально есть
 
@@ -141,7 +141,7 @@ logit-ban, а не файнтюном.
 
 - Реальное качество русского ни у одной модели, кроме наших замеров, не измерялось.
 - WaifuGemma4 на стенде **проверена** (96 % на карточке, ~85 t/s; низкая T портит) — см. §3 и
-  `docs\sampling-quality.md` §5.2.
+  `docs\quality\sampling-quality.md` §5.2.
 - **На стенде осталось проверить (если понадобится):** (а) русский на Split-Untied при более высоком
   кванте (отделить вклад квантизации от мержа); (б) thinking vs non-thinking на одном Split-Untied
   (канал reasoning может утекать в английский); (в) StyleTune-26B как контроль: если RU на нём чище,
@@ -170,7 +170,7 @@ logit-ban, а не файнтюном.
 MeroMero V2 — тяжёлый SFT→SLERP→GRPO: распределение обостряется, мультиязычное подпространство
 размывается. В DTV2 его дельты **прорежены (density 0.5)** и смешаны со вторым донором, а сверху
 «отполированы» Scotoma → большая часть весов остаётся базой Gemma. Косвенно бьётся с нашим PPL:
-DTV2 (мерж) = 66, Artemis (файнтюн) = 983 на одном кванте (`docs\why-ru-models.md` §3).
+DTV2 (мерж) = 66, Artemis (файнтюн) = 983 на одном кванте (`docs\research\why-ru-models.md` §3).
 
 **Другие модели Ateron (Gemma-4):**
 
@@ -186,7 +186,7 @@ DTV2 (мерж) = 66, Artemis (файнтюн) = 983 на одном квант�
 
 **Кандидаты на стенд (в порядке приоритета):** MoonGem-31B (другой рецепт, «research») и
 Dark-Thoughts V1 (прямое сравнение «поумнела ли V2»); плюс контроль гипотезы — `G4-MeroMero-v2-31B-heretic`
-в одиночку против DTV2. Проверять тем же RP-харнессом (`docs\rp-quality-eval.md`).
+в одиночку против DTV2. Проверять тем же RP-харнессом (`docs\quality\rp-quality-eval.md`).
 
 Источник: карточки и raw-README моделей на HF (`huggingface.co/Ateron/<модель>/raw/main/README.md`),
 список моделей — `huggingface.co/Ateron/models`, кванты — поиск HF по `Ateron` + `gguf`.
@@ -196,7 +196,7 @@ Dark-Thoughts V1 (прямое сравнение «поумнела ли V2»);
 Разбор дампа `downloads\caliperbench-2026-10-01.json` (590 моделей). Признак мержа — поле
 `merge_parents` (список доноров); флаг `is_merge` ненадёжен (`is_finetune` стоит почти у всех).
 CaliperBench **англоязычный, язык не измеряет** — это генератор кандидатов, вердикт даёт наш
-RP-харнесс (`docs\rp-quality-eval.md`). Жирным — есть GGUF под 16 ГБ (IQ3-класс).
+RP-харнесс (`docs\quality\rp-quality-eval.md`). Жирным — есть GGUF под 16 ГБ (IQ3-класс).
 
 | Модель (автор) | rp_v3¹ | Доноры (кратко) | GGUF | Теория² |
 | --- | ---: | --- | --- | --- |
@@ -223,7 +223,7 @@ RP-харнесс (`docs\rp-quality-eval.md`). Жирным — есть GGUF п
 - *StyleSwap/`lm_head`-прививка* (Giftige-Blume-StyleSwap) — предсказание: язык базы почти не тронут.
 
 **Контр-аргумент, который надо помнить.** CaliperBench ставит Artemis-31B-v1.2 высоко (rp 73.7), а наш
-русский RP-прогон показал у него деградацию в кашу (`docs\rp-quality-eval.md` §5). То есть английский
+русский RP-прогон показал у него деградацию в кашу (`docs\quality\rp-quality-eval.md` §5). То есть английский
 лидерборд и русская связность расходятся — решать только нашим харнессом.
 
 **Рекомендуемая первая волна (есть GGUF, разброс по методу):** Goetia-26B-A4B (быстрый MoE, якорный),
@@ -293,7 +293,7 @@ Glistening-Gem-31B-v2.1 (якорный), Schattenblume-31B (та же «сем�
   `Isometry-RP` (RP 5.7).
 
 Источники: CaliperBench V3/V2 (срез 2026-10-06, `downloads\CalibreV3.csv`); HF-метаданные и рецепты —
-`huggingface.co` (карточки моделей); наши замеры — `sampling-quality.md`, `why-ru-models.md`.
+`huggingface.co` (карточки моделей); наши замеры — `docs\quality\sampling-quality.md`, `docs\research\why-ru-models.md`.
 
 ### ERP/DRP-специалисты и MoonGem (свежий V3, non-think, Gemma-4)
 
@@ -314,3 +314,37 @@ StyleTune (68.5, но русский 17–0 %) и Dark-Gemistry (67.8, RP пад
 а RP-специалист (RP 77.1, но ERP 63.1 / DarkRP 64.5 ниже DTV2).
 Рычаги остаются только флейворные: «ум» в семье — Giftige-Blume v2; альтернативный чистый DRP — Twisted
 Cyclone; DRP-экстрим — Gembrain-X (heretic, русский — лотерея).
+
+## 10. База без файнтюна: base-31B vs heretic-31B (анализ, 2026-10-07)
+
+**Контекст.** Базовая `Gemma-4-26B-A4B-it` на нашем харнессе идёт вровень с mid-tier мержами
+(`docs\quality\base-models-rp-eval.md` §4.2: 3.28 у строгого судьи). Возник вопрос: не лучше ли «просто база» —
+и, в частности, `unsloth/gemma-4-31B-it-GGUF` (штатная база 31B dense) и
+`mradermacher/gemma-4-31B-it-heretic-GGUF` (расцензуренная/abliterated база 31B).
+
+**Что это за модели.**
+- `unsloth/gemma-4-31B-it-GGUF` — кванты **штатной инструкт-базы** 31B dense (30.7B, 60 слоёв,
+  256K контекст). Ничего RP-специфичного. Под 16 ГБ: `UD-IQ3_XXS` 11.8 ГБ, `Q3_K_XL` 15.4 (в упор).
+- `mradermacher/gemma-4-31B-it-heretic-GGUF` (исходник `coder3101/gemma-4-31B-it-heretic`) — **не тюн**,
+  а abliteration той же базы: Heretic v1.2.0, Arbitrary-Rank Ablation (ARA) с row-norm preservation
+  (слои 1–59, `preserve_good_behavior_weight 0.84`). Карточка: **KL 0.0434**, отказов **15/100**
+  против **99/100** у базы, тег `language: en`. Есть imatrix-репо `...-heretic-i1-GGUF`
+  (`i1-IQ3_XXS` 11.25 ГБ — та же полка, что у DTV2).
+
+**Разбор трёх гипотез** (все — не проверены нашим стендом):
+1. **«Крутой квант для 26B-A4B».** Влияние кванта на русский у нас первого порядка
+   (`docs\research\why-ru-models.md` §3), но RP-качество MoE через `llama-perplexity` не снять. Ожидание — слабый
+   плюс. Файл под 16 ГБ с запасом: `UD-IQ4_XS` 12.66 ГБ.
+2. **«Просто база 31B».** Объективно сильнее 26B по бенчмаркам и **существенно по длинному контексту**
+   (MRCR-128k: 66.4 % против 44.1 %), но dense → **~16.5 t/s без спекуляции, ~23 с MTP** против ~55
+   у 26B-A4B. В 16 ГБ живёт на том же `IQ3_XXS`. Самый интересный открытый вопрос.
+3. **«Расцензуренная (heretic)».** Слабейшая гипотеза. Отказ у базы Gemma — на вредных промптах, **не на
+   RP/ERP** (наш же замер: в соблазне база *спешит согласиться*, а не отказывает). Abliteration
+   RP-способностей не добавляет, зато правит веса (KL 0.0434), калиброван на англ. refusal-направлениях
+   (риск для русского, `§5.2 п.4`, `§9`) и зажат квантом (Q3_K_S / i1-Q3_K_M).
+
+**План проверки** (при разрешении пользователя; всё в `downloads/`): снять базу-31B и heretic-31B на
+**одном** кванте `i1-IQ3_XXS`/`UD-IQ3_XXS` и прогнать RP-скрином (`bench\rp_quality.py`, 2 сцены,
+nothink) с драфтом `gemma-4-31B-it-assistant.Q4_K_M.gguf`; лидера — полным набором. Отдельный тест
+кванта — base-26B `UD-IQ3_XXS` vs `UD-IQ4_XS`. **Статус: не проверено** (2026-10-07, по решению
+пользователя загрузки отложены).
