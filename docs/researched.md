@@ -136,7 +136,7 @@
 - `docs\gemma-4-31b-rp-merges.md` (Split-Untied-31B, G4-MeroMero-v2-31B-heretic)
 - `docs\base-models-rp-eval.md` (базовые instruct-модели на RP: Gemma-4-26B-A4B-it, Qwen3.6-35B-A3B, Qwen3.8-27B)
 - Кросс-модельные: `docs\speculation-research.md`, `docs\context-infinite-chat.md`, `docs\why-ru-models.md`
-- Сырые данные: `bench\runs\results.jsonl`, наборы — `bench\suites\` (`real_*`, `probe_*`, `tune_*`, `audit_*`)
+- Сырые данные: `bench\runs\results.jsonl`, наборы — `bench\suites\` (`real\`, `probe\`, `tune\`, `audit\`, `spec\`, `once\`)
 
 ## 10. Качество RP (LLM-судья) — 2026-10-06
 

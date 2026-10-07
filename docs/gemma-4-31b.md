@@ -28,7 +28,7 @@
 
 **Вывод:** MTP здесь даёт ×1.4–2.8, но на RP dense-31B упирается в ~23 t/s — это и есть «25–30» из ST.
 Для RP берите MoE: Qwen3.6 с MTP (82 t/s) или Gemma-26B без MTP (63 t/s).
-Набор: `bench\suites\real_gemma31.json`.
+Набор: `bench\suites\real\real_gemma31.json`.
 
 ## Серия a: границы конфига (build 10472, c=51200, KV q4_0, fa on)
 

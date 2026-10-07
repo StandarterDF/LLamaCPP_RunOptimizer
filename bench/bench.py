@@ -5,7 +5,7 @@
 на существующем билде <папка llama.cpp> (build 10472).
 
 Только стандартная библиотека. Запуск:
-  .venv\\Scripts\\python.exe bench\\bench.py bench\\suites\\baseline.json
+  .venv\\Scripts\\python.exe bench\\bench.py bench\\suites\\once\\baseline.json
 
 Пути в suite.json можно задавать плейсхолдерами ${LLAMA_SERVER}, ${LLAMA_DIR},
 ${MODELS_DIR}, ${PROJECT_DIR} — они раскрываются из bench/env.local.json (образец: env.example.json).

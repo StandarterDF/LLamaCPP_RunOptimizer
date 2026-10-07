@@ -25,14 +25,14 @@
 | Суммаризация | 109.4 (77 %) | 75.3 |
 
 **Вывод:** MTP даёт ×1.1–1.6, и — в отличие от Gemma-26B — полезен и на RP (голова угадывает прозу).
-**Лучший RP на 16 ГБ: 82 t/s.** Набор: `bench\suites\real_qwen36.json`.
+**Лучший RP на 16 ГБ: 82 t/s.** Набор: `bench\suites\real\real_qwen36.json`.
 
 **Код (реалистичный рефакторинг):** `DFlash nmax6 + ngram-mod` даёт **163** против 138 у MTP (+18 %) и
-**164** против 114 на новом коде (+44 %), на RP не хуже — `bench\suites\tune_q36_dflash.json`.
+**164** против 114 на новом коде (+44 %), на RP не хуже — `bench\suites\tune\tune_q36_dflash.json`.
 **Глубина:** TG ~103 t/s на 8k → 86 на 32k → 73 на 64k; `cache_prompt: true` в многотирне снижает PP
 с ~7 400 до ~110 токенов на ход. KV: `q4_0` быстрее `q8_0` на 10–16 %.
 **Ширина драфта:** `nmax3 ≈ nmax5 > nmax8` (mtp8 на RP падает до 64.8); для кода `nmax3` даёт выше
-принятие — `bench\suites\audit_qwen_new.json`.
+принятие — `bench\suites\audit\audit_qwen_new.json`.
 
 ## Серия c: драфт, vision, контекст (build 10472)
 

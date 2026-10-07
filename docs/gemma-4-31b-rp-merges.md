@@ -13,7 +13,7 @@
 **Стенд:** RTX 4060 Ti 16 ГБ, Ryzen 7 5700X, 32 ГБ, Windows; сборка b11382 (CUDA 12.4).
 **Методика:** `bench\requests_real.json` (RP/чат/код/матем/суммаризация), `cache_prompt: false`, seed 42;
 сырые данные — `bench\runs\results.jsonl` (тесты `real_split_*`, `real_meromero_*`), наборы —
-`bench\suites\real_split_untied.json`, `bench\suites\real_meromero.json`.
+`bench\suites\real\real_split_untied.json`, `bench\suites\real\real_meromero.json`.
 
 **Готовые конфиги (b11382):**
 - Split-Untied: `..\launch\b11382-cu124\gemma4-31b-split-untied-nothink-b11382.bat` (NoThink),

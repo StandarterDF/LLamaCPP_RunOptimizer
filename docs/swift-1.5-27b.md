@@ -20,7 +20,7 @@ llama.cpp (build 10472), без скачиваний.
 | Суммаризация | 40.5 (73 %) | 21.4 |
 
 **Вывод:** MTP даёт ×1.3–1.9 и полезен на всех задачах. На RP dense-27B упирается в ~28 t/s;
-для RP лучше MoE (Qwen3.6 — 82 t/s). Набор: `bench\suites\real_swift.json`.
+для RP лучше MoE (Qwen3.6 — 82 t/s). Набор: `bench\suites\real\real_swift.json`.
 
 ## 1. Что запускаем
 

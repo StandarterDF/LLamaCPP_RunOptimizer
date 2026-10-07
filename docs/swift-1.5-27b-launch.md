@@ -88,9 +88,9 @@
 
 ```powershell
 cd <папка проекта>
-.\.venv\Scripts\python.exe bench\bench.py bench\suites\final1.json          # отбор MTP
-.\.venv\Scripts\python.exe bench\bench.py bench\suites\tuning2.json         # KV/FA/загрузка/потоки
-.\.venv\Scripts\python.exe bench\bench.py bench\suites\quality1.json        # режимы мышления
+.\.venv\Scripts\python.exe bench\bench.py bench\suites\once\final1.json          # отбор MTP
+.\.venv\Scripts\python.exe bench\bench.py bench\suites\once\tuning2.json         # KV/FA/загрузка/потоки
+.\.venv\Scripts\python.exe bench\bench.py bench\suites\once\quality1.json        # режимы мышления
 .\.venv\Scripts\python.exe bench\report.py                                  # сводка
 ```
 

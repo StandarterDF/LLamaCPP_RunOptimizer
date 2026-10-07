@@ -250,7 +250,7 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 ```powershell
 cd <папка проекта>
 # один раз: скопировать bench\env.example.json -> bench\env.local.json и указать свои пути
-.\.venv\Scripts\python.exe bench\bench.py bench\suites\<набор>.json   # наборы в bench\suites\
+.\.venv\Scripts\python.exe bench\bench.py bench\suites\real\real_qwen36.json   # наборы в bench\suites\<группа>\
 .\.venv\Scripts\python.exe bench\report.py                            # сводная таблица
 
 # RP-качество (скрин 2 сценария → судьи → баллы) одной командой; путь модели — в ОДИНАРНЫХ кавычках
@@ -265,7 +265,7 @@ cd <папка проекта>
 (заменяет личные пути на `<...>` в артефактах прогонов).
 
 Реалистичный датасет — `bench\requests_real.json` (RP/чат/код/математика/суммаризация); наборы
-`bench\suites\real_*.json` сравнивают конфиги на нём. Повторяющийся «тест-заполнитель» (`target`)
+`bench\suites\real\*.json` сравнивают конфиги на нём. Повторяющийся «тест-заполнитель» (`target`)
 оставлен только для стресс-тестов спекуляции и в README не используется.
 
 Правила работы с репозиторием — в `AGENTS.md`: использовать локальные файлы, скачивать только в `downloads\`.

@@ -213,7 +213,7 @@ PR #26275 (SpecForge-совместимость DSpark) **влит 17.08.2026**.
 
 ## 12. Реалистичный A/B сборок и ширина драфта (Qwen3.6, 04.10.2026)
 
-Набор `requests_real.json` (RP/чат/код/математика/суммаризация), MTP, `bench\suites\audit_qwen_*.json`.
+Набор `requests_real.json` (RP/чат/код/математика/суммаризация), MTP, `bench\suites\audit\audit_qwen_*.json`.
 
 | Конфиг | RP | Чат | Код | Матем | Сумм |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -239,7 +239,7 @@ PR #26275 (SpecForge-совместимость DSpark) **влит 17.08.2026**.
 
 Источники: `docs/speculative.md` и `tools/server/README.md` (llama.cpp), GitHub discussion #25198,
 PR #27210 (adaptive MTP), статья «Why MTP doesn't speed up your llama.cpp inference». Наборы —
-`bench\suites\tune_*.json`.
+`bench\suites\tune\*.json`.
 
 ### 10.1. `--spec-draft-n-max` + `--spec-draft-p-min` (приём из #25198)
 
