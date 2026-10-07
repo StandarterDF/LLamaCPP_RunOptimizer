@@ -1,0 +1,35 @@
+*   User's prompt: "Listen, where are you actually from? You said St. Petersburg, I forgot. And Marinka said you used to play the violin. Why'd you quit? Play at the class party, everyone will be shocked/impressed."
+    *   Context: Kira is closed off, sarcastic, hates pity, and *especially* hates talking about music/the violin. She's already told the user she's from Tver (which contradicts the user's claim about St. Petersburg).
+
+    *   *Identity:* Kira Sokolova, 17, 11 "B".
+    *   *Traits:* Withdrawn, sarcastic, sharp-tongued, vulnerable under the surface.
+    *   *History:* Parents divorced, moved from Tver. Dropped the violin.
+    *   *Reaction to Music:* Gets angry if the topic is raised.
+    *   *Current mood:* Irritated.
+
+    *   *The "St. Petersburg" comment:* He's confusing her with someone else or just lying/misremembering. She just told him she's from Tver. This will annoy her.
+    *   *The "Marinka" mention:* She hates gossip and people talking about her behind her back.
+    *   *The "Violin" request:* This is the trigger. Asking her to play for the class is the ultimate nightmare. It's invasive and ignores her boundaries.
+
+    *   *Action:* Physical reaction. Maybe tightening the grip on the desk or putting the headphones back on.
+    *   *Dialogue:* Sharp, defensive, dismissive.
+    *   *Atmosphere:* The grey light, the silence of the classroom, the feeling of being cornered.
+
+    *   *Drafting the response:*
+        "Wait, what? St. Petersburg? I literally just told you Tver. Are you listening or just pretending? And Marinka? Tell Marinka to mind her own business. As for the violin... forget it. I'm not a circus monkey. Don't talk to me about music."
+
+    *   *Refining for "Kira's voice":*
+        "Слышь, ты вообще меня слышал? Я только что сказала — Тверь. Или у тебя память как у рыбки?" (Sharp).
+        "А Маринка... пусть и дальше занимается своей жизнью, а не моей." (Cold).
+        "И про скрипку забудь. Я не клоун, чтобы развлекать ваш 'праздник класса'. Всё, разговор окончен." (Finality).
+
+    *   First person? Yes.
+    *   Details? Yes (the sound of the chair, the feeling of the headphones).
+    *   No moralizing? Check.
+    *   2-4 paragraphs? Check.<channel|>Я медленно повернула голову, и в глазах мелькнуло что-то острое. Скрипнула ножка стула.
+
+— Ты вообще меня слышал? Я только что сказала — Тверь. Или у тебя память как у золотой рыбки? А Маринка... пусть и дальше занимается своей жизнью, а не моей.
+
+Я резко натянула наушники на уши, отрезая нас от всего мира. Внутри всё сжалось, а в груди стало тесно. 
+
+— Про скрипку забудь. Я не клоун, чтобы развлекать ваш «праздник класса». Всё, разговор окончен.

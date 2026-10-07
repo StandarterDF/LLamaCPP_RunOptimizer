@@ -2,8 +2,9 @@
 
 **Дата:** 2026-10-06 (обновлено 2026-10-07). **Стенд:** RTX 4060 Ti 16 ГБ, Ryzen 7 5700X, 32 ГБ, Windows;
 сборка b11382 (CUDA 12.4). **Модели:** Dark-Thoughts V2, Schattenblume, StyleTune-26B, Goetia-26B,
-Artemis-31B-v1.2, а также полным набором — Giftige-Blume-v1, Glistening-Gem-v2.1, Giftige-Blume-StyleSwap;
-отдельно — **базовые instruct-модели** (Gemma-4-26B-A4B-it, Qwen3.6-35B-A3B, Qwen3.8-27B, см. `docs\quality\base-models-rp-eval.md`).
+Artemis-31B-v1.2, а также Полным набором — Giftige-Blume-v1, Glistening-Gem-v2.1, Giftige-Blume-StyleSwap;
+отдельно — **базовые instruct-модели** (Gemma-4-26B-A4B-it, Qwen3.6-35B-A3B, Qwen3.8-27B, Gemma-4-31B-it,
+см. `docs\quality\base-models-rp-eval.md`).
 **Судьи:** `gemma-4-26B-A4B-it-UD-IQ3_XXS` (мягче) и `Qwen3.6-35B-A3B` MXFP4 (строже) — см. §5.5–5.7.
 
 > Зачем: «Чисто %» и скорость не показывают **«ум»** модели в роли. Модель может писать чисто
@@ -295,6 +296,44 @@ Qwen3.6-35B-A3B, Qwen3.8-27B (скрин 2 сценария, nothink/think, об
 (6 сценариев) для базовой Gemma-26B** (прошла скрин как лидер): у строгого судьи **3.28** (N=18) —
 вровень со Schattenblume (3.28) и выше DTV2 (3.11); у gemma-судьи 4.60, но это самооценка.
 Разбор — `docs\quality\base-models-rp-eval.md` §4.2.
+
+### 5.9. База + abliteration: Gemma-4-31B-it-heretic-ARA (2026-10-07)
+
+Проверка гипотезы §10 `docs\research\rp-model-candidates.md` №3 — «расцензуренная база 31B»:
+`mradermacher/gemma-4-31b-it-heretic-ara-i1-GGUF` (`i1-IQ3_XXS`, 11.25 ГБ) — Heretic v1.2.0 **ARA**
+(abliteration) штатной `gemma-4-31B-it`, **не RP-тюн**. Скрин 2 сценария, nothink/think, RU-safe,
+оба судьи (не самооценка). Лог `logs\rp_eval_heretic31_ara_20261007-094715.log`. Разбор — в
+`docs\quality\base-models-rp-eval.md` §4.3.
+
+| Судья | NoThink | Think | Средний (N=12) |
+| --- | ---: | ---: | ---: |
+| gemma-26B (мягче) | 4.35 | 4.52 | **4.44** |
+| Qwen3.6 (строже) | 3.46 | 3.58 | **3.52** |
+
+Объективно: Чисто **83 % (No)** / **100 % (Think)**; TG **24.7** / **31.3** t/s; **think не сломался**
+(канал закрывается — редкость для Gemma-31B в llama.cpp). Вердикт: **середина таблицы, не апгрейд** —
+память фактов отличная, но голос персонажа слабый («литературщина» в think, эхо/мета-лексика в
+nothink), оба судьи ловят **«fast-track» в соблазне**; у строгого судьи вровень с Goetia (3.35) и ниже
+base Gemma-26B (3.56). **Abliteration RP-способностей не добавляет.**
+
+### 5.10. Штатная база Gemma-4-31B-it (2026-10-07)
+
+Прямой пир heretic-ARA (§5.9) — **чистая** штатная `gemma-4-31B-it` (`unsloth ... UD-IQ3_XXS`, 11.84 ГБ),
+без abliteration и без RP-тюна. Скрин 2 сценария, nothink/think, RU-safe, оба судьи (не самооценка;
+но gemma-судья — родственная Gemma-family 26B-A4B, к 31B-базе мягче). Лог
+`logs\rp_eval_base_gemma31_20261007-102534.log`; разбор — `docs\quality\base-models-rp-eval.md` §4.4.
+
+| Судья | NoThink | Think | Средний (N) |
+| --- | ---: | ---: | ---: |
+| gemma-26B (родств., мягче) | 4.60 | 4.38 | **4.51** (N=10) |
+| Qwen3.6 (строже) | 3.38 | 3.52 | **3.45** (N=12) |
+
+Объективно: Чисто **100 %** в обоих режимах; TG **18.5** (No) / **18.8** (Think) t/s; **think рабочий**
+(все 6 ответов непустые). Вердикт: **≈ heretic-ARA** (4.44/3.52) — **abliteration RP-ум не меняет**;
+у строгого судьи **персонаж 2.5–2.8, инициатива 2.5–2.7, паттерн-циклы** → baseline, не рабочая
+RP-модель; в NoThink чуть ниже base Gemma-26B (3.56 на том же скрине, §5.8). Конфиги —
+`launch\b11382-cu124\gemma4-31b\gemma4-31b-base-nothink-b11382.bat` и
+`launch\b11382-cu124\gemma4-31b\gemma4-31b-base-think-b11382.bat`.
 
 ## 6. Итоговый вердикт (наш, после проверки)
 

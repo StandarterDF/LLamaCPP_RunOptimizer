@@ -128,9 +128,11 @@
 - **Мержи Ateron** (Gemma-4): MoonGem-31B, Writers-31B-V2, Novelist-Eclipse-31B, Dark-Thoughts V1 —
   проверить (bartowski GGUF есть для части). Контроль гипотезы «мерж лечит файнтюн»:
   `G4-MeroMero-v2-31B-heretic` в одиночку vs DTV2 (тот же донор). См. `docs\research\rp-model-candidates.md`.
-- **«База без файнтюна»**: штатная база 31B (`unsloth/gemma-4-31B-it-GGUF`, `UD-IQ3_XXS`) и
-  `gemma-4-31B-it-heretic` (`i1-IQ3_XXS`) — тест «размер vs abliteration» без тюна; отдельно квант
-  base-26B `IQ4_XS` vs `IQ3_XXS`. Загрузки отложены (2026-10-07). Анализ и план — `docs\research\rp-model-candidates.md` §10.
+- **«База без файнтюна» (RP-скрин проверен, 2026-10-07):** штатная база 31B
+  (`unsloth/gemma-4-31B-it-GGUF`, `UD-IQ3_XXS`) — §10; abliteration того же размера
+  (`gemma-4-31b-it-heretic-ARA`, `i1-IQ3_XXS`) — §10. Вывод: **base-31B ≈ heretic-31B** (abliteration
+  RP не меняет), обе — baseline. Не мерили: квант base-26B `IQ4_XS` vs `IQ3_XXS`, PPL/скорость base-31B.
+  План — `docs\research\rp-model-candidates.md` §10.
 
 ## 9. Логи моделей (там все серии замеров)
 
@@ -168,6 +170,8 @@
 | **Базовые instruct-модели на RP** (Gemma-4-26B-A4B-it, Qwen3.6-35B-A3B, Qwen3.8-27B), скрин 2 сцены + полный набор (Gemma), оба судьи | ⚠️ Gemma-26B — лучшая из трёх и **пригодный baseline**: nothink 3.56 у строгого судьи на 2 сценах; **полный набор 3.28 (Qwen) — вровень со Schattenblume, выше DTV2**; Qwen3.6 (2.96) и Qwen3.8 (3.21) — на дне | `docs\quality\base-models-rp-eval.md` |
 | think у базовых моделей (llama.cpp) | ❌ нестабилен у всех трёх: Gemma-26B — утечка reasoning в канал (видимый ок), Qwen3.6 — незакрытый ` thinking` → пустой ответ (2/6), Qwen3.8 — reasoning простым текстом («Чисто» 33 %) | `docs\quality\base-models-rp-eval.md` §1 |
 | RP-файнтюн vs базовая instruct-модель | ⚠️ **не однозначно**: базовая Gemma-26B на полном наборе у строгого судьи вровень со Schattenblume (3.28) и выше DTV2 (3.11); базовые Qwen — на дне | `docs\quality\base-models-rp-eval.md` §4 |
+| **Gemma-4-31B-it heretic-ARA** (база + ARA-abliteration), скрин 2 сцены, 2 судьи | ⚠️ **середина, не апгрейд**: 4.44 (Gemma: Think 4.52 / No 4.35) · 3.52 (Qwen: 3.58 / 3.46); память фактов отличная, но голос персонажа слабый (**«fast-track» в соблазне**, литературщина/опечатки в think); **think рабочий**; abliteration RP-способностей не добавляет | `docs\quality\base-models-rp-eval.md` §4.3 |
+| **Gemma-4-31B-it (штатная база, без тюна/abliteration)**, скрин 2 сцены, 2 судьи | ⚠️ **baseline, не рабочая RP-модель**: 4.51 (Gemma, родств. судья: No 4.60 / Think 4.38) · 3.45 (Qwen: No 3.38 / Think 3.52); **≈ heretic-ARA** (abliteration RP не меняет); **think рабочий** (6/6 непустых); у строгого судьи персонаж 2.5–2.8, инициатива 2.5–2.7, паттерн-циклы; Чисто 100 %, TG 18.5/18.8 t/s | `docs\quality\base-models-rp-eval.md` §4.4 |
 
 ## 11. Отбор кандидатов: CaliperBench + HF (2026-10-06)
 

@@ -1,0 +1,46 @@
+Eva (26, red hair, green eyes, calm, observant, ironic, likes to tease).
+Coffee shop "Garnet", rain outside, closing time.
+The user invited her to his place (wine, vinyl, welcomes the cat).
+
+    *   Eva is observant and likes to tease.
+    *   She doesn't cross boundaries first, but she enjoys the game.
+    *   She's recently separated and moving on, finishing her thesis.
+    *   She likes being noticed.
+    *   The invitation is a bold move. She shouldn't just say "yes" instantly without some teasing/playfulness.
+
+    *   *Reaction to the invite:* It's a bit fast, but intriguing. She's not shy, but she likes to maintain control of the dynamic.
+    *   *The "vinyl" part:* A good hook.
+    *   *The "cat" part:* She's protective of Pumpkin.
+    *   *The "sleeping here" part:* Sarcastic response.
+
+    *   *Action:* She's still behind the counter, probably cleaning up or tidying.
+    *   *Dialogue:* Needs to be ironic and slightly flirty.
+    *   *Sensory details:* The smell of coffee/cinnamon, the sound of the rain.
+
+    *   *Draft 1:* "To your place? That's fast. I don't sleep here, obviously. But vinyl is a good argument. Let me finish closing up. But if Pumpkin scratches your sofa, it's on you." -> *Too simple.*
+
+    *   *Draft 2 (Adding Eva's flavor):* I arched an eyebrow. "Straight to the point. I don't sleep here, though sometimes it feels like it. Vinyl and wine... you know how to tempt a tired student. But Pumpkin is a critic. If the music is bad, he'll let you know." -> *Better.*
+
+    *   *Refining for the "Eva" persona:*
+        - "Straight to the point" (Directness).
+        - "I don't sleep here, but the coffee machine is a tempting bed" (Irony).
+        - "Vinyl is a strong argument" (Interest).
+        - "The cat's temper" (The Pumpkin factor).
+
+    *   First person? Yes.
+    *   Warm/Flirty/Subtext? Yes.
+    *   No explicit content? Yes.
+    *   2-3 paragraphs? Yes.
+
+    "Я приподняла бровь, глядя на тебя. Решительность — это неплохо, особенно когда за окном такая серость.
+
+    — Нет, я тут не ночую, хотя иногда кажется, что эта кофейня — мой единственный дом, — я усмехнулась и начала медленно снимать фартук. — Винил и вино... звучит как план, который сложно отклонить. Но предупреждаю: Тыква — идейный критик. Если пластинка будет плохая, он может и вцепиться в ноги.
+
+    Я обвела взглядом пустой зал и с тихим щелчком выключила свет.
+    — Дай мне пять минут собрать вещи, и я готова рискнуть."<channel|>Я приподняла бровь, глядя на тебя. Решительность — это неплохо, особенно когда за окном такая серость.
+
+— Нет, я тут не ночую, хотя иногда кажется, что эта кофейня — мой единственный дом, — я усмехнулась и начала медленно снимать фартук, открывая вид на серый свитер. — Винил и вино... звучит как план, который сложно отклонить. Но предупреждаю: Тыква — идейный критик. Если пластинка будет плохая, он может и вцепиться в ноги.
+
+Я обвела взглядом пустой зал и с тихим щелчком выключила основной свет, оставив только одну лампу над стойкой.
+
+— Дай мне пять минут собрать вещи, и я готова рискнуть. Только чур, вино наливаешь ты.

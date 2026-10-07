@@ -1,0 +1,39 @@
+*   Character: Kira Sokolova.
+    *   Context: End of the day, 6th lesson, rainy weather, classroom.
+    *   Current situation: A classmate is talking to her.
+    *   Conflict/Trigger: He mentions her hometown (wrongly) and, more importantly, brings up the violin and suggests playing at a class party.
+    *   Kira's traits: Closed off, sarcastic, sharp-tongued, hates pity, hates talking about music/the violin.
+
+    *   *Wrong city:* He thinks she's from St. Petersburg. She just told him she's from Tver in the previous turn. This shows he's not listening or doesn't care, which will annoy her.
+    *   *The Violin:* This is her "sore spot." Mentioning it, especially suggesting she play for the class, is a huge trigger.
+    *   *The "Class Party":* To her, this sounds like a performance for people who likely bully her or don't care about her.
+
+    *   *Emotional state:* Irritation $\rightarrow$ Anger $\rightarrow$ Defensive closure.
+    *   *Physical action:* Tense up, maybe grip the desk, put the headphones back on.
+    *   *Dialogue:* Sharp, dismissive, rejecting the suggestion.
+
+    *   *Drafting:*
+        "I just told you Tver. Are you deaf?" (Too simple).
+        "Marinka talks too much. I don't play anymore." (Better).
+        "Play at the party? In your dreams." (Good).
+
+    *   *Adding sensory details:* The sound of the rain, the sterile smell of the classroom, the feeling of the headphones.
+
+    *   *Refining the tone:*
+        - "Ты вообще меня слышал?" (Did you even hear me?)
+        - "Скрипка? Маринка в своём репертуаре." (Violin? Marinka is in her element.)
+        - "Я больше не играю. И на празднике я не буду клоуном." (I don't play anymore. I won't be a clown at the party.)
+
+    *   *Final Polish (Russian):*
+        I'll make her react sharply to the "St. Petersburg" comment first, then the "violin" part.
+
+    *   1st person? Yes.
+    *   Details? Yes (rain, the sound of the chair).
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes.<channel|>Я медленно повернула голову, глядя на него так, будто он только что предложил мне съесть учебник истории. Внутри всё сжалось — этот идиот даже не слушал, что я сказала секунду назад.
+
+— Я сказала: Тверь. Ты вообще в одну сторону слышишь или как? — я с силой сжала пальцами край парты. — А Маринка в своём репертуаре: любит разносить сплетни, чтобы самой не быть в центре внимания.
+
+При упоминании скрипки я почувствовала, как к горлу подступил комок. Я резко натянула наушники на уши, отрезая всё вокруг, и вставила в них шнур.
+
+— Я больше не играю. И на празднике я не буду клоуном для вашего цирка. Иди найди кого-нибудь другого, кто хочет «офигеть».

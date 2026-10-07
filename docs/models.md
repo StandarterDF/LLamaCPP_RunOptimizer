@@ -20,6 +20,7 @@ RTX 4060 Ti 16 ГБ, сборка **b11382** (CUDA 12.4). Срез: 2026-10-07.
 | **Gemma-4-26B-A4B Goetia v1.6** (Naphula) | 4.23 (NoThink) | i1-IQ3_XXS | RP-связность; русский; скорость | ⚠️ быстрый MoE; путает сущности, шаблонные реплики; think-режим непригоден в llama.cpp | ~73 t/s; RU 100 % (RU-safe) / 83 % (пресет карточки) | `gemma4-26a4b-goetia-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` |
 | **Gemma-4-31B Glistening-Gem v2.1** (sophosympatheia) | **4.13** (Think 3.60 · No 4.32) | i1-IQ3_XXS | RP-связность (полный набор, 2 судьи); русский; скорость | ✅ NoThink вровень с лидерами (4.32 Gemma / 3.35 Qwen), лучшая по памяти; Think сломан (7/18 пустых) | RP 22.7 (No) · 30.8 (Think) t/s; RU 100 % | `gemma4-31b-glistening-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` §5.6 |
 | **Gemma-4-31B Artemis-31B-v1.2** (TheDrummer) | 3.90 (Think 4.29 · No 3.50) | i1-IQ3_XXS | RP-связность; русский; PPL; скорость | ❌ RP: речевая деградация в кашу при RU 92–96 % | RP 20–26 t/s; PPL RU 983 | `gemma4-31b-artemis-*.bat` | `docs\quality\rp-quality-eval.md`, `docs\research\why-ru-models.md` |
+| **Gemma-4-31B-it heretic-ARA** (Heretic / mradermacher) | **4.44** (Think 4.52 · No 4.35) | i1-IQ3_XXS | RP (скрин, 2 судьи); русский; скорость | ⚠️ **база + ARA-abliteration, не RP-тюн**: память/инициатива ок, но голос персонажа слабый («fast-track» в соблазне; литературщина и опечатки в think); **think рабочий** | RP 24.7 (No) · 31.3 (Think) t/s; Qwen-судья 3.52; Чисто 83 % (No) / 100 % (Think) | `gemma4-31b-heretic-ara-{nothink,think}-b11382.bat` | `docs\quality\base-models-rp-eval.md` §4.3 |
 | **Gemma-4-31B Giftige-Blume-StyleSwap** (Casual-Autopsy) | 3.76 (Think 3.84 · No 3.64) | i1-IQ3_XXS | RP-связность (полный набор, 2 судьи); русский | ❌ русский 3.3/2.6 — англ. вставки (прививка головы StyleTune); для RU не берём | RP 23.3 t/s; EN-стоп 4.89 | `gemma4-31b-styleswap-{nothink,think}-b11382.bat` | `docs\quality\rp-quality-eval.md` §5.6 |
 | Gemma-4-31B **Split-Untied** (Blazed-Forge) | — | i1-IQ3_XXS | русский; скорость | ⚠️ RU 75 % → 96 % при temp0.4; RP НЕ меряли 🗑 | RP 23 t/s | `gemma4-31b-split-untied-*.bat` | `docs\models\gemma-4-31b-rp-merges.md` |
 | Gemma-4-31B **G4-MeroMero-v2-31B-heretic** (zerofata) | — | i1-IQ3_XXS | только скорость (RP/чат/код/матем) | ⚠️ RP и русский НЕ тестили; `.bat` удалён 🗑 | RP 21 · код 45 t/s | — | `docs\models\gemma-4-31b-rp-merges.md` |
@@ -27,8 +28,8 @@ RTX 4060 Ti 16 ГБ, сборка **b11382** (CUDA 12.4). Срез: 2026-10-07.
 | Gemma-4-31B **StyleTune-31B** (Gryphe) | — | i1-IQ3_XXS | русский | ❌ непригоден (17–0 %), битый repack 🗑 | — | — | `docs\quality\sampling-quality.md` §5.4 |
 
 ¹ N ответов: DTV2 10, Schattenblume 20, StyleTune 11, Goetia 11, Artemis 6 (часть пунктов судья пропустила);
-Glistening 19, StyleSwap 21 (полный набор, два судьи).
-**Масштаб чисел:** DTV2, Schattenblume, StyleTune, Goetia, Artemis — **2 сценария** (судья 26B);
+Glistening 19, StyleSwap 21 (полный набор, два судьи); heretic-ARA 12 (скрин, два судьи).
+**Масштаб чисел:** DTV2, Schattenblume, StyleTune, Goetia, Artemis, heretic-ARA — **2 сценария** (судья 26B);
 Glistening, StyleSwap, Giftige-Blume-v1 — **полный набор** (средний Gemma; строгий Qwen ниже — см. «Полный набор»).
 У «—» RP-бенчмарк не запускался.
 
@@ -89,6 +90,7 @@ Artemis-31B (3.90) — их числа в таблице «Протестиро�
 | Модель | RP-средний (gemma / Qwen) | Квант | Вердикт | Конфиг |
 | --- | ---: | --- | --- | --- |
 | Gemma-4-26B-A4B-it (base) | 4.67* / 3.35 (nothink 3.56) | UD-IQ3_XXS | ⚠️ лучшая из базовых и **пригодный RP-baseline**: на скрине у строгого судьи выше DTV2/Schattenblume; *самооценка у gemma-судьи; повторы метафор, «сдаётся» в соблазне; think — утечка reasoning | `gemma4-26a4b-base-rp-nothink-b11382.bat` |
+| Gemma-4-31B-it (base) | 4.51 / 3.45 (No 3.38 · Think 3.52) | UD-IQ3_XXS | ⚠️ **baseline 31B**: ≈ heretic-ARA (abliteration RP не меняет); **think рабочий** (6/6); у строгого судьи персонаж/инициатива 2.5–2.8, паттерн-циклы; Чисто 100 %, 18.5 t/s | `gemma4-31b-base-{nothink,think}-b11382.bat` |
 | Qwen3.8-27B (base) | 3.98 / 3.21 | UD-IQ2_XXS | ❌ коротко/поверхностно, путает факты; think вываливает reasoning текстом | `qwen38-27b-base-rp-nothink-b11382.bat` |
 | Qwen3.6-35B-A3B (base) | 4.06 / 2.96* | UD-Q2_K_XL | ❌ самый сухой и короткий, пассивный; think — незакрытый канал → пустой ответ | `qwen36-35b-a3b-base-rp-nothink-b11382.bat` |
 
@@ -96,6 +98,8 @@ Artemis-31B (3.90) — их числа в таблице «Протестиро�
 у всех трёх. Вывод: **RP-файнтюн/мерж добавляет, но не всем одинаково** — базовая Gemma-26B на скрине
 конкурентоспособна (выше DTV2/Schattenblume у строгого судьи), а базовые Qwen — на дне. Полный набор
 для Gemma-26B — `docs\quality\base-models-rp-eval.md` §4.2.
+Строка **Gemma-4-31B-it (base)** — тот же скрин, но 31B dense; **≈ heretic-ARA** (abliteration RP
+не меняет), **think рабочий** (в отличие от остальных Gemma-31B-мержей). Разбор — §4.4.
 
 ## Протестированные: кодинг / универсальные
 

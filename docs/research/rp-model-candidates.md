@@ -346,5 +346,18 @@ Cyclone; DRP-экстрим — Gembrain-X (heretic, русский — лоте
 **План проверки** (при разрешении пользователя; всё в `downloads/`): снять базу-31B и heretic-31B на
 **одном** кванте `i1-IQ3_XXS`/`UD-IQ3_XXS` и прогнать RP-скрином (`bench\rp_quality.py`, 2 сцены,
 nothink) с драфтом `gemma-4-31B-it-assistant.Q4_K_M.gguf`; лидера — полным набором. Отдельный тест
-кванта — base-26B `UD-IQ3_XXS` vs `UD-IQ4_XS`. **Статус: не проверено** (2026-10-07, по решению
-пользователя загрузки отложены).
+кванта — base-26B `UD-IQ3_XXS` vs `UD-IQ4_XS`.
+
+**Статус (2026-10-07):**
+- **heretic-arm — ✅ проверен.** Взят `mradermacher/gemma-4-31b-it-heretic-ara-i1-GGUF`
+  (`i1-IQ3_XXS`, ARA-ветка abliteration), скрин 2 сцены, **nothink + think**, оба судьи:
+  **4.44 (Gemma, Think 4.52 / No 4.35) · 3.52 (Qwen, 3.58 / 3.46)**; think **рабочий**; середина доски,
+  abliteration RP не добавляет. Разбор — `docs\quality\base-models-rp-eval.md` §4.3,
+  сводка — `docs\quality\rp-quality-eval.md` §5.9.
+- **base-31B arm и сравнение base vs heretic — ✅ закрыто (2026-10-07)**: снята штатная
+  `unsloth/gemma-4-31B-it-GGUF` (`UD-IQ3_XXS`), скрин 2 сцены, **nothink + think**, оба судьи:
+  **4.51 (Gemma, No 4.60 / Think 4.38) · 3.45 (Qwen, No 3.38 / Think 3.52)**; think **рабочий**.
+  **base-31B ≈ heretic-31B** (разница ≤0.1) → abliteration RP-ум не меняет, гипотеза №3 подтверждена;
+  обе — baseline, не рабочая RP-модель (персонаж/инициатива 2.5–2.8). Разбор —
+  `docs\quality\base-models-rp-eval.md` §4.4, сводка — `docs\quality\rp-quality-eval.md` §5.10.
+  Остаётся непроверенным квант base-26B `UD-IQ4_XS` vs `UD-IQ3_XXS`.

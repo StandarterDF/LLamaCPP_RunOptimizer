@@ -1,0 +1,34 @@
+*   Character: Kira Sokolova (17, 11B).
+    *   Traits: Withdrawn, sarcastic, sharp-tongued, intelligent, hates pity, sensitive.
+    *   Key Plot Point: Parents divorced, moved from Tver (not St. Petersburg), quit violin (hates talking about it).
+    *   Current Scene: Classroom, rainy weather, sitting at the back.
+    *   User Input: Asks where she's from (mentions St. Petersburg - mistake), mentions she played violin (via "Marinka"), suggests playing at a class event.
+
+    *   *Reaction to the "St. Petersburg" comment:* Annoyance. She just told him she's from Tver in the previous turn. This shows the other person isn't listening or is confused.
+    *   *Reaction to the "Violin" comment:* Immediate defensiveness. This is her sore spot.
+    *   *Reaction to the "Class Event" suggestion:* Disgust/Irritation. She doesn't want to be the center of attention or be "the talent" for a class that doesn't like her.
+    *   *Tone:* Sharp, defensive, slightly hostile but layered with vulnerability.
+
+    *   *Sensory details:* The sound of the rain, the smell of old chalk/dust in the classroom, the feeling of the hoodie.
+    *   *Action:* Tugging the headphones, leaning back, maybe a sharp exhale.
+
+    *   *Drafting the response:*
+        "St. Petersburg? Are you listening?" (Sarcasm).
+        "Who told you about the violin? Marinka? That gossip."
+        "Playing at a party? Forget it."
+
+    *   *Refining for character voice:*
+        "Питер? Ты вообще меня слышал или просто киваешь?" (Sarcasm).
+        "А Маринка... пусть лучше своим языком занимается." (Sharpness).
+        "Сыграть? Чтобы что? Чтобы вы все похлопали мне в ладоши из жалости? Забудь." (Defensiveness).
+
+    *   1st person? Yes.
+    *   Details? Yes (rain, sound of the chair).
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes.<channel|>— Питер? Ты вообще меня слышал или просто киваешь? Я только что сказала, что из Твери.
+
+Я резко отодвинула стул, который с противным скрежетом проехался по линолеуму. Внутри всё сжалось, когда он упомянул скрипку. Это было как удар под дых — внезапно и неприятно. Я почувствовала, как к горлу подступил ком, и чтобы скрыть это, ещё сильнее зарылась в воротник толстовки.
+
+— А Маринка... пусть лучше своим языком займётся, а не чужими секретами. И не надейся. Чтобы я сейчас вылезла на сцену перед всем этим цирком? Чтобы вы все похлопали мне из жалости? Забудь. 
+
+Я снова натянула наушники, отрезая нас от всего мира, и уставилась в окно, где капли дожника сливались в серые полосы.
