@@ -9,7 +9,7 @@
 требует одновременно продолжить сцену, вспомнить факт и принять решение. Реплики игрока — живые,
 с небрежностями.
 
-Два набора сценариев (`bench\quality\`):
+Два набора сценариев (`bench\quality\prompts\`):
 
 | Набор | Файл | Сцены | Когда |
 | --- | --- | --- | --- |
@@ -23,8 +23,8 @@
 
 ```
 run_eval.py
- ├─ пишет suite_rp_eval_<name>_<mode>.json
- ├─ bench\quality.py <suite> --out runs\rp_eval_<name>_<mode>   (поднимает и гасит сервер)
+ ├─ пишет quality\suites\suite_rp_eval_<name>_<mode>.json
+ ├─ bench\rp_quality.py <suite> --out runs\rp_eval_<name>_<mode>   (поднимает и гасит сервер)
  │    └─ /apply-template → /completion (нативный, все сэмплеры), пишет metrics.jsonl, raw\, raw_full\
  ├─ bench\quality\rp_judge.py <run_dirs> --model <judge> ...    (поднимает и гасит сервер судьи)
  │    └─ собирает карточка+история+ответ(+thinking) в один запрос, батч 3
@@ -35,7 +35,7 @@ run_eval.py
 
 ## 2a. Логирование
 
-`run_eval.py` пишет единый лог `logs\rp_eval_<name>_<stamp>.log`: фазы, поток вывода `quality.py`
+`run_eval.py` пишет единый лог `logs\rp_eval_<name>_<stamp>.log`: фазы, поток вывода `rp_quality.py`
 (по каждой генерации), вывод судей и сводка `judge_score.py`. Плюс технические логи:
 `bench\quality\runs\rp_eval_<name>_<mode>\server.log` и `bench\quality\runs\rp_judge_<judge>_<name>\run.log`.
 
@@ -53,7 +53,7 @@ run_eval.py
                 "-t","12","-tb","12","-ctk","q4_0","-ctv","q4_0",
                 "--spec-type","draft-mtp","--spec-draft-n-max","5","--spec-draft-n-min","1",
                 "--spec-draft-p-min","0.75","--jinja","--reasoning","off","--reasoning-budget","0"],
-  "prompts": "quality/scenarios_rp.json",
+  "prompts": "quality/prompts/scenarios_rp.json",
   "n_predict": 500,
   "seeds": [11, 22, 33],
   "configs": [{"name":"ru_safe","sampling":{"temperature":0.6,"min_p":0.1,"top_k":0,"top_p":0.95}}]
@@ -66,7 +66,7 @@ run_eval.py
 Think-режим: `--reasoning on --reasoning-budget 1024` (gemma ещё `--reasoning-effort low`),
 `n_predict` 1600. Nothink: `--reasoning off --reasoning-budget 0`, `n_predict` 500.
 
-## 4. Метрики `quality.py`
+## 4. Метрики `rp_quality.py`
 
 Объективные (по тексту ответа): Чисто %, Чужой/1k, CJK/1k, EN-стоп, Смеш (BPE-склейки), UKR,
 Junk/1k, rep8 (повторы), TTR150 (лексическое разнообразие), Cyr %, TG t/s.

@@ -35,7 +35,7 @@ Glistening, StyleSwap, Giftige-Blume-v1 — **полный набор** (сре�
 ### Полный набор (6 сценариев)
 
 DTV2 и Schattenblume шли ноздря в ноздрю на 2 сценариях. Прогнали их на **расширенном наборе**
-(`bench\quality\scenarios_rp_full.json`: +`tactics`, `mystery`, `group`, `everyday`) при **одинаковом
+(`bench\quality\prompts\scenarios_rp_full.json`: +`tactics`, `mystery`, `group`, `everyday`) при **одинаковом
 сэмплинге** (temp0.6 / min-p0.1 / top-k0), 6 сценариев × 3 сида × {think, no-think}; судья с полным
 покрытием (`rp_judge_full1`).
 
@@ -139,4 +139,4 @@ Artemis-31B (3.90) — их числа в таблице «Протестиро�
 - RP-качество (LLM-судья + средние баллы) — `docs\rp-quality-eval.md`; сводный рейтинг Think/NoThink — `docs\rp-ranking.md`.
 - Внешний ресёрч, донор-граф, Ateron — `docs\rp-model-candidates.md`.
 - Русский, PPL, артефакты — `docs\sampling-quality.md`, `docs\why-ru-models.md`.
-- Конфиги — `launch\b11382-cu124\`; наборы RP-оценки — `bench\quality\suite_rp_eval_*.json`.
+- Конфиги — `launch\b11382-cu124\`; наборы RP-оценки — `bench\quality\suites\suite_rp_eval_*.json`.

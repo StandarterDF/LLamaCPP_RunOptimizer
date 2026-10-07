@@ -140,7 +140,7 @@
 
 ## 10. Качество RP (LLM-судья) — 2026-10-06
 
-Методика и результаты — `docs\rp-quality-eval.md`. Сценарии — `bench\quality\scenarios_rp.json`
+Методика и результаты — `docs\rp-quality-eval.md`. Сценарии — `bench\quality\prompts\scenarios_rp.json`
 («мнимая история»: карточка + первое сообщение + ходы); 3 модели × think/non-think × 2 сценария ×
 3 сида; судья — `gemma-4-26B-A4B-it-UD-IQ3_XXS` через `bench\quality\rp_judge.py`. Сырое —
 `bench\quality\runs\rp_eval_*`, заключения судьи — `bench\quality\runs\rp_judge_b3\`.

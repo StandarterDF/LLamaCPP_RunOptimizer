@@ -1,0 +1,28 @@
+{
+  "_комментарий": "RP-оценка: Schattenblume-31B, Thinking (della_linear). Бюджет мышления 1024. Два пресета.",
+  "name": "rp_eval_schattenblume_think",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/mradermacher/Schattenblume-31B-i1-GGUF/Schattenblume-31B.i1-IQ3_XXS.gguf",
+  "base_args": [
+    "-np", "1", "-c", "51200", "-fa", "on", "--fit", "on", "--load-mode", "none",
+    "-t", "12", "-tb", "12", "-ctk", "q4_0", "-ctv", "q4_0",
+    "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.75",
+    "-md", "${MODELS_DIR}/mradermacher/Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF/gemma-4-31B-it-assistant.Q4_K_M.gguf",
+    "--jinja", "--reasoning", "on", "--reasoning-effort", "low", "--reasoning-budget", "1024"
+  ],
+  "prompts": "quality/prompts/scenarios_rp.json",
+  "n_predict": 1300,
+  "seeds": [11, 22, 33],
+  "configs": [
+    {
+      "name": "card",
+      "title": "Пресет карточки Schattenblume: temp0.9 min-p0.1 top-k0 top-p0.95",
+      "sampling": { "temperature": 0.9, "min_p": 0.1, "top_k": 0, "top_p": 0.95 }
+    },
+    {
+      "name": "ru_safe",
+      "title": "Наш RU-safe: temp0.6 min-p0.1 top-k0 top-p0.95",
+      "sampling": { "temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95 }
+    }
+  ]
+}

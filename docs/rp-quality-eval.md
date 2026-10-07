@@ -27,7 +27,7 @@ Artemis-31B-v1.2, а также полным набором — Giftige-Blume-v1
    Это экономит токены агента; агент читает готовое заключение и сам открывает сырой транскрипт только
    при сомнительных местах (судьи иногда переусердствуют). Баллы сравнивать только внутри одного судьи.
 
-## 1. Сценарии (`bench\quality\scenarios_rp.json` — базовый; `scenarios_rp_full.json` — полный)
+## 1. Сценарии (`bench\quality\prompts\scenarios_rp.json` — базовый; `scenarios_rp_full.json` — полный)
 
 | Тег | Что проверяет | Вшитая ловушка |
 | --- | --- | --- |
@@ -50,8 +50,8 @@ Artemis-31B-v1.2, а также полным набором — Giftige-Blume-v1
 
 ## 3. Прогон
 
-3 модели × 2 режима × 2 сценария × 3 сида = **36 генераций**. Наборы — `bench\quality\suite_rp_eval_*.json`,
-харнесс — `bench\quality.py` (пишет и очищенный ответ в `raw\`, и сырой текст с thinking в `raw_full\`).
+3 модели × 2 режима × 2 сценария × 3 сида = **36 генераций**. Наборы — `bench\quality\suites\suite_rp_eval_*.json`,
+харнесс — `bench\rp_quality.py` (пишет и очищенный ответ в `raw\`, и сырой текст с thinking в `raw_full\`).
 
 ## 4. Объективные метрики (наш датасет, non-think если не сказано)
 
@@ -189,7 +189,7 @@ Schattenblume — русский 19 %, инициатива 24 %, память 1
 top-k0). Судьи — `gemma-4-26B-A4B` и `Qwen3.6-35B-A3B` MXFP4 (поочерёдно); эталоны (DTV2,
 Schattenblume) пересчитаны в тех же прогонах, поэтому сравнимы напрямую.
 
-Объективные метрики (`bench\quality.py`):
+Объективные метрики (`bench\rp_quality.py`):
 
 | Прогон | Чисто | Пустых | Cyr % | EN-стоп | TTR150 | t/s |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -334,7 +334,7 @@ Qwen3.6-35B-A3B, Qwen3.8-27B (скрин 2 сценария, nothink/think, об
 ```powershell
 cd <папка проекта>
 # 1) прогон моделей (по одному набору; сами поднимают и гасят сервер)
-.\.venv\Scripts\python.exe bench\quality.py bench\quality\suite_rp_eval_dtv2_think.json --stop-bad 0
+.\.venv\Scripts\python.exe bench\rp_quality.py bench\quality\suites\suite_rp_eval_dtv2_think.json --stop-bad 0
 # 2) судья по каталогам прогонов (проверяет свободную VRAM, батч 3)
 .\.venv\Scripts\python.exe bench\quality\rp_judge.py bench\quality\runs\rp_eval_dtv2_think-* --batch 3
 # 3) средние баллы из текстов судьи

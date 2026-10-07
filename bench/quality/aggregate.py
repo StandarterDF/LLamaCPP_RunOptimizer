@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Сводка metrics.jsonl от quality.py: агрегат по конфигам.
+"""Сводка metrics.jsonl от rp_quality.py: агрегат по конфигам.
 
 Запуск: python bench/quality/aggregate.py <metrics.jsonl>
 Читает файл, даже если он ещё дописывается (неполные строки пропускаются).

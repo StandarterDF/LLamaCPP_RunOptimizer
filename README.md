@@ -95,7 +95,7 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 
 ### RP, креатив, свободные диалоги
 - **Качество RP (LLM-судья, «мнимая история»):** методика и все числа — `docs\rp-quality-eval.md`;
-  харнесс `bench\quality.py`, судьи — `gemma-4-26B-A4B` (мягче) и `Qwen3.6-35B-A3B` MXFP4 (строже).
+  харнесс `bench\rp_quality.py`, судьи — `gemma-4-26B-A4B` (мягче) и `Qwen3.6-35B-A3B` MXFP4 (строже).
   Текущие лидеры (NoThink, полный набор 6 сценариев, средний двух судей): **Giftige-Blume-v1 — 4.33 / 3.35**
   (№1 по Caliper Combined и DarkRP; лучшая **инициатива 4.0**), Schattenblume 4.38/3.28, Glistening-Gem
   v2.1 4.33/3.35, Dark-Thoughts V2 4.24/3.11. Все держат русский чисто.
@@ -217,7 +217,7 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 | **Реестр проверенного (не повторять)** | `docs\researched.md` |
 | Длинные сессии, «бесконечный» контекст, SillyTavern | `docs\context-infinite-chat.md` |
 | Готовые конфиги | `launch\b11382-cu124\` (единственная сборка; полный список — в таблице «Готовые конфиги») |
-| Харнесс, наборы тестов, сырые результаты | `bench\` (`bench.py`, `suites\`, `runs\results.jsonl`); RP-качество — `bench\quality.py`, `bench\quality\rp_judge.py`, `judge_score.py` |
+| Харнесс, наборы тестов, сырые результаты | `bench\` (`bench.py`, `suites\`, `runs\results.jsonl`); RP-качество — `bench\rp_quality.py`, `bench\quality\rp_judge.py`, `judge_score.py` |
 | Скил для подбора конфига новой модели | `.opencode\skills\llm-launch-tuner\` |
 | Скил для прогона и оценки RP-качества новой модели (скрин → судьи → баллы) | `.opencode\skills\rp-model-eval\` |
 

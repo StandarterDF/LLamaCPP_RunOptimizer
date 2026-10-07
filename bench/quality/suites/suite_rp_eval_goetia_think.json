@@ -1,0 +1,27 @@
+{
+  "_комментарий": "RP-оценка: Goetia-26B-A4B-v1.6, Thinking (moe_della), без спекуляции. Бюджет мышления 1024. Два пресета.",
+  "name": "rp_eval_goetia_think",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/mradermacher/Goetia-26B-A4B-v1.6-i1-GGUF/Goetia-26B-A4B-v1.6.i1-IQ3_XXS.gguf",
+  "base_args": [
+    "--fit", "on", "-fa", "on", "--load-mode", "none", "-t", "14", "-tb", "14", "-b", "2048", "-ub", "512",
+    "-np", "1", "-c", "65536", "-ctk", "q4_0", "-ctv", "q4_0",
+    "--jinja",
+    "--reasoning", "on", "--reasoning-effort", "low", "--reasoning-budget", "1024"
+  ],
+  "prompts": "quality/prompts/scenarios_rp.json",
+  "n_predict": 1300,
+  "seeds": [11, 22, 33],
+  "configs": [
+    {
+      "name": "card",
+      "title": "Пресет Boulesis/карточки: temp1.0 top-k64 top-p0.95 rep1.1",
+      "sampling": { "temperature": 1.0, "min_p": 0.05, "top_k": 64, "top_p": 0.95, "repeat_penalty": 1.1, "repeat_last_n": 256 }
+    },
+    {
+      "name": "ru_safe",
+      "title": "Наш RU-safe: temp0.6 min-p0.1 top-k0 top-p0.95",
+      "sampling": { "temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95 }
+    }
+  ]
+}

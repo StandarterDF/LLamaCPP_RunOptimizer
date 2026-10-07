@@ -208,7 +208,7 @@ def main():
     ap.add_argument("--port", type=int, default=9953)
     ap.add_argument("--model", default=DEFAULT_JUDGE_MODEL)
     ap.add_argument(
-        "--prompts", default="quality/scenarios_rp.json", help="файл сценариев"
+        "--prompts", default="quality/prompts/scenarios_rp.json", help="файл сценариев"
     )
     ap.add_argument("--out", default=None, help="каталог для текстов судьи")
     ap.add_argument(

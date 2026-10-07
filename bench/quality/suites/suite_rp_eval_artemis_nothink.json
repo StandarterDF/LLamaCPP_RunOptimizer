@@ -1,0 +1,23 @@
+{
+  "_комментарий": "RP-оценка: Artemis-31B-v1.2, NoThink, параметры из gemma4-31b-artemis-nothink-b11382.bat.",
+  "name": "rp_eval_artemis_nothink",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/mradermacher/Artemis-31B-v1.2-i1-GGUF/Artemis-31B-v1.2.i1-IQ3_XXS.gguf",
+  "base_args": [
+    "-np", "1", "-c", "51200", "-fa", "on", "--fit", "on", "--load-mode", "none",
+    "-t", "12", "-tb", "12", "-ctk", "q4_0", "-ctv", "q4_0",
+    "--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.75",
+    "-md", "${MODELS_DIR}/mradermacher/Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF/gemma-4-31B-it-assistant.Q4_K_M.gguf",
+    "--jinja", "--reasoning", "off", "--reasoning-budget", "0"
+  ],
+  "prompts": "quality/prompts/scenarios_rp.json",
+  "n_predict": 500,
+  "seeds": [11, 22, 33],
+  "configs": [
+    {
+      "name": "best",
+      "title": "Лучший конфиг Artemis: temp0.7 min-p0.05 DRY0.8",
+      "sampling": { "temperature": 0.7, "min_p": 0.05, "top_k": 0, "top_p": 1.0, "dry_multiplier": 0.8, "dry_base": 1.75, "dry_allowed_length": 2, "dry_penalty_last_n": 256 }
+    }
+  ]
+}

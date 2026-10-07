@@ -3,7 +3,7 @@
 **Модель:** `Split-Untied-31B.i1-IQ3_XXS.gguf` (dense Gemma-4 ≈31B, RP-мерж StyleSwap).
 **Драфт:** `gemma-4-31B-it-assistant.Q4_K_M.gguf` + `--spec-type draft-mtp`.
 **Стенд:** RTX 4060 Ti 16 ГБ, Ryzen 7 5700X, 32 ГБ, Windows; сборка b11382 (CUDA 12.4).
-**Методика:** харнесс `bench\quality.py` + русский RP-набор `bench\quality\prompts_ru_rp.json`;
+**Методика:** харнесс `bench\rp_quality.py` + русский RP-набор `bench\quality\prompts\prompts_ru_rp.json`;
 один сервер на серию, семплеры задаются per-request через нативный `POST /completion`,
 промпт форматируется шаблоном модели через `POST /apply-template`. Сырые ответы и метрики —
 `bench\quality\runs\<серия>\`. Обозначения: **Чисто %** — доля ответов без единого артефакта.
@@ -24,7 +24,7 @@
 
 ## 1. Как измеряем
 
-`bench\quality.py` за один проход грузит сервер и гоняет сетку конфигов. На каждый ответ считаются:
+`bench\rp_quality.py` за один проход грузит сервер и гоняет сетку конфигов. На каждый ответ считаются:
 
 | Метрика | Что ловит |
 | --- | --- |
@@ -168,7 +168,7 @@ DRY multiplier 0.8` (то же в `launch\b11382-cu124\gemma4-31b-split-untied-n
 1. **Карточка модели:** список языков, наличие русского в обучающих данных, отзывы сообщества.
 2. **Токенизаторный профиль** (`tokenizer_profile.py`): если кириллицы < ~5 % словаря,
    длинных кусков ≥4 мало, а сжатие < ~3.2 симв/токен — риск дрейфа языка высокий (архитектурный флаг).
-3. **Дымовой прогон** (`quality.py` + `bench\quality\prompts_ru_smoke.json`, 5 коротких промптов × 1 seed,
+3. **Дымовой прогон** (`rp_quality.py` + `bench\quality\prompts\prompts_ru_smoke.json`, 5 коротких промптов × 1 seed,
    ~140 токенов): смотрим `Чисто %`. Это уже фактическая проверка конкретного файнтюна.
 4. **Опережающий сигнал** (`foreign_mass` через `n_probs`) — **не сработал:** во всех конфигах
    серии 3 вышел ровным нулём, в том числе на ответах с браком. Метрику нельзя использовать как
@@ -200,7 +200,7 @@ DRY multiplier 0.8` (то же в `launch\b11382-cu124\gemma4-31b-split-untied-n
 | Artemis-31B-v1.2 (IQ3_XXS, bartowski) | 96 % | 92 % | 21.0 t/s |
 | **WaifuGemma4-26B-A4B (i1-IQ3_XXS)** | **96 %** | 79 % | 85 t/s |
 
-> Новые RP-модели (2026-10-07, харнесс `bench\quality\scenarios_rp_full`, non-think): **Giftige-Blume-v1** —
+> Новые RP-модели (2026-10-07, харнесс `bench\quality\prompts\scenarios_rp_full`, non-think): **Giftige-Blume-v1** —
 > Cyr 99.9 %, англ. вставок 0; **Glistening-Gem-v2.1** — Cyr 100 %, англ. 0; **Giftige-Blume-StyleSwap**
 > течёт в английский (EN-стоп 4.89 — прививка головы StyleTune). См. `docs\rp-quality-eval.md` §5.6–5.7.
 

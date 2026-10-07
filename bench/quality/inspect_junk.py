@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Разбор «мусора» в сохранённых ответах quality.py: печатает проблемные токены
+"""Разбор «мусора» в сохранённых ответах rp_quality.py: печатает проблемные токены
 с кодами символов. Запуск: python bench/quality/inspect_junk.py <папка raw> [> файл]"""
 
 import os
@@ -9,7 +9,7 @@ import unicodedata
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from quality import char_script, EN_STOP  # noqa: E402
+from rp_quality import char_script, EN_STOP  # noqa: E402
 
 UKR = set("іїєґІЇЄҐ")
 

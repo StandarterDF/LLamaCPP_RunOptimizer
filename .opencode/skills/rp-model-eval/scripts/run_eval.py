@@ -5,7 +5,7 @@ RP Model Eval — оптимизированный оркестратор оце
 
 Один запуск делает всё:
   1) генерирует suite-файл(ы) под модель (fan out по режимам nothink/think);
-  2) прогоняет bench\\quality.py на базовом (2 сценария) или полном (6) наборе;
+  2) прогоняет bench\\rp_quality.py на базовом (2 сценария) или полном (6) наборе;
   3) судит прогоны штатными судьями (gemma-4-26B-A4B и Qwen3.6-35B-A3B MXFP4);
   4) сводит средние баллы через judge_score.py.
 
@@ -38,7 +38,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 def find_root(start):
     cur = os.path.abspath(start)
     while True:
-        if os.path.isfile(os.path.join(cur, "bench", "quality.py")):
+        if os.path.isfile(os.path.join(cur, "bench", "rp_quality.py")):
             return cur
         nxt = os.path.dirname(cur)
         if nxt == cur:
@@ -48,7 +48,7 @@ def find_root(start):
 
 PROJECT_DIR = find_root(HERE)
 if not PROJECT_DIR:
-    raise SystemExit("не найден корень проекта (bench/quality.py)")
+    raise SystemExit("не найден корень проекта (bench/rp_quality.py)")
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace", line_buffering=True)
 sys.stderr.reconfigure(encoding="utf-8", errors="replace", line_buffering=True)
@@ -75,16 +75,16 @@ def expand(text):
 
 VENV_PY = os.path.join(PROJECT_DIR, ".venv", "Scripts", "python.exe")
 PY = VENV_PY if os.path.isfile(VENV_PY) else sys.executable
-QUALITY = os.path.join(PROJECT_DIR, "bench", "quality.py")
+QUALITY = os.path.join(PROJECT_DIR, "bench", "rp_quality.py")
 JUDGE = os.path.join(PROJECT_DIR, "bench", "quality", "rp_judge.py")
 SCORE = os.path.join(PROJECT_DIR, "bench", "quality", "judge_score.py")
 RUNS = os.path.join(PROJECT_DIR, "bench", "quality", "runs")
-SUITE_DIR = os.path.join(PROJECT_DIR, "bench", "quality")
+SUITE_DIR = os.path.join(PROJECT_DIR, "bench", "quality", "suites")
 LOG_DIR = os.path.join(PROJECT_DIR, "logs")
 
 SCEN = {
-    "base": "quality/scenarios_rp.json",
-    "full": "quality/scenarios_rp_full.json",
+    "base": "quality/prompts/scenarios_rp.json",
+    "full": "quality/prompts/scenarios_rp_full.json",
 }
 
 # Штатные судьи. Значения по умолчанию совпадают с rp_judge.py; здесь явно, чтобы не читать его.
@@ -353,7 +353,7 @@ def main():
                 phase=f"генерация {args.name} / {mode}",
             )
             if rc != 0:
-                log(f"[warn ] quality.py вернул rc={rc} для {mode}")
+                log(f"[warn ] rp_quality.py вернул rc={rc} для {mode}")
 
     # ---- 3. судейство ----
     judge_dirs = []

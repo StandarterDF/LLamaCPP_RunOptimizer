@@ -98,6 +98,6 @@ D. КАЧЕСТВО RP:
 
 ## Связь с этим репозиторием
 
-- Русский прогон моделей — харнесс `bench\quality.py` + `bench\quality\prompts_ru_rp.json`
+- Русский прогон моделей — харнесс `bench\rp_quality.py` + `bench\quality\prompts\prompts_ru_rp.json`
   (метрики: доля ответов без англ. вставок/склеек/чужих алфавитов).
 - Реестр проверенного и выводы — `docs\sampling-quality.md`; внешние кандидаты — `docs\rp-model-candidates.md`.

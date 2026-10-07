@@ -50,7 +50,7 @@ def main():
     ap.add_argument("--b", required=True, help="каталог прогонов модели B")
     ap.add_argument(
         "--prompts",
-        default=os.path.join(rj.ROOT, "quality", "scenarios_rp_full.json"),
+        default=os.path.join(rj.ROOT, "quality", "prompts", "scenarios_rp_full.json"),
     )
     ap.add_argument("--mode", required=True)
     ap.add_argument("--out", required=True)

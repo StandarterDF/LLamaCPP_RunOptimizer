@@ -60,10 +60,10 @@
 Автоматизация — скил `rp-model-eval` (`.opencode\skills\rp-model-eval\`): одной командой делает
 suite, генерацию, судейство и сводку; пишет единый лог `logs\rp_eval_<name>_<stamp>.log` (ход
 исследования виден в реальном времени — `Get-Content ... -Wait`). Ручной путь:
-1) сценарии — `bench\quality\scenarios_rp.json` (карточка персонажа + первое сообщение + ходы;
+1) сценарии — `bench\quality\prompts\scenarios_rp.json` (карточка персонажа + первое сообщение + ходы;
    финальный ход требует продолжить сцену, вспомнить факт и принять решение; реплики user — живые,
    с небрежностями). Прогон на лучших параметрах модели (из её `.bat`), 2–3 сида, отдельно **think**
-   и **non-think**; наборы — `bench\quality\suite_rp_eval_*.json`, харнесс — `bench\quality.py`
+   и **non-think**; наборы — `bench\quality\suites\suite_rp_eval_*.json`, харнесс — `bench\rp_quality.py`
    (сохраняет ответ в `raw\` и сырой текст с thinking в `raw_full\`), результаты —
    `bench\quality\runs\rp_eval_*`;
 2) судьи — локальные `gemma-4-26B-A4B-it-UD-IQ3_XXS` (мягче) и `Qwen3.6-35B-A3B` MXFP4 (строже)
