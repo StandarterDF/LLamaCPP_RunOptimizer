@@ -19,7 +19,8 @@ import time
 import urllib.request
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-RUNS = os.path.join(ROOT, "runs")
+RUNS = os.path.join(ROOT, "runs", "usecase_cache")
+os.makedirs(RUNS, exist_ok=True)
 SERVER = r"<папка llama.cpp>\llama-server.exe"
 MODEL = r"<папка моделей>\ukisai\Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF\Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ2_S-mtp.gguf"
 PORT = 9977

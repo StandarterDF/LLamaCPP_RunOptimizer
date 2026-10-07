@@ -10,6 +10,11 @@ PP и TG, среднюю длину угадайки (`mean len`) и приня�
 
 Без аргументов сканирует папку `logs\\` в корне проекта — туда launch\\**\\*.bat
 пишут датированный лог каждого старта (флаг --log-file).
+
+Примеры входа:
+    .venv\Scripts\python.exe bench\logstats.py                  # логи запусков (logs\)
+    .venv\Scripts\python.exe bench\logstats.py bench\runs       # логи бенчмарков
+    .venv\Scripts\python.exe bench\logstats.py <файл|маска>
 """
 
 import glob

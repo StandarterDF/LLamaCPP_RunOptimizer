@@ -11,11 +11,14 @@
 ${MODELS_DIR}, ${PROJECT_DIR} — они раскрываются из bench/env.local.json (образец: env.example.json).
 
 Каждый тест:
-  1) поднимает свой llama-server на отдельном порту, лог пишется в bench/runs/<name>.log;
+  1) поднимает свой llama-server на отдельном порту; артефакты теста ложатся в отдельную
+     папку bench/runs/<name>/ (лог — server.log, ответы чата — answers/<tag>.txt);
   2) ждёт /health, замеряет время загрузки и занятую VRAM;
   3) читает /props (наличие chat template, n_ctx);
   4) шлёт 2 запроса /completion (короткий промпт -> генерация; длинный промпт -> PP на глубине);
-  5) гасит сервер, пишет результат в bench/runs/results.jsonl.
+  5) гасит сервер, пишет результат в общий индекс bench/runs/results.jsonl.
+
+Папку для папок тестов можно сменить флагом --out-dir (по умолчанию runs).
 """
 
 import argparse
@@ -218,9 +221,13 @@ def log_digest(path):
     return hits[-60:]
 
 
-def run_test(name, port, server_exe, args, reqs, timeout_load=600, timeout_req=900):
+def run_test(
+    name, port, server_exe, args, reqs, tests_dir, timeout_load=600, timeout_req=900
+):
     cmd = [server_exe, "--host", "127.0.0.1", "--port", str(port), "--no-webui"] + args
-    log_path = os.path.join(RUNS, f"{name}.log")
+    answers_dir = os.path.join(tests_dir, "answers")
+    os.makedirs(answers_dir, exist_ok=True)
+    log_path = os.path.join(tests_dir, "server.log")
     logf = open(log_path, "w", encoding="utf-8", errors="replace")
 
     rec = {
@@ -333,7 +340,7 @@ def run_test(name, port, server_exe, args, reqs, timeout_load=600, timeout_req=9
                             :160
                         ]
                         out["usage"] = resp.get("usage")
-                        ans_path = os.path.join(RUNS, f"{name}-{tag}-answer.txt")
+                        ans_path = os.path.join(answers_dir, f"{tag}.txt")
                         with open(ans_path, "w", encoding="utf-8") as af:
                             af.write("=== reasoning_content ===\n")
                             af.write(msg.get("reasoning_content") or "")
@@ -385,6 +392,12 @@ def main():
     )
     ap.add_argument("--base-port", type=int, default=9941)
     ap.add_argument(
+        "--out-dir",
+        default="runs",
+        help="базовая папка для папок тестов (по умолчанию bench/runs); "
+        "внутри — <имя теста>/server.log и <имя теста>/answers/<tag>.txt",
+    )
+    ap.add_argument(
         "--dry-run",
         action="store_true",
         help="показать раскрытые пути/аргументы тестов и выйти (без запуска сервера)",
@@ -401,6 +414,8 @@ def main():
             reqs = json.load(f)
 
     results_path = os.path.join(RUNS, "results.jsonl")
+    out_dir = a.out_dir if os.path.isabs(a.out_dir) else os.path.join(ROOT, a.out_dir)
+    os.makedirs(out_dir, exist_ok=True)
     tests = suite["tests"]
     if a.only:
         tests = [t for t in tests if t["name"].startswith(a.only)]
@@ -418,7 +433,14 @@ def main():
         port = a.base_port + i
         args = ["--model", model] + common + t.get("args", [])
         print(f"[{i + 1}/{len(tests)}] {name}")
-        rec = run_test(name, port, server_exe, args, t.get("requests", reqs))
+        rec = run_test(
+            name,
+            port,
+            server_exe,
+            args,
+            t.get("requests", reqs),
+            os.path.join(out_dir, name),
+        )
         print(fmt(rec))
         with open(results_path, "a", encoding="utf-8") as f:
             f.write(json.dumps(rec, ensure_ascii=False) + "\n")

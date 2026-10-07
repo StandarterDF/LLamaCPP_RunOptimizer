@@ -94,4 +94,4 @@ cd <папка проекта>
 .\.venv\Scripts\python.exe bench\report.py                                  # сводка
 ```
 
-Сырые результаты: `bench\runs\results.jsonl`, логи серверов — `bench\runs\*.log`, ответы — `bench\runs\*-answer.txt`.
+Сырые результаты: `bench\runs\results.jsonl`, логи серверов — `bench\runs\<тест>\server.log`, ответы — `bench\runs\<тест>\answers\<tag>.txt`.
