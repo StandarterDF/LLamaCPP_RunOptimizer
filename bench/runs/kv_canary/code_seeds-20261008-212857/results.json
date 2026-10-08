@@ -1,0 +1,142 @@
+[
+  {
+    "model": "styletune-26b",
+    "kv": "f16",
+    "tasks": {
+      "add": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      },
+      "fact": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      },
+      "rev": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      },
+      "is_even": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "model": "styletune-26b",
+    "kv": "q4_0",
+    "tasks": {
+      "add": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      },
+      "fact": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      },
+      "rev": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      },
+      "is_even": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "model": "schattenblume-31b",
+    "kv": "f16",
+    "tasks": {
+      "add": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      },
+      "fact": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      },
+      "rev": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      },
+      "is_even": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "model": "schattenblume-31b",
+    "kv": "q4_0",
+    "tasks": {
+      "add": {
+        "pass": 0,
+        "n": 7,
+        "langs": {
+          "js": 7
+        }
+      },
+      "fact": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      },
+      "rev": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      },
+      "is_even": {
+        "pass": 7,
+        "n": 7,
+        "langs": {
+          "py": 7
+        }
+      }
+    },
+    "error": null
+  }
+]

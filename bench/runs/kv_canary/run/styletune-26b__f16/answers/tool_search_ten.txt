@@ -1,0 +1,1 @@
+{"name": "search_web", "arguments": {"query": "квантование нейросетей статьи", "num_results": 10}}

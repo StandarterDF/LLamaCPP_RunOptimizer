@@ -1,0 +1,1 @@
+{"name": "create_file", "arguments": {"path": "/projects/atlas/report.md", "content": "готов."}}

@@ -1,0 +1,1 @@
+{"name": "translate", "arguments": {"text": "доброе утро", "target_lang": "german"}}

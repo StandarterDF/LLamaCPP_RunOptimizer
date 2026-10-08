@@ -1,0 +1,2137 @@
+[
+  {
+    "model": "styletune-26b",
+    "kv": "f16",
+    "ctx": 24576,
+    "error": null,
+    "vram_mb": 15086,
+    "tools": {
+      "w_kazan": {
+        "content": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Казань\", \"unit\": \"metric\"}}",
+        "wall_s": 3.8,
+        "prompt_n": 8442,
+        "tg_t_s": 56.06525098170254,
+        "valid": true,
+        "name": "get_weather",
+        "args": {
+          "city": "Казань",
+          "unit": "metric"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "get_weather",
+        "expect_args": {
+          "city": [
+            "казан",
+            "kazan"
+          ],
+          "unit": [
+            "metric",
+            "метрик",
+            "цельс"
+          ]
+        }
+      },
+      "search_borscht": {
+        "content": "{\"name\": \"search_web\", \"arguments\": {\"query\": \"рецепт борща\", \"num_results\": 5}}",
+        "wall_s": 0.7,
+        "prompt_n": 18,
+        "tg_t_s": 56.494533666845896,
+        "valid": true,
+        "name": "search_web",
+        "args": {
+          "query": "рецепт борща",
+          "num_results": 5
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "search_web",
+        "expect_args": {
+          "query": [
+            "борщ",
+            "borscht"
+          ],
+          "num_results": [
+            5
+          ]
+        }
+      },
+      "translate_de": {
+        "content": "{\"name\": \"translate\", \"arguments\": {\"text\": \"доброе утро\", \"target_lang\": \"German\"}}",
+        "wall_s": 0.7,
+        "prompt_n": 21,
+        "tg_t_s": 56.39369112498647,
+        "valid": true,
+        "name": "translate",
+        "args": {
+          "text": "доброе утро",
+          "target_lang": "German"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "translate",
+        "expect_args": {
+          "text": [
+            "доброе утро",
+            "guten morgen"
+          ],
+          "target_lang": [
+            "de",
+            "нем",
+            "german"
+          ]
+        }
+      },
+      "create_notes": {
+        "content": "{\"name\": \"create_file\", \"arguments\": {\"path\": \"/projects/atlas/notes.txt\", \"content\": \"купить хлеб\"}}",
+        "wall_s": 0.8,
+        "prompt_n": 23,
+        "tg_t_s": 56.8197960169323,
+        "valid": true,
+        "name": "create_file",
+        "args": {
+          "path": "/projects/atlas/notes.txt",
+          "content": "купить хлеб"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "create_file",
+        "expect_args": {
+          "path": [
+            "notes.txt"
+          ],
+          "content": [
+            "купить хлеб"
+          ]
+        }
+      },
+      "email_ivan": {
+        "content": "{\"name\": \"send_email\", \"arguments\": {\"to\": \"Иван\", \"subject\": \"Отчёт\", \"body\": \"\"}}",
+        "wall_s": 0.7,
+        "prompt_n": 21,
+        "tg_t_s": 57.23508739797846,
+        "valid": true,
+        "name": "send_email",
+        "args": {
+          "to": "Иван",
+          "subject": "Отчёт",
+          "body": ""
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "send_email",
+        "expect_args": {
+          "to": [
+            "иван",
+            "ivan"
+          ],
+          "subject": [
+            "отчет"
+          ]
+        }
+      },
+      "remind_milk": {
+        "content": "{\"name\": \"set_reminder\", \"arguments\": {\"time\": \"2026-10-08 11:00:00\", \"text\": \"купить молоко\"}}",
+        "wall_s": 1.0,
+        "prompt_n": 17,
+        "tg_t_s": 57.134960749610684,
+        "valid": true,
+        "name": "set_reminder",
+        "args": {
+          "time": "2026-10-08 11:00:00",
+          "text": "купить молоко"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "set_reminder",
+        "expect_args": {
+          "time": [
+            "час",
+            "hour",
+            "11"
+          ],
+          "text": [
+            "молоко",
+            "milk"
+          ]
+        }
+      },
+      "convert_100": {
+        "content": "{\"name\": \"convert_currency\", \"arguments\": {\"amount\": 100, \"from_currency\": \"USD\", \"to_currency\": \"EUR\"}}",
+        "wall_s": 0.8,
+        "prompt_n": 20,
+        "tg_t_s": 57.480608506144684,
+        "valid": true,
+        "name": "convert_currency",
+        "args": {
+          "amount": 100,
+          "from_currency": "USD",
+          "to_currency": "EUR"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "convert_currency",
+        "expect_args": {
+          "amount": [
+            100
+          ],
+          "from_currency": [
+            "usd",
+            "доллар",
+            "dollar"
+          ],
+          "to_currency": [
+            "eur",
+            "евро",
+            "euro"
+          ]
+        }
+      },
+      "book_praga": {
+        "content": "{\"name\": \"book_table\", \"arguments\": {\"restaurant\": \"Прага\", \"people\": 4, \"date\": \"2026-10-08\"}}",
+        "wall_s": 0.9,
+        "prompt_n": 27,
+        "tg_t_s": 57.63441750076477,
+        "valid": true,
+        "name": "book_table",
+        "args": {
+          "restaurant": "Прага",
+          "people": 4,
+          "date": "2026-10-08"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "book_table",
+        "expect_args": {
+          "restaurant": [
+            "прага",
+            "praga"
+          ],
+          "people": [
+            4
+          ]
+        }
+      },
+      "w_tokyo_f": {
+        "content": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tokyo\", \"unit\": \"imperial\"}}",
+        "wall_s": 0.6,
+        "prompt_n": 24,
+        "tg_t_s": 56.69423321049583,
+        "valid": true,
+        "name": "get_weather",
+        "args": {
+          "city": "Tokyo",
+          "unit": "imperial"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "get_weather",
+        "expect_args": {
+          "city": [
+            "токио",
+            "tokyo"
+          ],
+          "unit": [
+            "imperial",
+            "фаренг",
+            "fahrenheit"
+          ]
+        }
+      },
+      "search_ten": {
+        "content": "{\"name\": \"search_web\", \"arguments\": {\"query\": \"квантование нейросетей статьи\", \"num_results\": 10}}",
+        "wall_s": 0.8,
+        "prompt_n": 24,
+        "tg_t_s": 57.83768703687323,
+        "valid": true,
+        "name": "search_web",
+        "args": {
+          "query": "квантование нейросетей статьи",
+          "num_results": 10
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "search_web",
+        "expect_args": {
+          "query": [
+            "квантован",
+            "quantiz"
+          ],
+          "num_results": [
+            10
+          ]
+        }
+      },
+      "translate_fr": {
+        "content": "{\"name\": \"translate\", \"arguments\": {\"text\": \"спасибо\", \"target_lang\": \"French\"}}",
+        "wall_s": 0.6,
+        "prompt_n": 20,
+        "tg_t_s": 56.728335094275394,
+        "valid": true,
+        "name": "translate",
+        "args": {
+          "text": "спасибо",
+          "target_lang": "French"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "translate",
+        "expect_args": {
+          "text": [
+            "спасибо",
+            "merci"
+          ],
+          "target_lang": [
+            "fr",
+            "фран",
+            "french"
+          ]
+        }
+      },
+      "file_report": {
+        "content": "{\"name\": \"create_file\", \"arguments\": {\"path\": \"/projects/atlas/report.md\", \"content\": \"готов\"}}",
+        "wall_s": 0.7,
+        "prompt_n": 25,
+        "tg_t_s": 58.21224183372577,
+        "valid": true,
+        "name": "create_file",
+        "args": {
+          "path": "/projects/atlas/report.md",
+          "content": "готов"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "create_file",
+        "expect_args": {
+          "path": [
+            "report.md"
+          ],
+          "content": [
+            "готов"
+          ]
+        }
+      }
+    },
+    "code": {
+      "add": {
+        "content": "```python\ndef add(a, b):\n    return a + b\n```",
+        "wall_s": 0.7,
+        "prompt_n": 52,
+        "tg_t_s": 67.17094632668217,
+        "pass": true,
+        "code": "def add(a, b):\n    return a + b"
+      },
+      "fact": {
+        "content": "```python\ndef fact(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n```",
+        "wall_s": 0.7,
+        "prompt_n": 51,
+        "tg_t_s": 68.01178871004308,
+        "pass": true,
+        "code": "def fact(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result"
+      },
+      "rev": {
+        "content": "```python\ndef rev(s):\n    return s[::-1]\n```",
+        "wall_s": 0.4,
+        "prompt_n": 53,
+        "tg_t_s": 68.11661564598592,
+        "pass": true,
+        "code": "def rev(s):\n    return s[::-1]"
+      },
+      "is_even": {
+        "content": "```python\ndef is_even(n):\n    return n % 2 == 0\n```",
+        "wall_s": 0.4,
+        "prompt_n": 56,
+        "tg_t_s": 68.95881591444092,
+        "pass": true,
+        "code": "def is_even(n):\n    return n % 2 == 0"
+      }
+    },
+    "system_tokens": 8415,
+    "summary": {
+      "tools_total": 12,
+      "json_valid_rate": 1.0,
+      "name_rate": 1.0,
+      "functional_rate": 1.0,
+      "code_pass_rate": 1.0
+    }
+  },
+  {
+    "model": "styletune-26b",
+    "kv": "q8_0",
+    "ctx": 24576,
+    "error": null,
+    "vram_mb": 14736,
+    "tools": {
+      "w_kazan": {
+        "content": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Казань\", \"unit\": \"metric\"}}",
+        "wall_s": 4.0,
+        "prompt_n": 8442,
+        "tg_t_s": 56.106395680256384,
+        "valid": true,
+        "name": "get_weather",
+        "args": {
+          "city": "Казань",
+          "unit": "metric"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "get_weather",
+        "expect_args": {
+          "city": [
+            "казан",
+            "kazan"
+          ],
+          "unit": [
+            "metric",
+            "метрик",
+            "цельс"
+          ]
+        }
+      },
+      "search_borscht": {
+        "content": "{\"name\": \"search_web\", \"arguments\": {\"query\": \"рецепт борща\", \"num_results\": 5}}",
+        "wall_s": 0.6,
+        "prompt_n": 18,
+        "tg_t_s": 57.541851776158225,
+        "valid": true,
+        "name": "search_web",
+        "args": {
+          "query": "рецепт борща",
+          "num_results": 5
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "search_web",
+        "expect_args": {
+          "query": [
+            "борщ",
+            "borscht"
+          ],
+          "num_results": [
+            5
+          ]
+        }
+      },
+      "translate_de": {
+        "content": "{\"name\": \"translate\", \"arguments\": {\"text\": \"доброе утро\", \"target_lang\": \"German\"}}",
+        "wall_s": 0.6,
+        "prompt_n": 21,
+        "tg_t_s": 55.996810421678376,
+        "valid": true,
+        "name": "translate",
+        "args": {
+          "text": "доброе утро",
+          "target_lang": "German"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "translate",
+        "expect_args": {
+          "text": [
+            "доброе утро",
+            "guten morgen"
+          ],
+          "target_lang": [
+            "de",
+            "нем",
+            "german"
+          ]
+        }
+      },
+      "create_notes": {
+        "content": "{\"name\": \"create_file\", \"arguments\": {\"path\": \"/projects/atlas/notes.txt\", \"content\": \"купить хлеб\"}}",
+        "wall_s": 0.7,
+        "prompt_n": 23,
+        "tg_t_s": 57.22020660070845,
+        "valid": true,
+        "name": "create_file",
+        "args": {
+          "path": "/projects/atlas/notes.txt",
+          "content": "купить хлеб"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "create_file",
+        "expect_args": {
+          "path": [
+            "notes.txt"
+          ],
+          "content": [
+            "купить хлеб"
+          ]
+        }
+      },
+      "email_ivan": {
+        "content": "{\"name\": \"send_email\", \"arguments\": {\"to\": \"Иван\", \"subject\": \"Отчёт\", \"body\": \"\"}}",
+        "wall_s": 0.7,
+        "prompt_n": 21,
+        "tg_t_s": 56.870097323693216,
+        "valid": true,
+        "name": "send_email",
+        "args": {
+          "to": "Иван",
+          "subject": "Отчёт",
+          "body": ""
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "send_email",
+        "expect_args": {
+          "to": [
+            "иван",
+            "ivan"
+          ],
+          "subject": [
+            "отчет"
+          ]
+        }
+      },
+      "remind_milk": {
+        "content": "{\"name\": \"set_reminder\", \"arguments\": {\"time\": \"2026-10-08 11:00:00\", \"text\": \"купить молоко\"}}",
+        "wall_s": 0.9,
+        "prompt_n": 17,
+        "tg_t_s": 57.23405133228892,
+        "valid": true,
+        "name": "set_reminder",
+        "args": {
+          "time": "2026-10-08 11:00:00",
+          "text": "купить молоко"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "set_reminder",
+        "expect_args": {
+          "time": [
+            "час",
+            "hour",
+            "11"
+          ],
+          "text": [
+            "молоко",
+            "milk"
+          ]
+        }
+      },
+      "convert_100": {
+        "content": "{\"name\": \"convert_currency\", \"arguments\": {\"amount\": 100, \"from_currency\": \"USD\", \"to_currency\": \"EUR\"}}",
+        "wall_s": 0.8,
+        "prompt_n": 20,
+        "tg_t_s": 57.06803977805424,
+        "valid": true,
+        "name": "convert_currency",
+        "args": {
+          "amount": 100,
+          "from_currency": "USD",
+          "to_currency": "EUR"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "convert_currency",
+        "expect_args": {
+          "amount": [
+            100
+          ],
+          "from_currency": [
+            "usd",
+            "доллар",
+            "dollar"
+          ],
+          "to_currency": [
+            "eur",
+            "евро",
+            "euro"
+          ]
+        }
+      },
+      "book_praga": {
+        "content": "{\"name\": \"book_table\", \"arguments\": {\"restaurant\": \"Прага\", \"people\": 4}}",
+        "wall_s": 0.6,
+        "prompt_n": 27,
+        "tg_t_s": 56.235326094597184,
+        "valid": true,
+        "name": "book_table",
+        "args": {
+          "restaurant": "Прага",
+          "people": 4
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "book_table",
+        "expect_args": {
+          "restaurant": [
+            "прага",
+            "praga"
+          ],
+          "people": [
+            4
+          ]
+        }
+      },
+      "w_tokyo_f": {
+        "content": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tokyo\", \"unit\": \"imperial\"}}",
+        "wall_s": 0.6,
+        "prompt_n": 24,
+        "tg_t_s": 57.12511642347097,
+        "valid": true,
+        "name": "get_weather",
+        "args": {
+          "city": "Tokyo",
+          "unit": "imperial"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "get_weather",
+        "expect_args": {
+          "city": [
+            "токио",
+            "tokyo"
+          ],
+          "unit": [
+            "imperial",
+            "фаренг",
+            "fahrenheit"
+          ]
+        }
+      },
+      "search_ten": {
+        "content": "{\"name\": \"search_web\", \"arguments\": {\"query\": \"квантование нейросетей статьи\", \"num_results\": 10}}",
+        "wall_s": 0.8,
+        "prompt_n": 24,
+        "tg_t_s": 57.08462123514331,
+        "valid": true,
+        "name": "search_web",
+        "args": {
+          "query": "квантование нейросетей статьи",
+          "num_results": 10
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "search_web",
+        "expect_args": {
+          "query": [
+            "квантован",
+            "quantiz"
+          ],
+          "num_results": [
+            10
+          ]
+        }
+      },
+      "translate_fr": {
+        "content": "{\"name\": \"translate\", \"arguments\": {\"text\": \"спасибо\", \"target_lang\": \"French\"}}",
+        "wall_s": 0.6,
+        "prompt_n": 20,
+        "tg_t_s": 56.266176525751156,
+        "valid": true,
+        "name": "translate",
+        "args": {
+          "text": "спасибо",
+          "target_lang": "French"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "translate",
+        "expect_args": {
+          "text": [
+            "спасибо",
+            "merci"
+          ],
+          "target_lang": [
+            "fr",
+            "фран",
+            "french"
+          ]
+        }
+      },
+      "file_report": {
+        "content": "{\"name\": \"create_file\", \"arguments\": {\"path\": \"/projects/atlas/report.md\", \"content\": \"готов\"}}",
+        "wall_s": 0.6,
+        "prompt_n": 25,
+        "tg_t_s": 57.166737632272,
+        "valid": true,
+        "name": "create_file",
+        "args": {
+          "path": "/projects/atlas/report.md",
+          "content": "готов"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "create_file",
+        "expect_args": {
+          "path": [
+            "report.md"
+          ],
+          "content": [
+            "готов"
+          ]
+        }
+      }
+    },
+    "code": {
+      "add": {
+        "content": "```python\ndef add(a, b):\n    return a + b\n```",
+        "wall_s": 0.5,
+        "prompt_n": 52,
+        "tg_t_s": 64.06719937356516,
+        "pass": true,
+        "code": "def add(a, b):\n    return a + b"
+      },
+      "fact": {
+        "content": "```python\ndef fact(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n```",
+        "wall_s": 0.7,
+        "prompt_n": 51,
+        "tg_t_s": 65.74544375645864,
+        "pass": true,
+        "code": "def fact(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result"
+      },
+      "rev": {
+        "content": "```python\ndef rev(s):\n    return s[::-1]\n```",
+        "wall_s": 0.4,
+        "prompt_n": 53,
+        "tg_t_s": 65.78845528706985,
+        "pass": true,
+        "code": "def rev(s):\n    return s[::-1]"
+      },
+      "is_even": {
+        "content": "```python\ndef is_even(n):\n    return n % 2 == 0\n```",
+        "wall_s": 0.5,
+        "prompt_n": 56,
+        "tg_t_s": 64.9279742176917,
+        "pass": true,
+        "code": "def is_even(n):\n    return n % 2 == 0"
+      }
+    },
+    "system_tokens": 8415,
+    "summary": {
+      "tools_total": 12,
+      "json_valid_rate": 1.0,
+      "name_rate": 1.0,
+      "functional_rate": 1.0,
+      "code_pass_rate": 1.0
+    }
+  },
+  {
+    "model": "styletune-26b",
+    "kv": "q4_0",
+    "ctx": 24576,
+    "error": null,
+    "vram_mb": 14542,
+    "tools": {
+      "w_kazan": {
+        "content": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Казань\", \"unit\": \"metric\"}}",
+        "wall_s": 3.5,
+        "prompt_n": 8442,
+        "tg_t_s": 63.337961227033645,
+        "valid": true,
+        "name": "get_weather",
+        "args": {
+          "city": "Казань",
+          "unit": "metric"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "get_weather",
+        "expect_args": {
+          "city": [
+            "казан",
+            "kazan"
+          ],
+          "unit": [
+            "metric",
+            "метрик",
+            "цельс"
+          ]
+        }
+      },
+      "search_borscht": {
+        "content": "{\"name\": \"search_web\", \"arguments\": {\"query\": \"рецепт борща\", \"num_results\": 5}}",
+        "wall_s": 0.6,
+        "prompt_n": 18,
+        "tg_t_s": 64.50680101876257,
+        "valid": true,
+        "name": "search_web",
+        "args": {
+          "query": "рецепт борща",
+          "num_results": 5
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "search_web",
+        "expect_args": {
+          "query": [
+            "борщ",
+            "borscht"
+          ],
+          "num_results": [
+            5
+          ]
+        }
+      },
+      "translate_de": {
+        "content": "{\"name\": \"translate\", \"arguments\": {\"text\": \"доброе утро\", \"target_lang\": \"German\"}}",
+        "wall_s": 0.5,
+        "prompt_n": 21,
+        "tg_t_s": 63.8517413646905,
+        "valid": true,
+        "name": "translate",
+        "args": {
+          "text": "доброе утро",
+          "target_lang": "German"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "translate",
+        "expect_args": {
+          "text": [
+            "доброе утро",
+            "guten morgen"
+          ],
+          "target_lang": [
+            "de",
+            "нем",
+            "german"
+          ]
+        }
+      },
+      "create_notes": {
+        "content": "{\"name\": \"create_file\", \"arguments\": {\"path\": \"notes.txt\", \"content\": \"купить хлеб\"}}",
+        "wall_s": 0.6,
+        "prompt_n": 23,
+        "tg_t_s": 64.70996071180957,
+        "valid": true,
+        "name": "create_file",
+        "args": {
+          "path": "notes.txt",
+          "content": "купить хлеб"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "create_file",
+        "expect_args": {
+          "path": [
+            "notes.txt"
+          ],
+          "content": [
+            "купить хлеб"
+          ]
+        }
+      },
+      "email_ivan": {
+        "content": "{\"name\": \"send_email\", \"arguments\": {\"to\": \"Иван\", \"subject\": \"Отчёт\", \"body\": \"\"}}",
+        "wall_s": 0.6,
+        "prompt_n": 21,
+        "tg_t_s": 63.97625201525194,
+        "valid": true,
+        "name": "send_email",
+        "args": {
+          "to": "Иван",
+          "subject": "Отчёт",
+          "body": ""
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "send_email",
+        "expect_args": {
+          "to": [
+            "иван",
+            "ivan"
+          ],
+          "subject": [
+            "отчет"
+          ]
+        }
+      },
+      "remind_milk": {
+        "content": "{\"name\": \"set_reminder\", \"arguments\": {\"time\": \"2026-10-08 11:00:00\", \"text\": \"купить молоко\"}}",
+        "wall_s": 0.8,
+        "prompt_n": 17,
+        "tg_t_s": 64.30435400294603,
+        "valid": true,
+        "name": "set_reminder",
+        "args": {
+          "time": "2026-10-08 11:00:00",
+          "text": "купить молоко"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "set_reminder",
+        "expect_args": {
+          "time": [
+            "час",
+            "hour",
+            "11"
+          ],
+          "text": [
+            "молоко",
+            "milk"
+          ]
+        }
+      },
+      "convert_100": {
+        "content": "{\"name\": \"convert_currency\", \"arguments\": {\"amount\": 100, \"from_currency\": \"USD\", \"to_currency\": \"EUR\"}}",
+        "wall_s": 0.7,
+        "prompt_n": 20,
+        "tg_t_s": 65.02192167645092,
+        "valid": true,
+        "name": "convert_currency",
+        "args": {
+          "amount": 100,
+          "from_currency": "USD",
+          "to_currency": "EUR"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "convert_currency",
+        "expect_args": {
+          "amount": [
+            100
+          ],
+          "from_currency": [
+            "usd",
+            "доллар",
+            "dollar"
+          ],
+          "to_currency": [
+            "eur",
+            "евро",
+            "euro"
+          ]
+        }
+      },
+      "book_praga": {
+        "content": "{\"name\": \"book_table\", \"arguments\": {\"restaurant\": \"Прага\", \"people\": 4, \"date\": \"2026-10-08\"}}",
+        "wall_s": 0.7,
+        "prompt_n": 27,
+        "tg_t_s": 65.23342694608876,
+        "valid": true,
+        "name": "book_table",
+        "args": {
+          "restaurant": "Прага",
+          "people": 4,
+          "date": "2026-10-08"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "book_table",
+        "expect_args": {
+          "restaurant": [
+            "прага",
+            "praga"
+          ],
+          "people": [
+            4
+          ]
+        }
+      },
+      "w_tokyo_f": {
+        "content": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Tokyo\", \"unit\": \"imperial\"}}",
+        "wall_s": 0.5,
+        "prompt_n": 24,
+        "tg_t_s": 65.29119874640898,
+        "valid": true,
+        "name": "get_weather",
+        "args": {
+          "city": "Tokyo",
+          "unit": "imperial"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "get_weather",
+        "expect_args": {
+          "city": [
+            "токио",
+            "tokyo"
+          ],
+          "unit": [
+            "imperial",
+            "фаренг",
+            "fahrenheit"
+          ]
+        }
+      },
+      "search_ten": {
+        "content": "{\"name\": \"search_web\", \"arguments\": {\"query\": \"квантование нейросетей статьи\", \"num_results\": 10}}",
+        "wall_s": 0.7,
+        "prompt_n": 24,
+        "tg_t_s": 65.23269846568856,
+        "valid": true,
+        "name": "search_web",
+        "args": {
+          "query": "квантование нейросетей статьи",
+          "num_results": 10
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "search_web",
+        "expect_args": {
+          "query": [
+            "квантован",
+            "quantiz"
+          ],
+          "num_results": [
+            10
+          ]
+        }
+      },
+      "translate_fr": {
+        "content": "{\"name\": \"translate\", \"arguments\": {\"text\": \"спасибо\", \"target_lang\": \"French\"}}",
+        "wall_s": 0.5,
+        "prompt_n": 20,
+        "tg_t_s": 64.46258349919019,
+        "valid": true,
+        "name": "translate",
+        "args": {
+          "text": "спасибо",
+          "target_lang": "French"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "translate",
+        "expect_args": {
+          "text": [
+            "спасибо",
+            "merci"
+          ],
+          "target_lang": [
+            "fr",
+            "фран",
+            "french"
+          ]
+        }
+      },
+      "file_report": {
+        "content": "{\"name\": \"create_file\", \"arguments\": {\"path\": \"/projects/atlas/report.md\", \"content\": \"готов.\"}}",
+        "wall_s": 0.6,
+        "prompt_n": 25,
+        "tg_t_s": 65.67238673155099,
+        "valid": true,
+        "name": "create_file",
+        "args": {
+          "path": "/projects/atlas/report.md",
+          "content": "готов."
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "create_file",
+        "expect_args": {
+          "path": [
+            "report.md"
+          ],
+          "content": [
+            "готов"
+          ]
+        }
+      }
+    },
+    "code": {
+      "add": {
+        "content": "```python\ndef add(a, b):\n    return a + b\n```",
+        "wall_s": 0.4,
+        "prompt_n": 52,
+        "tg_t_s": 72.81995266703076,
+        "pass": true,
+        "code": "def add(a, b):\n    return a + b"
+      },
+      "fact": {
+        "content": "```python\ndef fact(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n```",
+        "wall_s": 0.6,
+        "prompt_n": 51,
+        "tg_t_s": 74.67015893256136,
+        "pass": true,
+        "code": "def fact(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result"
+      },
+      "rev": {
+        "content": "```python\ndef rev(s):\n    return s[::-1]\n```",
+        "wall_s": 0.3,
+        "prompt_n": 53,
+        "tg_t_s": 73.85043115619366,
+        "pass": true,
+        "code": "def rev(s):\n    return s[::-1]"
+      },
+      "is_even": {
+        "content": "```python\ndef is_even(n):\n    return n % 2 == 0\n```",
+        "wall_s": 0.4,
+        "prompt_n": 56,
+        "tg_t_s": 73.31231713575441,
+        "pass": true,
+        "code": "def is_even(n):\n    return n % 2 == 0"
+      }
+    },
+    "system_tokens": 8415,
+    "summary": {
+      "tools_total": 12,
+      "json_valid_rate": 1.0,
+      "name_rate": 1.0,
+      "functional_rate": 1.0,
+      "code_pass_rate": 1.0
+    }
+  },
+  {
+    "model": "schattenblume-31b",
+    "kv": "f16",
+    "ctx": 16384,
+    "error": null,
+    "vram_mb": 14927,
+    "tools": {
+      "w_kazan": {
+        "content": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Казань\", \"unit\": \"metric\"}}",
+        "wall_s": 13.9,
+        "prompt_n": 8442,
+        "tg_t_s": 15.022918965173268,
+        "valid": true,
+        "name": "get_weather",
+        "args": {
+          "city": "Казань",
+          "unit": "metric"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "get_weather",
+        "expect_args": {
+          "city": [
+            "казан",
+            "kazan"
+          ],
+          "unit": [
+            "metric",
+            "метрик",
+            "цельс"
+          ]
+        }
+      },
+      "search_borscht": {
+        "content": "{\"name\": \"search_web\", \"arguments\": {\"query\": \"рецепт борща\", \"num_results\": 5}}",
+        "wall_s": 2.5,
+        "prompt_n": 18,
+        "tg_t_s": 15.338266966238887,
+        "valid": true,
+        "name": "search_web",
+        "args": {
+          "query": "рецепт борща",
+          "num_results": 5
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "search_web",
+        "expect_args": {
+          "query": [
+            "борщ",
+            "borscht"
+          ],
+          "num_results": [
+            5
+          ]
+        }
+      },
+      "translate_de": {
+        "content": "{\"name\": \"translate\", \"arguments\": {\"text\": \"доброе утро\", \"target_lang\": \"german\"}}",
+        "wall_s": 2.4,
+        "prompt_n": 21,
+        "tg_t_s": 14.728998216023736,
+        "valid": true,
+        "name": "translate",
+        "args": {
+          "text": "доброе утро",
+          "target_lang": "german"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "translate",
+        "expect_args": {
+          "text": [
+            "доброе утро",
+            "guten morgen"
+          ],
+          "target_lang": [
+            "de",
+            "нем",
+            "german"
+          ]
+        }
+      },
+      "create_notes": {
+        "content": "{\"name\": \"create_file\", \"arguments\": {\"path\": \"/projects/atlas/notes.txt\", \"content\": \"купить хлеб\"}}",
+        "wall_s": 3.2,
+        "prompt_n": 23,
+        "tg_t_s": 13.007966159776036,
+        "valid": true,
+        "name": "create_file",
+        "args": {
+          "path": "/projects/atlas/notes.txt",
+          "content": "купить хлеб"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "create_file",
+        "expect_args": {
+          "path": [
+            "notes.txt"
+          ],
+          "content": [
+            "купить хлеб"
+          ]
+        }
+      },
+      "email_ivan": {
+        "content": "{\"name\": \"send_email\", \"arguments\": {\"to\": \"Иван\", \"subject\": \"Отчёт\", \"body\": \"\"}}",
+        "wall_s": 2.7,
+        "prompt_n": 21,
+        "tg_t_s": 14.645369695508117,
+        "valid": true,
+        "name": "send_email",
+        "args": {
+          "to": "Иван",
+          "subject": "Отчёт",
+          "body": ""
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "send_email",
+        "expect_args": {
+          "to": [
+            "иван",
+            "ivan"
+          ],
+          "subject": [
+            "отчет"
+          ]
+        }
+      },
+      "remind_milk": {
+        "content": "{\"name\": \"set_reminder\", \"arguments\": {\"time\": \"2026-10-08T11:00:00\", \"text\": \"купить молоко\"}}",
+        "wall_s": 3.5,
+        "prompt_n": 17,
+        "tg_t_s": 15.176124215517904,
+        "valid": true,
+        "name": "set_reminder",
+        "args": {
+          "time": "2026-10-08T11:00:00",
+          "text": "купить молоко"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "set_reminder",
+        "expect_args": {
+          "time": [
+            "час",
+            "hour",
+            "11"
+          ],
+          "text": [
+            "молоко",
+            "milk"
+          ]
+        }
+      },
+      "convert_100": {
+        "content": "{\"name\": \"convert_currency\", \"arguments\": {\"amount\": 100, \"from_currency\": \"USD\", \"to_currency\": \"EUR\"}}",
+        "wall_s": 2.9,
+        "prompt_n": 20,
+        "tg_t_s": 15.417225357547482,
+        "valid": true,
+        "name": "convert_currency",
+        "args": {
+          "amount": 100,
+          "from_currency": "USD",
+          "to_currency": "EUR"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "convert_currency",
+        "expect_args": {
+          "amount": [
+            100
+          ],
+          "from_currency": [
+            "usd",
+            "доллар",
+            "dollar"
+          ],
+          "to_currency": [
+            "eur",
+            "евро",
+            "euro"
+          ]
+        }
+      },
+      "book_praga": {
+        "content": "{\"name\": \"book_table\", \"arguments\": {\"restaurant\": \"Прага\", \"people\": 4, \"date\": \"2026-10-08\"}}",
+        "wall_s": 3.3,
+        "prompt_n": 27,
+        "tg_t_s": 14.85366851334583,
+        "valid": true,
+        "name": "book_table",
+        "args": {
+          "restaurant": "Прага",
+          "people": 4,
+          "date": "2026-10-08"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "book_table",
+        "expect_args": {
+          "restaurant": [
+            "прага",
+            "praga"
+          ],
+          "people": [
+            4
+          ]
+        }
+      },
+      "w_tokyo_f": {
+        "content": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Токио\", \"unit\": \"imperial\"}}",
+        "wall_s": 2.4,
+        "prompt_n": 24,
+        "tg_t_s": 14.532948810885063,
+        "valid": true,
+        "name": "get_weather",
+        "args": {
+          "city": "Токио",
+          "unit": "imperial"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "get_weather",
+        "expect_args": {
+          "city": [
+            "токио",
+            "tokyo"
+          ],
+          "unit": [
+            "imperial",
+            "фаренг",
+            "fahrenheit"
+          ]
+        }
+      },
+      "search_ten": {
+        "content": "{\"name\": \"search_web\", \"arguments\": {\"query\": \"квантование нейросетей статьи\", \"num_results\": 10}}",
+        "wall_s": 3.0,
+        "prompt_n": 24,
+        "tg_t_s": 14.625543080827635,
+        "valid": true,
+        "name": "search_web",
+        "args": {
+          "query": "квантование нейросетей статьи",
+          "num_results": 10
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "search_web",
+        "expect_args": {
+          "query": [
+            "квантован",
+            "quantiz"
+          ],
+          "num_results": [
+            10
+          ]
+        }
+      },
+      "translate_fr": {
+        "content": "{\"name\": \"translate\", \"arguments\": {\"text\": \"спасибо\", \"target_lang\": \"french\"}}",
+        "wall_s": 2.3,
+        "prompt_n": 20,
+        "tg_t_s": 14.647248483857208,
+        "valid": true,
+        "name": "translate",
+        "args": {
+          "text": "спасибо",
+          "target_lang": "french"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "translate",
+        "expect_args": {
+          "text": [
+            "спасибо",
+            "merci"
+          ],
+          "target_lang": [
+            "fr",
+            "фран",
+            "french"
+          ]
+        }
+      },
+      "file_report": {
+        "content": "{\"name\": \"create_file\", \"arguments\": {\"path\": \"/projects/atlas/report.md\", \"content\": \"готов.\"}}",
+        "wall_s": 2.7,
+        "prompt_n": 25,
+        "tg_t_s": 14.752584406911684,
+        "valid": true,
+        "name": "create_file",
+        "args": {
+          "path": "/projects/atlas/report.md",
+          "content": "готов."
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "create_file",
+        "expect_args": {
+          "path": [
+            "report.md"
+          ],
+          "content": [
+            "готов"
+          ]
+        }
+      }
+    },
+    "code": {
+      "add": {
+        "content": "```python\ndef add(a, b):\n    return a + b\n```",
+        "wall_s": 2.6,
+        "prompt_n": 52,
+        "tg_t_s": 16.602102933038186,
+        "pass": true,
+        "code": "def add(a, b):\n    return a + b"
+      },
+      "fact": {
+        "content": "```python\ndef fact(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n```",
+        "wall_s": 2.5,
+        "prompt_n": 51,
+        "tg_t_s": 17.451062076112585,
+        "pass": true,
+        "code": "def fact(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result"
+      },
+      "rev": {
+        "content": "```python\ndef rev(s):\n    return s[::-1]\n```",
+        "wall_s": 1.3,
+        "prompt_n": 53,
+        "tg_t_s": 17.478634939174352,
+        "pass": true,
+        "code": "def rev(s):\n    return s[::-1]"
+      },
+      "is_even": {
+        "content": "```python\ndef is_even(n):\n    return n % 2 == 0\n```",
+        "wall_s": 1.6,
+        "prompt_n": 56,
+        "tg_t_s": 17.65956217129133,
+        "pass": true,
+        "code": "def is_even(n):\n    return n % 2 == 0"
+      }
+    },
+    "system_tokens": 8415,
+    "summary": {
+      "tools_total": 12,
+      "json_valid_rate": 1.0,
+      "name_rate": 1.0,
+      "functional_rate": 1.0,
+      "code_pass_rate": 1.0
+    }
+  },
+  {
+    "model": "schattenblume-31b",
+    "kv": "q8_0",
+    "ctx": 16384,
+    "error": null,
+    "vram_mb": 13818,
+    "tools": {
+      "w_kazan": {
+        "content": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Казань\", \"unit\": \"metric\"}}",
+        "wall_s": 14.2,
+        "prompt_n": 8442,
+        "tg_t_s": 15.116938590158027,
+        "valid": true,
+        "name": "get_weather",
+        "args": {
+          "city": "Казань",
+          "unit": "metric"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "get_weather",
+        "expect_args": {
+          "city": [
+            "казан",
+            "kazan"
+          ],
+          "unit": [
+            "metric",
+            "метрик",
+            "цельс"
+          ]
+        }
+      },
+      "search_borscht": {
+        "content": "{\"name\": \"search_web\", \"arguments\": {\"query\": \"рецепт борща\", \"num_results\": 5}}",
+        "wall_s": 2.3,
+        "prompt_n": 18,
+        "tg_t_s": 15.167459209995041,
+        "valid": true,
+        "name": "search_web",
+        "args": {
+          "query": "рецепт борща",
+          "num_results": 5
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "search_web",
+        "expect_args": {
+          "query": [
+            "борщ",
+            "borscht"
+          ],
+          "num_results": [
+            5
+          ]
+        }
+      },
+      "translate_de": {
+        "content": "{\"name\": \"translate\", \"arguments\": {\"text\": \"доброе утро\", \"target_lang\": \"german\"}}",
+        "wall_s": 2.1,
+        "prompt_n": 21,
+        "tg_t_s": 15.160924112904006,
+        "valid": true,
+        "name": "translate",
+        "args": {
+          "text": "доброе утро",
+          "target_lang": "german"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "translate",
+        "expect_args": {
+          "text": [
+            "доброе утро",
+            "guten morgen"
+          ],
+          "target_lang": [
+            "de",
+            "нем",
+            "german"
+          ]
+        }
+      },
+      "create_notes": {
+        "content": "{\"name\": \"create_file\", \"arguments\": {\"path\": \"notes.txt\", \"content\": \"купить хлеб\"}}",
+        "wall_s": 2.3,
+        "prompt_n": 23,
+        "tg_t_s": 15.185822949574932,
+        "valid": true,
+        "name": "create_file",
+        "args": {
+          "path": "notes.txt",
+          "content": "купить хлеб"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "create_file",
+        "expect_args": {
+          "path": [
+            "notes.txt"
+          ],
+          "content": [
+            "купить хлеб"
+          ]
+        }
+      },
+      "email_ivan": {
+        "content": "{\"name\": \"send_email\", \"arguments\": {\"to\": \"Иван\", \"subject\": \"Отчёт\", \"body\": \"\"}}",
+        "wall_s": 2.4,
+        "prompt_n": 21,
+        "tg_t_s": 15.170370849829004,
+        "valid": true,
+        "name": "send_email",
+        "args": {
+          "to": "Иван",
+          "subject": "Отчёт",
+          "body": ""
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "send_email",
+        "expect_args": {
+          "to": [
+            "иван",
+            "ivan"
+          ],
+          "subject": [
+            "отчет"
+          ]
+        }
+      },
+      "remind_milk": {
+        "content": "{\"name\": \"set_reminder\", \"arguments\": {\"time\": \"2026-10-08T11:00:00\", \"text\": \"купить молоко\"}}",
+        "wall_s": 3.3,
+        "prompt_n": 17,
+        "tg_t_s": 15.229222824425833,
+        "valid": true,
+        "name": "set_reminder",
+        "args": {
+          "time": "2026-10-08T11:00:00",
+          "text": "купить молоко"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "set_reminder",
+        "expect_args": {
+          "time": [
+            "час",
+            "hour",
+            "11"
+          ],
+          "text": [
+            "молоко",
+            "milk"
+          ]
+        }
+      },
+      "convert_100": {
+        "content": "{\"name\": \"convert_currency\", \"arguments\": {\"amount\": 100, \"from_currency\": \"USD\", \"to_currency\": \"EUR\"}}",
+        "wall_s": 2.7,
+        "prompt_n": 20,
+        "tg_t_s": 15.190800798254882,
+        "valid": true,
+        "name": "convert_currency",
+        "args": {
+          "amount": 100,
+          "from_currency": "USD",
+          "to_currency": "EUR"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "convert_currency",
+        "expect_args": {
+          "amount": [
+            100
+          ],
+          "from_currency": [
+            "usd",
+            "доллар",
+            "dollar"
+          ],
+          "to_currency": [
+            "eur",
+            "евро",
+            "euro"
+          ]
+        }
+      },
+      "book_praga": {
+        "content": "{\"name\": \"book_table\", \"arguments\": {\"restaurant\": \"Прага\", \"people\": 4, \"date\": \"2026-10-08\"}}",
+        "wall_s": 3.0,
+        "prompt_n": 27,
+        "tg_t_s": 15.258042846931705,
+        "valid": true,
+        "name": "book_table",
+        "args": {
+          "restaurant": "Прага",
+          "people": 4,
+          "date": "2026-10-08"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "book_table",
+        "expect_args": {
+          "restaurant": [
+            "прага",
+            "praga"
+          ],
+          "people": [
+            4
+          ]
+        }
+      },
+      "w_tokyo_f": {
+        "content": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Токио\", \"unit\": \"imperial\"}}",
+        "wall_s": 2.1,
+        "prompt_n": 24,
+        "tg_t_s": 15.263475053681642,
+        "valid": true,
+        "name": "get_weather",
+        "args": {
+          "city": "Токио",
+          "unit": "imperial"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "get_weather",
+        "expect_args": {
+          "city": [
+            "токио",
+            "tokyo"
+          ],
+          "unit": [
+            "imperial",
+            "фаренг",
+            "fahrenheit"
+          ]
+        }
+      },
+      "search_ten": {
+        "content": "{\"name\": \"search_web\", \"arguments\": {\"query\": \"квантование нейросетей статьи\", \"num_results\": 10}}",
+        "wall_s": 2.7,
+        "prompt_n": 24,
+        "tg_t_s": 15.243834093283299,
+        "valid": true,
+        "name": "search_web",
+        "args": {
+          "query": "квантование нейросетей статьи",
+          "num_results": 10
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "search_web",
+        "expect_args": {
+          "query": [
+            "квантован",
+            "quantiz"
+          ],
+          "num_results": [
+            10
+          ]
+        }
+      },
+      "translate_fr": {
+        "content": "{\"name\": \"translate\", \"arguments\": {\"text\": \"спасибо\", \"target_lang\": \"french\"}}",
+        "wall_s": 2.0,
+        "prompt_n": 20,
+        "tg_t_s": 15.166787263690395,
+        "valid": true,
+        "name": "translate",
+        "args": {
+          "text": "спасибо",
+          "target_lang": "french"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "translate",
+        "expect_args": {
+          "text": [
+            "спасибо",
+            "merci"
+          ],
+          "target_lang": [
+            "fr",
+            "фран",
+            "french"
+          ]
+        }
+      },
+      "file_report": {
+        "content": "{\"name\": \"create_file\", \"arguments\": {\"path\": \"/projects/atlas/report.md\", \"content\": \"готов.\"}}",
+        "wall_s": 2.4,
+        "prompt_n": 25,
+        "tg_t_s": 15.220090113080197,
+        "valid": true,
+        "name": "create_file",
+        "args": {
+          "path": "/projects/atlas/report.md",
+          "content": "готов."
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "create_file",
+        "expect_args": {
+          "path": [
+            "report.md"
+          ],
+          "content": [
+            "готов"
+          ]
+        }
+      }
+    },
+    "code": {
+      "add": {
+        "content": "```python\ndef add(a, b):\n    return a + b\n```",
+        "wall_s": 1.8,
+        "prompt_n": 52,
+        "tg_t_s": 17.79948875912842,
+        "pass": true,
+        "code": "def add(a, b):\n    return a + b"
+      },
+      "fact": {
+        "content": "```python\ndef fact(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n```",
+        "wall_s": 2.5,
+        "prompt_n": 51,
+        "tg_t_s": 17.84378452943881,
+        "pass": true,
+        "code": "def fact(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result"
+      },
+      "rev": {
+        "content": "```python\ndef rev(s):\n    return s[::-1]\n```",
+        "wall_s": 1.2,
+        "prompt_n": 53,
+        "tg_t_s": 17.76598023795963,
+        "pass": true,
+        "code": "def rev(s):\n    return s[::-1]"
+      },
+      "is_even": {
+        "content": "```python\ndef is_even(n):\n    return n % 2 == 0\n```",
+        "wall_s": 1.5,
+        "prompt_n": 56,
+        "tg_t_s": 17.823304618909393,
+        "pass": true,
+        "code": "def is_even(n):\n    return n % 2 == 0"
+      }
+    },
+    "system_tokens": 8415,
+    "summary": {
+      "tools_total": 12,
+      "json_valid_rate": 1.0,
+      "name_rate": 1.0,
+      "functional_rate": 1.0,
+      "code_pass_rate": 1.0
+    }
+  },
+  {
+    "model": "schattenblume-31b",
+    "kv": "q4_0",
+    "ctx": 16384,
+    "error": null,
+    "vram_mb": 13198,
+    "tools": {
+      "w_kazan": {
+        "content": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Казань\", \"unit\": \"metric\"}}",
+        "wall_s": 13.8,
+        "prompt_n": 8442,
+        "tg_t_s": 15.532774153463807,
+        "valid": true,
+        "name": "get_weather",
+        "args": {
+          "city": "Казань",
+          "unit": "metric"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "get_weather",
+        "expect_args": {
+          "city": [
+            "казан",
+            "kazan"
+          ],
+          "unit": [
+            "metric",
+            "метрик",
+            "цельс"
+          ]
+        }
+      },
+      "search_borscht": {
+        "content": "{\"name\": \"search_web\", \"arguments\": {\"query\": \"рецепт борща\", \"num_results\": 5}}",
+        "wall_s": 2.2,
+        "prompt_n": 18,
+        "tg_t_s": 15.622727297214308,
+        "valid": true,
+        "name": "search_web",
+        "args": {
+          "query": "рецепт борща",
+          "num_results": 5
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "search_web",
+        "expect_args": {
+          "query": [
+            "борщ",
+            "borscht"
+          ],
+          "num_results": [
+            5
+          ]
+        }
+      },
+      "translate_de": {
+        "content": "{\"name\": \"translate\", \"arguments\": {\"text\": \"доброе утро\", \"target_lang\": \"german\"}}",
+        "wall_s": 1.9,
+        "prompt_n": 21,
+        "tg_t_s": 15.54615186102984,
+        "valid": true,
+        "name": "translate",
+        "args": {
+          "text": "доброе утро",
+          "target_lang": "german"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "translate",
+        "expect_args": {
+          "text": [
+            "доброе утро",
+            "guten morgen"
+          ],
+          "target_lang": [
+            "de",
+            "нем",
+            "german"
+          ]
+        }
+      },
+      "create_notes": {
+        "content": "{\"name\": \"create_file\", \"arguments\": {\"path\": \"/projects/atlas/notes.txt\", \"content\": \"купить хлеб\"}}",
+        "wall_s": 2.4,
+        "prompt_n": 23,
+        "tg_t_s": 15.569488084962696,
+        "valid": true,
+        "name": "create_file",
+        "args": {
+          "path": "/projects/atlas/notes.txt",
+          "content": "купить хлеб"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "create_file",
+        "expect_args": {
+          "path": [
+            "notes.txt"
+          ],
+          "content": [
+            "купить хлеб"
+          ]
+        }
+      },
+      "email_ivan": {
+        "content": "{\"name\": \"send_email\", \"arguments\": {\"to\": \"Иван\", \"subject\": \"Отчёт\", \"body\": \"\"}}",
+        "wall_s": 2.3,
+        "prompt_n": 21,
+        "tg_t_s": 15.57028504520832,
+        "valid": true,
+        "name": "send_email",
+        "args": {
+          "to": "Иван",
+          "subject": "Отчёт",
+          "body": ""
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "send_email",
+        "expect_args": {
+          "to": [
+            "иван",
+            "ivan"
+          ],
+          "subject": [
+            "отчет"
+          ]
+        }
+      },
+      "remind_milk": {
+        "content": "{\"name\": \"set_reminder\", \"arguments\": {\"time\": \"2026-10-08T11:00:00\", \"text\": \"купить молоко\"}}",
+        "wall_s": 3.1,
+        "prompt_n": 17,
+        "tg_t_s": 15.558857892990517,
+        "valid": true,
+        "name": "set_reminder",
+        "args": {
+          "time": "2026-10-08T11:00:00",
+          "text": "купить молоко"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "set_reminder",
+        "expect_args": {
+          "time": [
+            "час",
+            "hour",
+            "11"
+          ],
+          "text": [
+            "молоко",
+            "milk"
+          ]
+        }
+      },
+      "convert_100": {
+        "content": "{\"name\": \"convert_currency\", \"arguments\": {\"amount\": 100, \"from_currency\": \"USD\", \"to_currency\": \"EUR\"}}",
+        "wall_s": 2.6,
+        "prompt_n": 20,
+        "tg_t_s": 15.547457057923605,
+        "valid": true,
+        "name": "convert_currency",
+        "args": {
+          "amount": 100,
+          "from_currency": "USD",
+          "to_currency": "EUR"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "convert_currency",
+        "expect_args": {
+          "amount": [
+            100
+          ],
+          "from_currency": [
+            "usd",
+            "доллар",
+            "dollar"
+          ],
+          "to_currency": [
+            "eur",
+            "евро",
+            "euro"
+          ]
+        }
+      },
+      "book_praga": {
+        "content": "{\"name\": \"book_table\", \"arguments\": {\"restaurant\": \"Прага\", \"people\": 4, \"date\": \"2026-10-08\"}}",
+        "wall_s": 2.8,
+        "prompt_n": 27,
+        "tg_t_s": 15.61738527328622,
+        "valid": true,
+        "name": "book_table",
+        "args": {
+          "restaurant": "Прага",
+          "people": 4,
+          "date": "2026-10-08"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "book_table",
+        "expect_args": {
+          "restaurant": [
+            "прага",
+            "praga"
+          ],
+          "people": [
+            4
+          ]
+        }
+      },
+      "w_tokyo_f": {
+        "content": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Токио\", \"unit\": \"imperial\"}}",
+        "wall_s": 1.9,
+        "prompt_n": 24,
+        "tg_t_s": 15.614860100222419,
+        "valid": true,
+        "name": "get_weather",
+        "args": {
+          "city": "Токио",
+          "unit": "imperial"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "get_weather",
+        "expect_args": {
+          "city": [
+            "токио",
+            "tokyo"
+          ],
+          "unit": [
+            "imperial",
+            "фаренг",
+            "fahrenheit"
+          ]
+        }
+      },
+      "search_ten": {
+        "content": "{\"name\": \"search_web\", \"arguments\": {\"query\": \"квантование нейросетей\", \"num_results\": 10}}",
+        "wall_s": 2.5,
+        "prompt_n": 24,
+        "tg_t_s": 15.639395352540406,
+        "valid": true,
+        "name": "search_web",
+        "args": {
+          "query": "квантование нейросетей",
+          "num_results": 10
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "search_web",
+        "expect_args": {
+          "query": [
+            "квантован",
+            "quantiz"
+          ],
+          "num_results": [
+            10
+          ]
+        }
+      },
+      "translate_fr": {
+        "content": "{\"name\": \"translate\", \"arguments\": {\"text\": \"спасибо\", \"target_lang\": \"french\"}}",
+        "wall_s": 1.9,
+        "prompt_n": 20,
+        "tg_t_s": 15.517077513621086,
+        "valid": true,
+        "name": "translate",
+        "args": {
+          "text": "спасибо",
+          "target_lang": "french"
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "translate",
+        "expect_args": {
+          "text": [
+            "спасибо",
+            "merci"
+          ],
+          "target_lang": [
+            "fr",
+            "фран",
+            "french"
+          ]
+        }
+      },
+      "file_report": {
+        "content": "{\"name\": \"create_file\", \"arguments\": {\"path\": \"/projects/atlas/report.md\", \"content\": \"готов.\"}}",
+        "wall_s": 2.2,
+        "prompt_n": 25,
+        "tg_t_s": 15.64006170525678,
+        "valid": true,
+        "name": "create_file",
+        "args": {
+          "path": "/projects/atlas/report.md",
+          "content": "готов."
+        },
+        "name_ok": true,
+        "args_ok": true,
+        "expect_name": "create_file",
+        "expect_args": {
+          "path": [
+            "report.md"
+          ],
+          "content": [
+            "готов"
+          ]
+        }
+      }
+    },
+    "code": {
+      "add": {
+        "content": "```javascript\nfunction add(a, b) {\n  return a + b;\n}\n```",
+        "wall_s": 1.8,
+        "prompt_n": 52,
+        "tg_t_s": 17.781010688812106,
+        "pass": false,
+        "code": "javascript\nfunction add(a, b) {\n  return a + b;\n}"
+      },
+      "fact": {
+        "content": "```python\ndef fact(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n```",
+        "wall_s": 2.5,
+        "prompt_n": 51,
+        "tg_t_s": 17.923815511545694,
+        "pass": true,
+        "code": "def fact(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result"
+      },
+      "rev": {
+        "content": "```python\ndef rev(s):\n    return s[::-1]\n```",
+        "wall_s": 1.2,
+        "prompt_n": 53,
+        "tg_t_s": 17.829237852520738,
+        "pass": true,
+        "code": "def rev(s):\n    return s[::-1]"
+      },
+      "is_even": {
+        "content": "```python\ndef is_even(n):\n    return n % 2 == 0\n```",
+        "wall_s": 1.5,
+        "prompt_n": 56,
+        "tg_t_s": 17.719628757668776,
+        "pass": true,
+        "code": "def is_even(n):\n    return n % 2 == 0"
+      }
+    },
+    "system_tokens": 8415,
+    "summary": {
+      "tools_total": 12,
+      "json_valid_rate": 1.0,
+      "name_rate": 1.0,
+      "functional_rate": 1.0,
+      "code_pass_rate": 0.75
+    }
+  }
+]

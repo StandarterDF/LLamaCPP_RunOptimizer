@@ -1,0 +1,1 @@
+{"name": "search_web", "arguments": {"query": "рецепт борща", "num_results": 5}}

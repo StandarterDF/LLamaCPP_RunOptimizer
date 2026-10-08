@@ -1,0 +1,1 @@
+{"name": "book_table", "arguments": {"restaurant": "Прага", "people": 4}}

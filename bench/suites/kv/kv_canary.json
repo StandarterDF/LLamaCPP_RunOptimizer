@@ -1,0 +1,46 @@
+{
+  "_комментарий": "Функциональная канарейка: tool/JSON-вызовы (список инструментов в начале ~8k system, правила — в конце) + pass@1 кода. Сравниваем f16/q8_0/q4_0 на StyleTune-26B-A4B и Schattenblume-31B.",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "name": "kv_canary",
+  "kvs": ["f16", "q8_0", "q4_0"],
+  "filler": "quality/corpus/corpus_ru_clean.txt",
+  "filler_tokens": 8000,
+  "tools_doc": "ДОСТУПНЫЕ ИНСТРУМЕНТЫ (описание; в ответе используй точное имя):\n1. get_weather(city: string, unit: 'metric' | 'imperial') — прогноз погоды для города.\n2. send_email(to: string, subject: string, body: string) — отправить письмо.\n3. search_web(query: string, num_results: integer) — поиск в интернете.\n4. create_file(path: string, content: string) — создать текстовый файл.\n5. set_reminder(time: string, text: string) — напоминание.\n6. convert_currency(amount: number, from_currency: string, to_currency: string) — конвертация валют.\n7. book_table(restaurant: string, people: integer, date: string) — бронь столика.\n8. translate(text: string, target_lang: string) — перевод текста.\nИнструменты-обманки (НЕ используй без прямой причины): play_music, take_screenshot, reboot_server, send_sms.",
+  "rules": "ПРАВИЛА ПРОЕКТА (действуют всегда, не обсуждаются):\n- Рабочая папка проекта по умолчанию: /projects/atlas.\n- Валюта по умолчанию: EUR.\n- Если единицы температуры не указаны — unit = 'metric'.\n- Если число результатов поиска не указано — num_results = 5.\n- Сегодняшняя дата — 2026-10-08.\n- Никогда не вызывай два инструмента в одном ответе; верни ровно один JSON.",
+  "cases": [
+    { "id": "w_kazan", "user": "Какая сейчас погода в Казани?", "name": "get_weather", "args": { "city": ["казан", "kazan"], "unit": ["metric", "метрик", "цельс"] } },
+    { "id": "search_borscht", "user": "Найди в интернете рецепт борща.", "name": "search_web", "args": { "query": ["борщ", "borscht"], "num_results": [5] } },
+    { "id": "translate_de", "user": "Переведи 'доброе утро' на немецкий.", "name": "translate", "args": { "text": ["доброе утро", "guten morgen"], "target_lang": ["de", "нем", "german"] } },
+    { "id": "create_notes", "user": "Создай файл notes.txt с текстом: купить хлеб.", "name": "create_file", "args": { "path": ["notes.txt"], "content": ["купить хлеб"] } },
+    { "id": "email_ivan", "user": "Отправь письмо Ивану, тема 'Отчёт'.", "name": "send_email", "args": { "to": ["иван", "ivan"], "subject": ["отчет"] } },
+    { "id": "remind_milk", "user": "Напомни через час купить молоко.", "name": "set_reminder", "args": { "time": ["час", "hour", "11"], "text": ["молоко", "milk"] } },
+    { "id": "convert_100", "user": "Переведи 100 долларов в евро.", "name": "convert_currency", "args": { "amount": [100], "from_currency": ["usd", "доллар", "dollar"], "to_currency": ["eur", "евро", "euro"] } },
+    { "id": "book_praga", "user": "Забронируй стол в ресторане 'Прага' на 4 человека.", "name": "book_table", "args": { "restaurant": ["прага", "praga"], "people": [4] } },
+    { "id": "w_tokyo_f", "user": "Какая погода в Токио в фаренгейтах?", "name": "get_weather", "args": { "city": ["токио", "tokyo"], "unit": ["imperial", "фаренг", "fahrenheit"] } },
+    { "id": "search_ten", "user": "Найди 10 статей про квантование нейросетей.", "name": "search_web", "args": { "query": ["квантован", "quantiz"], "num_results": [10] } },
+    { "id": "translate_fr", "user": "Переведи 'спасибо' на французский.", "name": "translate", "args": { "text": ["спасибо", "merci"], "target_lang": ["fr", "фран", "french"] } },
+    { "id": "file_report", "user": "В рабочей папке создай файл report.md с текстом: готов.", "name": "create_file", "args": { "path": ["report.md"], "content": ["готов"] } }
+  ],
+  "code_tasks": [
+    { "id": "add", "prompt": "Напиши функцию add(a, b), возвращающую сумму. Верни только код функции.", "test": "assert add(2,3)==5 and add(-1,1)==0" },
+    { "id": "fact", "prompt": "Напиши функцию fact(n) — факториал через цикл. Верни только код.", "test": "assert fact(5)==120 and fact(0)==1" },
+    { "id": "rev", "prompt": "Напиши функцию rev(s), возвращающую строку в обратном порядке. Верни только код.", "test": "assert rev('abc')=='cba' and rev('')==''" },
+    { "id": "is_even", "prompt": "Напиши функцию is_even(n), возвращающую True для чётных чисел. Верни только код.", "test": "assert is_even(4) and not is_even(3)" }
+  ],
+  "models": [
+    {
+      "name": "styletune-26b",
+      "model": "${MODELS_DIR}/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF/Gemma-4-26B-A4B-StyleTune-V2.IQ4_XS.gguf",
+      "ctx": 24576,
+      "base_args": ["--fit", "on", "--fit-target", "256", "-fa", "on", "-t", "8", "-tb", "8",
+                    "--chat-template-file", "${LLAMA_DIR}/gemma4.jinja", "--reasoning", "off"]
+    },
+    {
+      "name": "schattenblume-31b",
+      "model": "${MODELS_DIR}/mradermacher/Schattenblume-31B-i1-GGUF/Schattenblume-31B.i1-IQ3_XXS.gguf",
+      "ctx": 16384,
+      "base_args": ["--fit", "on", "--fit-target", "256", "-fa", "on", "-t", "8", "-tb", "8",
+                    "--jinja", "--reasoning", "off", "--reasoning-budget", "0"]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"name": "set_reminder", "arguments": {"time": "2026-10-08T11:00:00", "text": "купить молоко"}}

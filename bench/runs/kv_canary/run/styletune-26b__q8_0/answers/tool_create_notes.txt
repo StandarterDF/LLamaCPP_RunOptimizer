@@ -1,0 +1,1 @@
+{"name": "create_file", "arguments": {"path": "/projects/atlas/notes.txt", "content": "купить хлеб"}}

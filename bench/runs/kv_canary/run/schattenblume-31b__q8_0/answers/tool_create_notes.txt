@@ -1,0 +1,1 @@
+{"name": "create_file", "arguments": {"path": "notes.txt", "content": "купить хлеб"}}

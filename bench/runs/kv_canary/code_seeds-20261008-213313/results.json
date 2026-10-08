@@ -1,0 +1,215 @@
+[
+  {
+    "model": "styletune-26b",
+    "kv": "f16",
+    "tasks": {
+      "add": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "fact": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "rev": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "is_even": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "model": "styletune-26b",
+    "kv": "q8_0",
+    "tasks": {
+      "add": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "fact": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "rev": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "is_even": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "model": "styletune-26b",
+    "kv": "q4_0",
+    "tasks": {
+      "add": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "fact": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "rev": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "is_even": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "model": "schattenblume-31b",
+    "kv": "f16",
+    "tasks": {
+      "add": {
+        "pass": 6,
+        "n": 10,
+        "langs": {
+          "js": 4,
+          "py": 6
+        }
+      },
+      "fact": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "rev": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "is_even": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "model": "schattenblume-31b",
+    "kv": "q8_0",
+    "tasks": {
+      "add": {
+        "pass": 6,
+        "n": 10,
+        "langs": {
+          "js": 4,
+          "py": 6
+        }
+      },
+      "fact": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "rev": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "is_even": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "model": "schattenblume-31b",
+    "kv": "q4_0",
+    "tasks": {
+      "add": {
+        "pass": 3,
+        "n": 10,
+        "langs": {
+          "js": 7,
+          "py": 3
+        }
+      },
+      "fact": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "rev": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      },
+      "is_even": {
+        "pass": 10,
+        "n": 10,
+        "langs": {
+          "py": 10
+        }
+      }
+    },
+    "error": null
+  }
+]

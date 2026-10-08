@@ -216,6 +216,12 @@ q8_0` (f16 считает FlashAttention нативно). Полностью —
 содержанию, не по синтаксису) и `pass@1` кода. Для агентов/JSON — не квантуйте KV
 без функционального теста. Разбор — `docs\research\kv-cache-external.md`.
 
+**Наша проверка (функциональная канарейка).** Прогнали сами (`bench\kv_canary.py`):
+**tool/JSON — 12/12 у всех типов KV** (f16/q8_0/q4_0, обе модели; инструменты
+вытаскиваются с глубины 8k). Единственный сигнал — **срыв формата кода** у 31B под
+`q4_0` (писал JS вместо Python на одной неоднозначной задаче): 33/40 против 36/40
+у f16/q8_0 при `temp 0.7`. Подробности — `docs\research\kv-cache-quantization.md` §4.3.
+
 ## Чего избегать (проверено)
 - `top-k` (в т.ч. официальный пресет Gemma-4 `temp 1.0 / top-k 64`) и высокая температура на русском:
   растут англ. вставки и BPE-склейки (~25 % брака против ~4 % при `temp 0.4`, см. `docs\quality\sampling-quality.md`).
@@ -249,7 +255,7 @@ q8_0` (f16 считает FlashAttention нативно). Полностью —
 | Логи по RP-мержам Gemma-4-31B (Split-Untied-31B; MeroMero v2 heretic — удалён) | `docs\models\gemma-4-31b-rp-merges.md` |
 | **Базовые instruct-модели на RP (baseline: Gemma-4-26B-A4B-it, Qwen3.6-35B-A3B, Qwen3.8-27B)** | `docs\quality\base-models-rp-eval.md` |
 | Сэмплинг и качество русского текста (RP Gemma-4: температура, top-k, min-p) | `docs\quality\sampling-quality.md` |
-| **Квантование KV-кэша: влияет ли на память/ошибки и насколько** | `docs\research\kv-cache-quantization.md`; картинки — `docs\images\`; инструменты — `bench\kv_prompts.py`, `bench\kv_quality.py`, `bench\kv_prompt_checks.py`, `bench\plot_kv.py` |
+| **Квантование KV-кэша: влияет ли на память/ошибки и насколько** | `docs\research\kv-cache-quantization.md`; внешние данные — `docs\research\kv-cache-external.md`; картинки — `docs\images\`; инструменты — `bench\kv_prompts.py`, `bench\kv_quality.py`, `bench\kv_canary.py`, `bench\kv_code_seeds.py`, `bench\plot_kv.py` |
 | Внешний ресёрч: RP-модели Gemma 4 и русский (сообщество, HF, факторы) | `docs\research\rp-model-candidates.md` |
 | CaliperBench: RP-рейтинг Gemma 4 + **правило отбора «что держит русский» и шорт-лист** | `docs\research\caliperbench-2026-10.md`, `docs\research\rp-model-candidates.md` §9 |
 | Методы спекуляции, внешние спекуляторы, сравнение сборок | `docs\research\speculation-research.md` |
