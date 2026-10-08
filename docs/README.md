@@ -42,6 +42,7 @@
 | `docs\research\why-ru-models.md` | Почему одни модели держат русский, а другие рассыпаются (PPL, провенанс). |
 | `docs\research\euroeval-2026-10.md` | EuroEval: славянские прокси-языки для оценки русского. |
 | `docs\research\kv-cache-quantization.md` | **Квантование KV-кэша** (f16/q8_0/q4_0): промптовые сравнения, NIAH, PPL, бюджет VRAM; картинки — `docs\images\`. |
+| `docs\research\kv-cache-external.md` | **Внешние данные про влияние KV-кэша**: tool/JSON, код, KL-дивергенция (Gemma vs Qwen), attention sinks, многотирн. |
 | `docs\research\router-mode.md` | Router-режим llama.cpp: один сервер на все модели (`launch\router\`). |
 | `docs\research\rp-datasets-en-ru.md` | Датасеты RP/DRP/ERP (EN и RU): пул для SFT и перевода EN→RU, пайплайн MT. |
 | `docs\research\rp-datasets-quality-check.md` | Проверка тех же датасетов **по факту** (реальные строки HF): дубли, формат, качество, вердикты. |
