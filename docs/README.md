@@ -29,6 +29,7 @@
 | `docs\quality\sampling-quality.md` | Сэмплинг и качество русского текста (температура, top-k, min-p, грамматика). |
 | `docs\quality\base-models-rp-eval.md` | Базовые instruct-модели на RP (Gemma-4-26B-it, Qwen3.6, Qwen3.8). |
 | `docs\quality\cloud-api-rp-eval.md` | Облачные API-модели (DeepSeek, GLM) на RP: 12 моделей × 4 судьи. |
+| `docs\quality\en-rp-eval.md` | Английский RP-скрин: EN vs RU на тех же моделях, 4 судьи; в EN работает think, 0 кириллицы. |
 
 ## Внешний ресёрч и кросс-темы — `docs\research\`
 
@@ -40,5 +41,9 @@
 | `docs\research\caliperbench-2026-10.md` | CaliperBench: RP-рейтинг Gemma 4, правило «что держит русский». |
 | `docs\research\why-ru-models.md` | Почему одни модели держат русский, а другие рассыпаются (PPL, провенанс). |
 | `docs\research\euroeval-2026-10.md` | EuroEval: славянские прокси-языки для оценки русского. |
+| `docs\research\router-mode.md` | Router-режим llama.cpp: один сервер на все модели (`launch\router\`). |
+| `docs\research\rp-datasets-en-ru.md` | Датасеты RP/DRP/ERP (EN и RU): пул для SFT и перевода EN→RU, пайплайн MT. |
+| `docs\research\rp-datasets-quality-check.md` | Проверка тех же датасетов **по факту** (реальные строки HF): дубли, формат, качество, вердикты. |
+| `docs\research\gemma4-rp-training-data.md` | На чём обучались наши Gemma-4 RP-мержи/файнтюны и современные Gemma-4 RP (доноры, датасеты). |
 
 Инструменты, конфиги и правила — `bench\`, `launch\`, `AGENTS.md` в корне репозитория.
