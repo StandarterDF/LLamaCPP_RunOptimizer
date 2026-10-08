@@ -15,6 +15,11 @@
 2. Выберите `.bat` из таблицы ниже под свою модель и задачу — они берут пути из `config.local.bat`.
 3. Запустите и проверьте строку `listening on http://...` в консоли.
 
+Не хочется выбирать `.bat` на каждую модель? Поднимите **router-режим** — один сервер
+обслуживает все модели, что есть на ПК; клиент выбирает её по имени в запросе:
+`launch\router\run-router.bat`. Для RP — отдельный `launch\router\run-rp-router.bat`
+(порт 9932, только проверенные RP-модели). Подробности — `docs\research\router-mode.md`.
+
 ## Готовые конфиги (`.bat`)
 
 Скорость генерации (t/s) на **реалистичных** задачах, сборка b11382, 16 ГБ: RP / обычный чат /
@@ -97,6 +102,9 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 - Инструменты/функции: шаблоны моделей их поддерживают; у Gemma-4 в конфиге включён `gemma4.jinja`.
 
 ### RP, креатив, свободные диалоги
+- **Готовый RP-роутер:** `launch\router\run-rp-router.bat` (порт 9932) — только проверенные
+  RP-модели (4 лидера 31B + быстрые StyleTune/Goetia), выбор по имени в поле `model`;
+  состав и оговорки — `docs\research\router-mode.md`.
 - **Качество RP (LLM-судья, «мнимая история»):** методика и все числа — `docs\quality\rp-quality-eval.md`;
   харнесс `bench\rp_quality.py`, судьи — `gemma-4-26B-A4B` (мягче) и `Qwen3.6-35B-A3B` MXFP4 (строже).
   Текущие лидеры (NoThink, полный набор 6 сценариев, средний двух судей): **Giftige-Blume-v1 — 4.33 / 3.35**
@@ -219,6 +227,7 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 | CaliperBench: RP-рейтинг Gemma 4 + **правило отбора «что держит русский» и шорт-лист** | `docs\research\caliperbench-2026-10.md`, `docs\research\rp-model-candidates.md` §9 |
 | Методы спекуляции, внешние спекуляторы, сравнение сборок | `docs\research\speculation-research.md` |
 | **Реестр проверенного (не повторять)** | `docs\researched.md` |
+| **Router-режим: один сервер на все модели** | `launch\router\run-router.bat`; RP — `launch\router\run-rp-router.bat`; `docs\research\router-mode.md` |
 | Длинные сессии, «бесконечный» контекст, SillyTavern | `docs\research\context-infinite-chat.md` |
 | Готовые конфиги | `launch\b11382-cu124\` (единственная сборка; полный список — в таблице «Готовые конфиги») |
 | Харнесс, наборы тестов, сырые результаты | `bench\` (`bench.py`, `suites\`, `runs\results.jsonl`); RP-качество — `bench\rp_quality.py`, `bench\quality\rp_judge.py`, `judge_score.py` |
