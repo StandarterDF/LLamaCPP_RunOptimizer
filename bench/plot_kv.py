@@ -607,6 +607,41 @@ def plot_prompt_flags(path, out_dir):
         plt.close(fig)
 
 
+def plot_canary(path, out_dir):
+    data = json.load(open(path, encoding="utf-8"))
+    groups = {}
+    for rec in data:
+        if rec.get("summary"):
+            groups.setdefault(rec["model"], []).append(rec)
+    for model, recs in groups.items():
+        kvs = [r["kv"] for r in recs]
+        metrics = [
+            ("json_valid_rate", "валидный\nJSON"),
+            ("name_rate", "верная\nфункция"),
+            ("functional_rate", "верные\nаргументы"),
+            ("code_pass_rate", "код\npass@1"),
+        ]
+        fig, ax = plt.subplots(figsize=(8.6, 4.6))
+        w = 0.8 / max(1, len(kvs))
+        for i, kv in enumerate(kvs):
+            s = next(r for r in recs if r["kv"] == kv)["summary"]
+            vals = [s[m] for m, _ in metrics]
+            xs = [j + i * w - 0.4 + w / 2 for j in range(len(metrics))]
+            ax.bar(xs, vals, w, color=kv_color(kv), label=kv_label(kv))
+            for x, v in zip(xs, vals):
+                ax.text(x, v + 0.02, f"{v:.2f}", ha="center", fontsize=8)
+        ax.set_xticks(range(len(metrics)))
+        ax.set_xticklabels([l for _, l in metrics])
+        ax.set_ylim(0, 1.1)
+        ax.set_ylabel("доля успеха")
+        ax.set_title(
+            f"Функциональная канарейка KV — {model_title(model)}", fontweight="bold"
+        )
+        ax.legend(fontsize=8, loc="lower left")
+        fig.savefig(os.path.join(out_dir, f"kv_canary_{model}.png"))
+        plt.close(fig)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument(
@@ -675,6 +710,11 @@ def main():
         if cands:
             plot_prompt_flags(sorted(cands)[-1], out_dir)
             print("промптовые графики готовы")
+
+    canary_default = os.path.join(ROOT, "runs", "kv_canary", "run", "results.json")
+    if os.path.exists(canary_default):
+        plot_canary(canary_default, out_dir)
+        print("графики канарейки готовы")
 
 
 if __name__ == "__main__":
