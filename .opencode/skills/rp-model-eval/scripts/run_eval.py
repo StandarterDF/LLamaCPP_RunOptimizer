@@ -6,8 +6,9 @@ RP Model Eval — оптимизированный оркестратор оце
 Один запуск делает всё:
   1) генерирует suite-файл(ы) под модель (fan out по режимам nothink/think);
   2) прогоняет bench\\rp_quality.py на базовом (2 сценария) или полном (6) наборе;
-  3) судит прогоны штатными судьями (gemma-4-26B-A4B и Qwen3.6-35B-A3B MXFP4);
-  4) сводит средние баллы через judge_score.py.
+  3) судит прогоны ПАНЕЛЬЮ ИЗ ЧЕТЫРЁХ судей (два локальных: gemma-4-26B-A4B и Qwen3.6-35B-A3B
+     MXFP4 через rp_judge.py; два облачных: DeepSeek-Flash и DeepSeek-Pro через api_judge.py);
+  4) сводит средние баллы через judge_score.py — по каждому судье и единое «среднее по 4 судьям».
 
 ВСЁ пишется в единый лог прогона (logs\\rp_eval_<name>_<stamp>.log): фазы, поток вывода
 харнесса (по каждой генерации), вывод судей и сводка. Путь печатается в начале и конце.
@@ -15,11 +16,14 @@ RP Model Eval — оптимизированный оркестратор оце
 Правило экономии: базовый набор (2 сценария) — скрин для ВСЕХ моделей; полный набор (6)
 гоняется ТОЛЬКО для моделей, показавших лучший результат на скрине (см. SKILL.md).
 
+Облачным судьям нужен ключ в .env (DEEPSEEK_API_KEY) — иначе скрипт останавливается с ошибкой,
+чтобы не выдать молча оценку по 2 судьям вместо 4. Только локальные: --judges gemma,qwen.
+
 Запуск (интерпретатором venv проекта; путь модели — в ОДИНАРНЫХ кавычках, иначе PowerShell
 съест ${MODELS_DIR}):
   .venv\\Scripts\\python.exe .opencode\\skills\\rp-model-eval\\scripts\\run_eval.py ^
       --name base_gemma26 --model '${MODELS_DIR}/unsloth/gemma-4-26B-A4B-it-GGUF/gemma-4-26B-A4B-it-UD-IQ3_XXS.gguf' ^
-      --family gemma --scenarios base --modes nothink,think --judges gemma,qwen
+      --family gemma --scenarios base --modes nothink,think --judges gemma,qwen,dsflash,dspro
 
 Только стандартная библиотека.
 """
@@ -73,11 +77,27 @@ def expand(text):
     )
 
 
+def read_env_keys():
+    """Имена переменных из .env (без значений) — предпроверка облачных судей."""
+    keys = set()
+    try:
+        with open(ENV_FILE, encoding="utf-8") as f:
+            for ln in f:
+                s = ln.strip()
+                if s and not s.startswith("#") and "=" in s:
+                    keys.add(s.split("=", 1)[0].strip())
+    except OSError:
+        pass
+    return keys
+
+
 VENV_PY = os.path.join(PROJECT_DIR, ".venv", "Scripts", "python.exe")
 PY = VENV_PY if os.path.isfile(VENV_PY) else sys.executable
 QUALITY = os.path.join(PROJECT_DIR, "bench", "rp_quality.py")
 JUDGE = os.path.join(PROJECT_DIR, "bench", "quality", "rp_judge.py")
+API_JUDGE = os.path.join(PROJECT_DIR, "bench", "quality", "api_judge.py")
 SCORE = os.path.join(PROJECT_DIR, "bench", "quality", "judge_score.py")
+ENV_FILE = os.path.join(PROJECT_DIR, ".env")
 RUNS = os.path.join(PROJECT_DIR, "bench", "quality", "runs")
 SUITE_DIR = os.path.join(PROJECT_DIR, "bench", "quality", "suites")
 LOG_DIR = os.path.join(PROJECT_DIR, "logs")
@@ -87,19 +107,42 @@ SCEN = {
     "full": "quality/prompts/scenarios_rp_full.json",
 }
 
-# Штатные судьи. Значения по умолчанию совпадают с rp_judge.py; здесь явно, чтобы не читать его.
+# Штатная панель — ЧЕТЫРЕ судьи (как в витрине docs\quality\rp-ranking.md): два локальных
+# (абсолютная шкала через rp_judge.py) + два облачных DeepSeek через api_judge.py.
+# Порядок в JUDGES = порядок прогонов. Значения локальных совпадают с rp_judge.py.
 JUDGES = {
     "gemma": {
+        "kind": "local",
         "model": "${MODELS_DIR}/unsloth/gemma-4-26B-A4B-it-GGUF/gemma-4-26B-A4B-it-UD-IQ3_XXS.gguf",
         "template": "${LLAMA_DIR}/gemma4.jinja",
         "spec": False,
     },
     "qwen": {
+        "kind": "local",
         "model": "${MODELS_DIR}/unsloth/Qwen3.6-35B-A3B-MTP-GGUF/Qwen3.6-35B-A3B-MXFP4_MOE.gguf",
         "template": "none",
         "spec": True,
     },
+    # Облачные судьи: ключи в .env (DEEPSEEK_API_KEY). thinking off — чтобы шкала была
+    # сопоставима с локальными nothink-судьями (у DeepSeek в nothink учитывается temperature).
+    "dsflash": {
+        "kind": "api",
+        "provider": "deepseek",
+        "model": "deepseek-flash",
+        "key_env": "DEEPSEEK_API_KEY",
+        "thinking": "disabled",
+    },
+    "dsv4pro": {
+        "kind": "api",
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "key_env": "DEEPSEEK_API_KEY",
+        "thinking": "disabled",
+    },
 }
+# синонимы, чтобы не падать на «dspro»
+JUDGE_ALIASES = {"dspro": "dsv4pro", "pro": "dsv4pro", "flash": "dsflash"}
+DEFAULT_JUDGES = "gemma,qwen,dsflash,dsv4pro"
 
 
 class RunLog:
@@ -240,8 +283,18 @@ def main():
     ap.add_argument("--modes", default="nothink,think")
     ap.add_argument("--scenarios", choices=["base", "full"], default="base")
     ap.add_argument("--seeds", default="11,22,33")
-    ap.add_argument("--judges", default="gemma,qwen", help="gemma,qwen | none")
+    ap.add_argument(
+        "--judges",
+        default=DEFAULT_JUDGES,
+        help="панель судей: gemma,qwen,dsflash,dspro | gemma,qwen (локальные) | none",
+    )
     ap.add_argument("--judge-batch", type=int, default=3)
+    ap.add_argument(
+        "--judge-concurrency",
+        type=int,
+        default=10,
+        help="параллельных запросов облачных судей (api_judge.py)",
+    )
     ap.add_argument(
         "--draft", default=None, help="внешний MTP-драфт (-md), иначе встроенный"
     )
@@ -292,6 +345,33 @@ def main():
     modes = [m.strip() for m in args.modes.split(",") if m.strip()]
     seed_list = [int(x) for x in args.seeds.split(",")]
     scen_path = SCEN[args.scenarios]
+
+    # ---- 0. проверка судей до старта (чтобы не получить молча 2 судьи из 4) ----
+    judge_list = []
+    for j in [x.strip() for x in args.judges.split(",") if x.strip()]:
+        judge_list.append(JUDGE_ALIASES.get(j, j))
+    if args.judges.strip().lower() != "none" and not args.skip_judge:
+        unknown = [j for j in judge_list if j not in JUDGES]
+        if unknown:
+            log(f"ОШИБКА: неизвестные судьи {unknown}; есть: {', '.join(JUDGES)}")
+            log.close()
+            raise SystemExit(2)
+        env_keys = read_env_keys()
+        missing = [
+            JUDGES[j]["key_env"]
+            for j in judge_list
+            if JUDGES[j]["kind"] == "api" and JUDGES[j]["key_env"] not in env_keys
+        ]
+        if missing:
+            log(
+                "ОШИБКА: нет ключа(ей) "
+                + ", ".join(sorted(set(missing)))
+                + " в .env — облачные судьи недоступны. Оценка НЕ будет по 4 судьям."
+            )
+            log("        добавьте ключ в .env (шаблон .env.example) или запустите")
+            log("        с --judges gemma,qwen (только локальные).")
+            log.close()
+            raise SystemExit(2)
 
     # ---- 1. suite-файлы ----
     run_dirs = []
@@ -363,30 +443,49 @@ def main():
     judge_dirs = []
     if not args.skip_judge and args.judges.strip().lower() != "none":
         log("")
-        log("--- ФАЗА 3: судейство ---")
-        for jname in [j.strip() for j in args.judges.split(",") if j.strip()]:
-            if jname not in JUDGES:
-                log(f"[warn ] неизвестный судья {jname}, пропуск")
-                continue
+        log(f"--- ФАЗА 3: судейство ({len(judge_list)} судей) ---")
+        for jname in judge_list:
             j = JUDGES[jname]
             jout = os.path.join(RUNS, f"rp_judge_{jname}_{args.name}")
-            cmd = [
-                PY,
-                JUDGE,
-                *run_dirs,
-                "--model",
-                j["model"],
-                "--template",
-                j["template"],
-                "--prompts",
-                scen_path,
-                "--batch",
-                str(args.judge_batch),
-                "--out",
-                jout,
-            ]
-            if j["spec"]:
-                cmd.append("--spec")
+            if j["kind"] == "api":
+                # облачный судья: те же ответы, тот же промпт, но через API (параллельно)
+                cmd = [
+                    PY,
+                    API_JUDGE,
+                    *run_dirs,
+                    "--model",
+                    j["model"],
+                    "--provider",
+                    j["provider"],
+                    "--prompts",
+                    scen_path,
+                    "--batch",
+                    str(args.judge_batch),
+                    "--thinking",
+                    j["thinking"],
+                    "--concurrency",
+                    str(args.judge_concurrency),
+                    "--out",
+                    jout,
+                ]
+            else:
+                cmd = [
+                    PY,
+                    JUDGE,
+                    *run_dirs,
+                    "--model",
+                    j["model"],
+                    "--template",
+                    j["template"],
+                    "--prompts",
+                    scen_path,
+                    "--batch",
+                    str(args.judge_batch),
+                    "--out",
+                    jout,
+                ]
+                if j["spec"]:
+                    cmd.append("--spec")
             os.makedirs(jout, exist_ok=True)
             run(cmd, log, phase=f"судья {jname}")
             judge_dirs.append(jout)
@@ -397,6 +496,14 @@ def main():
         log("--- ФАЗА 4: сводка баллов ---")
         for jout in judge_dirs:
             run([PY, SCORE, jout], log, phase=f"сводка {os.path.basename(jout)}")
+        if len(judge_dirs) > 1:
+            # единая цифра панели: judge_score.py, получив несколько каталогов судей,
+            # объединяет все их оценки (это и есть «среднее по N судьям» для rp-ranking.md)
+            run(
+                [PY, SCORE, *judge_dirs],
+                log,
+                phase=f"сводка: среднее по {len(judge_dirs)} судьям",
+            )
 
     log("")
     log("Готово.")

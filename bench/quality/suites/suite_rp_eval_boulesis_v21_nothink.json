@@ -1,0 +1,52 @@
+{
+  "_комментарий": "RP-оценка (base): boulesis_v21, режим nothink. Сгенерировано rp-model-eval.",
+  "name": "rp_eval_boulesis_v21_nothink",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/mradermacher/Boulesis-v2.1-26B-A4B-i1-GGUF/Boulesis-v2.1-26B-A4B.i1-IQ4_XS.gguf",
+  "base_args": [
+    "-np",
+    "1",
+    "-c",
+    "51200",
+    "-fa",
+    "on",
+    "--fit",
+    "on",
+    "--load-mode",
+    "none",
+    "-t",
+    "12",
+    "-tb",
+    "12",
+    "-ctk",
+    "q4_0",
+    "-ctv",
+    "q4_0",
+    "--jinja",
+    "--chat-template-file",
+    "${LLAMA_DIR}/gemma4.jinja",
+    "--reasoning",
+    "off",
+    "--reasoning-budget",
+    "0"
+  ],
+  "prompts": "quality/prompts/scenarios_rp.json",
+  "n_predict": 500,
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "configs": [
+    {
+      "name": "ru_safe",
+      "title": "RU-safe: temp0.6 min-p0.1 top-k0 top-p0.95",
+      "sampling": {
+        "temperature": 0.6,
+        "min_p": 0.1,
+        "top_k": 0,
+        "top_p": 0.95
+      }
+    }
+  ]
+}

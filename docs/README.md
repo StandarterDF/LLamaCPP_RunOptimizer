@@ -24,7 +24,7 @@
 
 | Файл | О чём |
 | --- | --- |
-| `docs\quality\rp-quality-eval.md` | Методика и результаты оценки RP LLM-судьёй («мнимая история»). |
+| `docs\quality\rp-quality-eval.md` | Методика и результаты оценки RP LLM-судьёй («мнимая история»); штатная панель — **4 судьи** (2 локальных + 2 облачных DeepSeek). |
 | `docs\quality\rp-ranking.md` | **Витрина выбора** RP-модели: 2 таблицы (Think/NoThink), среднее по 4 судьям, колонка Type (Local/Cloud). |
 | `docs\quality\sampling-quality.md` | Сэмплинг и качество русского текста (температура, top-k, min-p, грамматика). |
 | `docs\quality\base-models-rp-eval.md` | Базовые instruct-модели на RP (Gemma-4-26B-it, Qwen3.6, Qwen3.8). |

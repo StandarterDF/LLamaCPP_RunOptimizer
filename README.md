@@ -30,6 +30,7 @@
 | **Qwen3.6-35B-A3B** (MoE 3B акт., Q2_K_XL) | **82** | **93** | **111** | **121** | `launch\b11382-cu124\qwen36-35b-a3b\qwen36-35b-a3b-mtp-b11382.bat` |
 | **Gemma-4-26B-A4B Goetia v1.6** (MoE, IQ3_XXS, RP-мерж) | **~73** | — | — | — | `...gemma4-26a4b-goetia-nothink-b11382.bat` (think непригоден) |
 | **Gemma-4-26B-A4B StyleTune** (MoE, IQ4_XS) | **63**¹ | 70 | 100 | 107 | RP — `...styletune-nothink-nospec-b11382.bat`; чат/код — `...styletune-b11382.bat` |
+| **Gemma-4-26B-A4B Boulesis v2.1** (MoE, IQ4_XS, RP-мерж) | **55**² | — | — | — | `...gemma4-26a4b-boulesis-v21-nothink-b11382.bat` (+ `-think`) |
 | Swift-1.5-Qwen3.8-27B (dense, IQ2_S-mtp) | 28 | 37 | 36 | 37 | `launch\b11382-cu124\swift\swift-best-b11382.bat` |
 | **Gemma-4-31B Glistening-Gem v2.1** (dense RP-мерж, IQ3_XXS) | 23 | — | — | — | `...gemma4-31b-glistening-nothink-b11382.bat` (+ `-think`) |
 | Gemma-4-31B Dark-Thoughts V2 (dense, IQ3_XXS) | 23 | 31 | 48 | 47 | `...gemma4-31b-dark-thoughts-nothink-b11382.bat` (+ `-think`) |
@@ -39,12 +40,15 @@
 
 ¹ У Gemma-26B на RP спекуляция **не окупается** (креатив плохо предсказуем): без MTP 63 t/s,
 с MTP ~50. Остальные числа — с MTP.
+² У Boulesis измерен только RP (55 t/s из харнесса `rp_quality.py`, не из `requests_real.json`);
+чат/код/математику не гоняли. Контекст `-c 51200` — при 14.3 ГБ модели 65536 уже впритык по VRAM.
 «—»: у 31B RP-мержей мерили только RP (чат/код/математику не гоняли). Отбракованы (`.bat` есть,
 но **не рекомендуются**): `gemma4-31b-styleswap-*` (англ. вставки в русский), `gemma4-31b-artemis-*`
 (речевая каша), `gemma4-26a4b-meromero-*` (NoThink ниже базы Gemma-26B: повторы и слабая память;
-think непригоден — утечка reasoning) и `dans-pers13-*` (**не** character-RP: «быстрое согласие»,
-персонаж слабый; но русский держит чисто — годится как чат-компаньон). Полный список файлов —
-`launch\b11382-cu124\`.
+think непригоден — утечка reasoning), `gemma4-26a4b-kitchoon-*` (слабейший из 26B-мёржей: провал
+памяти — принимает ложный «Питер», шаблоны; think сломан — утечка английского reasoning) и
+`dans-pers13-*` (**не** character-RP: «быстрое согласие», персонаж слабый; но русский держит чисто —
+годится как чат-компаньон). Полный список файлов — `launch\b11382-cu124\`.
 
 Код-профили `*-dflash-code.bat` (DFlash+ngram) полезны для правок/копирования больших файлов;
 на этом наборе они не перепроверялись — см. `docs\research\speculation-research.md`.
@@ -110,6 +114,9 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
   Текущие лидеры (NoThink, полный набор 6 сценариев, средний двух судей): **Giftige-Blume-v1 — 4.33 / 3.35**
   (№1 по Caliper Combined и DarkRP; лучшая **инициатива 4.0**), Schattenblume 4.38/3.28, Glistening-Gem
   v2.1 4.33/3.35, Dark-Thoughts V2 4.24/3.11. Все держат русский чисто.
+- **Витрина выбора (панель 4 судей, 2 сцены)** — `docs\quality\rp-ranking.md`. Лучший 26B-мёрж —
+  **Boulesis-v2.1-26B-A4B**: Non-Think **3.74** (~55 t/s, русский чистый), Think 3.60;
+  `...gemma4-26a4b-boulesis-v21-nothink-b11382.bat` (+ `-think`).
 - **Отбраковано по RP:** Artemis-31B-v1.2 (речевая каша при «Чисто 100 %»), Giftige-Blume-**StyleSwap**
   (русский 3.3/2.6 — прививка головы StyleTune течёт в английский), StyleTune-31B.
 - **Базовые instruct-модели на RP** (скрин + полный набор, 2026-10-07): **Gemma-4-26B-A4B-it** —
@@ -232,7 +239,7 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 | Готовые конфиги | `launch\b11382-cu124\` (единственная сборка; полный список — в таблице «Готовые конфиги») |
 | Харнесс, наборы тестов, сырые результаты | `bench\` (`bench.py`, `suites\`, `runs\results.jsonl`); RP-качество — `bench\rp_quality.py`, `bench\quality\rp_judge.py`, `judge_score.py` |
 | Скил для подбора конфига новой модели | `.opencode\skills\llm-launch-tuner\` |
-| Скил для прогона и оценки RP-качества новой модели (скрин → судьи → баллы) | `.opencode\skills\rp-model-eval\` |
+| Скил для прогона и оценки RP-качества новой модели (скрин → панель 4 судей → баллы) | `.opencode\skills\rp-model-eval\` |
 
 ## Источники информации
 
@@ -266,10 +273,11 @@ cd <папка проекта>
 .\.venv\Scripts\python.exe bench\bench.py bench\suites\real\real_qwen36.json   # наборы в bench\suites\<группа>\
 .\.venv\Scripts\python.exe bench\report.py                            # сводная таблица
 
-# RP-качество (скрин 2 сценария → судьи → баллы) одной командой; путь модели — в ОДИНАРНЫХ кавычках
+# RP-качество (скрин 2 сценария → панель 4 судей → баллы) одной командой; путь модели — в ОДИНАРНЫХ кавычках
 .\.venv\Scripts\python.exe .opencode\skills\rp-model-eval\scripts\run_eval.py `
   --name <имя> --model '${MODELS_DIR}/<путь>.gguf' --family gemma `
-  --scenarios base --modes nothink,think --judges gemma,qwen
+  --scenarios base --modes nothink,think --judges gemma,qwen,dsflash,dsv4pro
+# 4 судьи — по умолчанию: локальные gemma/qwen + облачные DeepSeek-Flash/Pro (нужен DEEPSEEK_API_KEY в .env)
 # ход прогона — logs\rp_eval_<имя>_<stamp>.log
 
 # облачные модели (DeepSeek) через API — те же сценарии/судьи; ключ в .env (gitignored)

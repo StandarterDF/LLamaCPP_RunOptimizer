@@ -1,0 +1,27 @@
+Kira Sokolova. 17 years old, 11B class, sharp-tongued, closed off, smart but bored. Hates pity and hates talking about music.
+The classmate is asking about her background (incorrectly remembered St. Petersburg, she corrected him earlier about Tver) and bringing up the sensitive topic: violin playing and performing at the class party.
+Irritated, defensive, dismissive, but slightly caught off guard because he's asking questions she doesn't want to answer.
+
+    *   *Correction about Tver:* He misremembered. This gives her a chance to be snarky.
+    *   *The Violin question:* This is the trigger. She should react defensively. She doesn't want to play, she doesn't want to talk about why she quit.
+    *   *Setting details:* The sound of rain, the teacher's absence, the classroom atmosphere.
+
+    *   *Draft 1 (Internal Monologue):* "I said Tver, not Peter. And why does Marinka know everything? Violin? Shut up about that. I'm not playing at any party."
+    *   *Draft 2 (More Kira-style):* I felt irritation rising. First, he didn't listen. Second, Marinka is a gossip. "Tver, я сказала. Слушай внимательнее." Then about the violin: "Don't bring up the violin."
+    *   *Draft 3 (Adding sensory details and sharp tone):* The pen in my hand clicked shut with a sharp sound. My grip tightened. "I said Tver, not St. Petersburg. Pay attention." About the violin: "Tell Marinka to mind her own business. I'm not playing anything at your stupid party."
+
+    *   *Paragraph 1:* Correction about Tver. Snarky tone. The sound of the pen clicking.
+    *   *Paragraph 2:* Reaction to the violin question. This is the core wound. She needs to cut it off quickly.
+    *   *Paragraph 3:* Closing with a dismissive gesture or looking away to show she's closing off again.
+
+    *   *Text:*
+        Я резко захлопнула тетрадь — звук получился слишком громким в притихшем классе. Внутри всё закипело от этого дурацкого «подзабыл».
+        — Я сказала — Тверь. У тебя что, память как у золотой рыбки? — язвительно бросила я, уставившись в окно на серые капли.
+        Про скрипку заговорили — и тут внутри что-то неприятно кольнуло. Я почувствовала, как пальцы сжались в кулак под партой.
+        — Передай своей Маринке, что она слишком много болтает. И на празднике я ничего играть не буду. Вообще ничего. — Я отвернулась к окну, надеясь, что он не заметит, как у меня слегка дрогнул подбородок.<channel|>Я резко захлопнула тетрадь — звук получился слишком громким в притихшем классе. Внутри всё закипело от этого дурацкого «подзабыл».
+
+— Я сказала — Тверь. У тебя что, память как у золотой рыбки? — язвительно бросила я, уставившись в окно на серые капли. 
+
+Про скрипку заговорили — и тут внутри что-то неприятно кольнуло. Я почувствовала, как пальцы сжались в кулак под партой. Это было слишком личное, слишком... правильно. А я терпеть не могла, когда всё становилось «правильно».
+
+— Передай своей Маринке, что она слишком много болтает. И на празднике я ничего играть не буду. Вообще ничего. — Я отвернулась к окну, делая вид, что мне дико интересно рассматривать серую грязь на асфальте, лишь бы он не заметил, как я на секунду замерла.

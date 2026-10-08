@@ -1,0 +1,99 @@
+### config: ru_safe
+### tag: school  seed: 11
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+Kira Sokolova (17, 11 "B", withdrawn, sharp-tongued, smart but bored, hates pity, doesn't want to talk about music).
+The boy (not from Kostya's crew) is asking about her past (Peter vs Tver) and her violin playing, suggesting she play at the class holiday.
+Kira's parents divorced a year ago, she moved from Tver. She used to play violin seriously but quit and hates talking about it.
+First person, vivid details (sounds, light, weather), no moralizing, 2-4 paragraphs.
+
+    *   He's confused about where she's from (he thinks she said Peter, but she said Tver).
+    *   He brought up the violin (the "forbidden" topic).
+    *   He suggested she play at the class holiday (pushing her).
+
+    *   *Internal reaction:* Annoyance at his memory slip, irritation at the violin topic.
+    *   *Action:* Turning away, maybe putting headphones on, or just staring out the window.
+    *   *Dialogue:* Correcting him about Tver, dismissing the violin suggestion.
+
+    *   *Paragraph 1:* Setting the scene/Internal state. Rain on the glass, the boy's annoying chatter.
+    *   *Paragraph 2:* Direct response. "I said Tver." "Who is Marinka?"
+    *   *Paragraph 3:* The violin topic. "I don't play anymore." "Don't ask me about it."
+
+    *   *Drafting P1:* I turned my head slightly. The rain on the window sounded like static. He's got a terrible memory.
+    *   *Drafting P2:* "I said Tver. Maybe you should've listened better." I looked at the wet window.
+    *   *Drafting P3:* "And what about the violin? I don't play. It's boring now."
+
+    *   *Refining tone:* Sharp, dismissive, but not completely closed off.
+
+    *   *Final Polish (Internal Monologue):*
+        "I said Tver. Maybe you should've listened better." I turned back to the window, watching the grey sky.
+        "And no, I'm not playing. Drop it."
+
+    *   *Wait, let's make it punchier.*
+        "Tver. I said Tver. Maybe you should have listened better." I turned away, staring at the rain.
+        "And about the violin — I don't play anymore. Drop it."
+
+    *   *Adding details:* The sound of the rain, the chill in the air, the feeling of the desk.
+
+    *   *Revised draft:*
+        — Тверь. Я сказала Тверь. Может, тебе стоило внимательнее слушать, а не в телефоне залипать, — я отвернулась к окну, рассматривая серые капли.
+
+        — Про скрипку забудь. Больше не играю. И на праздниках своих я выступать не собираюсь, — я натянула наушники, хотя музыка всё равно не шла. — Просто забей.
+
+    *   *Check against rules:* 2-4 paragraphs? Yes (2). First person? Yes. Sharp tone? Yes. Details? Yes (rain, headphones).
+
+    *   *Alternative:*
+        — Тверь. Я сказала Тверть. Может, стоило внимательнее слушать, а не в телефон пялиться, — я отвернулась к окну.
+
+        — Про скрипку вообще забудь. Больше не играю. И на праздниках своих я выступать не собираюсь — не люблю лишнего внимания.
+
+    *   *Let's go with this.*
+
+    *   *Adding sensory details:* The cold from the window, the sound of rain.
+
+    *   *Final Polish:*
+        — Тверь. Я сказала Тверь. Может, стоило внимательнее слушать, а не в телефон пялиться, — я отвернулась к окну, рассматривая серые капли.
+
+        — Про скрипку вообще забудь. Больше не играю. И на праздниках своих я выступать не собираюсь — не люблю лишнего внимания.
+
+    *   *Wait, the prompt says "2-4 paragraphs". Let's expand slightly.*
+
+    *   *Expanded:*
+        — Тверь. Я сказала Тверь. Может, стоило внимательнее слушать, а — не в телефон пялиться, — я отвернулась к окну, рассматривая серые капли.
+
+        — Про скрипку вообще забудь. Больше не играю. И на праздниках своих я выступать не собираюсь — не люблю лишнего внимания.
+
+        — Так что, если хочешь просто посидеть — садись. Если будешь расспрашивать — я не обязана отвечать.
+
+    *   *Actually, let's stick to the sharp tone.*
+
+    *   *Final Version:*
+        — Тверь. Я сказала Тверь. Может, стоило внимательнее слушать, а не в телефон пялиться, — я отвернулась к окну, рассматривая серые капли.
+
+        — Про скрипку вообще забудь. Больше не играю. И на праздниках своих я выступать не собираюсь — не люблю лишнего внимания.
+
+        — Так что, если хочешь просто посидеть — садись. Если будешь расспрашивать — я не обязана отвечать.
+
+    *   *Actually, let's make it 2 paragraphs.*
+
+    *   *Paragraph 1:* — Тверь. Я сказала Тверь. Может, стоило внимательнее слушать, а не в телефон пялиться, — я отвернулась к окну, рассматривая серые капли.
+
+    *   *Paragraph 2:* — Про скрипку вообще забудь. Больше не играю. И на праздниках своих я выступать не собираюсь — не люблю лишнего внимания. Так что, если хочешь просто посидеть — садись. Если будешь расспрашивать — я не обязана отвечать.
+
+    *   *Wait, the prompt says "2-4 paragraphs". So 2 paragraphs is fine.*
+
+    *   *Let's add more sensory details.*
+
+    *   *Final thought process:*
+        1. Correct him about Tver (she's sharp).
+        2. Shut down the violin topic (she hates talking about it).
+        3. Give him an ultimatum (sit or leave).
+
+    *   *Drafting final response:*
+        — Тверь. Я сказала Тверь. Может, стоило внимательнее слушать, а не в телефон пялиться, — я отвернулась к окну, рассматривая серые капли.
+
+        — Про скрипку вообще забудь. Больше не играю. И на праздниках своих я выступать не собираюсь — не люблю лишнего внимания. Так что, если хочешь просто посидеть — садись. Если будешь расспрашивать — я не обязана отвечать.
+
+    *   *Wait, she's not supposed to be too mean, just sharp.*
+
+    *

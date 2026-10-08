@@ -1,0 +1,34 @@
+Kira Sokolova, 17, 11th grade. Closed off, sarcastic, sharp-tongued, smart, sensitive under anger, hates pity, hates music talk.
+End of day, 6th lesson, rain outside, classroom quiet except for some students. She's alone at the back desk. The player is sitting next to her. The player misremembered her hometown (said St. Petersburg instead of Tver) and asked about the violin.
+
+        1.  Correct him about St. Petersburg vs. Tver.
+        2.  React to the violin question (this is a trigger topic for her).
+        3.  Maintain her character: sharp, annoyed, but not completely hostile since he's not from Kostya's gang.
+
+    *   *Correction:* "St. Petersburg? You're hearing things. Tver. Difference is huge."
+    *   *Violin:* This is the painful part. She doesn't want to talk about it. She should deflect or get defensive. "Who's Marina? And why does she open her mouth too much?"
+    *   *Atmosphere:* Rain outside, scratching pen sounds, the smell of old chalk, her annoyance simmering.
+
+    *   *First paragraph:* Correct the location detail sharply. Show her irritation with his memory.
+    *   *Second paragraph:* React to the violin topic. This needs to sting a bit. Show her physical reaction (clenching teeth, looking away).
+    *   *Third paragraph:* Dismiss the idea of playing at the holiday. Show her refusal to be put on display.
+
+    *   *Drafting - Paragraph 1:* "Из Питера? Ты чё, перегрелся на физре?" — я фыркнула, чувствуя, как внутри закипает раздражение. — "Тверь я сказала. Чётко и ясно."
+    *   *Drafting - Paragraph 2:* When he mentions Marina and the violin: The question hits like a punch. "Маринка — это та самая девочка, которая вечно суёт нос не в свои дела?" The violin topic is a wound. "Скрипку я забросила, потому что надоело. Всё."
+    *   *Drafting - Paragraph 3:* Closing. The idea of playing at a holiday sounds like a nightmare to her. "И на празднике я ничего играть не буду. Не надо мне этих ваших 'офигеют'. Мне плевать, что они там подумают."
+
+    *   Play only Kira? Yes.
+    *   First person? Yes.
+    *   Details? Sound of rain, feeling of annoyance.
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes.
+
+    *   *Self-Correction during drafting:* Make sure she doesn't sound *too* angry, just guarded. She's smart, so she'll correct him logically but sharply.
+
+    *   "Из Питера? Ты чё, перегрелся?" — я резко повернулась к нему, сжимая ручку так, что побелели костяшки. — "Тверь я сказала. Чётко и ясно. У тебя со слухом проблемы или память отшибло?"
+    *   Про скрипку — это было больно. Как будто в открытую рану ткнули. Я почувствовала, как в груди неприятно сдавило, и тут же нацепила привычную маску безразличия. "Маринка — это та самая девочка, которая вечно суёт нос не в свои дела? Передай ей, что её советы мне не нужны."
+    *   Я отвернулась к окну, глядя на серые капли. "И на празднике я ничего играть не буду. Не надо мне этих ваших «офигеют». Мне плевать, что там подумают."<channel|>— Из Питера? Ты чё, перегрелся? — я резко повернулась к нему, сжимая ручку так, что побелели костяшки. — Тверь я сказала. Чётко и ясно. У тебя со слухом проблемы или память отшибло?
+
+Про скрипку — это было больно. Как будто в открытую рану ткнули. Я почувствовала, как в груди неприятно сдавило, и тут же нацепила привычную маску безразличия. "Маринка — это та самая девочка, которая вечно суёт нос не в свои дела? Передай ей, что её советы мне не нужны".
+
+Я отвернулась к окну, глядя на серые капли. "И на празднике я ничего играть не буду. Не надо мне этих ваших «офигеют». Мне плевать, что там подумают".

@@ -1,13 +1,15 @@
 # Модели: протестированные и кандидаты
 
 Реестр моделей проекта. Числа краткие, подробности — по ссылкам в логах (`docs\`). Стенд:
-RTX 4060 Ti 16 ГБ, сборка **b11382** (CUDA 12.4). Срез: 2026-10-07.
+RTX 4060 Ti 16 ГБ, сборка **b11382** (CUDA 12.4). Срез: 2026-10-08.
 
 Обозначения: ✅ берём · ⚠️ с оговорками · ❌ не берём · 📌 по назначению (замеров нет) · 🗑 файл удалён с диска.
 «Тестировали» = что реально измеряли в этом репозитории (остальное — не проверено).
 **RP-средний** — среднее по 8 осям LLM-судьи (1–5): `bench\quality\rp_judge.py` + `judge_score.py`
-(`docs\quality\rp-quality-eval.md`). Судьи — `gemma-4-26B-A4B` и `Qwen3.6-35B-A3B` MXFP4, разной строгости
-(26B мягче ~4.4, Qwen строже ~3.3); балл читать вместе с вердиктом и отчётом о числе ответов (N).
+(`docs\quality\rp-quality-eval.md`). **С 2026-10 штатная панель — 4 судьи** (локальные `gemma-4-26B-A4B`
+и `Qwen3.6-35B-A3B` MXFP4 + облачные **DeepSeek-Flash/Pro** через `api_judge.py`); у более старых строк —
+1–2 судьи. Шкалы разные (26B мягче ~4.4, Qwen строже ~3.3, облачные — свой уровень), поэтому сумму
+сравнивать только при **совпадении набора судей**; балл читать вместе с вердиктом и числом ответов (N).
 
 ## Протестированные: RP / креатив / русский
 
@@ -18,6 +20,7 @@ RTX 4060 Ti 16 ГБ, сборка **b11382** (CUDA 12.4). Срез: 2026-10-07.
 | **Gemma-4-31B Giftige-Blume v1** (Blazed-Forge) | **4.39** п.н. (Think 4.53 · No 4.33) | i1-IQ3_XXS | RP-связность (полный набор, 2 судьи); инициатива; русский | ✅ №1 Combined RP на доске; **лучшая инициатива (4.0)**; замена StyleSwap; Think слабее (4/18 пустых; безлимит — 2/18, но качество то же) | RP 22.3 (No) · 30.4 (Think) t/s; RU 99.9 % | `gemma4-31b-blume-v1-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` §5.7 |
 | **Gemma-4-26B-A4B StyleTune-V2** (Gryphe) | 4.40 (Think 4.65 · No 4.19) | IQ4_XS | RP-связность; русский; скорость | ✅ быстрый RP; слабее на памяти/контексте | RP 63 (без спец.) · чат 70 t/s; RU 96–100 % | `gemma4-26a4b-styletune-*.bat` | `docs\models\gemma-4-26b-a4b.md`, `docs\quality\rp-quality-eval.md` |
 | **Gemma-4-26B-A4B Goetia v1.6** (Naphula) | 4.23 (NoThink) | i1-IQ3_XXS | RP-связность; русский; скорость | ⚠️ быстрый MoE; путает сущности, шаблонные реплики; think-режим непригоден в llama.cpp | ~73 t/s; RU 100 % (RU-safe) / 83 % (пресет карточки) | `gemma4-26a4b-goetia-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` |
+| **Gemma-4-26B-A4B Boulesis v2.1** (SubMaroon) | **3.67 панель 4 судей** (No 3.74 · Think 3.60, N=48); локальные gemma 4.48 / Qwen 3.56 (No) | i1-IQ4_XS | RP-связность (скрин, **панель 4 судей** — + DeepSeek-Flash/Pro, оба режима); русский; скорость; think | ⚠️ **#2 среди 26B-мёржей на скрине** (панель: за StyleTune 3.78, выше MeroMero 3.70 и всех 31B-лидеров 3.51–3.59); в `rp-ranking.md` — **No #8 · Think #10**; минусы: литературщина/клише, 4 абзаца вместо 2–3, ошибка памяти («не бросала скрипку»), слабая инициатива у строгих судей; **NoThink лучше think** (в think течёт черновик) | RP 55 t/s (No) · 59.5 (Think); RU 100 % (No) / 86.6 % (Think); 15.3 ГБ | `gemma4-26a4b-boulesis-v21-nothink-b11382.bat` (+ `-think`) | `docs\quality\rp-quality-eval.md` §5.16 |
 | **Gemma-4-31B Glistening-Gem v2.1** (sophosympatheia) | **4.13** (Think 3.60 · No 4.32) | i1-IQ3_XXS | RP-связность (полный набор, 2 судьи); русский; скорость | ✅ NoThink вровень с лидерами (4.32 Gemma / 3.35 Qwen), лучшая по памяти; Think сломан (7/18 пустых) | RP 22.7 (No) · 30.8 (Think) t/s; RU 100 % | `gemma4-31b-glistening-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` §5.6 |
 | **Gemma-4-31B Artemis-31B-v1.2** (TheDrummer) | 3.90 (Think 4.29 · No 3.50) | i1-IQ3_XXS | RP-связность; русский; PPL; скорость | ❌ RP: речевая деградация в кашу при RU 92–96 % | RP 20–26 t/s; PPL RU 983 | `gemma4-31b-artemis-*.bat` | `docs\quality\rp-quality-eval.md`, `docs\research\why-ru-models.md` |
 | **Gemma-4-31B-it heretic-ARA** (Heretic / mradermacher) | **4.44** (Think 4.52 · No 4.35) | i1-IQ3_XXS | RP (скрин, 2 судьи); русский; скорость | ⚠️ **база + ARA-abliteration, не RP-тюн**: память/инициатива ок, но голос персонажа слабый («fast-track» в соблазне; литературщина и опечатки в think); **think рабочий** | RP 24.7 (No) · 31.3 (Think) t/s; Qwen-судья 3.52; Чисто 83 % (No) / 100 % (Think) | `gemma4-31b-heretic-ara-{nothink,think}-b11382.bat` | `docs\quality\base-models-rp-eval.md` §4.3 |
@@ -29,10 +32,13 @@ RTX 4060 Ti 16 ГБ, сборка **b11382** (CUDA 12.4). Срез: 2026-10-07.
 | **Qwen3.6-35B-A3B Genesis Hermes V7** (mradermacher i1) | 3.35 (gemma 3.81 · **Qwen 2.90**) | i1-IQ4_XS | RP (скрин, **nothink**, 2 судьи); русский; скорость | ❌ **не апгрейд**: ниже базовых Qwen и нашего топа; персонаж/инициатива/память слабые; RU 100 % (Caliper 72.4 не подтвердился) | TG 41.6 t/s; IQ4_XS 17.9 ГиБ → offload, без MTP | `qwen36-35b-a3b-genesis-hermes-v7-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` §5.12 |
 | **Gemma-4-26B-A4B G4-MeroMero it-uncensored-heretic** (llmfan46/mradermacher i1) | 3.81 (gemma 4.46 · **Qwen 3.15**) | i1-IQ4_XS | RP (скрин, 2 судьи); русский; скорость; think | ❌ **не апгрейд**: ниже базы Gemma-26B (Qwen 3.56) и лидеров; повторы (1.67), память-ловушка «Питер» (2/3 сида), пассивна в соблазне; RU **100 %**, быстрый MoE 62 t/s; **think сломан** (Чисто 17 %, утечка reasoning) | TG 62.1 t/s (No); 15.5 ГБ | `gemma4-26a4b-meromero-nothink-b11382.bat` (think непригоден) | `docs\quality\rp-quality-eval.md` §5.13 |
 | **Dans-PersonalityEngine-V1.3.0-24b** (PocketDoc; база Mistral-Small-3.1) | **2.54** (gemma 3.94 · **Qwen 2.54**) | IQ4_XS | RP (скрин, nothink, 2 судьи); русский; скорость | ⚠️ **не character-RP** (personality/chat-тюн): персонаж 1.5, «быстрое согласие», пассивность; **русский держит чисто (100 %)**, хотя в карточке `en`; годится как RU/EN чат-компаньон | TG 18.9 t/s; 15.0 ГБ | `dans-pers13-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` §5.14 |
+| **Gemma-4-26B-A4B Kitchoon** (SubMaroon) | **2.72 панель 4 судей** (No 3.25 · Think 2.09, N=44); локальные gemma 3.88 / Qwen 3.17 (No) | i1-IQ4_XS | RP (скрин, **панель 4 судей**, оба режима); русский; скорость; think | ❌ **не апгрейд — слабейший из 26B-мёржей** (ниже Goetia 3.55, DTV2 3.51, бесплатных GLM-Flash): память 2.25 (3/3 сида приняли ложный «Питер»), характер смягчён, шаблоны, BPE-склейка `дождrains`; **think непригоден** (Чисто 0 %, англ. reasoning утекает в ответ) | RP 55 t/s (No) · 58 (Think); RU 83 % (No) / 0 % (Think); 15.4–15.8 ГБ | `gemma4-26a4b-kitchoon-nothink-b11382.bat` (+ `-think`) | `docs\quality\rp-quality-eval.md` §5.17 |
 
 ¹ N ответов: DTV2 10, Schattenblume 20, StyleTune 11, Goetia 11, Artemis 6 (часть пунктов судья пропустила);
-Glistening 19, StyleSwap 21 (полный набор, два судьи); heretic-ARA 12 (скрин, два судьи).
-**Масштаб чисел:** DTV2, Schattenblume, StyleTune, Goetia, Artemis, heretic-ARA — **2 сценария** (судья 26B);
+Glistening 19, StyleSwap 21 (полный набор, два судьи); heretic-ARA 12 (скрин, два судьи);
+**Boulesis v2.1 48** и **Kitchoon 44** (панель 4 судей × 2 режима).
+**Масштаб чисел:** DTV2, Schattenblume, StyleTune, Goetia, Artemis, heretic-ARA, **Boulesis v2.1**,
+**Kitchoon** — **2 сценария** (Boulesis/Kitchoon — панель 4 судей, остальные — судья 26B);
 Glistening, StyleSwap, Giftige-Blume-v1 — **полный набор** (средний Gemma; строгий Qwen ниже — см. «Полный набор»).
 У «—» RP-бенчмарк не запускался.
 
@@ -131,7 +137,6 @@ Artemis-31B (3.90) — их числа в таблице «Протестиро�
 | средний | **Prosopon-31B** (Nimbz) | 8 доноров | 71.1 / 62.6 | Nimbz/mradermacher / 11.8 Г |
 | средний | **Novelist-Eclipse-31B** (Ateron) | Прозо-мерж того же автора | 66.5 / 65.8 | bartowski / ≈12 Г |
 | средний | **Dark-Thoughts V1 31B** (Ateron) | Сравнение с V2 («поумнела ли») | — | bartowski / ≈12 Г |
-| средний | **Boulesis-26B-A4B** (SubMaroon) | QK task-arithmetic + LoRA + StyleTune head | — | mradermacher / 10.8 Г |
 | низкий | **Harmonia-31B** (virtuous7373) | ⬇️ свежий ERP обвалился + heretic | 68.4 / **52.7** | mradermacher / 11.25 Г |
 | низкий | **G4-MeroMero-v2-31B-heretic** (zerofata) | Контроль «мерж лечит файнтюн»; свежий ERP низкий | 71.7 / 53.8 | mradermacher / 11.25 Г |
 | низкий | **Merotheon-31B** (Casual-Autopsy) | Единственный с reasoning-донором (Pantheon); IQ3 GGUF нет | 68.9 / 64.1 | ❌ конвертить |
