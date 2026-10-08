@@ -3,6 +3,8 @@
 Кросс-модельная тема. Наши замеры — `bench\suites\probe\*.json` и `bench\runs\results.jsonl`; внешние
 факты — по ссылкам в конце. Дата: 04.10.2026, сборка b11382 (CUDA 12.4), RTX 4060 Ti 16 ГБ.
 
+![Кэш промпта: пересчёт токенов и время на ход](../images/chart_cache_prompt.png)
+
 ## 1. Что подтверждено на нашем стенде
 
 - **Промпт длиннее контекста → HTTP 400.** Сервер отвечает `request (N tokens) exceeds the available

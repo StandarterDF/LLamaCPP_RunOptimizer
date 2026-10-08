@@ -52,7 +52,17 @@
 
 ## Картинки — `docs\images\`
 
-Графики и схемы (генерируются `bench\plot_kv.py`): размер KV-кэша, бюджет VRAM,
-максимальный контекст, NIAH-карты, скорость и схема «двух эффектов». Вставлены в
-`docs\research\kv-cache-quantization.md`; встраивать можно в любые `.md` ссылкой
-`images\<файл>.png`.
+Только **графики по реальным замерам** (генераторы: `bench\plot_kv.py` — KV-кэш и
+канарейка; `bench\make_charts.py` — RP-рейтинг, спекуляция, кэш промпта):
+
+| Файл | О чём |
+| --- | --- |
+| `chart_rp_ranking.png` | RP-балл моделей (Non-Think/Think, Local/Cloud) |
+| `chart_speculation_models.png` | без спекуляции vs MTP по моделям |
+| `chart_speculation_tasks.png` | Qwen3.6: где спекуляция окупается (RP/чат/код/матем/сумма) |
+| `chart_cache_prompt.png` | кэш префикса: пересчёт токенов и время на ход |
+| `kv_*.png` | KV-кэш: память, бюджет VRAM, NIAH, скорость, PPL, канарейка |
+
+Вставлены в `docs\research\kv-cache-quantization.md`, `docs\research\speculation-research.md`,
+`docs\quality\rp-ranking.md`, `docs\research\context-infinite-chat.md`, README. Встраивать
+можно в любой `.md` ссылкой `images\<файл>.png` (из `docs\`) или `docs/images\<файл>.png` (из корня).

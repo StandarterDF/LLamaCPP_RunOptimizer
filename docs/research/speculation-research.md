@@ -5,6 +5,10 @@ NVIDIA Jetson AI Lab, kaushalya.io, HF-карточки спекуляторов
 README `ik_llama.cpp`, форк `Luce-Org/llama.cpp-dflash-ggml`, поиск через браузер/веб.
 Движок: существующий билд llama.cpp (build 10472) — по правилам проекта другие сборки не скачиваются.
 
+![Спекуляция: выигрыш по моделям](../images/chart_speculation_models.png)
+
+![Qwen3.6: спекуляция по задачам](../images/chart_speculation_tasks.png)
+
 ---
 
 ## 1. Какие бывают методы (и что поддерживает наша сборка)

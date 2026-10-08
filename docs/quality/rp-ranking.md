@@ -10,6 +10,8 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
 **Как читать:** сравнивать только внутри таблицы. Судьи расходятся — подробности и per-judge числа:
 `docs\quality\rp-quality-eval.md`, `docs\quality\cloud-api-rp-eval.md`. Отклонённые — `docs\models.md`.
 
+![RP-рейтинг моделей](../images/chart_rp_ranking.png)
+
 ## Non-Thinking (основной режим)
 
 | # | Модель | Type | RP | сц | Примечание |
