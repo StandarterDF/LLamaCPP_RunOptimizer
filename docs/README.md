@@ -41,9 +41,17 @@
 | `docs\research\caliperbench-2026-10.md` | CaliperBench: RP-рейтинг Gemma 4, правило «что держит русский». |
 | `docs\research\why-ru-models.md` | Почему одни модели держат русский, а другие рассыпаются (PPL, провенанс). |
 | `docs\research\euroeval-2026-10.md` | EuroEval: славянские прокси-языки для оценки русского. |
+| `docs\research\kv-cache-quantization.md` | **Квантование KV-кэша** (f16/q8_0/q4_0): промптовые сравнения, NIAH, PPL, бюджет VRAM; картинки — `docs\images\`. |
 | `docs\research\router-mode.md` | Router-режим llama.cpp: один сервер на все модели (`launch\router\`). |
 | `docs\research\rp-datasets-en-ru.md` | Датасеты RP/DRP/ERP (EN и RU): пул для SFT и перевода EN→RU, пайплайн MT. |
 | `docs\research\rp-datasets-quality-check.md` | Проверка тех же датасетов **по факту** (реальные строки HF): дубли, формат, качество, вердикты. |
 | `docs\research\gemma4-rp-training-data.md` | На чём обучались наши Gemma-4 RP-мержи/файнтюны и современные Gemma-4 RP (доноры, датасеты). |
 
 Инструменты, конфиги и правила — `bench\`, `launch\`, `AGENTS.md` в корне репозитория.
+
+## Картинки — `docs\images\`
+
+Графики и схемы (генерируются `bench\plot_kv.py`): размер KV-кэша, бюджет VRAM,
+максимальный контекст, NIAH-карты, скорость и схема «двух эффектов». Вставлены в
+`docs\research\kv-cache-quantization.md`; встраивать можно в любые `.md` ссылкой
+`images\<файл>.png`.

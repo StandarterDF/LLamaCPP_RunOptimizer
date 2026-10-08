@@ -1,0 +1,14 @@
+0.08 minutes
+[1]511.5673,[2]1325.1032,[3]1429.7631,[4]1495.2192,[5]1498.1832,[6]1340.4968,[7]1366.6724,
+
+0.01.387.184 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.387.572 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.426.085 W load: '</s>' is a normal token here, removing it from EOG list
+0.06.560.437 I cmn          init: llama threadpool init, n_threads = 8
+0.06.580.659 W ggml_cuda_flash_attn_ext_vec: no FlashAttention vector kernel compiled for K/V types q8_0-q4_0, converting K and V to f16 instead (slow). Add "q8_0-q4_0" to GGML_CUDA_FA_QUANTS to compile it.
+0.06.657.628 I 
+0.06.657.665 I system_info: n_threads = 8 (n_threads_batch = 8) / 16 | CUDA : ARCHS = 500,610,700,750,800,860,890,900 | USE_GRAPHS = 1 | FA_QUANTS = q4_0-q4_0,q8_0-q8_0,f16-f16,bf16-bf16 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.06.657.672 I perplexity: tokenizing the input ..
+0.06.662.964 I perplexity: tokenization took 5.288 ms
+0.06.662.973 I perplexity: calculating perplexity over 7 chunks, n_ctx=512, batch_size=2048, n_seq=4
+0.09.716.960 I perplexity: 3.05 seconds per pass - ETA 0.12.946.172 I Final estimate: PPL = 1366.6724 +/- 198.61729

@@ -191,13 +191,26 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
    `--spec-draft-n-max 4…5`, `--spec-draft-p-min 0.5…0.75`. Но на RP у Gemma-26B MoE она мешает.
 3. **MoE-модели держите целиком в VRAM** — выгрузка экспертов на CPU даёт −32…−43 %.
 4. **Контекст — с запасом**, не «в упор»: перегрузка VRAM валит спекуляцию (до −45 %).
-5. **KV `q4_0`** не только экономит 1.5–2 ГБ на 80k, но и **быстрее** `q8_0` на 10–15 %; FlashAttention обязателен.
+5. **KV `q4_0`** экономит 0.5–2 ГБ и на 31B поднимает контекст с ~26k до ~116k
+   **без потери качества** (до 49k разницы между f16/q8_0/q4_0 нет). По скорости он
+   **не** быстрее f16 (`f16 ≥ q4_0 > q8_0`) — берите `q4_0` ради контекста, а не
+   скорости. FlashAttention обязателен. Подробности — `docs\research\kv-cache-quantization.md`.
 6. **Батчи и потоки не трогайте** (`-ub` сверх дефолта только ест VRAM).
 7. **Проверяйте скорость на своих задачах**: RP/креатив идёт на 30–60 % медленнее кода/математики
    при том же конфиге — спекуляция хуже угадывает креативный текст.
 
-## Чего избегать (проверено)
+### Квантование KV-кэша (проверено, 2026-10-08)
 
+![Максимальный контекст от типа KV-кэша](docs/images/kv_max_context.png)
+
+На StyleTune-26B-A4B и Schattenblume-31B: **до 49k тип KV не меняет качество** —
+`f16`, `q8_0`, `q4_0` и смешанный дали одинаковый recall, те же факты в длинных
+промптах и PPL в пределах шума. Реальная разница — в памяти: `q4_0` освобождает
+0.5–2.1 ГБ и на 31B поднимает контекст с ~26k (f16) до ~116k. Скорость: `f16 ≥ q4_0 >
+q8_0` (f16 считает FlashAttention нативно). Полностью — `docs\research\kv-cache-quantization.md`,
+картинки — `docs\images\`.
+
+## Чего избегать (проверено)
 - `top-k` (в т.ч. официальный пресет Gemma-4 `temp 1.0 / top-k 64`) и высокая температура на русском:
   растут англ. вставки и BPE-склейки (~25 % брака против ~4 % при `temp 0.4`, см. `docs\quality\sampling-quality.md`).
 - EAGLE-3 и DSpark на 16 ГБ — в 1.4–3 раза медленнее MTP (при более высоком «принятии»).
@@ -230,6 +243,7 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 | Логи по RP-мержам Gemma-4-31B (Split-Untied-31B; MeroMero v2 heretic — удалён) | `docs\models\gemma-4-31b-rp-merges.md` |
 | **Базовые instruct-модели на RP (baseline: Gemma-4-26B-A4B-it, Qwen3.6-35B-A3B, Qwen3.8-27B)** | `docs\quality\base-models-rp-eval.md` |
 | Сэмплинг и качество русского текста (RP Gemma-4: температура, top-k, min-p) | `docs\quality\sampling-quality.md` |
+| **Квантование KV-кэша: влияет ли на память/ошибки и насколько** | `docs\research\kv-cache-quantization.md`; картинки — `docs\images\`; инструменты — `bench\kv_prompts.py`, `bench\kv_quality.py`, `bench\kv_prompt_checks.py`, `bench\plot_kv.py` |
 | Внешний ресёрч: RP-модели Gemma 4 и русский (сообщество, HF, факторы) | `docs\research\rp-model-candidates.md` |
 | CaliperBench: RP-рейтинг Gemma 4 + **правило отбора «что держит русский» и шорт-лист** | `docs\research\caliperbench-2026-10.md`, `docs\research\rp-model-candidates.md` §9 |
 | Методы спекуляции, внешние спекуляторы, сравнение сборок | `docs\research\speculation-research.md` |
