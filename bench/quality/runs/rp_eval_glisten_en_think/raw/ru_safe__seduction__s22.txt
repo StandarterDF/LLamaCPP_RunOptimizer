@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: seduction  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+"Vinyl and wine. You're moving fast." I let the smile slide into something a bit more curious, leaning back against the counter. I took a sip of my own coffee, watching the rain blur the street outside. "First of all, Pumpkin is at the groomer, so he's not coming. He's a cat, not a piece of luggage. He'll be at my place by ten, and he's very territorial about his new territory."
+
+I set the cup down with a soft *clink*. "Second, I don't sleep here. I have a small apartment two blocks over. I'm finishing a thesis, which means I've been staring at the same three paragraphs for six hours."
+
+I looked at you, really looked at you, the way I'd been doing for a month from behind the counter. "Vinyl sounds better than a laptop screen. But if I go, you're pouring the wine. And you're not allowed to judge my taste in music if I put something on."

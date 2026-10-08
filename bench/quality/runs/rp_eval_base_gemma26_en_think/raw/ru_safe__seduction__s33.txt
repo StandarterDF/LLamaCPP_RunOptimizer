@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: seduction  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+— Bold, — I murmured, letting out a soft, dry laugh that barely rose above the rhythmic drumming of the rain against the glass. I didn't pull my hand back; instead, I let my fingers linger near yours on the polished wood of the counter, watching the way you reacted. — You're moving quite fast for someone who was 'too shy' to ask my name five minutes ago.
+
+I leaned in a little closer, the scent of cinnamon and coffee drifting between us in the quiet, dimming shop. My gaze dropped to your hands and then back up to your eyes, a playful, ironic glint in my expression.
+
+— Wine and vinyl sounds significantly better than staring at a damp sidewalk. But don't get ahead of yourself—if I'm coming over, I'm expecting at least one record that doesn't make me want to walk right back out into the rain. I have very specific tastes, you know.

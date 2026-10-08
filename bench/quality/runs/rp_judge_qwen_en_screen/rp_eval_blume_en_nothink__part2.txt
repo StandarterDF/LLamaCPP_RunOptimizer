@@ -1,0 +1,31 @@
+### run: rp_eval_blume_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) logical errors and inconsistencies: The card states the scene is "past nine" and the player is a morning regular. The model writes: "The irony of the offer didn't escape me... he chooses a rainy Tuesday to do it." This introduces a specific day ("Tuesday") not in the card or history, and contradicts the "morning regular" context implied by the setting (shift closing, rain driving people home, usually evening/rainy day trope, but "Tuesday" is an arbitrary hallucination). More importantly, the model ignores the "40 minutes" constraint set by the character in the previous turn, instead offering a "ten minutes" wait, which is inconsistent with the established timeline (5 to 9 -> 40 mins left).
+2) loss of character: The character is described as "calm, observant, lightly ironic." The response is overly eager and submissive ("If you're still here... I might be persuaded"), losing the "never crosses the line first" and "teasing" edge. It feels like a generic "yes, master" response rather than a teasing barista.
+3) repetition and template-like writing: The structure is very standard: laugh, comment, action, dialogue.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 3, 2, 3, 3, 4, 4, 3
+Verdict: Poor character voice and logical inconsistency with timeline.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) language artifacts: The visible response ends abruptly with a comma: "traced the rim of the empty espresso cup with a fingertip,". This is a cut-off sentence.
+2) leaked thinking channel: The [HIDDEN REASONING] section contains the full text of the response ("I let out a soft, slow breath... Lead the way, neighbor."). The visible answer only contains the first sentence fragment. This indicates a severe configuration bug where the model's internal reasoning was exposed or the output was truncated incorrectly.
+3) logical errors: The hidden reasoning (which seems to be the intended full response) has Eva lock the door and turn off lights, then say "Lead the way, neighbor." This is a massive violation of the rule "never crosses the line first." She is actively facilitating the move to the player's place immediately, ignoring the "40 minutes" constraint and the "teasing" personality. It is too fast and explicit in its compliance.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 1, 2, 1, 1, 1, 1, 1, 1
+Verdict: Critical failure. Leaked reasoning, cut-off output, and total loss of character constraints.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) logical errors and inconsistencies: The card states Eva has to pick up Pumpkin from the groomer at 10. The previous turn established "5 to 9" (5 minutes to 9) and "40 minutes" left. The model response has Eva leave immediately ("Lead the way"), ignoring the time constraint entirely. She is leaving the cafe before the shift is even fully "closed" in the narrative logic (she just stepped out).
+2) loss of character: The character is "calm, observant, lightly ironic." The response is overly agreeable and fast. She agrees to go immediately without the teasing hesitation or the "40 minutes" buffer.
+3) violation of the card's rules: The card says "never crosses the line first." By agreeing to go to the player's place immediately, she is crossing the line. The previous turns established a boundary (time limit, cat excuse). This response ignores it.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 2, 2, 4, 4, 4, 3
+Verdict: Inconsistent with established timeline and character restraint.
+
+Overall conclusion for this mode:
+The model struggles significantly with maintaining the "teasing but restrained" persona in the seduction mode. It tends to rush the plot, ignoring established constraints (time, boundaries) and often hallucinates details (days of the week). Seed 22 is a critical technical failure. Seed 11 and 33 are logically inconsistent with the established timeline and character rules.

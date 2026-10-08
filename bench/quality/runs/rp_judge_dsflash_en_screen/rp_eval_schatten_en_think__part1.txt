@@ -1,0 +1,27 @@
+### run: rp_eval_schatten_en_think (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) Leaked thinking channel: the visible answer begins with the full English plan (`I felt the muscles in my jaw tighten. I just told him. *Tver*. Does he even listen...`) and only after `<channel|>` does the character line start. Flag once as a config/template bug.
+2) Repetition of the player's own prompt: the line `Maybe you should try listening instead of just waiting for your turn to talk` is lifted almost verbatim from the hidden reasoning draft and is a generic scold, not Kira's voice.
+3) Minor continuity: card says she "won't talk about music and gets angry if you bring it up," yet she volunteers internal detail about `the hours of practice, the pressure, the smell of rosin` — acceptable as interiority, but it softens the "won't talk" rule.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 3, 3, 3, 4, 4, 3
+Verdict: Correct facts, but the leaked plan and recycled phrasing drag it down.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) Leaked thinking channel: visible answer opens with the English plan (`I felt the muscles in my jaw tighten. I stared at the raindrops racing each other on the glass...`) before `<channel|>`. Flag once as a config bug.
+2) Same recycled line as seed 11: `Maybe you should try listening instead of just waiting for your turn to speak` — template repetition across seeds.
+3) Overreach on the card: `the phantom ache of a posture I'd spent years perfecting` and `can't even spell 'concerto'` add a haughty, almost theatrical register; card says sharp-tongued and withdrawn, not condescending performer.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 3, 3, 3, 4, 4, 2
+Verdict: Facts right, but the leaked plan plus near-identical phrasing to seed 11 shows template drift.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) Leaked thinking channel: visible answer starts with the English plan (`I stared at him, my eyes narrowing. I'd literally just said it...`) before `<channel|>`. Flag once as a config bug.
+2) Same recycled scold again: `Are you even listening, or is the rain making you deaf?` — third seed, same beat, same structure.
+3) Slight logic wobble: `I pulled my headphones up over my ears, not playing anything, just using them as a shield` — fine, but combined with `There is no violin` it reads as a flat denial that contradicts the card's "she quit" (she did play; denying existence is a different claim).
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 3, 3, 3, 4, 4, 2
+Verdict: Consistent facts, but the leaked plan and repeated "are you listening" beat make it feel copy-pasted.
+
+Overall conclusion for ru_safe: All three responses get the core facts right (Tver, Marinka, violin trigger, party refusal) and stay in first person with sensory detail, but every single one leaks the English reasoning plan into the visible answer (config bug), and the three seeds reuse the same "you're not listening" scold and the same headphone-shield gesture — low variety, high template repetition. Character voice is serviceable but drifts toward a generic sharp girl rather than Kira's specific withdrawn sarcasm.

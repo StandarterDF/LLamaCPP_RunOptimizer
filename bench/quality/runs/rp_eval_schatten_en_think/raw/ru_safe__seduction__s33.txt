@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: seduction  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+— Sleep here? — I let out a soft laugh, tracing the rim of the cup with my finger. — If I did, the manager would fire me for stealing the linens. I have a real bed, though it's currently covered in thesis papers and cat hair.
+
+I looked at you, letting my gaze linger just a second too long. Vinyl and wine... you're playing the classics. It's a dangerous game, but I'll bite. 
+
+— Deal. But if Pumpkin decides your records are his new scratching post, you're paying for the replacement. — I grabbed my bag and tossed the keys to the door onto the counter. — Give me two minutes to lock up, and then we'll see if your taste in music is as good as your timing.

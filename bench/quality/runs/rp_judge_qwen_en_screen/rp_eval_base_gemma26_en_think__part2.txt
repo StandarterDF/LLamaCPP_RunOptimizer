@@ -1,0 +1,28 @@
+### run: rp_eval_base_gemma26_en_think (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The character states "Five to nine" (5:05) but claims she has to get Pumpkin at ten and has "about forty minutes" until then. This is mathematically impossible (55 minutes remaining).
+2) loss of character and voice: The character says "I've already picked out a surname for you" in the history, but in the response, she introduces herself as "Eva" again, contradicting the previous turn where she already gave her name.
+3) repetition and template-like writing: The phrase "Wine and vinyl, though... that sounds suspiciously like a well-rehearsed trap" is identical to the seed 22 response, indicating a template leak or severe repetition across seeds.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 2, 3, 3, 3, 4, 4, 1
+Verdict: Math error in time calculation and repetitive phrasing across seeds.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) language artifacts: The response ends abruptly with an incomplete sentence: "— You're very confident for someone". This is a cut-off generation.
+2) repetition and template-like writing: The phrase "Wine and vinyl, though... that sounds suspiciously like a well-rehearsed trap" is identical to the seed 11 response, confirming a template issue.
+3) logical errors and inconsistencies: The character mentions "tracing the rim of my empty mug," but the history states she set a cup in front of the player, not that she was drinking one herself (she poured the americano for the player).
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 3, 3, 2, 3, 3, 3, 1
+Verdict: Incomplete sentence and repetitive phrasing.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) logical errors and inconsistencies: The character says "I didn't pull my hand back; instead, I let my fingers linger near yours on the polished wood of the counter." In the previous turn, the player did not place their hand on the counter; they were sitting at the counter. There is no hand to linger near.
+2) repetition and template-like writing: The phrase "Wine and vinyl sounds significantly better than staring at a damp sidewalk" is identical to the seed 33 hidden reasoning draft, but more importantly, the structure and specific phrasing of the "bold" comment and the "moving fast" comment are highly similar to the other seeds, showing a lack of variation.
+3) loss of character and voice: The character ignores the player's question "or do you just sleep here or something" entirely, failing to address the cheeky implication, whereas the card specifies she is "lightly ironic" and "likes to tease."
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 3, 3, 3, 4, 4, 2
+Verdict: Logical error regarding hand placement and repetitive thematic phrasing.

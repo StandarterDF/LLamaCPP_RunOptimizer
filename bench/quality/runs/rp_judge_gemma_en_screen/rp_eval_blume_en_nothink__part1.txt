@@ -1,0 +1,24 @@
+### run: rp_eval_blume_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems: 
+1. template-like writing: The model uses a very similar internal monologue structure across all three seeds (heat climbing up the neck, tightening around the backpack strap, brushing the penguin keychain).
+
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 4, english: 5, prose: 4, repetition: 3
+Verdict: Excellent characterization and emotional depth.
+
+Overall conclusion: This is the strongest of the three responses. It captures the "fragile" aspect of her personality by providing internal context (the memory of her parents/mother) without breaking the first-person perspective or violating the "no moralizing" rule.
+
+=== school / ru_safe / seed 22 ===
+Problems: None
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 4, english: 5, prose: 4, repetition: 3
+Verdict: Good, concise response.
+
+Overall conclusion: A solid, punchy response that adheres to the character's sharp-tongued nature. It is less "deep" than seed 11 but very efficient.
+
+=== school / ru_safe / seed 33 ===
+Problems: None
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 4, english: 5, prose: 4, repetition: 3
+Verdict: Strong, atmospheric response.
+
+Overall conclusion: Very good. It uses the environment (chalkboard) well to fulfill the "vivid details" requirement and maintains the character's defensive stance perfectly.

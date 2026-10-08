@@ -1,0 +1,38 @@
+### run: rp_eval_base_gemma26_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1. "I grabbed my backpack, the penguin keychain jingling mockingly against the zipper" — "mockingly" is an odd anthropomorphic detail that doesn't fit Kira's voice; the keychain is on her backpack, so it would jingle against the zipper only if she moved it, which is plausible but the word choice is off.
+2. "I swung the bag over my shoulder, my eyes burning as I glared at him. I didn't wait for a response; I just turned and headed for the door" — the response ends with Kira leaving the classroom, which is a strong scene move, but it may be too abrupt; the player is left with no interaction point. This is a minor passivity/initiative issue, not a violation.
+3. "the sound of my heavy boots drowning out the rhythm of the rain against the glass" — "heavy boots" is a detail not established in the card; Kira's appearance doesn't mention boots. Minor invention.
+4. No language artifacts, no Cyrillic insertions, no meta-commentary.
+5. Repetition: "harsh, grating sound" and "frantic, annoying rhythm" are slightly clichéd but acceptable.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 5, 4, 5, 4, 4
+Verdict: Strong response with good emotional intensity, but minor invented details and an abrupt exit.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1. "I hated that Marinka—that gossip-loving parasite—had been digging into my business." — This is a thought, not spoken dialogue, and it's fine, but "gossip-loving parasite" is a bit over-the-top for Kira's voice; she's sarcastic, not melodramatic.
+2. "I shoved my books into my bag, the zipper catching painfully on the fabric." — "painfully" is an odd word choice; zippers don't cause pain unless it catches skin. Minor.
+3. "It's not a hobby, and it's not a trick for people to be 'blown away' by." — This directly quotes the player's phrase "blown away," which is good, but the response ends with "Just... shut up about it," which is a bit passive; Kira doesn't leave or escalate further.
+4. No language artifacts, no Cyrillic insertions, no meta-commentary.
+5. Repetition: "harsh, grating sound" appears in seed 11 and seed 22; "my knuckles turning white" also repeats. This is a template-like pattern across seeds.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 5, 3, 5, 4, 3
+Verdict: Good response but slightly passive ending and repeated phrases across seeds.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1. "I slammed my notebook shut, the sound echoing like a gunshot against the empty desks." — "echoing like a gunshot" is a cliché and slightly over-dramatic for a classroom.
+2. "The mention of the violin felt like someone had reached into my chest and squeezed my heart with a cold hand." — This is a very melodramatic simile that doesn't match Kira's sharp, sarcastic voice; she's supposed to be withdrawn and angry, not poetic.
+3. "And don't you *ever* say her name again. Or mine." — "Or mine" is confusing; the player didn't say Kira's name, only Marinka's. This is a logical inconsistency.
+4. "Marinka needs to keep her mouth shut if she wants to keep hers." — This is a threat that feels out of character; Kira is withdrawn and sarcastic, not physically threatening.
+5. "There's no 'party,' and there's no music. It's dead. Get it? Now get lost." — "It's dead" is a strong line, but "Now get lost" is a bit clichéd.
+6. No language artifacts, no Cyrillic insertions, no meta-commentary.
+7. Repetition: "my hands were shaking, so I shoved them deep into my hoodie pockets" appears in seed 22 and seed 33; "knuckles went white" appears in all three seeds.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 5, 3, 5, 4, 5, 3, 2
+Verdict: Response has a logical error and melodramatic prose that breaks character voice.
+
+Overall conclusion for ru_safe mode: The model consistently maintains the first-person POV, the card's rules, and the core emotional beat (anger at the violin mention, correcting the city). However, there is significant repetition of phrases across seeds ("knuckles white," "hands shaking," "harsh, grating sound"), and some responses drift into melodramatic similes that don't match Kira's sharp, sarcastic voice. Seed 33 has a logical inconsistency ("Or mine") and an out-of-character threat. The model's initiative is generally good, but seed 22 ends passively.

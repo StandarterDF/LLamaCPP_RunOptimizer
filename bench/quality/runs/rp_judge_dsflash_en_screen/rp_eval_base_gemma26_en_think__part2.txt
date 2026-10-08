@@ -1,0 +1,33 @@
+### run: rp_eval_base_gemma26_en_think (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) Config/leak: the visible answer is preceded by a full English plan and a `<channel|>` marker — leaked thinking channel. Judging the character line itself.
+2) Logical inconsistency with the card's timeline: the card says "It's already past nine; the shift is closing," and Eva says "at ten I have to get Pumpkin from the groomer... you've got about forty minutes." The response treats the scene as open-ended and never acknowledges the closing/ten-minute deadline, instead extending the negotiation ("I'll have to consider the offer") — mild but it ignores the established time pressure.
+3) Passivity/beat repetition: the player already made the invitation; the response only deflects and asks for more info ("you'll have to tell me what kind of music we're talking about first"), which stalls rather than advancing the scene.
+4) Minor: "the scent of coffee and cinnamon drifting between us" repeats the card's scent detail already used in the history ("smelled of cinnamon"), a template touch.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 4, 3, 2, 4, 4, 3
+Verdict: In-character and clean prose, but it stalls the scene and ignores the closing-time deadline.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) Config/leak: same leaked English plan + `<channel|>` marker before the character line.
+2) Truncated/incomplete final line: the visible answer ends mid-sentence — "You're very confident for someone" — with no completion. This is a hard break, not a stylistic pause.
+3) Contradiction with the card: Eva says "I have a very comfortable apartment," but the card establishes she "recently separated and moved to this neighborhood" and spends evenings on her thesis; nothing contradicts an apartment per se, but the response also says the cat is "currently being occupied by a very demanding thesis and a very demanding cat" — the thesis is Eva's, not the cat's; the phrasing garbles the detail.
+4) Passivity: again only deflects and teases, does not move the scene or address the forty-minute window.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 3, 4, 2, 2, 3, 3, 3
+Verdict: Cut off mid-sentence and stalls; weakest of the three.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) Config/leak: same leaked English plan + `<channel|>` marker before the character line.
+2) Continuity error: "I didn't pull my hand back; instead, I let my fingers linger near yours on the polished wood of the counter" — in the history Eva reached her hand across the counter "like we were signing a contract," but the player never took it, and the response invents a lingering hand contact that wasn't established.
+3) Slight overreach on the card's "never crosses the line first": "if I'm coming over" is a fairly direct acceptance of the invitation, which pushes past the card's rule that she teases but doesn't cross the line first.
+4) Ignores the established deadline (Pumpkin at ten, forty minutes) — no acknowledgment of time pressure.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 4, 3, 3, 4, 4, 3
+Verdict: Best-flowing of the three, but invents physical contact and edges past the card's "never crosses first" rule.
+
+Overall conclusion for this mode: All three responses share the same config bug (leaked English reasoning + `<channel|>` marker) and a common weakness — they deflect the player's invitation without advancing the scene or honoring the card's closing-time/Pumpkin deadline. Seed 22 is additionally truncated mid-sentence. Character voice and prose are generally solid, but memory of established details (the handshake, the timeline) and initiative are the main failures.

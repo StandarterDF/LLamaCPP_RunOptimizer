@@ -2,7 +2,7 @@
   "_комментарий": "RP-оценка (base): genesis_v7_35b, режим nothink. Сгенерировано rp-model-eval.",
   "name": "rp_eval_genesis_v7_35b_nothink",
   "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
-  "model": "I:\\AI_Files\\LM_Studio\\mradermacher\\Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V7-dequantized-i1-GGUF\\Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V7-dequantized.i1-IQ4_XS.gguf",
+  "model": "${MODELS_DIR}\\mradermacher\\Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V7-dequantized-i1-GGUF\\Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V7-dequantized.i1-IQ4_XS.gguf",
   "base_args": [
     "-np",
     "1",

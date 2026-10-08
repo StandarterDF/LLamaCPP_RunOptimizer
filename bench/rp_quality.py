@@ -268,8 +268,11 @@ def max_dup_ngram(words, n=8):
     return mx, dup / tot
 
 
-def analyze(text):
+def analyze(text, lang="ru"):
+    """Языковые метрики. lang='ru' — как раньше (латиница/чужие алфавиты = брак);
+    lang='en' — брак это кириллица/CJK/чужие алфавиты, латиница и англ. стоп-слова нормальны."""
     stats = {
+        "lang": lang,
         "chars": len(text),
         "cyr": 0,
         "lat": 0,
@@ -287,12 +290,16 @@ def analyze(text):
         "ukr_letters": 0,
     }
     foreign_by_script = {}
+    # Для EN «чужой» скрипт — это всё, кроме латиницы (в первую очередь кириллица).
     for ch in text:
         if ch in UKR_LETTERS:
             stats["ukr_letters"] += 1
         s = char_script(ch)
         if s == "cyr":
             stats["cyr"] += 1
+            if lang == "en":
+                stats["foreign"] += 1
+                foreign_by_script["cyr"] = foreign_by_script.get("cyr", 0) + 1
         elif s == "lat":
             stats["lat"] += 1
         elif s in ("han", "kana", "hangul"):
@@ -332,13 +339,20 @@ def analyze(text):
     stats["latin_stop"] = sum(
         1 for w in re.findall(r"[A-Za-z]+", text) if w.lower() in EN_STOP
     )
-    letters = stats["cyr"] + stats["lat"] + stats["foreign"]
+    if lang == "en":
+        # для EN «иностранное» уже включает кириллицу, поэтому не суммируем cyr отдельно
+        letters = stats["lat"] + stats["foreign"]
+    else:
+        letters = stats["cyr"] + stats["lat"] + stats["foreign"]
     stats["letters"] = letters
     stats["foreign_per_1k"] = (
         round(1000.0 * stats["foreign"] / letters, 2) if letters else 0.0
     )
     stats["cjk_per_1k"] = round(1000.0 * stats["cjk"] / letters, 2) if letters else 0.0
+    stats["cyr_per_1k"] = round(1000.0 * stats["cyr"] / letters, 2) if letters else 0.0
     stats["cyr_share"] = round(stats["cyr"] / letters, 3) if letters else 0.0
+    # Англ. стоп-слова — брак только в русском тексте; в английском это норма.
+    latin_stop_junk = 0 if lang == "en" else stats["latin_stop"]
     stats["junk_per_1k"] = round(
         1000.0
         * (
@@ -347,7 +361,7 @@ def analyze(text):
             + stats["marker"] * 4
             + stats["special"] * 3
             + stats["escape"] * 3
-            + stats["latin_stop"] * 4
+            + latin_stop_junk * 4
             + stats["mixed_words"] * 4
             + stats["ukr_letters"] * 2
         )
@@ -357,16 +371,19 @@ def analyze(text):
     words = text.split()
     stats["words"] = len(words)
     stats["rep8_max"], stats["rep8_dup"] = max_dup_ngram(words, 8)
-    # Лексическое разнообразие (Type-Token Ratio). Слова — только кириллические
-    # (латиница у нас обычно артефакт), нижний регистр. Сырой TTR занижается на
-    # длинных текстах, поэтому главный для сравнения — ttr_win на первых 150 словах.
-    cyr_words = [w.lower() for w in re.findall(r"[а-яё]+", text)]
-    wc = len(cyr_words)
+    # Лексическое разнообразие (Type-Token Ratio). Слова — алфавит целевого языка
+    # (RU: кириллица, латиница обычно артефакт; EN: латиница), нижний регистр.
+    # Сырой TTR занижается на длинных текстах, поэтому главный — ttr_win на 150 словах.
+    if lang == "en":
+        lang_words = [w.lower() for w in re.findall(r"[A-Za-z]+", text)]
+    else:
+        lang_words = [w.lower() for w in re.findall(r"[а-яё]+", text)]
+    wc = len(lang_words)
     stats["ttr_words"] = wc
-    stats["ttr"] = round(len(set(cyr_words)) / wc, 4) if wc else 0.0
-    _win = cyr_words[:150]
+    stats["ttr"] = round(len(set(lang_words)) / wc, 4) if wc else 0.0
+    _win = lang_words[:150]
     stats["ttr_win"] = round(len(set(_win)) / len(_win), 4) if _win else 0.0
-    stats["guiraud"] = round(len(set(cyr_words)) / (wc**0.5), 2) if wc else 0.0
+    stats["guiraud"] = round(len(set(lang_words)) / (wc**0.5), 2) if wc else 0.0
     stats["foreign_scripts"] = (
         ",".join(sorted(foreign_by_script)) if foreign_by_script else ""
     )
@@ -377,7 +394,7 @@ def analyze(text):
         and stats["fffd"] == 0
         and stats["marker"] == 0
         and stats["ctrl"] == 0
-        and stats["latin_stop"] == 0
+        and latin_stop_junk == 0
         and stats["mixed_words"] == 0
         and stats["ukr_letters"] == 0
         and stats["rep8_dup"] < 0.05
@@ -474,7 +491,7 @@ def default_sampling():
     }
 
 
-def generate(port, prompt, sampling, n_predict, seed, n_probs=0):
+def generate(port, prompt, sampling, n_predict, seed, n_probs=0, model=None):
     body = {
         "prompt": prompt,
         "n_predict": n_predict,
@@ -484,6 +501,8 @@ def generate(port, prompt, sampling, n_predict, seed, n_probs=0):
         "stop": STOP_WORDS,
         "n_keep": 0,
     }
+    if model:
+        body["model"] = model
     if n_probs:
         body["n_probs"] = n_probs
     body.update(default_sampling())
@@ -491,10 +510,11 @@ def generate(port, prompt, sampling, n_predict, seed, n_probs=0):
     return http_json(f"http://127.0.0.1:{port}/completion", body, timeout=900)
 
 
-def apply_template(port, messages):
-    r = http_json(
-        f"http://127.0.0.1:{port}/apply-template", {"messages": messages}, timeout=60
-    )
+def apply_template(port, messages, model=None):
+    payload = {"messages": messages}
+    if model:
+        payload["model"] = model
+    r = http_json(f"http://127.0.0.1:{port}/apply-template", payload, timeout=60)
     return r["prompt"]
 
 
@@ -534,9 +554,24 @@ def main():
     args = ap.parse_args()
 
     suite = expand_obj(json.load(open(args.suite, encoding="utf-8")))
-    server_exe = suite["server"]
-    model = suite["model"]
-    base_args = suite.get("base_args", [])
+    lang = suite.get("lang", "ru")
+    # router-режим: не поднимаем свой llama-server, а ходим в уже запущенный роутер
+    # (launch\router\run-router.bat, порт 9931). Модель выбирается полем model.
+    router = suite.get("router") or {}
+    router_url = router.get("url") if isinstance(router, dict) else None
+    router_model = router.get("model") if isinstance(router, dict) else None
+    use_router = bool(router_url)
+    if use_router:
+        from urllib.parse import urlparse
+
+        args.port = urlparse(router_url).port or args.port
+        server_exe = None
+        model = router_model
+        base_args = []
+    else:
+        server_exe = suite["server"]
+        model = suite["model"]
+        base_args = suite.get("base_args", [])
     prompts_path = suite.get("prompts", "quality/prompts/prompts_ru_rp.json")
     if isinstance(prompts_path, str):
         prompts_path = os.path.join(ROOT, prompts_path)
@@ -573,31 +608,37 @@ def main():
 
     log_path = os.path.join(out_dir, "server.log")
     logf = open(log_path, "w", encoding="utf-8", errors="replace")
-    cmd = [
-        server_exe,
-        "--host",
-        "127.0.0.1",
-        "--port",
-        str(args.port),
-        "--no-webui",
-        "--model",
-        model,
-    ] + base_args
-    print(f"[server] {sanitize(server_exe)}")
-    print(f"[model ] {sanitize(model)}")
-    print(f"[out   ] {os.path.relpath(out_dir, ROOT)}")
-    t0 = time.time()
-    proc = subprocess.Popen(
-        cmd, cwd=os.path.dirname(server_exe), stdout=logf, stderr=subprocess.STDOUT
-    )
+    if use_router:
+        proc = None
+        print(f"[router] {router_url}  model={router_model}  lang={lang}")
+        print(f"[out   ] {os.path.relpath(out_dir, ROOT)}")
+    else:
+        cmd = [
+            server_exe,
+            "--host",
+            "127.0.0.1",
+            "--port",
+            str(args.port),
+            "--no-webui",
+            "--model",
+            model,
+        ] + base_args
+        print(f"[server] {sanitize(server_exe)}")
+        print(f"[model ] {sanitize(model)}")
+        print(f"[out   ] {os.path.relpath(out_dir, ROOT)}")
+        t0 = time.time()
+        proc = subprocess.Popen(
+            cmd, cwd=os.path.dirname(server_exe), stdout=logf, stderr=subprocess.STDOUT
+        )
     metrics = []
     try:
         ok = False
+        t0 = time.time()
         while time.time() - t0 < 600:
             if http_ok(f"http://127.0.0.1:{args.port}/health"):
                 ok = True
                 break
-            if proc.poll() is not None:
+            if proc is not None and proc.poll() is not None:
                 break
             time.sleep(1.0)
         print(f"[load ] {time.time() - t0:.1f}s, VRAM {gpu_mem_mb()} MiB, health={ok}")
@@ -620,7 +661,7 @@ def main():
                         )
                     else:
                         msgs.insert(0, {"role": "system", "content": extra})
-                tmpl_cache[key] = apply_template(args.port, msgs)
+                tmpl_cache[key] = apply_template(args.port, msgs, model=router_model)
             return tmpl_cache[key]
 
         print(
@@ -662,6 +703,7 @@ def main():
                             p.get("n_predict", n_predict),
                             seed,
                             n_probs=suite.get("n_probs", 0),
+                            model=router_model,
                         )
                         raw = resp.get("content") or ""
                         text = strip_channels(raw)
@@ -687,7 +729,7 @@ def main():
                             "text": text,
                             "raw_content": raw,
                         }
-                        rec.update(analyze(text))
+                        rec.update(analyze(text, lang))
                         # Опережающий сигнал: какую долю вероятности модель отдаёт
                         # чужим/служебным токенам (нужен n_probs>0 в запросе).
                         probs = resp.get("completion_probabilities")
@@ -759,13 +801,23 @@ def main():
             rs = [m for m in metrics if m.get("config") == cname and "error" not in m]
             if rs:
                 clean = 100.0 * sum(1 for m in rs if m.get("clean")) / len(rs)
-                print(
-                    f"  ==> {cname}: Чисто {clean:.0f}% (N={len(rs)}) | "
-                    f"EN-стоп {avg([m.get('latin_stop') for m in rs]):.2f} | "
-                    f"Смеш {avg([m.get('mixed_words') for m in rs]):.2f} | "
-                    f"Junk {avg([m.get('junk_per_1k') for m in rs]):.2f} | "
-                    f"TG {avg([m.get('tg_t_s') for m in rs]):.1f} t/s"
-                )
+                if lang == "en":
+                    print(
+                        f"  ==> {cname}: Чисто {clean:.0f}% (N={len(rs)}) | "
+                        f"Cyr/1k {avg([m.get('cyr_per_1k') for m in rs]):.2f} | "
+                        f"Чужой/1k {avg([m.get('foreign_per_1k') for m in rs]):.2f} | "
+                        f"Смеш {avg([m.get('mixed_words') for m in rs]):.2f} | "
+                        f"Junk {avg([m.get('junk_per_1k') for m in rs]):.2f} | "
+                        f"TG {avg([m.get('tg_t_s') for m in rs]):.1f} t/s"
+                    )
+                else:
+                    print(
+                        f"  ==> {cname}: Чисто {clean:.0f}% (N={len(rs)}) | "
+                        f"EN-стоп {avg([m.get('latin_stop') for m in rs]):.2f} | "
+                        f"Смеш {avg([m.get('mixed_words') for m in rs]):.2f} | "
+                        f"Junk {avg([m.get('junk_per_1k') for m in rs]):.2f} | "
+                        f"TG {avg([m.get('tg_t_s') for m in rs]):.1f} t/s"
+                    )
     finally:
         kill_proc(proc)
         logf.close()
@@ -776,15 +828,38 @@ def main():
             pass
 
     # ---- сводка ----
-    lines = [
-        "| Конфиг | Чисто | Чужой/1k | CJK/1k | EN-стоп | Смеш | UKR | Junk/1k | F-масса % | rep8 | TTR150 | Giraud | Cyr % | TG t/s |",
-        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
-    ]
+    if lang == "en":
+        lines = [
+            "| Конфиг | Чисто | Cyr/1k | Чужой/1k | CJK/1k | Смеш | Junk/1k | rep8 | TTR150 | Giraud | TG t/s |",
+            "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+        ]
+    else:
+        lines = [
+            "| Конфиг | Чисто | Чужой/1k | CJK/1k | EN-стоп | Смеш | UKR | Junk/1k | F-масса % | rep8 | TTR150 | Giraud | Cyr % | TG t/s |",
+            "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+        ]
     for cfg in configs:
         rs = [m for m in metrics if m.get("config") == cfg["name"] and "error" not in m]
         if not rs:
             continue
         clean = 100.0 * sum(1 for m in rs if m.get("clean")) / len(rs)
+        if lang == "en":
+            lines.append(
+                "| {n} | {c:.0f}% | {cy:.2f} | {f:.2f} | {j:.2f} | {x:.2f} | {k:.2f} | {r:.3f} | {tw:.3f} | {gr:.1f} | {t:.1f} |".format(
+                    n=cfg["name"],
+                    c=clean,
+                    cy=avg([m.get("cyr_per_1k") for m in rs]),
+                    f=avg([m.get("foreign_per_1k") for m in rs]),
+                    j=avg([m.get("cjk_per_1k") for m in rs]),
+                    x=avg([m.get("mixed_words") for m in rs]),
+                    k=avg([m.get("junk_per_1k") for m in rs]),
+                    r=avg([m.get("rep8_dup") for m in rs]),
+                    tw=avg([m.get("ttr_win") for m in rs]),
+                    gr=avg([m.get("guiraud") for m in rs]),
+                    t=avg([m.get("tg_t_s") for m in rs]),
+                )
+            )
+            continue
         lines.append(
             "| {n} | {c:.0f}% | {f:.2f} | {j:.2f} | {s:.2f} | {x:.2f} | {u:.2f} | {k:.2f} | {fm:.2f} | {r:.3f} | {tw:.3f} | {gr:.1f} | {y:.1f} | {t:.1f} |".format(
                 n=cfg["name"],

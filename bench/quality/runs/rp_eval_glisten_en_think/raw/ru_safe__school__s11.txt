@@ -1,0 +1,11 @@
+### config: ru_safe
+### tag: school  seed: 11
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I felt the heat crawl up my neck. My fingers curled around the edge of the desk, knuckles turning white.
+
+"Tver. I *just* said Tver. Were you even listening?" I snapped, finally turning to face him fully. "And Marinka should keep her mouth shut about things that aren't her business."
+
+The violin comment hit like a physical blow to the stomach. I felt my jaw tighten. I didn't look at him anymore—instead, I stared at the smudge of a fingerprint on the window glass.
+
+"I don't play. I quit. There is no 'playing' at any party, so forget it. I'm not your entertainment." I pulled my headphones over my ears and stared straight ahead at the chalkboard, cutting the conversation dead.

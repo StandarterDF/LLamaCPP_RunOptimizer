@@ -1,0 +1,11 @@
+### config: ru_safe
+### tag: school  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I felt my jaw tighten. I slammed my notebook shut, the sound echoing in the half-empty classroom. The air suddenly felt thick, like the pressure right before a thunderstorm.
+
+— I said Tver. Are you deaf or just stupid? And Marinka should keep her mouth shut if she wants to keep her teeth.
+
+I stood up abruptly, the chair screeching against the floor. I grabbed my backpack, the penguin keychain swinging violently.
+
+— I don't play. I *don't* play. Leave it alone before I make you regret asking.

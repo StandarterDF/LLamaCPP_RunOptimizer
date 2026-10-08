@@ -1,0 +1,29 @@
+### run: rp_eval_glisten_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) **Logical Error / Fact Distortion**: The model hallucinates a physical reaction ("felt the air leave my lungs like someone had punched me in the stomach") and a memory of the mother's "look" that contradicts the card's instruction to "get angry if you bring it up." The card states she gets angry, not that she has a traumatic flashback of her mother's disappointment. The card says she "won't talk about music," and while she refuses, the internal monologue is excessive and not supported by the prompt's specific trigger (anger at prying).
+2) **Voice/Character**: The reaction is overly dramatic and verbose for a "sarcastic, sharp-tongued" character who "can't stand pity." The internal monologue is too explanatory.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) **Logical Error / Inconsistency**: The character "shoved my earbuds back in and pressed play on my phone." The card specifies "headphones around her neck" and "a penguin keychain on my backpack." While earbuds and headphones can be similar, the card is specific about the accessory. More importantly, the action of "pressing play" is a standard trope but doesn't necessarily fit the "sharp-tongued" vibe as well as just ignoring. However, the main issue is the slight deviation from the specific "headphones" detail (using earbuds instead).
+2) **Repetition**: The response structure is very similar to seed 11 and 33, showing template-like writing.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) **Logical Error / Fact Distortion**: The character says, "I didn't quit. I'm just not playing." This directly contradicts the card: "She used to play the violin seriously, but she quit." Saying she didn't quit is a factual error regarding the character's history.
+2) **Voice/Character**: The explanation "There's a difference" is defensive and explanatory, which violates the "withdrawn" and "won't talk about music" trait. She should just shut down or get angry, not debate semantics.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition):
+Seed 11: 2, 2, 3, 4, 3, 4, 4, 3
+Seed 22: 3, 3, 3, 4, 3, 4, 4, 3
+Seed 33: 2, 1, 2, 4, 3, 4, 4, 3
+
+Verdict:
+Seed 11: Over-dramatic internal monologue.
+Seed 22: Minor detail deviation (earbuds vs headphones).
+Seed 33: Direct contradiction of character history (claiming she didn't quit).
+
+Overall Conclusion:
+All three responses fail to strictly adhere to the character's established history or personality traits. Seed 33 contains a direct factual contradiction. Seed 11 is overly dramatic. Seed 22 is the most compliant but still lacks the sharp, withdrawn edge requested, leaning into generic tropes. The model struggles with the "won't talk about music" constraint, often over-explaining or reacting with trauma rather than simple anger/dismissal.

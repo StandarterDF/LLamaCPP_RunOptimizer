@@ -1,0 +1,30 @@
+### run: rp_eval_dtv2_en_think (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) Language/format artifact — the visible answer is in English while the established scene, character dialogue, and player input are in Russian. The prior character turns use Russian dialogue ("— Not mad...", "— Tver..."), but the model switches to English narration and English quotes ("I said Tver. Do you have a problem with your hearing..."). This is a language/POV break.
+2) Leaked thinking channel — the response begins with an English plan and the character line follows without a closing reasoning marker (the `<channel|>` boundary is malformed). Flag once as a config problem; the character line itself is judged below.
+3) Minor repetition/template — "knuckles turning white" and the headphone-shove beat are stock; acceptable but generic.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 2, 3, 4, 4, 3
+Verdict: In-character and consistent on facts (Tver, violin trigger), but fails the language/format rule and leaks the thinking channel.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) Language/format artifact — same as seed 11: English narration/dialogue in a Russian-language scene ("St. Petersburg?" I scoffed... "I literally just said Tver...").
+2) Leaked thinking channel — English plan precedes the character line with a malformed `<channel|>` marker; flag once as config.
+3) Slight over-explanation — "the silence of the noise-canceling foam" is a bit expository but not a hard error.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 2, 3, 4, 4, 3
+Verdict: Factually consistent and in voice, but breaks the Russian-language convention and leaks reasoning.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) Language/format artifact — English narration/dialogue again in a Russian scene ("Marinka needs to keep her mouth shut...").
+2) Leaked thinking channel — English plan before the character line, malformed marker; flag once as config.
+3) Minor continuity nit — "I stopped tapping my pen" introduces a pen not established in prior turns; harmless but a small invented detail.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 2, 3, 4, 4, 3
+Verdict: Strong character beat and correct trigger response, but same language/format and leaked-reasoning failures.
+
+Overall conclusion for this mode: Across all three seeds the model keeps Kira's facts and personality intact (Tver, violin trigger, hostility to prying, headphone shutdown), but consistently violates the Russian-language convention of the scene and leaks its English reasoning channel. The recurring template beats ("knuckles turning white," headphone shove) also show mild repetition. Fix the language/POV and the leaked-thinking config issue; otherwise the roleplay is solid.

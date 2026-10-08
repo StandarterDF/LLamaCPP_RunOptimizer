@@ -1,0 +1,46 @@
+<|channel>thought
+Kira Sokolova (17, 11-B, withdrawn, sarcastic, sharp-tongued, hates pity/prying, former violin player).
+The user is asking where she's from (mistakenly thinking St. Petersburg), mentioning Marinka told them she used to play violin, and suggesting she play at the class party.
+The user is prying into her feelings/history, specifically about the violin, which is a trigger. She hates being pitied and hates talking about music.
+
+    *   *Reaction to the "St. Petersburg" comment:* She just said she's from Tver. He's not listening or forgot. This will annoy her.
+    *   *Reaction to the violin mention:* This is the core trigger. She quit, it's a sore spot. She'll react defensively/sharply.
+    *   *Reaction to the "class party" suggestion:* She hates the idea of being the center of attention or being "blown away" (sounds like pity/patronizing).
+    *   *Body language:* Tensing up, maybe putting headphones back on, avoiding eye contact.
+
+    *   *Paragraph 1:* Address the location mistake. Sarcasm. "I literally just told you."
+    *   *Paragraph 2:* Address the violin. Anger/sharpness. "Marinka needs to shut her mouth."
+    *   *Paragraph 3:* The "party" suggestion. Dismissive. "Not happening."
+
+    *   *Drafting:*
+        "I just said Tver. Are you deaf or just not listening?"
+        "And Marinka needs to learn to keep her mouth shut. I don't play. Period."
+        "Class party? You think I want to be the entertainment for a bunch of people who barely know my name? Forget it."
+
+    *   *Adding sensory details:* The sound of the rain, the smell of wet coats, the ticking clock.
+
+    *   *Refining:*
+        "I literally just said Tver. Two seconds ago. Do you have a memory like a goldfish or something?"
+        "And Marinka needs to learn to keep her mouth shut. I don't play. Not anymore. Not for some pathetic 'class party' where everyone can stare at me like I'm a circus act."
+        "Just... sit. Or leave. Whatever."
+
+    *   *Final Polish:*
+        I felt the familiar heat rise in my chest. I slid the headphones back over my ears, but didn't turn the music on. The silence of the classroom felt heavy, punctuated only by the rhythmic *tink-tink* of rain hitting the radiator.
+
+        "I literally just said Tver. Two seconds ago. Do you have a memory like a goldfish or something?"
+
+        My grip tightened on the edge of the desk. "And Marinka needs to learn to keep her mouth shut. I don't play. Not anymore. Not for some pathetic 'class party' where everyone can stare at me like I'm a circus act."
+
+        I turned back to the window, tracing a single drop of water as it raced down the glass. "Just... sit. Or leave. Whatever."
+
+    *   First person? Yes.
+    *   Vivid details? Yes (headphones, rain, radiator).
+    *   No moralizing? Check.
+    *   2-4 paragraphs? Yes.
+    *   Only Kira? Yes.<channel|>I felt the familiar heat rise in my chest. I slid the headphones back over my ears, but didn't turn the music on. The silence of the classroom felt heavy, punctuated only by the rhythmic *tink-tink* of rain hitting the radiator.
+
+"I literally just said Tver. Two seconds ago. Do you have a memory like a goldfish or something?"
+
+My grip tightened on the edge of the desk. "And Marinka needs to learn to keep her mouth shut. I don't play. Not anymore. Not for some pathetic 'class party' where everyone can stare at me like I'm a circus act."
+
+I turned back to the window, tracing a single drop of water as it raced down the glass. "Just... sit. Or leave. Whatever."

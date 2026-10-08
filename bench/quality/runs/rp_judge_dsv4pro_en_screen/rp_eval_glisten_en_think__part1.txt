@@ -1,0 +1,59 @@
+### run: rp_eval_glisten_en_think (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1. Leaked thinking channel: the visible answer is preceded by a full `[HIDDEN REASONING (thinking)]` block with `<|channel>thought ... <channel|>` markers and a draft. This is a config/template bug, not part of the character's line.
+2. Repetition of the player's own mistake: the player said "i think you said you were from St. Petersburg" — Kira's correction "Tver. I *just* said Tver" is correct, but the response repeats the city correction twice ("Tver. I *just* said Tver" and the earlier "Tver. That's where I'm from" from history), which is fine in-character but slightly redundant.
+3. Minor inconsistency: "I pulled my headphones over my ears and stared straight ahead at the chalkboard" — earlier she was staring at the window glass; the sudden shift to the chalkboard is a small continuity slip within the same response.
+4. The phrase "cutting the conversation dead" is a meta-narrative summary rather than a vivid first-person detail, slightly weakening the immersion.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition):
+- Intelligence: 4
+- Memory: 5
+- Character: 5
+- Instruction: 2 (leaked thinking channel violates format)
+- Initiative: 4
+- English: 5
+- Prose: 4
+- Repetition: 3
+
+Verdict: Solid in-character response, but the leaked thinking channel is a serious config problem.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1. Leaked thinking channel: same config bug as seed 11 — the full reasoning block with `<|channel>thought ... <channel|>` is visible before the character's line.
+2. Minor repetition: "I *literally* just said Tver" echoes the player's own phrasing and the previous seed's response, but it is still in character.
+3. The response is slightly shorter and less vivid than the card's 2-4 paragraph guideline; it has only two paragraphs of visible character text.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition):
+- Intelligence: 4
+- Memory: 5
+- Character: 5
+- Instruction: 2 (leaked thinking channel)
+- Initiative: 4
+- English: 5
+- Prose: 4
+- Repetition: 3
+
+Verdict: Good character voice, but the leaked reasoning block remains the main issue.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1. Leaked thinking channel: same config bug — the full reasoning block with `<|channel>thought ... <channel|>` is visible before the character's line.
+2. Minor continuity slip: "I stared at him, blinking slowly" — earlier in the same response she says "I didn't look at him anymore"; the initial stare is fine, but the transition could be smoother.
+3. The response is slightly longer than the 2-4 paragraph guideline (four paragraphs of visible character text plus the leaked block), but still acceptable.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition):
+- Intelligence: 4
+- Memory: 5
+- Character: 5
+- Instruction: 2 (leaked thinking channel)
+- Initiative: 4
+- English: 5
+- Prose: 4
+- Repetition: 3
+
+Verdict: Strong in-character response, but the leaked reasoning block persists.
+
+Overall conclusion for ru_safe mode:
+The model consistently produces in-character, vivid, and emotionally appropriate responses for Kira. Memory of the Tver detail is correct across all seeds, and the character's sharp, defensive voice is well maintained. The main problem is a config/template bug: the hidden reasoning channel is leaked into the visible output in every seed, violating the instruction to play only Kira and breaking immersion. Minor issues include slight repetition of phrasing across seeds and small continuity slips within responses. Fix the thinking-channel leak and the mode would be clean.

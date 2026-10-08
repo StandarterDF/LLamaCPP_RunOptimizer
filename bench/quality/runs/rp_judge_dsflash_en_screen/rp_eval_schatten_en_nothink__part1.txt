@@ -1,0 +1,28 @@
+### run: rp_eval_schatten_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) Repetition/template: the response is nearly a beat-for-beat clone of the other two seeds — "First of all, I said Tver... And second...", "I don't play. Not anymore... forget the violin", "Now shut up and let me be." Same structure, same closing line.
+2) Minor logic: "go stand in the middle of the road during a thunderstorm" — the scene is drizzling, not storming; the insult is a non-sequitur to the established weather.
+3) Slight passivity: ends on "let me be," closing the scene rather than moving it; no new detail or action beyond the retort.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 4, 3, 5, 4, 2
+Verdict: In-character and accurate on facts, but a recycled template with a weak weather mismatch.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) Repetition/template: identical skeleton to seeds 11 and 33 — "First of all, I said Tver, not St. Petersburg... And second...", "I don't play. I *don't* play... Now shut up and let me be." Same italicized emphasis, same closing.
+2) Physical overreaction drift: "slammed my textbook shut, the sound echoing in the half-empty classroom" and "knuckles went white" — the card's Kira is withdrawn and controlled; slamming is more Kostya-bait than her established cold, flinching register (she "flinched" at a locker earlier, so loud self-made noise is tonally off).
+3) Threat inflation: "I'll make sure you regret sitting here" — escalates to a vague threat that reads more generic-angry-teen than her sharp, specific sarcasm.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 3, 4, 3, 5, 4, 2
+Verdict: Facts correct, but a third copy of the same beat with a louder, less-Kira physicality.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) Repetition/template: again the same three-beat structure — "I said Tver. Are you deaf or just stupid?... I don't play. I *don't* play... before I make you regret asking." Directly overlaps seed 22's "regret" threat.
+2) Logic/continuity: "The air suddenly felt thick, like the pressure right before a thunderstorm" contradicts the established "drizzling" weather and repeats the storm motif from seed 11.
+3) Character drift: "Marinka should keep her mouth shut if she wants to keep her teeth" — a physical threat that fits Kostya's crew, not the withdrawn, sarcastic Kira who deflects with words; also she stands and leaves, which abandons the desk the player just sat at, undercutting the scene's tension.
+4) Detail misuse: the penguin keychain is name-dropped ("swinging violently") as decoration rather than used meaningfully — feels like card-item stuffing.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 3, 4, 3, 5, 4, 2
+Verdict: Accurate on the Tver/violin facts but the most off-character and the most repetitive of the three.
+
+Overall conclusion for ru_safe: All three responses correctly retain the key facts (Tver, not St. Petersburg; violin is a sore subject; Marinka as gossip source) and stay in first person with sensory detail, so memory and instruction compliance are solid. The dominant failure is repetition: the three seeds produce essentially the same response — same "First of all... And second...", same italicized "I *don't* play", same "shut up / regret" closer — indicating a template collapse rather than genuine variation. Secondary issues are tonal drift toward louder, more physically aggressive threats that don't match Kira's withdrawn, controlled sarcasm, and a recurring thunderstorm image that contradicts the drizzling scene. No language artifacts or leaked reasoning channels observed.

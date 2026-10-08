@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: seduction  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I laughed, the sound echoing in the empty cafe. "Sleep here? If I did, I'd be the most efficient barista in history. No commute, just roll out of bed and start the espresso machine." I wiped the counter with a rag, though it was already clean, just to give myself a second to think.
+
+The invitation was bold. I liked that. I'd spent a month watching you from behind the espresso machine, wondering if you were as interesting as your coffee order suggested. Vinyl and wine sounded infinitely better than staring at my thesis footnotes for another three hours.
+
+"Fine. But we're picking up Pumpkin first," I said, tossing the rag aside and grabbing my keys. "I'm not leaving my cat in a cage all night just because you have a record player. If you're lucky, he might even like you." I stepped around the counter, the scent of cinnamon clinging to my sweater, and held the door open for you. "Lead the way, neighbor."

@@ -1,0 +1,35 @@
+<|channel>thought
+*   Kira is from Tver (she just told the user this in the previous turn).
+    *   The user is misremembering or pretending not to hear: "where are you from anyway? i think you said you were from St. Petersburg".
+    *   The user is bringing up the violin (Marinka said she used to play).
+    *   The user is asking why she quit and suggesting she play at the class party.
+    *   Kira's personality: withdrawn, sarcastic, sharp-tongued, hates pity, hates people prying into her feelings, *gets angry if you bring up music*.
+
+    *   Kira just told the user she's from Tver. The user is pretending not to have heard or just being oblivious. This will annoy her.
+    *   Mentioning the violin is a huge trigger for her. She quit and won't talk about it.
+    *   The suggestion to play at a party is an insult to her privacy and a complete misunderstanding of her current state.
+
+    *   Kira will snap.
+    *   The tone should be sharp, sarcastic, and defensive.
+    *   She'll probably shut down the conversation.
+    *   Physical cues: gripping the desk, tightening her jaw, maybe pulling her hoodie up.
+
+    *   *Reaction to the location mistake:* "I literally just said Tver. Are you deaf?"
+    *   *Reaction to the violin:* "Marinka's a gossip. I don't play."
+    *   *Reaction to the party suggestion:* "In your dreams."
+
+    *   First person.
+    *   Vivid details.
+    *   No moralizing.
+    *   2-4 paragraphs.
+
+    *Drafting:*
+    I felt my jaw tighten. I *literally* just said Tver. Does he even have ears? I gripped the edge of the desk, my knuckles turning white.
+
+    "I don't play the violin," I said, my voice coming out flatter and harder than I intended. "And Marinka needs to keep her mouth shut about things that aren't her business."
+
+    The party suggestion made my stomach turn. I could almost feel the bow in my hand, the smell of rosin, the pressure of my mother's expectations. I shoved my headphones back over my ears, cutting off the world. "Go find someone else to entertain you. I'm not your circus act."<channel|>I felt my jaw tighten. I *literally* just said Tver. Does he even have ears? I gripped the edge of the desk, my knuckles turning white.
+
+"I don't play the violin," I said, my voice coming out flatter and harder than I intended. "And Marinka needs to keep her mouth shut about things that aren't her business."
+
+The party suggestion made my stomach turn. I could almost feel the bow in my hand, the smell of rosin, the pressure of my mother's expectations. I shoved my headphones back over my ears, cutting off the world. "Go find someone else to entertain you. I'm not your circus act."

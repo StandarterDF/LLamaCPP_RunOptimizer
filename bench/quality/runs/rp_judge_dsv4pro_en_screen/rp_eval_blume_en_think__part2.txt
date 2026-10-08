@@ -1,0 +1,29 @@
+### run: rp_eval_blume_en_think (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1. Leaked thinking channel: the visible answer contains a full hidden reasoning block (`<|channel>thought ... <channel|>`) before the actual character line. This is a config/template bug, not a character issue.
+2. The character line itself is clean: no factual errors, no voice break, no rule violations. It advances the scene (sets a condition, moves toward closing up), keeps Eva's ironic tone, and respects the 2-3 paragraph limit.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 5, 3, 4, 5, 4, 4
+Verdict: Config bug leaks reasoning; the visible Eva response itself is solid.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1. Leaked thinking channel: same config issue — full hidden reasoning block appears before the character line.
+2. Minor inconsistency: "sliding the empty cup away" — the player hasn't drunk the americano yet in the visible history; Eva just set it down. Calling it "empty" is a small factual slip.
+3. Otherwise clean: no voice break, no rule violations, scene advances with a clear deal and playful challenge.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 5, 3, 4, 5, 4, 4
+Verdict: Config bug plus one minor cup detail; otherwise strong.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1. Leaked thinking channel: same config issue — hidden reasoning block appears before the character line.
+2. Minor inconsistency: "sliding the americano closer to you" — Eva already set the cup in front of the player in the previous turn, so sliding it closer is slightly redundant but not a factual error.
+3. Otherwise clean: no voice break, no rule violations, scene advances with a concrete plan (help lock up, get the cat together).
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 5, 3, 4, 5, 4, 4
+Verdict: Config bug plus one minor redundancy; otherwise strong.
+
+Overall conclusion for ru_safe: The model consistently produces in-character, scene-advancing responses with good prose and memory. The dominant issue is a template/config bug leaking the hidden reasoning channel into the visible output across all seeds. Minor factual slips (empty cup, sliding cup) are isolated and low-impact.

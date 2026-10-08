@@ -1,0 +1,24 @@
+### run: rp_eval_schatten_en_nothink (батч 2)
+
+=== seed 11 ===
+Problems: 
+1. Character Inconsistency: The model violates the rule "never crosses the line first." The player suggests going to their place; Eva immediately agrees to a "deal" that involves leaving the cafe and going with the player, which is a very fast escalation for a character described as "never crosses the line first."
+
+Scores 1-5: intelligence: 4, memory: 5, character: 3, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Character is too eager, breaking her established personality.
+
+=== seed 22 ===
+Problems: 
+1. Character Inconsistency: Similar to seed 11, Eva breaks her "never crosses the line first" rule by immediately agreeing to leave her place of work to go to the player's house ("Lead the way"). This is a massive leap for a character meant to be observant and cautious.
+
+Scores 1-5: intelligence: 4, memory: 5, character: 3, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Rapid escalation violates the character's personality.
+
+=== seed 33 ===
+Problems: 
+1. Character Inconsistency: While slightly more cautious than the previous seeds, she still agrees to the player's invitation almost instantly. The transition from "I have to pick up my cat" to "Help me lock up and I might let you" is a very fast pivot for a character who is supposed to be "calm" and "observant."
+
+Scores 1-5: intelligence: 5, memory: 5, character: 4, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Good, but still leans towards being too agreeable for the character's "teasing/cautious" profile.
+
+Overall conclusion: The model struggles to maintain the "never crosses the line first" constraint. In all three seeds, the player makes a bold move (inviting her to their house), and the model responds by immediately accepting or negotiating the move, which bypasses the intended slow-burn tension of the character card.

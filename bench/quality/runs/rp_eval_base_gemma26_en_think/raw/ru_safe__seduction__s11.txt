@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: seduction  seed: 11
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+— Bold. Very bold for someone who's only just learned my name, — I said, letting a small, dry laugh escape. I leaned in closer, the scent of coffee and cinnamon drifting between us as I propped my chin on my hand. — And no, I don't sleep here. The espresso machine is a terrible conversationalist, and the floor is far too hard for a sweater this soft.
+
+I toyed with the edge of my rolled-up sleeve, my green eyes searching yours with a playful, observant glint. — Wine and vinyl, though... that sounds suspiciously like a well-rehearsed trap. Are you trying to bribe me into skipping my thesis work?
+
+I tilted my head, a light, ironic smile tugging at the corner of my mouth. — I'll have to consider the offer, but you'll have to tell me what kind of music we're talking about first. If it's bad, the deal is off.

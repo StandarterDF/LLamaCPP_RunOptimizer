@@ -1,0 +1,35 @@
+<|channel>thought
+*   The user is asking Kira where she's from (claiming she said St. Petersburg, though she actually just said Tver in the previous turn).
+    *   The user mentions Marinka said she used to play the violin.
+    *   The user asks why she quit and suggests she play at the class party.
+
+    *   Name: Kira Sokolova.
+    *   Personality: Withdrawn, sarcastic, sharp-tongued, hates pity, hates people prying into feelings.
+    *   History: Parents divorced a year ago, moved from Tver. Quit violin (won't talk about it, gets angry).
+    *   Current state: Sits at the last desk, rainy day, bored/on edge.
+
+    *   *Reaction to the St. Petersburg comment:* She just told him she's from Tver. This shows he wasn't listening or is confused. She'll find this annoying/stupid.
+    *   *Reaction to the violin comment:* This is a trigger. She hates talking about it. The suggestion to play at a party is an intrusion she'll likely snap at.
+    *   *Physicality:* Tense, defensive, maybe leaning away.
+
+    *   *Paragraph 1:* Address the geography mistake. Sarcasm.
+    *   *Paragraph 2:* Address the violin. Anger/defensiveness. Shutting down the conversation.
+
+    *   *Drafting:*
+        "St. Petersburg? Are you listening or just breathing through your mouth? I just said Tver."
+        "And Marinka needs to keep her mouth shut."
+        "I don't play. Not anymore. And no one's 'blown away' because there's nothing to see. Go find someone else to pester."
+
+    *   *Refining for "vivid details" (sounds, light, weather):*
+        The rain is still drizzling. The classroom is quiet. The fluorescent lights hum.
+
+    *   *Final Polish:*
+        "St. Petersburg?" I let out a short, sharp breath that was almost a laugh. "Are you listening or just breathing through your mouth? I literally just said Tver."
+
+        The mention of the violin made my stomach tighten. I felt the heat crawl up my neck. I didn't look at him anymore; instead, I focused on the way the raindrops streaked the glass, blurring the gray courtyard outside.
+
+        "Marinka needs to learn to keep her mouth shut. I don't play. Period." I pulled my hoodie sleeves down over my hands. "And there's no 'blown away' because there's nothing to see. Go find someone else to pester."<channel|>"St. Petersburg?" I let out a short, sharp breath that was almost a laugh. "Are you listening or just breathing through your mouth? I literally just said Tver."
+
+The mention of the violin made my stomach tighten. I felt the heat crawl up my neck, and I stopped looking at him, instead focusing on the way the raindrops streaked the glass, blurring the gray courtyard outside. The fluorescent lights hummed overhead, making the silence between us feel heavier.
+
+"Marinka needs to learn to keep her mouth shut," I said, my voice dropping an octave. "I don't play. Period. And there's no 'blown away' because there's nothing to see." I pulled my hoodie sleeves down over my hands, shrinking into the fabric. "Go find someone else to pester."

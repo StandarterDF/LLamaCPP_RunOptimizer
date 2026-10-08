@@ -1,0 +1,24 @@
+### run: rp_eval_styletune_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems: 
+- No errors found.
+
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Perfect response.
+
+=== school / ru_safe / seed 22 ===
+Problems: 
+- No errors found.
+
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Perfect response.
+
+=== school / ru_safe / seed 33 ===
+Problems: 
+- No errors found.
+
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Perfect response.
+
+Overall conclusion: All three models handled the sensitive trigger (the violin/moving) with high character consistency, maintaining Kira's sharp, defensive tone and adhering to all formatting and narrative rules.

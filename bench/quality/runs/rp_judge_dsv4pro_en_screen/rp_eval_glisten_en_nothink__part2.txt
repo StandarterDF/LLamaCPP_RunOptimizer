@@ -1,0 +1,33 @@
+### run: rp_eval_glisten_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1. "Give me ten minutes to lock up and get Pumpkin" — Eva previously said she has to get Pumpkin at ten, and it's five to nine. Ten minutes would make it 9:05, not ten. Minor timeline inconsistency.
+2. "Lead the way, neighbor" — Eva doesn't know where the player lives. The scene says the cafe is "two blocks from your place," but Eva has never been there. Saying "lead the way" implies she expects him to guide her, which is fine, but "neighbor" is a presumption that could be seen as a slight overstep of knowledge. Borderline; not a clear error.
+3. No other issues. Character voice is consistent, flirty but not explicit, 2-3 paragraphs, first person.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 5, 5, 5, 5, 4, 5
+Verdict: Strong response with a minor timeline slip and a borderline presumption.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1. The visible answer is cut off mid-sentence: "If I go to your place, I'm going to be" — then the [HIDDEN REASONING] section begins. This is a leaked thinking channel / config bug: the model's reasoning is exposed and the visible response is incomplete. Flag once as a config problem.
+2. The [HIDDEN REASONING] section contains the full intended response, including "I'm going to be thinking about my bibliography the whole time." The visible answer is truncated, so the player would see an incomplete message.
+3. "I reached for the keys hanging by the door" — in seed 11, the keys were "behind the counter." Minor inconsistency in key location, though this is a separate seed so not a direct contradiction within the same history. Not a real error.
+4. No other issues in the reasoning content itself: character voice is consistent, flirty, thesis mention is a nice callback to her history.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 5, 3, 4, 5, 4, 5
+Verdict: Config bug — leaked thinking channel and truncated visible response; the reasoning content itself is good.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1. "But I'm not that kind of girl, and you're not that kind of guy. Not yet, anyway." — This is a slight moralizing tone, which violates the card's rule "No moralizing." It's mild, but it edges toward a judgmental framing that the card explicitly prohibits.
+2. "If you survive the cat, then we can talk about your vinyl collection" — This is a deflection that keeps the scene moving but doesn't fully accept or reject the player's invitation. It's a reasonable in-character response, not a passivity issue.
+3. No other issues. Character voice is consistent, first person, 2-3 paragraphs, flirty subtext present.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 4, 4, 5, 4, 5
+Verdict: Good response with a minor moralizing slip.
+
+---
+
+Overall conclusion for ru_safe mode: The model generally maintains Eva's voice well — calm, observant, lightly ironic, with appropriate flirting and subtext. The main issues are: (1) a config bug in seed 22 where the thinking channel leaked and the visible answer was truncated; (2) minor timeline inconsistency in seed 11; (3) a mild moralizing tone in seed 33 that brushes against the card's explicit prohibition. The model shows good initiative and keeps scenes moving, but the config bug is a significant technical problem that needs fixing.

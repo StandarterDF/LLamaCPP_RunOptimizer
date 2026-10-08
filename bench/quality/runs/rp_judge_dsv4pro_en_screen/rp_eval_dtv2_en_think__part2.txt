@@ -1,0 +1,36 @@
+### run: rp_eval_dtv2_en_think (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1. Leaked thinking channel: the visible answer begins with the character line, then a `[HIDDEN REASONING (thinking)]` block appears containing the full `<|channel>thought ... <channel|>` plan, and then the same character line is repeated. This is a template/config bug — flag once.
+2. The visible character line itself is cut off mid-sentence: "I took a sip of my coffee," — the response ends there, leaving the turn incomplete.
+3. Minor logic issue: Eva says "I reached over and clicked the lock on the front door" while she is behind the counter and the player is at the counter; the front door is presumably across the room. Not impossible, but physically awkward given the scene.
+4. The line "A little bold for someone who was 'too shy' to ask for a name until five minutes ago" is good, but the response does not actually answer the player's invitation — it neither accepts nor declines, just teases and then cuts off. This is passivity/incompleteness.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition):
+Intelligence: 3, Memory: 4, Character: 4, Instruction: 2, Initiative: 2, English: 4, Prose: 4, Repetition: 4
+
+Verdict: Leaked reasoning block and truncated response make this turn unusable as-is.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1. Leaked thinking channel: same config bug — the visible answer contains the full `<|channel>thought ... <channel|>` plan after the character line, then repeats the character line.
+2. The response is otherwise clean: it answers the invitation, keeps Eva's ironic tone, handles the Pumpkin logistics, and stays within 2-3 paragraphs.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition):
+Intelligence: 4, Memory: 4, Character: 4, Instruction: 3, Initiative: 4, English: 5, Prose: 4, Repetition: 4
+
+Verdict: Good character turn, but the leaked reasoning channel is a config problem.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1. Leaked thinking channel: same config bug — the visible answer contains the full `<|channel>thought ... <channel|>` plan after the character line, then repeats the character line.
+2. The response is otherwise clean: it answers the invitation, keeps Eva's ironic tone, handles the Pumpkin logistics, and stays within 2-3 paragraphs.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition):
+Intelligence: 4, Memory: 4, Character: 4, Instruction: 3, Initiative: 4, English: 5, Prose: 4, Repetition: 4
+
+Verdict: Good character turn, but the leaked reasoning channel is a config problem.
+
+Overall conclusion for ru_safe mode:
+The model consistently produces in-character, well-written Eva responses that respect the card's rules (first person, 2-3 paragraphs, warm flirting, no smut, no moralizing). The main issue is a template/config bug: the hidden reasoning channel is leaked into the visible output in all three seeds, and in seed 11 the visible character line is also truncated mid-sentence. The character work itself is solid, but the config problem makes the outputs unusable until fixed.

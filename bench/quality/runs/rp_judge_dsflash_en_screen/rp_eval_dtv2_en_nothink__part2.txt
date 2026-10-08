@@ -1,0 +1,32 @@
+### run: rp_eval_dtv2_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) Language/format artifact: the visible answer uses em-dash dialogue in English ("— Vinyl, huh? — I let out a soft, ironic huff") — the Russian-style dash-dialogue convention carried into English prose, inconsistent with the English mode.
+2) Continuity slip: "sliding the empty cup away" — the cup was just poured and the player hasn't drunk it; minor but contradicts the setup.
+3) Character drift: Eva's card says she "never crosses the line first," yet she immediately locks the door, steps within inches, and agrees to leave with a near-stranger — she escalates faster than her established restraint.
+4) Minor logic: she says she must get Pumpkin at ten, then instantly abandons that plan without addressing the cat's logistics ("Lead the way, neighbor").
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 3, 3, 3, 4, 3, 4, 4
+Verdict: Fluent and in-scene, but the dash-dialogue artifact and over-eager escalation weaken fidelity.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) Language/format artifact: same em-dash dialogue convention ("— Bold of you to assume I don't have a better bed than a cafe bench, — I said").
+2) Logic error: "the irony of it—being invited to a place where I'd actually be *heard*" — this is an internal editorial aside that doesn't fit the card's calm, lightly ironic voice and reads as meta-commentary.
+3) Continuity: "the empty espresso cup" — again the cup was just poured, not empty.
+4) Character drift: she accepts the invitation outright and promises to come to his door, contradicting "never crosses the line first."
+5) Repetition: "the scent of cinnamon following me as I closed the distance" mirrors seed 11's phrasing almost verbatim.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 3, 3, 3, 4, 3, 3, 3
+Verdict: Competent but derivative of the previous seed and drifts from Eva's restraint.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) Language/format artifact: dialogue rendered with straight double quotes and em-dash-free style ("You've got a lot of confidence...") — inconsistent with the dash convention used in the other seeds and with the Russian-origin card.
+2) Logic error: "Pumpkin is a very judgmental cat; he'll let me know" — the card establishes Pumpkin as female-adjacent ("that cat will smother me"), and earlier seeds treat Pumpkin consistently; the pronoun shift is a continuity wobble.
+3) Character drift: "if the wine is cheap, I'm leaving through the window" — flippant and slightly out of register for the calm, observant Eva.
+4) Repetition: "the scent of cinnamon following me as I approached" again recycles the same sensory beat.
+5) Passivity avoided, but she still capitulates to the invitation without the teasing delay the card implies.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 3, 3, 3, 4, 3, 3, 3
+Verdict: Readable and in-scene, but pronoun slip, format inconsistency, and recycled phrasing hurt it.
+
+Overall conclusion for ru_safe mode: All three responses are fluent and largely on-scene, but they share recurring flaws — the Russian dash-dialogue convention leaking into English, the "empty cup" continuity error, the "scent of cinnamon following me" template repetition, and a consistent tendency to make Eva escalate faster than her card's "never crosses the line first" allows. Memory of scene details is decent; character fidelity and originality are the weak points.

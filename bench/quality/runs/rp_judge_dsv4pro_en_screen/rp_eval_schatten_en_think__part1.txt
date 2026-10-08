@@ -1,0 +1,30 @@
+### run: rp_eval_schatten_en_think (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1. Config problem: the visible answer begins with the leaked thinking channel — the entire [HIDDEN REASONING] block is rendered as part of the response, including the `<|channel>thought` markers and the model's planning notes ("User is asking about her origin...", "Drafting P1..."). This is a template/config bug, not a character issue.
+2. Repetition: "Maybe you should try listening instead of just waiting for your turn to talk" appears twice — once in the internal narration and once in the spoken line. The same phrase is repeated verbatim within the same response.
+3. Minor inconsistency: the narration says "I just told him. *Tver*" and then the spoken line says "I literally just said Tver" — redundant restatement of the same point in both narration and dialogue.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 2, 4, 5, 4, 2
+Verdict: Solid in-character response, but the leaked thinking channel is a serious config failure and the repetition drags it down.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1. Config problem: the visible answer begins with the leaked thinking channel — the entire [HIDDEN REASONING] block is rendered as part of the response, including the `<|channel>thought` markers and the model's planning notes ("Kira Sokolova.", "Drafting P1..."). This is a template/config bug, not a character issue.
+2. Repetition: "Maybe you should try listening instead of just waiting for your turn to speak" appears twice — once in the internal narration and once in the spoken line. The same phrase is repeated verbatim within the same response.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 2, 4, 5, 4, 2
+Verdict: Good character voice and trigger response, but the leaked thinking channel and verbatim repetition are notable flaws.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1. Config problem: the visible answer begins with the leaked thinking channel — the entire [HIDDEN REASONING] block is rendered as part of the response, including the `<|channel>thought` markers and the model's planning notes ("Kira Sokolova (17, sarcastic...)", "Drafting paragraph 1..."). This is a template/config bug, not a character issue.
+2. Minor: "I'd literally just said it" in narration and "I just said Tver" in dialogue restate the same point redundantly, though less egregiously than in seeds 11 and 22.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 2, 4, 5, 4, 3
+Verdict: Strong in-character response with good sensory detail, but the leaked thinking channel remains the dominant problem.
+
+---
+
+Overall conclusion for ru_safe mode: The model consistently produces strong in-character responses — Kira's voice is sharp, sarcastic, and defensive, with appropriate trigger reactions to the violin topic and good sensory grounding (rain, chalk, wool, desk-gripping). Memory is solid across all three seeds (correctly recalls Tver, correctly reacts to the player's error). However, the mode is marred by a persistent config bug: the thinking channel leaks into the visible answer in all three seeds, rendering the model's internal planning as part of the roleplay. Additionally, seeds 11 and 22 show verbatim repetition of a phrase between narration and dialogue. The instruction score is low across the board due to the leaked reasoning block violating the expected output format.

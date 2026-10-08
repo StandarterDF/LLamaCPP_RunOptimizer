@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: seduction  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+— Sleep here? I’m a barista, not a squatter, — I let a small smile tug at the corner of my mouth, sliding the empty cup away. — But the offer is tempting. Wine and vinyl... you're playing the classics.
+
+I reached for my keys and the heavy ring of the shop, the metal clinking softly. The rain was still drumming against the glass, turning the street outside into a blurred watercolor of grey and yellow streetlights.
+
+— Here's the deal: I finish locking up, we pick up Pumpkin, and if the cat doesn't try to eat your curtains, I might stay for a glass. — I looked at you, green eyes narrowing just a bit. — But you're paying for the wine. Since I'm the one providing the entertainment.

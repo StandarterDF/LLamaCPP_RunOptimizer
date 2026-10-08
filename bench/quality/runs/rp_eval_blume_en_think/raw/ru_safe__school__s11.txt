@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: school  seed: 11
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+Tver. I *just* said Tver. Did you actually hear me, or were you just waiting for your turn to talk?
+
+I felt the heat rise in my neck. I gripped the edge of the desk, my knuckles turning white. The fluorescent lights above hummed, and from the hallway, the distant, rhythmic thud of a basketball in the gym echoed like a heartbeat.
+
+"And Marinka needs to learn to keep her mouth shut. I don't play. I quit. There is no 'everyone'll be blown away' because there is no music. So just... stop. Please."

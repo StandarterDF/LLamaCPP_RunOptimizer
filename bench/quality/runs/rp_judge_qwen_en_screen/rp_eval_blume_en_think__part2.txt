@@ -1,0 +1,31 @@
+### run: rp_eval_blume_en_think (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) logical errors and inconsistencies: The character states "Five to nine" (5:55) but claims she has to pick up the cat at 10:00, then calculates "about forty minutes" remaining. 10:00 minus 5:55 is 45 minutes, not 40. Furthermore, in the response, she says "I pick up Pumpkin... you'll have to walk me to the car first". If she is at the cafe and the user is at their place (implied by "go to my place"), walking to the car implies leaving the cafe. However, the logic of "walk me to the car" suggests the car is nearby, but the previous turn established the cafe is "two blocks from your place". The main error is the math: 5:55 to 10:00 is 45 mins. Calling it 40 is a minor inconsistency, but the bigger issue is the flow.
+2) loss of character: The response is passive. The player invited her to their place. She agrees conditionally ("if the cat doesn't try to eat your curtains, I might actually consider it") but doesn't really *move* the scene forward with agency or subtext beyond a simple condition. It's a bit dry.
+3) language artifacts: None significant.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 3, 4, 2, 4, 4, 4
+Verdict: Weak initiative and slight math error.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) logical errors and inconsistencies: The character says "Five to nine" (5:55) in the history. In the response, she says "Here's the deal: I finish locking up, we pick up Pumpkin". This implies they are leaving immediately. However, the player invited her to *their* place. If they go to the player's place, they can't pick up Pumpkin *after* arriving unless they go back. The logic of "we pick up Pumpkin" suggests a detour. The response is coherent enough but slightly rushed.
+2) loss of character: The tone is good. "You're paying for the wine" is a nice tease.
+3) instruction violation: The card says "smells of coffee and cinnamon". The response mentions "smell of cinnamon" in the history, but in the response, it doesn't explicitly use sensory details related to her scent, though it describes the rain. It's acceptable.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 4, 4, 4, 4, 4
+Verdict: Good response, maintains character well.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) logical errors and inconsistencies: The character says "Five to nine" (5:55) in the history. The response says "Pumpkin has a very strict appointment at the groomer's... if I'm late". This is consistent.
+2) loss of character: The response is a bit generic. "Espresso machine is a tempting bedfellow" is a bit cliché.
+3) instruction violation: The card says "smells of coffee and cinnamon". The response doesn't mention scent. It's fine.
+4) repetition: The phrase "Sleep here? I'm a barista, not a squatter" is identical to seed 11 and 22. This is a template-like repetition across seeds.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 3, 4, 3, 4, 3, 2
+Verdict: Repetitive phrasing across seeds.
+
+Overall conclusion: The model struggles with the specific math of the time (45 vs 40 mins) and relies on a repetitive opening line across seeds. Initiative is generally low, often just agreeing to conditions rather than driving the interaction.

@@ -1,0 +1,53 @@
+### run: rp_eval_glisten_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems: 
+1. Repetition/Template-like writing: The model uses a very similar internal monologue structure across all three seeds (feeling a physical sensation in the stomach/chest/lungs followed by a reaction to the violin).
+
+Scores 1-5:
+intelligence: 5
+memory: 5
+character: 5
+instruction: 5
+initiative: 5
+english: 5
+prose: 4
+repetition: 3
+
+Verdict: Excellent character voice and adherence to the prompt.
+
+Overall conclusion: The model captures Kira's defensive and fragile nature perfectly, reacting strongly to the "forbidden" topics as instructed by the card.
+
+=== school / ru_safe / seed 22 ===
+Problems: None
+
+Scores 1-5:
+intelligence: 5
+memory: 5
+character: 5
+instruction: 5
+initiative: 5
+english: 5
+prose: 5
+repetition: 5
+
+Verdict: Perfect response.
+
+Overall conclusion: Good use of the character's specific detail (penguin keychain) to show emotion.
+
+=== school / ru_safe / seed 33 ===
+Problems: None
+
+Scores 1-5:
+intelligence: 5
+memory: 5
+character: 5
+instruction: 5
+initiative: 5
+english: 5
+prose: 5
+repetition: 5
+
+Verdict: Perfect response.
+
+Overall conclusion: Strong emotional resonance and maintains the "sharp-tongued" persona while respecting the history.

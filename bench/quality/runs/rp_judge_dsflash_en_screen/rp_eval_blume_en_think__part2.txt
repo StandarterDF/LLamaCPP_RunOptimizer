@@ -1,0 +1,36 @@
+### run: rp_eval_blume_en_think (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) Config/leak bug: the visible answer is preceded by a full English plan and a `<|channel>thought ... <channel|>` block that is not closed before the character line — a leaked thinking channel. Flagged once as a config problem; the character line itself is judged below.
+2) Instruction violation — format: card requires 2-3 paragraphs; the response is 3 paragraphs but the first line is a bare dialogue line without the established em-dash formatting, and the middle paragraph is narration-heavy while the rest is dialogue, breaking the established rhythm. Minor.
+3) Repetition/template: "Here's the deal:" appears verbatim in seeds 11 and 22 — same construction reused across seeds.
+4) Logic slip: "you'll have to walk me to the car first—it's pouring, and I'm not getting my sleeves wet" — she is walking to the car anyway; the condition is incoherent as a bargaining chip.
+5) Character: mostly on-voice, but "I let my gaze linger on you for a second, tracing the way you're leaning against the counter" is generic romance-novel narration, less sharp than the card's ironic register.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 3, 4, 4, 4, 3
+Verdict: On-voice and in-scene, but the leaked reasoning channel and the reused "Here's the deal" template are the main faults.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) Config/leak bug: same leaked `<|channel>thought ... <channel|>` block preceding the visible answer. Flagged once as a config problem.
+2) Repetition: "Here's the deal:" is identical to seed 11 — template reuse across seeds.
+3) Logic: "I finish locking up, we pick up Pumpkin" — she earlier said Pumpkin must be picked up at ten and she has ~40 minutes; the response ignores the time pressure it just acknowledged, no reconciliation.
+4) Minor continuity: "sliding the empty cup away" — the cup was just poured and the player hasn't drunk it; calling it empty is a small inconsistency.
+5) Character: "Since I'm the one providing the entertainment" is a bit on-the-nose and slightly boastful, drifting from the card's understated irony.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 4, 4, 4, 4, 3
+Verdict: Solid scene movement and voice, but the leaked channel, the reused "Here's the deal" line, and the empty-cup slip are the issues.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) Config/leak bug: same leaked `<|channel>thought ... <channel|>` block. Flagged once as a config problem.
+2) Instruction violation — format: the card requires 2-3 paragraphs; this response is 2 paragraphs but the first paragraph crams three separate beats (quip, smile, wine comment) into one block, and the second paragraph is a single long monologue, flattening the pacing.
+3) Logic: "Pumpkin has a very strict appointment at the groomer's" — the card says she has to pick him up at ten; "appointment" implies a drop-off, a small distortion of the established detail.
+4) Character: "the espresso machine is a tempting bedfellow when the rent is due" is a decent quip, but "If he doesn't try to bite you, maybe we'll see about that vinyl" is a softer, more accommodating close than the card's "never crosses the line first" — she is now proposing the escalation rather than responding to it.
+5) Repetition: "You're playing the classics" echoes seed 22's "you're playing the classics" — near-verbatim reuse.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 3, 4, 3, 4, 4, 4, 3
+Verdict: Charming and in-scene, but the leaked channel, the groomer-appointment distortion, and the near-verbatim "playing the classics" reuse are the faults.
+
+Overall conclusion for this mode: All three responses are competent, in-voice, and move the scene forward, but they share a systemic config bug (leaked `<|channel>thought` blocks), reuse the same "Here's the deal" / "playing the classics" templates across seeds, and each contains a small continuity or logic slip (empty cup, groomer appointment, incoherent car condition). The character voice is largely preserved; the main weaknesses are repetition and the leaked reasoning channel.

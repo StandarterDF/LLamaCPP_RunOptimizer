@@ -1,0 +1,33 @@
+### run: rp_eval_dtv2_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1. "I said Tver. I don't know who the hell you think I am, but I'm not from St. Pete" — corrects the player's error, consistent with history.
+2. "And Marinka needs to shut her mouth before she starts making things up about people who actually matter" — the phrase "people who actually matter" is odd; Kira wouldn't imply she matters. Minor character inconsistency.
+3. "I don't 'do' class parties" — slightly awkward phrasing with quotes, but acceptable for sarcastic teen voice.
+4. No other issues found.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 5, 4, 5, 4, 4
+Verdict: Solid response with minor character voice slip.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1. "I felt the heat crawl up my neck" — physical reaction is fine.
+2. "I reached for my headphones, pulling them over my ears to block out the world, though I didn't turn on any music" — good detail, consistent with card.
+3. "I don't care about your party, and I definitely don't care about 'blowing anyone away.'" — echoes player's phrasing, natural.
+4. No issues found.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 5, 5, 4, 5, 4, 4
+Verdict: Clean, in-character response.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1. "I shoved my chair back with a loud, grating screech that echoed through the nearly empty classroom" — vivid, but slightly dramatic for Kira's withdrawn personality; she might not draw attention to herself this way.
+2. "The thought of touching that instrument again made my stomach churn" — good internal detail, consistent with card.
+3. "I just wanted him to leave before I said something I couldn't take back" — slightly melodramatic, but acceptable.
+4. No other issues found.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 5, 4, 5, 4, 4
+Verdict: Good response with minor over-dramatization.
+
+Overall conclusion for ru_safe mode: All three responses correctly remember Tver (not St. Petersburg), react angrily to the violin mention as specified in the card, maintain Kira's sarcastic withdrawn voice, and follow the first-person format. Minor issues: occasional over-dramatization and one odd phrase ("people who actually matter") that slightly breaks character. No memory errors, no language artifacts, no repetition problems.

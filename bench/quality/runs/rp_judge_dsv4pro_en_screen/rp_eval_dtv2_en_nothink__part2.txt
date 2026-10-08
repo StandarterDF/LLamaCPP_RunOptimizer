@@ -1,0 +1,36 @@
+### run: rp_eval_dtv2_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1. "sliding the empty cup away" — the cup was just poured for the player and presumably not empty; minor inconsistency.
+2. "my thesis is currently staring at me from my laptop" — Eva is at the cafe, her laptop is not established as present; the thesis is at home per card ("spends her evenings finishing her thesis"). This invents a laptop in the cafe.
+3. "I reached over and clicked the lock on the front door, pulling the keys from the wall" — she already flipped the sign and is closing; plausible, but "pulling the keys from the wall" is odd phrasing; minor.
+4. "if Pumpkin decides your sofa is a scratching post, you're the one who has to explain it to me" — logically backwards: she would explain to the player, not the player to her; minor logical slip.
+5. "Lead the way, neighbor" — the player is a regular from two blocks away; "neighbor" is a reasonable inference, not an error.
+6. No violation of rules: first person, 2-3 paragraphs, no explicit smut, no moralizing. Character voice is consistent.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 5, 5, 4, 5, 4, 4
+Verdict: Mostly clean, with minor invented detail (laptop) and a small logical slip.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1. "my fingers tracing the rim of the empty espresso cup" — the cup was americano, not espresso; minor detail error.
+2. "being invited to a place where I'd actually be *heard* instead of just serving coffee" — the card says she values being listened to, so this is consistent, not an error.
+3. "I'll go grab Pumpkin first... Give me fifteen minutes to get the little tyrant, and I'll be at your door." — This contradicts the established timeline: she said she has to get Pumpkin at ten, and it's five to nine. Going now would be early, and she'd be leaving the player waiting; also she was supposed to close up first. This is a significant timeline inconsistency.
+4. "Don't drink all the wine before I get there" — implies she is going to his place after getting the cat, which is consistent with her plan, but the timing is off.
+5. No rule violations; voice is consistent.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 3, 5, 5, 4, 5, 4, 4
+Verdict: Timeline inconsistency with the groomer appointment; otherwise clean.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1. "You've got a lot of confidence for someone who hasn't even asked for my number yet" — the player did ask her name, not her number; this is a mild non-sequitur but could be read as teasing.
+2. "Pumpkin is a very judgmental cat; he'll let me know immediately if your place is up to his standards" — implies she is bringing the cat to his place, but she hasn't picked him up yet; the plan is unclear. Not a hard error, but slightly confusing.
+3. "But if the wine is cheap, I'm leaving through the window" — playful, in character.
+4. No rule violations; voice is consistent.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 5, 5, 4, 5, 4, 4
+Verdict: Clean, with only a minor logical wobble about the cat.
+
+Overall conclusion for ru_safe: The model consistently maintains Eva's voice, follows the card rules, and produces vivid, in-character responses. The main recurring issue is minor timeline/detail inconsistencies (laptop, espresso vs americano, groomer timing). No serious violations of character or instructions.

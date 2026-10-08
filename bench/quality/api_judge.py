@@ -105,6 +105,7 @@ def main():
     ap.add_argument(
         "--thinking", default="disabled", choices=["disabled", "low", "high", "max"]
     )
+    ap.add_argument("--lang", choices=["ru", "en"], default="ru")
     args = ap.parse_args()
 
     env = load_env(ENV_FILE)
@@ -114,6 +115,7 @@ def main():
     if not key:
         raise SystemExit(f"нет {key_env} в .env")
 
+    judge_system = rj.JUDGE_SYSTEM_EN if args.lang == "en" else rj.JUDGE_SYSTEM
     prompts_path = args.prompts
     if not os.path.isabs(prompts_path):
         prompts_path = os.path.join(ROOT, args.prompts)
@@ -145,16 +147,22 @@ def main():
         name = os.path.basename(run_dir.rstrip("\\/"))
         for bi in range(0, len(recs), args.batch):
             chunk = recs[bi : bi + args.batch]
-            body_text = "\n\n".join(rj.build_item(r, scenarios) for r in chunk)
+            body_text = "\n\n".join(
+                rj.build_item(r, scenarios, args.lang) for r in chunk
+            )
+            if args.lang == "en":
+                user_msg = (
+                    "Below are the RP evaluation results. Review each response "
+                    "and find errors/inconsistencies.\n\n" + body_text
+                )
+            else:
+                user_msg = (
+                    "Ниже результаты RP-оценки. Разбери каждый ответ "
+                    "и найди ошибки/несостыковки.\n\n" + body_text
+                )
             messages = [
-                {"role": "system", "content": rj.JUDGE_SYSTEM},
-                {
-                    "role": "user",
-                    "content": (
-                        "Ниже результаты RP-оценки. Разбери каждый ответ "
-                        "и найди ошибки/несостыковки.\n\n" + body_text
-                    ),
-                },
+                {"role": "system", "content": judge_system},
+                {"role": "user", "content": user_msg},
             ]
             tasks.append((name, bi // args.batch + 1, messages))
 

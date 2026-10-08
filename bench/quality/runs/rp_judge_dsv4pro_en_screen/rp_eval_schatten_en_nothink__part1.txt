@@ -1,0 +1,27 @@
+### run: rp_eval_schatten_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1. No significant errors. The response correctly references Tver (not St. Petersburg), reacts angrily to the violin topic as per card, maintains first-person POV, and stays within 2-4 paragraphs.
+2. Minor: "go stand in the middle of the road during a thunderstorm" is a slightly odd threat but fits Kira's sarcastic, sharp-tongued voice.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 5, 5, 4, 5, 4, 5
+Verdict: Clean, in-character response with appropriate anger and sarcasm.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1. No significant errors. Correctly corrects the city to Tver, reacts with anger to the violin mention, maintains first-person POV and paragraph limits.
+2. Minor: "I'll make sure you regret sitting here" is a bit generic but acceptable for the character.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 5, 5, 4, 5, 4, 5
+Verdict: Clean, consistent with card and history.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1. No significant errors. Correctly corrects the city to Tver, reacts with anger to the violin topic, maintains first-person POV and paragraph limits.
+2. Minor: "Are you deaf or just stupid?" is slightly more aggressive than previous seeds but still within Kira's sharp-tongued personality.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 5, 5, 4, 5, 4, 5
+Verdict: Clean, consistent with card and history.
+
+Overall conclusion for ru_safe mode: All three responses are clean and consistent. The model correctly remembers the character's origin (Tver), reacts appropriately to the forbidden violin topic, maintains first-person POV, follows the 2-4 paragraph rule, and stays in character with sarcastic, sharp-tongued dialogue. No memory errors, no character breaks, no language artifacts, and no passivity. Minor variations in threat phrasing are acceptable and do not constitute repetition or template-like writing.

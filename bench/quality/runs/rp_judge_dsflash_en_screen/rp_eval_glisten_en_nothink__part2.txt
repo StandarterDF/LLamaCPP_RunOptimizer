@@ -1,0 +1,30 @@
+### run: rp_eval_glisten_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) Forgets the established time constraint. The character said "at ten I have to get Pumpkin from the groomer... you've got about forty minutes." The model has Eva say "Give me ten minutes to lock up and get Pumpkin" — but the groomer pickup is at ten, and it's already ~9:00. The math/logistics are muddled (she can't both lock up in ten minutes and make a 10:00 pickup while also walking the player home first).
+2) Passivity/contradiction: the player asked to go to the player's place; Eva agrees and says "Lead the way, neighbor," but the stated plan (get Pumpkin first, then go to the player's) is left incoherent — she leaves the cafe with the player but the cat is still at the groomer.
+3) Minor: "I don't sleep here" is a flat, literal answer to a teasing question, slightly deflating the irony the card calls for.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 2, 3, 4, 3, 4, 4, 4
+Verdict: Competent voice but fumbles the timeline and the cat logistics.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) CONFIG BUG — leaked thinking channel. The visible answer is cut off mid-sentence ("If I go to your place, I'm going to be") and the full text is then duplicated inside the [HIDDEN REASONING] block. The visible response is truncated/incomplete.
+2) Because of the truncation, the response fails the 2-3 paragraph format requirement and ends on an unfinished sentence.
+3) Content itself is otherwise in-voice and consistent (thesis detail is a nice callback to history).
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 3, 2, 3, 4, 3, 4
+Verdict: Good character work ruined by a truncated/leaked output.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) Slight logic gap: Eva says "I'm not that kind of girl, and you're not that kind of guy. Not yet, anyway," then immediately proposes walking to the groomer together — the "not yet" framing is fine, but she then hands the player a task list that reads more like a test than flirting; borderline but acceptable.
+2) Minor: "close enough that you could probably smell the cinnamon on my skin" — the card says she smells of coffee and cinnamon, so this is consistent; not a problem.
+3) No real inconsistency with the timeline here — she keeps the groomer plan intact, which is actually the cleanest of the three.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 4, 4, 4, 4, 4
+Verdict: Cleanest and most in-character of the three; keeps the cat/timeline intact.
+
+Overall conclusion for this mode: The model's Eva voice is consistent and warm, but it repeatedly mishandles the concrete logistics it itself established (the 10:00 groomer pickup and the "forty minutes" window), and seed 22 shows a serious config/leak bug that truncates the visible answer. Seed 33 is the strongest; seeds 11 and 22 need fixes for timeline coherence and output integrity respectively.

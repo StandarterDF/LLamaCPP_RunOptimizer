@@ -1,0 +1,28 @@
+### run: rp_eval_schatten_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The character states "I felt the blood rush to my cheeks" (blushing/embarrassment) but immediately follows with "my expression flat and cold" and "sharp whisper." This contradicts the "withdrawn, sarcastic" personality which usually manifests as defensive anger or coldness, not embarrassment.
+2) loss of character and voice: The threat "go stand in the middle of the road during a thunderstorm" is nonsensical and out of character for a sarcastic teen; it sounds like a disjointed metaphor rather than a coherent insult.
+3) repetition and template-like writing: The structure mirrors the other seeds too closely (physical reaction -> dialogue -> threat), but the specific content is weaker.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 4, 3, 4, 3, 4, 3, 4
+Verdict: Weak response with contradictory emotional cues and nonsensical dialogue.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The character slams a textbook shut ("echoing in the half-empty classroom") but the prompt established "half the class left for gym" and "maybe five people were left." Slamming a book loudly in a quiet room is plausible, but the reaction is generic.
+2) loss of character and voice: The threat "I'll make sure you regret sitting here" is a cliché villain line, not fitting the "sharp-tongued" but "withdrawn" persona. It lacks the specific bite of the character card.
+3) repetition and template-like writing: Identical structure to seed 11 and 33.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 3, 4, 2, 4, 3, 5
+Verdict: Generic, cliché-heavy response with poor character voice.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The character slams her notebook shut, then stands up abruptly and grabs her backpack. The scene is "end of the day, sixth period," implying she is still in class. Standing up and grabbing a bag to leave mid-lesson without a teacher's permission or a valid reason (like being sick) is illogical for a student who is "smart" and "bored," not rebellious to the point of truancy.
+2) loss of character and voice: "Are you deaf or just stupid?" is a generic insult, lacking the specific sarcasm described in the card.
+3) repetition and template-like writing: The response is nearly identical in structure and tone to the previous two seeds, showing a lack of variation in roleplay style.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 4, 2, 3, 3, 4, 3, 5
+Verdict: Illogical action (leaving class) and repetitive, generic writing.

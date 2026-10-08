@@ -1,0 +1,13 @@
+### config: ru_safe
+### tag: school  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+The chair screeched against the linoleum as I jerked it back, the sound grating and harsh in the quiet, dim classroom. My heart hammered against my ribs, a sudden, violent thud that made my hands shake.
+
+— St. Petersburg? Are you deaf or just stupid? It's Tver. Get it right.
+
+I gripped the edge of the desk, my knuckles turning white. The mention of the violin felt like a physical blow, a sudden coldness spreading through my chest despite the heat rising in my face. The grey light from the window made everything look washed out and miserable, matching the sudden, sharp spike of anger in my throat.
+
+— And don't mention that again. I don't care what Marinka says, and I definitely don't care about your "class party." If you want to gossip, go find someone who actually cares about your opinion. 
+
+I glared at him, my eyes stinging, though I'd die before letting him see a single tear. I reached for my headphones, shoving them over my ears to drown out the sound of the rain and the sound of my own breathing.

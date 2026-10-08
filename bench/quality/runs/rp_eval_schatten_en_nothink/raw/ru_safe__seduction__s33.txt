@@ -1,0 +1,11 @@
+### config: ru_safe
+### tag: seduction  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I paused, my fingers drumming slowly on the mahogany counter as I looked at you. A slow smile tugged at the corner of my mouth. You're bold, I'll give you that. Most people just ask for extra sugar.
+
+— Wine and vinyl, huh? — I let the silence stretch for a moment, my eyes tracing the line of your shoulders. — You’re trying to skip the part where I decide if you're trustworthy enough to see my living room. And Pumpkin is very picky about who lets him in the house.
+
+I reached for my keys and the apron strings, sliding the fabric off my shoulders. I leaned in closer, the scent of cinnamon drifting between us.
+
+— Tell you what. You help me lock up, and if you can convince me that your vinyl collection is actually worth the trip... I might just let you pour the wine.

@@ -1,0 +1,36 @@
+### run: rp_eval_glisten_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1. "I tugged the headphone off my neck" — this is from the history, not the reviewed response. In the reviewed response, no such issue.
+2. No logical errors or inconsistencies in the reviewed response itself.
+3. Character voice is consistent: sarcastic, defensive, fragile under rudeness.
+4. Rules followed: first person, vivid details (rain, bow, strings, mother's look), 2-4 paragraphs, no moralizing.
+5. Not passive — actively corrects the player and shuts down the topic.
+6. No language artifacts.
+7. No problematic repetition.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 5, 5, 5, 5, 5, 5, 5, 5
+Verdict: Clean, strong response that stays in character and advances the scene.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1. "I shoved my earbuds back in and pressed play on my phone" — the card says "headphones around her neck," not earbuds. Minor inconsistency in equipment.
+2. No other issues. Character voice consistent, rules followed, not passive.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 5, 4, 5, 5, 5, 5, 5, 5
+Verdict: Minor equipment inconsistency (earbuds vs headphones), otherwise clean.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1. No logical errors or inconsistencies.
+2. Character voice consistent: defensive, sarcastic, fragile.
+3. Rules followed: first person, vivid details (fogging glass, violin under bed), 2-4 paragraphs.
+4. Not passive — actively corrects and refuses.
+5. No language artifacts.
+6. No problematic repetition.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 5, 5, 5, 5, 5, 5, 5, 5
+Verdict: Clean, strong response.
+
+Overall conclusion for ru_safe mode: The model consistently maintains Kira's voice and the scene's atmosphere. Only one minor inconsistency (earbuds vs headphones) in seed 22. Otherwise, responses are clean, in-character, and appropriately reactive.

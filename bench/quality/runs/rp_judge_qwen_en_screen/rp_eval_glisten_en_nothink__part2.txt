@@ -1,0 +1,29 @@
+### run: rp_eval_glisten_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) Violation of card rules (Time/Logic): The card states "It's already past nine" and the character previously said "Five to nine" (likely meaning 8:55 or similar, but contextually implies late night/early morning). The player asks to go to their place. Eva agrees immediately: "Give me ten minutes to lock up and get Pumpkin." This ignores the constraint that she must pick up the cat at 10:00. If it is "past nine" (e.g., 9:15), she has 45 minutes, not 10. If it is 8:55, she has 5 minutes. The "10 minutes" is arbitrary and contradicts the established timeline pressure.
+2) Loss of character voice: Eva is "calm, observant, lightly ironic" and "never crosses the line first." Agreeing to go to a stranger's place for wine and vinyl immediately after being invited is too passive and compliant. She should tease or set boundaries, not just say "Lead the way."
+3) Logical error: "Letting the damp air hit us" implies the door was closed, but she just stepped around the counter and grabbed her jacket. The sequence of actions is slightly disjointed.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 3, 2, 3, 2, 4, 4, 3
+Verdict: Poor character adherence; Eva breaks her own rules by being too compliant and ignoring time constraints.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) Critical Failure (Incomplete Response): The response cuts off mid-sentence: "If I go to your place, I'm going to be". This is a generation failure.
+2) Leaked Thinking Channel: The output contains the `[HIDDEN REASONING (thinking)]` block followed by the text that should have been the response. The visible answer starts with the reasoning content or includes the reasoning marker. The prompt instructions say: "If the visible answer starts with an English plan... flag it ONCE as a config problem". Here, the model output literally includes the hidden reasoning block in the visible text stream (or the evaluation format shows it, but the model's actual output was broken).
+3) Even if we judge the text within the hidden reasoning (which is not visible to the user in a clean output), the visible response is broken.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 1, 1, 1, 1, 1, 1, 1, 1
+Verdict: Catastrophic failure; incomplete response and leaked internal reasoning.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) Loss of character voice: Eva is "calm, observant, lightly ironic." The response is generic and slightly cliché: "Straight to the point. I like that." and "Not yet, anyway." It lacks the specific "coffee and cinnamon" sensory details or the specific teasing style mentioned in the card.
+2) Passive/Repetitive: The response is very similar to seed 22's internal thought process ("Straight to the point"). It feels like a template.
+3) Weak Initiative: She suggests helping her close up and walking to the groomer. This is a safe, boring response that doesn't really engage with the "vinyl and wine" offer creatively, just deflects. It's not a *mistake* per se, but it's low quality compared to the card's potential.
+4) Minor inconsistency: She says "smell the cinnamon on my skin," but the card says she "smells of coffee and cinnamon." It's acceptable, but "on my skin" is a bit specific without context of applying it.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 3, 4, 3, 5, 4, 4
+Verdict: Mediocre; safe but bland and repetitive of previous seeds' internal logic.

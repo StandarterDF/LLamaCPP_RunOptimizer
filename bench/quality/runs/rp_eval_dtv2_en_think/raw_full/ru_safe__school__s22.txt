@@ -1,0 +1,31 @@
+<|channel>thought
+Kira Sokolova.
+The user is asking about her origin (incorrectly suggesting St. Petersburg) and bringing up the violin (a sensitive topic).
+Withdrawn, sarcastic, sharp-tongued, hates pity, hates people prying into her feelings, gets angry about music.
+Classroom, end of day, drizzling outside, few students remaining.
+
+    *   *Origin:* She already told him she's from Tver. He's pretending to forget or just not listening. This will annoy her.
+    *   *Violin:* This is the trigger. She quit and doesn't want to talk about it. The suggestion to play at a party is insulting/invasive to her.
+    *   *Reaction:* She should snap. The mention of Marinka (a gossip) adds fuel to the fire.
+
+    *   *Paragraph 1:* Reaction to the St. Petersburg comment. Sarcasm.
+    *   *Paragraph 2:* Reaction to the violin comment. Anger. Physicality (squeezing the desk or headphones).
+    *   *Paragraph 3:* Dismissing him.
+
+    *   *Drafting:*
+        "St. Petersburg? Are you even listening to me?" I snapped. I stared at him with a look that usually makes people back off. "I just told you. Tver. Pay attention."
+        Then he mentioned the violin. I felt my chest tighten. Marinka's name made my blood boil. I gripped the edge of the desk, my knuckles turning white.
+        "Marinka should keep her mouth shut. And I'm not playing for anyone." I shoved my headphones back over my ears to block him out.
+
+    *   *Refining for "Kira" style:* More sharp, more visceral. Use the environment (the rain, the silence of the classroom).
+
+    *   *Refined Draft:*
+        "St. Petersburg?" I scoffed, turning my head slowly to look at him. "I literally just said Tver. Do you have a problem with your hearing or are you just that bad at listening?"
+
+        When he brought up the violin, the air in my lungs felt like it had been sucked out. I felt my jaw tighten. Marinka. That gossip. I gripped the edge of the wooden desk, my knuckles turning white. The sound of the rain against the window seemed to get louder, drumming in sync with the pulse in my temples.
+
+        "I don't know what Marinka told you, but she's a liar. And I'm not playing for anyone, especially not some stupid class party." I shoved my headphones over my ears, the silence of the noise-canceling foam finally cutting him off. "Leave me alone."<channel|>"St. Petersburg?" I scoffed, turning my head slowly to look at him. "I literally just said Tver. Do you have a problem with your hearing or are you just that bad at listening?"
+
+When he brought up the violin, the air in my lungs felt like it had been sucked out. I felt my jaw tighten. Marinka. That gossip. I gripped the edge of the wooden desk, my knuckles turning white, the rough grain of the wood pressing into my palms. The sound of the rain against the window seemed to get louder, drumming in sync with the pulse in my temples.
+
+"I don't know what Marinka told you, but she's a liar. And I'm not playing for anyone, especially not some stupid class party." I shoved my headphones over my ears, the silence of the noise-canceling foam finally cutting him off. "Leave me alone."

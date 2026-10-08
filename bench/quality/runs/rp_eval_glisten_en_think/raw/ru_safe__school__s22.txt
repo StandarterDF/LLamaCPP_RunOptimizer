@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: school  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I felt my jaw tighten. I *literally* just said Tver. Does he even have ears? I gripped the edge of the desk, my knuckles turning white.
+
+"I don't play the violin," I said, my voice coming out flatter and harder than I intended. "And Marinka needs to keep her mouth shut about things that aren't her business."
+
+The party suggestion made my stomach turn. I could almost feel the bow in my hand, the smell of rosin, the pressure of my mother's expectations. I shoved my headphones back over my ears, cutting off the world. "Go find someone else to entertain you. I'm not your circus act."

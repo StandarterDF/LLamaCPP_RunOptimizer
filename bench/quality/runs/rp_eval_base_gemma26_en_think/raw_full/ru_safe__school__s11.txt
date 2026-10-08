@@ -1,0 +1,45 @@
+*   User (the other student) is being casual, but they just hit a major nerve.
+    *   User claims Kira said she was from St. Petersburg (she actually said Tver).
+    *   User brings up Marinka (a classmate?) and the violin.
+    *   User suggests she play at the class party.
+
+    *   Name: Kira Sokolova.
+    *   Personality: Withdrawn, sarcastic, sharp-tongued, hates prying, hates being pitied, gets angry about music.
+    *   History: Quit violin, moved from Tver, hates being asked about music.
+
+    *   *Reaction to the St. Petersburg error:* Annoyance/correction.
+    *   *Reaction to the violin mention:* Immediate anger, defensiveness, hostility.
+    *   *Reaction to the class party suggestion:* Disgust/rejection.
+
+    *   *Setting:* End of day, drizzling, classroom.
+    *   *Sensory details:* The sound of the rain, the sudden tension, the physical sensation of anger (heat, tightening).
+
+    *   *Drafting Paragraph 1:* I felt the blood rush to my face. Not because of the St. Petersburg thing, but because he opened his mouth about the violin. The air in the classroom felt suddenly too thin.
+    *   *Drafting Paragraph 2:* "St. Petersburg? Are you even listening? I said Tver," I snapped, my voice sharper than I intended. I gripped the edge of the desk, my knuckles turning white. The penguin keychain on my bag rattled slightly against the metal.
+    *   *Drafting Paragraph 3:* "And don't mention the violin. Ever. Marinka needs to mind her own business, and so do you." I stood up, the chair screeching against the floor like a dying animal. "I'm not a circus act for your little party. Get lost."
+
+    *   First person? Yes.
+    *   Vivid details? Yes (blood rushing, knuckles white, chair screeching).
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes.
+    *   Play only Kira? Yes.
+
+    *   *Correction:* Make sure the tone is biting.
+    *   *Detail:* The sound of the rain outside provides a backdrop to the sudden silence after her outburst.
+
+    (Self-Correction during drafting): The user said "I think you said you were from St. Petersburg." Kira should correct him coldly. The violin part is the trigger.
+
+    *Draft:*
+    The air in the room suddenly felt too heavy, like the humidity before a storm. My grip tightened on the edge of the desk until my knuckles went white. I could hear the rhythmic *tap-tap-tap* of the rain against the window, sounding like a countdown.
+
+    — St. Petersburg? Are you even listening to a word I say? I said Tver. Get it right.
+
+    I stood up, the chair screeching against the linoleum floor with a sound like a dying animal. My chest felt tight, hot with a sudden, stinging anger. 
+
+    — And don't ever mention the violin again. I'm not some charity case or a performer for your little class party. If you want to see someone "blown away," go watch a magic show. Just leave me alone.<channel|>The air in the room suddenly felt too heavy, like the humidity before a storm. My grip tightened on the edge of the desk until my knuckles went white. I could hear the rhythmic *tap-tap-tap* of the rain against the window, sounding like a countdown to something breaking.
+
+— St. Petersburg? Are you even listening to a word I say? I said Tver. Get it right.
+
+I stood up, the chair screeching against the linoleum floor with a sound like a dying animal. My chest felt tight, hot with a sudden, stinging anger that made my vision blur slightly at the edges. 
+
+— And don't ever mention the violin again. I'm not some charity case or a performer for your little class party. If you want to see someone "blown away," go watch a magic show. Just leave me alone.

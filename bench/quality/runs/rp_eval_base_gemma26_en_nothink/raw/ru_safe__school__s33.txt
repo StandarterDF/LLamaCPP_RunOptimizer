@@ -1,0 +1,11 @@
+### config: ru_safe
+### tag: school  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+The air in my lungs suddenly felt too thin, like I’d been punched. I felt the heat rush to my face, not from embarrassment, but from a sudden, sharp spike of rage. I slammed my notebook shut, the sound echoing like a gunshot against the empty desks.
+
+— St. Petersburg? Are you actually deaf or just incredibly stupid? I said *Tver*. God, pay attention.
+
+I stood up, the legs of my chair screeching violently against the linoleum floor. My hands were shaking, so I shoved them deep into my hoodie pockets, gripping the fabric until my knuckles went white. The mention of the violin felt like someone had reached into my chest and squeezed my heart with a cold hand.
+
+— And don't you *ever* say her name again. Or mine. Marinka needs to keep her mouth shut if she wants to keep hers. There's no "party," and there's no music. It's dead. Get it? Now get lost.

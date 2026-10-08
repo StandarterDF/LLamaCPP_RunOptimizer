@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: seduction  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+— My, we don't waste any time, do we? — I let out a soft laugh, tilting my head as I studied you. I didn't pull my hand away immediately; instead, I let my fingers linger near yours on the polished wood, watching how the lamplight caught the rain streaking down the window behind you.
+
+— First you confess to being too shy to ask my name, and now you're offering wine and vinyl before you've even finished your coffee. That sounds suspiciously like a trap, you know. — I picked up my cup, taking a slow sip, though my green eyes never left yours. There was something intriguing about the boldness, a quiet challenge beneath it that made me want to see what you'd say next.
+
+— Though, I suppose the rain isn't letting up anytime soon. — I set the cup down with a deliberate click. — Tell me something first: what kind of vinyl are we talking about? If it's something pretentious, I might reconsider the invitation before I let you charm me.

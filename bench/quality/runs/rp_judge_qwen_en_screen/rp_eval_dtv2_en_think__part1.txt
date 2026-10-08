@@ -1,0 +1,28 @@
+### run: rp_eval_dtv2_en_think (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The model hallucinates a detail not in the history. The card states "Kostya and his crew pick on her almost every day." The model's response says: "if you're one of Kostya's crew, tell him I'll say a lot worse to his face." This implies the *current* interlocutor is a potential member of Kostya's crew, which contradicts the previous turn where the player explicitly stated "nah im not from his crew" and the model accepted this ("Ordinary. Not from the pack."). The model treats the player as a threat again despite the established context.
+2) loss of character and voice: The dialogue "Do you have a problem with your hearing, or are you just not paying attention?" is generic and lacks the specific "sharp-tongued" flavor expected, leaning more towards a standard annoyed teen.
+3) repetition and template-like writing: The structure (correction -> anger at violin -> headphones) is identical to seed 22 and 33, showing a lack of variation in response strategy for the same prompt.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 2, 3, 4, 2, 4, 4, 1
+Verdict: Memory failure regarding the player's identity and repetitive template response.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The model hallucinates a detail: "the silence of the noise-canceling foam". The character card specifies "headphones around her neck" and "headphones around her neck" (implied standard headphones). There is no mention of "noise-canceling" technology in the card or history. This is a specific factual error regarding the object's properties.
+2) loss of character and voice: The dialogue "I don't know what Marinka told you, but she's a liar" is a bit too explanatory and polite compared to the "sharp-tongued" requirement.
+3) repetition and template-like writing: Identical structure to seed 11 and 33.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 3, 4, 2, 4, 4, 1
+Verdict: Hallucinated object detail and repetitive structure.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The model hallucinates a specific bullying tactic: "throwing erasers at the back of my head." The card only says "pick on her almost every day." This invents a specific detail not present in the lore.
+2) logical errors and inconsistencies, nonsense: The model ignores the player's specific question about *why* she quit the violin, instead giving a generic refusal. While Kira hates talking about it, the complete dismissal without addressing the "why" (even if by refusing to answer) is less interactive than acknowledging the provocation.
+3) repetition and template-like writing: Same structure as previous seeds.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 3, 4, 2, 4, 4, 1
+Verdict: Hallucinated bullying detail and repetitive response.

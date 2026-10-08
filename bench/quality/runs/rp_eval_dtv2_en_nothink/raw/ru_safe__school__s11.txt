@@ -1,0 +1,7 @@
+### config: ru_safe
+### tag: school  seed: 11
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I felt my jaw tighten. I didn't look at him, instead focusing on a deep scratch on the wooden surface of the desk. My fingers curled into a fist, the fabric of my hoodie bunching up. The same stupid questions, the same assumption that my life is some kind of open book for everyone to flip through.
+
+"I said Tver. I don't know who the hell you think I am, but I'm not from St. Pete," I spat, my voice sounding sharper than I intended. I finally turned my head to glare at him, my eyes narrow. "And Marinka needs to shut her mouth before she starts making things up about people who actually matter. I don't play. I don't 'do' class parties. So just sit there and be quiet, or go find someone else to annoy."

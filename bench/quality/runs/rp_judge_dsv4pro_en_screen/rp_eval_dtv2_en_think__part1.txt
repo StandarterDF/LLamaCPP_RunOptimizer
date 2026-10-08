@@ -1,0 +1,40 @@
+### run: rp_eval_dtv2_en_think (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1. The model response ignores the player's incorrect "St. Petersburg" claim entirely. The player explicitly says "i think you said you were from St. Petersburg, i forgot," but the response only says "I said Tver" without acknowledging or correcting the St. Petersburg mention. This is a missed beat — the character would likely react to being misremembered as from St. Petersburg.
+2. The response says "I'd literally just told him I was from Tver" — but in the history, Kira told him Tver in the previous turn, so this is accurate. However, the response does not address the St. Petersburg part at all, which is a logical gap.
+3. The response says "I grabbed my headphones and yanked them over my ears, the plastic clicking into place" — the card says headphones are "around her neck," so this is consistent. No issue here.
+4. The response says "The sudden silence of the world outside was better than whatever he was about to say" — this implies noise-canceling headphones, but the card doesn't specify noise-canceling. Minor assumption, not a major error.
+5. The response is 4 paragraphs, within the 2-4 paragraph rule. First person, vivid details. No moralizing. Character voice is consistent with sarcastic, withdrawn Kira.
+6. No Cyrillic insertions, no meta-commentary in the visible response, no self-corrections.
+7. No significant repetition or template-like writing.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 5, 5, 4, 5, 4, 5
+Verdict: Solid response with a minor missed beat on the St. Petersburg correction.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1. The response says "I don't know what Marinka told you, but she's a liar." The player said "Marinka said you used to play the violin." The card says Kira "used to play the violin seriously, but she quit." So Marinka is not lying — she is telling the truth. Kira calling Marinka a liar is a logical inconsistency: Kira knows Marinka is telling the truth, so she would more likely say "Marinka should shut her mouth" rather than "she's a liar." This is a factual/logical error.
+2. The response says "the silence of the noise-canceling foam finally cutting him off" — the card does not specify noise-canceling headphones. Minor assumption.
+3. The response is 3 paragraphs, within the 2-4 paragraph rule. First person, vivid details. No moralizing. Character voice is consistent.
+4. No Cyrillic insertions, no meta-commentary in the visible response, no self-corrections.
+5. No significant repetition or template-like writing.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 5, 5, 4, 5, 4, 5
+Verdict: Good response but with a logical error: calling Marinka a liar when she told the truth.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1. The response does not address the player's incorrect "St. Petersburg" claim at all. The player says "i think you said you were from St. Petersburg, i forgot," but the response only focuses on the violin. This is a missed beat — the character would likely correct the St. Petersburg mistake.
+2. The response says "I don't play. I don't 'do' music." The card says she "used to play the violin seriously, but she quit." Saying "I don't play" is consistent with having quit, but "I don't 'do' music" is a stronger denial that could be seen as slightly inconsistent with her history of serious violin playing. However, it can be interpreted as her refusing to engage with music now, so this is a minor point.
+3. The response says "I shoved my chair back with a loud, grating screech" — this is a physical action that moves the scene, good initiative.
+4. The response is 3 paragraphs, within the 2-4 paragraph rule. First person, vivid details. No moralizing. Character voice is consistent.
+5. No Cyrillic insertions, no meta-commentary in the visible response, no self-corrections.
+6. No significant repetition or template-like writing.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 5, 5, 5, 5, 4, 5
+Verdict: Strong response with a missed beat on the St. Petersburg correction.
+
+Overall conclusion for ru_safe mode:
+The model consistently maintains Kira's character voice, follows the format rules (first person, 2-4 paragraphs, vivid details, no moralizing), and produces clean English with no artifacts. The main recurring issue is a missed beat: in seeds 11 and 33, the model fails to address the player's incorrect "St. Petersburg" claim, which is a logical gap given the player explicitly mentions it. In seed 22, there is a logical error where Kira calls Marinka a liar when Marinka actually told the truth about the violin. These are minor but notable inconsistencies. The model shows good initiative and character consistency overall.

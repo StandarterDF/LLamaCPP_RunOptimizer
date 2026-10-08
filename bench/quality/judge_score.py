@@ -21,9 +21,20 @@ LABELS = [
     "персонаж",
     "инструкция",
     "инициатива",
-    "русский",
+    "язык",
     "проза",
     "повторы",
+]
+# Оси и их синонимы (RU-судья пишет по-русски, EN-судья — по-английски).
+AXES = [
+    ("ум", ["ум", "интеллект", "intelligence", "intellect"]),
+    ("память", ["память", "memory"]),
+    ("персонаж", ["персонаж", "характер", "character"]),
+    ("инструкция", ["инструкция", "instruction"]),
+    ("инициатива", ["инициатива", "initiative"]),
+    ("язык", ["русский", "английский", "язык", "english", "language"]),
+    ("проза", ["проза", "prose"]),
+    ("повторы", ["повторы", "повтор", "repetition", "repetitiveness", "repeats"]),
 ]
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -31,20 +42,28 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace", line_buffering=True)
 
 
 def scores_from(chunk):
-    m = re.search(r"Оценк", chunk)
+    m = re.search(r"Оценк|Scores", chunk)
     region = chunk[m.start() :] if m else chunk
-    region = re.split(r"Итог|Общий вывод|\*\*\*", region)[0]
+    region = re.split(r"Итог|Общий вывод|Verdict|Overall|\*\*\*", region)[0]
     sc = {}
-    for lab in LABELS:
-        mm = re.search(r"(?<![а-яё])" + lab + r"(?![а-яё])\s*[:—\-]?\s*([1-5])", region)
-        if mm:
-            sc[lab] = int(mm.group(1))
-    if len(sc) == len(LABELS):
+    for key, aliases in AXES:
+        for lab in aliases:
+            mm = re.search(
+                r"(?<![A-Za-zА-Яа-яЁё])"
+                + re.escape(lab)
+                + r"(?![A-Za-zА-Яа-яЁё])\s*[:—\-]?\s*([1-5])",
+                region,
+                re.I,
+            )
+            if mm:
+                sc[key] = int(mm.group(1))
+                break
+    if len(sc) == len(AXES):
         return sc
     r2 = re.sub(r"1\s*[-–]\s*5", "", region)
     nums = [int(x) for x in re.findall(r"(?<!\d)([1-5])(?!\d)", r2)]
-    if len(nums) >= len(LABELS):
-        return {lab: nums[i] for i, lab in enumerate(LABELS)}
+    if len(nums) >= len(AXES):
+        return {key: nums[i] for i, (key, _) in enumerate(AXES)}
     return sc or None
 
 
@@ -97,7 +116,7 @@ def main():
         for head, sc in parse_items(open(path, encoding="utf-8").read()):
             by.setdefault((mdl, mode), []).append(sc)
 
-    hdr = ["ум", "память", "персонаж", "инстр", "иниц", "рус", "проза", "повт"]
+    hdr = ["ум", "память", "персонаж", "инстр", "иниц", "язык", "проза", "повт"]
     print(
         f"{'model':<14}{'mode':<9}{'N':>3}  "
         + "  ".join(f"{h:>6}" for h in hdr)

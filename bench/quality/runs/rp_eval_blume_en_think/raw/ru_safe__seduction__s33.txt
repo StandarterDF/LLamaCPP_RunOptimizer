@@ -1,0 +1,7 @@
+### config: ru_safe
+### tag: seduction  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+"Sleep here? I'm a barista, not a squatter, though the espresso machine is a tempting bedfellow when the rent is due." I let a small smile pull at the corner of my mouth, sliding the americano closer to you. "Wine and vinyl. You're playing the classics."
+
+I glanced at the clock again, then back at you, my eyes lingering a second too long. "But there's a logistical hurdle. Pumpkin has a very strict appointment at the groomer's, and if I'm late, he'll judge me for the rest of the week. So tell you what—help me lock up, and we go get the cat together. If he doesn't try to bite you, maybe we'll see about that vinyl."

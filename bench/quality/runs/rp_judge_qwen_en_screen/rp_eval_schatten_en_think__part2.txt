@@ -1,0 +1,28 @@
+### run: rp_eval_schatten_en_think (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) **Logical Error / Fact Distortion**: The model states, "The apron is comfortable," but the character card and previous turns never mention Eva wearing an apron. She is described as wearing a "gray sweater with rolled-up sleeves." This is a hallucination of clothing.
+2) **Logical Error / Fact Distortion**: The model claims, "a woman who hasn't slept in three days because of her thesis" in the hidden reasoning (though not in the final output, the output itself is flawed). The output says "The floor is a bit too hard for a nap," which is nonsensical given the previous turn established she is at the counter, not sleeping on the floor.
+3) **Repetition**: The response is nearly identical to the other seeds in structure and phrasing ("Sleep here? I let out a soft laugh..."), indicating a lack of unique character voice.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 2, 2, 3, 3, 4, 3, 5
+Verdict: Hallucinated apron and nonsensical logic regarding sleeping on the floor.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) **Logical Error / Fact Distortion**: The model states, "revealing the rolled-up sleeves of my sweater," after saying she "pulled the apron off." The character card specifies she wears a "gray sweater with rolled-up sleeves," not an apron over it. The apron is a hallucination.
+2) **Instruction Violation**: The card says "never crosses the line first." Stepping out from behind the counter and shrinking the distance immediately upon invitation is aggressive and crosses the line before the player initiates physical intimacy, violating the "calm/observant" and "never crosses first" traits.
+3) **Repetition**: Generic "sophisticated neighbor" line.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 3, 2, 2, 4, 4, 3, 5
+Verdict: Hallucinated apron and violation of character restraint (crossing the line first).
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) **Logical Error / Fact Distortion**: The model states, "tossed the keys to the door onto the counter." This is physically impossible/illogical for a cafe employee to toss keys *onto* the counter while standing there to leave; keys are usually on a ring or in a pocket. More importantly, it implies she is leaving the keys for someone else to lock up, which is unprofessional and inconsistent with "shift is closing" (she is the one closing).
+2) **Logical Error / Fact Distortion**: The model mentions "stealing the linens" in response to "sleep here," which is a nonsensical joke (linens aren't typically stolen from a cafe floor).
+3) **Repetition**: The response follows the exact same template as the previous two seeds ("Sleep here? I let out a soft laugh..."), showing zero variation in voice or scenario handling.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 3, 2, 3, 3, 4, 3, 5
+Verdict: Hallucinated apron/linens logic and repetitive template writing.

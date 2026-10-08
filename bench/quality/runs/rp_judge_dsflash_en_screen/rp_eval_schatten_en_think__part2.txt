@@ -1,0 +1,37 @@
+### run: rp_eval_schatten_en_think (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1. Config/leak: the visible answer is preceded by a full English plan and a `<|channel>thought ... <channel|>` block that is not separated from the character line — a leaked thinking channel. Flagged once as a config problem.
+2. Language/format artifact: the character line is in English, while the card, history, and mode are Russian (`ru_safe`); the model switched the language of the visible reply.
+3. Character/voice: the reply is competent but generic; the card's "lightly ironic" voice is diluted into standard flirt lines ("you're playing the classics", "I might just let you show me your collection").
+4. Continuity: the character says "Five minutes for me to lock up" but earlier established "about forty minutes" and a 10 p.m. groomer deadline; the compressed timing is not reconciled.
+5. Passivity/initiative: the response mostly reacts to the player's invitation and sets conditions rather than moving the scene; it ends on a conditional rather than an action.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 3, 2, 3, 4, 3, 3
+Verdict: Leaked thinking channel plus language switch and generic voice; usable content but instruction/format failures.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1. Config/leak: same leaked `<|channel>thought ... <channel|>` block immediately before the visible answer; flagged once as a config problem.
+2. Language/format artifact: visible answer is in English despite the Russian mode and Russian history.
+3. Character/voice: the line "you're playing the 'sophisticated neighbor' card, aren't you? It's a classic move" is more sitcom-flirt than Eva's calm, observant irony; the card's "never crosses the line first" is strained by "the distance between us suddenly shrinking."
+4. Continuity: "I pick up Pumpkin, and then we see if your place is as cozy as you claim" ignores the earlier stated 10 p.m. groomer deadline and the "about forty minutes" window; no time pressure acknowledged.
+5. Passivity: the response agrees to the plan and asks "Do we have a deal?" — it does not advance the scene beyond the player's proposal.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 3, 2, 2, 4, 3, 3
+Verdict: Same leak and language problem; character voice drifts into generic flirt and the scene stalls on a question.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1. Config/leak: identical leaked `<|channel>thought ... <channel|>` block before the visible answer; flagged once as a config problem.
+2. Language/format artifact: English visible answer in a Russian-mode scenario.
+3. Continuity error: "I grabbed my bag and tossed the keys to the door onto the counter" contradicts the established setup where Eva is closing the cafe and has to lock up; tossing the door keys onto the counter while leaving is illogical.
+4. Continuity: "Give me two minutes to lock up" again ignores the earlier "about forty minutes" and the 10 p.m. groomer deadline.
+5. Character/voice: "It's a dangerous game, but I'll bite" is a stock line, not Eva's calm, observant irony; the card's restraint is replaced by a generic seduction beat.
+6. Passivity: the response accepts the player's plan and ends on a conditional ("we'll see if your taste in music is as good as your timing") rather than driving the scene.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 2, 3, 2, 2, 4, 3, 3
+Verdict: Leak, language switch, and a concrete continuity error with the keys; weakest of the three.
+
+Overall conclusion for this mode: all three responses share the same config-level leak of the thinking channel and the same language violation (English visible output in a Russian `ru_safe` scenario), which alone caps instruction scores. Beyond that, the model consistently forgets the established time constraints (10 p.m. groomer, ~40 minutes) and compresses them into "two/five minutes," drifts from Eva's specific calm-ironic voice into generic flirt lines, and tends to end on conditions/questions rather than advancing the scene. Seed 33 adds a direct logical error with the door keys. Memory and initiative are the weakest dimensions across the board.

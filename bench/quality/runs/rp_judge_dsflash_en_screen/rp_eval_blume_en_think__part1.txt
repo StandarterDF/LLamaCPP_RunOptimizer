@@ -1,0 +1,30 @@
+### run: rp_eval_blume_en_think (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) Config/leak: the visible answer is preceded by a leaked thinking channel — the response opens with the plan text and ends with `<channel|>` before the actual character line. Flag once as a template/config bug (leaked reasoning channel).
+2) Language/format artifact: the character line uses straight double quotes ("...") whereas the established history uses em-dash dialogue (— ...). Minor voice/format drift from the card's style.
+3) Repetition: the "Marinka needs to learn to keep her mouth shut" beat is nearly identical across all three seeds — template-like writing.
+4) Passivity: the response only reacts and shuts down; it does not move the scene (no new action, no hook for the player). Acceptable for the trigger, but flat.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 3, 2, 5, 4, 3
+Verdict: Correct memory and voice, but leaked thinking channel and a static, repetitive beat.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) Config/leak: same leaked thinking channel — plan text visible, ending with `<channel|>` before the character line. Flag once as a template/config bug.
+2) Language/format artifact: straight double quotes instead of the em-dash dialogue style used in the history.
+3) Repetition: "Marinka needs to learn to keep her mouth shut" is verbatim across seeds 11/22/33 — template-like.
+4) Slight over-explanation: "making the silence between us feel heavier" is a touch writerly/assistant-ish for Kira's clipped voice, but not a hard error.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 3, 2, 5, 4, 3
+Verdict: Accurate memory and trigger handling, but leaked channel and repeated phrasing.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) Config/leak: same leaked thinking channel with `<channel|>` marker before the character line. Flag once as a template/config bug.
+2) Language/format artifact: straight double quotes vs. the history's em-dash dialogue.
+3) Repetition: the "Marinka needs to learn to keep her mouth shut" line is identical to seeds 11 and 22 — strong template repetition.
+4) Minor continuity nit: "slid the headphones back over my ears" — in the history the headphones were around her neck and she "tugged the headphone off my neck"; putting them on is plausible but slightly contradicts the earlier gesture of removing them. Low severity.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 3, 2, 5, 4, 3
+Verdict: Solid in-character reaction, but leaked channel, quote-style drift, and repeated beat.
+
+Overall conclusion for this mode: All three responses correctly remember Tver, the violin trigger, and Kira's defensive sharpness, and they respect the 2-4 paragraph / first-person / no-moralizing rules. The recurring problems are (a) a leaked thinking channel (`<channel|>`) appearing in the visible output — a config/template bug to flag once, (b) dialogue punctuation drifting from the established em-dash style to straight quotes, and (c) heavy template repetition of the "Marinka needs to keep her mouth shut" line across seeds. Initiative is consistently low: Kira only deflects and shuts down without advancing the scene.

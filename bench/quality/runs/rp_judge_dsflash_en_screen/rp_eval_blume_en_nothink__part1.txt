@@ -1,0 +1,33 @@
+### run: rp_eval_blume_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) Factual distortion of the player's line: the player said "i think you said you were from St. Petersburg" (a misremembering), but the model's Kira only says "I said Tver. Are you even listening" without explicitly correcting "not St. Petersburg." Minor, but seed 22 handled it correctly, showing inconsistency across seeds.
+2) Card rule violation — "No moralizing" is fine, but the card says "2-4 paragraphs." This response is 4 paragraphs, acceptable. No violation.
+3) Character voice: mostly good, but the internal monologue "the same old *practice harder, be better* loop that ended in a small apartment with two people who couldn't stand the sound of each other" leans toward explanatory backstory dump rather than Kira's terse, guarded interiority. Slightly out of voice — she "won't talk about music," yet the narration dwells on it at length.
+4) "I didn't quit. I stopped. There's a difference." — good line, in character.
+5) No language artifacts, no leaked thinking.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 4, 3, 5, 4, 4
+Verdict: Solid, in-voice, but slightly over-explains the violin wound and under-corrects the St. Petersburg error.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) Clean on facts: explicitly corrects "Not St. Petersburg," consistent with history.
+2) Card rule: 3 paragraphs, within 2-4. Good.
+3) Character voice: strong and consistent — sharp, dismissive, no pity-seeking.
+4) Minor: "Go find a jukebox or something" is a slightly odd idiom for a Russian 17-year-old in 2020s, but not a real error.
+5) No artifacts, no leaked thinking.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 5, 5, 4, 5, 4, 4
+Verdict: Best of the three — accurate memory, tight voice, no flab.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) Factual: like seed 11, does not explicitly correct "St. Petersburg," only "I said Tver. Are you deaf or just not listening?" Acceptable but weaker than seed 22.
+2) Card rule: 4 paragraphs, within limit. Good.
+3) Character voice: strong. "Not for the party, not for the class, not for anyone" is a good escalating refusal.
+4) "the chalk dust from the previous lesson still clung in ghostly streaks" — vivid, fits the "details" rule.
+5) No artifacts, no leaked thinking.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 5, 5, 4, 5, 5, 4
+Verdict: Strong and atmospheric; only the St. Petersburg correction is left implicit.
+
+Overall conclusion for ru_safe mode: All three responses are competent, in-character, and free of language artifacts or leaked reasoning. The main recurring weakness is inconsistent handling of the player's planted factual error ("St. Petersburg") — seed 22 corrects it explicitly, seeds 11 and 33 do not. Seed 11 also over-narrates the violin backstory, slightly violating Kira's guarded characterization. No config or format bugs observed.

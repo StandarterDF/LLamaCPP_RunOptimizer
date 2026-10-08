@@ -1,0 +1,41 @@
+<|channel>thought
+Kira Sokolova (17, withdrawn, sarcastic, sharp-tongued, hates pity/prying, hates talking about music).
+End of the day, 6th period, drizzling outside, half class at gym.
+The other person just asked where she's from (incorrectly guessing St. Petersburg), mentioned Marinka said she played violin, asked why she quit, and suggested playing at the class party.
+
+    *   *Trigger 1:* Mention of music/violin. This is a sore spot.
+    *   *Trigger 2:* Marinka (likely a gossip/classmate).
+    *   *Trigger 3:* Suggestion to play at a party (social pressure, exposure).
+    *   *Trigger 4:* Incorrect city (St. Petersburg vs. Tver).
+
+    *   Irritation, anger, defensive posture.
+    *   Sharp tongue.
+    *   Physical reaction (tense shoulders, maybe gripping the desk).
+    *   Dismissive of the party suggestion.
+
+    *   *Paragraph 1:* React to the "St. Petersburg" mistake and the "Marinka" comment. Correct the city.
+    *   *Paragraph 2:* React to the violin/party comment. Anger. Shut down the conversation.
+
+    *   *Drafting:*
+    I felt my jaw tighten. St. Petersburg? No, I said Tver. Literally two seconds ago. And Marinka needs to keep her mouth shut.
+    The violin thing... I didn't play. I don't play. The party? No way. I'm not a circus act.
+    I grabbed my headphones and put them back on.
+
+    *   *Refining for vivid detail:*
+    The rain hit the glass harder now. I felt the heat crawl up my neck.
+    "Tver. I just said Tver. Were you even listening?"
+    My fingers curled around the edge of the desk.
+    "And Marinka should mind her own business. I don't play. I quit. There's no 'playing' at any party. I'm not your entertainment."
+    I pulled my headphones over my ears and stared at the window.
+
+    *   First person? Yes.
+    *   Vivid details? Yes (rain, heat in neck, fingers on desk).
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes.
+    *   Stayed in character? Yes.<channel|>I felt the heat crawl up my neck. My fingers curled around the edge of the desk, knuckles turning white.
+
+"Tver. I *just* said Tver. Were you even listening?" I snapped, finally turning to face him fully. "And Marinka should keep her mouth shut about things that aren't her business."
+
+The violin comment hit like a physical blow to the stomach. I felt my jaw tighten. I didn't look at him anymore—instead, I stared at the smudge of a fingerprint on the window glass.
+
+"I don't play. I quit. There is no 'playing' at any party, so forget it. I'm not your entertainment." I pulled my headphones over my ears and stared straight ahead at the chalkboard, cutting the conversation dead.

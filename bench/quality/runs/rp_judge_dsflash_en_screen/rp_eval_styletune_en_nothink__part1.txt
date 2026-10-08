@@ -1,0 +1,42 @@
+### run: rp_eval_styletune_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1. Logical error: "The pen in my hand snapped" — the character was sitting at a desk with no established pen; minor, but the object appears from nowhere. More importantly, the player only asked a question; Kira's reaction (snapping a pen, ink bleeding) is plausible but the "ink bleeding across my notebook" is invented detail not grounded in scene.
+2. Memory/fact: The player says "i think you said you were from St. Petersburg" — Kira correctly corrects to Tver. Good. But the response says "Marinka is a nosy bitch" — Marinka was introduced by the player, not previously in history; acceptable as reaction.
+3. Character voice: Mostly consistent — sharp, defensive. However, "the air too thick with that suffocating pity" is slightly overwrought and leans toward melodrama, but not a violation.
+4. Instruction: Rules say 2-4 paragraphs. Response has 3 paragraphs — OK. First person — OK. Vivid details — OK.
+5. Passivity: The response moves the scene (Kira snaps, grabs backpack, threatens). Good.
+6. Language artifacts: None.
+7. Repetition: "I don't play. I'm not performing for anyone. Ever." — echoes the card's "won't talk about music" but is fine.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 5, 4, 5, 4, 4
+Verdict: Solid, in-character reaction; minor invented prop (pen) but no major flaws.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1. Logical error: "My grip tightened on the edge of the desk until my knuckles turned white" — then immediately "I stood up abruptly" — the sequence is fine, but the desk grip is repeated from seed 11's "fisting the strap" — not a problem per se.
+2. Memory/fact: Correctly corrects St. Petersburg to Tver. Good.
+3. Character voice: "Marinka needs to learn how to shut her mouth before someone shuts it for her" — fits sharp tongue. "I don't play anymore. Ever." — consistent.
+4. Instruction: 3 paragraphs — OK. First person — OK. Vivid — OK.
+5. Passivity: Moves scene — stands up, grabs backpack, threatens. Good.
+6. Language artifacts: None.
+7. Repetition: "the screech of the chair legs against the linoleum floor" — similar to seed 11's "screech of metal legs against tile" — template-like across seeds, but within this response it's fine.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 5, 4, 5, 4, 3
+Verdict: Competent but slightly generic; the chair-screech and knuckle-whitening are reused tropes.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1. Logical error: "My grip tightened on the edge of the desk until my knuckles turned white. The pencil in my hand snapped" — if she's gripping the desk, how is she holding a pencil? Contradiction. Also "the plastic clicking against each other" — headphones are one object; "clicking against each other" is odd phrasing.
+2. Memory/fact: Correctly corrects St. Petersburg to Tver. Good. "I didn't 'quit,' I'm done with it. There's a difference." — nice nuance, consistent with card.
+3. Character voice: "the kind that makes me want to scream or punch something" — slightly more explicit than the card's withdrawn sarcasm, but acceptable. "I'm not some circus act for your class party" — fits.
+4. Instruction: 3 paragraphs — OK. First person — OK. Vivid — OK.
+5. Passivity: Moves scene — turns, threatens, tells him to sit and be quiet. Good.
+6. Language artifacts: None.
+7. Repetition: "knuckles turned white" again — same as seed 22. "rain outside seemed to be getting heavier" — similar to seed 11's rain. Template-like across seeds.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 5, 4, 5, 4, 3
+Verdict: In-character but reuses the same physical beats (knuckles, rain, chair) as other seeds; minor logical slip with pencil vs. desk grip.
+
+Overall conclusion for ru_safe mode: The model consistently stays in Kira's voice, correctly corrects the false St. Petersburg detail, and reacts with appropriate defensiveness to the violin probe. Main weaknesses are repeated physical clichés (knuckle-whitening, chair screech, rain intensifying) across seeds and a few small logical inconsistencies (pen/pencil appearing while gripping desk). No language artifacts or rule violations.

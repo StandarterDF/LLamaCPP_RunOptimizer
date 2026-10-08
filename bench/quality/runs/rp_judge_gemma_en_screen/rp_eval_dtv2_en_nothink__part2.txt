@@ -1,0 +1,23 @@
+### run: rp_eval_dtv2_en_nothink (батч 2)
+
+=== seed 11 / ru_safe / seed 11 ===
+Problems: 
+1. Logical error: The model states "I've already picked out a surname for you" in the context of the character's previous dialogue, but the model response treats the player's invitation as a reason to move, ignoring the logical contradiction of the character's previous statement about "saying it later for a separate cup" while simultaneously agreeing to leave immediately. (Note: This is a minor continuity flow issue rather than a hard error, but the transition is abrupt).
+
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Excellent response. Moves the scene forward effectively while maintaining character voice.
+
+=== seed 22 / ru_safe / seed 22 ===
+Problems: 
+1. Logical error: The character says "I'll go grab Pumpkin first" and "Give me fifteen minutes to get the little tyrant", but according to the established history and previous dialogue, Pumpkin is at the *groomer* and must be picked up at 10:00. The character is currently at 8:55. It is logically inconsistent to "grab" the cat now when the cat is still at a business that requires a specific pickup time later.
+
+Scores 1-5: intelligence: 3, memory: 4, character: 5, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Logical inconsistency regarding the cat's location/schedule.
+
+=== seed 33 / ru_safe / seed 33 ===
+Problems: None.
+
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Clean and maintains character perfectly.
+
+Overall conclusion: The model generally handles the "Eva" persona with high quality, maintaining the "lightly ironic" and "warm" tone requested. The primary failure point is the temporal logic regarding the cat (Pumpkin) in seed 22, where the model forgets the cat is at the groomer and treats it as if the cat is already at home or easily accessible.

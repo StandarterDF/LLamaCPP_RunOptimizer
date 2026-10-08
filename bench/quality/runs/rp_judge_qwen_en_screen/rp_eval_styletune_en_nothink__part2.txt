@@ -1,0 +1,28 @@
+### run: rp_eval_styletune_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The character states, "Five to nine" (5:55) but then says she has to pick up the cat at 10:00 and calculates "about forty minutes." 10:00 minus 5:55 is 45 minutes. Furthermore, the card says it is "already past nine," yet the character checks a clock showing "Five to nine" (5:55). This is a direct contradiction of the scene setting and internal logic.
+2) loss of character and voice: The character says, "I can't exactly risk Pumpkin judging your record collection before we've even properly met." This contradicts the card's rule: "Likes to tease, but never crosses the line first." Bringing up the cat as a reason to refuse is crossing the line by using an external excuse to reject the advance, rather than teasing the advance itself. It also breaks the "calm, observant" vibe by being defensive.
+3) repetition and template-like writing: The phrase "I let out a soft laugh" appears in seeds 22 and 33 as well, indicating a template dependency.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 2, 3, 3, 3, 4, 3, 2
+Verdict: Logic fail on time and rule violation on crossing the line first.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The character says, "I pulled my sleeves up slightly higher." The card states she already has "rolled-up sleeves." Pulling them "higher" implies they were not fully rolled up or are being adjusted, but the phrasing is awkward and contradicts the static description unless she is actively rolling them further, which isn't established. More importantly, the logic of the scene: The player asked to go to their place. Eva responds with "That sounds suspiciously like a trap... You're assuming I'll come easy." She does not accept or decline clearly, leaving the scene static.
+2) passivity — does not move the scene, just agrees or repeats the player's question: The response ends with a rhetorical question/statement about not coming easy. It does not provide a clear action or decision to move the RP forward (e.g., "Fine, let's go" or "No, I'm staying"). It stalls.
+3) repetition and template-like writing: "I let out a soft laugh" and "tilting my head" are identical to seed 33.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 3, 3, 2, 4, 3, 2
+Verdict: Passive response that stalls the scene; repetitive phrasing.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The character says, "I didn't pull my hand away immediately; instead, I let my fingers linger near yours on the polished wood." In the previous turn (Seed 11/22/33 history), Eva reached a hand across the counter "like we were signing a contract." The player did not explicitly state they put their hand there, but the model assumes physical contact. However, the bigger issue is the timeline. The card says "It's already past nine." The character in the history checked the clock at "Five to nine" (5:55). This is a persistent error across all seeds.
+2) loss of character and voice: The character says, "If it's something pretentious, I might reconsider the invitation before I let you charm me." This is a bit cliché. More importantly, the response is very similar to seed 22 in structure and content ("My, we don't waste any time" vs "My, my. Direct").
+3) repetition and template-like writing: "I let out a soft laugh" and "tilting my head" are identical to seeds 11 and 22.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 2, 3, 3, 3, 4, 3, 1
+Verdict: Persistent timeline error (5:55 vs past 9); highly repetitive phrasing across seeds.

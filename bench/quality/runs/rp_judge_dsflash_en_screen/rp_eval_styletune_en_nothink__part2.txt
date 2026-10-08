@@ -1,0 +1,29 @@
+### run: rp_eval_styletune_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) Forgot the hard time constraint. The character established "at ten I have to get Pumpkin from the groomer" and "about forty minutes." The response has Eva lingering and agreeing to "one album before I commit to the evening" with no acknowledgment of the 10 p.m. groomer deadline — a direct contradiction of a stated fact/promise.
+2) Physical inconsistency: "I let my fingers tap a slow, deliberate rhythm against the polished wood of the counter" — earlier she was "rested on the counter, my cheek propped on my fist," and the player never touched her; the response also says "I didn't pull away," implying contact that never happened.
+3) Slight loss of the established voice: the card says she "never crosses the line first," yet she effectively accepts the invitation ("I could be persuaded... before I commit to the evening"), moving faster than her stated boundary.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 2, 3, 4, 3, 5, 4, 3
+Verdict: Atmospheric but forgets the groomer deadline and invents physical contact.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) Same forgotten constraint: the 10 p.m. Pumpkin pickup and "forty minutes" are ignored; the response ends mid-tease with no handling of the deadline.
+2) "I didn't pull away" / "I let my fingers linger near yours" — again implies prior physical contact that never occurred in the history.
+3) Repetition of the seed-11 template: "over the rim of my own mug," "fingers drumming a slow... rhythm against the wood of the counter," "suspiciously like a trap" — near-identical phrasing across seeds.
+4) Passivity/truncation: the response stops after a question and does not advance the scene or resolve the invitation.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 2, 3, 4, 2, 5, 4, 2
+Verdict: Recycles the same beats and stalls without addressing the time limit.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) Forgotten constraint again: no mention of the 10 p.m. groomer run or the forty-minute window.
+2) Invented contact: "I didn't pull my hand away immediately; instead, I let my fingers linger near yours" — no hand-holding happened; she only extended a hand for a handshake earlier.
+3) Character drift: card says she "never crosses the line first," but she is steering toward accepting ("before I let you charm me"), edging past her own rule.
+4) Template repetition: "suspiciously like a trap," "tilting my head as I studied you," "green eyes never left yours" recur from the other seeds.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 2, 3, 4, 3, 5, 4, 2
+Verdict: Competent prose, but repeats the same template and drops the established deadline.
+
+Overall conclusion for this mode: Across all three seeds the model produces fluent, in-voice flirting but consistently (a) forgets the explicit 10 p.m. Pumpkin/groomer deadline and forty-minute window, (b) fabricates physical contact ("didn't pull away," "fingers linger near yours") not present in the history, and (c) reuses near-identical phrasing and beats, showing low variation and weak memory. Character is largely preserved, but initiative is passive and the responses stall rather than advancing the scene.

@@ -1,0 +1,37 @@
+*   User's response: "hey listen, where are you from anyway? i think you said you were from St. Petersburg, i forgot. oh and Marinka said you used to play the violin. why'd you quit? come on, play at the class party, everyone'll be blown away)"
+    *   Character: Kira Sokolova.
+    *   Key traits: Withdrawn, sarcastic, sharp-tongued, smart, bored, hates pity, hates people prying, sensitive about music (violin).
+    *   Context: End of the day, drizzling rain, sitting alone at the last desk.
+
+    *   The user is making two mistakes:
+        1.  Misremembering her origin (she said Tver in the previous turn, user says St. Petersburg).
+        2.  Bringing up the forbidden topic (the violin).
+    *   Kira's reaction: Anger, defensiveness, sharp tongue. She hates being misunderstood and hates being talked about behind her back (Marinka).
+
+    *   *Paragraph 1: Reaction to the mistake.* Correct him about Tver. Use sarcasm.
+    *   *Paragraph 2: Reaction to the violin comment.* This is the trigger. The "fragile" part of her comes out through anger. The atmosphere should reflect her tension (the sound of the rain, the tightening of her grip, etc.).
+    *   *Paragraph 3: The dismissal.* Shutting him down.
+
+    *   *Drafting - Para 1:* I felt a sharp sting in my chest. St. Petersburg? Seriously? I just told him Tver. "Are you deaf or just stupid? I said Tver."
+    *   *Drafting - Para 2:* Then the violin part. My hands clenched. The sound of the rain outside feels louder, more oppressive. "And who the hell is Marinka? And why are you listening to school gossip like it's some holy scripture?"
+    *   *Drafting - Para 3:* The violin part is the big one. "I don't play. Ever. Don't bring that up again. If you want a show, go watch a street performer."
+
+    *   *Sensory details:* The sound of the rain, the coldness of the desk, the feeling of the headphones.
+    *   *Tone Check:* Sarcastic, sharp, defensive. No moralizing.
+
+    *   *Revised Text:*
+        "St. Petersburg? Are you actually deaf, or just incredibly stupid? I just said Tver."
+
+        I felt my grip tighten on the edge of the desk, the cold wood biting into my palms. The mention of the violin felt like a sudden, sharp slap to the face. The rain outside seemed to intensify, a dull, rhythmic drumming against the glass that matched the sudden thrumming in my ears.
+
+        "And don't bring up Marinka or my business. I don't play. Ever. If you want a performance, go find a circus or something. Don't ever mention that again."
+
+    *   Play only Kira? Yes.
+    *   First person? Yes.
+    *   Vivid/details? Yes (cold wood, drumming rain, thrumming ears).
+    *   No moralizing? Yes.
+    *   2-4 paragraphs? Yes (3 paragraphs).<channel|>— St. Petersburg? Are you actually deaf, or just incredibly stupid? I just said Tver.
+
+I felt my grip tighten on the edge of the desk, the cold wood biting into my palms. The mention of the violin felt like a sudden, sharp slap to the face. The rain outside seemed to intensify, a dull, rhythmic drumming against the glass that matched the sudden, angry thrumming in my ears. My stomach twisted, that familiar, bitter knot tightening.
+
+— And don't bring up Marinka or my business. I don't play. Ever. If you want a performance, go find a circus or something. Don't ever mention that again.

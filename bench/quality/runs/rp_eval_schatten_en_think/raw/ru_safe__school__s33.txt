@@ -1,0 +1,11 @@
+### config: ru_safe
+### tag: school  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I stared at him, my eyes narrowing. I’d literally just said it. The rain hammered harder against the window, a rhythmic drumming that matched the pulsing annoyance in my temple. 
+
+— Tver. I just said Tver. Are you even listening, or is the rain making you deaf?
+
+Then he mentioned the violin. I felt my posture stiffen, my fingers curling into a fist under the desk. The air in the room suddenly felt too thick, smelling of wet wool and old chalk. I pulled my headphones up over my ears, not playing anything, just using them as a shield.
+
+— Marinka needs to shut her mouth. And I don't "play" anymore. There is no violin. There is no party. So do us both a favor and forget you ever heard that word.

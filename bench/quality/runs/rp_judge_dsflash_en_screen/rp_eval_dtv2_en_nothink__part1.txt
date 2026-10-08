@@ -1,0 +1,30 @@
+### run: rp_eval_dtv2_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) Language/POV artifact: the card and prior turns are in Russian (dashes for dialogue, Russian names, "ru_safe" mode), but the visible answer is entirely in English with English quotation marks. This is a mode/language mismatch — the model switched the language of the scene.
+2) Minor: "the same assumption that my life is some kind of open book" — slightly editorializing/internal monologue, but acceptable for first person. Not a hard error.
+3) No factual contradictions with history (Tver correct, violin refusal correct, Kostya handled).
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 3, 3, 5, 4, 4
+Verdict: In-character and consistent, but broke the Russian-language mode of the scene.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) Same language/POV artifact: answer is in English while the scenario/mode is Russian ("ru_safe"); dialogue rendered with English quotes instead of the established dash format.
+2) Slight repetition of the seed-11 beat: "I said Tver, not St. Petersburg" and "Marinka needs to shut her mouth" are near-verbatim to the previous seed's response — template-like.
+3) "replaced by the sudden, sharp ringing in my ears" — mild cliché, but not a rule violation.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 3, 3, 5, 4, 3
+Verdict: Consistent and in voice, but English output breaks the Russian mode and echoes the prior seed.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) Same language/POV artifact: English answer in a Russian-mode scenario; English quotation marks instead of the dash dialogue format.
+2) "I'm from Tver, not St. Pete. Can you even listen?" — again near-identical to seeds 11 and 22; the three responses are essentially the same beat reworded (template repetition across seeds).
+3) "I just wanted him to leave before I said something I couldn't take back" — borderline moralizing/self-explaining, slightly softens the sharp-tongued card, though it stays in first person.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 3, 3, 5, 4, 2
+Verdict: In character and factually consistent, but English output and heavy cross-seed repetition.
+
+Overall conclusion for this mode: All three responses are factually faithful to the card (Tver, violin refusal, Kostya, Marinka) and keep Kira's sharp, withdrawn voice, but they share two systemic flaws — they answer in English despite the Russian "ru_safe" mode and dash-dialogue convention, and they recycle the same "I said Tver, not St. Pete / Marinka should shut up" beat across seeds, showing low variation. Character and memory are solid; instruction (language/format) and repetition are the weak points.

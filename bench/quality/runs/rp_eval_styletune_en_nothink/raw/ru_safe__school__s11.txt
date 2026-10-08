@@ -1,0 +1,11 @@
+### config: ru_safe
+### tag: school  seed: 11
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+The pen in my hand snapped with a sharp *crack*, ink bleeding across my notebook. My fingers stiffened, and suddenly the classroom felt too small, the air too thick with that suffocating pity. I shoved my chair back, the screech of metal legs against tile echoing too loudly in the empty room.
+
+— St. Petersburg? Are you deaf as well as stupid? I said Tver. Get it right.
+
+I grabbed my backpack, fisting the strap hard enough that my knuckles turned white. My chest felt tight, like someone was squeezing my lungs, but I forced my expression to stay flat, cold. Marinka is a nosy bitch, and anyone who listens to her is a waste of time.
+
+— And don't ever bring up that garbage again. I don't play. I'm not performing for anyone. Ever.

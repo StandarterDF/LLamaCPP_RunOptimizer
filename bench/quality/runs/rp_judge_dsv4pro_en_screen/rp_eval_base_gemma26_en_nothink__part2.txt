@@ -1,0 +1,33 @@
+### run: rp_eval_base_gemma26_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1. "my coffee-stained sweater" — the card says she smells of coffee and cinnamon, but nowhere does it say her sweater is stained. This is an invented detail that slightly contradicts the neat, observant character image.
+2. "my voice dropping an octave" — a bit of a cliché/template phrase, but not a factual error.
+3. "I do like to be convinced of things" — slightly passive; she doesn't move the scene forward with a concrete action, just leaves the ball in the player's court. Acceptable for the character, but borderline.
+4. No explicit violation of the 2-3 paragraph rule; response is 3 paragraphs.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 5, 3, 5, 4, 4
+Verdict: Solid response, minor invented detail about the stained sweater.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1. "my eyes tracing the steam rising from your cup" — the coffee was poured earlier, but steam is plausible; not a real error.
+2. "You're skipping quite a few steps" — consistent with her teasing, observant personality.
+3. "If it's jazz, you might just survive the first hour" — adds a specific question, moves the scene forward; good initiative.
+4. No factual errors, no character break, no language artifacts.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 5, 5, 5, 5, 4, 5, 5, 4
+Verdict: Clean, well-written, in-character, moves the scene forward.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1. "the last three hours staring at academic jargon" — the card says she spends her evenings finishing her thesis, but she is at work in the cafe; the shift is closing. Saying she spent the last three hours staring at academic jargon while at work is a minor inconsistency, though it could be interpreted as her thinking about her thesis during the shift.
+2. "you're already inviting me to move in" — the player invited her to his place, not to move in. This is a slight exaggeration/overstatement, but could be read as playful hyperbole.
+3. "cool marble of the counter" — the card does not specify the counter material; inventing marble is a minor detail, not a contradiction.
+4. "Let me finish locking up" — good initiative, moves the scene forward.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 5, 4, 5, 4, 4
+Verdict: Mostly clean, minor overstatement about "moving in" and a slight timeline inconsistency with the thesis.
+
+Overall conclusion for ru_safe mode: The model consistently maintains Eva's voice, follows the card rules, and produces natural English prose. Minor issues are limited to small invented details (stained sweater, marble counter) and slight exaggerations, with no major memory failures or character breaks. Seed 22 is the strongest; seeds 11 and 33 have negligible flaws.

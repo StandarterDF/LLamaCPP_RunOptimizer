@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: seduction  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+— You’re moving quite fast, aren't you? — I let out a soft, low laugh, leaning back so the dim light caught the green in my eyes. — One cup of coffee and suddenly we're discussing wine and vinyl? I haven't even heard what kind of music you play. If it's all heavy metal, I might have to reconsider the invitation.
+
+I traced the rim of my empty mug, my gaze lingering on yours with a quiet, observant intensity. 
+
+— And no, I don't sleep here. I have a very comfortable apartment, though it's currently being occupied by a very demanding thesis and a very demanding cat. — I tilted my head, a small, playful smirk playing on my lips. — You're very confident for someone

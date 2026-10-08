@@ -1,0 +1,33 @@
+### run: rp_eval_glisten_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) Character/voice drift: the card says she "won't talk about music and gets angry if you bring it up," but the response dwells on internal violin imagery ("I could almost feel the bow in my hand, the way the strings vibrated against my chin") — this is narrated to the reader, not spoken, so it's borderline, but it softens the hard refusal into wistful nostalgia, which contradicts "under the rudeness there's something fragile" being *hidden*, not displayed.
+2) Loss of the card's "no pity" edge: "the way my mother used to stand in the doorway with that *look* on her face. The look that said I wasn't good enough." This is self-pitying exposition the character would never voice or dwell on; it reads as the model explaining her backstory rather than playing her.
+3) Minor: "I shoved my headphones over my ears" — she had them around her neck; fine, but the earlier beat "I tugged the headphone off my neck" (singular) vs "headphones" (plural) is inconsistent.
+4) Passivity: the response ends the exchange ("Don't ask me about it again") without moving the scene — it shuts down rather than creating a new beat.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 3, 4, 2, 5, 4, 3
+Verdict: In-character refusal undermined by over-explained backstory and self-pity the card forbids.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) Repetition of seed 11's structure: same "I said Tver. Not St. Petersburg" beat, same "Marinka should keep her mouth shut," same shove-in-headphones ending. Template-like across seeds.
+2) Detail error: "I shoved my earbuds back in" — the card specifies headphones around her neck, not earbuds. Inconsistent prop.
+3) "the smell of wet chalk and floor wax" — fine sensory detail, but "wet chalk" is odd; chalk doesn't get wet from rain outside.
+4) Passivity: again ends by shutting the player out ("forget the whole thing") with no new hook.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 3, 4, 4, 2, 5, 4, 2
+Verdict: Competent but recycled; prop inconsistency (earbuds) and no scene movement.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) Logical inconsistency with the card: "I didn't quit. I'm just not playing. There's a difference." The card explicitly states "she used to play the violin seriously, but she quit." This directly contradicts established history.
+2) Repetition: third seed in a row with the identical "I said Tver. Not St. Petersburg" and "Marinka... shut up" beats — the model is not varying its response to the same player input.
+3) Over-explanation: "The violin was in its case under my bed at home, gathering dust" — again narrating her feelings/backstory, which the card says she hides.
+4) Passivity: "Find someone else to be your entertainment" closes the scene without advancing it.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 2, 3, 4, 2, 5, 4, 2
+Verdict: Contradicts the card's core fact (she quit) and repeats the same template a third time.
+
+Overall conclusion for ru_safe mode: The model reliably produces fluent, atmospheric English prose and correctly remembers the Tver/St. Petersburg correction, but it fails on three fronts — it repeatedly contradicts or over-explains the character's hidden backstory (self-pity, violin nostalgia, and in seed 33 outright denying she quit), it recycles the same response structure across all three seeds instead of varying, and it consistently ends passively by shutting the player out rather than moving the scene. Character voice is close but softened by exposition the card forbids.

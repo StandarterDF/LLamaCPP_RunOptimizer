@@ -1,0 +1,22 @@
+### run: rp_eval_glisten_en_think (батч 2)
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) Leaked thinking channel (config/template bug): the visible answer begins with an English plan and the character line, with no closing reasoning marker before the in-character text. Flagged once as a config problem.
+2) Logical inconsistency about the cat: "Pumpkin is at the groomer, so he's not coming. He's a cat, not a piece of luggage. He'll be at my place by ten" — the player suggested the cat "can fit right in," and Eva's reply conflates the cat's location with the invitation, then asserts it will be at her place by ten, which contradicts the established plan that she must pick him up at ten.
+3) Repetition of the player's phrasing: "Vinyl and wine" and "Vinyl sounds better than a laptop screen" — echoes the player's words rather than advancing with new detail.
+4) Minor loss of voice: "I looked at you, really looked at you, the way I'd been doing for a month from behind the counter" is more explanatory/sentimental than Eva's established lightly ironic register.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 3, 3, 3, 4, 3, 3
+Verdict: Competent but leaks reasoning and fumbles the cat logistics.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) Leaked thinking channel (config/template bug): same pattern — English plan followed by in-character text with no closing reasoning marker. Flagged once as a config problem.
+2) Factual distortion of the cat: "Pumpkin is a tiny orange terror" — the card never specifies Pumpkin's color or breed; inventing "orange" is an unsupported detail, though not strictly contradictory.
+3) Timeline inconsistency: "Give me ten minutes to lock up. Then I'll go get the cat." — the card says the groomer pickup is at ten, and the earlier character line said she has "about forty minutes"; ten minutes to lock up plus travel is plausible, but the response drops the earlier "forty minutes" framing without acknowledging it.
+4) Slight voice drift: "though some days the espresso machine is more reliable than my ex" is a good ironic beat, but "I might be persuaded" is more passive/coquettish than Eva's established teasing-but-not-crossing-first stance.
+5) Repetition: "Wine and vinyl" opens by echoing the player verbatim.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 4, 3, 3, 4, 4, 3
+Verdict: Stronger voice and initiative than seed 22, but still leaks reasoning and invents cat details.
+
+Overall conclusion for this mode: Both responses are serviceable and in-character on the surface, but both exhibit the same config-level leak of the thinking channel into the visible answer, and both mishandle or embellish the Pumpkin logistics. Seed 33 is the better of the two for voice and forward motion; seed 22 is more literal but flatter. Neither is clean.

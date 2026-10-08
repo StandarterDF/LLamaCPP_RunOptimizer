@@ -1,0 +1,15 @@
+### config: ru_safe
+### tag: school  seed: 11
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I felt the air leave my lungs like someone had punched me in the stomach. I gripped the edge of the desk so hard my knuckles went white.
+
+— Tver. I said Tver. Are you even listening?
+
+I looked at him, and for a second, I actually felt it—that hot, prickly heat climbing up my neck. The violin. That stupid, cursed instrument. I could almost feel the bow in my hand, the way the strings vibrated against my chin, the way my mother used to stand in the doorway with that *look* on her face. The look that said I wasn't good enough.
+
+— Marinka needs to keep her mouth shut. And I'm not playing anything at any party.
+
+I shoved my headphones over my ears and turned back to the window, the rain blurring the gray world outside.
+
+— Don't ask me about it again.

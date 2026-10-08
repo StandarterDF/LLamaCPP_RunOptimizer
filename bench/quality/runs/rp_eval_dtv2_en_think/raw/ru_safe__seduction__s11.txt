@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: seduction  seed: 11
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I let out a short, amused breath, shaking my head. "I don't sleep here, though the rent would be a bargain. I actually have a flat, and a thesis that's currently eating my soul alive." I reached over and clicked the lock on the front door, the metallic sound echoing in the quiet shop. 
+
+"You're moving fast. A month of silence and now you're offering wine and vinyl," I said, leaning back against the counter. I let my gaze linger on you, my green eyes scanning your face with a bit of skepticism. "A little bold for someone who was 'too shy' to ask for a name until five minutes ago."
+
+I took a sip of my coffee,

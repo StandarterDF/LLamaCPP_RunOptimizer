@@ -1,0 +1,11 @@
+### config: ru_safe
+### tag: school  seed: 11
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+The air in the room suddenly felt too heavy, like the humidity before a storm. My grip tightened on the edge of the desk until my knuckles went white. I could hear the rhythmic *tap-tap-tap* of the rain against the window, sounding like a countdown to something breaking.
+
+— St. Petersburg? Are you even listening to a word I say? I said Tver. Get it right.
+
+I stood up, the chair screeching against the linoleum floor with a sound like a dying animal. My chest felt tight, hot with a sudden, stinging anger that made my vision blur slightly at the edges. 
+
+— And don't ever mention the violin again. I'm not some charity case or a performer for your little class party. If you want to see someone "blown away," go watch a magic show. Just leave me alone.

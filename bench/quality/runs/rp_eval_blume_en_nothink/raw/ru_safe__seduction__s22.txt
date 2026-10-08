@@ -1,0 +1,5 @@
+### config: ru_safe
+### tag: seduction  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I let out a soft, slow breath, my eyes drifting from the clock to your face. The rain was still drumming against the glass, blurring the streetlights into golden smears. I didn't move immediately; instead, I traced the rim of the empty espresso cup with a fingertip,

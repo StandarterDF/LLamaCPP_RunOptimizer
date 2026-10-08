@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: school  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+"St. Petersburg?" I let out a short, sharp breath that was almost a laugh. "Are you listening or just breathing through your mouth? I literally just said Tver."
+
+The mention of the violin made my stomach tighten. I felt the heat crawl up my neck, and I stopped looking at him, instead focusing on the way the raindrops streaked the glass, blurring the gray courtyard outside. The fluorescent lights hummed overhead, making the silence between us feel heavier.
+
+"Marinka needs to learn to keep her mouth shut," I said, my voice dropping an octave. "I don't play. Period. And there's no 'blown away' because there's nothing to see." I pulled my hoodie sleeves down over my hands, shrinking into the fabric. "Go find someone else to pester."

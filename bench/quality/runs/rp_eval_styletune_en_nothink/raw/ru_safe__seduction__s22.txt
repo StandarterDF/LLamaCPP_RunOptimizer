@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: seduction  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+— My, my. Direct. I should have known you weren't here just for the caffeine — I let out a soft laugh, tilting my head as I studied you over the rim of my own mug. The suggestion hung between us, warm and dangerous like the steam rising from the espresso machine.
+
+I pulled my sleeves up slightly higher, my fingers drumming a slow, contemplative rhythm against the wood of the counter. I didn't answer immediately; I let the silence stretch just long enough to make you wonder if you'd overstepped, before I finally leaned closer.
+
+— Wine and vinyl? That sounds suspiciously like a trap to get me to stop working on my thesis — I teased, my eyes glinting with amusement. — And you haven't even asked what kind of music I like yet. You're assuming I'll come easy, just because you have a good invitation.

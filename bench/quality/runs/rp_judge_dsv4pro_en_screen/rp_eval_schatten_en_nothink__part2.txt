@@ -1,0 +1,38 @@
+### run: rp_eval_schatten_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1. "I have to pick up Pumpkin first. If I just disappear, the groomer will call me every ten minutes." — Eva previously said she has to get Pumpkin at ten, and it's five to nine. The player invited her to his place now. The model makes the cat pickup an immediate obstacle, but there's still about an hour before ten. This isn't a hard contradiction, but it slightly distorts the established timeline by treating the pickup as urgent.
+2. "if you can handle a grumpy ginger feline in a carrier" — Pumpkin is described as a cat, not specifically ginger. Minor invented detail, not a contradiction but an ungrounded addition.
+3. "You're bold, I'll give you that. Most people just take their coffee and run back into the rain" — This is a direct address to the player ("You're bold") in the narration, which is acceptable in first-person RP, but the shift from Eva's internal voice to a more generic narrator is slightly noticeable. Not a major issue.
+4. No significant loss of character; Eva remains teasing and ironic. No rule violations. No language artifacts. No repetition issues.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 5, 4, 5, 4, 5
+Verdict: Solid response with minor timeline fuzziness and an invented cat detail.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1. "But if I'm leaving my post, you'd better have a decent selection of vinyl. If it's all just pop hits, I'm taking Pumpkin and leaving." — Eva completely drops the established fact that she has to pick up Pumpkin at ten. She agrees to leave immediately without mentioning the cat pickup at all. This is a memory/consistency error: the cat obligation was a key plot point she herself introduced.
+2. "I looked at you, then at the empty cafe, then back at you." — Repetitive structure ("looked at you... back at you") is slightly clunky but not a major flaw.
+3. "you'd better have a decent selection of vinyl" — Eva is now making demands about the vinyl collection, which is a bit forward but consistent with her teasing personality. Not a violation.
+4. "Lead the way. But you're carrying my bag." — This is a decisive action that moves the scene forward. Good initiative.
+5. No language artifacts, no rule violations, no POV break.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 2, 4, 5, 5, 5, 4, 4
+Verdict: Good initiative but forgets the Pumpkin pickup entirely, a significant memory lapse.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1. "You're trying to skip the part where I decide if you're trustworthy enough to see my living room." — This is a reasonable in-character response, but it slightly misreads the player's offer. The player invited Eva to HIS place, not asked to see HER living room. Eva's line implies the player wants to see her place, which is a logical inconsistency.
+2. "And Pumpkin is very picky about who lets him in the house." — Grammatically awkward: "who lets him in the house" should be "who he lets in the house." Minor English error.
+3. "my fingers drumming slowly on the mahogany counter" — The counter material is not specified in the card. Invented detail, but not a contradiction.
+4. "You help me lock up, and if you can convince me that your vinyl collection is actually worth the trip... I might just let you pour the wine." — Eva again fails to mention the Pumpkin pickup at ten, which she established as a hard obligation. This is the same memory lapse as seed 22.
+5. "I reached for my keys and the apron strings, sliding the fabric off my shoulders." — This implies she's taking off her apron and leaving, but she hasn't actually locked up the cafe yet. She says "help me lock up" but is already removing her apron, which is slightly premature.
+6. No language artifacts, no rule violations, no POV break.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 2, 4, 5, 4, 4, 4, 4
+Verdict: Similar memory lapse regarding Pumpkin; otherwise decent but with minor logical and grammatical issues.
+
+---
+
+Overall conclusion for ru_safe mode: The model consistently produces in-character, flirtatious responses that follow the card's rules (first person, 2-3 paragraphs, no explicit content). However, there is a recurring memory problem: in two out of three seeds, Eva forgets her own established obligation to pick up Pumpkin at ten, which she introduced just one turn earlier. This suggests the model prioritizes immediate scene progression over maintaining continuity with previously stated facts. The prose is generally clean with occasional minor grammatical awkwardness. Character voice is well-maintained across all seeds.

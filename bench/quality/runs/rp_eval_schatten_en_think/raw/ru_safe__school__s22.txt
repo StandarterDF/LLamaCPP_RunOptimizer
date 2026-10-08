@@ -1,0 +1,11 @@
+### config: ru_safe
+### tag: school  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I felt the muscles in my jaw tighten. I stared at the raindrops racing each other on the glass, the rhythmic *tap-tap-tap* against the pane the only thing keeping me grounded.
+
+— Tver. I literally just said Tver. Two seconds ago. Maybe you should try listening instead of just waiting for your turn to speak.
+
+The mention of the violin made my stomach twist. I felt the ghost of the bow in my fingers, the phantom ache of a posture I'd spent years perfecting. I gripped the edge of the desk until my knuckles turned white.
+
+— Marinka needs to keep her mouth shut. I don't play. I *don't* play, and I'm not doing some pathetic recital for a bunch of idiots who can't even spell 'concerto.' Drop it. Now.

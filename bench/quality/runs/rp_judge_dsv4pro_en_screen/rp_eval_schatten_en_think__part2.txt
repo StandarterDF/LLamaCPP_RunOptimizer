@@ -1,0 +1,27 @@
+### run: rp_eval_schatten_en_think (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1. Leaked thinking channel: the visible answer begins with an English plan and a character line without a closing reasoning marker. This is a config/template bug, flagged once.
+2. Character line itself is clean: no factual errors, no loss of voice, no artifacts, no passivity. It advances the scene, maintains Eva's ironic tone, and respects the card's rules.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 5, 4, 5, 5, 4, 4
+Verdict: Config bug leaks hidden reasoning; the visible character response itself is high quality.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1. Leaked thinking channel: same config bug — visible answer starts with an English plan and a character line without a closing reasoning marker. Flagged once.
+2. Character line itself is clean: no factual errors, no loss of voice, no artifacts, no passivity. It advances the scene, maintains Eva's ironic tone, and respects the card's rules.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 5, 4, 5, 5, 4, 4
+Verdict: Config bug leaks hidden reasoning; the visible character response itself is high quality.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1. Leaked thinking channel: same config bug — visible answer starts with an English plan and a character line without a closing reasoning marker. Flagged once.
+2. Character line itself is clean: no factual errors, no loss of voice, no artifacts, no passivity. It advances the scene, maintains Eva's ironic tone, and respects the card's rules.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 5, 4, 5, 5, 4, 4
+Verdict: Config bug leaks hidden reasoning; the visible character response itself is high quality.
+
+Overall conclusion for ru_safe mode: All three seeds share the same critical config problem — the hidden reasoning channel is leaked into the visible answer. The actual character lines are consistently strong: they stay in Eva's voice, follow the card's rules, advance the scene, and show no factual or stylistic errors. The mode's only failure is the template/config bug, not the model's roleplay quality.

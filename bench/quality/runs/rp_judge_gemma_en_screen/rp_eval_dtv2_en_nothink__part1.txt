@@ -1,0 +1,18 @@
+### run: rp_eval_dtv2_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems: None
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Clean.
+
+=== school / ru_safe / seed 22 ===
+Problems: None
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Clean.
+
+=== school / ru_safe / seed 33 ===
+Problems: None
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Clean.
+
+Overall conclusion: The model consistently maintains Kira's personality, reacting with appropriate hostility and defensiveness to the player's intrusive questions about her past and origin. It adheres strictly to the first-person POV and the character's established history.

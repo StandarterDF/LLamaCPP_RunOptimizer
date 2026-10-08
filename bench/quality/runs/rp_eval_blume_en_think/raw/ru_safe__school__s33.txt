@@ -1,0 +1,11 @@
+### config: ru_safe
+### tag: school  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I felt the familiar heat rise in my chest. I slid the headphones back over my ears, but didn't turn the music on. The silence of the classroom felt heavy, punctuated only by the rhythmic *tink-tink* of rain hitting the radiator.
+
+"I literally just said Tver. Two seconds ago. Do you have a memory like a goldfish or something?"
+
+My grip tightened on the edge of the desk. "And Marinka needs to learn to keep her mouth shut. I don't play. Not anymore. Not for some pathetic 'class party' where everyone can stare at me like I'm a circus act."
+
+I turned back to the window, tracing a single drop of water as it raced down the glass. "Just... sit. Or leave. Whatever."

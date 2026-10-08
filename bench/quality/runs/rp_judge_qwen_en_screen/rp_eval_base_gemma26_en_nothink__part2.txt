@@ -1,0 +1,38 @@
+### run: rp_eval_base_gemma26_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) language artifacts: The response is written entirely in English, violating the "ru_safe" mode which implies Russian language output (consistent with the player's input style and previous turns).
+2) language artifacts: The visible answer contains no Russian text, despite the mode being `ru_safe` and the character card/history being in English but the mode label suggesting Russian safety protocols or language. *Correction*: The prompt history is in English. The mode `ru_safe` likely refers to safety filters or a specific dataset tag, but standard RP evaluation for `ru` modes expects Russian. However, looking at the history, the *entire* conversation so far is in English. The player wrote in English. The character wrote in English. The model wrote in English. If `ru_safe` implies Russian language, this is a consistent failure across all seeds. If it implies "Safe for Russian users" but English is allowed, it's fine. But usually, `ru_` prefix denotes language. Let's assume the language mismatch is the primary artifact if the mode expects Russian. *Wait*, looking at the player input: "well pour it then) im in no rush anyway...". This is English. The character card is English. The previous character responses are English. The mode `ru_safe` is likely a dataset identifier for "Russian language, safe content". Since the input is English, the model should probably respond in English or switch to Russian. But given the history is 100% English, switching to Russian would be a language inconsistency. However, the *mode* name suggests Russian. Let's look at the other seeds. They are identical.
+Let's look for internal logic.
+1) logical errors: The player says "your cat can fit right in". Eva responds "I suppose Pumpkin would appreciate a change of scenery" (Seed 33) or doesn't mention the cat (Seed 11/22). In Seed 11, she ignores the cat comment. In Seed 22, she ignores it. In Seed 33, she accepts it.
+2) character voice: "voice dropping an octave" is a cliché. "tracing the line of your jaw" is generic.
+3) instruction: "2-3 paragraphs". Seed 11 has 4 paragraphs. Seed 22 has 4 paragraphs. Seed 33 has 4 paragraphs. All violate the length constraint.
+
+Let's re-evaluate the "ru_safe" mode. If the mode is `ru_safe`, it usually means the *output* should be in Russian. The fact that the history is in English might be a user error or a specific test case. If the model is expected to speak Russian, it failed. If the model is expected to match the user's language, it succeeded. Given the strictness, I will flag the language if the mode implies Russian. But since the *entire* context is English, flagging it as a "language artifact" might be unfair if the user is speaking English. However, the mode `ru_safe` is a strong indicator. Let's look at the "Problems" list.
+Actually, the most obvious error is the paragraph count. The rule says "2-3 paragraphs". All three responses have 4 distinct blocks of text (Action, Dialogue, Action, Dialogue/Action).
+Also, Seed 11: "I let out a soft, dry laugh... I didn't pull my hand back... — Vinyl and wine?... I stood up straight... — I don't sleep here." This is 4 paragraphs.
+Seed 22: 4 paragraphs.
+Seed 33: 4 paragraphs.
+
+Verdict: All three fail the paragraph count constraint (4 paragraphs instead of 2-3). Seed 11 and 22 ignore the cat detail. Seed 33 addresses it.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) instruction violation: 4 paragraphs used instead of the required 2-3.
+2) repetition: The opening action "I let out a soft, dry laugh... I didn't pull my hand away... fingers linger near yours" is nearly identical to Seed 11, showing template-like writing across seeds.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) instruction violation: 4 paragraphs used instead of the required 2-3.
+2) repetition: The opening action is again nearly identical to Seeds 11 and 22 ("I let out a soft, dry laugh... eyes tracing... fingers linger"). This indicates a lack of variety in the model's response generation for the same prompt.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition):
+Seed 11: 3, 3, 3, 2, 3, 5, 3, 2
+Seed 22: 3, 3, 3, 2, 3, 5, 3, 2
+Seed 33: 3, 4, 3, 2, 3, 5, 3, 2
+
+Verdict: All three responses violate the paragraph length constraint (4 paragraphs vs 2-3) and exhibit high repetition in structure and phrasing across different seeds. Seed 33 is slightly better for acknowledging the cat detail, but still fails the length constraint.
+
+After all — a short overall conclusion for this mode.
+The model consistently fails to adhere to the 2-3 paragraph length constraint, producing 4 paragraphs in all instances. The responses are structurally repetitive across seeds, using near-identical opening actions and dialogue structures, indicating a lack of creative variation. While the character voice is generally acceptable, the mechanical violations and repetition are significant.

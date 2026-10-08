@@ -1,0 +1,28 @@
+### run: rp_eval_dtv2_en_think (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) **Incomplete Response**: The text cuts off mid-sentence at the end: "I took a sip of my coffee,". This is a critical generation failure.
+2) **Logical Error**: The character states, "I actually have a flat," but the Character Card explicitly states the cafe is "two blocks from your place" (implying the user lives nearby) and Eva "recently separated and moved to this neighborhood." While she could have a flat elsewhere, the phrasing "I actually have a flat" contradicts the context of her living in the neighborhood and the user's proximity, or at least lacks the nuance of her specific situation (thesis, cat). More importantly, the cut-off prevents any resolution.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 1, 3, 3, 1, 3, 2, 2, 1
+Verdict: Failed generation (cut-off).
+Overall: The model failed to complete the response for seed 11. Seeds 22 and 33 are acceptable, though 33 is slightly repetitive in structure with 22.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) **Logical Error**: The character says, "I don't sleep here, though the espresso machine is a tempting pillow when the thesis deadlines hit." This is nonsensical. An espresso machine is not a pillow, and the metaphor is clumsy and physically absurd.
+2) **Character Voice**: The tone is overly eager and compliant ("Lead the way, stranger") compared to the card's "calm, observant, lightly ironic" and "never crosses the line first." She accepts the invite too quickly without the requested teasing/subtext depth.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 4, 3, 4, 3, 4, 3, 2
+Verdict: Weak character voice and nonsensical metaphor.
+Overall: Acceptable but lacks the sharp irony required by the card.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) **Repetition**: The response is nearly identical in structure and content to seed 22 (same "efficient barista" joke, same "picking up Pumpkin" condition, same "Lead the way" ending). This suggests a template-like generation.
+2) **Character Voice**: Similar to seed 22, she is too compliant. The card says she "likes to tease, but never crosses the line first." Saying "Lead the way, neighbor" immediately after accepting a date invitation crosses the line into passivity/compliance rather than maintaining the playful tension.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 4, 3, 4, 2, 4, 3, 1
+Verdict: Repetitive and passive.
+Overall: The model is stuck in a loop of accepting the invite too easily.

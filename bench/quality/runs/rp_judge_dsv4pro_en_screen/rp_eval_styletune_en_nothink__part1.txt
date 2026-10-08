@@ -1,0 +1,42 @@
+### run: rp_eval_styletune_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1. "The pen in my hand snapped with a sharp crack, ink bleeding across my notebook" — no pen was established in the scene; Kira was tugging her headphone and looking at the window. Minor, but an invented prop.
+2. "Are you deaf as well as stupid? I said Tver. Get it right." — correct correction of the player's St. Petersburg error, no issue.
+3. "Marinka is a nosy bitch" — consistent with character voice.
+4. No violation of card rules; 2 paragraphs, first person, vivid details.
+5. No passivity — moves the scene, stands up, leaves.
+6. No language artifacts.
+7. No problematic repetition.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 5, 5, 4, 5, 4, 5
+Verdict: Strong response, minor invented prop (pen) but otherwise clean and in-character.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1. "The rain outside suddenly sounded like gravel hitting the roof" — rain was established as drizzle; "gravel hitting the roof" is a slight escalation but acceptable as perception under stress.
+2. "St. Petersburg is wrong" — correct correction, no issue.
+3. "I suggest you find somewhere else to sit" — contradicts her earlier line "Just sit down before Valentinych comes back" from the previous turn; she invited him to sit, now she's telling him to leave. This is a minor inconsistency in her stance, though explainable by anger.
+4. No violation of card rules; 2 paragraphs, first person.
+5. No passivity.
+6. No language artifacts.
+7. No problematic repetition.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 5, 5, 4, 5, 4, 5
+Verdict: Solid response, minor inconsistency in her invitation vs. dismissal, otherwise clean.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1. "The pencil in my hand snapped with a sharp crack" — same invented prop issue as seed 11; no pencil was established.
+2. "I didn't 'quit,' I'm done with it. There's a difference." — this is a semantic distinction that slightly softens the card's "she quit — she won't talk about music and gets angry if you bring it up." The card says she quit; the model has her deny quitting and instead say "I'm done with it," which is a minor distortion of the backstory.
+3. "Just sit there and be quiet if you want to stay" — again contradicts her earlier invitation to sit down; same inconsistency as seed 22.
+4. No violation of card rules; 2 paragraphs, first person.
+5. No passivity.
+6. No language artifacts.
+7. No problematic repetition.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 5, 4, 5, 4, 5
+Verdict: Good response, but minor backstory distortion ("didn't quit") and repeated inconsistency about sitting.
+
+Overall conclusion for ru_safe mode: The model consistently produces strong, in-character responses with vivid sensory details and correct emotional beats. The main recurring issues are minor: invented props (pen/pencil snapping) not established in the scene, and a slight inconsistency in Kira's stance toward the player sitting down (inviting then dismissing). The backstory distortion in seed 33 ("didn't quit" vs. "quit") is a small memory slip worth noting. Overall quality is high with no major rule violations or language artifacts.

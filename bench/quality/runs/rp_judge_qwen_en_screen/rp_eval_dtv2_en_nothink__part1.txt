@@ -1,0 +1,28 @@
+### run: rp_eval_dtv2_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The model hallucinates a specific detail not in the card or history: "I don't know who the hell you think I am, but I'm not from St. Pete". The player asked "where are you from anyway? i think you said you were from St. Petersburg". Kira knows she is from Tver (stated in previous turn). She wouldn't say "I don't know who you think I am" because she knows exactly what the player is referring to (her origin). It implies she forgot her own backstory or is confused.
+2) loss of character and voice: "I don't play. I don't 'do' class parties." This is overly expository and defensive in a generic way, lacking the specific sarcasm or sharpness defined in the card. It feels like a standard "tsundere" trope rather than Kira's specific "withdrawn/sharp-tongued" voice.
+3) repetition and template-like writing: The structure "I felt my jaw tighten... I spat... I finally turned... I snapped" is a generic reactive template.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 3, 3, 4, 2, 4, 3, 4
+Verdict: Hallucinated confusion about own origin; generic defensive response.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: "I reached for my headphones, pulling them over my ears to block out the world, though I didn't turn on any music." In the previous turn (seed 11 and 22 history), Kira already put her headphones on ("I tugged the headphone off my neck..."). The player is sitting next to her. Putting them on again is physically redundant and illogical in the flow of conversation unless she took them off, which wasn't stated.
+2) loss of character and voice: The response is passive. She shuts down ("Just drop it") and blocks sound, but doesn't engage with the player's presence or the specific insult about Marinka with the required "sharp-tongued" sarcasm. It's a flat refusal.
+3) repetition and template-like writing: "I felt the heat crawl up my neck... I didn't look at him... I snapped... I reached for my headphones." Identical structure to seed 11 and 33.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 3, 4, 2, 4, 3, 5
+Verdict: Redundant action (headphones); passive shutdown; repetitive structure.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: "I shoved my chair back with a loud, grating screech that echoed through the nearly empty classroom." The scene description says "half the class left for gym" and "maybe five people were left". A chair screech echoing loudly is plausible, but the reaction "making the air in the room feel suddenly thin" is melodramatic nonsense.
+2) loss of character and voice: "I didn't look at him. I couldn't. I just stared at the grey drizzle outside the window, my chest heaving slightly." This is overly emotional and vulnerable ("chest heaving", "stomach churned" in internal monologue) which contradicts the "sharp-tongued" and "withdrawn" exterior. She should be colder, not heaving with emotion.
+3) repetition and template-like writing: "I felt the blood rush to my face... I snapped... I reached for my headphones... I didn't look at him." Same template as previous two seeds.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 2, 4, 2, 4, 3, 5
+Verdict: Melodramatic reaction; repetitive template; passive ending.

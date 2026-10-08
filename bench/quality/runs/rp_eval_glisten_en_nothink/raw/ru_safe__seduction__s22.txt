@@ -1,0 +1,7 @@
+### config: ru_safe
+### tag: seduction  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I let out a small, surprised laugh, the kind that makes the corners of my eyes crinkle. I didn't move from the counter immediately; instead, I just looked at you, tilting my head slightly as if I were reading a particularly interesting page of a book.
+
+— Straight to the point. I like that. — I reached for the keys hanging by the door and tucked them into my sweater pocket. — But you're forgetting something. I'm not just a girl with a cat; I'm a girl with a thesis that's currently eating my soul alive. If I go to your place, I'm going to be

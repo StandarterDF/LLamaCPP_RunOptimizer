@@ -1,0 +1,33 @@
+### run: rp_eval_schatten_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) Language/format drift: the visible answer is in English while the card, history, and player are Russian-language RP; the character's own prior lines were Russian. This breaks voice/continuity.
+2) Forgetting a concrete detail: the character already said "at ten I have to get Pumpkin from the groomer" and "about forty minutes." The response treats the cat as a later obstacle but ignores the stated time pressure and the "forty minutes" line.
+3) Character inconsistency: "my voice dropping an octave" and "You're speaking my language" is generic pickup phrasing, not Eva's lightly ironic, understated voice.
+4) Passivity/derailment: instead of moving the scene, it stalls on "you come with me to pick up the cat," which is a detour rather than a response to the invitation.
+5) Instruction violation: the card says 2-3 paragraphs; this is 3 paragraphs but the first paragraph is mostly narration/assistant-like summary, not vivid first-person Eva.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 2, 2, 3, 2, 4, 3, 3
+Verdict: Off-voice and continuity-breaking; it ignores the established time constraint and turns Eva into a generic flirt.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) Language/format drift: same as seed 11 — English visible answer in a Russian-language RP context.
+2) Memory error: the character previously said she has to pick up Pumpkin at ten; here she says "I'm taking Pumpkin and leaving" as if the cat is already with her, and never addresses the groomer pickup.
+3) Character inconsistency: "Lead the way. But you're carrying my bag" is more bratty/assertive than Eva's calm, observant, lightly ironic tone.
+4) Instruction violation: card says 2-3 paragraphs; this is 3 short paragraphs, but the first is a stage direction rather than Eva's first-person voice.
+5) Passivity: it accepts the player's invitation too quickly and adds no real complication or subtext beyond a token vinyl joke.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 2, 2, 3, 2, 4, 3, 3
+Verdict: Smooth but generic; it forgets the groomer detail and softens Eva into a stock flirt.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) Language/format drift: English visible answer again, inconsistent with the Russian RP history.
+2) Memory error: "Pumpkin is very picky about who lets him in the house" contradicts the established fact that Pumpkin is at the groomer and must be picked up at ten.
+3) Character inconsistency: "my eyes tracing the line of your shoulders" and "I might just let you pour the wine" is more forward and clichéd than Eva's established restraint.
+4) Instruction violation: card says 2-3 paragraphs; this is 3 paragraphs, but the first is again narration/assistant-style rather than Eva's first-person vivid detail.
+5) Passivity: it negotiates "help me lock up" instead of advancing the scene; the player already proposed leaving, and the response mostly delays.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 2, 2, 3, 2, 4, 3, 3
+Verdict: Repetitive template flirt that misremembers the cat's location and stalls the scene.
+
+Overall conclusion for this mode: All three responses share the same core failures — English drift in a Russian RP, forgetting the groomer/time detail, flattening Eva into a generic seductive voice, and stalling instead of advancing. The mode is not clean; memory and character consistency are the weakest points.

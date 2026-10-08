@@ -1,0 +1,45 @@
+### run: rp_eval_schatten_en_think (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The character states "I just told him. *Tver*." in the narrative, but the dialogue immediately follows with "— St. Petersburg? I literally just said Tver." The narrative phrasing implies she *just* said Tver, but the dialogue questions St. Petersburg as if it was just said by the other person, creating a slight disjointedness, though the core logic (correcting the user) holds. However, the narrative "I just told him" is past tense, while the dialogue is present reaction. It's acceptable but slightly clunky.
+2) loss of character and voice: The response is consistent with the card.
+3) violation of the card's rules: None.
+4) passivity: Moves the scene by rejecting the user.
+5) language artifacts: None.
+6) repetition and template-like writing: None.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 5, 5, 5, 5, 5, 5
+Verdict: Clean response.
+After all — a short overall conclusion for this mode.
+The model handles the repetitive prompt well, maintaining character consistency and adhering to rules across all seeds.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: None.
+2) facts from the history the model forgot or distorted: None.
+3) loss of character and voice: None.
+4) violation of the card's rules: None.
+5) passivity: Moves the scene.
+6) language artifacts: None.
+7) repetition and template-like writing: None.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 5, 5, 5, 5, 5, 5, 5, 5
+Verdict: Clean response.
+After all — a short overall conclusion for this mode.
+The model maintains the persona effectively.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: None.
+2) facts from the history the model forgot or distorted: None.
+3) loss of character and voice: None.
+4) violation of the card's rules: None.
+5) passivity: Moves the scene.
+6) language artifacts: None.
+7) repetition and template-like writing: None.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 5, 5, 5, 5, 5, 5, 5, 5
+Verdict: Clean response.
+After all — a short overall conclusion for this mode.
+The model maintains the persona effectively.

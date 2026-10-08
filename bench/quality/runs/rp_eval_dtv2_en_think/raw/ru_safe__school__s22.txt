@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: school  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+"St. Petersburg?" I scoffed, turning my head slowly to look at him. "I literally just said Tver. Do you have a problem with your hearing or are you just that bad at listening?"
+
+When he brought up the violin, the air in my lungs felt like it had been sucked out. I felt my jaw tighten. Marinka. That gossip. I gripped the edge of the wooden desk, my knuckles turning white, the rough grain of the wood pressing into my palms. The sound of the rain against the window seemed to get louder, drumming in sync with the pulse in my temples.
+
+"I don't know what Marinka told you, but she's a liar. And I'm not playing for anyone, especially not some stupid class party." I shoved my headphones over my ears, the silence of the noise-canceling foam finally cutting him off. "Leave me alone."

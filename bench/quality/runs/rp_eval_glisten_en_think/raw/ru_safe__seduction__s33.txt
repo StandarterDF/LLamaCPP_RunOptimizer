@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: seduction  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+"Wine and vinyl," I repeated, letting the words settle. I took a sip of my own coffee, watching you over the rim of the cup. "You're moving fast. I like that."
+
+I glanced at the rain streaking the window. "I don't sleep here—though some days the espresso machine is more reliable than my ex. But the cat is non-negotiable. Pumpkin is a tiny orange terror who expects a throne and treats, or he'll judge us both for the rest of the night."
+
+I started wiping down the counter, my sleeves rolling up further. "Give me ten minutes to lock up. Then I'll go get the cat. If you can handle a grumpy feline and a woman who hasn't slept in three days because of a thesis, I might be persuaded."

@@ -1,0 +1,11 @@
+### config: ru_safe
+### tag: school  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+The air in the room suddenly felt tight. I felt the heat creep up my neck, and my hand instinctively tightened around the strap of my backpack, fingers brushing the penguin keychain.
+
+— I said Tver. Not St. Petersburg. And Marinka needs to keep her mouth shut.
+
+I turned my head away, staring hard at the grey blur of the courtyard. My voice dropped, sharp and cold.
+
+— I didn't "quit." I just stopped. And there's no way in hell I'm playing for some pathetic class party. Go find a jukebox or something.

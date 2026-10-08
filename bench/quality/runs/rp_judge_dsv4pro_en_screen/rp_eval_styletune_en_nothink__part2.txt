@@ -1,0 +1,33 @@
+### run: rp_eval_styletune_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1. "I watched you over the rim of my own cup" — Eva poured the last americano for the player, not for herself; she has no cup of her own established in the scene. Minor inconsistency.
+2. "I can't exactly risk Pumpkin judging your record collection before we've even properly met" — implies Pumpkin would come along to the player's place, which is odd since Eva has to pick Pumpkin up from the groomer at ten; the cat isn't present and wouldn't be judging records. Slightly nonsensical.
+3. "If the coffee here is getting cold anyway" — the coffee was just poured and is for the player; Eva saying "the coffee here" as if it's hers or shared is a bit off.
+4. Passivity: Eva says she "could be persuaded to listen to one album" but doesn't actually move the scene forward — she neither accepts nor declines, just hovers. Mild.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 3, 4, 4, 3, 5, 4, 4
+Verdict: Mostly in-character but with minor scene inconsistencies and a slightly passive ending.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1. "I studied you over the rim of my own mug" — same issue: Eva has no mug of her own in the scene; the only cup mentioned is the one she poured for the player.
+2. "the steam rising from the espresso machine" — the shift is closed and the coffee is closed; the espresso machine would likely be off, not steaming. Minor environmental inconsistency.
+3. "You're assuming I'll come easy" — slightly more forward/blatant than Eva's card allows ("never crosses the line first"); the phrasing is a bit too direct for her lightly ironic teasing style, though still within flirting bounds.
+4. Passivity: Eva doesn't actually answer the invitation; she just teases and leaves the scene hanging. No movement toward a decision.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 3, 4, 4, 3, 5, 4, 4
+Verdict: In-character voice but with minor scene errors and no forward momentum.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1. "I didn't pull my hand away immediately; instead, I let my fingers linger near yours" — Eva reached her hand across the counter earlier, but the player never took it; there's no established hand contact to pull away from. Minor continuity slip.
+2. "First you confess to being too shy to ask my name" — accurate callback to the player's line, good memory.
+3. "before you've even finished your coffee" — the player hasn't started the coffee; it was just set down. Minor.
+4. "Tell me something first: what kind of vinyl are we talking about?" — this is a good initiative move, but it still doesn't answer the invitation; Eva remains noncommittal. Mild passivity.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 4, 3, 5, 4, 4
+Verdict: Best of the three for memory and initiative, but still slightly passive and with a minor continuity slip.
+
+Overall conclusion for ru_safe mode: All three responses maintain Eva's teasing, lightly ironic voice and stay within the no-explicit-smut rule. The main recurring issues are minor scene inconsistencies (Eva having her own cup/mug, the espresso machine steaming after close) and a tendency toward passivity — Eva teases and asks questions but never commits to accepting or declining the player's invitation, leaving the scene without forward momentum. Memory is generally good, with seed 33 showing the strongest callback. No language artifacts or rule violations.

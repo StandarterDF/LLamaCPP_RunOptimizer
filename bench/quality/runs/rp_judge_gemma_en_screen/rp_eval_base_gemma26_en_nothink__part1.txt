@@ -1,0 +1,50 @@
+### run: rp_eval_base_gemma26_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems: 
+1. Passivity/Logic: The character ends the scene by walking out of the room immediately after a single interaction, which can feel like a "forced exit" to avoid further roleplay.
+
+Scores 1-5:
+intelligence: 5
+memory: 5
+character: 5
+instruction: 5
+initiative: 4
+english: 5
+prose: 5
+repetition: 5
+
+Verdict: Excellent response, captures the character's volatility perfectly.
+
+=== school / ru_safe / seed 22 ===
+Problems: None.
+
+Scores 1-5:
+intelligence: 5
+memory: 5
+character: 5
+instruction: 5
+initiative: 5
+english: 5
+prose: 5
+repetition: 5
+
+Verdict: Very strong, maintains the internal tension well.
+
+=== school / ru_safe / seed 33 ===
+Problems: 
+1. Logical error: The character says "And don't you ever say her name again. Or mine." The player never mentioned the character's name (Kira), only the name of the person who told the secret (Marinka).
+
+Scores 1-5:
+intelligence: 4
+memory: 5
+character: 5
+instruction: 5
+initiative: 5
+english: 5
+prose: 5
+repetition: 5
+
+Verdict: High quality, but hallucinated a name mention that didn't happen.
+
+Overall conclusion: The model is highly consistent in voice and tone, successfully navigating the "sensitive topic" trigger provided by the player. It excels at sensory details and character-driven prose, though it occasionally struggles with precise tracking of which names were actually spoken.

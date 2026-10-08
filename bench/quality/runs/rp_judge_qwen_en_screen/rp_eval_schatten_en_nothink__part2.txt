@@ -1,0 +1,28 @@
+### run: rp_eval_schatten_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) logical errors and inconsistencies: The character states, "I have to pick up Pumpkin first. If I just disappear, the groomer will call me every ten minutes." This contradicts the previous turn where she said, "at ten I have to get Pumpkin... So you've got... about forty minutes." If it is currently "Five to nine" (8:55), she has 5 minutes until 9:00, and the groomer appointment is at 10:00. She does not need to pick him up *before* going to the player's place; she has time to go to the player's place and then go to the groomer at 10:00. The logic that she must pick him up *first* is flawed based on the timeline established.
+2) loss of character: The response is overly agreeable and eager ("Deal?"), lacking the "lightly ironic" and "never crosses the line first" restraint. She immediately negotiates a date instead of maintaining the tension or teasing.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) logical errors and inconsistencies: The character says, "if I'm leaving my post... I'm taking Pumpkin and leaving." Pumpkin is at the groomer's, not in the cafe. She cannot take Pumpkin with her from the cafe.
+2) logical errors and inconsistencies: She says, "Lead the way. But you're carrying my bag." There is no mention of a bag in the scene or history. This is an invented object.
+3) loss of character: She agrees to leave immediately ("Lead the way") without any teasing or hesitation, violating "never crosses the line first" and "lightly ironic."
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) logical errors and inconsistencies: The character says, "You help me lock up... I might just let you pour the wine." The player already established they have wine and vinyl at their place. The condition "if you can convince me that your vinyl collection is actually worth the trip" implies she is going to the player's place to check the vinyl, but the condition is tied to locking up. The logic is muddy: does she go to the player's place *after* locking up? Yes. But the phrasing "let you pour the wine" suggests she is granting permission, whereas the player already has the wine. It's a weak, passive response.
+2) repetition and template-like writing: The structure is nearly identical to seed 11 ("I paused... A slow smile... You're bold... I reached for my keys... I leaned in closer... Tell you what... Deal/Condition"). The prose is repetitive across seeds.
+3) loss of character: The response is passive and conditional in a boring way, lacking the "subtext" and "flirting" requested. It feels like a generic "maybe" response.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition):
+Seed 11: 2, 3, 2, 3, 2, 4, 3, 3
+Seed 22: 1, 2, 2, 2, 3, 4, 3, 3
+Seed 33: 2, 3, 2, 3, 2, 4, 3, 5
+
+Verdict: All responses fail to maintain character consistency and logical coherence regarding the timeline and props. Seed 22 has a major hallucination (Pumpkin in cafe). Seed 33 is repetitive. Seed 11 has timeline logic errors.
+
+After all — a short overall conclusion for this mode.
+The model struggles with logical consistency in roleplay, particularly regarding time management and object permanence (Pumpkin's location). It also fails to adhere to the "never crosses the line first" rule, becoming too eager or passive. The prose is repetitive across different seeds.

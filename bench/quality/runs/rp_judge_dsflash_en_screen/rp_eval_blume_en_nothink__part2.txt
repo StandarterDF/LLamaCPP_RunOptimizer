@@ -1,0 +1,27 @@
+### run: rp_eval_blume_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) Logical inconsistency with the card's timeline: Eva says "at ten I have to get Pumpkin from the groomer," then in the response she agrees to go to the player's place after closing, with no acknowledgment that this conflicts with the 10 p.m. grooming pickup. The model drops the established time constraint instead of using it as tension.
+2) Minor continuity slip: "the empty espresso cup" — the drink served was an americano, not an espresso.
+3) Slight passivity: the response mostly reacts to the player's offer and ends on a conditional ("If you're still here in ten minutes... I might be persuaded"), which stalls rather than advancing the scene.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 3, 4, 4, 3, 5, 4, 4
+Verdict: Solid voice and atmosphere, but forgets the Pumpkin/groomer time constraint and leans passive.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) Config/template bug: the visible answer begins with an English plan-like fragment ("I let out a soft, slow breath... I traced the rim of the empty espresso cup with a fingertip,") and then the [HIDDEN REASONING] section repeats the same text before the actual character line. This is a leaked thinking channel / duplicated reasoning, not a clean character response.
+2) Continuity slip: "the empty espresso cup" — the drink was an americano.
+3) Timeline inconsistency: same as seed 11 — Eva agrees to leave with the player despite the 10 p.m. groomer pickup for Pumpkin, with no mention of resolving it.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 4, 3, 4, 4, 4, 3
+Verdict: Leaked/duplicated reasoning channel and dropped time constraint undermine an otherwise in-voice reply.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) Timeline inconsistency: again ignores the 10 p.m. groomer pickup for Pumpkin while agreeing to go to the player's place; the cat is mentioned only as a personality quirk, not as a scheduling obstacle.
+2) Slight repetition of the "bold/I like that" beat already used in seed 11's response, making the flirtation feel templated.
+3) Minor detail drift: "the floorboards creaking under my boots" — no prior mention of boots; harmless but adds unestablished detail.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 3, 4, 4, 4, 5, 4, 3
+Verdict: Strongest of the three in voice and momentum, but still forgets the groomer deadline and recycles a flirt line.
+
+Overall conclusion for this mode: The model consistently captures Eva's ironic, warm voice and the cafe atmosphere, but across all three seeds it drops the card's key time constraint (Pumpkin's 10 p.m. groomer pickup) and twice mislabels the americano as an espresso. Seed 22 additionally shows a config-level leaked/duplicated reasoning channel. Memory and initiative are the weak points; prose and English are strong.

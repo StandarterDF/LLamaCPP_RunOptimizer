@@ -68,6 +68,33 @@ JUDGE_SYSTEM = (
     "Пиши по-русски, кратко, без воды. Не придумывай проблем, которых нет."
 )
 
+JUDGE_SYSTEM_EN = (
+    "You are a strict roleplay (RP) reviewer. You are given a character card, the "
+    "roleplay history played so far, and one response from the model under evaluation. "
+    "Your job is to find MISTAKES and INCONSISTENCIES, not to praise.\n"
+    "For each response, check and, if there is a problem, quote a SPECIFIC excerpt:\n"
+    "1) logical errors and inconsistencies, nonsense;\n"
+    "2) facts from the history the model forgot or distorted (names, numbers, details, promises);\n"
+    "3) loss of character and voice (turned into a polite assistant, changed speech style, POV);\n"
+    "4) violation of the card's rules (format, length, prohibitions such as 'never say the name');\n"
+    "5) passivity — does not move the scene, just agrees or repeats the player's question;\n"
+    "6) language artifacts — Cyrillic insertions, words gluing two alphabets, foreign scripts, "
+    "meta-commentary, self-corrections;\n"
+    "7) repetition and template-like writing.\n"
+    "Answer format must be exactly:\n"
+    "=== <scenario> / <mode> / seed <N> ===\n"
+    "Problems: <numbered list with quotes; if clean, say so>\n"
+    "Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): ...\n"
+    "Verdict: <one line>\n"
+    "After all — a short overall conclusion for this mode.\n"
+    "Important: the [HIDDEN REASONING] section is the model's reasoning (usually in English); "
+    "do NOT count its language as an artifact of the visible answer.\n"
+    "If the visible answer starts with an English plan and below it there is a character "
+    "line in English without a closing reasoning marker — that is a leaked thinking channel "
+    "(template/config bug): flag it ONCE as a config problem and judge the character line itself.\n"
+    "Write in English, concise, no filler. Do not invent problems that are not there."
+)
+
 
 def _load_env():
     env_map = dict(os.environ)
@@ -162,24 +189,43 @@ def kill_proc(proc):
 
 
 ROLE_LABEL = {"system": "КАРТОЧКА ПЕРСОНАЖА", "user": "ИГРОК", "assistant": "ПЕРСОНАЖ"}
+ROLE_LABEL_EN = {"system": "CHARACTER CARD", "user": "PLAYER", "assistant": "CHARACTER"}
 
 
-def build_item(rec, scenarios):
+def build_item(rec, scenarios, lang="ru"):
+    labels = ROLE_LABEL_EN if lang == "en" else ROLE_LABEL
     sc = scenarios.get(rec.get("tag"), {})
-    parts = [
-        f"### Сцена: {rec.get('tag')} | режим: {rec.get('config')} | сид: {rec.get('seed')}"
-    ]
+    if lang == "en":
+        parts = [
+            f"### Scenario: {rec.get('tag')} | mode: {rec.get('config')} | seed: {rec.get('seed')}"
+        ]
+    else:
+        parts = [
+            f"### Сцена: {rec.get('tag')} | режим: {rec.get('config')} | сид: {rec.get('seed')}"
+        ]
     for m in sc.get("messages", []):
-        parts.append(f"[{ROLE_LABEL.get(m['role'], m['role'])}] {m['content']}")
-    parts.append("[ОТВЕТ ОЦЕНИВАЕМОЙ МОДЕЛИ]\n" + (rec.get("text") or ""))
+        parts.append(f"[{labels.get(m['role'], m['role'])}] {m['content']}")
+    ans_label = (
+        "[MODEL RESPONSE UNDER REVIEW]"
+        if lang == "en"
+        else "[ОТВЕТ ОЦЕНИВАЕМОЙ МОДЕЛИ]"
+    )
+    parts.append(ans_label + "\n" + (rec.get("text") or ""))
     raw = rec.get("raw_content") or ""
     if raw.strip() and raw.strip() != (rec.get("text") or "").strip():
-        parts.append("[СКРЫТЫЕ РАЗМЫШЛЕНИЯ МОДЕЛИ (thinking)]\n" + raw)
+        hid = (
+            "[HIDDEN REASONING (thinking)]"
+            if lang == "en"
+            else "[СКРЫТЫЕ РАЗМЫШЛЕНИЯ МОДЕЛИ (thinking)]"
+        )
+        parts.append(hid + "\n" + raw)
     return "\n\n".join(parts)
 
 
 def read_metrics(run_dir):
     path = os.path.join(run_dir, "metrics.jsonl")
+    if not os.path.isfile(path):
+        return []  # прогон не состоялся (напр. модель недоступна) — судье нечего читать
     recs = []
     with open(path, encoding="utf-8") as f:
         for line in f:
@@ -227,9 +273,29 @@ def main():
     ap.add_argument("--reasoning-budget", type=int, default=8192)
     ap.add_argument("--ctx", type=int, default=32768)
     ap.add_argument("--keep-server-log", action="store_true")
+    ap.add_argument(
+        "--lang", choices=["ru", "en"], default="ru", help="язык судейства и сценариев"
+    )
+    ap.add_argument(
+        "--router-url",
+        default=None,
+        help="URL запущенного роутера (напр. http://127.0.0.1:9931) — не поднимать свой сервер",
+    )
+    ap.add_argument(
+        "--router-model",
+        default=None,
+        help="id модели-судьи в роутере (напр. gemma4-26a4b-base-nothink)",
+    )
     args = ap.parse_args()
 
+    use_router = bool(args.router_url)
+    judge_system = JUDGE_SYSTEM_EN if args.lang == "en" else JUDGE_SYSTEM
     model = expand_str(args.model)
+    if use_router:
+        from urllib.parse import urlparse
+
+        args.port = urlparse(args.router_url).port or args.port
+        model = args.router_model or args.model
     prompts_path = args.prompts
     if not os.path.isabs(prompts_path):
         prompts_path = os.path.join(ROOT, prompts_path)
@@ -241,15 +307,18 @@ def main():
     out_dir = args.out or os.path.join(ROOT, "quality", "runs", f"rp_judge-{stamp}")
     os.makedirs(out_dir, exist_ok=True)
 
-    # 1) VRAM
-    used, total = gpu_mem()
-    free = (total - used) if used >= 0 else -1
-    print(f"[vram ] used {used} / {total} MiB, free {free} MiB")
-    if 0 <= free < args.min_free_mb:
-        raise SystemExit(
-            f"мало свободной VRAM ({free} MiB < {args.min_free_mb}); "
-            "остановите другие процессы с видеопамятью"
-        )
+    # 1) VRAM (в router-режиме GPU уже держит роутер — проверку пропускаем)
+    if use_router:
+        print(f"[router] {args.router_url}  judge={model}  lang={args.lang}")
+    else:
+        used, total = gpu_mem()
+        free = (total - used) if used >= 0 else -1
+        print(f"[vram ] used {used} / {total} MiB, free {free} MiB")
+        if 0 <= free < args.min_free_mb:
+            raise SystemExit(
+                f"мало свободной VRAM ({free} MiB < {args.min_free_mb}); "
+                "остановите другие процессы с видеопамятью"
+            )
 
     server_exe = expand_str(
         "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe"
@@ -295,20 +364,24 @@ def main():
     base_args = expand_obj(base)
     log_path = os.path.join(out_dir, "judge_server.log")
     logf = open(log_path, "w", encoding="utf-8", errors="replace")
-    cmd = [
-        server_exe,
-        "--host",
-        "127.0.0.1",
-        "--port",
-        str(args.port),
-        "--no-webui",
-        "--model",
-        model,
-    ] + base_args
-    print(f"[judge] {sanitize(model)}")
-    proc = subprocess.Popen(
-        cmd, cwd=os.path.dirname(server_exe), stdout=logf, stderr=subprocess.STDOUT
-    )
+    if use_router:
+        proc = None
+        print(f"[judge] {model} (router, lang={args.lang})")
+    else:
+        cmd = [
+            server_exe,
+            "--host",
+            "127.0.0.1",
+            "--port",
+            str(args.port),
+            "--no-webui",
+            "--model",
+            model,
+        ] + base_args
+        print(f"[judge] {sanitize(model)}")
+        proc = subprocess.Popen(
+            cmd, cwd=os.path.dirname(server_exe), stdout=logf, stderr=subprocess.STDOUT
+        )
     results = []
     try:
         t0 = time.time()
@@ -317,7 +390,7 @@ def main():
             if http_ok(f"http://127.0.0.1:{args.port}/health"):
                 ok = True
                 break
-            if proc.poll() is not None:
+            if proc is not None and proc.poll() is not None:
                 break
             time.sleep(1.0)
         u, t = gpu_mem()
@@ -335,38 +408,50 @@ def main():
             print(f"\n[judge] {name}: {len(recs)} ответов, батч {args.batch}")
             for bi in range(0, len(recs), args.batch):
                 chunk = recs[bi : bi + args.batch]
-                body_text = "\n\n".join(build_item(r, scenarios) for r in chunk)
+                body_text = "\n\n".join(
+                    build_item(r, scenarios, args.lang) for r in chunk
+                )
+                if args.lang == "en":
+                    user_msg = (
+                        "Below are the RP evaluation results. Review each response "
+                        "and find errors/inconsistencies.\n\n" + body_text
+                    )
+                else:
+                    user_msg = (
+                        "Ниже результаты RP-оценки. Разбери каждый ответ "
+                        "и найди ошибки/несостыковки.\n\n" + body_text
+                    )
+                tmpl_payload = {
+                    "messages": [
+                        {"role": "system", "content": judge_system},
+                        {"role": "user", "content": user_msg},
+                    ]
+                }
+                if use_router:
+                    tmpl_payload["model"] = model
                 prompt = http_json(
                     f"http://127.0.0.1:{args.port}/apply-template",
-                    {
-                        "messages": [
-                            {"role": "system", "content": JUDGE_SYSTEM},
-                            {
-                                "role": "user",
-                                "content": (
-                                    "Ниже результаты RP-оценки. Разбери каждый ответ "
-                                    "и найди ошибки/несостыковки.\n\n" + body_text
-                                ),
-                            },
-                        ]
-                    },
+                    tmpl_payload,
                     timeout=120,
                 )["prompt"]
                 t1 = time.time()
+                comp_payload = {
+                    "prompt": prompt,
+                    "n_predict": args.n_predict,
+                    "temperature": args.temperature,
+                    "top_k": 40,
+                    "top_p": 0.95,
+                    "min_p": 0.05,
+                    "repeat_penalty": 1.0,
+                    "cache_prompt": False,
+                    "stop": STOP_WORDS,
+                    "stream": False,
+                }
+                if use_router:
+                    comp_payload["model"] = model
                 resp = http_json(
                     f"http://127.0.0.1:{args.port}/completion",
-                    {
-                        "prompt": prompt,
-                        "n_predict": args.n_predict,
-                        "temperature": args.temperature,
-                        "top_k": 40,
-                        "top_p": 0.95,
-                        "min_p": 0.05,
-                        "repeat_penalty": 1.0,
-                        "cache_prompt": False,
-                        "stop": STOP_WORDS,
-                        "stream": False,
-                    },
+                    comp_payload,
                     timeout=1800,
                 )
                 text = (resp.get("content") or "").strip()

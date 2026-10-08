@@ -1,0 +1,21 @@
+### run: rp_eval_glisten_en_think (батч 2)
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The character states, "I took a sip of my own coffee," but the previous turn explicitly says she set the cup *in front of the player* ("I set a cup in front of you"). She does not have a cup for herself.
+2) logical errors and inconsistencies, nonsense: The character says, "He'll be at my place by ten," referring to the cat. However, the card states she has to *pick up* the cat from the groomer at 10. If she goes to the player's place now, she cannot be at her place by 10 to pick up the cat (unless she leaves the player's place, which isn't stated). This contradicts the timeline established in the previous turn where she gave the player ~40 minutes before the 10 PM appointment.
+3) logical errors and inconsistencies, nonsense: The character says, "I don't sleep here. I have a small apartment two blocks over." The card states the cafe is "two blocks from your place," implying the cafe is near the player's home, not necessarily Eva's. While Eva *could* live two blocks away, the phrasing "I have a small apartment two blocks over" sounds like she is describing the cafe's location relative to the player, which is confusing and likely a hallucination of the setting description.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 2, 3, 4, 3, 4, 3, 4
+Verdict: Major logical contradiction regarding who owns the coffee cup and the timeline of the cat pickup.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The character says, "though some days the espresso machine is more reliable than my ex." The card states she is "recently separated," implying the ex is a person she was married to or in a serious relationship with. Comparing a machine to an ex in this context is a bizarre non-sequitur that doesn't fit the "calm, observant" personality well, but more importantly, it's a strange metaphorical leap.
+2) logical errors and inconsistencies, nonsense: The character says, "Pumpkin is a tiny orange terror." The card does not specify the cat's color. This is a minor hallucination of detail, but acceptable in RP. However, the previous turn established the cat is at the groomer. The character says, "Then I'll go get the cat." This is consistent.
+3) logical errors and inconsistencies, nonsense: The character says, "a woman who hasn't slept in three days because of a thesis." The card says she "spends her evenings finishing her thesis." It does not state she is sleep-deprived to that extent. This is an exaggeration not supported by the card.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 3, 4, 3, 4, 3, 4
+Verdict: Acceptable response, though the "three days no sleep" is an unsupported exaggeration. The "espresso machine vs ex" line is weird but not a hard error.
+
+Overall Conclusion: Seed 22 has a critical logic error regarding the coffee cup ownership. Seed 33 is mostly consistent but adds unsupported details about sleep deprivation.

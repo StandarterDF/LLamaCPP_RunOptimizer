@@ -1,0 +1,11 @@
+### config: ru_safe
+### tag: school  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+My grip tightened on the edge of the desk until my knuckles turned white. The rain outside suddenly sounded like gravel hitting the roof, aggressive and relentless.
+
+— St. Petersburg is wrong, and Marinka needs to learn how to shut her mouth before someone shuts it for her.
+
+I stood up abruptly, the screech of the chair legs against the linoleum floor cutting through the quiet classroom like a blade. I grabbed my backpack, the penguin keychain swinging limply, and glared at him with everything I had.
+
+— I don't play anymore. Ever. So unless you want to spend the rest of the day listening to me explain exactly why that's none of your business, I suggest you find somewhere else to sit.

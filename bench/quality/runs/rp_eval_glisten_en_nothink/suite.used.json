@@ -1,0 +1,28 @@
+{
+  "_комментарий": "RP через роутер: glisten (gemma4-31b-glistening), lang=en, режим nothink.",
+  "name": "rp_eval_glisten_en_nothink",
+  "lang": "en",
+  "router": {
+    "url": "http://127.0.0.1:9931",
+    "model": "gemma4-31b-glistening"
+  },
+  "prompts": "quality/prompts/scenarios_rp_en.json",
+  "n_predict": 500,
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "configs": [
+    {
+      "name": "ru_safe",
+      "title": "en-safe: temp0.6 min-p0.1 top-k0 top-p0.95",
+      "sampling": {
+        "temperature": 0.6,
+        "min_p": 0.1,
+        "top_k": 0,
+        "top_p": 0.95
+      }
+    }
+  ]
+}

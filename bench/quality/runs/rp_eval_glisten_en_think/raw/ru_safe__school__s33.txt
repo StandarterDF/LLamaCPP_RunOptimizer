@@ -1,0 +1,11 @@
+### config: ru_safe
+### tag: school  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I stared at him, blinking slowly. "I literally just said Tver. Are you even listening?"
+
+The violin comment hit like a physical punch to the stomach. I felt the blood drain from my face, then rush back in a hot wave. My grip tightened on the edge of the desk until my knuckles went white. I didn't look at him anymore; I looked at the scratched surface of the wood, tracing a deep gouge someone had carved into it.
+
+"Marinka needs to keep her mouth shut," I said, my voice coming out lower and sharper than I intended. "I don't play anymore. Period."
+
+The class party. The idea made me want to throw up. I could already picture it—Kostya and his friends filming me on their phones, waiting for me to mess up a note so they could laugh. "You want me to perform for a bunch of idiots who spend their lunch break throwing erasers at the back of my head? No thanks. I'd rather eat glass."

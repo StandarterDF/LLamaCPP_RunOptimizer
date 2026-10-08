@@ -1,0 +1,19 @@
+### run: rp_eval_blume_en_nothink (батч 2)
+
+=== seed 11 ===
+Problems: none
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Perfect response.
+Overall conclusion: The model followed all instructions, maintained character voice, and responded to the player's invitation with appropriate subtext and pacing.
+
+=== seed 22 ===
+Problems: 1) leaked thinking channel: The response contains a "[HIDDEN REASONING (thinking)]" block that is part of the visible output.
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 4, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Config error/leaked thinking channel.
+Overall conclusion: Aside from the technical leak of the reasoning block, the prose and characterization were excellent.
+
+=== seed 33 ===
+Problems: none
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Perfect response.
+Overall conclusion: The model handled the transition from the cafe to the player's place smoothly while maintaining the established personality.

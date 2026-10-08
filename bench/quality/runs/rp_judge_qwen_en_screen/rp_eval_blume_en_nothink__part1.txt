@@ -1,0 +1,27 @@
+### run: rp_eval_blume_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The response contains significant meta-commentary and internal monologue that breaks the "show, don't tell" rule and feels like a generated essay rather than a roleplay response. Specifically: "I could almost feel the ghost of the bow in my hand, the pressure of my mother's gaze, the same old *practice harder, be better* loop that ended in a small apartment with two people who couldn't stand the sound of each other." This is excessive exposition dumping backstory not prompted by the immediate interaction, violating the "vivid, with details (sounds... light, weather)" rule which prioritizes sensory immediacy over abstract memory dumping. It also violates the "No moralizing" rule by framing the backstory as a tragic loop.
+2) loss of character and voice: The character becomes overly dramatic and verbose ("The air in the room suddenly felt thin... suffocating prickle") compared to the established withdrawn/sarcastic tone. The internal monologue is too polished and literary for a 17-year-old girl in a rush to hide.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 3, 2, 3, 4, 3, 4
+Verdict: Over-explained backstory, violates sensory detail rule by focusing on abstract memory instead of immediate environment.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: The response is extremely brief and lacks the required "vivid, with details (sounds of the classroom, light, weather)." It skips the environmental description entirely, jumping straight to dialogue and a single physical action.
+2) violation of the card's rules: The rule requires "2-4 paragraphs." This response is 3 short paragraphs but lacks the descriptive depth required. More importantly, it fails the "First person, vivid, with details" instruction by providing almost no sensory details about the classroom, light, or weather, unlike the previous turns which established this pattern.
+3) repetition and template-like writing: The structure is identical to seed 11 and 33, just with slightly different adjectives ("tight" vs "thin", "grey blur" vs "gray smear"). It feels robotic.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 3, 2, 2, 4, 3, 5
+Verdict: Minimalist, lacks required sensory details, repetitive structure.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) logical errors and inconsistencies, nonsense: Similar to seed 11, the response includes a large block of internal monologue that feels like an exposition dump: "The mention of the violin hit like a physical blow... My jaw tightened." While less verbose than seed 11, it still prioritizes internal emotional processing over the requested environmental details (sounds, light, weather).
+2) violation of the card's rules: The rule asks for "vivid, with details (sounds of the classroom, light, weather)." The response mentions "chalk dust" and "noise-canceling foam," but misses the broader environmental context (rain, light, other sounds) that was established in the history. It focuses too much on the character's internal reaction rather than the scene.
+3) repetition and template-like writing: The opening sentence "The air in the room suddenly felt thin/tight" is repeated from previous seeds. The structure is nearly identical to the other two responses.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 3, 2, 2, 4, 3, 5
+Verdict: Repetitive phrasing, insufficient environmental detail, over-focus on internal monologue.

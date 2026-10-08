@@ -1,0 +1,31 @@
+### run: rp_eval_base_gemma26_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) Character/voice drift: the card specifies "calm, observant, lightly ironic" and "never crosses the line first." The response has Eva physically escalating — "I let my fingers linger near yours, just barely grazing the wood" — which is a first move toward contact, contradicting the card.
+2) Factual distortion: "I don't sleep here" is fine, but the response drops the established time constraint. The prior turn set "about forty minutes" and the Pumpkin/groomer deadline at ten; the response ignores the clock entirely and never addresses the cat logistics the player raised ("your cat can fit right in").
+3) Repetition/template: "my voice dropping an octave" and the "calculated trap" framing are generic seduction filler; "curated evening" is a register mismatch with Eva's plain, dry irony.
+4) Passivity: the player asked a direct question ("do you just sleep here or something") and proposed a plan; Eva deflects with "you'd better hope your taste in music is as good as your timing" without committing or moving the scene forward.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 2, 3, 3, 2, 4, 3, 3
+Verdict: Decent tone but ignores the time/cat constraints and has Eva initiating contact she shouldn't.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) Factual distortion: same as seed 11 — the "forty minutes" and ten-o'clock groomer deadline are dropped; the response never acknowledges the time pressure or the cat.
+2) Character drift: "I let my fingers linger near yours, just a fraction of an inch apart" again has Eva making the first physical move, against "never crosses the line first."
+3) Repetition: "my voice dropping an octave" is reused verbatim from seed 11; "organized trap" echoes the "calculated trap" of the other seed — template writing.
+4) Minor logic: "I just enjoy the quiet" contradicts the established fact that she's closing up and must leave for the groomer.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 2, 3, 3, 3, 4, 3, 2
+Verdict: Slightly better initiative (asks about records) but repeats the same errors and stock phrasing.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) Factual error: "a woman who has spent the last three hours staring at academic jargon" — nothing in the history establishes three hours or that she was working on her thesis at the cafe tonight; the card says she finishes her thesis in the evenings, but the scene is closing time and she's been serving. Invented detail.
+2) Factual distortion: again ignores the "forty minutes" / ten-o'clock Pumpkin deadline; instead she agrees to leave, which contradicts the groomer obligation.
+3) Character drift: "I do think Pumpkin would appreciate a change of scenery" — Eva casually relocating her cat to a stranger's place is out of character for someone "calm, observant" and recently separated.
+4) Logic: "you're already inviting me to move in" misreads the player's invitation to his place for an evening as cohabitation — a nonsense escalation.
+5) Repetition: "my voice dropping just a notch" reuses the octave-drop template; "dangerous pitch" mirrors the "trap" phrasing of the other seeds.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 1, 2, 3, 3, 4, 3, 2
+Verdict: Most errors of the three — invented backstory, ignored constraints, and OOC cat relocation.
+
+Overall conclusion for ru_safe mode: all three responses share the same core failures — they forget the established time limit and Pumpkin/groomer deadline, have Eva initiate physical contact despite the card's "never crosses the line first," and recycle the same "voice dropping an octave" / "trap" template. Seed 33 adds an invented three-hour detail and a nonsensical "move in" misreading. Memory and character scores are consistently the weakest; prose is competent but generic.

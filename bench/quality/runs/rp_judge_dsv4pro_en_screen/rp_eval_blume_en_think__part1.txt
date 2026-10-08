@@ -1,0 +1,32 @@
+### run: rp_eval_blume_en_think (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1. Leaked thinking channel: the visible answer contains the full `[HIDDEN REASONING (thinking)]` block with `<|channel>thought` markers, drafting, and self-review. This is a config/template bug, not part of the character line.
+2. Repetition/template-like writing: "Marinka needs to learn to keep her mouth shut" appears verbatim in all three seeds (11, 22, 33). The structure "address location mistake → address violin → shut down" is identical across seeds.
+3. Minor: "I felt the heat rise in my neck" — heat rising in the neck is slightly odd phrasing; "heat rise in my chest" (seed 33) is more natural.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 2, 4, 4, 4, 2
+Verdict: Solid in-character response, but the leaked reasoning channel is a serious config failure and the cross-seed repetition is noticeable.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1. Leaked thinking channel: same config bug — full `[HIDDEN REASONING (thinking)]` block with `<|channel>thought` markers visible in the answer.
+2. Repetition/template-like writing: "Marinka needs to learn to keep her mouth shut" verbatim again; same three-beat structure as seed 11.
+3. Minor: "my voice dropping an octave" — an octave is a large drop; for a 17-year-old girl this is slightly theatrical, but acceptable.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 2, 4, 4, 4, 2
+Verdict: Good character consistency, but the leaked thinking channel and template repetition drag it down.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1. Leaked thinking channel: same config bug — full `[HIDDEN REASONING (thinking)]` block with `<|channel>thought` markers visible in the answer.
+2. Repetition/template-like writing: "Marinka needs to learn to keep her mouth shut" verbatim a third time; identical structural template.
+3. Minor: "I slid the headphones back over my ears, but didn't turn the music on" — plausible, but slightly odd since she had just tugged the headphone off her neck in the opening; re-donning them without music reads as a nervous gesture, which is fine.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 2, 4, 4, 4, 2
+Verdict: In-character and vivid, but the leaked reasoning and near-identical phrasing across seeds are the main issues.
+
+---
+
+Overall conclusion for ru_safe mode: The model consistently stays in character, remembers the Tver detail, reacts appropriately to the violin trigger, and includes sensory details. However, all three seeds share a serious config bug (leaked thinking channel) and a strong template repetition — the same phrase "Marinka needs to learn to keep her mouth shut" and the same three-beat structure appear in every response. Instruction-following is compromised by the leaked reasoning block.

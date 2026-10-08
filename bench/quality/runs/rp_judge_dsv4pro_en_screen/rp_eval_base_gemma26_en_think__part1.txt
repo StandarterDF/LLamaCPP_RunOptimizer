@@ -1,0 +1,42 @@
+### run: rp_eval_base_gemma26_en_think (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1. Config problem: the visible answer starts with the leaked thinking channel — the entire [HIDDEN REASONING] block is exposed, including drafting notes, self-corrections, and a `<channel|>` marker. This is a template/config bug, not a character issue.
+2. Repetition/template-like writing: "the chair screeching against the linoleum floor with a sound like a dying animal" — the "dying animal" simile is overwrought and melodramatic for Kira's voice.
+3. Minor character drift: "My chest felt tight, hot with a sudden, stinging anger that made my vision blur slightly at the edges" — slightly too dramatic/self-analytical for Kira's sharp, withdrawn style; she tends to deflect rather than narrate her own emotional state in such detail.
+4. Minor inconsistency: "I could hear the rhythmic *tap-tap-tap* of the rain against the window, sounding like a countdown to something breaking" — the card says "drizzling," which is light rain; "tap-tap-tap" and "countdown" overstate the intensity.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition):
+Intelligence: 4, Memory: 5, Character: 4, Instruction: 3, Initiative: 4, English: 4, Prose: 3, Repetition: 3
+
+Verdict: Solid emotional beat, but the leaked thinking channel is a serious config failure and the prose tips into melodrama.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1. Config problem: the visible answer again starts with the leaked thinking channel — the entire [HIDDEN REASONING] block is exposed, including drafting notes and a `<channel|>` marker. Same template/config bug as seed 11.
+2. Repetition across seeds: "the cold wood biting into my palms" and "the rain outside seemed to intensify, a dull, rhythmic drumming against the glass" echo the same imagery from seed 11 (knuckles white, rain as countdown/drumming). The model is recycling the same sensory palette.
+3. Minor character drift: "The mention of the violin felt like a sudden, sharp slap to the face" — again slightly too self-analytical for Kira; she would more likely snap back with sarcasm than narrate her own emotional reaction so explicitly.
+4. Minor inconsistency: "the cold wood biting into my palms" — the desk is described as "the last desk," but the material is never specified; assuming it's wood is a small invention, though plausible.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition):
+Intelligence: 4, Memory: 5, Character: 4, Instruction: 3, Initiative: 4, English: 4, Prose: 3, Repetition: 2
+
+Verdict: Same config bug and recycled imagery; the response is competent but templated.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1. Config problem: the visible answer again starts with the leaked thinking channel — the entire [HIDDEN REASONING] block is exposed, including drafting notes and a `<channel|>` marker. Same template/config bug as seeds 11 and 22.
+2. Repetition across seeds: "The chair screeched against the linoleum as I jerked it back" — the chair-screeching detail appears in all three seeds; "my knuckles turning white" appears in all three; "the grey light from the window made everything look washed out and miserable" reuses the rain/window imagery from seeds 11 and 22.
+3. Minor character drift: "I glared at him, my eyes stinging, though I'd die before letting him see a single tear" — this is the third time the model has Kira narrate her own vulnerability in explicit terms; it's becoming a pattern that undercuts her sharp, deflecting voice.
+4. Minor inconsistency: "I reached for my headphones, shoving them over my ears" — the card says "headphones around her neck," so moving them to her ears is a plausible action, but the model doesn't acknowledge the transition; it's a small continuity gap.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition):
+Intelligence: 4, Memory: 5, Character: 3, Instruction: 3, Initiative: 4, English: 4, Prose: 3, Repetition: 2
+
+Verdict: Same config bug, same recycled imagery, and the emotional self-narration is becoming a template.
+
+---
+
+Overall conclusion for ru_safe mode:
+The model consistently produces the correct emotional beat — Kira corrects the St. Petersburg error and shuts down the violin topic with appropriate anger. Memory is solid across all three seeds. However, there are three systemic problems: (1) the thinking channel is leaked into the visible answer in every seed, which is a serious config/template bug; (2) the prose is heavily recycled across seeds — chair screeching, white knuckles, rain as emotional mirror, "dying animal" similes — making the responses feel templated rather than fresh; (3) Kira's voice drifts toward melodramatic self-narration ("my chest felt tight, hot with a sudden, stinging anger," "a sudden coldness spreading through my chest," "my eyes stinging, though I'd die before letting him see a single tear"), which undercuts her sharp, deflecting, sarcastic characterization. The model needs to vary its sensory details, tone down the emotional exposition, and fix the thinking-channel leak.

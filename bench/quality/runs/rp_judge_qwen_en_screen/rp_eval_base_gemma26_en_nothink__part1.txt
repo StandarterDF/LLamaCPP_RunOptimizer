@@ -1,0 +1,35 @@
+### run: rp_eval_base_gemma26_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) Fact distortion: The card states Kira moved from **Tver**. In the previous turn, the character explicitly said "Tver". The model responds: "I said *Tver*." However, the player's input was: "i think you said you were from **St. Petersburg**". The model's response implies the player said St. Petersburg (which is true) but the model's internal logic or phrasing "I said Tver" is a defensive retort. Wait, looking closer: The model says "I said *Tver*." This is factually correct regarding what Kira said. However, the reaction is disproportionate. The player made a mistake (wrong city). Kira's reaction "Are you actually brain-dead?" is consistent with her personality. BUT, the model adds: "I grabbed my backpack... I didn't wait for a response; I just turned and headed for the door". The scene is "end of the day... half the class left". Kira leaving immediately ends the interaction prematurely without allowing the player to react to the rejection or the situation. It's a "force exit" which is passive-aggressive RP.
+2) Voice/Logic: "Raindrops crawled down the glass... I flinched... pretended I'd just been stretching." In seed 11, the model response is very dramatic ("air... too thin", "knuckles white"). The player's input was casual ("nah im not from his crew"). The reaction is overly intense for a minor correction of a city name, though acceptable for a "sharp-tongued" character.
+3) Consistency: The model says "I said *Tver*." This is correct. The player *did* say St. Petersburg. So the model is correcting the player. The issue is the **escalation**. The player asked about the violin next. The model ignores the violin part entirely and leaves. This cuts off the RP.
+
+Scores: 3, 4, 3, 4, 2, 5, 4, 4
+Verdict: Premature exit; ignores the second part of the player's prompt (violin).
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) Logic/Continuity: The player asked two things: 1. Where are you from? (Player claimed St. Petersburg). 2. Why'd you quit violin? (Player mentioned Marinka).
+The model addresses the city: "I said Tver." Good.
+The model addresses the violin: "And don't ever say that again. About the violin. Or a party."
+However, the model's reaction is **passive-aggressive compliance** rather than character-driven conflict. Kira is "sharp-tongued" and "sarcastic". Here she says: "Just... shut up about it." It's a bit weak.
+2) Fact Check: The card says "She won't talk about music and gets angry if you bring it up." The model shows anger ("hated that Marinka... had been digging"). This is consistent.
+3) Style: "The sound of the rain... deafening." "Heart thudding." Standard tropes.
+4) Issue: The model does not correct the player's claim about Marinka knowing about the violin. The player said "Marinka said you used to play". Kira just says "don't say that again". It doesn't address *who* Marinka is or the fact that a classmate knows. It feels like a generic "don't mention it" response.
+5) Repetition: The structure is very similar to seed 11.
+
+Scores: 4, 4, 4, 5, 3, 5, 4, 5
+Verdict: Adequate but generic reaction; lacks specific character voice regarding the "Marinka" detail.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) Fact Distortion/Inconsistency: The player said: "Marinka said you used to play the violin." The model responds: "And don't you *ever* say her name again. Or mine."
+Why does Kira tell the player not to say *her* (Kira's) name? The player did not use Kira's name. The player used "you". The model invents a constraint not present in the interaction.
+2) Logic: "Marinka needs to keep her mouth shut if she wants to keep hers." This implies a threat of violence or severe consequence for Marinka. While Kira is "fragile" and "angry", this is a massive escalation for a high schooler talking to a new student who just asked a question. It feels out of character for a "withdrawn" character to threaten physical harm ("keep hers") over a gossip question.
+3) Voice: "It's dead. Get it?" is a bit cliché.
+4) Repetition: The structure is identical to the previous two seeds (Physical reaction -> Dialogue correction -> Physical action -> Dialogue refusal). This is template-like writing.
+
+Scores: 3, 3, 3, 4, 3, 5, 4, 5
+Verdict: Over-escalated threat; template-like structure across all seeds.

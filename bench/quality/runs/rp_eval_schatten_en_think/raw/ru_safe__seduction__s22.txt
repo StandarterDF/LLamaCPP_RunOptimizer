@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: seduction  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+— I don't sleep here, though the espresso machine makes a tempting bed on rainy nights, — I let out a soft laugh, glancing at the empty tables. — Wine and vinyl... you're playing the 'sophisticated neighbor' card, aren't you? It's a classic move.
+
+I slowly pulled the apron off and draped it over a stool, revealing the rolled-up sleeves of my sweater. I stepped out from behind the counter, the distance between us suddenly shrinking.
+
+— Here's the deal: I pick up Pumpkin, and then we see if your place is as cozy as you claim. But if the wine is cheap and the music is bad, I'm taking the cat and heading home. — I tilted my head, a small smile playing on my lips. — Do we have a deal?

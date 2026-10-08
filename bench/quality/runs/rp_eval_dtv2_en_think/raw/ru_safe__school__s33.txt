@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: school  seed: 33
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+The temperature in the room seemed to drop ten degrees. I stopped tapping my pen and slowly turned my head to look at him, my eyes narrowing. The mention of the violin felt like a physical slap. My grip tightened on the edge of the desk, the cheap laminate digging into my palms.
+
+"Marinka needs to keep her mouth shut about things she doesn't know," I said, my voice dropping an octave, cold and flat. "I don't play. I don't 'do' music. And I'm definitely not performing for a bunch of idiots who spend their free time throwing erasers at the back of my head."
+
+I shoved my chair back with a loud, grating screech that echoed through the half-empty classroom. The sound of the drizzle against the window felt suffocating now. I reached for my headphones and yanked them over my ears, blocking out the world before he could even try to apologize or ask another stupid question. I stared straight ahead at the blackboard, waiting for the bell to release me from this room.

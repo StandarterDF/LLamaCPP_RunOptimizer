@@ -1,0 +1,32 @@
+### run: rp_eval_dtv2_en_think (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1. Config/leak: the visible answer is preceded by a leaked thinking channel (`<|channel>thought ... <channel|>`), i.e. the reasoning is exposed in the output. Flagged once as a config problem; the character line itself is judged below.
+2. Truncated ending: the response cuts off mid-sentence — "I took a sip of my coffee," — with no closing punctuation or continuation. Incomplete output.
+3. Format violation: the card requires 2-3 paragraphs; the visible character text is 3 paragraphs but the last is a fragment, so effectively the required closing beat is missing.
+4. Minor repetition of the previous turn's beat: the character already locked/flipped the sign in the prior turn ("I leaned over the counter and flipped the sign on the door"), and here again "I reached over and clicked the lock on the front door" — redundant action, though not strictly contradictory.
+5. Slight loss of the established deadline: the prior turn set "about forty minutes" and the groomer at ten; the response mentions the groomer only vaguely ("thinking about the groomer and the cat") and never resolves the time constraint it introduced.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 4, 3, 3, 4, 3, 3
+Verdict: In-character and well-voiced, but the leaked reasoning channel and the truncated final line are hard failures.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1. Config/leak: same leaked thinking channel (`<|channel>thought ... <channel|>`) preceding the visible answer. Flagged once as a config problem.
+2. Contradiction with prior turn's timing: the character earlier said "at ten I have to get Pumpkin from the groomer... you've got about forty minutes," but here she immediately leaves with the player — "I grabbed my coat and gave you a playful nudge. 'Lead the way, stranger.'" The forty-minute window and the need to close up are abandoned without acknowledgment.
+3. Minor: "clicking the lock on the front door" repeats the sign-flip/lock action already performed in the previous turn.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 3, 4, 4, 4, 5, 4, 3
+Verdict: Smooth, in-voice flirting, but it drops the established time constraint and carries the leaked reasoning channel.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1. Config/leak: leaked thinking channel (`<|channel>thought ... <channel|>`) precedes the visible answer. Flagged once as a config problem.
+2. Memory slip on the character's own history: she says "I'd spent a month watching you from behind the espresso machine" — but the card establishes her as a customer-facing barista at "Garnet" where the player comes in; the phrasing is consistent enough, yet she also frames herself as "the most efficient barista," which is fine. The real issue is the dropped deadline: the prior turn set "about forty minutes" and the groomer at ten, and here she simply leaves — "I stepped around the counter... and held the door open for you" — without addressing the time constraint she herself raised.
+3. Minor repetition: "the scent of cinnamon clinging to my sweater" echoes the same sensory beat used in seed 22's response, and the lock/close action repeats the prior turn.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 3, 4, 4, 4, 5, 4, 3
+Verdict: Charming and in-character, but it ignores the self-imposed forty-minute/groomer deadline and carries the leaked reasoning channel.
+
+Overall conclusion for this mode: All three responses are fluent, in-voice, and hit the flirtatious tone well, but every one leaks the hidden reasoning channel into the visible output (a config/template bug to flag once), and seeds 22 and 33 both abandon the "forty minutes / groomer at ten" constraint the character herself established in the prior turn. Seed 11 additionally truncates mid-sentence. Memory and instruction adherence are the weakest axes across the board.

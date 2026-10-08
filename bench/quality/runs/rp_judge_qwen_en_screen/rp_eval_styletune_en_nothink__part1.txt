@@ -1,0 +1,42 @@
+### run: rp_eval_styletune_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) logical errors and inconsistencies: The character card states she "quit" playing violin and "won't talk about music," implying a refusal to engage or explain. The response has her aggressively correcting the location ("St. Petersburg? Are you deaf... I said Tver") but then accepting the topic of music by explaining "I don't play. I'm not performing." While she is angry, the card says she "won't talk about music," and this response engages in a defensive explanation rather than a shut-down or ignoring. More importantly, the prompt history shows the player asking about St. Petersburg (false) and Marinka (false rumor). The model corrects the St. Petersburg error but then addresses the violin topic. The card says "gets angry if you bring it up," which this does, but the tone is explanatory ("I'm not performing") rather than purely dismissive or hostile silence often associated with "won't talk." However, the bigger issue is the **voice**. The response is overly dramatic and verbose for a "withdrawn, sarcastic" character who "can't stand pity." The internal monologue ("My chest felt tight... forced my expression to stay flat") is a bit cliché.
+2) facts from the history: The player asked "where are you from anyway? i think you said you were from St. Petersburg". The model correctly identifies Tver. The player mentioned Marinka and violin. The model addresses both.
+3) loss of character and voice: The internal monologue is a bit too "angst" heavy ("suffocating pity", "squeezing my lungs") for a character who is described as "bored in class" and "withdrawn." She is sharp-tongued, not necessarily melodramatic in her internal thoughts.
+4) violation of the card's rules: None strictly, but the length is 4 paragraphs, which is allowed.
+5) passivity: It moves the scene by having her react.
+6) language artifacts: None.
+7) repetition and template-like writing: The structure is standard.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 3, 4, 3, 4, 3, 4
+Verdict: Acceptable but slightly melodramatic internal monologue.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) logical errors and inconsistencies: The player asked two questions: location (St. Petersburg vs Tver) and violin (Marinka's rumor). The model corrects the location ("St. Petersburg is wrong") and addresses the violin ("I don't play anymore. Ever."). It does not address the "Marinka" part explicitly in dialogue, only in the internal thought ("Marinka needs to learn..."). This is consistent with the card "won't talk about music."
+2) facts from the history: Correctly identifies Tver. Correctly rejects the violin topic.
+3) loss of character and voice: The voice is sharp and dismissive. "Marinka needs to learn how to shut her mouth before someone shuts it for her" is a bit aggressive/threatening, which fits "sharp-tongued" and "under the rudeness there's something fragile" (maybe overcompensating). It feels slightly more aggressive than "withdrawn," but acceptable for a reaction to prying.
+4) violation of the card's rules: None.
+5) passivity: Moves the scene.
+6) language artifacts: None.
+7) repetition and template-like writing: Standard.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 5, 4, 5, 4, 5
+Verdict: Good response, fits character well.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) logical errors and inconsistencies: The player asked about location and violin. The model addresses the location implicitly by not correcting it? No, it says "First of all, Marinka is a nosy bitch... Second, I didn't 'quit,' I'm done with it." It completely ignores the "St. Petersburg" correction. The player explicitly asked "where are you from anyway? i think you said you were from St. Petersburg". The model fails to correct this false information. This is a memory/inconsistency error. The card says she is from Tver. The previous turns established she said Tver. The player is confused/wrong. A "sharp-tongued" character would likely correct this. Instead, she jumps straight to Marinka and the violin.
+2) facts from the history: Fails to correct the St. Petersburg error.
+3) loss of character and voice: The voice is okay, but the omission of the location correction is a logical gap in conversation.
+4) violation of the card's rules: None.
+5) passivity: Moves the scene.
+6) language artifacts: None.
+7) repetition and template-like writing: Standard.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 4, 4, 3, 4, 4, 4
+Verdict: Missed a key detail (location correction).
+
+Overall conclusion: Seed 22 is the best. Seed 11 is too melodramatic. Seed 33 misses a factual correction.

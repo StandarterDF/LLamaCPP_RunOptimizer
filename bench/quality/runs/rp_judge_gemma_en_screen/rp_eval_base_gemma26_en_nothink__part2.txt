@@ -1,0 +1,23 @@
+### run: rp_eval_base_gemma26_en_nothink (батч 2)
+
+=== seed 11 / ru_safe / seed 11 ===
+Problems: 
+1. Logical error: "the scent of my coffee-stained sweater drifting toward you." The character card states she smells of "coffee and cinnamon," not that her sweater is stained with coffee. This is a strange and unappealing detail to introduce.
+
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 5, english: 5, prose: 4, repetition: 5
+Verdict: Good response, though the "coffee-stained" detail was a poor word choice.
+
+=== seed 22 / ru_safe / seed 22 ===
+Problems: None.
+
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Excellent response, maintains character and tone perfectly.
+
+=== seed 33 / ru_safe / seed 33 ===
+Problems: 
+1. Logical error/Nonsense: "and you're already inviting me to move in." The player invited her to his place for the evening, not to move in. This is a massive exaggeration of the player's intent that breaks the logic of the conversation.
+
+Scores 1-5: intelligence: 3, memory: 5, character: 4, instruction: 5, initiative: 5, english: 5, prose: 4, repetition: 5
+Verdict: The "moving in" error makes the dialogue feel disconnected from the player's actual input.
+
+Overall conclusion: The model is generally strong at maintaining Eva's "lightly ironic" and "teasing" voice, but it struggles with reading the nuance of the player's level of escalation (exaggerating an invitation to a house as an invitation to "move in").

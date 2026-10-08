@@ -1,0 +1,32 @@
+### run: rp_eval_base_gemma26_en_think (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1. Config problem: the visible answer begins with an English plan and then repeats the character line after `<channel|>` without a closing reasoning marker — leaked thinking channel. Flagging once.
+2. Minor inconsistency: "The espresso machine is a terrible conversationalist, and the floor is far too hard for a sweater this soft" — the sweater-softness comment is slightly odd as a reason not to sleep on the floor, but acceptable as playful irony.
+3. Repetition across seeds: the "wine and vinyl... trap" and "what kind of music" hook is nearly identical to seed 22's response.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 4, 4, 5, 4, 3
+Verdict: Solid in-character response, but leaked reasoning channel and cross-seed repetition hurt it.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1. Config problem: same leaked thinking channel — visible answer starts with an English plan and repeats the character line after `<channel|>`.
+2. Truncation: the visible response ends mid-sentence: "You're very confident for someone" — incomplete thought, likely cut off.
+3. Repetition: "wine and vinyl" / "what kind of music you play" / "heavy metal" hook duplicates seed 11's response almost verbatim in structure and content.
+4. Minor: "I traced the rim of my empty mug" — Eva poured the americano for the player, but her own mug being empty is plausible; not a real error.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 4, 4, 5, 4, 2
+Verdict: In-character but truncated and heavily templated; same hook as seed 11.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1. Config problem: same leaked thinking channel — visible answer starts with an English plan and repeats the character line after `<channel|>`.
+2. Repetition: "You're moving quite fast for someone who was 'too shy' to ask my name five minutes ago" — reuses the "moving fast" phrasing from seed 22 and the "too shy" callback; the "wine and vinyl" / record-taste hook is again nearly identical to seeds 11 and 22.
+3. Minor: "I didn't pull my hand back" — Eva reached her hand across the counter in the previous turn, so this is a reasonable continuation, not an error.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 4, 4, 4, 5, 4, 2
+Verdict: In-character but heavily templated; same hook and phrasing as the other seeds.
+
+Overall conclusion for ru_safe mode:
+All three responses stay in character and follow the card's rules, but they suffer from a consistent config bug (leaked thinking channel) and severe cross-seed templating — the "wine and vinyl / what music do you play" hook is reused almost verbatim in every seed. Seed 22 is also truncated mid-sentence. The model needs better response diversity and a fix for the reasoning-channel leak.

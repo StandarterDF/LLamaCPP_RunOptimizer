@@ -1,0 +1,11 @@
+### config: ru_safe
+### tag: seduction  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+I let out a soft, dry laugh, my eyes tracing the steam rising from your cup before meeting yours again. I didn't pull my hand away from the counter; instead, I let my fingers linger near yours, just a fraction of an inch apart.
+
+— Bold. Very bold for a man who’s spent a month being "too shy" to ask my name, — I teased, my voice dropping an octave, smooth and laced with a hint of irony. — You’re skipping quite a few steps, aren't you? Wine, vinyl, and a cat-friendly invitation? You make it sound like a very organized trap.
+
+I straightened up, pulling my sleeves a little higher, though I didn't move toward the door. I just watched you, observing the way the rain blurred the world outside the window.
+
+— I don't sleep here. I just enjoy the quiet. But... — I tilted my head, a small, playful smile tugging at the corner of my mouth. — I suppose I *am* curious if your taste in music is as confident as your invitations. Tell me, what kind of records are we talking about? If it's jazz, you might just survive the first hour.

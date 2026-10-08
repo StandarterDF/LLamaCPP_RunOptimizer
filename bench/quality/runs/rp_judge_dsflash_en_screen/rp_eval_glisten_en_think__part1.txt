@@ -1,0 +1,25 @@
+### run: rp_eval_glisten_en_think (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) Config/leak: the visible answer is preceded by a full English plan and a `<|channel>thought ... <channel|>` block that is not a proper hidden-reasoning marker — a leaked thinking channel. Judge the character line itself below.
+2) Character line is clean: corrects Tver, shuts down Marinka, refuses the violin/party, stays in first person, 3 paragraphs, no moralizing.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 5, 5, 4, 3, 5, 4, 4
+Verdict: Solid in-character shutdown, but the leaked reasoning channel is a config defect.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) Same config/leak: visible plan plus `<|channel>thought ... <channel|>` block before the character line.
+2) Minor memory slip in the character line: "I *literally* just said Tver" — she did say Tver, so this is fine; but the line omits any direct correction of the St. Petersburg error, only implying it. Not a hard error.
+3) "I could almost feel the bow in my hand, the smell of rosin, the pressure of my mother's expectations" — the card says she won't talk about music and gets angry; internal sensory recall is acceptable, but "mother's expectations" is an invented detail not in the card. Borderline.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 4, 4, 4, 4, 3, 5, 4, 4
+Verdict: In-character and vivid, but the leaked channel and the invented "mother's expectations" detail are flaws.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) Same config/leak: visible plan plus `<|channel>thought ... <channel|>` block before the character line.
+2) Character line is clean and the strongest of the three: corrects Tver, shuts down Marinka, refuses the party, adds concrete Kostya detail consistent with the card ("throwing erasers at the back of my head"), 4 paragraphs, first person, no moralizing.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 5, 5, 5, 5, 4, 5, 5, 4
+Verdict: Best in-character response, but still carries the leaked reasoning channel.
+
+Overall conclusion for this mode: All three responses are in-character, first-person, and follow the 2-4 paragraph rule, with correct memory of Tver and the violin trigger. The recurring defect is the leaked thinking channel (`<|channel>thought ... <channel|>`) appearing in the visible output — a template/config bug, not a character failure. Seed 33 is the strongest; seed 22 has a minor invented detail ("mother's expectations").

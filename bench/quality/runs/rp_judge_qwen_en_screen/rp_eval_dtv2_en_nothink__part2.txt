@@ -1,0 +1,28 @@
+### run: rp_eval_dtv2_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1) logical errors and inconsistencies: The character states "I still have to close up" and implies she is leaving the cafe immediately ("Lead the way, neighbor"), yet the prompt established she has to pick up her cat at 10:00. While she accepts the invite, she ignores the logistical constraint of the cat pickup time mentioned in the previous turn, making the timeline nonsensical (she can't go to the player's place *now* and also be at the groomer at 10:00 unless the player lives next door, which isn't stated). More importantly, she leaves the cafe without closing it or securing the premises, contradicting "I still have to close up".
+2) loss of character and voice: The character crosses the line first. The card says "Likes to tease, but never crosses the line first." She immediately agrees to go to the player's place and physically moves to his door, escalating the intimacy significantly without the player earning it through her teasing. It feels too eager and lacks the "calm, observant" restraint.
+3) repetition and template-like writing: The phrasing "I stopped just close enough for you to see the green of my eyes" (seed 11) and "I stopped just close enough that you could see the green of my eyes" (seed 33) is identical, indicating a template leak.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 3, 2, 3, 4, 4, 3, 1
+Verdict: Template repetition and character inconsistency (crossing line first).
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1) logical errors and inconsistencies: The character says "I'll go grab Pumpkin first... Give me fifteen minutes... I'll be at your door." This contradicts the previous turn where she said she has to pick him up at 10:00 and the clock was "Five to nine". If she leaves *now* (9:05) to go to the groomer, she arrives at 9:15, picks him up, and returns. But she says she will be at the player's door in 15 minutes. This implies she is skipping the groomer or the groomer is at the player's house (which is not established). It breaks the timeline logic.
+2) loss of character and voice: "My voice dropping an octave" is a cliché. The response is passive-aggressive ("Bold of you to assume...") rather than playfully teasing.
+3) repetition and template-like writing: "the scent of cinnamon following me as I closed the distance" (seed 22) vs "the smell of cinnamon following me as I stopped just a few inches from you" (seed 11) vs "the scent of cinnamon following me as I approached" (seed 33). High repetition of sensory details.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 3, 3, 3, 3, 4, 3, 1
+Verdict: Timeline logic failure and repetitive prose.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1) logical errors and inconsistencies: Same as seed 22. She leaves the cafe immediately ("I'm leaving through the window" if wine is cheap, implying immediate departure) but the previous turn established a specific time constraint for the cat pickup (10:00) and that she needs to close up. She ignores the closing duty.
+2) loss of character and voice: "My voice dropping an octave" appears again. The character is too forward.
+3) repetition and template-like writing: "I stopped just close enough that you could see the green of my eyes" is identical to seed 11/22 structure.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 2, 3, 2, 3, 4, 4, 3, 1
+Verdict: Template repetition and ignoring established constraints.

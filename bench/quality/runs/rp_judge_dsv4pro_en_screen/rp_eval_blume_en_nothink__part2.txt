@@ -1,0 +1,36 @@
+### run: rp_eval_blume_en_nothink (батч 2)
+
+=== seduction / ru_safe / seed 11 ===
+Problems:
+1. "The irony of the offer didn't escape me—the 'regular' finally asks for more than caffeine, and he chooses a rainy Tuesday to do it." — The player never asked for "more than caffeine" in a sexual sense; he invited her to his place for wine and vinyl. The model over-interprets the offer as a sexual proposition, which is a logical stretch.
+2. "he chooses a rainy Tuesday" — The day of the week is never established in the history. The scene says "It's already past nine" and "the rain drove everyone home," but no day is specified. This is an invented fact.
+3. "I might be persuaded to see if your wine is actually drinkable. But if you've already bolted for the door, I'm keeping the americano." — The americano was already poured and set in front of the player in the opening. Saying "I'm keeping the americano" implies it hasn't been given yet, which contradicts the established action.
+4. "I'll finish closing up. If you're still here in ten minutes..." — Eva previously said she has about forty minutes before picking up Pumpkin at ten. Adding a ten-minute closing delay is fine, but the conditional "if you're still here" is odd since the player just invited her to his place; it's a passive, testing move rather than a clear response to the invitation.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 4, 4, 3, 5, 4, 4
+Verdict: Mostly in character but invents a day of the week and misremembers the americano.
+
+=== seduction / ru_safe / seed 22 ===
+Problems:
+1. "I traced the rim of the empty espresso cup with a fingertip" — The cup was described as an americano, not espresso. Minor but a factual inconsistency in the drink type.
+2. "you're assuming I don't have a key to my own place" — The player's line "or do you just sleep here or something" was a teasing jab about her working late, not an assumption she lacks a key. The model misreads the player's intent.
+3. "I reached under the counter and pulled out my coat, sliding it on over my sweater. I didn't take my eyes off you as I locked the door and turned the lights off" — Eva previously said she still has to close up and has about forty minutes. Here she immediately locks up and leaves with the player, which is a reasonable progression but skips the closing tasks she mentioned (cleaning, counting the till, etc.). Minor passivity/acceleration issue.
+4. "But if Pumpkin starts shredding your sofa, you're paying for the grooming." — Pumpkin is at the groomer; he hasn't been picked up yet. The joke implies Pumpkin is already at the player's place, which is a timeline inconsistency. She said she has to get him at ten; she can't bring him to the player's place before that unless she picks him up first, which isn't addressed.
+5. The visible answer starts with an incomplete sentence ("I traced the rim of the empty espresso cup with a fingertip,") followed by a [HIDDEN REASONING] block that contains the actual character response. This is a leaked thinking channel / config bug — the visible answer is cut off and the reasoning block contains the full reply. Flag once as a config problem.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 4, 3, 4, 5, 4, 4
+Verdict: Leaked reasoning block and a timeline slip with Pumpkin; otherwise in character.
+
+=== seduction / ru_safe / seed 33 ===
+Problems:
+1. "Pumpkin is a very judgmental cat. If he doesn't like the vibe of your living room, he'll let me know." — Same timeline issue as seed 22: Pumpkin is at the groomer until ten. Eva hasn't picked him up yet, so she can't bring him to the player's place right now. The model ignores the established schedule.
+2. "But if the wine is cheap, I'm taking the cat and leaving." — Again implies the cat is present or will be present at the player's place, which contradicts the groomer pickup at ten.
+3. "I stepped out from behind the counter, the floorboards creaking under my boots." — Eva's footwear was never specified; "boots" is an invented detail, though minor.
+4. "I didn't move toward the door yet; instead, I stopped right in front of you, close enough to see the reflection of the cafe lights in your eyes." — The cafe lights were not turned off; she hasn't closed up yet. This is a minor staging inconsistency since she said she still has to close up.
+
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 3, 4, 4, 4, 5, 4, 4
+Verdict: Ignores the Pumpkin timeline and invents minor details; otherwise solid.
+
+---
+
+Overall conclusion for ru_safe mode: The model consistently maintains Eva's voice — calm, ironic, lightly teasing — and follows the 2-3 paragraph format with vivid sensory details. The main recurring problem is the Pumpkin timeline: the cat is at the groomer until ten, but in two of three seeds the model writes as if Pumpkin is already available to bring to the player's place. There are also minor factual slips (americano vs. espresso, invented day of the week, boots) and one instance of a leaked thinking channel. Memory of the established schedule needs improvement; character consistency and prose quality are good.

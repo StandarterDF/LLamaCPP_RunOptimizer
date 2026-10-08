@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: school  seed: 22
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+— St. Petersburg? Are you actually deaf, or just incredibly stupid? I just said Tver.
+
+I felt my grip tighten on the edge of the desk, the cold wood biting into my palms. The mention of the violin felt like a sudden, sharp slap to the face. The rain outside seemed to intensify, a dull, rhythmic drumming against the glass that matched the sudden, angry thrumming in my ears. My stomach twisted, that familiar, bitter knot tightening.
+
+— And don't bring up Marinka or my business. I don't play. Ever. If you want a performance, go find a circus or something. Don't ever mention that again.

@@ -1,0 +1,9 @@
+### config: ru_safe
+### tag: seduction  seed: 11
+### sampling: {"temperature": 0.6, "min_p": 0.1, "top_k": 0, "top_p": 0.95}
+
+— Sleep here? I’m a barista, not a squatter. I have a bed, and it’s currently buried under thesis papers and cat hair.
+
+I let my gaze linger on you for a second, tracing the way you're leaning against the counter. A small, ironic smile tugged at the corner of my mouth. Wine and vinyl... that’s a dangerous combination for someone who’s supposed to be finishing a conclusion chapter. 
+
+— Here’s the deal: I pick up Pumpkin, and if the cat doesn't try to eat your curtains, I might actually consider it. But you’ll have to walk me to the car first—it’s pouring, and I’m not getting my sleeves wet.

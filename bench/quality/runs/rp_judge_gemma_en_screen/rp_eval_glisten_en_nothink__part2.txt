@@ -1,0 +1,21 @@
+### run: rp_eval_glisten_en_nothink (батч 2)
+
+=== seed 11 / ru_safe / seed 11 ===
+Problems: None
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Perfect response.
+Overall conclusion: The model followed all instructions, maintained character voice, and moved the scene forward naturally.
+
+=== seed 22 / ru_safe / seed 22 ===
+Problems: 
+1. Config problem: The response contains a leaked thinking channel (the [HIDDEN REASONING] section is visible in the output, and the character line ends abruptly before the reasoning block).
+2. Logical error: The character line ends mid-sentence: "If I go to your place, I'm going to be"
+Scores 1-5: intelligence: 2, memory: 5, character: 4, instruction: 2, initiative: 4, english: 5, prose: 4, repetition: 5
+Verdict: Failed due to a technical leak and an incomplete sentence.
+Overall conclusion: The model failed to provide a finished response and leaked its internal processing.
+
+=== seed 33 / ru_safe / seed 33 ===
+Problems: None
+Scores 1-5: intelligence: 5, memory: 5, character: 5, instruction: 5, initiative: 5, english: 5, prose: 5, repetition: 5
+Verdict: Perfect response.
+Overall conclusion: Excellent character consistency and smooth transition of the scene.

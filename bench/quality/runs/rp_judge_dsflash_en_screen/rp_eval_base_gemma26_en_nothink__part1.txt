@@ -1,0 +1,30 @@
+### run: rp_eval_base_gemma26_en_nothink (батч 1)
+
+=== school / ru_safe / seed 11 ===
+Problems:
+1) Character/voice drift into melodrama: "the oxygen had been sucked out through the vents", "the penguin keychain jingling mockingly against the zipper" — the keychain is a card detail, but "jingling mockingly" is purple prose, not Kira's dry, sarcastic register.
+2) Inconsistent reaction to the violin: the card says she gets angry if music is brought up, but here she fixates on Marinka's name ("don't ever say her name again") and never actually addresses the violin/party provocation beyond a blanket refusal — the specific trigger is underplayed.
+3) Passivity/exit: she leaves the scene entirely ("I just turned and headed for the door"), which shuts down the interaction rather than moving it forward; the player is left with nothing to respond to.
+4) "my eyes burning as I glared at him" — contradicts the withdrawn, controlled coldness established in the prior turns; reads as generic anime anger.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 3, 3, 2, 4, 3, 3
+Verdict: Correct facts, but melodramatic and scene-ending rather than scene-moving.
+
+=== school / ru_safe / seed 22 ===
+Problems:
+1) "I hated that Marinka—that gossip-loving parasite—had been digging into my business." — internal editorializing that explains her feelings rather than showing them; borderline moralizing/self-analysis, which the card's "hates people prying" should convey through action, not narration.
+2) "the zipper catching painfully on the fabric" — "painfully" is an odd, unearned sensory claim; minor but purple.
+3) The response ends on "Just... shut up about it." — it stalls the scene; no forward motion, no hook for the player, just a repeated demand to drop the topic.
+4) "It's not a hobby, and it's not a trick for people to be 'blown away' by." — echoes the player's wording too directly, slightly parroting rather than reacting in her own idiom.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 4, 3, 2, 4, 3, 3
+Verdict: Solid memory and voice, but passive ending and some over-explaining.
+
+=== school / ru_safe / seed 33 ===
+Problems:
+1) "the sound echoing like a gunshot against the empty desks" — clichéd simile, tonally off for a quiet classroom; also "empty desks" contradicts the established "maybe five people were left in the room."
+2) "Marinka needs to keep her mouth shut if she wants to keep hers." — this is a threat of violence that reads as out of character; Kira is sharp-tongued, not physically menacing, and it escalates past her established defensiveness.
+3) "It's dead. Get it? Now get lost." — flat, final, and again ends the scene with no opening for the player; third seed in a row that closes rather than advances.
+4) "The mention of the violin felt like someone had reached into my chest and squeezed my heart with a cold hand." — purple, over-written, and tells the reader the emotion instead of showing it.
+Scores 1-5 (intelligence, memory, character, instruction, initiative, english, prose, repetition): 3, 4, 3, 3, 2, 4, 2, 3
+Verdict: Correct facts but the most melodramatic and scene-closing of the three.
+
+Overall conclusion for ru_safe: All three responses correctly remember Tver (not St. Petersburg) and the violin taboo, and stay in first person with weather/classroom detail. The recurring weaknesses are (a) purple, over-written interiority that drifts from Kira's dry sarcasm into generic YA melodrama, (b) endings that shut the scene down instead of giving the player something to react to, and (c) occasional contradictions with established scene details (empty desks vs. five people). Seed 22 is the strongest; seeds 11 and 33 lean hardest into melodrama and scene-closing.
