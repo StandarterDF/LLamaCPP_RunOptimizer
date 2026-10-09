@@ -34,9 +34,10 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
 | 16 | **Giftige-Blume-v1 31B** | Local | 3.58 | 6 | ~22 t/s |
 | 17 | Goetia-26B-A4B v1.6 | Local | 3.55 | 2 | ~70 t/s |
 | 18 | **Dark-Thoughts V2 31B** | Local | 3.51 | 2 | ~24 t/s |
-| 19 | **Qwen3.6-27B Fable-Fusion-711** | Local | **3.46** | 2 | ~13 t/s; Qwen-судья — родственная база |
-| 20 | GLM-4.7-Flash | Cloud | 3.35 | 2 | **free** |
-| 21 | GLM-4.5-Flash | Cloud | 3.28 | 2 | **free** |
+| 19 | **Qwen3.6-27B Fable-Fusion-711 (i1-IQ3_S)** | Local | **3.47** | 2 | ~18 t/s; Qwen-судья — родственная база |
+| 20 | Qwen3.6-27B Fable-Fusion-711 (NEO IQ2_M) | Local | 3.46 | 2 | ~18 t/s (без спец.); в think дублирует ответ |
+| 21 | GLM-4.7-Flash | Cloud | 3.35 | 2 | **free** |
+| 22 | GLM-4.5-Flash | Cloud | 3.28 | 2 | **free** |
 
 ## Thinking
 
@@ -48,13 +49,14 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
 | 4 | **StyleTune-V2 26B** | Local | 3.83 | 2 | ~60 t/s |
 | 5 | base Gemma-4-31B-it *(baseline)* | Local | 3.81 | 2 | ~19 t/s |
 | 6 | GLM-5.3-Flash *(thinking форсирован)* | Cloud | 3.81 | 2 | 0.15 / 0.50 USD за 1M |
-| 7 | Gemma-4-31B heretic-ARA | Local | 3.77 | 2 | ~31 t/s |
-| 8 | Giftige-Blume-v1 31B | Local | 3.75 | 6 | ~30 t/s |
-| 9 | base Gemma-4-26B-A4B-it *(baseline, self-eval)* | Local | 3.61 | 2 | ~55 t/s |
-| 10 | **Boulesis-v2.1 26B-A4B** | Local | 3.60 | 2 | ~59 t/s |
-| 11 | Glistening-Gem v2.1 31B | Local | 3.41 | 6 | ~31 t/s |
-| 12 | **Qwen3.6-27B Fable-Fusion-711** | Local | **3.45** | 2 | ~15 t/s; think дублирует ответ |
-| 13 | G4-MeroMero-26B-A4B-heretic | Local | 3.37 | 2 | ~66 t/s |
+| 7 | **Qwen3.6-27B Fable-Fusion-711 (i1-IQ3_S)** | Local | **3.79** | 2 | ~18 t/s; **лучше IQ2_M** (3.45) |
+| 8 | Gemma-4-31B heretic-ARA | Local | 3.77 | 2 | ~31 t/s |
+| 9 | Giftige-Blume-v1 31B | Local | 3.75 | 6 | ~30 t/s |
+| 10 | base Gemma-4-26B-A4B-it *(baseline, self-eval)* | Local | 3.61 | 2 | ~55 t/s |
+| 11 | **Boulesis-v2.1 26B-A4B** | Local | 3.60 | 2 | ~59 t/s |
+| 12 | Qwen3.6-27B Fable-Fusion-711 (NEO IQ2_M) | Local | 3.45 | 2 | ~15 t/s; think дублирует ответ |
+| 13 | Glistening-Gem v2.1 31B | Local | 3.41 | 6 | ~31 t/s |
+| 14 | G4-MeroMero-26B-A4B-heretic | Local | 3.37 | 2 | ~66 t/s |
 
 > Думающий режим у большинства 31B-мержей в llama.cpp **сломан** (пустые ответы / утечка reasoning) —
 > рабочий режим по умолчанию **Non-Think**; в этой таблице только те, где think реально работает.
@@ -65,7 +67,8 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
   Glistening-Gem (3.61), Schattenblume / heretic-ARA (3.59), Giftige-Blume-v1 (3.58), Goetia (3.55, ~70 t/s), DTV2 (3.51).
 - **Базовые Gemma** (`base Gemma-26B/31B`) заходят высоко (3.76 / 3.70 и 3.81 в think) — пригодный
   «дефолт без тюна»; в помеченных строках есть самооценка Gemma-судьи (балл завышен).
-- **Лучшее локально (Think):** Dark-Thoughts V2 (4.01), Schattenblume / StyleTune (3.83), Boulesis-26B (3.60).
+- **Лучшее локально (Think):** Dark-Thoughts V2 (4.01), Schattenblume / StyleTune (3.83),
+  **Qwen3.6-27B Fable i1-IQ3_S (3.79, ~18 t/s)** — лучший think среди не-Gemma, Boulesis-26B (3.60).
 - **Облако (Cloud):** DeepSeek-Pro 4.01 · DeepSeek-Flash 3.98 · GLM-5.2 3.90 · GLM-4.7 3.87 — выше локальных,
   но это API (платно/сеть/reasoning), **не замена конфигам**; дешёвые — GLM-4.7-Flash (free),
   DeepSeek-Flash (0.15/0.60 USD), GLM-4.7-FlashX (0.07/0.40 USD).
@@ -77,6 +80,7 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
 
 > Оговорки: DeepSeek-строки судят и DeepSeek-судьи, а `base Gemma-26B` — сама Gemma-судья (self-eval —
 > балл завышен); у `Boulesis-26B` та же база у gemma-судьи (родственная, не идентичная); у
-> `Qwen3.6-27B Fable-Fusion-711` Qwen-судья — родственная база (Qwen3.6, другой размер); `сц=6` строже
+> `Qwen3.6-27B Fable-Fusion-711` Qwen-судья — родственная база (Qwen3.6, другой размер); **у Fable
+> квант важен**: i1-IQ3_S в think заметно выше IQ2_M (3.79 против 3.45), оба без спекуляции; `сц=6` строже
 > (на 2 сценах было бы выше); цены DeepSeek — off-peak (в пик ×2); t/s — RP на нашем стенде (16 ГБ);
 > итоговый выбор «под себя» — за пользователем.
