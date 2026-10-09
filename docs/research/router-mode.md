@@ -72,6 +72,7 @@ curl.exe http://127.0.0.1:9931/health             # 503 при загрузке,
 | `qwen38-27b`, `qwen38-27b-nothink`, `qwen38-27b-base-rp-*` | Qwen3.8-27B | универсальная dense |
 | `qwen36-27b-fable-nothink` / `-think` / `-author` | Qwen3.6-27B Fable-Fusion-711 (dense heretic) | RU-общего профиля (панель 3.46), **RP — без спекуляции**; `-author` — сэмплинг автора (3.30) |
 | `qwen36-27b-fable-mtp` | Qwen3.6-27B Fable-Fusion-711 | общий/код/чат (MTP: +6–13 % на коде, на RP −4 t/s) |
+| `qwen36-27b-fable-i1-iq3s-nothink` / `-think` | Qwen3.6-27B Fable i1-IQ3_S (imatrix) | RP **без спец.**; Панель No 3.47 / Think 3.79 (лучше IQ2_M); контекст q4_0 ~125k |
 | `swift-1.5`, `-nothink`, `-agent`, `-131k` | Swift-1.5-Qwen3.8-27B | efficient-reasoning / агенты |
 | `dans-pers13` | Dans-PersonalityEngine-24B | чат-компаньон (на стенде файла нет) |
 
