@@ -31,7 +31,7 @@
 | **Gemma-4-26B-A4B Goetia v1.6** (MoE, IQ3_XXS, RP-мерж) | **~73** | — | — | — | `...gemma4-26a4b-goetia-nothink-b11382.bat` (think непригоден) |
 | **Gemma-4-26B-A4B StyleTune** (MoE, IQ4_XS) | **63**¹ | 70 | 100 | 107 | RP — `...styletune-nothink-nospec-b11382.bat`; чат/код — `...styletune-b11382.bat` |
 | **Gemma-4-26B-A4B Boulesis v2.1** (MoE, IQ4_XS, RP-мерж) | **55**² | — | — | — | `...gemma4-26a4b-boulesis-v21-nothink-b11382.bat` (+ `-think`) |
-| **Qwen3.6-27B Fable-Fusion-711** (dense, IQ2_M, heretic-мерж) | **13**³ | — | — | — | `launch\b11382-cu124\qwen36-27b\qwen36-27b-fable-fus-711-nothink-b11382.bat` (+ `-think`) |
+| **Qwen3.6-27B Fable-Fusion-711** (dense, IQ2_M, heretic-мерж) | **18**³ | 18 | 19 | 20 | `launch\b11382-cu124\qwen36-27b\qwen36-27b-fable-fus-711-nothink-b11382.bat` (+ `-think`, `-author`, `-mtp`) |
 | Swift-1.5-Qwen3.8-27B (dense, IQ2_S-mtp) | 28 | 37 | 36 | 37 | `launch\b11382-cu124\swift\swift-best-b11382.bat` |
 | **Gemma-4-31B Glistening-Gem v2.1** (dense RP-мерж, IQ3_XXS) | 23 | — | — | — | `...gemma4-31b-glistening-nothink-b11382.bat` (+ `-think`) |
 | Gemma-4-31B Dark-Thoughts V2 (dense, IQ3_XXS) | 23 | 31 | 48 | 47 | `...gemma4-31b-dark-thoughts-nothink-b11382.bat` (+ `-think`) |
@@ -43,8 +43,9 @@
 с MTP ~50. Остальные числа — с MTP.
 ² У Boulesis измерен только RP (55 t/s из харнесса `rp_quality.py`, не из `requests_real.json`);
 чат/код/математику не гоняли. Контекст `-c 51200` — при 14.3 ГБ модели 65536 уже впритык по VRAM.
-³ У Qwen3.6-27B Fable-Fusion-711 измерен только RP (13 t/s из `rp_quality.py`); чат/код/математику
-не гоняли. `-c 51200` при 11.3 ГБ — есть запас по VRAM.
+³ У Qwen3.6-27B Fable-Fusion-711 RP измерен **без спекуляции — 17.8 t/s** (с MTP на RP 13.5:
+спекуляция вредит); код/математика — с MTP 19/20 t/s, чат 18. Кодинг-профиль — `...-mtp-b11382.bat`.
+`-c 51200` при 11.3 ГБ — есть запас по VRAM.
 «—»: у 31B RP-мержей мерили только RP (чат/код/математику не гоняли). Отбракованы (`.bat` есть,
 но **не рекомендуются**): `gemma4-31b-styleswap-*` (англ. вставки в русский), `gemma4-31b-artemis-*`
 (речевая каша), `gemma4-26a4b-meromero-*` (NoThink ниже базы Gemma-26B: повторы и слабая память;
@@ -122,10 +123,11 @@ vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — 
 - **Витрина выбора (панель 4 судей, 2 сцены)** — `docs\quality\rp-ranking.md`. Лучший 26B-мёрж —
   **Boulesis-v2.1-26B-A4B**: Non-Think **3.74** (~55 t/s, русский чистый), Think 3.60;
   `...gemma4-26a4b-boulesis-v21-nothink-b11382.bat` (+ `-think`).
-- **Qwen3.6-27B Fable-Fusion-711** (dense heretic-мерж, IQ2_M, ~13 t/s) — **середина по RP (панель
+- **Qwen3.6-27B Fable-Fusion-711** (dense heretic-мерж, IQ2_M, ~18 t/s без спекуляции) — **середина по RP (панель
   3.46, No ≈ Think)**: русский — лучшая ось (Чисто/Cyr 100 %), но персонаж сглажен, инициатива слабая,
-  повторы между сидами; think дублирует ответ. **Не апгрейд**, но годная RU-модель общего профиля:
-  `qwen36-27b-fable-fus-711-nothink-b11382.bat` (+ `-think`).
+  повторы между сидами; think дублирует ответ. **MTP на RP замедляет** (13.5 против 17.8 t/s), поэтому RP — без
+  спекуляции, а код/чат — `...-mtp-b11382.bat`. **Не апгрейд**, но годная RU-модель общего профиля:
+  `qwen36-27b-fable-fus-711-nothink-b11382.bat` (+ `-think`, `-author`).
 - **Отбраковано по RP:** Artemis-31B-v1.2 (речевая каша при «Чисто 100 %»), Giftige-Blume-**StyleSwap**
   (русский 3.3/2.6 — прививка головы StyleTune течёт в английский), StyleTune-31B.
 - **Базовые instruct-модели на RP** (скрин + полный набор, 2026-10-07): **Gemma-4-26B-A4B-it** —

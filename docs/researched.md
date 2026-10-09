@@ -31,6 +31,7 @@
 | `-bs` / `--spec-draft-p-split` / `--spec-draft-ngl` | ❌/шум (кроме `-ngld all` в DFlash-профилях) | §10.3 |
 | Спекуляция на глубине контекста | ✅ принятие держится 72–80 %; TG падает с длиной | §11.5 |
 | Общий MTP-assistant Gemma-4-31B на RP-мержах (Split-Untied, MeroMero v2 heretic) | ✅ работает, ×1.25…2.8; *untied* `lm_head` совместим | `docs\models\gemma-4-31b-rp-merges.md` |
+| MTP (NEO-MTP) на Qwen3.6-27B Fable-Fusion-711 (dense IQ2_M): RP vs код | ⚠️ **на RP вредит**: 13.5 t/s с MTP (принятие 68–85 %) против **17.8** без; на коде/математике **+6–13 %** (принятие 88–93 %); `nmax8` хуже (10–14). На RP-моделях проверять MTP отдельно | `docs\quality\rp-quality-eval.md` §5.18; `bench\suites\real\real_qwen36_27b_fable.json` |
 
 ## 2. KV-кэш и контекст
 

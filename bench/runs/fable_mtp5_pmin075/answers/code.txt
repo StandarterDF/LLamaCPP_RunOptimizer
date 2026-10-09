@@ -1,0 +1,38 @@
+=== reasoning_content ===
+
+=== content ===
+Here’s a concise implementation plus explanation and example.
+
+```python
+def merge_intervals(intervals):
+    if not intervals:
+        return []
+
+    # Sort by start time
+    intervals.sort()
+
+    merged = []
+    for interval in intervals:
+        # If the list of merged intervals is empty or if the current
+        # interval does not overlap with the previous, simply append it.
+        if not merged or interval[0] > merged[-1][1]:
+            merged.append(interval)
+        else:
+            # Otherwise, merge the current interval with the previous one
+            merged[-1][1] = max(merged[-1][1], interval[1])
+
+    return merged
+```
+
+Algorithm explanation:
+- Sort intervals by their start times, then iterate through them, merging the current interval with the last merged interval whenever they overlap (i.e., when the current start ≤ last end).
+- This greedy approach works because sorting ensures that any overlapping intervals appear contiguously, so a single pass is sufficient to combine them.
+
+Time complexity:
+- Sorting takes O(n log n), and the linear scan takes O(n), so the overall time complexity is O(n log n).
+
+Usage example:
+```python
+intervals = [[1, 3], [2, 6], [8, 10], [15, 18]]
+print(merge_intervals(intervals))
+# Output: [[1, 6], [8, 10], [15,

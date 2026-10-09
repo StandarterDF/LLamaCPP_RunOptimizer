@@ -1,0 +1,18 @@
+{
+  "_комментарий": "ДИАГНОСТИКА скорости Qwen3.6-27B Fable-Fusion-711 (dense IQ2_M, встроенная MTP): варианты спекуляции vs без неё. requests_real.json, конфиг как в .bat (c=51200, KV q4_0).",
+  "server": "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe",
+  "model": "${MODELS_DIR}/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF/Qwen3.6-27B-Fable-Fus-711-UnHeretic-NM-DAU-NEO-MAX-NEO-MTP-IQ2_M.gguf",
+  "common": ["-np", "1", "-c", "51200", "-fa", "on", "--fit", "on", "--load-mode", "none",
+             "-t", "12", "-tb", "12", "-ctk", "q4_0", "-ctv", "q4_0", "--jinja",
+             "--reasoning", "off", "--reasoning-budget", "0"],
+  "requests": "requests_real.json",
+  "tests": [
+    { "name": "fable_mtp5_pmin075",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.75"] },
+    { "name": "fable_mtp5_pmin050",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "5", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.5"] },
+    { "name": "fable_mtp8_pmin075",
+      "args": ["--spec-type", "draft-mtp", "--spec-draft-n-max", "8", "--spec-draft-n-min", "1", "--spec-draft-p-min", "0.75"] },
+    { "name": "fable_nospec", "args": [] }
+  ]
+}

@@ -12,12 +12,12 @@ if not exist "%LOGDIR%" mkdir "%LOGDIR%"
 set "LOG=%LOGDIR%\%~n0_%TS%.log"
 echo Log: %LOG%
 rem ============================================================================
-rem  Qwen3.6-27B Fable-Fusion-711 (DavidAU, IQ2_M, dense heretic, MTP) - RP, БЕЗ мышления.
+rem  Qwen3.6-27B Fable-Fusion-711 (DavidAU, IQ2_M, dense heretic) - RP, БЕЗ мышления.
 rem  АЛЬТЕРНАТИВНЫЙ СЭМПЛИНГ АВТОРА (instruct): temp0.7 / top_p0.80 / top_k20 /
-rem  min_p0 / presence_penalty1.5 (карточка модели). Наш замер (панель 4 судей):
-rem    - голос резче, повторов меньше, TTR 0.878 -> 0.933, ответы используют детали карточки;
-rem    - но ответы короче, "ум" и "инициатива" ниже => панель 3.30 против 3.46 у стандарта.
-rem  Дефолт - qwen36-27b-fable-fus-711-nothink-b11382.bat (RU-safe, 3.46). Разбор - §5.18.
+rem  min_p0 / presence_penalty1.5 (карточка модели). БЕЗ спекуляции (на RP MTP замедляет).
+rem  Наш замер (панель 4 судей): голос резче, повторов меньше, TTR 0.878 -> 0.933,
+rem  ответы используют детали карточки; но короче, "ум"/"инициатива" ниже => панель 3.30
+rem  против 3.46 у стандарта. Дефолт - qwen36-27b-fable-fus-711-nothink-b11382.bat. Разбор - §5.18.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\DavidAU\Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF\Qwen3.6-27B-Fable-Fus-711-UnHeretic-NM-DAU-NEO-MAX-NEO-MTP-IQ2_M.gguf"
@@ -30,7 +30,6 @@ set "MODEL=%MODELS_DIR%\DavidAU\Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-
   -t 12 -tb 12 ^
   -ctk q4_0 -ctv q4_0 ^
   --jinja ^
-  --spec-type draft-mtp --spec-draft-n-max 5 --spec-draft-n-min 1 --spec-draft-p-min 0.75 ^
   --reasoning off --reasoning-budget 0 ^
   --temp 0.7 --top-p 0.8 --top-k 20 --min-p 0 --presence-penalty 1.5 --repeat-penalty 1.0
 pause

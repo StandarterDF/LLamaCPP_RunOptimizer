@@ -70,7 +70,8 @@ curl.exe http://127.0.0.1:9931/health             # 503 при загрузке,
 | `gemma4-31b-dark-thoughts` / `-think` | Dark-Thoughts V2 | RP-эталон |
 | `gemma4-31b-glistening` / `-think` | Glistening-Gem v2.1 | RP-мерж |
 | `qwen38-27b`, `qwen38-27b-nothink`, `qwen38-27b-base-rp-*` | Qwen3.8-27B | универсальная dense |
-| `qwen36-27b-fable-nothink` / `-think` / `-author` | Qwen3.6-27B Fable-Fusion-711 (dense heretic, MTP) | RU-общего профиля (панель 3.46); `-author` — сэмплинг автора (3.30) |
+| `qwen36-27b-fable-nothink` / `-think` / `-author` | Qwen3.6-27B Fable-Fusion-711 (dense heretic) | RU-общего профиля (панель 3.46), **RP — без спекуляции**; `-author` — сэмплинг автора (3.30) |
+| `qwen36-27b-fable-mtp` | Qwen3.6-27B Fable-Fusion-711 | общий/код/чат (MTP: +6–13 % на коде, на RP −4 t/s) |
 | `swift-1.5`, `-nothink`, `-agent`, `-131k` | Swift-1.5-Qwen3.8-27B | efficient-reasoning / агенты |
 | `dans-pers13` | Dans-PersonalityEngine-24B | чат-компаньон (на стенде файла нет) |
 

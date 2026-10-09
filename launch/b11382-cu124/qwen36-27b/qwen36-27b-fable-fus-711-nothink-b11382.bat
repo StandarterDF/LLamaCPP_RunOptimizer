@@ -12,12 +12,13 @@ if not exist "%LOGDIR%" mkdir "%LOGDIR%"
 set "LOG=%LOGDIR%\%~n0_%TS%.log"
 echo Log: %LOG%
 rem ============================================================================
-rem  Qwen3.6-27B Fable-Fusion-711 (DavidAU, NEO-MAX NEO-MTP, IQ2_M, 11.3 GB, dense) - RP, БЕЗ мышления.
-rem  MTP nmax5 pmin0.75, c=51200, KV q4_0, RU-safe сэмплинг.
-rem  RP-скрин (панель 4 судей): русский 100 % / ось язык 4.4-4.8, память 3.9; слабые оси -
-rem  персонаж 3.0 (сглаживает характер), инициатива 3.0 (пассивна), повторы 2.7 (однотипные
-rem  отказы между сидами). Панель Non-Think 3.46. Dense, ~13 t/s.
-rem  Think дублирует ответ (текст с и без канала) - рабочий режим nothink (см. ...-think-b11382.bat).
+rem  Qwen3.6-27B Fable-Fusion-711 (DavidAU, NEO-MAX MTP, IQ2_M, 11.3 GB, dense) - RP, БЕЗ мышления.
+rem  c=51200, KV q4_0, RU-safe сэмплинг, БЕЗ спекуляции (оптимум для RP).
+rem  ЗАМЕР (requests_real.json): на RP MTP ЗАМЕДЛЯЕТ - 13.5 t/s с MTP (принятие 68-85 %)
+rem  против 17.8 без спекуляции; nmax8 хуже (10-14). MTP даёт +6-13 % только на коде/
+rem  математике - для них отдельный ...-mtp-b11382.bat. Качество от спекуляции не зависит.
+rem  RP-скрин (панель 4 судей): русский 100 %, память 3.9; слабые оси - персонаж 2.96,
+rem  инициатива 3.0 (пассивна), повторы 2.7. Панель Non-Think 3.46. Think дублирует ответ.
 rem ============================================================================
 set "SERVER=%PROJECT_DIR%\downloads\llama-b11382-cu124\llama-server.exe"
 set "MODEL=%MODELS_DIR%\DavidAU\Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF\Qwen3.6-27B-Fable-Fus-711-UnHeretic-NM-DAU-NEO-MAX-NEO-MTP-IQ2_M.gguf"
@@ -30,7 +31,6 @@ set "MODEL=%MODELS_DIR%\DavidAU\Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-
   -t 12 -tb 12 ^
   -ctk q4_0 -ctv q4_0 ^
   --jinja ^
-  --spec-type draft-mtp --spec-draft-n-max 5 --spec-draft-n-min 1 --spec-draft-p-min 0.75 ^
   --reasoning off --reasoning-budget 0 ^
   --temp 0.6 --min-p 0.1 --top-k 0 --top-p 0.95
 pause
