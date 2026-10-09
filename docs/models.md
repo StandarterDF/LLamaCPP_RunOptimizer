@@ -1,7 +1,7 @@
 # Модели: протестированные и кандидаты
 
 Реестр моделей проекта. Числа краткие, подробности — по ссылкам в логах (`docs\`). Стенд:
-RTX 4060 Ti 16 ГБ, сборка **b11382** (CUDA 12.4). Срез: 2026-10-08.
+RTX 4060 Ti 16 ГБ, сборка **b11382** (CUDA 12.4). Срез: 2026-10-09.
 
 Обозначения: ✅ берём · ⚠️ с оговорками · ❌ не берём · 📌 по назначению (замеров нет) · 🗑 файл удалён с диска.
 «Тестировали» = что реально измеряли в этом репозитории (остальное — не проверено).
@@ -30,15 +30,16 @@ RTX 4060 Ti 16 ГБ, сборка **b11382** (CUDA 12.4). Срез: 2026-10-08.
 | Gemma-4-26B-A4B **WaifuGemma4** (hiwaifu-research) | — | i1-IQ3_XXS | только русский; скорость | ⚠️ RU 96 % на карточке, низкая T портит; RP НЕ меряли (по опыту — слабое) 🗑 | 85 t/s | `gemma4-26a4b-waifugemma-nothink-b11382.bat` | `docs\quality\sampling-quality.md` |
 | Gemma-4-31B **StyleTune-31B** (Gryphe) | — | i1-IQ3_XXS | русский | ❌ непригоден (17–0 %), битый repack 🗑 | — | — | `docs\quality\sampling-quality.md` §5.4 |
 | **Qwen3.6-35B-A3B Genesis Hermes V7** (mradermacher i1) | 3.35 (gemma 3.81 · **Qwen 2.90**) | i1-IQ4_XS | RP (скрин, **nothink**, 2 судьи); русский; скорость | ❌ **не апгрейд**: ниже базовых Qwen и нашего топа; персонаж/инициатива/память слабые; RU 100 % (Caliper 72.4 не подтвердился) | TG 41.6 t/s; IQ4_XS 17.9 ГиБ → offload, без MTP | `qwen36-35b-a3b-genesis-hermes-v7-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` §5.12 |
+| **Qwen3.6-27B Fable-Fusion-711 heretic NEO-MAX** (DavidAU) | **3.46 панель 4 судей** (No 3.46 · Think 3.45, N=48); локальные gemma 4.06 / **Qwen 3.10** (No, родств. база) | IQ2_M | RP (скрин, **панель 4 судей**, оба режима); русский; скорость; think | ⚠️ **середина, не апгрейд**: в `rp-ranking.md` **No #19 · Think #12**; ниже Gemma-лидеров (StyleTune 3.78, Boulesis 3.74) и 31B-ядра (3.51–3.59); **русский — лучшая ось** (Чисто 100 % / Cyr 100 %, язык 4.1–4.4), память `school` 3.9; слабые оси — **персонаж 2.96** (сглаживает характер, рационализирует эмоции), **инициатива 3.0** (пассивна: отказ + повтор), **повторы 2.7** (однотипные реплики между сидами); POV-ошибки в think; **think дублирует ответ** (теряет прирост) | RP 13.2 (No) · 14.5 (Think) t/s; RU 100 %; встроенная MTP | `qwen36-27b-fable-fus-711-nothink-b11382.bat` (+ `-think`) | `docs\quality\rp-quality-eval.md` §5.18 |
 | **Gemma-4-26B-A4B G4-MeroMero it-uncensored-heretic** (llmfan46/mradermacher i1) | 3.81 (gemma 4.46 · **Qwen 3.15**) | i1-IQ4_XS | RP (скрин, 2 судьи); русский; скорость; think | ❌ **не апгрейд**: ниже базы Gemma-26B (Qwen 3.56) и лидеров; повторы (1.67), память-ловушка «Питер» (2/3 сида), пассивна в соблазне; RU **100 %**, быстрый MoE 62 t/s; **think сломан** (Чисто 17 %, утечка reasoning) | TG 62.1 t/s (No); 15.5 ГБ | `gemma4-26a4b-meromero-nothink-b11382.bat` (think непригоден) | `docs\quality\rp-quality-eval.md` §5.13 |
 | **Dans-PersonalityEngine-V1.3.0-24b** (PocketDoc; база Mistral-Small-3.1) | **2.54** (gemma 3.94 · **Qwen 2.54**) | IQ4_XS | RP (скрин, nothink, 2 судьи); русский; скорость | ⚠️ **не character-RP** (personality/chat-тюн): персонаж 1.5, «быстрое согласие», пассивность; **русский держит чисто (100 %)**, хотя в карточке `en`; годится как RU/EN чат-компаньон | TG 18.9 t/s; 15.0 ГБ | `dans-pers13-nothink-b11382.bat` | `docs\quality\rp-quality-eval.md` §5.14 |
 | **Gemma-4-26B-A4B Kitchoon** (SubMaroon) | **2.72 панель 4 судей** (No 3.25 · Think 2.09, N=44); локальные gemma 3.88 / Qwen 3.17 (No) | i1-IQ4_XS | RP (скрин, **панель 4 судей**, оба режима); русский; скорость; think | ❌ **не апгрейд — слабейший из 26B-мёржей** (ниже Goetia 3.55, DTV2 3.51, бесплатных GLM-Flash): память 2.25 (3/3 сида приняли ложный «Питер»), характер смягчён, шаблоны, BPE-склейка `дождrains`; **think непригоден** (Чисто 0 %, англ. reasoning утекает в ответ) | RP 55 t/s (No) · 58 (Think); RU 83 % (No) / 0 % (Think); 15.4–15.8 ГБ | `gemma4-26a4b-kitchoon-nothink-b11382.bat` (+ `-think`) | `docs\quality\rp-quality-eval.md` §5.17 |
 
 ¹ N ответов: DTV2 10, Schattenblume 20, StyleTune 11, Goetia 11, Artemis 6 (часть пунктов судья пропустила);
 Glistening 19, StyleSwap 21 (полный набор, два судьи); heretic-ARA 12 (скрин, два судьи);
-**Boulesis v2.1 48** и **Kitchoon 44** (панель 4 судей × 2 режима).
+**Boulesis v2.1 48**, **Kitchoon 44** и **Qwen3.6-27B Fable 48** (панель 4 судей × 2 режима).
 **Масштаб чисел:** DTV2, Schattenblume, StyleTune, Goetia, Artemis, heretic-ARA, **Boulesis v2.1**,
-**Kitchoon** — **2 сценария** (Boulesis/Kitchoon — панель 4 судей, остальные — судья 26B);
+**Kitchoon**, **Qwen3.6-27B Fable** — **2 сценария** (Boulesis/Kitchoon/Qwen3.6-27B Fable — панель 4 судей, остальные — судья 26B);
 Glistening, StyleSwap, Giftige-Blume-v1 — **полный набор** (средний Gemma; строгий Qwen ниже — см. «Полный набор»).
 У «—» RP-бенчмарк не запускался.
 

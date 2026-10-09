@@ -34,8 +34,9 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
 | 16 | **Giftige-Blume-v1 31B** | Local | 3.58 | 6 | ~22 t/s |
 | 17 | Goetia-26B-A4B v1.6 | Local | 3.55 | 2 | ~70 t/s |
 | 18 | **Dark-Thoughts V2 31B** | Local | 3.51 | 2 | ~24 t/s |
-| 19 | GLM-4.7-Flash | Cloud | 3.35 | 2 | **free** |
-| 20 | GLM-4.5-Flash | Cloud | 3.28 | 2 | **free** |
+| 19 | **Qwen3.6-27B Fable-Fusion-711** | Local | **3.46** | 2 | ~13 t/s; Qwen-судья — родственная база |
+| 20 | GLM-4.7-Flash | Cloud | 3.35 | 2 | **free** |
+| 21 | GLM-4.5-Flash | Cloud | 3.28 | 2 | **free** |
 
 ## Thinking
 
@@ -52,7 +53,8 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
 | 9 | base Gemma-4-26B-A4B-it *(baseline, self-eval)* | Local | 3.61 | 2 | ~55 t/s |
 | 10 | **Boulesis-v2.1 26B-A4B** | Local | 3.60 | 2 | ~59 t/s |
 | 11 | Glistening-Gem v2.1 31B | Local | 3.41 | 6 | ~31 t/s |
-| 12 | G4-MeroMero-26B-A4B-heretic | Local | 3.37 | 2 | ~66 t/s |
+| 12 | **Qwen3.6-27B Fable-Fusion-711** | Local | **3.45** | 2 | ~15 t/s; think дублирует ответ |
+| 13 | G4-MeroMero-26B-A4B-heretic | Local | 3.37 | 2 | ~66 t/s |
 
 > Думающий режим у большинства 31B-мержей в llama.cpp **сломан** (пустые ответы / утечка reasoning) —
 > рабочий режим по умолчанию **Non-Think**; в этой таблице только те, где think реально работает.
@@ -74,6 +76,7 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
   Cloud — GLM-4.7-FlashX (слабее и платный). Детали и вердикты — `docs\models.md`.
 
 > Оговорки: DeepSeek-строки судят и DeepSeek-судьи, а `base Gemma-26B` — сама Gemma-судья (self-eval —
-> балл завышен); у `Boulesis-26B` та же база у gemma-судьи (родственная, не идентичная); `сц=6` строже
+> балл завышен); у `Boulesis-26B` та же база у gemma-судьи (родственная, не идентичная); у
+> `Qwen3.6-27B Fable-Fusion-711` Qwen-судья — родственная база (Qwen3.6, другой размер); `сц=6` строже
 > (на 2 сценах было бы выше); цены DeepSeek — off-peak (в пик ×2); t/s — RP на нашем стенде (16 ГБ);
 > итоговый выбор «под себя» — за пользователем.

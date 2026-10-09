@@ -70,6 +70,7 @@ curl.exe http://127.0.0.1:9931/health             # 503 при загрузке,
 | `gemma4-31b-dark-thoughts` / `-think` | Dark-Thoughts V2 | RP-эталон |
 | `gemma4-31b-glistening` / `-think` | Glistening-Gem v2.1 | RP-мерж |
 | `qwen38-27b`, `qwen38-27b-nothink`, `qwen38-27b-base-rp-*` | Qwen3.8-27B | универсальная dense |
+| `qwen36-27b-fable-nothink` / `-think` / `-author` | Qwen3.6-27B Fable-Fusion-711 (dense heretic, MTP) | RU-общего профиля (панель 3.46); `-author` — сэмплинг автора (3.30) |
 | `swift-1.5`, `-nothink`, `-agent`, `-131k` | Swift-1.5-Qwen3.8-27B | efficient-reasoning / агенты |
 | `dans-pers13` | Dans-PersonalityEngine-24B | чат-компаньон (на стенде файла нет) |
 
@@ -152,7 +153,7 @@ Invoke-RestMethod http://127.0.0.1:9931/v1/chat/completions -Method Post -Body $
 
 ## Проверка (2026-10-08, RTX 4060 Ti 16 ГБ, b11382)
 
-- Сборка пресета: включено **26** моделей, пропущено 1 (`dans-pers13` — файла нет).
+- Сборка пресета: включено **29** моделей (+3 — Qwen3.6-27B Fable no-think/think/author), пропущено 1 (`dans-pers13` — файла нет).
 - `GET /v1/models` вернул 26 id; парсинг конфига без ошибок.
 - Реальная загрузка и генерация: `qwen36-35b-a3b` — ок (mmproj, MTP); базовый RP —
   ответ за 4 с; переключение на `gemma4-31b-blume-v1` (внешний `model-draft`) —
