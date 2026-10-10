@@ -7,6 +7,9 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
 сценариев в прогоне (**6 строже**, на 2 было бы выше); `Примечание` — для **Local** скорость RP на
 16 ГБ (наш стенд), для **Cloud** — цена за 1M токенов (input/output), USD.
 
+**Ссылки:** имя **Local**-модели ведёт на её GGUF-квантование на Hugging Face (`Kitchoon-V2` —
+официальный репозиторий с gated-доступом).
+
 **Как читать:** сравнивать только внутри таблицы. Судьи расходятся — подробности и per-judge числа:
 [docs\quality\rp-quality-eval.md](rp-quality-eval.md), [docs\quality\cloud-api-rp-eval.md](cloud-api-rp-eval.md). Отклонённые — [docs\models.md](../models.md).
 
@@ -21,22 +24,22 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
 | 3 | **GLM-5.2** | Cloud | **3.90** | 2 | 1.4 / 4.4 USD за 1M |
 | 4 | **GLM-4.7** | Cloud | 3.87 | 2 | 0.6 / 2.2 USD за 1M |
 | 5 | **GLM-5** | Cloud | 3.83 | 2 | 1 / 3.2 USD за 1M |
-| 6 | **StyleTune-V2 26B** | Local | **3.78** | 2 | ~66 t/s |
-| 7 | base Gemma-4-26B-A4B-it *(baseline, self-eval)* | Local | 3.76 | 2 | ~55 t/s |
-| 8 | **Boulesis-v2.1 26B-A4B** | Local | **3.74** | 2 | ~55 t/s; gemma-судья — та же база (родственная) |
+| 6 | **[StyleTune-V2 26B](https://huggingface.co/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF)** | Local | **3.78** | 2 | ~66 t/s |
+| 7 | [base Gemma-4-26B-A4B-it](https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF) *(baseline, self-eval)* | Local | 3.76 | 2 | ~55 t/s |
+| 8 | **[Boulesis-v2.1 26B-A4B](https://huggingface.co/mradermacher/Boulesis-v2.1-26B-A4B-i1-GGUF)** | Local | **3.74** | 2 | ~55 t/s; gemma-судья — та же база (родственная) |
 | 9 | GLM-5.1 | Cloud | 3.70 | 2 | 1.4 / 4.4 USD за 1M |
-| 10 | base Gemma-4-31B-it *(baseline)* | Local | 3.70 | 2 | ~18 t/s |
-| 11 | **G4-MeroMero-26B-A4B-heretic** | Local | 3.70 | 2 | ~62 t/s |
-| 12 | **Kitchoon-V2 26B-A4B** (Q6_K) | Local | **3.67** | 2 | ~27 t/s; характер смягчён, петли жестов, память ловит «Питер» (см. оговорки) |
+| 10 | [base Gemma-4-31B-it](https://huggingface.co/unsloth/gemma-4-31B-it-GGUF) *(baseline)* | Local | 3.70 | 2 | ~18 t/s |
+| 11 | **[G4-MeroMero-26B-A4B-heretic](https://huggingface.co/mradermacher/G4-MeroMero-26B-A4B-it-uncensored-heretic-i1-GGUF)** | Local | 3.70 | 2 | ~62 t/s |
+| 12 | **[Kitchoon-V2 26B-A4B](https://huggingface.co/SubMaroon/Kitchoon-V2-26B-A4B-GGUF)** (Q6_K, gated) | Local | **3.67** | 2 | ~27 t/s; характер смягчён, петли жестов, память ловит «Питер» (см. оговорки) |
 | 13 | GLM-4.6 | Cloud | 3.64 | 2 | 0.6 / 2.2 USD за 1M |
-| 14 | **Glistening-Gem v2.1 31B** | Local | 3.61 | 6 | ~23 t/s |
-| 15 | **Gemma-4-31B heretic-ARA** | Local | 3.59 | 2 | ~25 t/s |
-| 16 | **Schattenblume 31B** | Local | 3.59 | 2 | ~22 t/s |
-| 17 | **Giftige-Blume-v1 31B** | Local | 3.58 | 6 | ~22 t/s |
-| 18 | Goetia-26B-A4B v1.6 | Local | 3.55 | 2 | ~70 t/s |
-| 19 | **Dark-Thoughts V2 31B** | Local | 3.51 | 2 | ~24 t/s |
-| 20 | **Qwen3.6-27B Fable-Fusion-711 (i1-IQ3_S)** | Local | **3.47** | 2 | ~18 t/s; Qwen-судья — родственная база |
-| 21 | Qwen3.6-27B Fable-Fusion-711 (NEO IQ2_M) | Local | 3.46 | 2 | ~18 t/s (без спец.); в think дублирует ответ |
+| 14 | **[Glistening-Gem v2.1 31B](https://huggingface.co/mradermacher/Glistening-Gem-31B-v2.1-i1-GGUF)** | Local | 3.61 | 6 | ~23 t/s |
+| 15 | **[Gemma-4-31B heretic-ARA](https://huggingface.co/mradermacher/gemma-4-31b-it-heretic-ara-i1-GGUF)** | Local | 3.59 | 2 | ~25 t/s |
+| 16 | **[Schattenblume 31B](https://huggingface.co/mradermacher/Schattenblume-31B-i1-GGUF)** | Local | 3.59 | 2 | ~22 t/s |
+| 17 | **[Giftige-Blume-v1 31B](https://huggingface.co/mradermacher/Gemma-4-Giftige-Blume-31B-v1-i1-GGUF)** | Local | 3.58 | 6 | ~22 t/s |
+| 18 | [Goetia-26B-A4B v1.6](https://huggingface.co/mradermacher/Goetia-26B-A4B-v1.6-i1-GGUF) | Local | 3.55 | 2 | ~70 t/s |
+| 19 | **[Dark-Thoughts V2 31B](https://huggingface.co/mradermacher/Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF)** | Local | 3.51 | 2 | ~24 t/s |
+| 20 | **[Qwen3.6-27B Fable-Fusion-711](https://huggingface.co/mradermacher/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-MTP-i1-GGUF) (i1-IQ3_S)** | Local | **3.47** | 2 | ~18 t/s; Qwen-судья — родственная база |
+| 21 | [Qwen3.6-27B Fable-Fusion-711](https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF) (NEO IQ2_M) | Local | 3.46 | 2 | ~18 t/s (без спец.); в think дублирует ответ |
 | 22 | GLM-4.7-Flash | Cloud | 3.35 | 2 | **free** |
 | 23 | GLM-4.5-Flash | Cloud | 3.28 | 2 | **free** |
 
@@ -44,21 +47,21 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
 
 | # | Модель | Type | RP | сц | Примечание |
 | --: | --- | :--: | --: | --: | --- |
-| 1 | **Dark-Thoughts V2 31B** | Local | **4.01** | 2 | ~27 t/s |
+| 1 | **[Dark-Thoughts V2 31B](https://huggingface.co/mradermacher/Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF)** | Local | **4.01** | 2 | ~27 t/s |
 | 2 | **GLM-5.3** *(thinking форсирован)* | Cloud | 3.87 | 2 | 1.4 / 4.4 USD за 1M |
-| 3 | **Schattenblume 31B** | Local | 3.83 | 2 | ~28 t/s |
-| 4 | **StyleTune-V2 26B** | Local | 3.83 | 2 | ~60 t/s |
-| 5 | base Gemma-4-31B-it *(baseline)* | Local | 3.81 | 2 | ~19 t/s |
+| 3 | **[Schattenblume 31B](https://huggingface.co/mradermacher/Schattenblume-31B-i1-GGUF)** | Local | 3.83 | 2 | ~28 t/s |
+| 4 | **[StyleTune-V2 26B](https://huggingface.co/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF)** | Local | 3.83 | 2 | ~60 t/s |
+| 5 | [base Gemma-4-31B-it](https://huggingface.co/unsloth/gemma-4-31B-it-GGUF) *(baseline)* | Local | 3.81 | 2 | ~19 t/s |
 | 6 | GLM-5.3-Flash *(thinking форсирован)* | Cloud | 3.81 | 2 | 0.15 / 0.50 USD за 1M |
-| 7 | **Qwen3.6-27B Fable-Fusion-711 (i1-IQ3_S)** | Local | **3.79** | 2 | ~18 t/s; **лучше IQ2_M** (3.45) |
-| 8 | Gemma-4-31B heretic-ARA | Local | 3.77 | 2 | ~31 t/s |
-| 9 | Giftige-Blume-v1 31B | Local | 3.75 | 6 | ~30 t/s |
-| 10 | base Gemma-4-26B-A4B-it *(baseline, self-eval)* | Local | 3.61 | 2 | ~55 t/s |
-| 11 | **Boulesis-v2.1 26B-A4B** | Local | 3.60 | 2 | ~59 t/s |
-| 12 | **Kitchoon-V2 26B-A4B** (Q6_K) | Local | 3.58 | 2 | ~23 t/s; **think не думает** — канал закрывается мгновенно (≈ non-think) |
-| 13 | Qwen3.6-27B Fable-Fusion-711 (NEO IQ2_M) | Local | 3.45 | 2 | ~15 t/s; think дублирует ответ |
-| 14 | Glistening-Gem v2.1 31B | Local | 3.41 | 6 | ~31 t/s |
-| 15 | G4-MeroMero-26B-A4B-heretic | Local | 3.37 | 2 | ~66 t/s |
+| 7 | **[Qwen3.6-27B Fable-Fusion-711](https://huggingface.co/mradermacher/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-MTP-i1-GGUF) (i1-IQ3_S)** | Local | **3.79** | 2 | ~18 t/s; **лучше IQ2_M** (3.45) |
+| 8 | [Gemma-4-31B heretic-ARA](https://huggingface.co/mradermacher/gemma-4-31b-it-heretic-ara-i1-GGUF) | Local | 3.77 | 2 | ~31 t/s |
+| 9 | [Giftige-Blume-v1 31B](https://huggingface.co/mradermacher/Gemma-4-Giftige-Blume-31B-v1-i1-GGUF) | Local | 3.75 | 6 | ~30 t/s |
+| 10 | [base Gemma-4-26B-A4B-it](https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF) *(baseline, self-eval)* | Local | 3.61 | 2 | ~55 t/s |
+| 11 | **[Boulesis-v2.1 26B-A4B](https://huggingface.co/mradermacher/Boulesis-v2.1-26B-A4B-i1-GGUF)** | Local | 3.60 | 2 | ~59 t/s |
+| 12 | **[Kitchoon-V2 26B-A4B](https://huggingface.co/SubMaroon/Kitchoon-V2-26B-A4B-GGUF)** (Q6_K, gated) | Local | 3.58 | 2 | ~23 t/s; **think не думает** — канал закрывается мгновенно (≈ non-think) |
+| 13 | [Qwen3.6-27B Fable-Fusion-711](https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF) (NEO IQ2_M) | Local | 3.45 | 2 | ~15 t/s; think дублирует ответ |
+| 14 | [Glistening-Gem v2.1 31B](https://huggingface.co/mradermacher/Glistening-Gem-31B-v2.1-i1-GGUF) | Local | 3.41 | 6 | ~31 t/s |
+| 15 | [G4-MeroMero-26B-A4B-heretic](https://huggingface.co/mradermacher/G4-MeroMero-26B-A4B-it-uncensored-heretic-i1-GGUF) | Local | 3.37 | 2 | ~66 t/s |
 
 > Думающий режим у большинства 31B-мержей в llama.cpp **сломан** (пустые ответы / утечка reasoning) —
 > рабочий режим по умолчанию **Non-Think**; в этой таблице только те, где think реально работает.

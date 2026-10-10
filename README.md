@@ -1,335 +1,215 @@
-# GGUFLauncher — проверенные конфиги запуска локальных LLM (llama.cpp)
+# GGUFLauncher — готовые конфиги запуска локальных LLM (llama.cpp)
 
-Здесь лежат **готовые конфиги** для llama.cpp, отобранные бенчмарками на реалистичных задачах
-(RP/чат, код, математика, суммаризация — без повторяющихся промптов), плюс рекомендации под
-разные видеокарты и задачи.
-Тестовый стенд: **RTX 4060 Ti 16 GB, Ryzen 7 5700X, 32 GB RAM, Windows**.
-Логи исследований по каждой модели — в [docs](docs), сырые замеры — в [bench\runs\results.jsonl](bench/runs/results.jsonl).
-**Что уже проверено и не требует повторов — [docs\researched.md](docs/researched.md).**
+Подобранные бенчмарками конфиги для llama.cpp: скорость на реалистичных промптах (RP/чат/код/
+математика) и качество RP, проверенное LLM-судьями. Тестовый стенд: **RTX 4060 Ti 16 ГБ, Ryzen 7
+5700X, 32 ГБ, Windows**, сборка llama.cpp — b11382 (CUDA 12.4).
+
+Здесь — что запустить и что выбрать. Все исследования, методики и полные таблицы — в
+[docs\README.md](docs/README.md); что уже проверено и не требует повторов — [docs\researched.md](docs/researched.md).
 
 ## Быстрый старт
 
-1. Скопируйте [config.example.bat](config.example.bat) в `config.local.bat` и укажите свои пути:
-   `LLAMA_SERVER` (llama-server.exe), `MODELS_DIR` (папка с моделями), при необходимости `LLAMA_DIR`.
-   Выпуск llama.cpp можно взять из `downloads\llama-b11382-cu124\` или использовать свой.
-2. Выберите `.bat` из таблицы ниже под свою модель и задачу — они берут пути из `config.local.bat`.
-3. Запустите и проверьте строку `listening on http://...` в консоли.
+1. Скопируйте [config.example.bat](config.example.bat) → `config.local.bat` и укажите свои пути:
+   `LLAMA_SERVER` (llama-server.exe) и `MODELS_DIR` (папка с GGUF). Готовая сборка — в
+   `downloads\llama-b11382-cu124\`.
+2. Выберите `.bat` под свою задачу из таблицы ниже и запустите (все конфиги — в
+   [launch\b11382-cu124](launch/b11382-cu124)).
+3. Дождитесь строки `listening on http://...` — сервер готов (OpenAI-совместимый API).
 
-Не хочется выбирать `.bat` на каждую модель? Поднимите **router-режим** — один сервер
-обслуживает все модели, что есть на ПК; клиент выбирает её по имени в запросе:
-[launch\router\run-router.bat](launch/router/run-router.bat). Для RP — отдельный [launch\router\run-rp-router.bat](launch/router/run-rp-router.bat)
-(порт 9932, только проверенные RP-модели). Подробности — [docs\research\router-mode.md](docs/research/router-mode.md).
+**Не хочется выбирать `.bat` на каждую модель** — поднимите роутер: один сервер обслуживает все
+модели, клиент выбирает её по имени в поле `model` — [launch\router\run-router.bat](launch/router/run-router.bat).
+Для RP есть отдельный [run-rp-router.bat](launch/router/run-rp-router.bat) (порт 9932, только
+проверенные RP-модели). Подробности — [docs\research\router-mode.md](docs/research/router-mode.md).
 
-## Готовые конфиги (`.bat`)
+## Какую модель выбрать
 
-Скорость генерации (t/s) на **реалистичных** задачах, сборка b11382, 16 ГБ: RP / обычный чат /
-код / математика. Датасет — [bench\requests_real.json](bench/requests_real.json).
+### RP / креатив
 
-| Модель | RP | Чат | Код | Матем | Конфиг |
-| --- | ---: | ---: | ---: | ---: | --- |
-| **Qwen3.6-35B-A3B** (MoE 3B акт., Q2_K_XL) | **82** | **93** | **111** | **121** | [launch\b11382-cu124\qwen36-35b-a3b\qwen36-35b-a3b-mtp-b11382.bat](launch/b11382-cu124/qwen36-35b-a3b/qwen36-35b-a3b-mtp-b11382.bat) |
-| **Gemma-4-26B-A4B Goetia v1.6** (MoE, IQ3_XXS, RP-мерж) | **~73** | — | — | — | `...gemma4-26a4b-goetia-nothink-b11382.bat` (think непригоден) |
-| **Gemma-4-26B-A4B StyleTune** (MoE, IQ4_XS) | **63**¹ | 70 | 100 | 107 | RP — `...styletune-nothink-nospec-b11382.bat`; чат/код — `...styletune-b11382.bat` |
-| **Gemma-4-26B-A4B Boulesis v2.1** (MoE, IQ4_XS, RP-мерж) | **55**² | — | — | — | `...gemma4-26a4b-boulesis-v21-nothink-b11382.bat` (+ `-think`) |
-| **Qwen3.6-27B Fable-Fusion-711** (dense, IQ2_M, heretic-мерж) | **18**³ | 18 | 19 | 20 | [launch\b11382-cu124\qwen36-27b\qwen36-27b-fable-fus-711-nothink-b11382.bat](launch/b11382-cu124/qwen36-27b/qwen36-27b-fable-fus-711-nothink-b11382.bat) (+ `-think`, `-author`, `-mtp`) |
-| Swift-1.5-Qwen3.8-27B (dense, IQ2_S-mtp) | 28 | 37 | 36 | 37 | [launch\b11382-cu124\swift\swift-best-b11382.bat](launch/b11382-cu124/swift/swift-best-b11382.bat) |
-| **Gemma-4-31B Glistening-Gem v2.1** (dense RP-мерж, IQ3_XXS) | 23 | — | — | — | `...gemma4-31b-glistening-nothink-b11382.bat` (+ `-think`) |
-| Gemma-4-31B Dark-Thoughts V2 (dense, IQ3_XXS) | 23 | 31 | 48 | 47 | `...gemma4-31b-dark-thoughts-nothink-b11382.bat` (+ `-think`) |
-| **Split-Untied-31B** (dense RP-мерж, IQ3_XXS) | **23** | 34 | 47 | 46 | `...-split-untied-nothink...`; RU — `...-nothink-ru...`; think — `...-think...` |
-| **Gemma-4-31B Giftige-Blume-v1** (dense RP-мерж, IQ3_XXS) | 22 | — | — | — | `...gemma4-31b-blume-v1-nothink-b11382.bat` (+ `-think`) |
-| **Gemma-4-31B Schattenblume** (dense RP-мерж, IQ3_XXS) | 22 | — | — | — | `...gemma4-31b-schattenblume-nothink-b11382.bat` (+ `-think`) |
+Рабочий режим — **NoThink** (think у большинства 31B-мержей в llama.cpp ломается: пустые ответы).
+Баллы — среднее **панели 4 судей** (шкала 1–5) из витрины [docs\quality\rp-ranking.md](docs/quality/rp-ranking.md);
+**сравнивать баллы можно только внутри витрины**. Полные разборы и оговорки (self-eval облака,
+родственные базы) — [docs\quality\rp-quality-eval.md](docs/quality/rp-quality-eval.md).
+Имена моделей в таблицах — ссылки на их GGUF-квантование на Hugging Face.
 
-¹ У Gemma-26B на RP спекуляция **не окупается** (креатив плохо предсказуем): без MTP 63 t/s,
-с MTP ~50. Остальные числа — с MTP.
-² У Boulesis измерен только RP (55 t/s из харнесса `rp_quality.py`, не из `requests_real.json`);
-чат/код/математику не гоняли. Контекст `-c 51200` — при 14.3 ГБ модели 65536 уже впритык по VRAM.
-³ У Qwen3.6-27B Fable-Fusion-711 RP измерен **без спекуляции — 17.8 t/s** (с MTP на RP 13.5:
-спекуляция вредит); код/математика — с MTP 19/20 t/s, чат 18. Кодинг-профиль — `...-mtp-b11382.bat`.
-`-c 51200` при 11.3 ГБ — есть запас по VRAM.
-«—»: у 31B RP-мержей мерили только RP (чат/код/математику не гоняли). Отбракованы (`.bat` есть,
-но **не рекомендуются**): `gemma4-31b-styleswap-*` (англ. вставки в русский), `gemma4-31b-artemis-*`
-(речевая каша), `gemma4-26a4b-meromero-*` (NoThink ниже базы Gemma-26B: повторы и слабая память;
-think непригоден — утечка reasoning), `gemma4-26a4b-kitchoon-*` (слабейший из 26B-мёржей: провал
-памяти — принимает ложный «Питер», шаблоны; think сломан — утечка английского reasoning) и
-`dans-pers13-*` (**не** character-RP: «быстрое согласие», персонаж слабый; но русский держит чисто —
-годится как чат-компаньон). Полный список файлов — [launch\b11382-cu124](launch/b11382-cu124).
-
-Код-профили `*-dflash-code.bat` (DFlash+ngram) полезны для правок/копирования больших файлов;
-на этом наборе они не перепроверялись — см. [docs\research\speculation-research.md](docs/research/speculation-research.md).
-Конфиги старой сборки (10472) удалены — используются только сборка b11382 ([launch\b11382-cu124](launch/b11382-cu124)).
-
-## Рекомендованные модели по задачам
-
-Только модели, которые реально запускались и измерялись в этом репозитории (логи — [docs](docs)).
-Конфиги — в [launch\b11382-cu124](launch/b11382-cu124). Нетестированные кандидаты — в [docs\research\rp-model-candidates.md](docs/research/rp-model-candidates.md)
-(это не рекомендация, а задел).
-
-**Что здесь измерено:** скорость (t/s), языковые артефакты и — с 2026-10 — связность RP через
-LLM-судью на «мнимой истории» ([docs\quality\rp-quality-eval.md](docs/quality/rp-quality-eval.md)). Итоговые RP-предпочтения всё равно
-согласовывать с пользователем (см. [AGENTS.md](AGENTS.md)).
-
-| Задача | Модель | Что измерено | Конфиг |
-| --- | --- | --- | --- |
-| **RP / креатив (качество)** | **Giftige-Blume-v1-31B (NoThink)**; Schattenblume-31B; Dark-Thoughts V2-31B; Glistening-Gem-31B-v2.1 | LLM-судья на «мнимой истории» ([docs\quality\rp-quality-eval.md](docs/quality/rp-quality-eval.md)): Blume **4.33** (Qwen 3.35) — лучшая **инициатива (4.0)**; лидеры 4.3–4.5 | `gemma4-31b-blume-v1-nothink-b11382.bat`, `gemma4-31b-schattenblume-nothink-b11382.bat`, `gemma4-31b-dark-thoughts-nothink-b11382.bat`, `gemma4-31b-glistening-nothink-b11382.bat` |
-| **Русский язык (наш тест)** | Dark Thoughts V2; StyleTune-26B; WaifuGemma4-26B; **Giftige-Blume-v1 / Glistening-Gem-v2.1** | чистота: 96–100 % / 96–100 % / 96 % / **Cyr 99.9 % и 100 %**. StyleTune-31B и Giftige-Blume-StyleSwap — **непригодны** (англ. вставки). Split-Untied 75 % → 96 % с RU-пресетом | `gemma4-31b-dark-thoughts-nothink-b11382.bat`, `gemma4-26a4b-styletune-nothink-nospec-b11382.bat`, `gemma4-26a4b-waifugemma-nothink-b11382.bat`, `gemma4-31b-blume-v1-nothink-b11382.bat`, `gemma4-31b-glistening-nothink-b11382.bat` |
-| **Код / агенты / рефакторинг** | Qwen3.6-35B-A3B + DFlash+ngram | +18 % рефакторинг, +44 % новый код к MTP | `qwen36-35b-a3b-dflash-code.bat` |
-| **Чат** | Qwen3.6-35B-A3B | 93 t/s | `qwen36-35b-a3b-mtp-b11382.bat` |
-| **Математика** | Qwen3.6-35B-A3B | 121 t/s | там же |
-| **Длинные документы / суммаризация** | Qwen3.6-35B-A3B (131k); Gemma-4-26B-A4B | PP ~800–1700 t/s | `qwen36-35b-a3b-mtp-b11382.bat`, `gemma4-26a4b-styletune-b11382.bat` |
-| **Dense — скорость на RP** | Gemma-4-31B Dark-Thoughts V2; Swift-1.5-27B | 23 / 23 / 28 t/s | `gemma4-31b-dark-thoughts-nothink-b11382.bat`, `...-split-untied-*`, `swift-best-b11382.bat` |
+| Что нужно | Модель | Балл (панель 4 судей) | Скорость RP | Конфиг |
+| --- | --- | --- | --- | --- |
+| Быстро и хорошо | **[StyleTune-V2 26B-A4B](https://huggingface.co/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF)** | **3.78** — лучший Local NoThink | ~63 t/s (без спец.) | [styletune-nothink-nospec](launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-styletune-nothink-nospec-b11382.bat) |
+| Баланс (MoE) | **[Boulesis v2.1 26B-A4B](https://huggingface.co/mradermacher/Boulesis-v2.1-26B-A4B-i1-GGUF)** | 3.74 | ~55 t/s | [boulesis-v21-nothink](launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-boulesis-v21-nothink-b11382.bat) |
+| Максимум качества, 31B dense | **[Giftige-Blume-v1](https://huggingface.co/mradermacher/Gemma-4-Giftige-Blume-31B-v1-i1-GGUF) · [Schattenblume](https://huggingface.co/mradermacher/Schattenblume-31B-i1-GGUF) · [Glistening-Gem v2.1](https://huggingface.co/mradermacher/Glistening-Gem-31B-v2.1-i1-GGUF) · [Dark-Thoughts V2](https://huggingface.co/mradermacher/Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF)** | 3.51–3.61; у Blume — лучшая инициатива (4.0) | 22–25 t/s | [blume-v1](launch/b11382-cu124/gemma4-31b/gemma4-31b-blume-v1-nothink-b11382.bat) · [schattenblume](launch/b11382-cu124/gemma4-31b/gemma4-31b-schattenblume-nothink-b11382.bat) · [glistening](launch/b11382-cu124/gemma4-31b/gemma4-31b-glistening-nothink-b11382.bat) · [dark-thoughts](launch/b11382-cu124/gemma4-31b/gemma4-31b-dark-thoughts-nothink-b11382.bat) (все `-nothink`) |
+| Лучший Think | **[Dark-Thoughts V2 31B](https://huggingface.co/mradermacher/Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF)** | **4.01** — лучший Local Think | ~27 t/s | [dark-thoughts-think](launch/b11382-cu124/gemma4-31b/gemma4-31b-dark-thoughts-think-b11382.bat) |
+| Верхний референс (не локально) | DeepSeek-V4-Pro · V4.1-Flash · GLM-5.2 — облако, API | 4.01 · 3.98 · 3.90 | — | [docs\quality\cloud-api-rp-eval.md](docs/quality/cloud-api-rp-eval.md) |
 
 ![RP-рейтинг моделей](docs/images/chart_rp_ranking.png)
 
+- **Русский язык**: чисто держат **Dark-Thoughts V2** и **StyleTune-V2** (96–100 % ответов без англ.
+  вставок и BPE-склеек); слабый Split-Untied лечится RU-пресетом (`temp 0.4`). Сэмплинг подбирается
+  под модель — [docs\quality\sampling-quality.md](docs/quality/sampling-quality.md).
+- **Пригодный baseline без тюна** — базовая [Gemma-4-26B-A4B-it](https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF) (панель 3.76, ~55 t/s):
+  [gemma4-26a4b-base-rp-nothink](launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-base-rp-nothink-b11382.bat).
+- **Хочется всё сразу:** RP-роутер (9932) — 4 лидера 31B + быстрые StyleTune/Goetia, выбор по имени.
+- **Под RP не брать:** Artemis-31B (речевая каша), Giftige-Blume-StyleSwap (англ. вставки), Kitchoon v1,
+  MeroMero (не апгрейд), Swift-1.5 и базовые Qwen — не RP-модели. Вердикты и кандидаты (без `.bat`
+  это не рекомендация) — [docs\models.md](docs/models.md).
+- Лидеры 31B идут плотной группой — итоговый вкусовой выбор за пользователем.
+
+### Остальные задачи
+
+- **Чат, код, математика, длинные документы — [Qwen3.6-35B-A3B](https://huggingface.co/unsloth/Qwen3.6-35B-A3B-MTP-GGUF)** (MoE, Q2_K_XL): 93 / 111 / 121 t/s,
+  контекст 131k, PP ~800–1700 t/s. Кодинг-профиль с DFlash+ngram: **+18 % рефакторинг**, **+44 %
+  новый код** к MTP. Конфиги: [qwen36-35b-a3b-mtp](launch/b11382-cu124/qwen36-35b-a3b/qwen36-35b-a3b-mtp-b11382.bat),
+  [qwen36-35b-a3b-dflash-code](launch/b11382-cu124/qwen36-35b-a3b/qwen36-35b-a3b-dflash-code.bat).
+- **Русский чат/код на Gemma-4 — [StyleTune-V2 26B-A4B](https://huggingface.co/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF)** (70/100/107 t/s): тот же `.bat`, что и для
+  чата — [gemma4-26a4b-styletune](launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-styletune-b11382.bat).
+- **Dense 27B (медленнее):** [Swift-1.5-27B](https://huggingface.co/ukisai/Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF) — 28–37 t/s, efficient reasoning/агенты
+  ([swift-best](launch/b11382-cu124/swift/swift-best-b11382.bat)); [Qwen3.6-27B Fable-Fusion-711](https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF) —
+  ~18–20 t/s, русский чистый ([fus-711](launch/b11382-cu124/qwen36-27b/qwen36-27b-fable-fus-711-nothink-b11382.bat),
+  [i1-iq3s](launch/b11382-cu124/qwen36-27b/qwen36-27b-fable-i1-iq3s-nothink-b11382.bat)).
+- **Несколько пользователей:** `-np 2` делит контекст между слотами и требует больше VRAM — на 16 ГБ
+  держите один слот и одну модель.
+
+## Готовые конфиги (`.bat`)
+
+Скорость TG (t/s) на реалистичных промптах ([bench\requests_real.json](bench/requests_real.json)):
+RP / чат / код / математика. «—» — не измеряли.
+
+| Модель (тип, квант) | RP | Чат | Код | Мат. | Конфиг |
+| --- | ---: | ---: | ---: | ---: | --- |
+| **[Qwen3.6-35B-A3B](https://huggingface.co/unsloth/Qwen3.6-35B-A3B-MTP-GGUF)** (MoE ~3B акт., Q2_K_XL) | **82** | **93** | **111** | **121** | [qwen36-35b-a3b-mtp](launch/b11382-cu124/qwen36-35b-a3b/qwen36-35b-a3b-mtp-b11382.bat) (+ [dflash-code](launch/b11382-cu124/qwen36-35b-a3b/qwen36-35b-a3b-dflash-code.bat)) |
+| **[Gemma-4-26B-A4B StyleTune-V2](https://huggingface.co/mradermacher/Gemma-4-26B-A4B-StyleTune-V2-GGUF)** (MoE, IQ4_XS) | 63¹ | 70 | 100 | 107 | RP — [styletune-nothink-nospec](launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-styletune-nothink-nospec-b11382.bat); чат/код — [styletune](launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-styletune-b11382.bat) |
+| **[Gemma-4-26B-A4B Boulesis v2.1](https://huggingface.co/mradermacher/Boulesis-v2.1-26B-A4B-i1-GGUF)** (MoE, IQ4_XS) | 55² | — | — | — | [boulesis-v21-nothink](launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-boulesis-v21-nothink-b11382.bat) (+ `-think`) |
+| **[Gemma-4-26B-A4B Goetia v1.6](https://huggingface.co/mradermacher/Goetia-26B-A4B-v1.6-i1-GGUF)** (MoE, IQ3_XXS) | ~73 | — | — | — | [goetia-nothink](launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-goetia-nothink-b11382.bat) (think непригоден) |
+| **[Giftige-Blume-v1 31B](https://huggingface.co/mradermacher/Gemma-4-Giftige-Blume-31B-v1-i1-GGUF)** (dense RP-мерж, IQ3_XXS) | 22 | — | — | — | [blume-v1-nothink](launch/b11382-cu124/gemma4-31b/gemma4-31b-blume-v1-nothink-b11382.bat) (+ `-think`) |
+| **[Schattenblume 31B](https://huggingface.co/mradermacher/Schattenblume-31B-i1-GGUF)** (dense RP-мерж, IQ3_XXS) | 22 | — | — | — | [schattenblume-nothink](launch/b11382-cu124/gemma4-31b/gemma4-31b-schattenblume-nothink-b11382.bat) (+ `-think`) |
+| **[Glistening-Gem v2.1 31B](https://huggingface.co/mradermacher/Glistening-Gem-31B-v2.1-i1-GGUF)** (dense RP-мерж, IQ3_XXS) | 23 | — | — | — | [glistening-nothink](launch/b11382-cu124/gemma4-31b/gemma4-31b-glistening-nothink-b11382.bat) (+ `-think`) |
+| **[Dark-Thoughts V2 31B](https://huggingface.co/mradermacher/Gemma-4-Dark-Thoughts-V2-31B-i1-GGUF)** (dense RP-мерж, IQ3_XXS) | 23 | 31 | 48 | 47 | [dark-thoughts-nothink](launch/b11382-cu124/gemma4-31b/gemma4-31b-dark-thoughts-nothink-b11382.bat) (+ `-think`) |
+| **[Split-Untied 31B](https://huggingface.co/mradermacher/Split-Untied-31B-i1-GGUF)** (dense RP-мерж, IQ3_XXS) | 23 | 34 | 47 | 46 | [nothink](launch/b11382-cu124/gemma4-31b/gemma4-31b-split-untied-nothink-b11382.bat); RU — [nothink-ru](launch/b11382-cu124/gemma4-31b/gemma4-31b-split-untied-nothink-ru-b11382.bat); [think](launch/b11382-cu124/gemma4-31b/gemma4-31b-split-untied-think-b11382.bat) |
+| **[Qwen3.6-27B Fable-Fusion-711](https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF)** (dense, IQ2_M) | 18³ | 18 | 19 | 20 | [fus-711-nothink](launch/b11382-cu124/qwen36-27b/qwen36-27b-fable-fus-711-nothink-b11382.bat) (+ `-think`, `-author`, `-mtp`); RP-квант — [i1-iq3s-nothink](launch/b11382-cu124/qwen36-27b/qwen36-27b-fable-i1-iq3s-nothink-b11382.bat) (+ `-think`) |
+| **[Swift-1.5-Qwen3.8-27B](https://huggingface.co/ukisai/Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF)** (dense, IQ2_S) | 28 | 37 | 36 | 37 | [swift-best](launch/b11382-cu124/swift/swift-best-b11382.bat) (+ `-nothink`, `-agent`, `-131k`) |
+
+¹ StyleTune-V2: RP измерен **без спекуляции** — на креативном тексте MTP не окупается (63 t/s против
+~50 с ним). Остальные числа — с MTP.
+² Boulesis: измерен только RP (харнесс качества). Контекст `-c 51200`: при модели 14.3 ГБ больший
+упирается в VRAM.
+³ Fable (IQ2_M): RP — без спекуляции 17.8 t/s (с MTP 13.5 — вредит); код/математика — с MTP.
+«—»: у 31B RP-мержей мерили в основном RP; полный список файлов — [launch\b11382-cu124](launch/b11382-cu124).
+
+Код-профили `*-dflash-code` — только для Qwen3.6; на Gemma-26B DFlash проигрывает MTP (−17 %).
+Конфиги старой сборки (10472) удалены — актуальна только b11382.
+
 ## Какая у вас видеокарта?
 
-**16 ГБ (как на стенде, проверено)** — берите конфиги выше как есть. Запаса VRAM хватает
-на 51k–131k контекста в зависимости от модели.
+- **16 ГБ (как на стенде — проверено):** конфиги выше работают как есть; контекст 51k–131k в
+  зависимости от модели.
+- **12 ГБ (ориентир):** кванты на 9–12 ГБ (IQ2_S/Q2_K, IQ3_XXS), контекст 32–64k, KV `q4_0`;
+  `--fit on` разложит слои сам, часть уедет на CPU — MTP-спекуляция частично компенсирует просадку.
+- **8 ГБ (ориентир):** реально 7–9B в IQ2/Q2 или лёгкие MoE; контекст 16–32k, KV `q4_0`; выгрузка
+  на CPU неизбежна.
+- **24 ГБ+ (ориентир):** KV можно поднять до `q8_0`/f16, контекст 131k+ и vision на GPU; перепроверьте
+  EAGLE-3/DSpark — на старших картах их оверхед может окупиться (на 16 ГБ они проиграли MTP).
 
-**12 ГБ** — ориентиры: кванты на 9–12 ГБ (IQ2_S/Q2_K, IQ3_XXS), контекст 32–64k, KV-кэш `q4_0`,
-`--fit on` сам разложит слои. Часть модели может уйти на CPU — это замедлит генерацию,
-поэтому спекуляция (MTP) становится особенно важной: она даёт +50…150 % и частично компенсирует.
-
-**8 ГБ** — реально запускать модели 7–9B в квантах IQ2/Q2 или MoE-модели (у них активных параметров мало).
-Контекст 16–32k, KV `q4_0`. Выгрузка экспертов/слоёв на CPU неизбежна — `--fit on` справится сам.
-Спекуляция и `cache_prompt` тут дают максимальный эффект.
-
-**24 ГБ+** — всё влезает с запасом: можно поднять KV до `q8_0`/f16, держать контекст 131k+ и включить
-vision на GPU. Отдельно перепроверьте EAGLE-3/DSpark — на старших картах их оверхед может окупиться
-(на 16 ГБ Ada они проиграли MTP), а DFlash-профили должны стать ещё выгоднее.
-
-*Оговорка: 12/8/24 ГБ мы не измеряли — это ориентиры, выведенные из замеров на 16 ГБ.*
-
-## Разные задачи — разные конфиги
-
-### Кодинг, агенты, рефакторинг
-- **Qwen3.6 + DFlash + ngram** (`qwen36-35b-a3b-dflash-code.bat`) — реальный выигрыш на коде:
-  рефакторинг **+18 %**, новый код **+44 %** к MTP, на RP не хуже. Но ест больше VRAM (~15.3 ГБ).
-- **Gemma-26B + DFlash + ngram** на реалистичном коде **проигрывает** MTP (−17 %) — берите
-  `gemma4-26a4b-styletune-b11382.bat`, а не `-dflash-code`.
-- Длинные агентные сессии: контекст 131k (Qwen3.6, вариант Gemma-26B в комментарии конфига).
-- Мультитёрн: клиент **обязан** слать `cache_prompt: true` — тогда PP падает с тысяч токенов до ~100
-  (кэш переиспользуется), а TG держится.
-- Инструменты/функции: шаблоны моделей их поддерживают; у Gemma-4 в конфиге включён `gemma4.jinja`.
-
-### RP, креатив, свободные диалоги
-- **Готовый RP-роутер:** [launch\router\run-rp-router.bat](launch/router/run-rp-router.bat) (порт 9932) — только проверенные
-  RP-модели (4 лидера 31B + быстрые StyleTune/Goetia), выбор по имени в поле `model`;
-  состав и оговорки — [docs\research\router-mode.md](docs/research/router-mode.md).
-- **Качество RP (LLM-судья, «мнимая история»):** методика и все числа — [docs\quality\rp-quality-eval.md](docs/quality/rp-quality-eval.md);
-  харнесс [bench\rp_quality.py](bench/rp_quality.py), судьи — `gemma-4-26B-A4B` (мягче) и `Qwen3.6-35B-A3B` MXFP4 (строже).
-  Текущие лидеры (NoThink, полный набор 6 сценариев, средний двух судей): **Giftige-Blume-v1 — 4.33 / 3.35**
-  (№1 по Caliper Combined и DarkRP; лучшая **инициатива 4.0**), Schattenblume 4.38/3.28, Glistening-Gem
-  v2.1 4.33/3.35, Dark-Thoughts V2 4.24/3.11. Все держат русский чисто.
-- **Витрина выбора (панель 4 судей, 2 сцены)** — [docs\quality\rp-ranking.md](docs/quality/rp-ranking.md). Лучший 26B-мёрж —
-  **Boulesis-v2.1-26B-A4B**: Non-Think **3.74** (~55 t/s, русский чистый), Think 3.60;
-  `...gemma4-26a4b-boulesis-v21-nothink-b11382.bat` (+ `-think`).
-- **Qwen3.6-27B Fable-Fusion-711** (dense heretic-мерж, ~18 t/s без спекуляции) — **квант решает**:
-  **i1-IQ3_S** (11.7 ГиБ) даёт панель **3.63** (No 3.47 · Think **3.79** — лучший think среди не-Gemma),
-  тогда как NEO **IQ2_M** — 3.46 (No ≈ Think). Слабые оси прежние (персонаж/инициатива), русский чистый
-  (~18 t/s, контекст q4_0 ~125k); **MTP на RP замедляет**. Конфиги:
-  `qwen36-27b-fable-i1-iq3s-nothink-b11382.bat` (+ `-think`) и `...-fus-711-nothink-...` (IQ2_M, + `-mtp`).
-- **Отбраковано по RP:** Artemis-31B-v1.2 (речевая каша при «Чисто 100 %»), Giftige-Blume-**StyleSwap**
-  (русский 3.3/2.6 — прививка головы StyleTune течёт в английский), StyleTune-31B.
-- **Базовые instruct-модели на RP** (скрин + полный набор, 2026-10-07): **Gemma-4-26B-A4B-it** —
-  пригодный baseline: у строгого судьи на 2 сценах выше DTV2/Schattenblume, на полном наборе **3.28 —
-  вровень со Schattenblume**, выше DTV2; слабости — повторы метафор, «сдача» в соблазне, сломанный think.
-  **Qwen3.6-35B-A3B и Qwen3.8-27B — слабо** (коротко, сухо, пассивно; think нестабилен).
-  Числа — [docs\quality\base-models-rp-eval.md](docs/quality/base-models-rp-eval.md).
-- Think у 31B-мержей капризен: часть ответов пустая (незакрытый `<channel|>`); у Blume безлимит бюджета
-  слегка уменьшает пустые, но качества не добавляет — рабочий режим **NoThink**.
-- Итоговые RP-предпочтения — за пользователем. **Базовый** Qwen3.6-35B-A3B и Swift-1.5 в RP не рекомендуются.
-  Скорости RP-моделей — ~21–31 t/s (в таблице выше; Qwen3.6 быстрее всех, но это не про качество).
-- **Русский текст (наш тест):** Dark Thoughts V2 — 96–100 % чистых, StyleTune-26B — 96–100 % и втрое
-  быстрее (69 t/s); Split-Untied слабее (75 %) — лечится `temp 0.4` (96 %) или грамматикой (100 %).
-- Dense-модели на RP заметно медленнее: Swift-1.5 ~28, Gemma-4-31B ~23 t/s. MTP и тут полезен
-  (+30…40 % к «без спекуляции»), но это потолок dense-модели на 16 ГБ.
-- **Частный случай:** у Gemma-4-26B-A4B на RP спекуляция *вредит* (без MTP 63 t/s, с MTP ~50).
-  Берите [launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-styletune-nothink-nospec-b11382.bat](launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-styletune-nothink-nospec-b11382.bat)
-  (`--reasoning off`, без MTP).
-- Сэмплинг — по карточке модели (Swift: temp 1.0; Gemma-4 26B/31B в наших конфигах: temp 0.6, min-p 0.1).
-- **Русский текст:** карточка Split-Untied (temp 1.0, min-p 0.03) даёт ~25 % ответов с англ. вставками
-  и BPE-склейками. Для русского RP берите `...gemma4-31b-split-untied-nothink-ru-b11382.bat`
-  (`temp 0.4`, `min-p 0.1`, `top-k` выключен) — см. раздел «Русский текст» ниже.
-- Для долгих RP-сессий важнее контекст и `cache_prompt`, чем спекуляция: держите запас VRAM 1.5–2 ГБ.
-- Скорость падает с глубиной: у Qwen3.6 RP ~103 t/s на 8k, ~86 на 32k, ~73 на 64k (принятие держится ~72–80 %).
-- Спекуляция не меняет качество ответов (проверяет каждый токен целевой моделью) — влияет только скорость/память.
-
-### Русский текст: артефакты сэмплинга
-- Gemma-4-мержи «протекают» на русском: залётные англ. слова (`That`, `The`) и BPE-склейки
-  (`anтично`, `remaining-м`). Причина — бедный на кириллицу токенизатор (5.1 %) плюс высокая температура.
-- **Слабые мержи** (Split-Untied): рабочая практика — **`temp 0.4–0.5`**, **`min-p 0.1`**, **`top-k` выключен**.
-  Карточка (temp 1.0) → ~25 % брака, `temp 0.4` → ~96 % чистых. Конфиг —
-  [launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-nothink-ru-b11382.bat](launch/b11382-cu124/gemma4-31b/gemma4-31b-split-untied-nothink-ru-b11382.bat).
-- **Здоровые модели** (Dark Thoughts V2, StyleTune-26B) низкая T не нужна: **`temp 0.7` + полный DRY**
-  (`dry_base 1.75`, `dry_allowed_length 2`, `dry_penalty_last_n 256`) = 100 % чистых; `temp 0.85` уже
-  даёт первые артефакты. Лексическое разнообразие (TTR150) от роста T почти не меняется (0.83→0.85) —
-  задирать T «ради богатства языка» смысла нет. XTC (0.5/0.1) — эффекта ноль.
-  Подробности — [docs\quality\sampling-quality.md](docs/quality/sampling-quality.md) §5.5.
-- `top-k` (в т.ч. официальный пресет Gemma-4 `top-k 64`) и высокий `top-p` на русском **вредят**.
-- **Выбор модели важнее сэмплинга** (наш тест, тот же русский набор): **Dark Thoughts V2** — 96–100 %
-  чистых, **StyleTune-26B** — 96–100 %; Split-Untied — 75 % (лечится `temp 0.4` или грамматикой).
-  StyleTune-**31B** `i1-IQ3_XXS` — **непригоден** (17–0 %, §5.4), а без явного `gemma4.jinja` вообще
-  зацикливается на `That`.
-- **Ещё проверено:** **WaifuGemma4-26B** — 96 % на карточном пресете и ~85 t/s (самая быстрая; низкая T
-  её **портит**: `temp 0.4` и `temp 0.7`+DRY → 79 %); **Artemis-31B-v1.2** — 92–96 % (редкие
-  BPE-склейки), на русском не выделяется. Вывод: **пресет подбирается под модель**, а не «один на всех».
-- **Детерминированный фикс:** GBNF-грамматика «только кириллица/цифры/пунктуация» даёт 100 % без
-  артефактов и без потери скорости (цена — нет латиницы/эмодзи/кода). `logit_bias` по служебным
-  токенам не помогает. Подробности — [docs\quality\sampling-quality.md](docs/quality/sampling-quality.md) §5.2–5.5; кандидаты и факторы —
-  [docs\research\rp-model-candidates.md](docs/research/rp-model-candidates.md).
-
-### Длинные документы, суммаризация, RAG
-- MoE-модели (Qwen3.6, Gemma-26B) — быстрая обработка длинных промптов (~800–1700 t/s), контекст 131k.
-- `ngram`-спекуляция *сама по себе* слабее MTP (у Qwen: 73 против 82–137 t/s) — включайте её только
-  вместе с DFlash и только на коде Qwen3.6.
-
-### Длинные сессии, переполнение контекста
-- **Окно делает клиент, а не сервер.** На Gemma-4/Qwen3.5 `--context-shift` и `--cache-reuse` не работают,
-  а промпт длиннее `-c` сервер отклоняет (HTTP 400). Рецепты и код-причины — [docs\research\context-infinite-chat.md](docs/research/context-infinite-chat.md).
-- «Вечный» префикс (system/persona + постоянный World Info + сводка) держите неизменным, историю —
-  append-only; иначе чекпоинты кэша инвалидируются и каждый ход = полный перепроцессинг.
-- SillyTavern: Summarize — только `Classic`, Chat Vectorization выключить. `Context (tokens)` в ST — это
-  промпт **минус длина ответа**, поэтому 51000 в ST и `-c 51200` несовместимы (ставьте ~48000).
-- Кэш промпта: `-np 1`, `--cache-ram`, `--cache-idle-slots`.
-
-### Несколько пользователей одновременно
-- `-np 2` и больше делит контекст между слотами; нужно больше VRAM, спекуляцию лучше оставить MTP.
+*12/8/24 ГБ не измерялись — это ориентиры, выведенные из замеров на 16 ГБ.*
 
 ## Короткие правила, которые дают больше всего
 
-1. **Обновите сборку llama.cpp** — на нашем стенде переход на актуальный релиз дал +10…60 % без смены конфига.
-2. **Спекуляция MTP** — главный рычаг на dense-моделях и на код/математике (там +50…180 %):
-   `--spec-draft-n-max 4…5`, `--spec-draft-p-min 0.5…0.75`. Но на RP у Gemma-26B MoE она мешает.
-3. **MoE-модели держите целиком в VRAM** — выгрузка экспертов на CPU даёт −32…−43 %.
-4. **Контекст — с запасом**, не «в упор»: перегрузка VRAM валит спекуляцию (до −45 %).
-5. **KV `q4_0`** экономит 0.5–2 ГБ и на 31B поднимает контекст с ~26k до ~116k
-   **без потери качества** (до 49k разницы между f16/q8_0/q4_0 нет). По скорости он
-   **не** быстрее f16 (`f16 ≥ q4_0 > q8_0`) — берите `q4_0` ради контекста, а не
-   скорости. FlashAttention обязателен. Подробности — [docs\research\kv-cache-quantization.md](docs/research/kv-cache-quantization.md).
-6. **Батчи и потоки не трогайте** (`-ub` сверх дефолта только ест VRAM).
-7. **Проверяйте скорость на своих задачах**: RP/креатив идёт на 30–60 % медленнее кода/математики
-   при том же конфиге — спекуляция хуже угадывает креативный текст.
+1. **MTP-спекуляция** — главный рычаг на dense-моделях и на коде/математике; на RP у Gemma-26B и
+   Qwen3.6-27B Fable она **вредит** — включайте осознанно (`--spec-draft-n-max 4…5`,
+   `--spec-draft-p-min 0.5…0.75`).
+2. **MoE-модель держите целиком в VRAM** — выгрузка экспертов на CPU даёт −32…−43 %.
+3. **Контекст — с запасом 1.5–2 ГБ**: перегруз VRAM валит спекуляцию (до −45 %).
+4. **KV-кэш `q4_0` — ради памяти, а не скорости** (`f16 ≥ q4_0 > q8_0`): на 31B поднимает контекст
+   с ~26k до ~116k без потери качества до 49k. Для tool/JSON и кода — сначала проверьте
+   ([docs\research\kv-cache-quantization.md](docs/research/kv-cache-quantization.md)). FlashAttention обязателен.
+5. **Батчи и потоки не трогайте** — `-ub` сверх дефолта только ест VRAM, `-t/-tb` на TG не влияют.
+6. **`cache_prompt: true` в клиенте** — в многотирне PP падает с тысяч токенов до ~100.
+7. **Свежая сборка llama.cpp**: старые флаги вроде `--no-mmap` в b11382 удалены (замена —
+   `--load-mode none`).
 
-![Спекуляция MTP: выигрыш по скорости](docs/images/chart_speculation_models.png)
+### Пример: ядро конфига и почему именно так
 
-### Квантование KV-кэша (проверено, 2026-10-08)
+Ключевые флаги двух реальных конфигов (полные и рабочие — по ссылкам; здесь ядро без путей).
 
-![Максимальный контекст от типа KV-кэша](docs/images/kv_max_context.png)
+**RP на dense 31B** — [gemma4-31b-dark-thoughts-nothink-b11382.bat](launch/b11382-cu124/gemma4-31b/gemma4-31b-dark-thoughts-nothink-b11382.bat):
 
-На StyleTune-26B-A4B и Schattenblume-31B: **до 49k тип KV не меняет качество** —
-`f16`, `q8_0`, `q4_0` и смешанный дали одинаковый recall, те же факты в длинных
-промптах и PPL в пределах шума. Реальная разница — в памяти: `q4_0` освобождает
-0.5–2.1 ГБ и на 31B поднимает контекст с ~26k (f16) до ~116k. Скорость: `f16 ≥ q4_0 >
-q8_0` (f16 считает FlashAttention нативно). Полностью — `[docs\research\kv-cache-quantization.md](docs/research/kv-cache-quantization.md)`,
-картинки — [docs\images](docs/images).
+```text
+-np 1 -c 51200                                  # один слот; контекст — по бюджету VRAM
+-fa on --fit on --load-mode none                # FlashAttention; авто-раскладка; быстрая загрузка
+-ctk q4_0 -ctv q4_0                             # KV q4_0: 31B ~26k → ~116k контекста
+--spec-type draft-mtp --spec-draft-n-max 5 --spec-draft-n-min 1 --spec-draft-p-min 0.75
+-md <драфт gemma-4-31B-it-assistant.Q4_K_M>     # внешний MTP-драфт
+--jinja --reasoning off --reasoning-budget 0    # RP — NoThink
+--temp 0.6 --min-p 0.1                          # RU-safe сэмплинг
+```
 
-⚠️ **Но это про recall, факты и PPL.** На *чувствительных* задачах (**tool/JSON,
-код, многотирн**) картина иная: по внешним замерам KL-дивергенция на Gemma-4
-заметна уже на `q8_0` (0.11–0.38), а под lossy-KV тихо страдают tool-call (по
-содержанию, не по синтаксису) и `pass@1` кода. Для агентов/JSON — не квантуйте KV
-без функционального теста. Разбор — [docs\research\kv-cache-external.md](docs/research/kv-cache-external.md).
+**Чат/код на MoE** — [qwen36-35b-a3b-mtp-b11382.bat](launch/b11382-cu124/qwen36-35b-a3b/qwen36-35b-a3b-mtp-b11382.bat):
 
-**Наша проверка (функциональная канарейка).** Прогнали сами ([bench\kv_canary.py](bench/kv_canary.py)):
-**tool/JSON — 12/12 у всех типов KV** (f16/q8_0/q4_0, обе модели; инструменты
-вытаскиваются с глубины 8k). Единственный сигнал — **срыв формата кода** у 31B под
-`q4_0` (писал JS вместо Python на одной неоднозначной задаче): 33/40 против 36/40
-у f16/q8_0 при `temp 0.7`. Подробности — [docs\research\kv-cache-quantization.md](docs/research/kv-cache-quantization.md) §4.3.
+```text
+-np 1 -c 131072                                 # MoE: KV и накладные дешевле — 131k помещается
+-fa on --fit on --load-mode none -tb 12
+-ctk q4_0 -ctv q4_0
+--spec-type draft-mtp --spec-draft-n-max 5 --spec-draft-n-min 1 --spec-draft-p-min 0.5
+--reasoning-budget 8192                         # ограничиваем think
+--jinja --temp 0.6
+```
+
+- `-np 1` — один слот: на 16 ГБ `-np 2` делит контекст и стоит ~15 % скорости.
+- `-c` подбирается **по бюджету VRAM, а не «на максимум»**: перегруз валит спекуляцию (до −45 %) и
+  роняет слои на CPU. Как посчитать свой — [docs\research\context-memory-model.md](docs/research/context-memory-model.md):
+  формула + `bench\vram_model.py`
+  (`.\.venv\Scripts\python.exe bench\vram_model.py --model <model.gguf> --tk q4_0 --tv q4_0`).
+- `-ctk/-ctv q4_0` — экономит 0.5–2 ГБ и поднимает контекст; до 49k качество не страдает, но `q4_0`
+  **не** быстрее f16 (`f16 ≥ q4_0 > q8_0`). С квантованным V обязателен `-fa on`.
+- `--spec-draft-n-max 5`, `--spec-draft-p-min 0.5…0.75` — рабочая глубина MTP (`nmax 8` хуже, под
+  копирование кода берут `3`); `p-min` — порог для драфта: 0.75 консервативнее и даёт более высокое
+  принятие. `-md` нужен для внешнего драфта Gemma; у Qwen3.6 MTP-голова встроена.
+- `--reasoning off` / `--reasoning-budget` — рабочий режим RP — NoThink; у думающих Qwen бюджет
+  просто не даёт think разрастаться.
+- `--temp 0.6 --min-p 0.1` — безопасная точка для русского; точный пресет подбирается под модель
+  ([docs\quality\sampling-quality.md](docs/quality/sampling-quality.md)).
 
 ## Чего избегать (проверено)
-- `top-k` (в т.ч. официальный пресет Gemma-4 `temp 1.0 / top-k 64`) и высокая температура на русском:
-  растут англ. вставки и BPE-склейки (~25 % брака против ~4 % при `temp 0.4`, см. [docs\quality\sampling-quality.md](docs/quality/sampling-quality.md)).
-- EAGLE-3 и DSpark на 16 ГБ — в 1.4–3 раза медленнее MTP (при более высоком «принятии»).
-- «Играть температурой» ради скорости: температура повышает **принятие**, но не TG (0.6–1.0 → ±3 %).
-- `--spec-draft-n-max 8 --spec-draft-p-min 0.8` (приём из GitHub #25198) — только под копирование кода
-  на dense-моделях; на MoE и на новом тексте вредит (проверено: −20 % на Qwen3.6 MoE).
-- DFlash + ngram — только для Qwen3.6 на коде; на **Gemma-26B** он на реальном коде даёт −17 % к MTP,
-  а `ngram` в одиночку слабее MTP везде.
-- `-ncmoe` на модели, которая помещается; `-ub 2048`; контекст «на всю память»;
-  погоня за процентом принятия вместо итоговой скорости; `-fa off` с квантованным V.
-- **Artemis-31B-v1.2 под RP не брать:** на наших RP-сценах — речевая деградация (циклы «идиотская»,
-  «иерархия») при «Чисто %» 100 %; «гладко, но глупо» ([docs\quality\rp-quality-eval.md](docs/quality/rp-quality-eval.md)).
-- Старый флаг `--no-mmap` в новых сборках — сервер не стартует (заменён на `--load-mode none`).
-- **Второй `llama-server` при занятой VRAM** (или любой другой процесс, съевший видеопамять): слои уезжают
-  на CPU, и генерация падает примерно вдвое (16 ГБ → ~24 t/s вместо ~48). Перед запуском нового конфига
-  останавливайте предыдущий сервер; в консоли перед стартом полезно глянуть `nvidia-smi` (должно быть свободно
-  хотя бы ~2 ГБ запаса).
+
+- `top-k` (включая официальный пресет Gemma-4 `top-k 64`) и высокую температуру на русском — до
+  ~25 % брака против ~4 % при `temp 0.4` ([docs\quality\sampling-quality.md](docs/quality/sampling-quality.md)).
+- EAGLE-3 и DSpark на 16 ГБ — в 1.4–3 раза медленнее MTP.
+- `--spec-draft-n-max 8 --spec-draft-p-min 0.8` вне копирования кода; `ngram` в одиночку слабее MTP;
+  DFlash+ngram — только для Qwen3.6 на коде.
+- `-ncmoe` на влезающей модели, `-ub 2048`, контекст «на всю память», `-fa off` с квантованным V.
+- «Играть температурой» ради скорости: TG не меняется (±3 %), растёт только принятие спекуляции.
+- Второй `llama-server` при занятой VRAM — слои уедут на CPU, генерация падает примерно вдвое.
 
 ## Где подробности
 
+Полный индекс — [docs\README.md](docs/README.md). Главные точки входа:
+
 | Что | Где |
 | --- | --- |
-| **Реестр моделей: протестированные и на будущее** | [docs\models.md](docs/models.md) |
-| Лог по Swift-1.5 (все серии замеров) | [docs\models\swift-1.5-27b.md](docs/models/swift-1.5-27b.md) |
-| Практическая инструкция по Swift-1.5 | [docs\models\swift-1.5-27b-launch.md](docs/models/swift-1.5-27b-launch.md) |
-| Логи исследований по Gemma-4 31B / 26B-A4B / Qwen3.6 | [docs\models\gemma-4-31b.md](docs/models/gemma-4-31b.md), [docs\models\gemma-4-26b-a4b.md](docs/models/gemma-4-26b-a4b.md), [docs\models\qwen36-35b-a3b.md](docs/models/qwen36-35b-a3b.md) |
-| **Оценка качества RP (LLM-судья, «мнимая история»)** | [docs\quality\rp-quality-eval.md](docs/quality/rp-quality-eval.md) |
-| **Сводный рейтинг RP: Thinking / Non-Thinking** | [docs\quality\rp-ranking.md](docs/quality/rp-ranking.md) |
-| **Облачные API-модели (DeepSeek, GLM) на RP** | [docs\quality\cloud-api-rp-eval.md](docs/quality/cloud-api-rp-eval.md); [bench\quality\api_rp_eval.py](bench/quality/api_rp_eval.py), `api_judge.py`, `api_metrics_summary.py` |
-| Логи по RP-мержам Gemma-4-31B (Split-Untied-31B; MeroMero v2 heretic — удалён) | [docs\models\gemma-4-31b-rp-merges.md](docs/models/gemma-4-31b-rp-merges.md) |
-| **Базовые instruct-модели на RP (baseline: Gemma-4-26B-A4B-it, Qwen3.6-35B-A3B, Qwen3.8-27B)** | [docs\quality\base-models-rp-eval.md](docs/quality/base-models-rp-eval.md) |
-| Сэмплинг и качество русского текста (RP Gemma-4: температура, top-k, min-p) | [docs\quality\sampling-quality.md](docs/quality/sampling-quality.md) |
-| **Квантование KV-кэша: влияет ли на память/ошибки и насколько** | [docs\research\kv-cache-quantization.md](docs/research/kv-cache-quantization.md); внешние данные — [docs\research\kv-cache-external.md](docs/research/kv-cache-external.md); картинки — [docs\images](docs/images); инструменты — [bench\kv_prompts.py](bench/kv_prompts.py), [bench\kv_quality.py](bench/kv_quality.py), [bench\kv_canary.py](bench/kv_canary.py), [bench\kv_code_seeds.py](bench/kv_code_seeds.py), [bench\plot_kv.py](bench/plot_kv.py) |
-| Внешний ресёрч: RP-модели Gemma 4 и русский (сообщество, HF, факторы) | [docs\research\rp-model-candidates.md](docs/research/rp-model-candidates.md) |
-| CaliperBench: RP-рейтинг Gemma 4 + **правило отбора «что держит русский» и шорт-лист** | [docs\research\caliperbench-2026-10.md](docs/research/caliperbench-2026-10.md), [docs\research\rp-model-candidates.md](docs/research/rp-model-candidates.md) §9 |
-| **Датасеты RP/ERP/DRP (EN/RU): пул и проверка по строкам** | [docs\research\rp-datasets-en-ru.md](docs/research/rp-datasets-en-ru.md), [docs\research\rp-datasets-quality-check.md](docs/research/rp-datasets-quality-check.md) |
-| Методы спекуляции, внешние спекуляторы, сравнение сборок | [docs\research\speculation-research.md](docs/research/speculation-research.md) |
-| **Реестр проверенного (не повторять)** | [docs\researched.md](docs/researched.md) |
-| **Router-режим: один сервер на все модели** | [launch\router\run-router.bat](launch/router/run-router.bat); RP — [launch\router\run-rp-router.bat](launch/router/run-rp-router.bat); [docs\research\router-mode.md](docs/research/router-mode.md) |
+| Реестр проверенного (не повторять исследования) | [docs\researched.md](docs/researched.md) |
+| Реестр моделей: тесты, вердикты, кандидаты, облако | [docs\models.md](docs/models.md) |
+| **RP-рейтинг: Think/NoThink, панель 4 судей** | [docs\quality\rp-ranking.md](docs/quality/rp-ranking.md) |
+| Методика оценки RP и полные разборы | [docs\quality\rp-quality-eval.md](docs/quality/rp-quality-eval.md) |
+| Русский текст и сэмплинг | [docs\quality\sampling-quality.md](docs/quality/sampling-quality.md) |
+| Спекуляция: MTP/DFlash/EAGLE, сравнение сборок | [docs\research\speculation-research.md](docs/research/speculation-research.md) |
+| KV-кэш: качество, память, контекст | [docs\research\kv-cache-quantization.md](docs/research/kv-cache-quantization.md) |
+| **Как посчитать контекст под свою VRAM** | [docs\research\context-memory-model.md](docs/research/context-memory-model.md), [bench\vram_model.py](bench/vram_model.py) |
 | Длинные сессии, «бесконечный» контекст, SillyTavern | [docs\research\context-infinite-chat.md](docs/research/context-infinite-chat.md) |
-| Готовые конфиги | [launch\b11382-cu124](launch/b11382-cu124) (единственная сборка; полный список — в таблице «Готовые конфиги») |
-| Харнесс, наборы тестов, сырые результаты | [bench](bench) (`bench.py`, `suites\`, `runs\results.jsonl`); RP-качество — [bench\rp_quality.py](bench/rp_quality.py), [bench\quality\rp_judge.py](bench/quality/rp_judge.py), `judge_score.py` |
-| Скил для подбора конфига новой модели | [.opencode\skills\llm-launch-tuner](.opencode/skills/llm-launch-tuner) |
-| Скил для прогона и оценки RP-качества новой модели (скрин → панель 4 судей → баллы) | [.opencode\skills\rp-model-eval](.opencode/skills/rp-model-eval) |
-
-## Источники информации
-
-**Внешние** (сообщество, бенчмарки, карточки):
-
-- **CaliperBench** — RP/creative-рейтинг моделей (язык не измеряется; свежий срез **2026-10-06**
-  спарсен в `downloads\CalibreV3.csv`/`CalibreV2.csv`):
-  <https://caliperbench.com/> · методика <https://caliperbench.com/methodology.html>
-- **r/SillyTavernAI** — недельные мега-треды «Best Models/API» (9 недель, 09.08–04.10.2026);
-  обзор — [docs\research\rp-model-candidates.md](docs/research/rp-model-candidates.md) §1.1.
-- **r/LocalLLaMA** — обсуждения моделей и фитюнов (Artemis, MeroMero, базы Gemma 4).
-- **Hugging Face** — карточки и API моделей (метод, языки, кванты, скачивания), напр.
-  <https://huggingface.co/Ateron/Gemma-4-Dark-Thoughts-V2-31B>.
-- **Model card Gemma 4 (Google)** — официальный сэмплинг и шаблон:
-  <https://ai.google.dev/gemma/docs/core/model_card_4>
-- **llama.cpp (GitHub issues)** — баги Gemma 4 со `<unused*>`: #21321, #26088.
-- **Русский замер Gemma 4 26B-A4B vs Qwen3.8-27B** (Den4ikAI, 2026-09): на T=1.0 брак, на T=0.3 чисто.
-- Русские лидерборды: **MERA** (`ai-forever/MERA`), **ruMMLU-pro** (`t-tech/ruMMLU-pro`).
-  **EuroEval** (<https://euroeval.com/leaderboards/>) — 30+ европейских языков, но **русского в нём нет**
-  (ближайший славянский прокси — украинский/белорусский); см. [docs\research\euroeval-2026-10.md](docs/research/euroeval-2026-10.md).
-
-**Внутренние** (этот репозиторий): логи — [docs](docs); сырые замеры — [bench\runs\results.jsonl](bench/runs/results.jsonl);
-дамп CaliperBench — `downloads\caliperbench-2026-10-01.json`; свежий V3/V2 — `downloads\CalibreV3.csv`,
-`downloads\CalibreV2.csv` (парсер [bench\parse_caliper.py](bench/parse_caliper.py)).
+| Роутер-режим | [docs\research\router-mode.md](docs/research/router-mode.md) |
+| Логи по моделям | [docs\models](docs/models) |
+| Сырые замеры | [bench\runs\results.jsonl](bench/runs/results.jsonl) |
+| Скилы: подбор конфига новой модели / RP-оценка | [.opencode\skills\llm-launch-tuner](.opencode/skills/llm-launch-tuner), [.opencode\skills\rp-model-eval](.opencode/skills/rp-model-eval) |
 
 ## Воспроизведение замеров
 
 ```powershell
 cd <папка проекта>
-# один раз: скопировать bench\env.example.json -> bench\env.local.json и указать свои пути
-.\.venv\Scripts\python.exe bench\bench.py bench\suites\real\real_qwen36.json   # наборы в bench\suites\<группа>\
-.\.venv\Scripts\python.exe bench\report.py                            # сводная таблица
-
-# RP-качество (скрин 2 сценария → панель 4 судей → баллы) одной командой; путь модели — в ОДИНАРНЫХ кавычках
-.\.venv\Scripts\python.exe .opencode\skills\rp-model-eval\scripts\run_eval.py `
-  --name <имя> --model '${MODELS_DIR}/<путь>.gguf' --family gemma `
-  --scenarios base --modes nothink,think --judges gemma,qwen,dsflash,dsv4pro
-# 4 судьи — по умолчанию: локальные gemma/qwen + облачные DeepSeek-Flash/Pro (нужен DEEPSEEK_API_KEY в .env)
-# ход прогона — logs\rp_eval_<имя>_<stamp>.log
-
-# облачные модели (DeepSeek) через API — те же сценарии/судьи; ключ в .env (gitignored)
-.\.venv\Scripts\python.exe bench\quality\api_rp_eval.py --models dsflash,dsv4pro
+# один раз: скопировать bench\env.example.json в bench\env.local.json и указать свои пути
+.\.venv\Scripts\python.exe bench\bench.py bench\suites\real\real_qwen36.json   # прогон набора
+.\.venv\Scripts\python.exe bench\report.py                                     # сводка
 ```
 
-Плейсхолдеры `${LLAMA_SERVER}`, `${MODELS_DIR}` и т.п. в наборах тестов раскрываются из
-`bench\env.local.json`. Перед публикацией изменений запускайте `python bench\sanitize.py`
-(заменяет личные пути на `<...>` в артефактах прогонов).
+RP-качество — одной командой через скил [.opencode\skills\rp-model-eval](.opencode/skills/rp-model-eval)
+(скрин 2 сценария → панель 4 судей → баллы); ход прогона виден в `logs\rp_eval_<имя>_<stamp>.log`.
+Перед публикацией изменений — `.\.venv\Scripts\python.exe bench\sanitize.py` (личные пути →
+плейсхолдеры). Правила работы с репозиторием — [AGENTS.md](AGENTS.md).
 
-Реалистичный датасет — [bench\requests_real.json](bench/requests_real.json) (RP/чат/код/математика/суммаризация); наборы
-`bench\suites\real\*.json` сравнивают конфиги на нём. Повторяющийся «тест-заполнитель» (`target`)
-оставлен только для стресс-тестов спекуляции и в README не используется.
-
-Правила работы с репозиторием — в [AGENTS.md](AGENTS.md): использовать локальные файлы, скачивать только в `downloads\`.
+Повторяющийся «тест-заполнитель» (`target`) — только стресс-тест спекуляции: он завышает TG
+в 1.5–2 раза и в итоговые таблицы не попадает.
