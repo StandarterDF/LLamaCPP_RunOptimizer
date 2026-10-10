@@ -8,8 +8,8 @@ post for r/SillyTavernAI.
 User wish (may be empty): $ARGUMENTS
 
 ## Sources (only our own measurements, do not invent)
-- `README.md`, `docs/models.md`, `docs/researched.md`, `docs/quality/rp-quality-eval.md`, `docs/quality/sampling-quality.md` §5.2–5.5;
-- `bench/runs/results.jsonl` (TG/PP/acceptance) and `summary.md` of the newest folder in `bench/quality/runs/`.
+- [README.md](../../README.md), [docs/models.md](../../docs/models.md), [docs/researched.md](../../docs/researched.md), [docs/quality/rp-quality-eval.md](../../docs/quality/rp-quality-eval.md), [docs/quality/sampling-quality.md](../../docs/quality/sampling-quality.md) §5.2–5.5;
+- [bench/runs/results.jsonl](../../bench/runs/results.jsonl) (TG/PP/acceptance) and `summary.md` of the newest folder in [bench/quality/runs](../../bench/quality/runs).
 
 ## Output format
 Start with the current date line: `As of <DD.MM.YYYY>`.

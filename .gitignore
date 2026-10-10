@@ -23,9 +23,21 @@ downloads/
 # Содержат реальные пути; для анализа — bench/logstats.py.
 logs/
 
-# ��� ��������� ����� �������� (������ ��������, �� ���������)
+# Логи старых прогонов оценки качества (только ошибки, не пушить)
 bench/quality/runs/_*.log
 
+# Личный датасет-пайплайн (перевод/сборка датасетов): код, данные и доки не публикуются.
+bench/translate/
+bench/final/
+bench/dataset_audit.py
+bench/dataset_digest.py
+bench/datasets_rp_core.txt
+bench/download_datasets.py
+bench/fetch_dataset_sizes.py
+bench/rank_datasets.py
+bench/_extract_7z.py
+docs/research/ru-translation-plan/
+docs/research/rp-datasets-weight-ranking.md
 
 # Сгенерированные router-пресеты (раскрытые личные пути) — не коммитим
 launch/router/*.local.ini

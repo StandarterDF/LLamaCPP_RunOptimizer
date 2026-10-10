@@ -1,16 +1,16 @@
 # Облачные API-модели на RP: DeepSeek и GLM (2026-10-07)
 
 Первая проверка **облачных** моделей нашим RP-харнессом. Сценарии локальные
-(`bench\quality\prompts\scenarios_rp.json`, school + seduction), 3 сида, RU-safe сэмплинг
+([bench\quality\prompts\scenarios_rp.json](../../bench/quality/prompts/scenarios_rp.json), school + seduction), 3 сида, RU-safe сэмплинг
 (temp 0.6 / top_p 0.95). Ответы идут через API, но метрики и судейство — штатные.
 
 ## Инструменты и режимы
 
 | Что | Файл / флаг |
 | --- | --- |
-| Генерация через API (параллельно) | `bench\quality\api_rp_eval.py` (`--concurrency`) |
-| Облачный судья (параллельно) | `bench\quality\api_judge.py` (`--all`, `--concurrency`) |
-| Объективные метрики по API-прогонам | `bench\quality\api_metrics_summary.py` |
+| Генерация через API (параллельно) | [bench\quality\api_rp_eval.py](../../bench/quality/api_rp_eval.py) (`--concurrency`) |
+| Облачный судья (параллельно) | [bench\quality\api_judge.py](../../bench/quality/api_judge.py) (`--all`, `--concurrency`) |
+| Объективные метрики по API-прогонам | [bench\quality\api_metrics_summary.py](../../bench/quality/api_metrics_summary.py) |
 | Ключи | `.env` (gitignored; шаблон `.env.example`) |
 
 Режим мышления: у DeepSeek и GLM thinking включён по умолчанию. Для сравнения с локальным
@@ -42,7 +42,7 @@
 \* **Self-eval:** строки DeepSeek судят судьи из того же семейства (оба DS) — их баллы не считать
 независимыми. ¹ Для DeepSeek «средний независ.» = только Gemma+Qwen.
 
-Полные таблицы (все ~49 прогонов, включая локальные) — `bench\quality\runs\rp_judge_dsflash_api\`
+Полные таблицы (все ~49 прогонов, включая локальные) — [bench\quality\runs\rp_judge_dsflash_api](../../bench/quality/runs/rp_judge_dsflash_api)
 и `rp_judge_dsv4pro_api\`; сводка-парсинг — `judge_score.py`.
 
 ## Объективные метрики
@@ -82,7 +82,7 @@
 
 ## Локальные модели глазами DeepSeek-судей (2 сцены, NoThink)
 
-DeepSeek-судьи прогнаны по **всем** прогонам; полная сводка — `bench\quality\judge_table.py`. Они
+DeepSeek-судьи прогнаны по **всем** прогонам; полная сводка — [bench\quality\judge_table.py](../../bench/quality/judge_table.py). Они
 **суровее** к локальным, чем Gemma (пример, Flash / Pro): DTV2 **3.40 / 3.42**, Schattenblume
 **3.18 / 3.40**, StyleTune **3.29 / 3.77**, Giftige-Blume **3.32 / 3.33**, Goetia **3.09 / 3.56**,
 MeroMero **3.31 / 3.88**, base Gemma-26B **3.08 / 3.77**, Swift **2.54 / 3.29**, Artemis **2.40 / 2.92** —

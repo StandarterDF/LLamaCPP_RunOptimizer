@@ -44,7 +44,7 @@
 
 ## 3. Фаза 1: baseline
 
-- Скопировать `scripts/` в рабочую папку проекта (обычно `bench/`).
+- Скопировать `scripts/` в рабочую папку проекта (обычно [bench](../../../../bench)).
 - Собрать suite на основе `assets/suite-template.json`: 2 теста (текущий конфиг + дефолтный с FA/fit).
 - `python bench/bench.py suite.json` → `runs/results.jsonl`, логи, ответы.
 - Зафиксировать: загрузка, VRAM, PP 1.5k, PP 12k, TG 1.5k, TG на 2–3 чатах, принятие спекуляции.

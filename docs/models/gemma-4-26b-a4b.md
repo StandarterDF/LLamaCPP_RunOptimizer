@@ -2,20 +2,20 @@
 
 **Модель:** `Gemma-4-26B-A4B-StyleTune-V2.IQ4_XS.gguf` (13.46 GB, MoE 26B / ~4B активных), шаблон `gemma4.jinja`
 **Драфт:** `gemma-4-26B-A4B-it-assistant.Q4_K_S.gguf` (0.3 GB) + `--spec-type draft-mtp`
-**Стенд:** RTX 4060 Ti 16 GB; харнесс — `..\..\bench\bench.py`, данные — `..\..\bench\runs\results.jsonl`.
+**Стенд:** RTX 4060 Ti 16 GB; харнесс — [..\..\bench\bench.py](../../bench/bench.py), данные — [..\..\bench\runs\results.jsonl](../../bench/runs/results.jsonl).
 
-> Реестр всего проверенного (не повторять) — `docs\researched.md`.
+> Реестр всего проверенного (не повторять) — [docs\researched.md](../researched.md).
 
 **Готовые конфиги:**
-- чат (рекомендуется): `..\..\launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-styletune-b11382.bat`
+- чат (рекомендуется): [..\..\launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-styletune-b11382.bat](../../launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-styletune-b11382.bat)
 - **RP / креатив** (без мышления и без спекуляции, самая быстрая генерация на высокоэнтропийном тексте):
-  `..\..\launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-styletune-nothink-nospec-b11382.bat`
+  [..\..\launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-styletune-nothink-nospec-b11382.bat](../../launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-styletune-nothink-nospec-b11382.bat)
 - чат **без мышления** (со спекуляцией, `--reasoning off`):
-  `..\..\launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-styletune-nothink-b11382.bat`
-- редактор кода (DFlash+ngram): `..\..\launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-dflash-code.bat`
+  [..\..\launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-styletune-nothink-b11382.bat](../../launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-styletune-nothink-b11382.bat)
+- редактор кода (DFlash+ngram): [..\..\launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-dflash-code.bat](../../launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-dflash-code.bat)
 - старая сборка (10472) удалена — актуальны конфиги для b11382 выше
 
-## Реалистичные задачи (b11382, `--reasoning off`, `bench\requests_real.json`)
+## Реалистичные задачи (b11382, `--reasoning off`, [bench\requests_real.json](../../bench/requests_real.json))
 
 Актуальные числа — на живых промптах. Серии `TG₁·₅ₖ`/`short` ниже сняты на повторяющемся тексте
 и завышены — оставлены как история.
@@ -31,7 +31,7 @@
 **Вывод:** MTP помогает везде, **кроме RP** — на креативном тексте принятие падает до 36 % и драфт
 не окупается. RP → без MTP (`*-nothink-nospec`), всё остальное → со спекуляцией.
 Проверены и короткие драфты для RP (nmax2/3): 54 t/s, всё равно медленнее, чем 63 без спекуляции.
-Наборы: `bench\suites\real\real_gemma26.json`, `bench\suites\real\real_g26_rp.json`.
+Наборы: [bench\suites\real\real_gemma26.json](../../bench/suites/real/real_gemma26.json), [bench\suites\real\real_g26_rp.json](../../bench/suites/real/real_g26_rp.json).
 
 ## Серия b: драфт, MoE-выгрузка, контекст (build 10472, c=65536)
 
@@ -60,7 +60,7 @@
 | **DFlash Q6_K + ngram-mod, nmax6 (c=32768)** | 76.7 | 128.5 | **98.1** | «редактор кода»: +17 % на коде, −44 % на простом промпте |
 
 **Реалистичный код (проверено позже):** DFlash+ngram даёт 74 против 89 у MTP на рефакторинге (−17 %) —
-профиль `-dflash-code` для 26B **не рекомендуется**. Подробности — `docs\research\speculation-research.md`, серии 9 и 11.3.
+профиль `-dflash-code` для 26B **не рекомендуется**. Подробности — [docs\research\speculation-research.md](../research/speculation-research.md), серии 9 и 11.3.
 **Оговорка:** наш `gemma-4-26B-A4B-dflash-Q6_K.gguf` мог быть сконвертирован до фикса #29802 (в нём не
 писался `embedding_scale`, приёмка DFlash падала). Вердикт может быть пессимистичным — при интересе
 переконвертировать драфт свежим конвертером и перемерить.

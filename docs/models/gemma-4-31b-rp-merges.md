@@ -11,15 +11,15 @@
 **Драфт (общий для обеих):** `gemma-4-31B-it-assistant.Q4_K_M.gguf` (0.33 ГБ) + `--spec-type draft-mtp`
 (папка `mradermacher\Gemma-4-Queen-31B-it-uncensored-heretic-i1-GGUF`).
 **Стенд:** RTX 4060 Ti 16 ГБ, Ryzen 7 5700X, 32 ГБ, Windows; сборка b11382 (CUDA 12.4).
-**Методика:** `bench\requests_real.json` (RP/чат/код/матем/суммаризация), `cache_prompt: false`, seed 42;
-сырые данные — `bench\runs\results.jsonl` (тесты `real_split_*`, `real_meromero_*`), наборы —
-`bench\suites\real\real_split_untied.json`, `bench\suites\real\real_meromero.json`.
+**Методика:** [bench\requests_real.json](../../bench/requests_real.json) (RP/чат/код/матем/суммаризация), `cache_prompt: false`, seed 42;
+сырые данные — [bench\runs\results.jsonl](../../bench/runs/results.jsonl) (тесты `real_split_*`, `real_meromero_*`), наборы —
+[bench\suites\real\real_split_untied.json](../../bench/suites/real/real_split_untied.json), [bench\suites\real\real_meromero.json](../../bench/suites/real/real_meromero.json).
 
 **Готовые конфиги (b11382):**
-- Split-Untied: `..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-nothink-b11382.bat` (NoThink),
-  `..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-think-b11382.bat` (с мышлением),
-  `..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-nothink-ru-b11382.bat` (RU-пресет temp0.4).
-- MeroMero v2 heretic: конфиги и файл модели **удалены** (модель снята с диска 🗑) — см. `docs\models.md`.
+- Split-Untied: [..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-nothink-b11382.bat](../../launch/b11382-cu124/gemma4-31b/gemma4-31b-split-untied-nothink-b11382.bat) (NoThink),
+  [..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-think-b11382.bat](../../launch/b11382-cu124/gemma4-31b/gemma4-31b-split-untied-think-b11382.bat) (с мышлением),
+  [..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-nothink-ru-b11382.bat](../../launch/b11382-cu124/gemma4-31b/gemma4-31b-split-untied-nothink-ru-b11382.bat) (RU-пресет temp0.4).
+- MeroMero v2 heretic: конфиги и файл модели **удалены** (модель снята с диска 🗑) — см. [docs\models.md](../models.md).
 
 ## Сэмплинг по карточкам
 
@@ -29,11 +29,11 @@
 | G4-MeroMero-v2-31B | 0.8–1.0 | 0.05 | дефолт | — | on и off; thinking — лучше recall, хуже темп ERP |
 
 Правило проекта: сэмплинг — по карточке модели (температура на скорость не влияет, см.
-`docs\researched.md` §5). В `.bat` зафиксированы эти значения.
+[docs\researched.md](../researched.md) §5). В `.bat` зафиксированы эти значения.
 
 ## Замеры: MTP vs без спекуляции (b11382, c=51200, KV q4_0, `-fa on`)
 
-Базовый конфиг унаследован от Gemma-4-31B Dark-Thoughts (`docs\models\gemma-4-31b.md`): тот же драфт,
+Базовый конфиг унаследован от Gemma-4-31B Dark-Thoughts ([docs\models\gemma-4-31b.md](gemma-4-31b.md)): тот же драфт,
 `nmax5 pmin0.75`, `c=51200` (выше 80k — ловушка), KV `q4_0`, `-ctxcp 16 -cms 512` для многотирна.
 
 | Задача | Split-Untied MTP | Split-Untied без спец. | MeroMero v2 h. MTP | MeroMero v2 h. без спец. |

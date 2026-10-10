@@ -34,7 +34,9 @@ import os
 import re
 import subprocess
 import sys
+import threading
 import time
+import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -205,6 +207,36 @@ def run(cmd, log, phase=""):
     return p.returncode
 
 
+def kill_server(proc):
+    if proc is None or proc.poll() is not None:
+        return
+    try:
+        proc.terminate()
+        proc.wait(timeout=20)
+    except Exception:
+        try:
+            proc.kill()
+        except Exception:
+            pass
+
+
+def wait_health(port, proc, timeout=600):
+    t0 = time.time()
+    while time.time() - t0 < timeout:
+        try:
+            with urllib.request.urlopen(
+                f"http://127.0.0.1:{port}/health", timeout=3
+            ) as r:
+                if r.status == 200:
+                    return True
+        except Exception:
+            pass
+        if proc is not None and proc.poll() is not None:
+            return False
+        time.sleep(1.0)
+    return False
+
+
 def build_base_args(family, mode, draft, no_spec, ctx, threads, budget_think):
     args = [
         "-np",
@@ -301,6 +333,19 @@ def main():
     ap.add_argument("--no-spec", action="store_true")
     ap.add_argument("--ctx", type=int, default=51200)
     ap.add_argument("--threads", type=int, default=12)
+    ap.add_argument(
+        "--single-server",
+        action="store_true",
+        help="один llama-server на оба режима (обе загрузки модели -> одна): сервер "
+        "поднимается в think-конфиге, nothink глушится per-request chat_template_kwargs "
+        "(enable_thinking=false). Экономит одну загрузку модели на прогон.",
+    )
+    ap.add_argument(
+        "--single-server-port",
+        type=int,
+        default=9953,
+        help="порт сервера для --single-server (default 9953; не совпадать с 9931/9932/9952)",
+    )
     ap.add_argument("--n-predict-nothink", type=int, default=500)
     ap.add_argument("--n-predict-think", type=int, default=1600)
     ap.add_argument(
@@ -345,6 +390,8 @@ def main():
     modes = [m.strip() for m in args.modes.split(",") if m.strip()]
     seed_list = [int(x) for x in args.seeds.split(",")]
     scen_path = SCEN[args.scenarios]
+    # один сервер на оба режима имеет смысл только при >1 режиме
+    single = args.single_server and len(modes) > 1
 
     # ---- 0. проверка судей до старта (чтобы не получить молча 2 судьи из 4) ----
     judge_list = []
@@ -413,6 +460,11 @@ def main():
                 }
             ],
         }
+        if single:
+            # один сервер обслуживает оба режима: rp_quality.py пойдёт в него
+            # (router-режим), а режим переключается per-request enable_thinking.
+            suite["router"] = {"url": f"http://127.0.0.1:{args.single_server_port}"}
+            suite["chat_template_kwargs"] = {"enable_thinking": mode == "think"}
         with open(suite_path, "w", encoding="utf-8") as f:
             json.dump(suite, f, ensure_ascii=False, indent=2)
         log(
@@ -423,21 +475,84 @@ def main():
     if not args.skip_generate:
         log("")
         log("--- ФАЗА 2: генерация ---")
-        for mode, out_dir in zip(modes, run_dirs):
-            metrics = os.path.join(out_dir, "metrics.jsonl")
-            if args.reuse and os.path.isfile(metrics):
-                log(f"[skip ] {os.path.basename(out_dir)}: metrics.jsonl уже есть")
-                continue
-            suite_path = os.path.join(
-                SUITE_DIR, f"suite_rp_eval_{args.name}_{mode}.json"
-            )
-            rc = run(
-                [PY, QUALITY, suite_path, "--out", out_dir],
-                log,
-                phase=f"генерация {args.name} / {mode}",
-            )
-            if rc != 0:
-                log(f"[warn ] rp_quality.py вернул rc={rc} для {mode}")
+        server_proc = None
+        try:
+            if single:
+                port = args.single_server_port
+                server_exe = expand(
+                    "${PROJECT_DIR}/downloads/llama-b11382-cu124/llama-server.exe"
+                )
+                # сервер поднимаем в think-конфиге: nothink-запросы глушат канал
+                # per-request chat_template_kwargs enable_thinking=false.
+                launch_mode = "think" if "think" in modes else modes[0]
+                base_args = [
+                    expand(a)
+                    for a in build_base_args(
+                        args.family,
+                        launch_mode,
+                        args.draft,
+                        args.no_spec,
+                        args.ctx,
+                        args.threads,
+                        args.reasoning_budget_think,
+                    )
+                ]
+                cmd = [
+                    server_exe,
+                    "--host",
+                    "127.0.0.1",
+                    "--port",
+                    str(port),
+                    "--no-webui",
+                    "--model",
+                    model,
+                ] + base_args
+                log("")
+                log(
+                    f"[single-server] один llama-server (конфиг {launch_mode}) на режимы: "
+                    + ", ".join(modes)
+                )
+                log("$ " + sanitize_cmd(cmd))
+                server_proc = subprocess.Popen(
+                    cmd,
+                    cwd=os.path.dirname(server_exe),
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    text=True,
+                    encoding="utf-8",
+                    errors="replace",
+                    bufsize=1,
+                )
+
+                def _pump(proc=server_proc):
+                    assert proc.stdout is not None
+                    for line in proc.stdout:
+                        log.raw("    | [srv] " + line.rstrip("\n"))
+
+                threading.Thread(target=_pump, daemon=True).start()
+                ok = wait_health(port, server_proc)
+                log(f"[single-server] health={ok}")
+                if not ok:
+                    raise SystemExit("single-server: сервер не поднялся")
+            for mode, out_dir in zip(modes, run_dirs):
+                metrics = os.path.join(out_dir, "metrics.jsonl")
+                if args.reuse and os.path.isfile(metrics):
+                    log(f"[skip ] {os.path.basename(out_dir)}: metrics.jsonl уже есть")
+                    continue
+                suite_path = os.path.join(
+                    SUITE_DIR, f"suite_rp_eval_{args.name}_{mode}.json"
+                )
+                rc = run(
+                    [PY, QUALITY, suite_path, "--out", out_dir],
+                    log,
+                    phase=f"генерация {args.name} / {mode}",
+                )
+                if rc != 0:
+                    log(f"[warn ] rp_quality.py вернул rc={rc} для {mode}")
+        finally:
+            if server_proc is not None:
+                kill_server(server_proc)
+                log("[single-server] сервер остановлен")
 
     # ---- 3. судейство ----
     judge_dirs = []

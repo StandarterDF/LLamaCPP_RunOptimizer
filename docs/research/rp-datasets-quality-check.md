@@ -1,6 +1,6 @@
 # Проверка качества RP-датасетов по факту (EN/RU)
 
-Срез: **2026-10-08**. Дополняет первичный обзор `docs\research\rp-datasets-en-ru.md` (не пересказ
+Срез: **2026-10-08**. Дополняет первичный обзор [docs\research\rp-datasets-en-ru.md](rp-datasets-en-ru.md) (не пересказ
 карточек, а **фактическая проверка**). Источник данных — **HF datasets-server API**
 (`/splits`, `/size`, `/rows`, `/info`), HF API метаданных и `resolve/main` (range-запросы) для
 репо с отключённым viewer. Методика в 1 строку: тянем реальные строки, считаем дубли/NSFW/длину
@@ -325,3 +325,20 @@ RU-native. Поэтому тезис обзора «chub — RU-native живо�
 (лучший стиль); (2) PIPPA даёт объём, но требует дедупа/чистки; (3) два «самых русских»
 кандидата из обзора — `chub` (вероятно перевод, не проверен) и `krplt` (проза, не диалоги) —
 то есть **готового качественного RU-RP-диалогового корпуса по-прежнему нет**.
+
+## 8. Проверка по скачанным файлам (2026-10-09)
+
+Дополняет §1: RP/ERP/DRP-ядро (<250 МБ) **скачано** и прочитано построчно.
+
+- **`lemonilia/LimaRP` — теперь ПРОВЕРЕН** (ранее был запароленный 7z): 2 061 YAML с живыми
+  человеческими переписками (Elliquiy/BlueMoon/Lolicit), готовые `persona`/`scenario`; есть OOC,
+  `<FIRST>/<SECOND>`, `*_BAD` и extreme-контент. Это **лучший по «живости»** источник, требует чистки.
+- **Дубли:** `Gryphe/Sonnet3.5-Charcard` = `sinhal/Charcard-…` (тот же файл 164.7 МБ);
+  `athirdpath/DPO_Pairs-Roleplay-Alpaca-NSFW` = `athirdpath/DPO_Pairs-Roleplay-NSFW`;
+  `deebosh/NSFW_RP_Format_DPO-ru` = `ResplendentAI/NSFW_RP_Format_DPO` + RU-перевод.
+- **Опровергнуто по строкам:** `m0no1/dnd-35` — это не RP, а разметка состояний D&D-движка
+  (`HP_UPDATE`, `STATUS`); `hieunguyenminh/roleplay` — энциклопедический Q&A ассистентским тоном,
+  а не сцены. Оценки в рейтинге снижены (2 и 3 из 10).
+- **Подтверждено:** `beyoru/Aesir-Character-CoT` годен только для think (CoT + `quality_rank`);
+  `PocketDoc`×2 — IF/длинный контекст, не персонажи; `krplt/ru-fictext-nsfw` — проза (теги
+  `Underage`/`Зоофилия`); `Kingfall` — мультиязычный фанфик без русского; `bluemoon` — сырые посты.

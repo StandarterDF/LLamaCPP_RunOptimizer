@@ -3,9 +3,9 @@
 Живой документ. Обновляется по мере замеров. Все эксперименты — только на существующем билде
 llama.cpp (build 10472), без скачиваний.
 
-> Реестр всего проверенного (не повторять) — `docs\researched.md`.
+> Реестр всего проверенного (не повторять) — [docs\researched.md](../researched.md).
 
-## Реалистичные задачи (b11382, `bench\requests_real.json`)
+## Реалистичные задачи (b11382, [bench\requests_real.json](../../bench/requests_real.json))
 
 Актуальные числа — на живых промптах (RP, чат, код, математика, суммаризация), без повторов.
 Серии `short`/`long` ниже — синтетический повторяющийся текст, они завышены (до ×2) и оставлены
@@ -20,7 +20,7 @@ llama.cpp (build 10472), без скачиваний.
 | Суммаризация | 40.5 (73 %) | 21.4 |
 
 **Вывод:** MTP даёт ×1.3–1.9 и полезен на всех задачах. На RP dense-27B упирается в ~28 t/s;
-для RP лучше MoE (Qwen3.6 — 82 t/s). Набор: `bench\suites\real\real_swift.json`.
+для RP лучше MoE (Qwen3.6 — 82 t/s). Набор: [bench\suites\real\real_swift.json](../../bench/suites/real/real_swift.json).
 
 ## 1. Что запускаем
 
@@ -71,9 +71,9 @@ llama.cpp (build 10472), без скачиваний.
 
 ## 3. Методика
 
-- `bench/bench.py` (только stdlib, запуск через `.venv\Scripts\python.exe`):
+- [bench/bench.py](../../bench/bench.py) (только stdlib, запуск через `.venv\Scripts\python.exe`):
   поднимает `llama-server` на localhost с конфигом теста, ждёт `/health`, замеряет время загрузки и VRAM,
-  затем выполняет запросы и сохраняет тайминги сервера (`timings`) в `bench/runs/results.jsonl`, логи — в `bench/runs/<имя>/server.log`.
+  затем выполняет запросы и сохраняет тайминги сервера (`timings`) в [bench/runs/results.jsonl](../../bench/runs/results.jsonl), логи — в `bench/runs/<имя>/server.log`.
 - Запросы на каждый тест:
   1. `short` — «заполнитель» ~1.5k токенов, генерация 256 токенов;
   2. `long` — заполнитель ~12k токенов, генерация 64 токена (PP на глубине);
@@ -247,7 +247,7 @@ regex-функция. Все — при рекомендованном карт�
 ## 5. Статус: исследование завершено
 
 Сделано: baseline (пользователь vs пример), `tuning1–3`, `quality1`, `final1`, `tail1`, кэш промпта.
-Итог — `docs\models\swift-1.5-27b-launch.md` + `..\..\launch\b11382-cu124\`; сырые данные — `..\..\bench\runs\`.
+Итог — [docs\models\swift-1.5-27b-launch.md](swift-1.5-27b-launch.md) + [..\..\launch\b11382-cu124](../../launch/b11382-cu124); сырые данные — [..\..\bench\runs](../../bench/runs).
 
 Ограничение билда: CUDA graphs для MTP-драфта появились в upstream ПОСЛЕ 17.08.2026 (PR #28549);
 без обновления билда недоступны (скачивание запрещено правилами).

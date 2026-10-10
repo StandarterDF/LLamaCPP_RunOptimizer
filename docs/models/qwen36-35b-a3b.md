@@ -2,16 +2,16 @@
 
 **Модель:** `Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf` (11.71 GB, MoE 35B / ~3B активных); MTP-голова внутри GGUF
 **Vision:** `mmproj-F16.gguf` (0.84 GB, подключается, не обязателен)
-**Стенд:** RTX 4060 Ti 16 GB; харнесс — `..\..\bench\bench.py`, данные — `..\..\bench\runs\results.jsonl`.
+**Стенд:** RTX 4060 Ti 16 GB; харнесс — [..\..\bench\bench.py](../../bench/bench.py), данные — [..\..\bench\runs\results.jsonl](../../bench/runs/results.jsonl).
 
-> Реестр всего проверенного (не повторять) — `docs\researched.md`.
+> Реестр всего проверенного (не повторять) — [docs\researched.md](../researched.md).
 
 **Готовые конфиги:**
-- чат (рекомендуется): `..\..\launch\b11382-cu124\qwen36-35b-a3b\qwen36-35b-a3b-mtp-b11382.bat`
-- редактор кода (DFlash+ngram): `..\..\launch\b11382-cu124\qwen36-35b-a3b\qwen36-35b-a3b-dflash-code.bat`
+- чат (рекомендуется): [..\..\launch\b11382-cu124\qwen36-35b-a3b\qwen36-35b-a3b-mtp-b11382.bat](../../launch/b11382-cu124/qwen36-35b-a3b/qwen36-35b-a3b-mtp-b11382.bat)
+- редактор кода (DFlash+ngram): [..\..\launch\b11382-cu124\qwen36-35b-a3b\qwen36-35b-a3b-dflash-code.bat](../../launch/b11382-cu124/qwen36-35b-a3b/qwen36-35b-a3b-dflash-code.bat)
 - старая сборка (10472) удалена — актуален только конфиг для b11382 выше
 
-## Реалистичные задачи (b11382, `bench\requests_real.json`)
+## Реалистичные задачи (b11382, [bench\requests_real.json](../../bench/requests_real.json))
 
 Актуальные числа — на живых промптах. Серии `TG₁·₅ₖ`/`short` ниже сняты на повторяющемся тексте
 и завышены — оставлены как история.
@@ -25,14 +25,14 @@
 | Суммаризация | 109.4 (77 %) | 75.3 |
 
 **Вывод:** MTP даёт ×1.1–1.6, и — в отличие от Gemma-26B — полезен и на RP (голова угадывает прозу).
-**Лучший RP на 16 ГБ: 82 t/s.** Набор: `bench\suites\real\real_qwen36.json`.
+**Лучший RP на 16 ГБ: 82 t/s.** Набор: [bench\suites\real\real_qwen36.json](../../bench/suites/real/real_qwen36.json).
 
 **Код (реалистичный рефакторинг):** `DFlash nmax6 + ngram-mod` даёт **163** против 138 у MTP (+18 %) и
-**164** против 114 на новом коде (+44 %), на RP не хуже — `bench\suites\tune\tune_q36_dflash.json`.
+**164** против 114 на новом коде (+44 %), на RP не хуже — [bench\suites\tune\tune_q36_dflash.json](../../bench/suites/tune/tune_q36_dflash.json).
 **Глубина:** TG ~103 t/s на 8k → 86 на 32k → 73 на 64k; `cache_prompt: true` в многотирне снижает PP
 с ~7 400 до ~110 токенов на ход. KV: `q4_0` быстрее `q8_0` на 10–16 %.
 **Ширина драфта:** `nmax3 ≈ nmax5 > nmax8` (mtp8 на RP падает до 64.8); для кода `nmax3` даёт выше
-принятие — `bench\suites\audit\audit_qwen_new.json`.
+принятие — [bench\suites\audit\audit_qwen_new.json](../../bench/suites/audit/audit_qwen_new.json).
 
 ## Серия c: драфт, vision, контекст (build 10472)
 
@@ -57,7 +57,7 @@
 | DSpark Q4/Q8 | 106/118 | 94/107 | 72/83 | медленнее MTP — не использовать |
 | **DFlash + ngram-mod, nmax6, c=131072** | 135.5 | **185.8** | **131.7** | «редактор кода»: +27…30 % на коде, −8 % на простом промпте |
 
-Подробности — `docs\research\speculation-research.md`.
+Подробности — [docs\research\speculation-research.md](../research/speculation-research.md).
 
 ## Не проверено
 

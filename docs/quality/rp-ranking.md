@@ -8,7 +8,7 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
 16 ГБ (наш стенд), для **Cloud** — цена за 1M токенов (input/output), USD.
 
 **Как читать:** сравнивать только внутри таблицы. Судьи расходятся — подробности и per-judge числа:
-`docs\quality\rp-quality-eval.md`, `docs\quality\cloud-api-rp-eval.md`. Отклонённые — `docs\models.md`.
+[docs\quality\rp-quality-eval.md](rp-quality-eval.md), [docs\quality\cloud-api-rp-eval.md](cloud-api-rp-eval.md). Отклонённые — [docs\models.md](../models.md).
 
 ![RP-рейтинг моделей](../images/chart_rp_ranking.png)
 
@@ -27,17 +27,18 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
 | 9 | GLM-5.1 | Cloud | 3.70 | 2 | 1.4 / 4.4 USD за 1M |
 | 10 | base Gemma-4-31B-it *(baseline)* | Local | 3.70 | 2 | ~18 t/s |
 | 11 | **G4-MeroMero-26B-A4B-heretic** | Local | 3.70 | 2 | ~62 t/s |
-| 12 | GLM-4.6 | Cloud | 3.64 | 2 | 0.6 / 2.2 USD за 1M |
-| 13 | **Glistening-Gem v2.1 31B** | Local | 3.61 | 6 | ~23 t/s |
-| 14 | **Gemma-4-31B heretic-ARA** | Local | 3.59 | 2 | ~25 t/s |
-| 15 | **Schattenblume 31B** | Local | 3.59 | 2 | ~22 t/s |
-| 16 | **Giftige-Blume-v1 31B** | Local | 3.58 | 6 | ~22 t/s |
-| 17 | Goetia-26B-A4B v1.6 | Local | 3.55 | 2 | ~70 t/s |
-| 18 | **Dark-Thoughts V2 31B** | Local | 3.51 | 2 | ~24 t/s |
-| 19 | **Qwen3.6-27B Fable-Fusion-711 (i1-IQ3_S)** | Local | **3.47** | 2 | ~18 t/s; Qwen-судья — родственная база |
-| 20 | Qwen3.6-27B Fable-Fusion-711 (NEO IQ2_M) | Local | 3.46 | 2 | ~18 t/s (без спец.); в think дублирует ответ |
-| 21 | GLM-4.7-Flash | Cloud | 3.35 | 2 | **free** |
-| 22 | GLM-4.5-Flash | Cloud | 3.28 | 2 | **free** |
+| 12 | **Kitchoon-V2 26B-A4B** (Q6_K) | Local | **3.67** | 2 | ~27 t/s; характер смягчён, петли жестов, память ловит «Питер» (см. оговорки) |
+| 13 | GLM-4.6 | Cloud | 3.64 | 2 | 0.6 / 2.2 USD за 1M |
+| 14 | **Glistening-Gem v2.1 31B** | Local | 3.61 | 6 | ~23 t/s |
+| 15 | **Gemma-4-31B heretic-ARA** | Local | 3.59 | 2 | ~25 t/s |
+| 16 | **Schattenblume 31B** | Local | 3.59 | 2 | ~22 t/s |
+| 17 | **Giftige-Blume-v1 31B** | Local | 3.58 | 6 | ~22 t/s |
+| 18 | Goetia-26B-A4B v1.6 | Local | 3.55 | 2 | ~70 t/s |
+| 19 | **Dark-Thoughts V2 31B** | Local | 3.51 | 2 | ~24 t/s |
+| 20 | **Qwen3.6-27B Fable-Fusion-711 (i1-IQ3_S)** | Local | **3.47** | 2 | ~18 t/s; Qwen-судья — родственная база |
+| 21 | Qwen3.6-27B Fable-Fusion-711 (NEO IQ2_M) | Local | 3.46 | 2 | ~18 t/s (без спец.); в think дублирует ответ |
+| 22 | GLM-4.7-Flash | Cloud | 3.35 | 2 | **free** |
+| 23 | GLM-4.5-Flash | Cloud | 3.28 | 2 | **free** |
 
 ## Thinking
 
@@ -54,9 +55,10 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
 | 9 | Giftige-Blume-v1 31B | Local | 3.75 | 6 | ~30 t/s |
 | 10 | base Gemma-4-26B-A4B-it *(baseline, self-eval)* | Local | 3.61 | 2 | ~55 t/s |
 | 11 | **Boulesis-v2.1 26B-A4B** | Local | 3.60 | 2 | ~59 t/s |
-| 12 | Qwen3.6-27B Fable-Fusion-711 (NEO IQ2_M) | Local | 3.45 | 2 | ~15 t/s; think дублирует ответ |
-| 13 | Glistening-Gem v2.1 31B | Local | 3.41 | 6 | ~31 t/s |
-| 14 | G4-MeroMero-26B-A4B-heretic | Local | 3.37 | 2 | ~66 t/s |
+| 12 | **Kitchoon-V2 26B-A4B** (Q6_K) | Local | 3.58 | 2 | ~23 t/s; **think не думает** — канал закрывается мгновенно (≈ non-think) |
+| 13 | Qwen3.6-27B Fable-Fusion-711 (NEO IQ2_M) | Local | 3.45 | 2 | ~15 t/s; think дублирует ответ |
+| 14 | Glistening-Gem v2.1 31B | Local | 3.41 | 6 | ~31 t/s |
+| 15 | G4-MeroMero-26B-A4B-heretic | Local | 3.37 | 2 | ~66 t/s |
 
 > Думающий режим у большинства 31B-мержей в llama.cpp **сломан** (пустые ответы / утечка reasoning) —
 > рабочий режим по умолчанию **Non-Think**; в этой таблице только те, где think реально работает.
@@ -64,23 +66,28 @@ DeepSeek-Pro), шкала 1–5, по 8 осям. Только **рабочие*
 ## Быстрый вывод
 
 - **Лучшее локально (Non-Think):** StyleTune-26B (3.78, ~66 t/s), **Boulesis-26B (3.74, ~55 t/s)**,
-  Glistening-Gem (3.61), Schattenblume / heretic-ARA (3.59), Giftige-Blume-v1 (3.58), Goetia (3.55, ~70 t/s), DTV2 (3.51).
+  **Kitchoon-V2 26B (3.67, Q6_K ~27 t/s)**, Glistening-Gem (3.61), Schattenblume / heretic-ARA (3.59),
+  Giftige-Blume-v1 (3.58), Goetia (3.55, ~70 t/s), DTV2 (3.51).
 - **Базовые Gemma** (`base Gemma-26B/31B`) заходят высоко (3.76 / 3.70 и 3.81 в think) — пригодный
   «дефолт без тюна»; в помеченных строках есть самооценка Gemma-судьи (балл завышен).
 - **Лучшее локально (Think):** Dark-Thoughts V2 (4.01), Schattenblume / StyleTune (3.83),
-  **Qwen3.6-27B Fable i1-IQ3_S (3.79, ~18 t/s)** — лучший think среди не-Gemma, Boulesis-26B (3.60).
+  **Qwen3.6-27B Fable i1-IQ3_S (3.79, ~18 t/s)** — лучший think среди не-Gemma, Boulesis-26B (3.60),
+  Kitchoon-V2 (3.58 — но это **не думающий** think: канал закрывается сразу).
 - **Облако (Cloud):** DeepSeek-Pro 4.01 · DeepSeek-Flash 3.98 · GLM-5.2 3.90 · GLM-4.7 3.87 — выше локальных,
   но это API (платно/сеть/reasoning), **не замена конфигам**; дешёвые — GLM-4.7-Flash (free),
   DeepSeek-Flash (0.15/0.60 USD), GLM-4.7-FlashX (0.07/0.40 USD).
 - **Не берём** (в витрину не попали): Local — Giftige-Blume-StyleSwap (англ. вставки в русский),
   Artemis-31B-v1.2 (речевая каша), Swift-1.5-27B (не RP-тюн), Genesis V7 35B-A3B (не апгрейд),
-  Kitchoon-26B-A4B (не апгрейд — слабейший из 26B-мёржей, панель 3.25; провал памяти, think сломан),
+  Kitchoon-26B-A4B **v1** (не апгрейд — слабейший из 26B-мёржей, панель 3.25; провал памяти, think сломан),
   Dans-PersonalityEngine (чат-компаньон, не character-RP), base Qwen3.6/3.8 (слабые baseline);
-  Cloud — GLM-4.7-FlashX (слабее и платный). Детали и вердикты — `docs\models.md`.
+  Cloud — GLM-4.7-FlashX (слабее и платный). Детали и вердикты — [docs\models.md](../models.md).
 
 > Оговорки: DeepSeek-строки судят и DeepSeek-судьи, а `base Gemma-26B` — сама Gemma-судья (self-eval —
 > балл завышен); у `Boulesis-26B` та же база у gemma-судьи (родственная, не идентичная); у
 > `Qwen3.6-27B Fable-Fusion-711` Qwen-судья — родственная база (Qwen3.6, другой размер); **у Fable
 > квант важен**: i1-IQ3_S в think заметно выше IQ2_M (3.79 против 3.45), оба без спекуляции; `сц=6` строже
-> (на 2 сценах было бы выше); цены DeepSeek — off-peak (в пик ×2); t/s — RP на нашем стенде (16 ГБ);
+> (на 2 сценах было бы выше); **`Kitchoon-V2 26B` — Q6_K (23.2 ГБ) не влезает в 16 ГБ, работает через
+> авто-офлоуд экспертов (`--fit on`), отсюда ~27/23 t/s (вдвое ниже IQ4-кванта Boulesis); его think
+> закрывает `<channel|>` мгновенно (не думает), а gemma-судья делит с ним часть базы (StyleTune-V2 — в мерже)**;
+> цены DeepSeek — off-peak (в пик ×2); t/s — RP на нашем стенде (16 ГБ);
 > итоговый выбор «под себя» — за пользователем.

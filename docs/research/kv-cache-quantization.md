@@ -2,8 +2,8 @@
 
 Срез: **2026-10-08**. Стенд: RTX 4060 Ti 16 ГБ, Ryzen 7 5700X, 32 ГБ, b11382.
 Модели: **StyleTune-26B-A4B** (Gemma-4, MoE, IQ4_XS) и **Schattenblume-31B**
-(Gemma-4, dense, i1-IQ3_XXS). Инструменты: `bench\kv_prompts.py`,
-`bench\kv_quality.py`, `bench\plot_kv.py`, `bench\gguf_info.py`.
+(Gemma-4, dense, i1-IQ3_XXS). Инструменты: [bench\kv_prompts.py](../../bench/kv_prompts.py),
+[bench\kv_quality.py](../../bench/kv_quality.py), [bench\plot_kv.py](../../bench/plot_kv.py), [bench\gguf_info.py](../../bench/gguf_info.py).
 
 ## 0. Как правильно поставить вопрос
 
@@ -33,7 +33,7 @@
 разное число K/V-голов и своя размерность. Поэтому KV растёт не как «длина × все
 слои», а в основном за счёт редких глобальных слоёв.
 
-Данные из метаданных GGUF (`bench\gguf_info.py`):
+Данные из метаданных GGUF ([bench\gguf_info.py](../../bench/gguf_info.py)):
 
 | | StyleTune-26B-A4B | Schattenblume-31B |
 | --- | --- | --- |
@@ -92,7 +92,7 @@ quantization весов, сэмплинг, seed, длина промпта, те
 
 ### 3.2 Промптовые пробы (главное — глазами)
 
-`bench\kv_prompts.py` гоняет одни и те же промпты через каждый тип KV и выкладывает
+[bench\kv_prompts.py](../../bench/kv_prompts.py) гоняет одни и те же промпты через каждый тип KV и выкладывает
 ответы **рядом** в `compare_*.md`:
 
 | Проба | Что проверяем |
@@ -108,7 +108,7 @@ quantization весов, сэмплинг, seed, длина промпта, те
 
 ### 3.3 Числовая проба — NIAH
 
-`bench\kv_quality.py` кладёт в контекст уникальные «коды» и просит их назвать
+[bench\kv_quality.py](../../bench/kv_quality.py) кладёт в контекст уникальные «коды» и просит их назвать
 (needle-in-a-haystack). Два режима: одна игла на глубинах 10/50/90 % и **пять игл**
 на 5/25/50/75/95 %. Второй режим чувствительнее и, главное, показывает *какие
 именно* глубины теряются.
@@ -119,7 +119,7 @@ quantization весов, сэмплинг, seed, длина промпта, те
 
 ### 3.4 PPL
 
-`llama-perplexity` на русском корпусе Чехова (`-c 512`, `bench\quality\corpus\`).
+`llama-perplexity` на русском корпусе Чехова (`-c 512`, [bench\quality\corpus](../../bench/quality/corpus)).
 Работает для **dense** 31B; для MoE 26B инструмент врёт (см. `why-ru-models.md`),
 там языковую верность отдельно не снять. PPL — «языковая верность» (ось A), а не
 связность; высокая чистота ≠ хорошее владение языком.
@@ -129,7 +129,7 @@ quantization весов, сэмплинг, seed, длина промпта, те
 ### 4.1 Примеры ответов (f16 / q8_0 / q4_0)
 
 Полные сравнения — `bench\runs\kv_prompts\run\compare_*.md`. Объективные проверки
-(названы ли обязательные факты) — `bench\kv_prompt_checks.py`:
+(названы ли обязательные факты) — [bench\kv_prompt_checks.py](../../bench/kv_prompt_checks.py):
 
 | Проба (что обязано быть) | StyleTune-26B: f16 / q8 / q4 / смеш | Schattenblume-31B: f16 / q8 / q4 / смеш |
 | --- | --- | --- |
@@ -213,13 +213,13 @@ q8_0 **1443** · q4_0 **1292** · q8_0K/q4_0V **1367**. Разброс ±11 % �
 > **Метрика решает ответ.** Наши пробы (recall, факты, PPL) разницы не видят, но
 > **KL-дивергенция** — видит: по внешним замерам у Gemma-4 сдвиг заметен уже на
 > `q8_0`. Разбор чужих данных (tool/JSON, код, attention sinks, многотирн) —
-> `docs\research\kv-cache-external.md`.
+> [docs\research\kv-cache-external.md](kv-cache-external.md).
 
 ### 4.3 Функциональная канарейка: tool/JSON и код
 
 Отдельный тест «по мотивам» kv-canary (см. `kv-cache-external.md`): проверяет не
-recall, а **функциональный** результат. Харнесс — `bench\kv_canary.py`
-(набор `bench\suites\kv\kv_canary.json`), разбор сидов — `bench\kv_code_seeds.py`.
+recall, а **функциональный** результат. Харнесс — [bench\kv_canary.py](../../bench/kv_canary.py)
+(набор [bench\suites\kv\kv_canary.json](../../bench/suites/kv/kv_canary.json)), разбор сидов — [bench\kv_code_seeds.py](../../bench/kv_code_seeds.py).
 
 - **tool/JSON**: 12 кейсов. Список инструментов лежит в **начале ~8k-контекста**,
   правила-умолчания — в конце; считаем валидность JSON, верную функцию, верные
@@ -239,7 +239,7 @@ f16/q8_0/q4_0), включая правила-умолчания и инстру
 
 **Единственный функциональный сигнал — формат кода.** При жадном декодировании
 31B на `q4_0` написал `add` **на JavaScript**, а на f16/q8_0 — на Python. Проверил
-температурой (`temp 0.7`, 10 сэмплов на задачу, `bench\kv_code_seeds.py`):
+температурой (`temp 0.7`, 10 сэмплов на задачу, [bench\kv_code_seeds.py](../../bench/kv_code_seeds.py)):
 
 | Модель | f16 | q8_0 | q4_0 |
 | --- | ---: | ---: | ---: |

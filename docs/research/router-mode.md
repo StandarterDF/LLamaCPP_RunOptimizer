@@ -14,15 +14,15 @@
 
 | Файл | Назначение |
 | --- | --- |
-| `launch\router\run-router.bat` | **универсальный запускатель** — поднимите и пользуйтесь. |
-| `launch\router\run-rp-router.bat` | **RP-роутер** — профиль того же запускателя (порт 9932): только проверенные RP-модели. |
-| `launch\router\models-preset.ini` | шаблон списка моделей и их конфигов (пути — плейсхолдерами). |
-| `launch\router\models-preset-rp.ini` | шаблон RP-набора моделей. |
-| `launch\router\build_preset.ps1` | сборка рабочего пресета: раскрывает пути, отсеивает отсутствующие модели. |
-| `launch\router\trim_log.ps1` | фильтр консольного вывода: убирает пустые `[pid]`-строки прогресса загрузки. |
-| `launch\router\models-preset.local.ini` | **генерируется** при запуске; в git не попадает (личные пути). |
+| [launch\router\run-router.bat](../../launch/router/run-router.bat) | **универсальный запускатель** — поднимите и пользуйтесь. |
+| [launch\router\run-rp-router.bat](../../launch/router/run-rp-router.bat) | **RP-роутер** — профиль того же запускателя (порт 9932): только проверенные RP-модели. |
+| [launch\router\models-preset.ini](../../launch/router/models-preset.ini) | шаблон списка моделей и их конфигов (пути — плейсхолдерами). |
+| [launch\router\models-preset-rp.ini](../../launch/router/models-preset-rp.ini) | шаблон RP-набора моделей. |
+| [launch\router\build_preset.ps1](../../launch/router/build_preset.ps1) | сборка рабочего пресета: раскрывает пути, отсеивает отсутствующие модели. |
+| [launch\router\trim_log.ps1](../../launch/router/trim_log.ps1) | фильтр консольного вывода: убирает пустые `[pid]`-строки прогресса загрузки. |
+| [launch\router\models-preset.local.ini](../../launch/router/models-preset.local.ini) | **генерируется** при запуске; в git не попадает (личные пути). |
 
-Пошаговые `.bat` в `launch\b11382-cu124\` остаются как есть — router их не заменяет,
+Пошаговые `.bat` в [launch\b11382-cu124](../../launch/b11382-cu124) остаются как есть — router их не заменяет,
 а дополняет (тот же движок, только одна модель и без «меню»).
 
 ## Быстрый старт
@@ -76,18 +76,18 @@ curl.exe http://127.0.0.1:9931/health             # 503 при загрузке,
 | `swift-1.5`, `-nothink`, `-agent`, `-131k` | Swift-1.5-Qwen3.8-27B | efficient-reasoning / агенты |
 | `dans-pers13` | Dans-PersonalityEngine-24B | чат-компаньон (на стенде файла нет) |
 
-Числа и вердикты по моделям — `docs\models.md`; конфиги построчно повторяют
-`.bat` из `launch\b11382-cu124\`.
+Числа и вердикты по моделям — [docs\models.md](../models.md); конфиги построчно повторяют
+`.bat` из [launch\b11382-cu124](../../launch/b11382-cu124).
 
 ## RP-роутер (отдельный, порт 9932)
 
-`launch\router\run-rp-router.bat` — тот же движок, но **отдельный набор: только
+[launch\router\run-rp-router.bat](../../launch/router/run-rp-router.bat) — тот же движок, но **отдельный набор: только
 проверенные RP-модели**. Профиль задаётся переменными (`ROUTER_TEMPLATE`,
 `ROUTER_PORT=9932`, `ROUTER_TAG=rp-router`) и вызывает `run-router.bat`; порты не
 конфликтуют (9931/9932), логи разведены (`logs\rp-router_*.log`). На 16 ГБ держите
 загруженной модель только в одном роутере — две модели в VRAM не влезут.
 
-Состав — по итогам оценки RP LLM-судьёй (полный набор, два судьи; `docs\quality\rp-quality-eval.md`):
+Состав — по итогам оценки RP LLM-судьёй (полный набор, два судьи; [docs\quality\rp-quality-eval.md](../quality/rp-quality-eval.md)):
 
 | id | Модель | Замер (Gemma / Qwen) | Режим |
 | --- | --- | --- | --- |
@@ -176,6 +176,6 @@ Invoke-RestMethod http://127.0.0.1:9931/v1/chat/completions -Method Post -Body $
 
 ## Ссылки
 
-- Конфиги по одной модели — `launch\b11382-cu124\`.
-- Реестр моделей и числа — `docs\models.md`; реестр проверенного — `docs\researched.md`.
-- Возможности спекуляции — `docs\research\speculation-research.md`.
+- Конфиги по одной модели — [launch\b11382-cu124](../../launch/b11382-cu124).
+- Реестр моделей и числа — [docs\models.md](../models.md); реестр проверенного — [docs\researched.md](../researched.md).
+- Возможности спекуляции — [docs\research\speculation-research.md](speculation-research.md).

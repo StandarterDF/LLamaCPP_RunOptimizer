@@ -1,10 +1,10 @@
 # Как запускать Swift-1.5-Qwen3.8-27B (IQ2_S-mtp) — итоговая инструкция
 
 Всё проверено на локальных билдах llama.cpp. **Актуальная рекомендация (05.10.2026): сборка b11382
-(CUDA 12.4) даёт +10…18 % к скорости** — готовый запуск в `launch\b11382-cu124\swift\swift-best-b11382.bat`
+(CUDA 12.4) даёт +10…18 % к скорости** — готовый запуск в [launch\b11382-cu124\swift\swift-best-b11382.bat](../../launch/b11382-cu124/swift/swift-best-b11382.bat)
 (там `--load-mode none` вместо удалённого `--no-mmap`). Конфиг ниже — база, проверенная на обоих билдах.
-Подробные замеры и обоснования — в `docs\models\swift-1.5-27b.md`, сравнение сборок — в `docs\research\speculation-research.md`.
-Готовые файлы запуска — в `launch\b11382-cu124\`.
+Подробные замеры и обоснования — в [docs\models\swift-1.5-27b.md](swift-1.5-27b.md), сравнение сборок — в [docs\research\speculation-research.md](../research/speculation-research.md).
+Готовые файлы запуска — в [launch\b11382-cu124](../../launch/b11382-cu124).
 
 ## 1. Основной профиль (рекомендуется)
 
@@ -35,9 +35,9 @@
 
 | Профиль | Файл | Отличия | Когда |
 | --- | --- | --- | --- |
-| Основной | `launch\b11382-cu124\swift\swift-best-b11382.bat` | c=81920, nmax5, pmin0.5 | обычная работа |
-| Длинный контекст | `launch\b11382-cu124\swift\swift-long-131k-b11382.bat` | c=131072, **nmax3, pmin0.7** | агенты, большие документы |
-| Агентный/код | `launch\b11382-cu124\swift\swift-agent-ngram-b11382.bat` | + `ngram-simple` в spec | повторяющийся текст (до ×4–5) |
+| Основной | [launch\b11382-cu124\swift\swift-best-b11382.bat](../../launch/b11382-cu124/swift/swift-best-b11382.bat) | c=81920, nmax5, pmin0.5 | обычная работа |
+| Длинный контекст | [launch\b11382-cu124\swift\swift-long-131k-b11382.bat](../../launch/b11382-cu124/swift/swift-long-131k-b11382.bat) | c=131072, **nmax3, pmin0.7** | агенты, большие документы |
+| Агентный/код | [launch\b11382-cu124\swift\swift-agent-ngram-b11382.bat](../../launch/b11382-cu124/swift/swift-agent-ngram-b11382.bat) | + `ngram-simple` в spec | повторяющийся текст (до ×4–5) |
 
 ## 3. Почему именно так
 
@@ -75,7 +75,7 @@
 | `p-min 0.7–0.9`, `n-max ≥6` | видимое «принятие» растёт, итоговая скорость падает |
 | `c ≥ 160k` | деградация генерации до ~20 t/s |
 | Подключать чужой `mmproj` | авторы Swift не валидировали проектор для этого релиза; для текста он не нужен |
-| Обновлять билд/модель из сети | запрещено правилами проекта (`AGENTS.md`) |
+| Обновлять билд/модель из сети | запрещено правилами проекта ([AGENTS.md](../../AGENTS.md)) |
 
 ## 6. Известные ограничения текущего билда
 
@@ -94,4 +94,4 @@ cd <папка проекта>
 .\.venv\Scripts\python.exe bench\report.py                                  # сводка
 ```
 
-Сырые результаты: `bench\runs\results.jsonl`, логи серверов — `bench\runs\<тест>\server.log`, ответы — `bench\runs\<тест>\answers\<tag>.txt`.
+Сырые результаты: [bench\runs\results.jsonl](../../bench/runs/results.jsonl), логи серверов — `bench\runs\<тест>\server.log`, ответы — `bench\runs\<тест>\answers\<tag>.txt`.

@@ -33,7 +33,7 @@ README `ik_llama.cpp`, форк `Luce-Org/llama.cpp-dflash-ggml`, поиск ч�
 ## 2. Локальная проверка на существующих файлах (05.10.2026)
 
 Задача «повторяющегося кода» (рефакторинг функции: вывод копирует большую часть ввода) +
-короткий репетитивный промпт + обычный код. Сырые данные — `bench/runs/results.jsonl`.
+короткий репетитивный промпт + обычный код. Сырые данные — [bench/runs/results.jsonl](../../bench/runs/results.jsonl).
 
 ### 2.1. Qwen3.6-35B-A3B (UD-Q2_K_XL, c=131072)
 
@@ -121,8 +121,8 @@ PR #26275 (SpecForge-совместимость DSpark) **влит 17.08.2026**.
 
 1. Тесты EAGLE-3 / DSpark / DFlash на Gemma-4-31B и 26B-A4B с c=32768 (VRAM-бюджет) — сравнить с MTP.
 2. Тест DSpark на Qwen3.6-35B-A3B (mетод SpecForge, PR уже влит).
-3. Итоги — в логах по моделям (`docs\models\gemma-4-31b.md`, `docs\models\gemma-4-26b-a4b.md`, `docs\models\qwen36-35b-a3b.md`,
-   `docs\models\swift-1.5-27b.md`) и `..\..\README.md`; готовые конфиги — в `..\..\launch\`.
+3. Итоги — в логах по моделям ([docs\models\gemma-4-31b.md](../models/gemma-4-31b.md), [docs\models\gemma-4-26b-a4b.md](../models/gemma-4-26b-a4b.md), [docs\models\qwen36-35b-a3b.md](../models/qwen36-35b-a3b.md),
+   [docs\models\swift-1.5-27b.md](../models/swift-1.5-27b.md)) и `..\..\README.md`; готовые конфиги — в [..\..\launch](../../launch).
 
 ## 7. Источники
 
@@ -237,7 +237,7 @@ PR #26275 (SpecForge-совместимость DSpark) **влит 17.08.2026**.
 **Открыты и не в сборке:** #27210 (adaptive MTP — в mainline нет), #27173 (draft chain), #28702
 (FFN-фьюжн для PP), #29807 (SSM-копии, ~+3.5 % decode с MTP), #27248 (CUDA KV `q4_1/iq4_nl/q5_0/q5_1`).
 #29802 (DFlash `embedding_scale` для Gemma) — в b11382, но ранее сконвертированные Gemma-DFlash GGUF
-могли быть битыми (см. `docs\models\gemma-4-26b-a4b.md`).
+могли быть битыми (см. [docs\models\gemma-4-26b-a4b.md](../models/gemma-4-26b-a4b.md)).
 
 ## 10. Веб-поиск и проверка свежих приёмов (04.10.2026)
 

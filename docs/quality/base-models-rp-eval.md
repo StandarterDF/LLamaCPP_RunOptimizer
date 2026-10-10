@@ -3,12 +3,12 @@
 **Дата:** 2026-10-07. **Стенд:** RTX 4060 Ti 16 ГБ, Ryzen 7 5700X, 32 ГБ, Windows; сборка b11382 (CUDA 12.4).
 **Зачем:** измерить **baseline** — на что способны штатные (не-RP) instruct-модели в роли. Это точка
 отсчёта, относительно которой видно, сколько «добавляет» RP-файнтюн/мерж. До этого RP-качество ни у
-одной из трёх не мерилось (`docs\researched.md`, «не проверено»).
+одной из трёх не мерилось ([docs\researched.md](../researched.md), «не проверено»).
 
 **Модели:** `gemma-4-26B-A4B-it-UD-IQ3_XXS` (10.63 ГБ), `Qwen3.6-35B-A3B-UD-Q2_K_XL` (11.71 ГБ, MoE),
 `Qwen3.8-27B-UD-IQ2_XXS` (8.39 ГБ, dense); плюс штатная **`gemma-4-31B-it-UD-IQ3_XXS`** (11.84 ГБ, dense)
 и её abliteration-версия `gemma-4-31b-it-heretic-ara` (§4.3–4.4).
-**Методика:** `bench\rp_quality.py`, «мнимая история», **базовый набор 2 сценария** (`scenarios_rp.json`:
+**Методика:** [bench\rp_quality.py](../../bench/rp_quality.py), «мнимая история», **базовый набор 2 сценария** (`scenarios_rp.json`:
 school + seduction), 3 сида (11/22/33), отдельно **nothink** и **think**, RU-safe сэмплинг
 (temp 0.6 / min-p 0.1 / top-k 0 / top-p 0.95). Судьи — штатные `gemma-4-26B-A4B` (мягче) и
 `Qwen3.6-35B-A3B` MXFP4 (строже). Автоматизация — скил `rp-model-eval`.
@@ -133,7 +133,7 @@ Gemma — ниже (модель прошла скрин как лидер, по
 
 ¹ Судья = та же модель (base Gemma-26B), колонка завышена; независима только Qwen-строка.
 
-Рядом — лидеры-мержи полного набора, **NoThink, судья Qwen** (`docs\quality\rp-quality-eval.md` §5.6–5.7):
+Рядом — лидеры-мержи полного набора, **NoThink, судья Qwen** ([docs\quality\rp-quality-eval.md](rp-quality-eval.md) §5.6–5.7):
 
 | Модель | RP (Qwen, 6 сц.) |
 | --- | ---: |
@@ -151,7 +151,7 @@ Gemma-4-26B конкурентоспособна с mid-tier 31B-мержами 
 
 ### 4.3. База + abliteration: Gemma-4-31B-it-**heretic-ARA** (2026-10-07)
 
-Третья ветка §10 `docs\research\rp-model-candidates.md` — «расцензуренная база 31B»: **Heretic v1.2.0
+Третья ветка §10 [docs\research\rp-model-candidates.md](../research/rp-model-candidates.md) — «расцензуренная база 31B»: **Heretic v1.2.0
 Arbitrary-Rank Ablation (ARA)** с row-norm preservation штатной `gemma-4-31B-it`, imatrix-репо
 `mradermacher/gemma-4-31b-it-heretic-ara-i1-GGUF`, квант **i1-IQ3_XXS (11.25 ГБ)**. Это **не RP-тюн**:
 то же семейство/размер, что DTV2/Giftige-Blume, но без ролевого дообучения. Скрин 2 сценария,
@@ -189,7 +189,7 @@ Gemma-26B (3.56)**: **abliteration RP-способностей не добавл
 
 Прямой пир §4.3 — **чистая база** `unsloth/gemma-4-31B-it-GGUF/gemma-4-31B-it-UD-IQ3_XXS.gguf`
 (11.84 ГБ, dense, тот же размер, что DTV2/Giftige-Blume, но **без файнтюна**). Тем самым закрывается
-сравнение «base-31B vs heretic-31B» (§10 `docs\research\rp-model-candidates.md`). Скрин 2 сценария,
+сравнение «base-31B vs heretic-31B» (§10 [docs\research\rp-model-candidates.md](../research/rp-model-candidates.md)). Скрин 2 сценария,
 nothink/think, RU-safe, оба судьи (не самооценка: 31B судят 26B-A4B и Qwen3.6). Лог —
 `logs\rp_eval_base_gemma31_20261007-102534.log`, сырьё — `bench\quality\runs\rp_eval_base_gemma31_*`,
 заключения — `rp_judge_{gemma,qwen}_base_gemma31`.
@@ -244,7 +244,7 @@ RP-качество не даёт.
 7. **Облачные судьи (DeepSeek-Flash / DeepSeek-Pro) ставят базовые модели по-своему** (2 сцены, NoThink):
    base Gemma-26B **3.08 / 3.77** · base Gemma-31B **3.31 / 3.50** · base Qwen3.6 **2.67 / 3.40** ·
    base Qwen3.8 **2.27 / 3.15**. Порядок «Gemma > Qwen» сохраняется, но шкала своя (DeepSeek суровее
-   Gemma), а DeepSeek-Flash ещё и жёстче. Детали — `docs\quality\cloud-api-rp-eval.md` §«12×4».
+   Gemma), а DeepSeek-Flash ещё и жёстче. Детали — [docs\quality\cloud-api-rp-eval.md](cloud-api-rp-eval.md) §«12×4».
 
 ## 6. Не проверено
 
@@ -252,7 +252,7 @@ RP-качество не даёт.
   не прошли (на дне скрина). Базовая Gemma — прошла, см. §4.2.
 - `gemma-4-31B-it-heretic-ARA` (§4.3) — только скрин (2 сцены); полный набор не гоняли (не лидер).
   Прямой пир «чистая база `gemma-4-31B-it`» **проверен (§4.4)**: base-31B ≈ heretic-31B (4.51/3.45 против
-  4.44/3.52); сравнение «base-31B vs heretic-31B» (`docs\research\rp-model-candidates.md` §10) **закрыто** —
+  4.44/3.52); сравнение «base-31B vs heretic-31B» ([docs\research\rp-model-candidates.md](../research/rp-model-candidates.md) §10) **закрыто** —
   abliteration RP не меняет.
 - Более крупные кванты (MXFP4/UD-Q4) тех же базовых моделей — влияние кванта на RP не мерили.
 - `reasoning_effort`/шаблон для think, чтобы получить отдельный `reasoning_content` (chat-API).

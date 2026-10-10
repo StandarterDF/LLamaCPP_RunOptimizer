@@ -9,7 +9,7 @@
 требует одновременно продолжить сцену, вспомнить факт и принять решение. Реплики игрока — живые,
 с небрежностями.
 
-Два набора сценариев (`bench\quality\prompts\`):
+Два набора сценариев ([bench\quality\prompts](../../../../bench/quality/prompts)):
 
 | Набор | Файл | Сцены | Когда |
 | --- | --- | --- | --- |
@@ -24,7 +24,8 @@
 ```
 run_eval.py
  ├─ пишет quality\suites\suite_rp_eval_<name>_<mode>.json
- ├─ bench\rp_quality.py <suite> --out runs\rp_eval_<name>_<mode>   (поднимает и гасит сервер)
+ ├─ bench\rp_quality.py <suite> --out runs\rp_eval_<name>_<mode>   (поднимает и гасит сервер;
+ │    при `--single-server` сервер уже поднят run_eval, suite несёт "router" + "chat_template_kwargs")
  │    └─ /apply-template → /completion (нативный, все сэмплеры), пишет metrics.jsonl, raw\, raw_full\
  ├─ СУДЬИ (панель 4, по одному ответы — одни и те же):
  │    ├─ bench\quality\rp_judge.py <run_dirs> --model <gemma> …    (локальный сервер судьи)
@@ -36,6 +37,13 @@ run_eval.py
 
 Один `llama-server` за раз: генерация и **локальное** судейство занимают GPU. Облачные судьи
 (`api_judge.py`) сервер не поднимают — GPU не нужен, ключ `DEEPSEEK_API_KEY` в `.env`.
+
+**`--single-server`** (опционально): `run_eval.py` поднимает ОДИН `llama-server` в think-конфиге и
+гоняет оба режима в router-режиме `rp_quality.py`, переключая режим **per-request**
+`chat_template_kwargs` (`{"enable_thinking": false}` для nothink, `true` для think) через
+`/apply-template`. Экономит одну загрузку модели. Проверено на gemma-4: `raw` и `raw_full`
+совпадают байт-в-байт с двухсерверным путём в обоих режимах. Имена каталогов прогонов не меняются
+→ судейство и сравнение с реестрами сохраняются. Порт — `--single-server-port` (9953).
 
 ## 2a. Логирование
 
@@ -64,6 +72,10 @@ run_eval.py
   "configs": [{"name":"ru_safe","sampling":{"temperature":0.6,"min_p":0.1,"top_k":0,"top_p":0.95}}]
 }
 ```
+
+При `run_eval.py --single-server` в suite добавляются два ключа (rp_quality их читает, обычный путь
+их игнорирует): `"router": {"url": "http://127.0.0.1:9953"}` и `"chat_template_kwargs":
+{"enable_thinking": false}` (для nothink) / `true` (для think).
 
 `run_eval.py` генерирует это сам. `--family gemma` добавляет `--chat-template-file ${LLAMA_DIR}/gemma4.jinja`
 и убирает спекуляцию (у gemma-26B нет MTP-головы); `--family qwen` оставляет встроенный шаблон + `draft-mtp`.
@@ -97,7 +109,7 @@ Junk/1k, rep8 (повторы), TTR150 (лексическое разнообр�
 (`--judge-concurrency`), сервер не поднимается, `run.log` не пишется.
 
 `judge_score.py` принимает **несколько каталогов судей** и объединяет их оценки — это и есть
-«среднее по 4 судьям» (единая цифра панели, сопоставимая с `docs\quality\rp-ranking.md`).
+«среднее по 4 судьям» (единая цифра панели, сопоставимая с [docs\quality\rp-ranking.md](../../../../docs/quality/rp-ranking.md)).
 `run_eval.py` печатает и разбивку по каждому судье, и итоговую объединённую сводку.
 
 ## 6. Экономика прогонов
@@ -115,4 +127,4 @@ Junk/1k, rep8 (повторы), TTR150 (лексическое разнообр�
 - Самооценка при совпадении оцениваемой модели и судьи (gemma-26B / Qwen3.6 / DeepSeek-строки).
 - Облачные судьи без ключа `.env` недоступны — `run_eval.py` падает с ошибкой (не подменяет панель).
 - Think у части моделей ломается (незакрытый канал / утечка черновика) → ответ пустой/неотделим.
-- Оценки качества RP и любые рейтинги — только после согласования с пользователем (`AGENTS.md`).
+- Оценки качества RP и любые рейтинги — только после согласования с пользователем ([AGENTS.md](../../../../AGENTS.md)).

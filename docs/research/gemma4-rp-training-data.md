@@ -4,11 +4,11 @@
 каким методом и **на каких данных/донорах** сделаны любимые RP-модели проекта (Gemma-4 31B / 26B-A4B),
 и что вообще фигурирует в тюнах Gemma-4 RP (2025–2026).
 
-Опора (не дублируется, только ссылки): `docs\research\rp-model-candidates.md` (донор-граф, Ateron, §9),
-`docs\models.md`, `docs\models\gemma-4-31b.md`, `docs\models\gemma-4-31b-rp-merges.md`,
-`docs\models\gemma-4-26b-a4b.md`, `docs\research\rp-datasets-en-ru.md`,
-`docs\research\rp-datasets-quality-check.md`, `docs\research\why-ru-models.md`,
-`docs\research\caliperbench-2026-10.md`.
+Опора (не дублируется, только ссылки): [docs\research\rp-model-candidates.md](rp-model-candidates.md) (донор-граф, Ateron, §9),
+[docs\models.md](../models.md), [docs\models\gemma-4-31b.md](../models/gemma-4-31b.md), [docs\models\gemma-4-31b-rp-merges.md](../models/gemma-4-31b-rp-merges.md),
+[docs\models\gemma-4-26b-a4b.md](../models/gemma-4-26b-a4b.md), [docs\research\rp-datasets-en-ru.md](rp-datasets-en-ru.md),
+[docs\research\rp-datasets-quality-check.md](rp-datasets-quality-check.md), [docs\research\why-ru-models.md](why-ru-models.md),
+[docs\research\caliperbench-2026-10.md](caliperbench-2026-10.md).
 
 ## 0. Методика и ограничения
 
@@ -38,13 +38,13 @@
    (DPO-наборы), MeroMero-26B/ReadyArt (anime-наборы), ConicCat (Gutenberg-SFT/Condor/Sonnet-дистиллы).
    PIPPA / LimaRP / CoSER в карточках Gemma-4 RP **не упоминаются** (это пул из наших датасет-доков).
 4. **Подтверждён только один публичный RP-датасет из нашего пула** — `Gryphe/Sonnet3.5-Charcard-Roleplay`
-   (в `G4-31B-Musica-v1`). Это прямой мост к `docs\research\rp-datasets-en-ru.md`.
+   (в `G4-31B-Musica-v1`). Это прямой мост к [docs\research\rp-datasets-en-ru.md](rp-datasets-en-ru.md).
 5. **«Анцензуринг» — это abliteration (Heretic + ARA), а не данные.** Scotoma-2 (γ-fold ARA + DPO),
    `trohrbaugh/gemma-4-31b-it-heretic-ara`, `llmfan46/...-heretic` — оптимизированы по англоязычным
    refusal-направлениям (KL 0.012–0.043), а не по RP/ERP-корпусу.
 6. **Reasoning-трейсы — синтетика от англоязычных фронтир-моделей**: Pantheon — back-gen DeepSeek 3.2;
    MeroMero v2 — судьи DeepSeek-V4 Flash/Pro и GLM-5.2. Это тот же канал, где у нас зафиксирован
-   RU-регресс (`docs\research\why-ru-models.md` §5.2 п.2).
+   RU-регресс ([docs\research\why-ru-models.md](why-ru-models.md) §5.2 п.2).
 7. **Русский в Gemma-4 RP не обучается** — он держится как побочный эффект осторожного мержа
    (низкая density + якорь на base, `embed/lm_head=0`) либо как следствие RU-данных у отдельных
    моделей (WaifuGemma4, не Gemma-4-RP-мерж). Подробности и наши замеры — §6.
@@ -148,7 +148,7 @@ v1.0 — DELLA на `gemma-4-31B-it` с `Artemis-31B-v1h-GGUF`, `MeroMero-31B`, 
 **Giftige-Blume-StyleSwap** (Casual-Autopsy) — эксперимент «tensor swap»: `base_model` =
 `[Blazed-Forge/Gemma-4-Giftige-Blume-31B-v1, Gryphe/Gemma-4-31B-StyleTune]`. Карточка в одну строку,
 без рецепта; «secondary experimental model» к `G4-MeroMero-31B-StyleSwap`. Именно прививка головы
-StyleTune дала RU 3.3/2.6 у нас (`docs\models.md`). Ссылка:
+StyleTune дала RU 3.3/2.6 у нас ([docs\models.md](../models.md)). Ссылка:
 [Casual-Autopsy/Giftige-Blume-31B-v1-StyleSwap](https://huggingface.co/Casual-Autopsy/Giftige-Blume-31B-v1-StyleSwap).
 
 ### 3.5. StyleTune-V2 26B-A4B и StyleTune-31B — Gryphe
@@ -327,7 +327,7 @@ Pantheon-Reasoning-31B-1.1. Данные — не указаны. «Experimental
 - **Scotoma-2** (ReadyArt) — не abliteration «в лоб», а **γ-fold** того же heretic-ARA/mmd-rbf-эдита
   через J-Space + **DPO ×3** против «тиков» Gemma (negation/antithesis, em-dash, stacked adjectives);
   карточка прямо: «not uncensored». Абliteration-эдит калиброван по **англоязычным** refusal-направлениям.
-- Наш вывод (`docs\research\why-ru-models.md` §5.2 п.4): abliteration RP-способностей не добавляет,
+- Наш вывод ([docs\research\why-ru-models.md](why-ru-models.md) §5.2 п.4): abliteration RP-способностей не добавляет,
   а оптимизация по EN-refusal «протекает» на русском первым — что косвенно подтверждают KL-числа
   и `language: en` у всех heretic-моделей.
 
@@ -339,12 +339,12 @@ Pantheon-Reasoning-31B-1.1. Данные — не указаны. «Experimental
   ре-генерация **DeepSeek-V4-Pro**.
 - **Gemopus** (Jackrong) сознательно **отказался** от «Claude-style CoT» (ссылается на arXiv 2604.06628).
 - Прямое следствие для RU: thinking-канал обучается на английском → у нас зафиксирован RU-регресс
-  `thought` (Pantheon-RU: трейс на англ., ответ на рус.) — `docs\research\why-ru-models.md` §5.2 п.2.
+  `thought` (Pantheon-RU: трейс на англ., ответ на рус.) — [docs\research\why-ru-models.md](why-ru-models.md) §5.2 п.2.
 
 ### 5.5. imatrix
 
 - `zerofata/G4-MeroMero-31B-GGUF` и `...26B-A4B-GGUF` — iMatrix; `Artemis-31B-v1` — bartowski iMatrix.
-- Наш рабочий квант — `mradermacher i1` (imatrix) `IQ3_XXS` для 31B (`docs\models.md`).
+- Наш рабочий квант — `mradermacher i1` (imatrix) `IQ3_XXS` для 31B ([docs\models.md](../models.md)).
 - В карточках авторов **imatrix-источник калибровки не раскрыт**; у WaifuGemma4 (не Gemma-4-RP-мерж)
   imatrix-калибровка заявлена на 10 языках (`rp-model-candidates.md` §5.2 п.6).
 
@@ -353,7 +353,7 @@ Pantheon-Reasoning-31B-1.1. Данные — не указаны. «Experimental
 ## 6. Русский язык в Gemma-4 — как его получают
 
 **Прямого обучения на русском у Gemma-4-RP-мержей нет.** Механизмы, по которым русский всё же держится
-(наши замеры — `docs\quality\sampling-quality.md`, `docs\research\why-ru-models.md`, `docs\models.md`):
+(наши замеры — [docs\quality\sampling-quality.md](../quality/sampling-quality.md), [docs\research\why-ru-models.md](why-ru-models.md), [docs\models.md](../models.md)):
 
 1. **Мультиязычная база.** `google/gemma-4-31B-it` — 140+ языков в претрейне, 35+ «из коробки»,
    словарь 262K; RU в карточке не назван, кириллица бедна (~1.7× токенов) — `why-ru-models.md` §1.
@@ -366,7 +366,7 @@ Pantheon-Reasoning-31B-1.1. Данные — не указаны. «Experimental
 5. **Что ломает русский**: глубокие мульти-донорные мержи (Split-Untied 75 %), прививка чужой головы
    (StyleSwap 3.3/2.6), тяжёлые SFT/GRPO, heretic-heavy, низкий квант (`IQ2` → PPL ×5).
 6. **Перевод EN→RU** — прямой путь к RU-RP, но **в карточках Gemma-4-RP не встречается**: это наш
-   пайплайн-рекомендация (`docs\research\rp-datasets-en-ru.md` §6). Публичные RU-наборы (Arketov,
+   пайплайн-рекомендация ([docs\research\rp-datasets-en-ru.md](rp-datasets-en-ru.md) §6). Публичные RU-наборы (Arketov,
    krplt, IlyaGusev) в Gemma-4-RP-карточках не заявлены.
 
 **Итог по данным:** ни одна из обязательных моделей не обучалась на русском; `language: en` (кроме
@@ -443,6 +443,6 @@ Charcards_*, Lamp_P_Preference, C2_Sonnet_4_5, Ao3_Soft_Refusal, VSF, Mura_Books
 ARA-PR — <https://github.com/p-e-w/heretic/pull/211>; mergekit — <https://github.com/arcee-ai/mergekit>;
 форк Gemma-4 — <https://github.com/zerofata/mergekit/tree/gemma-4-support>; mergekit-exp — <https://github.com/EldritchLabs/mergekit-exp>.
 
-**Внутренние (проект):** `docs\research\rp-model-candidates.md` (§7 Ateron, §8 CaliperBench, §9 «что держит русский»),
-`docs\research\why-ru-models.md`, `docs\research\rp-datasets-en-ru.md`, `docs\research\rp-datasets-quality-check.md`,
-`docs\models.md`, `docs\models\gemma-4-31b.md`, `docs\models\gemma-4-31b-rp-merges.md`, `docs\models\gemma-4-26b-a4b.md`.
+**Внутренние (проект):** [docs\research\rp-model-candidates.md](rp-model-candidates.md) (§7 Ateron, §8 CaliperBench, §9 «что держит русский»),
+[docs\research\why-ru-models.md](why-ru-models.md), [docs\research\rp-datasets-en-ru.md](rp-datasets-en-ru.md), [docs\research\rp-datasets-quality-check.md](rp-datasets-quality-check.md),
+[docs\models.md](../models.md), [docs\models\gemma-4-31b.md](../models/gemma-4-31b.md), [docs\models\gemma-4-31b-rp-merges.md](../models/gemma-4-31b-rp-merges.md), [docs\models\gemma-4-26b-a4b.md](../models/gemma-4-26b-a4b.md).

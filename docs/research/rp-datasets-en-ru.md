@@ -3,8 +3,8 @@
 Срез: **2026-10-08**. Задача: собрать пул датасетов, которые можно (1) взять как есть для
 SFT/файнтюна RP-модели и (2) **перевести EN→RU**, чтобы получить русскую RP-модель сильнее
 текущих (`Runeweaver/Hydra-RP-RU`, `Pathfinder-RP-RU`, `Slimaki-Tavern`, `Katarau` —
-см. `docs\research\qwen-mistral-rp-candidates.md` §2.5). Опора: наш вывод, что язык держится не
-типом модели, а **языком обучающих данных** (`docs\research\why-ru-models.md` §5–6), поэтому
+см. [docs\research\qwen-mistral-rp-candidates.md](qwen-mistral-rp-candidates.md) §2.5). Опора: наш вывод, что язык держится не
+типом модели, а **языком обучающих данных** ([docs\research\why-ru-models.md](why-ru-models.md) §5–6), поэтому
 перевод качественного англоязычного RP-корпуса — прямой путь к русской модели.
 
 ## 0. Методика и ограничения
@@ -103,7 +103,7 @@ pre-training — сырой текст. «Перевод EN→RU»: ✅/⚠️/�
 - `cc-by-nc-4.0` у DPO-пар — **некоммерческая** лицензия: для локального research-файнтюна ок,
   для публикации модели — риск.
 - Reasoning-ERP (`Deepseek-R1-ERP-Dataset`) для RU опасен: наши замеры показывают, что thinking
-  часто утекает в английский (`docs\research\why-ru-models.md` §5.2, п.2).
+  часто утекает в английский ([docs\research\why-ru-models.md](why-ru-models.md) §5.2, п.2).
 
 ---
 
@@ -148,7 +148,7 @@ pre-training — сырой текст. «Перевод EN→RU»: ✅/⚠️/�
 - **`krplt/ru-fictext-nsfw`** — крупнейший RU-NSFW-текстовый корпус (fanfiction), но это **проза, а не
   диалог**: годится для ERP-стиля и словаря, не для multi-turn структуры.
 - Проект уже отметил `katafiek/Katarau-9B-ru-RP-nsfw` (обучен на ~41.7 млн токенов русского RP;
-  датасет gated) — см. `docs\research\qwen-mistral-rp-candidates.md` §2.5; **не проверено** нами.
+  датасет gated) — см. [docs\research\qwen-mistral-rp-candidates.md](qwen-mistral-rp-candidates.md) §2.5; **не проверено** нами.
 
 ---
 
@@ -187,11 +187,11 @@ pre-training — сырой текст. «Перевод EN→RU»: ✅/⚠️/�
 ### 6.4. Оценка качества перевода
 - **MT-метрики:** chrF/BLEU (быстро, но не про RP), **COMET** (лучше коррелирует с человеком).
 - **LLM-судья:** pairwise «A vs B» по естественности, сохранению характера, отсутствию кальки;
-  **сравнивать только внутри одного судьи** (как в нашем `bench\quality\rp_judge.py`).
+  **сравнивать только внутри одного судьи** (как в нашем [bench\quality\rp_judge.py](../../bench/quality/rp_judge.py)).
 - **RP-специфичное:** сохранены ли имена/факты/действия, нет ли смены языка (наши метрики «Чисто %»,
-  PPL на русском — `docs\research\why-ru-models.md`), длина/структура ходов.
+  PPL на русском — [docs\research\why-ru-models.md](why-ru-models.md)), длина/структура ходов.
 - **Контрольный прогон:** обучить/оценить на переведённом наборе нашим RP-харнессом
-  (`docs\quality\rp-quality-eval.md`) и сравнить с текущими RU-моделями.
+  ([docs\quality\rp-quality-eval.md](../quality/rp-quality-eval.md)) и сравнить с текущими RU-моделями.
 
 ### 6.5. Практика и бюджет
 - Дедуп **до** перевода (PIPPA шумная), фильтр «echo chamber» (длинные AI-on-AI ходы).
@@ -429,6 +429,6 @@ NC и т.п.). Отдельно: **лицензия датасета не пок
 - Multilingual RolePlay Datasets (MyanmarGPT; 30 low-resource языков) —
   <https://myanmargpt-movement.github.io/pages/datasets/Multilingual-roleplay-datasets.html>
 
-**Внутренние (наш проект):** `docs\research\qwen-mistral-rp-candidates.md` §2.5 (RU-native RP-ниш),
-`docs\research\why-ru-models.md` (язык обучающих данных, квант), `docs\quality\rp-quality-eval.md`
-(методика RP-оценки), `docs\research\rp-model-candidates.md` (RU-модели и методы).
+**Внутренние (наш проект):** [docs\research\qwen-mistral-rp-candidates.md](qwen-mistral-rp-candidates.md) §2.5 (RU-native RP-ниш),
+[docs\research\why-ru-models.md](why-ru-models.md) (язык обучающих данных, квант), [docs\quality\rp-quality-eval.md](../quality/rp-quality-eval.md)
+(методика RP-оценки), [docs\research\rp-model-candidates.md](rp-model-candidates.md) (RU-модели и методы).

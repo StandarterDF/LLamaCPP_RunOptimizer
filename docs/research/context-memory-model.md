@@ -5,7 +5,7 @@
 фактическим замерам из `bench\runs\**\results.jsonl` (там пишут `vram_before_mb` /
 `vram_after_load_mb`, `-c` и тип KV).
 
-**Инструмент:** `bench\vram_model.py` (только stdlib + `bench\gguf_info.py`).
+**Инструмент:** [bench\vram_model.py](../../bench/vram_model.py) (только stdlib + [bench\gguf_info.py](../../bench/gguf_info.py)).
 
 ```powershell
 # калибровка + отчёт по всем логам
@@ -61,7 +61,7 @@ Gemma-31B (22.5 КиБ/токен), несмотря на близкий раз�
 Вывод: `O` почти не зависит от веса, но **резко падает у MoE** — compute-граф считает только
 активных экспертов. В инструменте взяты консервативные дефолты `--o-dense 750`, `--o-moe 200`
 (запас на батч/пики). Спекуляция/MTP добавляет ещё свой draft-контекст — в калибровке не учтён
-(на RP всё равно не используется, см. `docs\quality\rp-quality-eval.md` §5.18).
+(на RP всё равно не используется, см. [docs\quality\rp-quality-eval.md](../quality/rp-quality-eval.md) §5.18).
 
 ## 4. Примеры (16 ГБ, KV q4_0, reserve 700, VRAM_before 700)
 
@@ -73,7 +73,7 @@ Gemma-31B (22.5 КиБ/токен), несмотря на близкий раз�
 | Schattenblume-31B при KV f16 | 11 518 | 80 КиБ | ~35 000 | известно: f16 держит лишь ~26k порядок ✓ |
 
 Практика: **KV q4_0 в 3.6× экономичнее f16** → именно он даёт длинный контекст на 16 ГБ.
-Тип KV на качество почти не влияет (NIAH/память/PPL, `docs\research\kv-cache-quantization.md`).
+Тип KV на качество почти не влияет (NIAH/память/PPL, [docs\research\kv-cache-quantization.md](kv-cache-quantization.md)).
 
 ## 5. Ограничения и грабли
 
@@ -90,10 +90,10 @@ Gemma-31B (22.5 КиБ/токен), несмотря на близкий раз�
 
 ## 6. Как перемерить/расширить калибровку
 
-Логи уже содержат всё нужное. Достаточно прогнать сервер с `--log-file` (harness `bench\bench.py`
+Логи уже содержат всё нужное. Достаточно прогнать сервер с `--log-file` (harness [bench\bench.py](../../bench/bench.py)
 пишет `vram_before_mb`/`vram_after_load_mb` в `bench\runs\<test>\results.jsonl`), добавить модели —
 и повторить `--fit`. Формула сама подтянет новые архитектуры, если GGUF отдаёт корректные
 `block_count`, `head_count_kv`, `key_length`, `sliding_window_pattern`/`layer_types`.
 
-См. также: `bench\gguf_info.py` (метаданные + KV), `docs\research\kv-cache-quantization.md`,
-`docs\quality\rp-quality-eval.md` §5.18 (RP-скорость и MTP).
+См. также: [bench\gguf_info.py](../../bench/gguf_info.py) (метаданные + KV), [docs\research\kv-cache-quantization.md](kv-cache-quantization.md),
+[docs\quality\rp-quality-eval.md](../quality/rp-quality-eval.md) §5.18 (RP-скорость и MTP).

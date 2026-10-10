@@ -510,10 +510,14 @@ def generate(port, prompt, sampling, n_predict, seed, n_probs=0, model=None):
     return http_json(f"http://127.0.0.1:{port}/completion", body, timeout=900)
 
 
-def apply_template(port, messages, model=None):
+def apply_template(port, messages, model=None, chat_template_kwargs=None):
     payload = {"messages": messages}
     if model:
         payload["model"] = model
+    if chat_template_kwargs:
+        # per-request override серверных chat-template-kwargs (напр. enable_thinking):
+        # позволяет обслужить think и nothink одним сервером (см. run_eval --single-server).
+        payload["chat_template_kwargs"] = chat_template_kwargs
     r = http_json(f"http://127.0.0.1:{port}/apply-template", payload, timeout=60)
     return r["prompt"]
 
@@ -585,6 +589,9 @@ def main():
     configs = suite["configs"]
     if args.only:
         configs = [c for c in configs if c["name"].startswith(args.only)]
+    # per-request chat-template-kwargs (напр. {"enable_thinking": false}) — чтобы один
+    # сервер обслужил и think, и nothink (см. run_eval.py --single-server).
+    ctk = suite.get("chat_template_kwargs")
 
     run_name = suite.get("name") or os.path.splitext(os.path.basename(args.suite))[0]
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
@@ -661,7 +668,9 @@ def main():
                         )
                     else:
                         msgs.insert(0, {"role": "system", "content": extra})
-                tmpl_cache[key] = apply_template(args.port, msgs, model=router_model)
+                tmpl_cache[key] = apply_template(
+                    args.port, msgs, model=router_model, chat_template_kwargs=ctk
+                )
             return tmpl_cache[key]
 
         print(

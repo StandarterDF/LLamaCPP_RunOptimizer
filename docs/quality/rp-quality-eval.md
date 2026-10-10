@@ -4,17 +4,17 @@
 сборка b11382 (CUDA 12.4). **Модели:** Dark-Thoughts V2, Schattenblume, StyleTune-26B, Goetia-26B,
 Artemis-31B-v1.2, а также Полным набором — Giftige-Blume-v1, Glistening-Gem-v2.1, Giftige-Blume-StyleSwap;
 отдельно — **базовые instruct-модели** (Gemma-4-26B-A4B-it, Qwen3.6-35B-A3B, Qwen3.8-27B, Gemma-4-31B-it,
-см. `docs\quality\base-models-rp-eval.md`) и **Qwen3.6-27B Fable-Fusion-711** (§5.18).
+см. [docs\quality\base-models-rp-eval.md](base-models-rp-eval.md)) и **Qwen3.6-27B Fable-Fusion-711** (§5.18).
 **Судьи:** `gemma-4-26B-A4B-it-UD-IQ3_XXS` (мягче) и `Qwen3.6-35B-A3B` MXFP4 (строже) — см. §5.5–5.7.
 
 > Зачем: «Чисто %» и скорость не показывают **«ум»** модели в роли. Модель может писать чисто
 > по-русски и всё равно нести связную чушь. Этот лог добавляет третью ось к нашему разбору
-> (`docs\research\why-ru-models.md` §2, оси A/B): **ось C — связность и следование сцене**.
+> ([docs\research\why-ru-models.md](../research/why-ru-models.md) §2, оси A/B): **ось C — связность и следование сцене**.
 > Сырые транскрипты — `bench\quality\runs\rp_eval_*`, заключения судьи —
-> `bench\quality\runs\rp_judge_b3\`. **RP-предпочтения и рейтинги требуют согласования
-> с пользователем** (см. `AGENTS.md`).
+> [bench\quality\runs\rp_judge_b3](../../bench/quality/runs/rp_judge_b3). **RP-предпочтения и рейтинги требуют согласования
+> с пользователем** (см. [AGENTS.md](../../AGENTS.md)).
 >
-> Короткая сводка-рейтинг (только баллы, Think / NoThink, сортировка) — `docs\quality\rp-ranking.md`.
+> Короткая сводка-рейтинг (только баллы, Think / NoThink, сортировка) — [docs\quality\rp-ranking.md](rp-ranking.md).
 
 ## 0. Как измеряем «ум», а не скорость
 
@@ -22,13 +22,13 @@ Artemis-31B-v1.2, а также Полным набором — Giftige-Blume-v1
    уже сыгранные ходы; финальный ход игрока требует одновременно продолжить сцену, вспомнить факт
    из истории и принять решение. Реплики игрока — живые, с небрежностями, как у обычного юзера.
 2. Гон на **лучших параметрах** модели (из её `.bat`), **2–3 сида**, отдельно **think** и
-   **non-think**. Сэмплинг НЕ перебираем — он уже найден в `docs\quality\sampling-quality.md`.
+   **non-think**. Сэмплинг НЕ перебираем — он уже найден в [docs\quality\sampling-quality.md](sampling-quality.md).
 3. **Судьи** — локальные `gemma-4-26B-A4B-it-UD-IQ3_XXS` (мягче, ~4.4) и `Qwen3.6-35B-A3B` MXFP4
-   (строже, ~3.3) через `bench\quality\rp_judge.py`: ищут ошибки и несостыковки и пишут обычный текст.
+   (строже, ~3.3) через [bench\quality\rp_judge.py](../../bench/quality/rp_judge.py): ищут ошибки и несостыковки и пишут обычный текст.
    Это экономит токены агента; агент читает готовое заключение и сам открывает сырой транскрипт только
    при сомнительных местах (судьи иногда переусердствуют). Баллы сравнивать только внутри одного судьи.
 
-## 1. Сценарии (`bench\quality\prompts\scenarios_rp.json` — базовый; `scenarios_rp_full.json` — полный)
+## 1. Сценарии ([bench\quality\prompts\scenarios_rp.json](../../bench/quality/prompts/scenarios_rp.json) — базовый; `scenarios_rp_full.json` — полный)
 
 | Тег | Что проверяет | Вшитая ловушка |
 | --- | --- | --- |
@@ -52,7 +52,7 @@ Artemis-31B-v1.2, а также Полным набором — Giftige-Blume-v1
 ## 3. Прогон
 
 3 модели × 2 режима × 2 сценария × 3 сида = **36 генераций**. Наборы — `bench\quality\suites\suite_rp_eval_*.json`,
-харнесс — `bench\rp_quality.py` (пишет и очищенный ответ в `raw\`, и сырой текст с thinking в `raw_full\`).
+харнесс — [bench\rp_quality.py](../../bench/rp_quality.py) (пишет и очищенный ответ в `raw\`, и сырой текст с thinking в `raw_full\`).
 
 ## 4. Объективные метрики (наш датасет, non-think если не сказано)
 
@@ -109,7 +109,7 @@ Artemis-31B-v1.2, а также Полным набором — Giftige-Blume-v1
 - StyleTune school: судья ставит «память 2» как «выставила персонажа лжецом», но проблема мягче —
   модель просто не напоминает «Тверь», а не противоречит себе настолько.
 
-### 5.3. Средние баллы (агрегатор `bench\quality\judge_score.py`)
+### 5.3. Средние баллы (агрегатор [bench\quality\judge_score.py](../../bench/quality/judge_score.py))
 
 Агрегатор парсит тексты судьи и сводит оценки по 8 осям (1–5). Сортировка по среднему.
 
@@ -153,7 +153,7 @@ DTV2 и Schattenblume дали на базовом наборе одинаков
   обе зацикливаются на одних репликах).
 - Schattenblume обходит DTV2 в NoThink (4.38 vs 4.24) и держит язык чуть лучше (рус 5.0 vs 4.9).
 
-Сырое: `bench\quality\runs\rp_eval_*_full_*`, заключения — `bench\quality\runs\rp_judge_full1\`.
+Сырое: `bench\quality\runs\rp_eval_*_full_*`, заключения — [bench\quality\runs\rp_judge_full1](../../bench/quality/runs/rp_judge_full1).
 
 ### 5.5. Панель судей: разными моделями
 
@@ -182,7 +182,7 @@ Schattenblume — русский 19 %, инициатива 24 %, память 1
 **Ограничение панели (РФ):** облачные free-субагенты OpenCode почти все недоступны из России —
 из 9 сработал только `space-bunny` (`fledge-alpha`/`muse-spark` дают «not available in your country»,
 остальные маскируются под «free tier»). Поэтому реально панель = 1 облачный + локальные модели.
-Инструменты панели: `bench\quality\judge_pack.py` (попарные пакеты) и `panel_score.py` (свод голосов).
+Инструменты панели: [bench\quality\judge_pack.py](../../bench/quality/judge_pack.py) (попарные пакеты) и `panel_score.py` (свод голосов).
 
 ### 5.6. Новые модели (2026-10-06): Glistening-Gem-v2.1 и Giftige-Blume-StyleSwap
 
@@ -190,7 +190,7 @@ Schattenblume — русский 19 %, инициатива 24 %, память 1
 top-k0). Судьи — `gemma-4-26B-A4B` и `Qwen3.6-35B-A3B` MXFP4 (поочерёдно); эталоны (DTV2,
 Schattenblume) пересчитаны в тех же прогонах, поэтому сравнимы напрямую.
 
-Объективные метрики (`bench\rp_quality.py`):
+Объективные метрики ([bench\rp_quality.py](../../bench/rp_quality.py)):
 
 | Прогон | Чисто | Пустых | Cyr % | EN-стоп | TTR150 | t/s |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -258,7 +258,7 @@ DTV2 4.24), Qwen **3.35 — выше обоих** (3.28 / 3.11). Главное 
 (лучшая среди всех проверенных; у эталонов 2.9–3.0), ровно то, что обещал Combined (ERP/DarkRP):
 модель двигает сцену, а не «говорит головой». Русский чистый (Cyr 99.9 %, EN 0). Think слабее
 (4/18 пустых; у Qwen повт 1.92) → рабочий режим **NoThink**.
-Конфиг: `launch\b11382-cu124\gemma4-31b\gemma4-31b-blume-v1-nothink-b11382.bat`.
+Конфиг: [launch\b11382-cu124\gemma4-31b\gemma4-31b-blume-v1-nothink-b11382.bat](../../launch/b11382-cu124/gemma4-31b/gemma4-31b-blume-v1-nothink-b11382.bat).
 
 **Think без лимита (проверка, `--reasoning-budget -1` + `--reasoning-effort default`, n_predict 8000).**
 Гипотеза «раз модель выше по бенчмарку, безлимитное мышление раскроется» — **не подтвердилась**: ответы
@@ -273,7 +273,7 @@ Gemma 4.36 (N=9) против 4.53 (N=8, бюджет 1024) и 4.33 (NoThink); Q
 
 Проверили **baseline**: штатные (не-RP) instruct-модели тем же харнессом — Gemma-4-26B-A4B-it,
 Qwen3.6-35B-A3B, Qwen3.8-27B (скрин 2 сценария, nothink/think, оба судьи). Полный разбор, метрики,
-цитаты — `docs\quality\base-models-rp-eval.md`; здесь — свод для постановки в один ряд с мержами.
+цитаты — [docs\quality\base-models-rp-eval.md](base-models-rp-eval.md); здесь — свод для постановки в один ряд с мержами.
 
 Тот же строгий судья (Qwen3.6-35B) прогнан и по старым 2-сценарным прогонам мержей
 (`rp_judge_qwen_base_compare`), чтобы шкала и набор совпали. **NoThink** (рабочий режим):
@@ -295,15 +295,15 @@ Qwen3.6-35B-A3B, Qwen3.8-27B (скрин 2 сценария, nothink/think, об
 Оговорки: сэмплинг мержей — из их `.bat`, у Schattenblume/Goetia в каталоге 2 конфига. **Полный набор
 (6 сценариев) для базовой Gemma-26B** (прошла скрин как лидер): у строгого судьи **3.28** (N=18) —
 вровень со Schattenblume (3.28) и выше DTV2 (3.11); у gemma-судьи 4.60, но это самооценка.
-Разбор — `docs\quality\base-models-rp-eval.md` §4.2.
+Разбор — [docs\quality\base-models-rp-eval.md](base-models-rp-eval.md) §4.2.
 
 ### 5.9. База + abliteration: Gemma-4-31B-it-heretic-ARA (2026-10-07)
 
-Проверка гипотезы §10 `docs\research\rp-model-candidates.md` №3 — «расцензуренная база 31B»:
+Проверка гипотезы §10 [docs\research\rp-model-candidates.md](../research/rp-model-candidates.md) №3 — «расцензуренная база 31B»:
 `mradermacher/gemma-4-31b-it-heretic-ara-i1-GGUF` (`i1-IQ3_XXS`, 11.25 ГБ) — Heretic v1.2.0 **ARA**
 (abliteration) штатной `gemma-4-31B-it`, **не RP-тюн**. Скрин 2 сценария, nothink/think, RU-safe,
 оба судьи (не самооценка). Лог `logs\rp_eval_heretic31_ara_20261007-094715.log`. Разбор — в
-`docs\quality\base-models-rp-eval.md` §4.3.
+[docs\quality\base-models-rp-eval.md](base-models-rp-eval.md) §4.3.
 
 | Судья | NoThink | Think | Средний (N=12) |
 | --- | ---: | ---: | ---: |
@@ -321,7 +321,7 @@ base Gemma-26B (3.56). **Abliteration RP-способностей не доба�
 Прямой пир heretic-ARA (§5.9) — **чистая** штатная `gemma-4-31B-it` (`unsloth ... UD-IQ3_XXS`, 11.84 ГБ),
 без abliteration и без RP-тюна. Скрин 2 сценария, nothink/think, RU-safe, оба судьи (не самооценка;
 но gemma-судья — родственная Gemma-family 26B-A4B, к 31B-базе мягче). Лог
-`logs\rp_eval_base_gemma31_20261007-102534.log`; разбор — `docs\quality\base-models-rp-eval.md` §4.4.
+`logs\rp_eval_base_gemma31_20261007-102534.log`; разбор — [docs\quality\base-models-rp-eval.md](base-models-rp-eval.md) §4.4.
 
 | Судья | NoThink | Think | Средний (N) |
 | --- | ---: | ---: | ---: |
@@ -332,8 +332,8 @@ base Gemma-26B (3.56). **Abliteration RP-способностей не доба�
 (все 6 ответов непустые). Вердикт: **≈ heretic-ARA** (4.44/3.52) — **abliteration RP-ум не меняет**;
 у строгого судьи **персонаж 2.5–2.8, инициатива 2.5–2.7, паттерн-циклы** → baseline, не рабочая
 RP-модель; в NoThink чуть ниже base Gemma-26B (3.56 на том же скрине, §5.8). Конфиги —
-`launch\b11382-cu124\gemma4-31b\gemma4-31b-base-nothink-b11382.bat` и
-`launch\b11382-cu124\gemma4-31b\gemma4-31b-base-think-b11382.bat`.
+[launch\b11382-cu124\gemma4-31b\gemma4-31b-base-nothink-b11382.bat](../../launch/b11382-cu124/gemma4-31b/gemma4-31b-base-nothink-b11382.bat) и
+[launch\b11382-cu124\gemma4-31b\gemma4-31b-base-think-b11382.bat](../../launch/b11382-cu124/gemma4-31b/gemma4-31b-base-think-b11382.bat).
 
 ### 5.11. Swift-1.5-Qwen3.8-27B (ukisai) — первый не-Gemma скрин (2026-10-07)
 
@@ -352,12 +352,12 @@ nothink/think, RU-safe (temp0.6/min-p0.1), оба судьи. Лог `logs\rp_ev
 ответ с `rep8 0.21`), TG 30.8 t/s; ответы **короткие** (161–334 симв. в nothink).
 
 **Вердикт:** Swift **не RP-модель** — на скрине **ниже всех** Gemma RP-моделей и ниже даже базовых Qwen
-(`docs\quality\base-models-rp-eval.md`: base Qwen3.8 3.98/3.21, base Qwen3.6 4.06/2.96). Сильные стороны —
+([docs\quality\base-models-rp-eval.md](base-models-rp-eval.md): base Qwen3.8 3.98/3.21, base Qwen3.6 4.06/2.96). Сильные стороны —
 чистый русский и память; слабые — характер, инициатива, проза; think добавляет длину без качества
 (персонаж 2.3, проза 3.0). Вывод по гипотезе «Qwen»: **сам Swift не годится**, но он и не RP-тюн —
 вердикт о **классе Qwen3.8-RP-финтюнов** (ReadyArt Serenity/Dark-Scarlett и др.) **не выносится**. Оговорка:
 IQ2_S — низкий квант, но чистый русский и память говорят, что база читается нормально; дело в отсутствии
-RP-тюна. Конфиг — `launch\b11382-cu124\swift\swift-best-b11382.bat`.
+RP-тюна. Конфиг — [launch\b11382-cu124\swift\swift-best-b11382.bat](../../launch/b11382-cu124/swift/swift-best-b11382.bat).
 
 ### 5.12. Genesis Hermes V7 35B-A3B (mradermacher i1-IQ4_XS) — non-think, MoE (2026-10-07)
 
@@ -382,7 +382,7 @@ RP-тюна. Конфиг — `launch\b11382-cu124\swift\swift-best-b11382.bat`.
 норме. Высокий Caliper (72.4) **не подтвердился** на нашем харнессе — очередной разрыв англ. лидерборда и
 нашей оценки. Оговорки: IQ4_XS + offload, двойной реквант (dequantized) могли ухудшить; но запас до
 лидеров (2.90 vs 3.35) слишком велик, чтобы списать на квант. Конфиг —
-`launch\b11382-cu124\qwen36-35b-a3b\qwen36-35b-a3b-genesis-hermes-v7-nothink-b11382.bat`.
+[launch\b11382-cu124\qwen36-35b-a3b\qwen36-35b-a3b-genesis-hermes-v7-nothink-b11382.bat](../../launch/b11382-cu124/qwen36-35b-a3b/qwen36-35b-a3b-genesis-hermes-v7-nothink-b11382.bat).
 
 ### 5.13. G4-MeroMero-26B-A4B-it-uncensored-heretic (llmfan46 / mradermacher i1-IQ4_XS) — скрин (2026-10-07)
 
@@ -438,27 +438,27 @@ Comb **67.8** (наш до этого не проверялся). Скрин 2 �
 а не персонажа с границами — что и есть суть этого файнтюна (personality/chat, 50+ датасетов).
 
 Зато **русский чистый**: тег `language: en` **не означает** поломку RU (Mistral-Small-3.1 многоязычна).
-Это подтверждает наш тезис «язык держит не тег, а база/голова» (`docs\research\why-ru-models.md`) —
+Это подтверждает наш тезис «язык держит не тег, а база/голова» ([docs\research\why-ru-models.md](../research/why-ru-models.md)) —
 и даёт полезный контрпример к Gemma-StyleSwap (там русский рассыпался из-за прививки головы).
 Практически: **годится как RU/EN чат-компаньон, для RP-персонажей — нет.** Вкусовая оценка
 (пользователю нравится в EN) харнессом не измеряется. Конфиг —
-`launch\b11382-cu124\dans-24b\dans-pers13-nothink-b11382.bat`.
+[launch\b11382-cu124\dans-24b\dans-pers13-nothink-b11382.bat](../../launch/b11382-cu124/dans-24b/dans-pers13-nothink-b11382.bat).
 
 ### 5.15. Облачные API-модели (DeepSeek, GLM) — верхний референс (2026-10-07)
 
 Первая проверка **облачных** моделей нашим харнессом: **12 моделей DeepSeek/GLM × 4 судьи**
 (локальные Gemma-26B и Qwen3.6 + облачные DeepSeek-Flash и DeepSeek-Pro), сценарии/сэмплинг/форматы —
 штатные. Результаты, расхождения судей, self-eval-оговорка и объективные метрики (в т.ч. CJK-утечки
-у `glm-5.3`) — **отдельный документ `docs\quality\cloud-api-rp-eval.md`**. Инструменты —
-`bench\quality\api_rp_eval.py`, `api_judge.py`, `api_metrics_summary.py`; ключи — `.env` (gitignored).
+у `glm-5.3`) — **отдельный документ [docs\quality\cloud-api-rp-eval.md](cloud-api-rp-eval.md)**. Инструменты —
+[bench\quality\api_rp_eval.py](../../bench/quality/api_rp_eval.py), `api_judge.py`, `api_metrics_summary.py`; ключи — `.env` (gitignored).
 
 ### 5.16. Boulesis v2.1-26B-A4B (SubMaroon / mradermacher i1-IQ4_XS) — MoE-мерж, лучший 26B на скрине (2026-10-08)
 
 `mradermacher/Boulesis-v2.1-26B-A4B-i1-GGUF`, `i1-IQ4_XS` **14.3 ГБ** — **MoE Gemma-4-26B-A4B**.
-Рецепт (по нашим разборам карточек, `docs\research\gemma4-rp-training-data.md`): **QK task-arithmetic
+Рецепт (по нашим разборам карточек, [docs\research\gemma4-rp-training-data.md](../research/gemma4-rp-training-data.md)): **QK task-arithmetic
 + LoRA + прививка головы StyleTune** — тот же приём, что у Goetia-26B (отсюда ожидание «шаблонные
 реплики», проверенное ниже). В Caliper V3 Boulesis 26B-A4B — **RP #2** (Combined 66.7; thinking-вариант
-#10 из 83), `docs\research\caliperbench-2026-10.md`. У нас раньше не проверялся (был в «Кандидатах»).
+#10 из 83), [docs\research\caliperbench-2026-10.md](../research/caliperbench-2026-10.md). У нас раньше не проверялся (был в «Кандидатах»).
 
 Методика: скрин 2 сцены × 3 сида, оба режима, **панель 4 судей** (локальные gemma-26B и Qwen3.6 +
 облачные DeepSeek-Flash и DeepSeek-Pro), RU-safe (temp 0.6 / min-p 0.1 / top-k 0 / top-p 0.95),
@@ -482,7 +482,7 @@ Comb **67.8** (наш до этого не проверялся). Скрин 2 �
 TG 59.5 t/s, Cyr 86.6 %. Think-баллы здесь **показательны** (все 6 ответов пригодны) — в отличие от
 StyleTune/Goetia/MeroMero.
 
-**Вердикт (панель 4 судей, сопоставимо с `docs\quality\rp-ranking.md`).** Средний по модели —
+**Вердикт (панель 4 судей, сопоставимо с [docs\quality\rp-ranking.md](rp-ranking.md)).** Средний по модели —
 **3.67** (NoThink **3.74** · Think **3.60**, N=48). В местной шкале витрины (Non-Think, 2 сцены) 3.74 —
 это **#3 среди локальных** после StyleTune-26B (3.78) и базовой Gemma-26B (3.76\*, самооценка), и
 **#2 среди 26B-мёржей** (за StyleTune); выше базы Gemma-31B (3.70), MeroMero (3.70) и всех 31B-лидеров
@@ -490,7 +490,7 @@ StyleTune/Goetia/MeroMero.
 Gemma-26B (3.61), выше Glistening (3.41) и MeroMero (3.37). Оговорки: у локального gemma-судьи база
 та же, что у Boulesis (родственная модель, не идентичная) — независимее смотреть Qwen/DS-колонки;
 **облачные судьи строже к инициативе (2.00–2.67) и памяти**, а think-reжим у них падает сильнее
-из-за утечки черновика. Внесён в `docs\quality\rp-ranking.md`: **Non-Think #8** (3.74), **Think #10** (3.60).
+из-за утечки черновика. Внесён в [docs\quality\rp-ranking.md](rp-ranking.md): **Non-Think #8** (3.74), **Think #10** (3.60).
 
 **Рабочий режим — NoThink:** персонаж и проза в think заметно хуже (gemma 3.33 / 3.50 против
 4.00 / 4.50 в nothink), русский ниже (86.6 %), и появляется утечка черновика (ниже).
@@ -528,12 +528,12 @@ Gemma-26B (3.61), выше Glistening (3.41) и MeroMero (3.37). Оговорк�
 **Think-утечка нового типа** (см. также §7): в 1 из 6 (seduction/s33) в видимый ответ попал
 **черновик-разметка** `*Drafting idea:*`, `*Paragraph 1:*`, `*Check against rules:*`, `*Text:*` и смесь
 EN/RU в строке (`And using my own кота against me — это низко, но очень эффективно`). Это **не**
-незакрытый `<channel|>`: канала не было, поэтому `strip_channels()` в `bench\rp_quality.py` такое не
+незакрытый `<channel|>`: канала не было, поэтому `strip_channels()` в [bench\rp_quality.py](../../bench/rp_quality.py) такое не
 срезает — отсюда Junk 31.5/1k и EN-стоп 25.3 при «Чисто 83 %». Такой мусор не отличить от ответа
 автоматически; лечится только клиентом/chat-API с разбором reasoning.
 
-Конфиги — `launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-boulesis-v21-nothink-b11382.bat` (рабочий)
-и `launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-boulesis-v21-think-b11382.bat`
+Конфиги — [launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-boulesis-v21-nothink-b11382.bat](../../launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-boulesis-v21-nothink-b11382.bat) (рабочий)
+и [launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-boulesis-v21-think-b11382.bat](../../launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-boulesis-v21-think-b11382.bat)
 (`-c 51200`: при 14.3 ГБ модели 65536 уже впритык по VRAM). MTP-головы у Gemma-4-26B-A4B нет —
 спекуляция не включена.
 
@@ -573,8 +573,8 @@ roleplay / heretic / uncensored / sillytavern. У нас раньше не пр�
 в Non-Think 3.25 уступает Goetia (3.55), DTV2 (3.51), Genesis (2-суд. ~3.35), и даже бесплатным
 облачным GLM-4.5-Flash (3.28) / GLM-4.7-Flash (3.35). Локальные судьи уводят ещё ниже базы:
 gemma 3.88 (родственная база — Gemma-4-26B; судья мягче) / Qwen **3.17** против базы Gemma-26B 3.56
-и Boulesis 3.56. Поэтому в `docs\quality\rp-ranking.md` **не внесён** (рейтинг — «только рабочие и
-годные», отклонённые живут в `docs\models.md`), а попал в список «Не берём». Рабочий режим — **NoThink**.
+и Boulesis 3.56. Поэтому в [docs\quality\rp-ranking.md](rp-ranking.md) **не внесён** (рейтинг — «только рабочие и
+годные», отклонённые живут в [docs\models.md](../models.md)), а попал в список «Не берём». Рабочий режим — **NoThink**.
 
 **Что портит (все четыре судьи сходятся)**
 
@@ -596,7 +596,7 @@ gemma 3.88 (родственная база — Gemma-4-26B; судья мягч
 отсюда Чисто 0 %, EN-стоп 158/1k. Все четыре судьи называют это «системным багом шаблона/конфига»,
 а не разовым сбоем; DS-Flash/DS-Pro: «ни один ответ не является валидной ролью».
 
-Конфиги — `launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-kitchoon-nothink-b11382.bat` (рабочий,
+Конфиги — [launch\b11382-cu124\gemma4-26a4b\gemma4-26a4b-kitchoon-nothink-b11382.bat](../../launch/b11382-cu124/gemma4-26a4b/gemma4-26a4b-kitchoon-nothink-b11382.bat) (рабочий,
 но слабый) и `...-think-b11382.bat` (создан, помечен непригодным). `-c 51200`: при 14.3 ГБ модели
 65536 уже впритык; MTP-головы у Gemma-4-26B-A4B нет — спекуляция не включена.
 
@@ -629,7 +629,7 @@ VRAM 14 255 / 14 066 MiB. Лог — `logs\rp_eval_qwen36_27b_fable_20261009-080
 **Think — Чисто 100 %**, Cyr 100 %, TG **14.5 t/s**, TTR 0.841. Артефактов (чужие алфавиты, Junk,
 EN-стоп, BPE-склейки) нет ни в одном режиме.
 
-**Вердикт (панель 4 судей, сопоставимо с `docs\quality\rp-ranking.md`).** Средний по модели —
+**Вердикт (панель 4 судей, сопоставимо с [docs\quality\rp-ranking.md](rp-ranking.md)).** Средний по модели —
 **3.46** (NoThink **3.46** · Think **3.45**, N=48). В витрине: **Non-Think #19** (3.46 — ниже DTV2 3.51,
 выше GLM-4.7-Flash 3.35), **Think #12** (3.45 — между Glistening 3.41 и MeroMero 3.37). То есть
 **крепкая середина, не апгрейд** для RP: заметно ниже Gemma-лидеров (StyleTune 3.78, Boulesis 3.74)
@@ -682,12 +682,12 @@ No 3.46) и несёт риск дублирования — **рабочий р
 
 **Скорость и MTP (2026-10-09).** MTP-голова встроенная и **работала**: принятие спекуляции
 84–95 % на коде/математике и 68–85 % на RP. Но на **RP спекуляция не окупается, а вредит**
-(`bench\suites\real\real_qwen36_27b_fable.json`): без спекуляции **17.8 t/s**, с `draft-mtp` nmax5
+([bench\suites\real\real_qwen36_27b_fable.json](../../bench/suites/real/real_qwen36_27b_fable.json)): без спекуляции **17.8 t/s**, с `draft-mtp` nmax5
 pmin0.75 — **13.5** (nmax8 — 10–14). На коде/математике MTP даёт **+6–13 %** (19.0/20.2 против 17.9).
 Вывод: RP-конфиги этой модели — **без спекуляции**; MTP оставлен отдельным профилем под код/чат.
 Качество от спекуляции не зависит (lossless) — это чисто скорость.
 
-Конфиги — `launch\b11382-cu124\qwen36-27b\`: `qwen36-27b-fable-fus-711-nothink-b11382.bat` (рабочий RP,
+Конфиги — [launch\b11382-cu124\qwen36-27b](../../launch/b11382-cu124/qwen36-27b): `qwen36-27b-fable-fus-711-nothink-b11382.bat` (рабочий RP,
 **без MTP**), `...-think-b11382.bat` (think), `...-nothink-author-b11382.bat` (сэмплинг автора),
 `...-mtp-b11382.bat` (общий/код с MTP). В общем роутере — id `qwen36-27b-fable-{nothink,think,author,mtp}`.
 
@@ -724,7 +724,76 @@ think дублировал ответ; здесь все 6 ответов при
 
 **Практический вывод:** для этой модели квант **важнее**, чем MTP — i1-IQ3_S (11.7 ГиБ) влезает в
 16 ГБ и даёт ~18 t/s без спекуляции; по контексту — ~125k при KV q4_0 (см.
-`docs\research\context-memory-model.md`).
+[docs\research\context-memory-model.md](../research/context-memory-model.md)).
+
+### 5.20. Kitchoon-V2-26B-A4B (SubMaroon, Q6_K) — заметный апгрейд над v1, но середина 26B-мёржей; think не думает (2026-10-10)
+
+`SubMaroon/Kitchoon-V2-26B-A4B-GGUF`, `Kitchoon-V2-26B-A4B-Q6_K.gguf` **23.2 ГБ** — **MoE Gemma-4-26B-A4B**
+(30 слоёв, 128 экспертов / 8 активных). Мерж (по GGUF-метаданным): `coder3101/gemma-4-26B-A4B-it-heretic` +
+`Gryphe/Gemma-4-26B-A4B-StyleTune-V2` + `Gryphe/Pantheon-Reasoning-26B-A4B-1.1-V2`. Репозиторий **gated**,
+в нём только Q6_K. Это **другая модель**, чем v1 (§5.17, линия Vortex5-heretic). Русского тюна нет
+(тег `languages: en`); RU проверяем своим харнессом.
+
+**Q6_K и железо (важно для конфига).** 23.2 ГБ в 16 ГБ VRAM не влезают: `--fit on` в b11382 сам
+подбирает выгрузку — держит attention/KV на GPU, а **эксперты слоёв 17–30** уводит на CPU
+(`-ngl 31 -ot ...exps=CPU`; проверено `llama-fit-params.exe`). Отсюда загрузка **≈6.4 мин** и TG
+вдвое ниже, чем у IQ4-кванта того же семейства. Спекуляции нет (у Gemma-4-26B-A4B нет MTP-головы).
+
+Методика: скрин 2 сцены × 3 сида, оба режима, **панель 4 судей** (локальные gemma-26B и Qwen3.6 +
+облачные DeepSeek-Flash и DeepSeek-Pro), RU-safe (temp 0.6 / min-p 0.1 / top-k 0 / top-p 0.95),
+`-c 51200`, KV `q4_0`. Загрузка **382.0 с** (No) / **376.5 с** (Think), VRAM 15 022 / 15 051 MiB.
+Лог — `logs\rp_eval_kitchoon_v2_q6_20261010-172014.log` (генерация + все 4 судьи).
+
+| Судья | Режим | N | ум | память | персонаж | инстр | иниц | рус | проза | повт | **Средний** |
+| --- | --- | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: |
+| gemma-26B | nothink | 6 | 4.17 | 4.50 | 3.33 | 4.67 | 4.83 | 5.00 | 4.50 | 4.83 | **4.48** |
+| gemma-26B | think | 6 | 3.50 | 4.33 | 3.83 | 4.50 | 4.33 | 5.00 | 4.17 | 3.83 | **4.19** |
+| Qwen3.6 | nothink | 6 | 2.67 | 3.00 | 2.50 | 3.17 | 2.50 | 4.50 | 3.50 | 2.33 | **3.02** |
+| Qwen3.6 | think | 6 | 3.00 | 4.17 | 3.17 | 5.00 | 3.17 | 4.83 | 4.00 | 3.33 | **3.83** |
+| DS-Flash | nothink | 6 | 3.17 | 2.83 | 3.17 | 3.83 | 2.67 | 5.00 | 3.50 | 3.00 | **3.40** |
+| DS-Flash | think | 6 | 3.00 | 2.33 | 3.17 | 2.67 | 3.17 | 4.17 | 3.33 | 2.50 | **3.04** |
+| DS-Pro | nothink | 6 | 3.50 | 2.67 | 3.00 | 4.17 | 3.67 | 5.00 | 4.00 | 4.17 | **3.77** |
+| DS-Pro | think | 6 | 2.67 | 3.17 | 3.00 | 3.00 | 3.33 | 4.50 | 3.50 | 2.83 | **3.25** |
+| **Панель 4 судей** | **nothink** | 24 | 3.38 | 3.25 | 3.00 | 3.96 | 3.42 | 4.88 | 3.88 | 3.58 | **3.67** |
+| **Панель 4 судей** | **think** | 24 | 3.04 | 3.50 | 3.29 | 3.79 | 3.50 | 4.62 | 3.75 | 3.12 | **3.58** |
+
+Объективно: **NoThink — Чисто 100 %** (N=6), Cyr 100 %, TG **26.5 t/s**, TTR 0.837;
+**Think — Чисто 100 %**, Cyr 100 %, TG **23.1 t/s**, TTR 0.851. Ни одного языкового артефакта
+(чужие алфавиты, Junk, EN-стоп, BPE-склейки) — **в отличие от v1** (там BPE-склейка `дождrains`).
+
+**Вердикт (панель 4 судей).** Средний по модели — **3.62** (NoThink **3.67** · Think **3.58**, N=48).
+Это **заметный апгрейд над v1** (§5.17: 2.72) и **№12 в Non-Think** витрины (ниже StyleTune 3.78,
+base Gemma-26B 3.76 и Boulesis 3.74, выше GLM-4.6 3.64). Оба режима выдаются чисто и без CJK/BPE;
+среди 26B-мёржей — крепкая середина, не топ. Рабочий режим — **NoThink**.
+
+**Сильные стороны (судьи сходятся).** **Русский — лучшая ось** (панель 4.62–4.88, Чисто/Cyr 100 %):
+небрежности игрока переваривает без вставок и склеек. **Память восстановлена** относительно v1
+(панель 3.25/3.50 против 2.25) — «Питер» ещё всплывает, но уже не системно. Проза живая (3.75–3.88),
+детали сцены (дождь, свет, звуки) присутствуют.
+
+**Что портит (судьи сходятся)**
+1. **Смягчение/рационализация характера (персонаж 3.0/3.29).** Вместо язвительной Киры — спокойные
+   объяснения («слишком много пафоса и скучных репетиций», «это просто хобби» — противоречит
+   «серьёзно играла»). В соблазне Ева **во всех 3 сидах обоих режимов сама соглашается идти домой**,
+   нарушая правило карточки «первой границы не переходит».
+2. **Петли жестов между сидами (повт 3.12–3.58).** Одинаковые мизансцены: «отвернулась к окну»,
+   «резко захлопнула тетрадь», «пальцы сами искали смычок»; клише «та самая ироничная улыбка»,
+   «задумчиво постукивала». Повтор виден **между сидами**, а не внутри ответа.
+3. **Выдуманный реквизит и таймлайн.** «полотенце в руках», «чашка в руках» (чашку она уже отдала
+   игроку), выдуманная «Маринка», «вечер вторника», путаница **чей кот** (у игрока кота нет),
+   игнорирование груминга/закрытия смены в 10:00. Ловит строгий Qwen и DS-судьи.
+4. **Слабая инициатива (3.42/3.50) у строгих судей** — часть ответов реактивна, сцена не движется.
+
+**«Think» не думает (наблюдение, а не сломанность).** С `enable_thinking=true` промпт открывает канал
+`<|channel>thought`, но модель **первым же токеном закрывает его** (`<channel|>`) — reasoning-токенов
+ноль. `raw_full` всех 6 ответов начинается с `<channel|>` и содержит **чистый русский** (английского
+черновика нет). Поэтому три судьи приняли за «утечку/дублирование канала» то, что на деле — артефакт
+нашего `raw_full` (там лежит ответ после пустого канала), а **не** англ. reasoning v1.
+Итог: think ≈ non-think (3.58 против 3.67) — не прирост, но и **не брак** (Чисто 100 %).
+
+**Конфиг не сохранён** (модель и прогон разовые): запускали через харнесс `rp_quality.py` с
+`--fit on` и `-c 51200` — для 16 ГБ обязателен авто-офлоуд экспертов. Модель — официальный
+gated-релиз `SubMaroon/Kitchoon-V2-26B-A4B-GGUF`.
 
 ## 6. Итоговый вердикт (наш, после проверки)
 
@@ -739,7 +808,7 @@ think дублировал ответ; здесь все 6 ответов при
 Ключевой вывод: локальное ядро — **31B-мержи (Blume / Schattenblume / DTV2)**; think у DTV2/Schattenblume
 сильнее, у большинства прочих мержей сломан (пустые ответы/утечка reasoning). **Облако выше по мягкому
 судье, но не локально и reasoning-only**; **судьи расходятся** (DeepSeek суровее к локальным,
-DeepSeek-Flash — self-eval №1). Детали облака — `docs\quality\cloud-api-rp-eval.md`.
+DeepSeek-Flash — self-eval №1). Детали облака — [docs\quality\cloud-api-rp-eval.md](cloud-api-rp-eval.md).
 
 ## 7. Найденные проблемы харнесса и конфигов
 
@@ -788,7 +857,7 @@ cd <папка проекта>
 
 ## 9. Не проверено / дальше
 
-- Прогон **Ateron MoonGem-31B** и других его мержей (см. `docs\research\rp-model-candidates.md`),
+- Прогон **Ateron MoonGem-31B** и других его мержей (см. [docs\research\rp-model-candidates.md](../research/rp-model-candidates.md)),
   **G4-MeroMero-v2-31B-heretic** в одиночку как контроль гипотезы «мерж лечит файнтюн».
 - Сценарии на 5–8 ходов (многотирновое обеднение) и проверка recall на глубине контекста.
 - Вторая модель-судья / человек для калибровки оценок судьи.
@@ -796,8 +865,8 @@ cd <папка проекта>
 - StyleTune-think и Goetia-think через chat-API без утечки reasoning; Schattenblume-think — отдельный
   прогон с большим `n_predict` (1 сэмпл ушёл в цикл).
 - Базовые instruct-модели на **полном** наборе (6 сценариев) — по правилу «полный только для лидеров»
-  скрин не прошли; см. `docs\quality\base-models-rp-eval.md` §6.
+  скрин не прошли; см. [docs\quality\base-models-rp-eval.md](base-models-rp-eval.md) §6.
 - **Boulesis v2.1** (§5.16): полный набор 6 сценариев (скрин — лидер среди 26B, но решение по расширению
-  не принято) и облачные судьи, чтобы внести в `docs\quality\rp-ranking.md` (там среднее 4 судей).
+  не принято) и облачные судьи, чтобы внести в [docs\quality\rp-ranking.md](rp-ranking.md) (там среднее 4 судей).
 - Устранить шаблонность Boulesis: жёсткий лимит абзацев в карточке и запрет на «мысли в кавычках» —
   не проверяли, пробовали только штатную карточку.

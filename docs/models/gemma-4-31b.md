@@ -2,18 +2,18 @@
 
 **Модель:** `Gemma-4-Dark-Thoughts-V2-31B.i1-IQ3_XXS.gguf` (11.25 GB, dense 31B)
 **Драфт:** `gemma-4-31B-it-assistant.Q4_K_M.gguf` (0.33 GB) + `--spec-type draft-mtp`
-**Стенд:** RTX 4060 Ti 16 GB, Ryzen 7 5700X, 32 GB RAM; харнесс — `..\..\bench\bench.py`.
+**Стенд:** RTX 4060 Ti 16 GB, Ryzen 7 5700X, 32 GB RAM; харнесс — [..\..\bench\bench.py](../../bench/bench.py).
 
-> Реестр всего проверенного (не повторять) — `docs\researched.md`.
+> Реестр всего проверенного (не повторять) — [docs\researched.md](../researched.md).
 Методика: фиксированные промпты/seed, `cache_prompt: false`, 3 реальные задачи через шаблон модели,
-данные — `..\..\bench\runs\results.jsonl`. Обозначения: TG — генерация (t/s), PP — обработка промпта.
+данные — [..\..\bench\runs\results.jsonl](../../bench/runs/results.jsonl). Обозначения: TG — генерация (t/s), PP — обработка промпта.
 
 **Готовые конфиги (b11382):**
-- no-think (рекомендуется, числа ниже): `..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-dark-thoughts-nothink-b11382.bat`
-- thinking: `..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-dark-thoughts-think-b11382.bat`
+- no-think (рекомендуется, числа ниже): [..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-dark-thoughts-nothink-b11382.bat](../../launch/b11382-cu124/gemma4-31b/gemma4-31b-dark-thoughts-nothink-b11382.bat)
+- thinking: [..\..\launch\b11382-cu124\gemma4-31b\gemma4-31b-dark-thoughts-think-b11382.bat](../../launch/b11382-cu124/gemma4-31b/gemma4-31b-dark-thoughts-think-b11382.bat)
 - старая сборка (10472) удалена — актуальны только конфиги для b11382 выше
 
-## Реалистичные задачи (b11382, `bench\requests_real.json`)
+## Реалистичные задачи (b11382, [bench\requests_real.json](../../bench/requests_real.json))
 
 Актуальные числа — на живых промптах (RP, чат, код, математика, суммаризация). Серии `TG₁·₅ₖ`/`short`
 ниже сняты на повторяющемся тексте и завышены — оставлены как история.
@@ -28,7 +28,7 @@
 
 **Вывод:** MTP здесь даёт ×1.4–2.8, но на RP dense-31B упирается в ~23 t/s — это и есть «25–30» из ST.
 Для RP берите MoE: Qwen3.6 с MTP (82 t/s) или Gemma-26B без MTP (63 t/s).
-Набор: `bench\suites\real\real_gemma31.json`.
+Набор: [bench\suites\real\real_gemma31.json](../../bench/suites/real/real_gemma31.json).
 
 ## Серия a: границы конфига (build 10472, c=51200, KV q4_0, fa on)
 
@@ -62,7 +62,7 @@
 | DSpark Q4_K_M | 14.5 | 13.0 | 9.7 | не использовать |
 | DFlash Q6_K, nmax15 | 50.8 | **75.8** | 27.3 | только под рефакторинг/копирование (+43 % на повторах, −34 % на новом коде) |
 
-Подробности — `docs\research\speculation-research.md`. Для DFlash-профиля возьмите команду оттуда; в репозитории
+Подробности — [docs\research\speculation-research.md](../research/speculation-research.md). Для DFlash-профиля возьмите команду оттуда; в репозитории
 готового `.bat` для 31B нет из-за смешанного результата.
 
 ## Не проверено

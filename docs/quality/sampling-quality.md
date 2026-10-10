@@ -3,12 +3,12 @@
 **Модель:** `Split-Untied-31B.i1-IQ3_XXS.gguf` (dense Gemma-4 ≈31B, RP-мерж StyleSwap).
 **Драфт:** `gemma-4-31B-it-assistant.Q4_K_M.gguf` + `--spec-type draft-mtp`.
 **Стенд:** RTX 4060 Ti 16 ГБ, Ryzen 7 5700X, 32 ГБ, Windows; сборка b11382 (CUDA 12.4).
-**Методика:** харнесс `bench\rp_quality.py` + русский RP-набор `bench\quality\prompts\prompts_ru_rp.json`;
+**Методика:** харнесс [bench\rp_quality.py](../../bench/rp_quality.py) + русский RP-набор [bench\quality\prompts\prompts_ru_rp.json](../../bench/quality/prompts/prompts_ru_rp.json);
 один сервер на серию, семплеры задаются per-request через нативный `POST /completion`,
 промпт форматируется шаблоном модели через `POST /apply-template`. Сырые ответы и метрики —
 `bench\quality\runs\<серия>\`. Обозначения: **Чисто %** — доля ответов без единого артефакта.
 
-> Реестр всего проверенного — `docs\researched.md`. Раздел §5 «Температура и сэмплинг» заполнен
+> Реестр всего проверенного — [docs\researched.md](../researched.md). Раздел §5 «Температура и сэмплинг» заполнен
 > по итогам этого лога (раньше числился как «не измеряли»).
 
 ## 0. Проблема
@@ -24,7 +24,7 @@
 
 ## 1. Как измеряем
 
-`bench\rp_quality.py` за один проход грузит сервер и гоняет сетку конфигов. На каждый ответ считаются:
+[bench\rp_quality.py](../../bench/rp_quality.py) за один проход грузит сервер и гоняет сетку конфигов. На каждый ответ считаются:
 
 | Метрика | Что ловит |
 | --- | --- |
@@ -46,7 +46,7 @@
 ## 2. Базовая точка — сэмплинг из карточки модели
 
 Карточка Split-Untied: `temp 1.0, min-p 0.03, top-k off, top-p 1.0, repetition penalty off,
-DRY multiplier 0.8` (то же в `launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-nothink-b11382.bat`).
+DRY multiplier 0.8` (то же в `[launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-nothink-b11382.bat](../../launch/b11382-cu124/gemma4-31b/gemma4-31b-split-untied-nothink-b11382.bat)`).
 
 32 генерации (8 промптов × 4 seed, по 280 токенов), серия `runs\baseline_repro`:
 
@@ -129,18 +129,18 @@ DRY multiplier 0.8` (то же в `launch\b11382-cu124\gemma4-31b\gemma4-31b-spl
 - **Инструкция «отвечай по-русски» поверх `temp0.4+min-p0.1` не помогла** — даже чуть хуже
   (83 %, 4 брака из 24 против 1). В серии 2 в другом комбо она дала +5 п.п. → эффект нестабильный,
   как самостоятельный приём не полагаться.
-- TG от температуры почти не зависит (20.4–21.1 t/s) — согласуется с `docs\researched.md` §5.
+- TG от температуры почти не зависит (20.4–21.1 t/s) — согласуется с [docs\researched.md](../researched.md) §5.
 - `foreign_mass` — плоский ноль во всех 144 записях (§5, требует отладки).
 
 ### 3.3. Итоговый конфиг
 
-Для русского RP на Split-Untied-31B: `launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-nothink-ru-b11382.bat`
+Для русского RP на Split-Untied-31B: [launch\b11382-cu124\gemma4-31b\gemma4-31b-split-untied-nothink-ru-b11382.bat](../../launch/b11382-cu124/gemma4-31b/gemma4-31b-split-untied-nothink-ru-b11382.bat)
 (NoThink + MTP; `--temp 0.4 --min-p 0.1 --top-k 0 --top-p 1.0 --dry-multiplier 0.8`). Тот же сэмплинг
 разумно переносить на другие Gemma-4-файнтюны (общий токенизатор, §4), проверяя дымовым прогоном.
 
 ## 4. Токенизаторный профиль GGUF — для отбора моделей
 
-`bench\quality\tokenizer_profile.py` читает только словарь GGUF (без весов) и оценивает покрытие
+[bench\quality\tokenizer_profile.py](../../bench/quality/tokenizer_profile.py) читает только словарь GGUF (без весов) и оценивает покрытие
 русского: доля кириллических токенов, число длинных «словесных» кусков, сжатие русского текста
 (жадный матч) и байтовый фолбэк.
 
@@ -168,7 +168,7 @@ DRY multiplier 0.8` (то же в `launch\b11382-cu124\gemma4-31b\gemma4-31b-spl
 1. **Карточка модели:** список языков, наличие русского в обучающих данных, отзывы сообщества.
 2. **Токенизаторный профиль** (`tokenizer_profile.py`): если кириллицы < ~5 % словаря,
    длинных кусков ≥4 мало, а сжатие < ~3.2 симв/токен — риск дрейфа языка высокий (архитектурный флаг).
-3. **Дымовой прогон** (`rp_quality.py` + `bench\quality\prompts\prompts_ru_smoke.json`, 5 коротких промптов × 1 seed,
+3. **Дымовой прогон** (`rp_quality.py` + [bench\quality\prompts\prompts_ru_smoke.json](../../bench/quality/prompts/prompts_ru_smoke.json), 5 коротких промптов × 1 seed,
    ~140 токенов): смотрим `Чисто %`. Это уже фактическая проверка конкретного файнтюна.
 4. **Опережающий сигнал** (`foreign_mass` через `n_probs`) — **не сработал:** во всех конфигах
    серии 3 вышел ровным нулём, в том числе на ответах с браком. Метрику нельзя использовать как
@@ -202,7 +202,7 @@ DRY multiplier 0.8` (то же в `launch\b11382-cu124\gemma4-31b\gemma4-31b-spl
 
 > Новые RP-модели (2026-10-07, харнесс `bench\quality\prompts\scenarios_rp_full`, non-think): **Giftige-Blume-v1** —
 > Cyr 99.9 %, англ. вставок 0; **Glistening-Gem-v2.1** — Cyr 100 %, англ. 0; **Giftige-Blume-StyleSwap**
-> течёт в английский (EN-стоп 4.89 — прививка головы StyleTune). См. `docs\quality\rp-quality-eval.md` §5.6–5.7.
+> течёт в английский (EN-стоп 4.89 — прививка головы StyleTune). См. [docs\quality\rp-quality-eval.md](rp-quality-eval.md) §5.6–5.7.
 
 **Выводы:**
 - **Модель важнее сэмплинга.** Dark Thoughts V2 и StyleTune держат русский почти без брака даже на

@@ -1,15 +1,15 @@
 # RP-кандидаты вне Gemma: Qwen 3.5/3.6/3.8, Mistral, альтернативы
 
 Внешний ресёрч, срез **2026-10-07**. Повод: поле Gemma-4 (31B и 26B-A4B) в проекте исчерпано
-(`docs\research\rp-model-candidates.md`, `docs\researched.md` §10–11), нужен другой класс моделей.
+([docs\research\rp-model-candidates.md](rp-model-candidates.md), [docs\researched.md](../researched.md) §10–11), нужен другой класс моделей.
 Здесь — что есть у актуальных **Qwen 3.5/3.6/3.8**, **Mistral/Ministral** и **альтернатив** (Nemotron,
 GLM), с фильтрами «есть GGUF под 16 ГБ» и «есть зацепка за русский».
 
 Методика отбора — та же, что в §9 `rp-model-candidates.md`: **CaliperBench V3** (`downloads\CalibreV3.csv`,
-440 моделей, парсер `bench\parse_caliper.py`) как генератор кандидатов + метаданные HF (тип: merge/finetune,
+440 моделей, парсер [bench\parse_caliper.py](../../bench/parse_caliper.py)) как генератор кандидатов + метаданные HF (тип: merge/finetune,
 base, доноры). Caliper **англоязычный и язык не измеряет** — это только сигнал «стоит ли смотреть»; вердикт
-даёт наш RP-харнесс (`docs\quality\rp-quality-eval.md`, 2 сценария — скрин). Наши собственные RP-замеры на
-Qwen уже есть для **баз** (`docs\quality\base-models-rp-eval.md`): обе базовые Qwen 3.6/3.8 слабы в роли —
+даёт наш RP-харнесс ([docs\quality\rp-quality-eval.md](../quality/rp-quality-eval.md), 2 сценария — скрин). Наши собственные RP-замеры на
+Qwen уже есть для **баз** ([docs\quality\base-models-rp-eval.md](../quality/base-models-rp-eval.md)): обе базовые Qwen 3.6/3.8 слабы в роли —
 но это базы, не тюны.
 
 > ⚠️ Числа Caliper v3 — «thinking» и non-think варианты вперемешку, scanner-specific; сравнивать только как
@@ -156,7 +156,7 @@ RP-качество которого мы **не измеряли** (тольк�
 
 ## 3. Механика и зацепка за русский (гипотезы, по аналогии с Gemma)
 
-Наши выводы по Gemma (`docs\research\why-ru-models.md`, `ruled`): язык держит не «тип модели», а
+Наши выводы по Gemma ([docs\research\why-ru-models.md](why-ru-models.md), `ruled`): язык держит не «тип модели», а
 **сохранность головы/эмбеддингов и мелкость дельт**. Переносим на Qwen:
 
 | Признак | Кандидаты | Ожидание по RU |
@@ -179,13 +179,13 @@ RP-качество которого мы **не измеряли** (тольк�
 
 ## 4. Рекомендуемая первая волна (скрин 2 сцены, наши судьи)
 
-Порядок — по цене/информативности. Всё — RP-скрин (`bench\quality\prompts\scenarios_rp.json`),
+Порядок — по цене/информативности. Всё — RP-скрин ([bench\quality\prompts\scenarios_rp.json](../../bench/quality/prompts/scenarios_rp.json)),
 сначала nothink, при рабочем thinking — второй прогон.
 
 0. ~~**Swift 1.5 27B** — **без скачивания**~~ — **сделано (2026-10-07): ❌ не RP-модель.** Скрин
    (2 сцены, nothink/think, 2 судьи): **3.42 Gemma / 2.77 Qwen**, персонаж 2.2 · инициатива 1.9; он
    efficient-reasoning/кодинг-тюн, не RP. Вердикт о классе Qwen3.8-финтюнов им не закрывается — переходим
-   к п.1. Детали — `docs\quality\rp-quality-eval.md` §5.11.
+   к п.1. Детали — [docs\quality\rp-quality-eval.md](../quality/rp-quality-eval.md) §5.11.
 1. **ReadyArt Serenity 27B** (Q3_K_M 13.5 или i1-IQ3) — лидер Caliper по Qwen RP, есть MTP. Тот же автор,
    чьи `scotoma-2`/`Melody1437` стоят под топовыми Gemma-мержами → «мержиста знаем, теперь его Qwen».
 2. **Anko 27B** (i1-IQ3_XXS 11.19) — другой метод (LoRA Doubao), высокая Combined (63.9).
@@ -204,7 +204,7 @@ RP-качество которого мы **не измеряли** (тольк�
 
 ## 4.1. Топ-5 «попробовать» (≥20B, по запросу пользователя)
 
-Нижняя граница — **≥20B** (правило в `AGENTS.md`): RU-native 9B/12B (Katarau, Runeweaver, Pathfinder)
+Нижняя граница — **≥20B** (правило в [AGENTS.md](../../AGENTS.md)): RU-native 9B/12B (Katarau, Runeweaver, Pathfinder)
 **исключены**. Ниже — лучшие по Caliper v3 среди ≥20B с GGUF под 16 ГБ, с учётом обоих режимов.
 Числа Caliper — **англоязычные**, русский не измерен; у ⚠️-моделей высокий балл только в **think**.
 
@@ -223,7 +223,7 @@ RP-качество которого мы **не измеряли** (тольк�
   (PocketDoc, Mistral-Small-3.1) — plain 67.3 / ERP 60.3, популярная (bartowski); обе `language: en`.
   **Dans проверен (2026-10-07):** русский держит **100 %** (тег `en` не помешал — Mistral-Small-3.1
   многоязычна), но как **character-RP слаб** (Qwen-судья **2.54** — самый низкий): персонаж 1.5,
-  «быстрое согласие». Это personality/chat-модель, не RP. `docs\quality\rp-quality-eval.md` §5.14.
+  «быстрое согласие». Это personality/chat-модель, не RP. [docs\quality\rp-quality-eval.md](../quality/rp-quality-eval.md) §5.14.
 - **Slimaki-Tavern-24B v1.3** (Naphula, Mistral, **`ru`**) — для русского в классе ≥20B.
 - **G4-MeroMero-26B-A4B-heretic** (llmfan46, **Gemma-4-26B-A4B**) — **Comb 67.8, ERP 62.7, DRP 65.1** —
   объективно топ среди ≥20B, но Gemma (поле считаем пройденным; heretic → RU-риск).
@@ -231,7 +231,7 @@ RP-качество которого мы **не измеряли** (тольк�
 
 **Важная оговорка к топам Qwen:** у Serenity/Anko/Anansi высокий RP — **только thinking**; plain падает
 (32/—/58). Поэтому при прогоне обязателен think-режим (и отдельно проверять, не «вываливает» ли Qwen3.8
-reasoning в видимый ответ, как база — `docs\models.md`). Genesis Hermes V7 и Skyfall — наоборот, сильны
+reasoning в видимый ответ, как база — [docs\models.md](../models.md)). Genesis Hermes V7 и Skyfall — наоборот, сильны
 в **non-think**.
 
 ## 4.2. Топ для **non-think** (≥20B, основной режим)
@@ -262,15 +262,15 @@ base-26B), и они тоже **MoE и быстрые**. Если правило
 > **Проверено (2026-10-07):** `G4-MeroMero-26B-A4B-it-uncensored-heretic` (llmfan46, i1-IQ4_XS) на нашем
 > RP-скрине **не подтвердил Caliper RP 76.6**: gemma 4.46 / Qwen **3.15** (ниже базы Gemma-26B 3.56 и
 > лидеров); повторы, слабая память, пассивность; think сломан; RU 100 %, ~62 t/s. Подробности —
-> `docs\quality\rp-quality-eval.md` §5.13. То есть «Gemma пройдена» **подтверждается** и здесь.
+> [docs\quality\rp-quality-eval.md](../quality/rp-quality-eval.md) §5.13. То есть «Gemma пройдена» **подтверждается** и здесь.
 > `Orion-26B-A4B-v1` (TheDrummer) и `G4-MeroMero-31B-…-heretic` — не проверялись.
 
 ## 5. Источники и ограничения
 
-- CaliperBench V3 — `downloads\CalibreV3.csv` (срез 2026-10-06), парсер `bench\parse_caliper.py`;
+- CaliperBench V3 — `downloads\CalibreV3.csv` (срез 2026-10-06), парсер [bench\parse_caliper.py](../../bench/parse_caliper.py);
   метаданные (тип/base/доноры) — `downloads\caliperbench-2026-10-01.json`.
 - HF: карточки и HF API (downloads/likes/язык/размеры файлов) — 2026-10-07.
 - **Не проверено нашим стендом:** RP-качество, русский и скорость ни у одного из Qwen/Mistral-кандидатов
-  (кроме баз, `docs\quality\base-models-rp-eval.md`). Caliper — англоязычный; язык он не измеряет.
+  (кроме баз, [docs\quality\base-models-rp-eval.md](../quality/base-models-rp-eval.md)). Caliper — англоязычный; язык он не измеряет.
 - Кандидаты без GGUF/приватные (Synthia 4, будь-то 401) — на карандаше.
-- Прошлый внешний разбор Gemma-поля — `docs\research\rp-model-candidates.md`; реестр — `docs\researched.md`.
+- Прошлый внешний разбор Gemma-поля — [docs\research\rp-model-candidates.md](rp-model-candidates.md); реестр — [docs\researched.md](../researched.md).

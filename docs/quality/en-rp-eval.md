@@ -5,13 +5,13 @@
 те же сценарии (переведены), тот же сэмплинг; отличается только язык контента.
 
 **Стенд:** RTX 4060 Ti 16 ГБ, сборка b11382 (CUDA 12.4). **Роутер:** `llama-server` в router-режиме
-(`launch\router\run-router.bat`, порт **9931**) — генерация и локальные судьи идут в него, отдельный
-сервер не поднимается. Инструменты: `bench\quality\router_eval.py` → `bench\rp_quality.py`
-(`lang=en`) → `bench\quality\rp_judge.py` (router) / `api_judge.py` → `judge_score.py`.
+([launch\router\run-router.bat](../../launch/router/run-router.bat), порт **9931**) — генерация и локальные судьи идут в него, отдельный
+сервер не поднимается. Инструменты: [bench\quality\router_eval.py](../../bench/quality/router_eval.py) → [bench\rp_quality.py](../../bench/rp_quality.py)
+(`lang=en`) → [bench\quality\rp_judge.py](../../bench/quality/rp_judge.py) (router) / `api_judge.py` → `judge_score.py`.
 
 ## 1. Методика
 
-- **Сценарии:** `bench\quality\prompts\scenarios_rp_en.json` — английские двойники базового скрина
+- **Сценарии:** [bench\quality\prompts\scenarios_rp_en.json](../../bench/quality/prompts/scenarios_rp_en.json) — английские двойники базового скрина
   (`scenarios_rp.json`: **school + seduction**), ловушки сохранены (Тверь ≠ Питер, скрипка; кот
   Тыква, закрытие смены в 10:00).
 - **Модели (6):** Giftige-Blume-v1, Schattenblume, Glistening-Gem-v2.1, Dark-Thoughts V2
@@ -137,7 +137,7 @@ EN 4.78 / 3.06; glisten RU 4.32 / 3.35 → EN 4.81 / 2.81.
    у DS-Flash — Blume/StyleTune, у Qwen — Schattenblume, а DTV2/Glistening у него внизу. Ранжировать
    «в общем» нельзя — только по колонке.
 4. **Практический вывод:** раз русский «тупит» не в интеллекте, а в языке/канале, то русскую RP-модель
-   надо учить на **русских данных** (перевод EN→RU — `docs\research\rp-datasets-quality-check.md`), а
+   надо учить на **русских данных** (перевод EN→RU — [docs\research\rp-datasets-quality-check.md](../research/rp-datasets-quality-check.md)), а
    не надеяться, что «английский тюн сам заговорит». Локальное ядро (Blume/Schattenblume/DTV2) в
    английском держится ровно так же, как в русском.
 
